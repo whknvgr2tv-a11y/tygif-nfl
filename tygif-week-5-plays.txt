@@ -1,0 +1,50 @@
+tygif's model | Week 5 plays (lines as of Tue Oct 6, 5:13 PM ET; they move until kickoff)
+Play = against the money. DK splits first, all books as second opinion.
+Sizing vibe: STRONG ≈ full $100 feel · LEAN ≈ half · QB ding = cut further (guidance only).
+
+STRONG: Tennessee +7.5 [Fading the public, Big favorite angle]. Best +7.5 (-110) at BetRivers
+  Watch: Divisional dog, Heavy + big-fav stack (not a play rule)
+  Check: ✓ Fade the Crowd · ✓ Money 88% · ✓ Big favorite angle · ✓ Books read · ✓ QB clean on our side · ✓ Line not against us
+  Houston holds most of the money (DraftKings 76%, all books 88%) — the books' exposure. Play Tennessee.
+  Signals agree: DraftKings and all books both have the money on Houston (fading the public).
+STRONG: NY Jets -2.5 [Fading the public]. Best -1.5 (-115) at FanDuel
+  Watch: Fading off-TNF, Very heavy money (not a play rule)
+  Check: ✓ Fade the Crowd · ✓ Money 84% · ✗ Big favorite angle · ✓ Books read · ✓ QB clean on our side · ✓ Line not against us
+  Cleveland holds most of the money (DraftKings 89%, all books 84%) — the books' exposure. Play NY Jets.
+  Signals agree: DraftKings and all books both have the money on Cleveland (fading the public).
+STRONG: Miami +7.5 [Fading the public, Big favorite angle]. Best +7.5 (-114) at BetRivers
+  Watch: RLM vs money, Heavy + big-fav stack (not a play rule)
+  Check: ✓ Fade the Crowd · ✓ Money 67% · ✓ Big favorite angle · ✓ Books read · ✓ QB clean on our side · ✓ Line not against us
+  Cincinnati holds most of the money (DraftKings 67%, all books 67%) — the books' exposure. Play Miami.
+  Signals agree: DraftKings and all books both have the money on Cincinnati (fading the public).
+LEAN: Washington -3.5 [Fading the public]. Best -3 (-118) at BetRivers
+  Watch: RLM vs money, Very heavy money (not a play rule)
+  Check: ✓ Fade the Crowd · ✓ Money 90% · ✗ Big favorite angle · ✓ Books read · ✗ QB clean on our side · ✓ Line not against us
+  NY Giants holds most of the money (DraftKings 99%, all books 90%) — the books' exposure. Play Washington.
+  Signals agree: DraftKings and all books both have the money on NY Giants (fading the public).
+  Washington QB Jayden Daniels is questionable, so check his status before betting.
+
+Pass: Baltimore at Atlanta
+  Baltimore at Atlanta: The money (DraftKings 54%, all books 75% on Atlanta) points to Baltimore, which would be LEAN, but it drops to PASS: mixed signals + line moved against us.
+
+Tracked pass (DK and all books disagree, not played): Tampa Bay at Dallas (★ Cowboys game), Philadelphia at Jacksonville, Chicago at Green Bay, Las Vegas at New England, Minnesota at New Orleans, Indianapolis at Pittsburgh, San Francisco at Seattle, Buffalo at LA Rams
+  Tampa Bay at Dallas: Sources disagree: DraftKings' money is on Dallas (80%) but all books' money is on Tampa Bay (62%). Tracked, not played.
+  Tampa Bay at Dallas: * Cowboys game. Heads-up: this is your team, so stick to the money rule. The call comes from the numbers, not the logo.
+  Philadelphia at Jacksonville: Sources disagree: DraftKings' money is on Philadelphia (67%) but all books' money is on Jacksonville (55%). Tracked, not played.
+  Chicago at Green Bay: Sources disagree: DraftKings' money is on Green Bay (64%) but all books' money is on Chicago (58%). Tracked, not played.
+  Las Vegas at New England: Sources disagree: DraftKings' money is on New England (59%) but all books' money is on Las Vegas (84%). Tracked, not played.
+  Minnesota at New Orleans: Sources disagree: DraftKings' money is on Minnesota (57%) but all books' money is on New Orleans (53%). Tracked, not played.
+  Indianapolis at Pittsburgh: Sources disagree: DraftKings' money is on Pittsburgh (86%) but all books' money is on Indianapolis (69%). Tracked, not played.
+  San Francisco at Seattle: Sources disagree: DraftKings' money is on Seattle (54%) but all books' money is on San Francisco (93%). Tracked, not played.
+  Buffalo at LA Rams: Sources disagree: DraftKings' money is on LA Rams (87%) but all books' money is on Buffalo (56%). Tracked, not played.
+
+Tracked pass (sharps split, not played): Denver at LA Chargers, Detroit at Arizona
+  Denver at LA Chargers: Sharps split at DraftKings: most bets on Denver (53%), most money on LA Chargers (67%). Tracked, not played — fading the sharps lost money in weeks 1–4.
+  Detroit at Arizona: Sharps split at DraftKings: most bets on Detroit (55%), most money on Arizona (64%). Tracked, not played — fading the sharps lost money in weeks 1–4.
+
+Totals we're watching (tracked only, not plays; fading total money lost $1,527 in weeks 1-4):
+  Chicago at Green Bay Under 45.5 (would be STRONG, Fading the public). Signals agree: DraftKings and all books both have the money on the over.
+  Indianapolis at Pittsburgh Under 44.5 (would be LEAN, Fading the public). Signals agree: DraftKings and all books both have the money on the over.
+  San Francisco at Seattle Under 47.5 (would be STRONG, Fading the public). Signals agree: DraftKings and all books both have the money on the over.
+
+Small samples, no guarantees.
