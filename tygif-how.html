@@ -4,50 +4,62 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0b0d12">
+<meta name="theme-color" content="#0c0d0e">
 <title>tygif's model · How it works</title>
 <style>
-:root{--bg:#0b0d12;--card:#141821;--card2:#181d28;--line:#232a38;--txt:#eef1f6;--mut:#9aa3b2;--org1:#ffb703;--org2:#fb5607;
---strong:#22c55e;--lean:#f59e0b;--pass:#64748b;--neg:#f87171;--pos:#4ade80}
+:root{--bg:#0c0d0e;--card:#161719;--card2:#1c1e21;--line:#2c2e32;--txt:#f4f1ea;--mut:#9a9da4;
+--org1:#d4a017;--org2:#d4a017;--accent:#d4a017;--rule:#d4a017;
+--strong:#2f8f56;--lean:#b8860b;--pass:#6e737c;--neg:#c15a5a;--pos:#2f8f56;
+--paper:#f4f1ea;--ink:#0c0d0e}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html,body{margin:0;background:var(--bg);color:var(--txt);
-font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.45}
-a{color:var(--org1)}
-.apphead{max-width:760px;margin:0 auto;padding:18px 16px 8px;display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+font-family:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,"Times New Roman",serif;
+font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent)}
+.apphead{max-width:720px;margin:0 auto;padding:22px 18px 10px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;
+border-bottom:1px solid var(--line)}
 .apphead a{text-decoration:none}
-.logo{font-size:34px;font-weight:900;letter-spacing:-1.2px;line-height:1;background:linear-gradient(90deg,var(--org1),var(--org2));
--webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;padding-bottom:2px}
-.updated{color:var(--mut);font-size:14px;font-weight:600;white-space:nowrap;padding-bottom:4px}
-.tabs{position:-webkit-sticky;position:sticky;top:0;z-index:20;background:rgba(11,13,18,.94);
--webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
-.tabs-in{max-width:760px;margin:0 auto;display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;overflow-y:hidden;
--webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 16px;scroll-padding:0 16px}
+.logo{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;font-size:28px;font-weight:700;letter-spacing:-.4px;
+line-height:1.1;color:var(--paper);display:inline-block;padding-bottom:2px}
+.logo::after{content:"";display:block;width:2.2em;height:2px;margin-top:8px;background:var(--accent)}
+.updated{color:var(--mut);font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;padding-bottom:6px;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.tabs{position:-webkit-sticky;position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.tabs-in{max-width:720px;margin:0 auto;display:flex;flex-wrap:nowrap;gap:0;overflow-x:auto;overflow-y:hidden;
+-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 10px;scroll-padding:0 10px}
 .tabs-in::-webkit-scrollbar{display:none}
-.tab{flex:0 0 auto;display:inline-flex;align-items:center;min-height:40px;padding:0 15px;border-radius:999px;white-space:nowrap;
-text-decoration:none;color:#c9d0dc;font-size:15px;font-weight:650;border:1px solid transparent;background:#121722}
-.tab:active{background:#1b2130}
-.tab.cur,.js .tab.on{color:#160d02;background:linear-gradient(90deg,var(--org1),var(--org2));border-color:transparent}
+.tab{flex:0 0 auto;display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:0;white-space:nowrap;
+text-decoration:none;color:var(--mut);font-size:14px;font-weight:600;border:0;border-bottom:2px solid transparent;background:transparent;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.tab:active{color:var(--txt)}
+.tab.cur,.js .tab.on{color:var(--paper);background:transparent;border-bottom-color:var(--accent)}
 
-.wrap{max-width:640px;margin:0 auto;padding:12px 16px 48px}
-.rtitle{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:10px 0 4px}
-.rtitle h1{margin:0;font-size:26px;font-weight:800;letter-spacing:-.4px}
-.rback{color:var(--org1);font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap}
-.lede{color:var(--mut);font-size:15px;margin:6px 0 18px;line-height:1.55;max-width:36em}
-.block{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:0 0 12px}
-.block h2{margin:0 0 8px;font-size:14px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--org1)}
-.block p,.block li{color:var(--mut);font-size:15px;line-height:1.55;margin:0 0 8px}
+.wrap{max-width:640px;margin:0 auto;padding:16px 18px 56px}
+.rtitle{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:16px 0 4px}
+.rtitle h1{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:28px;font-weight:700;letter-spacing:-.4px}
+.rback{color:var(--accent);font-weight:650;font-size:14px;text-decoration:none;white-space:nowrap}
+.lede{color:var(--mut);font-size:15px;margin:8px 0 22px;line-height:1.55;max-width:36em}
+.block{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:18px 0;margin:0}
+.block h2{margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.block p,.block li{color:var(--mut);font-size:15.5px;line-height:1.55;margin:0 0 8px}
 .block p:last-child,.block li:last-child{margin-bottom:0}
 .block b{color:var(--txt);font-weight:650}
 .block ul{margin:0;padding-left:18px}
-.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
-.pill{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:#c9d0dc}
-.pill.g{background:rgba(34,197,94,.12);color:#4ade80;border-color:rgba(34,197,94,.35)}
-.pill.a{background:rgba(245,158,11,.12);color:#fbbf24;border-color:rgba(245,158,11,.35)}
-.rfoot{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:28px 0 0}
-.rfoot a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;background:#121722;
-border:1px solid var(--line);color:#c9d0dc;text-decoration:none;font-weight:650;font-size:14.5px}
-footer{color:#6b7385;font-size:12px;margin-top:22px;text-align:center}
+.num{font-size:28px;font-weight:800;letter-spacing:-.6px;color:var(--paper);font-variant-numeric:tabular-nums;margin:4px 0 6px;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+.pill{font-size:12px;font-weight:650;padding:5px 0;border-radius:0;border:0;border-bottom:1px solid var(--line);color:var(--mut);
+letter-spacing:.02em;margin-right:12px}
+.pill.g{color:var(--strong);border-bottom-color:rgba(47,143,86,.45)}
+.pill.a{color:var(--lean);border-bottom-color:rgba(184,134,11,.45)}
+.rfoot{display:flex;flex-wrap:wrap;gap:0;margin:28px 0 0;border-top:1px solid var(--line);padding-top:4px}
+.rfoot a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px 0 0;border-radius:0;background:transparent;
+border:0;color:var(--mut);text-decoration:none;font-weight:600;font-size:14px;margin-right:14px}
+.rfoot a:hover{color:var(--accent)}
+footer{color:#6b6e74;font-size:12px;margin-top:22px;text-align:left}
 </style>
 </head>
 <body id="top">
@@ -55,10 +67,10 @@ footer{color:#6b7385;font-size:12px;margin-top:22px;text-align:center}
 <nav class="tabs" aria-label="Sections"><div class="tabs-in"><a class="tab" href="tygif-tracker.html#home" data-tab="home">Home</a><a class="tab" href="tygif-tracker.html#week" data-tab="week">This Week</a><a class="tab" href="tygif-tracker.html#results" data-tab="results">Results</a><a class="tab" href="tygif-tracker.html#outcomes" data-tab="outcomes">Outcomes</a><a class="tab" href="tygif-tracker.html#money" data-tab="money">Money Rule</a><a class="tab" href="tygif-tracker.html#trends" data-tab="trends">Trends</a><a class="tab" href="tygif-deep-dive.html" data-tab="deep">Deep dive</a><a class="tab" href="tygif-angles.html" data-tab="angles">Angles</a><a class="tab cur" href="#top" data-tab="how">How</a></div></nav>
 <div class="wrap">
   <div class="rtitle">
-    <h1>How tygif's model works</h1>
-    <a class="rback" href="tygif-tracker.html#home">Tracker ›</a>
+    <h1>How it works</h1>
+    <a class="rback" href="tygif-tracker.html#home">Tracker</a>
   </div>
-  <p class="lede">Short share version for the group — same rules as the tracker <a href="tygif-tracker.html#money">Money Rule</a> tab. Flat $100/bet on the card. Card audit &amp; honesty live under <a href="tygif-tracker.html#results">Results</a>. Lines move — process, not gospel.</p>
+  <p class="lede">Short share for the group — same rules as the tracker <a href="tygif-tracker.html#money">Money Rule</a> tab. Flat $100/bet on the card. Card audit lives under <a href="tygif-tracker.html#results">Results</a>. Lines move. Process, not gospel.</p>
 
   <div class="block">
     <h2>The money rule</h2>
@@ -69,8 +81,9 @@ footer{color:#6b7385;font-size:12px;margin-top:22px;text-align:center}
 
   <div class="block">
     <h2>What STRONG means</h2>
-    <p>A hammer. Needs <b>Fade the Crowd</b> <b>and</b> money at <b>65%+</b>. Weeks 1–4 that bar went
-    <b>12-0-3 (+$1,095)</b>. Mid-money spots stay LEAN on purpose — optional for the group, not hammers.</p>
+    <div class="num">12-0-3 · +$1,095</div>
+    <p>A hammer. Needs <b>Fade the Crowd</b> <b>and</b> money at <b>65%+</b>. That is the Weeks 1–4 record at $100/bet.
+    Mid-money spots stay LEAN on purpose — optional for the group, not hammers.</p>
     <div class="pillrow">
       <span class="pill g">STRONG · full-size feel</span>
       <span class="pill a">LEAN · about half</span>
