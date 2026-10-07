@@ -1,12 +1,12 @@
 tygif LOCK SHEET · Week 5
 Canonical snap: week_5_20261006T211347Z.json
 generated_utc: 2026-10-06T21:13Z
-Bank ~$200 → about $65 × 2 STRONG hammers · MIA LEAN half · WSH WAIT/half
-Gate note: STRONG now needs FTC + money ≥68% (was 65%). MIA at 67% is LEAN under the cushion.
+Bank ~$200 → about $65 × 2 STRONG hammers · MIA LEAN half · WSH WAIT/half (real-money sizes; model records are tracked at $100/bet)
+Gate note: STRONG now needs FTC + money ≥68% (was 65%), measured on the all-books consensus % (the Weeks 1–4 backtest used consensus splits); DK must agree on the side or it is a tracked pass. MIA at 67% is LEAN under the cushion.
 
 STRONG: Tennessee +7.5
   Houston at Tennessee · Sun Oct 11 · 1:00 PM ET · CBS
-  Primary money 88.0% · DK away bets/handle 78.0/76.0 · home 22.0/24.0
+  Primary money (all-books) 88.0% · DK away bets/handle 78.0/76.0 · home 22.0/24.0
   Best: Tennessee +7.5 (-110) at BetRivers
   QB: C.J. Stroud (no injury listed) / Cam Ward (no injury listed)
   Watches: Divisional dog, Heavy + big-fav stack
@@ -14,7 +14,7 @@ STRONG: Tennessee +7.5
 
 STRONG: NY Jets -2.5
   Cleveland at NY Jets · Sun Oct 11 · 1:00 PM ET · CBS
-  Primary money 84.0% · DK away bets/handle 88.0/89.0 · home 12.0/11.0
+  Primary money (all-books) 84.0% · DK away bets/handle 88.0/89.0 · home 12.0/11.0
   Best: NY Jets -1.5 (-115) at FanDuel
   QB: Deshaun Watson (no injury listed) / Geno Smith (no injury listed)
   Watches: Fading off-TNF, Very heavy money
@@ -22,7 +22,7 @@ STRONG: NY Jets -2.5
 
 LEAN: Miami +7.5
   Cincinnati at Miami · Sun Oct 11 · 1:00 PM ET · Fox
-  Primary money 67.0% · DK away bets/handle 71.0/67.0 · home 29.0/33.0
+  Primary money (all-books) 67.0% · DK away bets/handle 71.0/67.0 · home 29.0/33.0
   Best: Miami +7.5 (-114) at BetRivers
   QB: Joe Burrow (no injury listed) / Malik Willis (no injury listed)
   Watches: RLM vs money (thin heavy 65–67.9% — under 68% STRONG bar)
@@ -30,7 +30,7 @@ LEAN: Miami +7.5
 
 LEAN: Washington -3.5
   NY Giants at Washington · Sun Oct 11 · 1:00 PM ET · Fox
-  Primary money 90.0% · DK away bets/handle 81.0/99.0 · home 19.0/1.0
+  Primary money (all-books) 90.0% · DK away bets/handle 81.0/99.0 · home 19.0/1.0
   Best: Washington -3 (-118) at BetRivers
   QB: Jameis Winston (no injury listed) / Jayden Daniels (Questionable)
   Watches: RLM vs money, Very heavy money
