@@ -1,8 +1,8 @@
 tygif LOCK SHEET · Week 5
 Canonical snap: week_5_20261006T211347Z.json
 generated_utc: 2026-10-06T21:13Z
-Bank ~$200 → about $65 × 2 STRONG hammers · MIA LEAN half · WSH WAIT/half (real-money sizes; model records are tracked at $100/bet)
-Gate note: STRONG now needs FTC + money ≥68% (was 65%), measured on the all-books consensus % (the Weeks 1–4 backtest used consensus splits); DK must agree on the side or it is a tracked pass. MIA at 67% is LEAN under the cushion.
+Bank ~$200 → about $65 × 3 STRONG hammers · WSH WAIT/half (real-money sizes; model records are tracked at $100/bet)
+Gate note: STRONG = FTC + money ≥65%, measured on the all-books consensus % (the Weeks 1–4 backtest used consensus splits); DK must agree on the side or it is a tracked pass.
 
 STRONG: Tennessee +7.5
   Houston at Tennessee · Sun Oct 11 · 1:00 PM ET · CBS
@@ -20,13 +20,13 @@ STRONG: NY Jets -2.5
   Watches: Fading off-TNF, Very heavy money
   Size ~$65 · LOCK-NOW (recheck Sun AM injury report)
 
-LEAN: Miami +7.5
+STRONG: Miami +7.5
   Cincinnati at Miami · Sun Oct 11 · 1:00 PM ET · Fox
   Primary money (all-books) 67.0% · DK away bets/handle 71.0/67.0 · home 29.0/33.0
   Best: Miami +7.5 (-114) at BetRivers
   QB: Joe Burrow (no injury listed) / Malik Willis (no injury listed)
-  Watches: RLM vs money (thin heavy 65–67.9% — under 68% STRONG bar)
-  Size ~$30 · optional lean (cleared heavy band, not the hammer cushion)
+  Watches: RLM vs money, Heavy + big-fav stack
+  Size ~$65 · LOCK-NOW (recheck Sun AM injury report)
 
 LEAN: Washington -3.5
   NY Giants at Washington · Sun Oct 11 · 1:00 PM ET · Fox
