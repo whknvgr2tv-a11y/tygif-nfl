@@ -107,7 +107,72 @@ footer{color:#6b6e74;font-size:12px;margin-top:26px;text-align:left}
 .rfoot{display:flex;flex-wrap:wrap;gap:0;margin:28px 0 0;border-top:1px solid var(--line);padding-top:4px}
 .rfoot a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px 0 0;border-radius:0;background:transparent;border:0;
 color:var(--mut);text-decoration:none;font-weight:600;font-size:14px;margin-right:14px}
-</style></head><body id='top'><header class="apphead"><a href="tygif-tracker.html#home" class="logo">tygif's model</a><span class="updated">Updated Tue Oct 6</span></header><nav class="tabs" aria-label="Sections"><div class="tabs-in"><a class="tab" href="tygif-tracker.html#home" data-tab="home">Home</a><a class="tab cur" href="#top" data-tab="week">This Week</a><a class="tab" href="tygif-tracker.html#results" data-tab="results">Results</a><a class="tab" href="tygif-tracker.html#outcomes" data-tab="outcomes">Outcomes</a><a class="tab" href="tygif-tracker.html#money" data-tab="money">Money Rule</a><a class="tab" href="tygif-tracker.html#trends" data-tab="trends">Trends</a><a class="tab" href="tygif-deep-dive.html" data-tab="deep">Deep dive</a><a class="tab" href="tygif-angles.html" data-tab="angles">Angles</a><a class="tab" href="tygif-how.html" data-tab="how">How</a></div></nav><div class='wrap'>
+</style><style id="tbdc-css">
+/* TB@DAL game-day card: everything scoped under .tbdc-fold / .tbdc */
+.tbdc-fold{background:var(--card,#161719);border:1px solid var(--line,#2c2e32);border-left:3px solid var(--lean,#b8860b);border-radius:0;margin:12px 0;overflow:hidden}
+.tbdc-fold>summary{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-height:52px;padding:12px 44px 12px 16px;position:relative;list-style:none;cursor:pointer}
+.tbdc-fold>summary::-webkit-details-marker{display:none}
+.tbdc-fold>summary::after{content:"";position:absolute;right:18px;top:50%;width:8px;height:8px;margin-top:-6px;border-right:1.5px solid var(--mut,#9a9da4);border-bottom:1.5px solid var(--mut,#9a9da4);transform:rotate(45deg);transition:transform .15s}
+.tbdc-fold[open]>summary::after{transform:rotate(-135deg);margin-top:-2px}
+.tbdc-fold .tbdc-ft{font-weight:750;font-size:16px;color:var(--txt,#f4f1ea)}
+.tbdc-fold .tbdc-fs{color:var(--mut,#9a9da4);font-size:13.5px;flex:1 1 100%}
+.tbdc{padding:0 16px 16px;color:var(--txt,#f4f1ea);font-size:15px;line-height:1.45}
+.tbdc *{box-sizing:border-box}
+.tbdc .tbdc-match{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:var(--card2,#1c1e21);border:1px solid var(--line,#2c2e32)}
+.tbdc .tbdc-tm{padding:12px 14px}
+.tbdc .tbdc-tm.tb{border-left:4px solid #D50A0A}
+.tbdc .tbdc-tm.dal{border-right:4px solid #4A90E2;text-align:right}
+.tbdc .tbdc-ab{font-family:Georgia,"Times New Roman",serif;font-size:30px;font-weight:700;line-height:1}
+.tbdc .tbdc-nm{font-size:13px;color:var(--mut,#9a9da4);margin-top:3px}
+.tbdc .tbdc-sp{font-size:20px;font-weight:700;margin-top:4px;font-variant-numeric:tabular-nums}
+.tbdc .tbdc-at{color:var(--mut,#9a9da4);font-size:16px;padding:0 6px}
+.tbdc .tbdc-meta{color:var(--mut,#9a9da4);font-size:13px;margin-top:8px;text-align:center}
+.tbdc .tbdc-call{margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--card2,#1c1e21);border:1px solid var(--line,#2c2e32);border-left:3px solid var(--accent,#d4a017);padding:14px 16px}
+.tbdc .tbdc-k{font-size:11px;letter-spacing:.14em;color:var(--accent,#d4a017);font-weight:800;text-transform:uppercase}
+.tbdc .tbdc-pick{font-family:Georgia,"Times New Roman",serif;font-size:26px;font-weight:700;line-height:1.15;margin-top:2px}
+.tbdc .tbdc-small{font-size:14px;color:#cfd2d6;margin-top:4px}
+.tbdc .tbdc-badge{flex:0 0 auto;text-align:center;border:1px solid var(--lean,#b8860b);color:var(--accent,#d4a017);font-weight:800;font-size:15px;letter-spacing:.1em;padding:6px 12px}
+.tbdc .tbdc-badge small{display:block;font-size:10px;letter-spacing:.08em;color:var(--mut,#9a9da4);font-weight:700}
+.tbdc .tbdc-h{margin:18px 0 8px;font-size:11px;letter-spacing:.14em;color:var(--mut,#9a9da4);font-weight:800;text-transform:uppercase;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.tbdc .tbdc-h span{letter-spacing:.02em;font-weight:500;text-transform:none}
+.tbdc ul.tbdc-why{list-style:none;margin:0;padding:0}
+.tbdc ul.tbdc-why li{padding:4px 0 4px 18px;position:relative;color:#dcdfe3}
+.tbdc ul.tbdc-why li::before{content:"";position:absolute;left:2px;top:12px;width:7px;height:7px;background:var(--accent,#d4a017)}
+.tbdc .tbdc-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tbdc .tbdc-box{background:var(--card2,#1c1e21);border:1px solid var(--line,#2c2e32);padding:12px 14px;min-width:0}
+.tbdc .tbdc-bh{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.tbdc .tbdc-src{font-weight:750;font-size:14px}
+.tbdc .tbdc-tmz{font-size:12px;color:var(--mut,#9a9da4)}
+.tbdc .tbdc-bar{display:grid;grid-template-columns:96px 1fr 40px;align-items:center;gap:8px;margin-top:8px;font-size:13px;color:#cfd2d6}
+.tbdc .tbdc-track{height:9px;background:var(--line,#2c2e32);display:flex;overflow:hidden}
+.tbdc .tbdc-track i{display:block;height:100%}
+.tbdc .tbdc-pct{text-align:right;font-weight:750;font-size:15px;font-variant-numeric:tabular-nums}
+.tbdc .tbdc-leg{margin-top:8px;font-size:12px;color:var(--mut,#9a9da4)}
+.tbdc .tbdc-leg b{display:inline-block;width:9px;height:9px;margin-right:5px}
+.tbdc .tbdc-big{font-family:Georgia,"Times New Roman",serif;font-size:19px;font-weight:700;line-height:1.25;margin-top:4px}
+.tbdc .tbdc-sub{font-size:13px;color:#b8bcc2;margin-top:6px}
+.tbdc .tbdc-row{display:grid;grid-template-columns:1fr auto 52px;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--line,#2c2e32)}
+.tbdc .tbdc-row.hd{border-top:0;padding:0 0 6px;font-size:10.5px;letter-spacing:.12em;color:var(--mut,#9a9da4);font-weight:800;text-transform:uppercase}
+.tbdc .tbdc-row.ind .tbdc-lbl{padding-left:16px;color:#b8bcc2}
+.tbdc .tbdc-row.ex{background:rgba(193,90,90,.08)}
+.tbdc .tbdc-lbl{color:#dcdfe3}
+.tbdc .tbdc-gm{display:block;font-size:12px;color:var(--mut,#9a9da4);margin-top:1px}
+.tbdc .tbdc-rec,.tbdc .tbdc-cv{text-align:right;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tbdc .g{color:#3fb06c}.tbdc .r{color:var(--neg,#c15a5a)}
+.tbdc .tbdc-foot{margin-top:12px;padding-top:10px;border-top:1px solid var(--line,#2c2e32);font-size:12px;color:var(--mut,#9a9da4)}
+@media (max-width:600px){
+ .tbdc{padding:0 12px 14px}
+ .tbdc .tbdc-2{grid-template-columns:1fr}
+ .tbdc .tbdc-pick{font-size:23px}
+ .tbdc .tbdc-row{grid-template-columns:1fr 46px;row-gap:2px}
+ .tbdc .tbdc-row .tbdc-lbl{grid-column:1 / -1}
+ .tbdc .tbdc-row .tbdc-rec{text-align:left}
+ .tbdc .tbdc-row.ind .tbdc-rec{padding-left:16px}
+ .tbdc .tbdc-row.hd .tbdc-lbl{display:none}
+ .tbdc .tbdc-row.hd{grid-template-columns:1fr 46px}
+}
+</style>
+</head><body id='top'><header class="apphead"><a href="tygif-tracker.html#home" class="logo">tygif's model</a><span class="updated">Updated Tue Oct 6</span></header><nav class="tabs" aria-label="Sections"><div class="tabs-in"><a class="tab" href="tygif-tracker.html#home" data-tab="home">Home</a><a class="tab cur" href="#top" data-tab="week">This Week</a><a class="tab" href="tygif-tracker.html#results" data-tab="results">Results</a><a class="tab" href="tygif-tracker.html#outcomes" data-tab="outcomes">Outcomes</a><a class="tab" href="tygif-tracker.html#money" data-tab="money">Money Rule</a><a class="tab" href="tygif-tracker.html#trends" data-tab="trends">Trends</a><a class="tab" href="tygif-deep-dive.html" data-tab="deep">Deep dive</a><a class="tab" href="tygif-angles.html" data-tab="angles">Angles</a><a class="tab" href="tygif-how.html" data-tab="how">How</a></div></nav><div class='wrap'>
 <div class='rtitle'><h1>Week 5 plays</h1><a class='rback' href='tygif-tracker.html#week'>Season tracker ›</a></div>
 <div class='note'><b>Card as of Tue Oct 6, 5:13 PM ET</b> · live gameday snap. Play = against the money (DraftKings splits first, all-books as second opinion). Lines and splits move until kickoff.</div>
 <section class='summary'><h2>This week's plays</h2>
@@ -183,7 +248,7 @@ color:var(--mut);text-decoration:none;font-weight:600;font-size:14px;margin-righ
 <div class='sig mixed'>Mixed signals: DraftKings&#x27; money is on Dallas (80%), but the wider market&#x27;s money is on Tampa Bay (62%).</div>
 <ul><li>Sources disagree: DraftKings&#x27; money is on Dallas (80%) but all books&#x27; money is on Tampa Bay (62%). Tracked, not played.</li><li>Tampa Bay QB Baker Mayfield is out; Jalon Daniels is expected to start.</li></ul>
 <div class='strip'><span class='chip'>Line <b>Tampa Bay +8</b> · opened +9.5</span><span class='chip'>Tampa Bay at DK: <b>31%</b> bets · <b>20%</b> money</span><span class='chip'>Tampa Bay all books: <b>45%</b> bets · <b>62%</b> money</span><span class='chip'>Trend <b>25-7-2</b> · underdogs when both teams had the same rest</span></div>
-</article>
+<details class='tbdc-fold' id='tbdal-card'><summary><span class='tbdc-ft'>Tampa Bay at Dallas ★ · game-day card</span><span class='tbdc-fs'>Thu 7:15 PM CT · LEAN Buccaneers +8.5 · updated Thu Oct 8, 10:01 AM CT</span></summary><div class='tbdc'><div class='tbdc-match'><div class='tbdc-tm tb'><div class='tbdc-ab'>TB</div><div class='tbdc-nm'>Buccaneers · backup QB</div><div class='tbdc-sp'>+8.5</div></div><div class='tbdc-at'>@</div><div class='tbdc-tm dal'><div class='tbdc-ab'>DAL</div><div class='tbdc-nm'>Cowboys · home</div><div class='tbdc-sp'>−8.5</div></div></div><div class='tbdc-meta'>Thu, Oct 8 · 7:15 PM CT · Line: DraftKings, 10:01 AM CT</div><div class='tbdc-call'><div><div class='tbdc-k'>The call</div><div class='tbdc-pick'>Buccaneers +8.5</div><div class='tbdc-small'>Tampa needs to lose by 8 or less, or win.</div></div><div class='tbdc-badge'>LEAN<small>SMALL BET</small></div></div><div class='tbdc-h'>Why</div><ul class='tbdc-why'><li>Most of the money and most of the bets are on Dallas. We bet the other side.</li><li>Dallas is a big favorite (8.5 points), and big favorites the crowd loves have struggled to cover.</li><li>Tampa's starting QB, Baker Mayfield, is out. That drops this from our top rating to a lean.</li></ul><div class='tbdc-h'>Where the money is <span>Thu, Oct 8</span></div><div class='tbdc-2'><div class='tbdc-box'><div class='tbdc-bh'><span class='tbdc-src'>DraftKings</span><span class='tbdc-tmz'>pulled 9:59 AM CT</span></div><div class='tbdc-bar'><span>Money on DAL</span><div class='tbdc-track'><i style='width:85%;background:#4A90E2'></i><i style='width:15%;background:#D50A0A'></i></div><span class='tbdc-pct'>85%</span></div><div class='tbdc-bar'><span>Bets on DAL</span><div class='tbdc-track'><i style='width:71%;background:#4A90E2'></i><i style='width:29%;background:#D50A0A'></i></div><span class='tbdc-pct'>71%</span></div></div><div class='tbdc-box'><div class='tbdc-bh'><span class='tbdc-src'>All books</span><span class='tbdc-tmz'>ScoresAndOdds · 10:01 AM CT</span></div><div class='tbdc-bar'><span>Money on DAL</span><div class='tbdc-track'><i style='width:69%;background:#4A90E2'></i><i style='width:31%;background:#D50A0A'></i></div><span class='tbdc-pct'>69%</span></div><div class='tbdc-bar'><span>Bets on DAL</span><div class='tbdc-track'><i style='width:72%;background:#4A90E2'></i><i style='width:28%;background:#D50A0A'></i></div><span class='tbdc-pct'>72%</span></div></div></div><div class='tbdc-leg'><b style='background:#4A90E2'></b>Dallas &nbsp; <b style='background:#D50A0A'></b>Tampa &nbsp;·&nbsp; Both sources agree: the money is on Dallas.</div><div class='tbdc-2' style='margin-top:12px'><div class='tbdc-box'><div class='tbdc-h' style='margin-top:0'>Line movement</div><div class='tbdc-big'>Opened TB +3.5 → Now +8.5</div><div class='tbdc-sub'>The jump came with Mayfield's injury (ruled out Sept. 29). It has sat at +8.5 since at least Tuesday night. Source: DraftKings via ESPN.</div></div><div class='tbdc-box'><div class='tbdc-h' style='margin-top:0'>QB situation</div><div class='tbdc-big'>Jalon Daniels starts</div><div class='tbdc-sub'>Baker Mayfield (thumb) is out. Daniels, the backup, started last week vs Green Bay. Final inactives come out about 90 minutes before kickoff. Source: ESPN.</div></div></div><div class='tbdc-h'>How this spot has done <span>Against the spread · 2026 Weeks 1–4</span></div><div class='tbdc-row hd'><div class='tbdc-lbl'>Situation</div><div class='tbdc-rec'>Result</div><div class='tbdc-cv'>Covered</div></div><div class='tbdc-row '><div class='tbdc-lbl'>Underdogs getting 6+ points when 65%+ of the money is on the favorite<span class='tbdc-gm'>14 games</span></div><div class='tbdc-rec g'>10 wins, 3 losses, 1 push</div><div class='tbdc-cv g'>77%</div></div><div class='tbdc-row ind'><div class='tbdc-lbl'>Same spot, nothing against the underdog<span class='tbdc-gm'>8 games</span></div><div class='tbdc-rec g'>7 wins, 0 losses, 1 push</div><div class='tbdc-cv g'>100%</div></div><div class='tbdc-row ind'><div class='tbdc-lbl'>Same spot, rated lower (QB news or line move)<span class='tbdc-gm'>6 games</span></div><div class='tbdc-rec '>3 wins, 3 losses</div><div class='tbdc-cv '>50%</div></div><div class='tbdc-row '><div class='tbdc-lbl'>Underdogs starting a backup QB<span class='tbdc-gm'>7 games</span></div><div class='tbdc-rec r'>3 wins, 4 losses</div><div class='tbdc-cv r'>43%</div></div><div class='tbdc-row '><div class='tbdc-lbl'>All underdogs<span class='tbdc-gm'>64 games</span></div><div class='tbdc-rec '>34 wins, 26 losses, 4 pushes</div><div class='tbdc-cv '>57%</div></div><div class='tbdc-row ex'><div class='tbdc-lbl'>Closest match: backup-QB underdog in this exact spot<span class='tbdc-gm'>1 game · Wk 1, Atlanta (Cooper Rush) at Pittsburgh</span></div><div class='tbdc-rec r'>0 wins, 1 loss</div><div class='tbdc-cv r'>0%</div></div><div class='tbdc-foot'>Covered % leaves out pushes · Small sample · Not financial advice</div></div></details></article>
 <article class='card s-PASS'><div class='top'><div><div class='match'>Philadelphia at Jacksonville</div><div class='when'>Sun Oct 11 · 9:30 AM ET · NFL Net · London</div></div><span class='badge PASS'>PASS</span></div>
 <div class='tags'><span class='ptag'>Fading the sharps</span></div>
 <div class='watches'><span class='wtag'>RLM vs money</span></div>
