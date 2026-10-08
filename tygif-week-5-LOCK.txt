@@ -1,16 +1,15 @@
 tygif LOCK SHEET · Week 5
 Canonical snap: week_5_20261006T211347Z.json
 generated_utc: 2026-10-06T21:13Z
-Bank ~$200 → about $65 × 3 STRONG hammers · WSH WAIT/half (real-money sizes; model records are tracked at $100/bet)
 Gate note: STRONG = FTC + money ≥65%, measured on the all-books consensus % (the Weeks 1–4 backtest used consensus splits); DK must agree on the side or it is a tracked pass.
 
 LEAN: Tampa Bay +8.5
   Tampa Bay at Dallas · Thu Oct 8 · 8:15 PM ET · Prime Video
-  Updated Thu Oct 8: all-books money 69% on Dallas (ScoresAndOdds 10:01 AM CT) · DK bets/money on Dallas 71/85 (9:59 AM CT)
+  Updated Thu Oct 8: all-books money 69% on Dallas (ScoresAndOdds 11:01 AM ET) · DK bets/money on Dallas 71/85 (10:59 AM ET)
   Best: Tampa Bay +8.5 (-105) at DraftKings
   QB: Jalon Daniels starts (Baker Mayfield out, thumb) / Dallas: no QB injury listed
   Watches: Heavy + big-fav stack · Cowboys game
-  Size ~$30 · LEAN (QB ding). Was PASS on Tuesday when DK and all books disagreed.
+  LEAN (QB ding). Was PASS on Tuesday when DK and all books disagreed.
 
 STRONG: Tennessee +7.5
   Houston at Tennessee · Sun Oct 11 · 1:00 PM ET · CBS
@@ -18,7 +17,7 @@ STRONG: Tennessee +7.5
   Best: Tennessee +7.5 (-110) at BetRivers
   QB: C.J. Stroud (no injury listed) / Cam Ward (no injury listed)
   Watches: Divisional dog, Heavy + big-fav stack
-  Size ~$65 · LOCK-NOW (recheck Sun AM injury report)
+  LOCK-NOW (recheck Sun AM injury report)
 
 STRONG: NY Jets -2.5
   Cleveland at NY Jets · Sun Oct 11 · 1:00 PM ET · CBS
@@ -26,7 +25,7 @@ STRONG: NY Jets -2.5
   Best: NY Jets -1.5 (-115) at FanDuel
   QB: Deshaun Watson (no injury listed) / Geno Smith (no injury listed)
   Watches: Fading off-TNF, Very heavy money
-  Size ~$65 · LOCK-NOW (recheck Sun AM injury report)
+  LOCK-NOW (recheck Sun AM injury report)
 
 STRONG: Miami +7.5
   Cincinnati at Miami · Sun Oct 11 · 1:00 PM ET · Fox
@@ -34,7 +33,7 @@ STRONG: Miami +7.5
   Best: Miami +7.5 (-114) at BetRivers
   QB: Joe Burrow (no injury listed) / Malik Willis (no injury listed)
   Watches: RLM vs money, Heavy + big-fav stack
-  Size ~$65 · LOCK-NOW (recheck Sun AM injury report)
+  LOCK-NOW (recheck Sun AM injury report)
 
 LEAN: Washington -3.5
   NY Giants at Washington · Sun Oct 11 · 1:00 PM ET · Fox
@@ -42,7 +41,7 @@ LEAN: Washington -3.5
   Best: Washington -3 (-118) at BetRivers
   QB: Jameis Winston (no injury listed) / Jayden Daniels (Questionable)
   Watches: RLM vs money, Very heavy money
-  Size ~$30 or $0 · WAIT — Daniels Questionable; only if active
+  WAIT — Daniels Questionable; only if active
 
 PASS / DO NOT BET: PHI@JAX, CHI@GB, LV@NE, MIN@NO, IND@PIT, DEN@LAC, DET@ARI, SF@SEA, BAL@ATL, BUF@LAR.
 Totals watched only — not plays.
