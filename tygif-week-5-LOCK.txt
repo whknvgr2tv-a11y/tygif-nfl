@@ -13,7 +13,7 @@ LEAN: Tampa Bay +8.5
 
 STRONG: Tennessee +7.5
   Houston at Tennessee · Sun Oct 11 · 1:00 PM ET · CBS
-  Primary money (all-books) 88.0% · DK away bets/handle 78.0/76.0 · home 22.0/24.0
+  Primary money (all-books) 88.0% · DK away bets/money 78.0/76.0 · home 22.0/24.0
   Best: Tennessee +7.5 (-110) at BetRivers
   QB: C.J. Stroud (no injury listed) / Cam Ward (no injury listed)
   Watches: Divisional dog, Heavy + big-fav stack
@@ -21,7 +21,7 @@ STRONG: Tennessee +7.5
 
 STRONG: NY Jets -2.5
   Cleveland at NY Jets · Sun Oct 11 · 1:00 PM ET · CBS
-  Primary money (all-books) 84.0% · DK away bets/handle 88.0/89.0 · home 12.0/11.0
+  Primary money (all-books) 84.0% · DK away bets/money 88.0/89.0 · home 12.0/11.0
   Best: NY Jets -1.5 (-115) at FanDuel
   QB: Deshaun Watson (no injury listed) / Geno Smith (no injury listed)
   Watches: Fading off-TNF, Very heavy money
@@ -29,7 +29,7 @@ STRONG: NY Jets -2.5
 
 STRONG: Miami +7.5
   Cincinnati at Miami · Sun Oct 11 · 1:00 PM ET · Fox
-  Primary money (all-books) 67.0% · DK away bets/handle 71.0/67.0 · home 29.0/33.0
+  Primary money (all-books) 67.0% · DK away bets/money 71.0/67.0 · home 29.0/33.0
   Best: Miami +7.5 (-114) at BetRivers
   QB: Joe Burrow (no injury listed) / Malik Willis (no injury listed)
   Watches: RLM vs money, Heavy + big-fav stack
@@ -37,7 +37,7 @@ STRONG: Miami +7.5
 
 LEAN: Washington -3.5
   NY Giants at Washington · Sun Oct 11 · 1:00 PM ET · Fox
-  Primary money (all-books) 90.0% · DK away bets/handle 81.0/99.0 · home 19.0/1.0
+  Primary money (all-books) 90.0% · DK away bets/money 81.0/99.0 · home 19.0/1.0
   Best: Washington -3 (-118) at BetRivers
   QB: Jameis Winston (no injury listed) / Jayden Daniels (Questionable)
   Watches: RLM vs money, Very heavy money
