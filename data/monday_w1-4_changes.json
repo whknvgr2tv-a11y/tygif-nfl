@@ -1,0 +1,598 @@
+{
+ "definition": "Monday line = average of TeamRankings books 2 and 3, each book's last spread quote before Monday 12:00 AM ET of game week (spread history table, not the \"Open\" row); quotes older than 7 days are skipped. Lines are from the closing favorite's side.",
+ "record_before": {
+  "STRONG": "11-1-3 +$899 (15)",
+  "LEAN": "9-8-1 +$32 (18)",
+  "line_move_drops": "6-5 +$55 (11)",
+  "pass_no_split": "5-5 -$38 (10)"
+ },
+ "record_after": {
+  "STRONG": "13-4-3 +$786 (20)",
+  "LEAN": "9-5-1 +$343 (15)",
+  "line_move_drops": "2-2 -$28 (4)",
+  "pass_no_split": "3-5 -$236 (8)"
+ },
+ "rating_changes": [
+  {
+   "game": "W1 CLE@JAX",
+   "from": "LEAN",
+   "to": "STRONG",
+   "old_mv": 1.25,
+   "new_mv": 1.0,
+   "result": "L",
+   "usd": -100.0
+  },
+  {
+   "game": "W1 WSH@PHI",
+   "from": "LEAN",
+   "to": "STRONG",
+   "old_mv": 1.5,
+   "new_mv": 0.5,
+   "result": "W",
+   "usd": 90.91
+  },
+  {
+   "game": "W2 NYG@LAR",
+   "from": "PASS",
+   "to": "LEAN",
+   "old_mv": 1.5,
+   "new_mv": 1.0,
+   "result": "W",
+   "usd": 102.0
+  },
+  {
+   "game": "W2 PHI@TEN",
+   "from": "LEAN",
+   "to": "STRONG",
+   "old_mv": 1.25,
+   "new_mv": 0.0,
+   "result": "W",
+   "usd": 95.24
+  },
+  {
+   "game": "W3 LAC@BUF",
+   "from": "LEAN",
+   "to": "STRONG",
+   "old_mv": 1.25,
+   "new_mv": 0.0,
+   "result": "L",
+   "usd": -100.0
+  },
+  {
+   "game": "W3 PHI@CHI",
+   "from": "PASS",
+   "to": "LEAN",
+   "old_mv": 1.75,
+   "new_mv": -0.5,
+   "result": "W",
+   "usd": 95.24
+  },
+  {
+   "game": "W4 ATL@NO",
+   "from": "LEAN",
+   "to": "STRONG",
+   "old_mv": 1.5,
+   "new_mv": 1.0,
+   "result": "L",
+   "usd": -100.0
+  }
+ ],
+ "line_value_changes": [
+  {
+   "week": 1,
+   "game": "ARI@LAC",
+   "old_monday_fav": -10.5,
+   "new_monday_fav": -10.25,
+   "old_mv_toward_money": -2.0,
+   "new_mv_toward_money": -1.75,
+   "old_rating": "STRONG",
+   "new_rating": "STRONG",
+   "rating_changed": false
+  },
+  {
+   "week": 1,
+   "game": "BUF@HOU",
+   "old_monday_fav": -1.5,
+   "new_monday_fav": -1.0,
+   "old_mv_toward_money": -0.0,
+   "new_mv_toward_money": -0.5,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 1,
+   "game": "CLE@JAX",
+   "old_monday_fav": -7.25,
+   "new_monday_fav": -7.5,
+   "old_mv_toward_money": 1.25,
+   "new_mv_toward_money": 1.0,
+   "old_rating": "LEAN",
+   "new_rating": "STRONG",
+   "rating_changed": true
+  },
+  {
+   "week": 1,
+   "game": "DAL@NYG",
+   "old_monday_fav": -2.5,
+   "new_monday_fav": -2.75,
+   "old_mv_toward_money": 0.5,
+   "new_mv_toward_money": 0.25,
+   "old_rating": "STRONG",
+   "new_rating": "STRONG",
+   "rating_changed": false
+  },
+  {
+   "week": 1,
+   "game": "DEN@KC",
+   "old_monday_fav": -2.75,
+   "new_monday_fav": -2.5,
+   "old_mv_toward_money": 0.25,
+   "new_mv_toward_money": -0.0,
+   "old_rating": "STRONG",
+   "new_rating": "STRONG",
+   "rating_changed": false
+  },
+  {
+   "week": 1,
+   "game": "GB@MIN",
+   "old_monday_fav": 0.0,
+   "new_monday_fav": -1.5,
+   "old_mv_toward_money": 2.5,
+   "new_mv_toward_money": 1.0,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 1,
+   "game": "NE@SEA",
+   "old_monday_fav": -4.0,
+   "new_monday_fav": -3.5,
+   "old_mv_toward_money": 1.0,
+   "new_mv_toward_money": 0.5,
+   "old_rating": "STRONG",
+   "new_rating": "STRONG",
+   "rating_changed": false
+  },
+  {
+   "week": 1,
+   "game": "NYJ@TEN",
+   "old_monday_fav": -2.75,
+   "new_monday_fav": -1.5,
+   "old_mv_toward_money": 1.25,
+   "new_mv_toward_money": -0.0,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 1,
+   "game": "SF@LAR",
+   "old_monday_fav": -3.0,
+   "new_monday_fav": -3.5,
+   "old_mv_toward_money": -0.5,
+   "new_mv_toward_money": -0.0,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 1,
+   "game": "WSH@PHI",
+   "old_monday_fav": -4.5,
+   "new_monday_fav": -5.5,
+   "old_mv_toward_money": 1.5,
+   "new_mv_toward_money": 0.5,
+   "old_rating": "LEAN",
+   "new_rating": "STRONG",
+   "rating_changed": true
+  },
+  {
+   "week": 2,
+   "game": "CAR@ATL",
+   "old_monday_fav": 1.5,
+   "new_monday_fav": 1.25,
+   "old_mv_toward_money": 4.0,
+   "new_mv_toward_money": 3.75,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 2,
+   "game": "CIN@HOU",
+   "old_monday_fav": -2.5,
+   "new_monday_fav": -2.75,
+   "old_mv_toward_money": 0.5,
+   "new_mv_toward_money": 0.25,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 2,
+   "game": "CLE@TB",
+   "old_monday_fav": -7.5,
+   "new_monday_fav": -8.5,
+   "old_mv_toward_money": 1.0,
+   "new_mv_toward_money": 0.0,
+   "old_rating": "STRONG",
+   "new_rating": "STRONG",
+   "rating_changed": false
+  },
+  {
+   "week": 2,
+   "game": "DET@BUF",
+   "old_monday_fav": -3.0,
+   "new_monday_fav": -3.5,
+   "old_mv_toward_money": 2.5,
+   "new_mv_toward_money": 2.0,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 2,
+   "game": "GB@NYJ",
+   "old_monday_fav": -5.0,
+   "new_monday_fav": -4.5,
+   "old_mv_toward_money": 1.5,
+   "new_mv_toward_money": 1.0,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 2,
+   "game": "LV@LAC",
+   "old_monday_fav": -7.75,
+   "new_monday_fav": -7.25,
+   "old_mv_toward_money": -1.25,
+   "new_mv_toward_money": -0.75,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 2,
+   "game": "MIA@SF",
+   "old_monday_fav": -11.5,
+   "new_monday_fav": -12.5,
+   "old_mv_toward_money": -1.0,
+   "new_mv_toward_money": -0.0,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 2,
+   "game": "MIN@CHI",
+   "old_monday_fav": -4.25,
+   "new_monday_fav": -5.25,
+   "old_mv_toward_money": 0.25,
+   "new_mv_toward_money": -0.75,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 2,
+   "game": "NO@BAL",
+   "old_monday_fav": -8.0,
+   "new_monday_fav": -8.5,
+   "old_mv_toward_money": 0.5,
+   "new_mv_toward_money": 0.0,
+   "old_rating": "STRONG",
+   "new_rating": "STRONG",
+   "rating_changed": false
+  },
+  {
+   "week": 2,
+   "game": "NYG@LAR",
+   "old_monday_fav": -8.5,
+   "new_monday_fav": -8.0,
+   "old_mv_toward_money": 1.5,
+   "new_mv_toward_money": 1.0,
+   "old_rating": "PASS",
+   "new_rating": "LEAN",
+   "rating_changed": true
+  },
+  {
+   "week": 2,
+   "game": "PHI@TEN",
+   "old_monday_fav": -5.75,
+   "new_monday_fav": -7.0,
+   "old_mv_toward_money": 1.25,
+   "new_mv_toward_money": 0.0,
+   "old_rating": "LEAN",
+   "new_rating": "STRONG",
+   "rating_changed": true
+  },
+  {
+   "week": 2,
+   "game": "PIT@NE",
+   "old_monday_fav": -5.0,
+   "new_monday_fav": -5.25,
+   "old_mv_toward_money": 0.5,
+   "new_mv_toward_money": 0.75,
+   "old_rating": "LEAN",
+   "new_rating": "LEAN",
+   "rating_changed": false
+  },
+  {
+   "week": 2,
+   "game": "SEA@ARI",
+   "old_monday_fav": -8.0,
+   "new_monday_fav": -4.25,
+   "old_mv_toward_money": 4.5,
+   "new_mv_toward_money": 0.75,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 2,
+   "game": "WSH@DAL",
+   "old_monday_fav": -4.25,
+   "new_monday_fav": -4.5,
+   "old_mv_toward_money": -0.25,
+   "new_mv_toward_money": -0.0,
+   "old_rating": "STRONG",
+   "new_rating": "STRONG",
+   "rating_changed": false
+  },
+  {
+   "week": 3,
+   "game": "BAL@DAL",
+   "old_monday_fav": -3.0,
+   "new_monday_fav": -3.25,
+   "old_mv_toward_money": 0.0,
+   "new_mv_toward_money": -0.25,
+   "old_rating": "STRONG",
+   "new_rating": "STRONG",
+   "rating_changed": false
+  },
+  {
+   "week": 3,
+   "game": "CIN@PIT",
+   "old_monday_fav": -3.0,
+   "new_monday_fav": -3.5,
+   "old_mv_toward_money": -0.5,
+   "new_mv_toward_money": -0.0,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 3,
+   "game": "LAC@BUF",
+   "old_monday_fav": -5.75,
+   "new_monday_fav": -7.0,
+   "old_mv_toward_money": 1.25,
+   "new_mv_toward_money": 0.0,
+   "old_rating": "LEAN",
+   "new_rating": "STRONG",
+   "rating_changed": true
+  },
+  {
+   "week": 3,
+   "game": "MIN@TB",
+   "old_monday_fav": 0.5,
+   "new_monday_fav": 2.5,
+   "old_mv_toward_money": 2.0,
+   "new_mv_toward_money": 4.0,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 3,
+   "game": "NYJ@DET",
+   "old_monday_fav": -7.25,
+   "new_monday_fav": -6.75,
+   "old_mv_toward_money": -0.25,
+   "new_mv_toward_money": 0.25,
+   "old_rating": "STRONG",
+   "new_rating": "STRONG",
+   "rating_changed": false
+  },
+  {
+   "week": 3,
+   "game": "PHI@CHI",
+   "old_monday_fav": -1.25,
+   "new_monday_fav": -3.5,
+   "old_mv_toward_money": 1.75,
+   "new_mv_toward_money": -0.5,
+   "old_rating": "PASS",
+   "new_rating": "LEAN",
+   "rating_changed": true
+  },
+  {
+   "week": 3,
+   "game": "SEA@WSH",
+   "old_monday_fav": -4.25,
+   "new_monday_fav": -6.25,
+   "old_mv_toward_money": 4.25,
+   "new_mv_toward_money": 2.25,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 4,
+   "game": "ARI@NYG",
+   "old_monday_fav": 2.5,
+   "new_monday_fav": 1.25,
+   "old_mv_toward_money": -5.0,
+   "new_mv_toward_money": -3.75,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 4,
+   "game": "ATL@NO",
+   "old_monday_fav": -3.0,
+   "new_monday_fav": -2.5,
+   "old_mv_toward_money": 1.5,
+   "new_mv_toward_money": 1.0,
+   "old_rating": "LEAN",
+   "new_rating": "STRONG",
+   "rating_changed": true
+  },
+  {
+   "week": 4,
+   "game": "DAL@HOU",
+   "old_monday_fav": -2.0,
+   "new_monday_fav": -2.5,
+   "old_mv_toward_money": -1.0,
+   "new_mv_toward_money": -0.5,
+   "old_rating": "STRONG",
+   "new_rating": "STRONG",
+   "rating_changed": false
+  },
+  {
+   "week": 4,
+   "game": "DEN@SF",
+   "old_monday_fav": -3.25,
+   "new_monday_fav": -2.75,
+   "old_mv_toward_money": -0.25,
+   "new_mv_toward_money": 0.25,
+   "old_rating": "LEAN",
+   "new_rating": "LEAN",
+   "rating_changed": false
+  },
+  {
+   "week": 4,
+   "game": "DET@CAR",
+   "old_monday_fav": -2.75,
+   "new_monday_fav": -3.0,
+   "old_mv_toward_money": 0.75,
+   "new_mv_toward_money": 0.5,
+   "old_rating": "LEAN",
+   "new_rating": "LEAN",
+   "rating_changed": false
+  },
+  {
+   "week": 4,
+   "game": "GB@TB",
+   "old_monday_fav": -2.5,
+   "new_monday_fav": -3.5,
+   "old_mv_toward_money": -0.0,
+   "new_mv_toward_money": 1.0,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 4,
+   "game": "IND@WSH",
+   "old_monday_fav": 1.5,
+   "new_monday_fav": -3.25,
+   "old_mv_toward_money": 6.0,
+   "new_mv_toward_money": 1.25,
+   "old_rating": "PASS",
+   "new_rating": "PASS",
+   "rating_changed": false
+  },
+  {
+   "week": 4,
+   "game": "JAX@CIN",
+   "old_monday_fav": -2.5,
+   "new_monday_fav": -2.25,
+   "old_mv_toward_money": -0.0,
+   "new_mv_toward_money": -0.25,
+   "old_rating": "LEAN",
+   "new_rating": "LEAN",
+   "rating_changed": false
+  },
+  {
+   "week": 4,
+   "game": "KC@LV",
+   "old_monday_fav": -5.25,
+   "new_monday_fav": -4.5,
+   "old_mv_toward_money": -1.75,
+   "new_mv_toward_money": -1.0,
+   "old_rating": "LEAN",
+   "new_rating": "LEAN",
+   "rating_changed": false
+  },
+  {
+   "week": 4,
+   "game": "LAC@SEA",
+   "old_monday_fav": -6.75,
+   "new_monday_fav": -6.5,
+   "old_mv_toward_money": 0.25,
+   "new_mv_toward_money": 0.5,
+   "old_rating": "LEAN",
+   "new_rating": "LEAN",
+   "rating_changed": false
+  },
+  {
+   "week": 4,
+   "game": "MIA@MIN",
+   "old_monday_fav": -10.5,
+   "new_monday_fav": -10.25,
+   "old_mv_toward_money": -0.5,
+   "new_mv_toward_money": -0.25,
+   "old_rating": "LEAN",
+   "new_rating": "LEAN",
+   "rating_changed": false
+  },
+  {
+   "week": 4,
+   "game": "NE@BUF",
+   "old_monday_fav": -6.25,
+   "new_monday_fav": -6.75,
+   "old_mv_toward_money": 0.75,
+   "new_mv_toward_money": 0.25,
+   "old_rating": "STRONG",
+   "new_rating": "STRONG",
+   "rating_changed": false
+  },
+  {
+   "week": 4,
+   "game": "TEN@BAL",
+   "old_monday_fav": -11.0,
+   "new_monday_fav": -11.25,
+   "old_mv_toward_money": 0.5,
+   "new_mv_toward_money": 0.25,
+   "old_rating": "STRONG",
+   "new_rating": "STRONG",
+   "rating_changed": false
+  }
+ ],
+ "line_move_row_after": [
+  "W1 ATL@PIT",
+  "W2 CAR@ATL",
+  "W3 SEA@WSH",
+  "W3 TEN@NYG"
+ ],
+ "partial_one_book": [
+  {
+   "week": 1,
+   "game": "BUF@HOU",
+   "monday_et": "2026-09-07",
+   "fav": "BUF",
+   "book2_fav": -1.0,
+   "book2_at_et": "09/06 10:36 PM",
+   "book3_fav": null,
+   "book3_at_et": null,
+   "monday_line_fav": -1.0,
+   "old_weekly_reopen_fav": -1.5
+  },
+  {
+   "week": 2,
+   "game": "WSH@DAL",
+   "monday_et": "2026-09-14",
+   "fav": "DAL",
+   "book2_fav": null,
+   "book2_at_et": null,
+   "book3_fav": -4.5,
+   "book3_at_et": "09/13 08:13 PM",
+   "monday_line_fav": -4.5,
+   "old_weekly_reopen_fav": -4.25
+  }
+ ]
+}
