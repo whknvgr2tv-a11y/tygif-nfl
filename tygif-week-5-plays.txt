@@ -1,27 +1,26 @@
 tygif's model | Week 5 plays (splits and lines pulled Thu Oct 8, 1:58 PM ET; they move until kickoff)
 Play = against the money. All sportsbooks first (ScoresAndOdds); DraftKings must have the money on the same side.
-Plays lock at the Saturday evening update (Thursday games: the last update before kickoff); from Week 5 the live record is graded the same way, at the DraftKings closing price; the posted line, price and time are saved too.
-Calls posted Tuesday to Saturday can change as the money moves; only the locked call counts.
+Plays lock at the Saturday evening update (Thursday games: the last update before kickoff), and only the locked call counts. From Week 5, each play is graded at the line and price we posted when it locked; Weeks 1–4 are graded at the DraftKings closing price.
 3 STRONG, 1 LEAN, 11 passes.
 
 LEAN: Tampa Bay +9.5 · Type 1 (Crowd piled on a big favorite). DraftKings +9.5 (−112). Thu Oct 8 · 8:15 PM ET · Prime Video
   Checks: ✓ money and bets same side · ✓ 65%+ money · ✓ DraftKings agrees · – 6+ pt favorite (type 1) · ✓ line not moved toward the money · ✕ QB1 playing
   Dallas holds most of the money (all books 66%, DraftKings 83%) and most of the bets (all books 73%). Play Tampa Bay.
   Tampa Bay QB Baker Mayfield is out (thumb); Jalon Daniels starts. That drops it from STRONG to LEAN.
-  Opened TB +9.5 Monday, now +9.5.
+  Start-of-week line TB +9.5, now +9.5.
 STRONG: Miami +7 · Type 1 (Crowd piled on a big favorite). DraftKings +7 (−115). Sun Oct 11 · 1:00 PM ET · Fox
   Checks: ✓ money and bets same side · ✓ 65%+ money · ✓ DraftKings agrees · – 6+ pt favorite (type 1) · ✓ line not moved toward the money · ✓ QB1 playing
   Cincinnati holds most of the money (all books 84%, DraftKings 69%) and most of the bets (all books 79%). Play Miami.
-  Opened MIA +7.5 Monday, now +7.
+  Start-of-week line MIA +7.5, now +7.
 STRONG: NY Jets −2.5 · Type 2 (Crowd piled on, no big favorite). DraftKings −2.5 (−110). Sun Oct 11 · 1:00 PM ET · CBS
   Checks: ✓ money and bets same side · ✓ 65%+ money · ✓ DraftKings agrees · – 6+ pt favorite · ✓ line not moved toward the money · ✓ QB1 playing
   Cleveland holds most of the money (all books 70%, DraftKings 90%) and most of the bets (all books 83%). Play NY Jets.
-  Opened NYJ −2 / −2.5 Monday (two books, avg −2.25), now −2.5.
+  Start-of-week line NYJ −2 / −2.5 (avg −2.25), now −2.5.
 STRONG: Washington −3.5 · Type 2 (Crowd piled on, no big favorite). DraftKings −3.5 (−115). Sun Oct 11 · 1:00 PM ET · Fox
   Checks: ✓ money and bets same side · ✓ 65%+ money · ✓ DraftKings agrees · – 6+ pt favorite · ✓ line not moved toward the money · ✓ QB1 playing
   NY Giants holds most of the money (all books 79%, DraftKings 86%) and most of the bets (all books 82%). Play Washington.
   Washington QB Jayden Daniels practiced fully Wednesday with no game status; final status Friday.
-  Opened WSH −3.5 Monday, now −3.5.
+  Start-of-week line WSH −3.5, now −3.5.
 
 Changed since Tuesday (now passes):
   Houston at Tennessee: was STRONG Tennessee +7.5 on Tuesday's numbers. DraftKings now has 65% of the money on Tennessee while all books have 70% on Houston, so the books disagree (type 4). No bet.

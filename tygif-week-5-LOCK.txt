@@ -1,6 +1,6 @@
 tygif's model · Week 5 card
 Splits: all books (ScoresAndOdds) and DraftKings, pulled Thu Oct 8, 1:58 PM ET. Lines from DraftKings at the same time.
-Plays lock at the Saturday evening update (Thursday games: the last update before kickoff); from Week 5 the live record is graded the same way, at the DraftKings closing price; the posted line, price and time are saved too.
+Plays lock at the Saturday evening update (Thursday games: the last update before kickoff), and only the locked call counts. From Week 5, each play is graded at the line and price we posted when it locked; Weeks 1–4 are graded at the DraftKings closing price.
 
 LEAN: Tampa Bay +9.5
   Tampa Bay at Dallas · Thu Oct 8 · 8:15 PM ET · Prime Video

@@ -406,6 +406,18 @@ footer{font-size:12px}
 .tt td.lv,.tt thead th:last-child{text-align:center;color:var(--mut);width:40px;padding-left:4px;padding-right:8px}
 @media (max-width:420px){.tt th,.tt td{padding:10px 6px}.tt tbody th{font-size:13.5px;padding-left:9px}.tt td b{font-size:13px}.tt .tn{gap:8px}}
 </style><style id="clean1-css">
+.rules{background:var(--card);border:1px solid var(--accent);padding:12px 14px;margin:12px 0}
+.rules-k{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.rules p{font-size:13px;line-height:1.45;margin:6px 0} .rules ul{list-style:none;margin:6px 0;padding:0}
+.rules li{font-size:13px;line-height:1.45;padding:5px 0;border-top:1px solid var(--line)} .rules li .tg{font-size:12px;margin-right:6px}
+.rgt{flex-basis:100%;font-size:12px;color:var(--mut);margin-top:2px}
+.rgt>summary{cursor:pointer;list-style:none;display:inline-block;font-size:12px;color:var(--mut);border-bottom:1px dotted var(--mut)}
+.rgt>summary::-webkit-details-marker{display:none}
+.rgt p{margin:4px 0 0;font-size:12px;color:var(--mut);line-height:1.4}
+.tb-l li{flex-wrap:wrap}
+.fn{margin-top:4px;font-size:13px;color:var(--mut)} .fn>summary{cursor:pointer;color:var(--accent);font-size:13px}
+.live .gt-row{font-size:14px}
+table.wk3 td small{color:var(--mut)}
 .tbdc .uc-yn.na{color:var(--mut);background:rgba(154,157,164,.14)}
 .tbdc .uc-yn.na i{background:transparent;color:var(--mut);font-size:14px}
 .gt-rec2{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
@@ -492,10 +504,10 @@ table.wk3 td,table.wk3 th{white-space:normal} table.wk3 td{font-size:13px;line-h
 <li><b>65%+ of the money</b> (all books). Yes starts at STRONG; 55–64% starts at LEAN.</li>
 <li><b>DraftKings has the money on the same side.</b> If not, it is type 4: PASS.</li>
 <li><b>A 6+ point favorite holds the money.</b> Sets type 1 instead of type 2. Doesn’t change the rating.</li>
-<li><b>The line hasn’t moved over 1 point toward the money</b> from Monday’s line to the close. Monday’s line = TeamRankings books 2 and 3, each book’s last quote before Monday 12:00 AM ET, averaged (quotes older than 7 days are skipped; if only one book has a quote, that book is used). If it has, drop one level.</li>
+<li><b>The line hasn’t moved over 1 point toward the money</b> from the start-of-week line (Sunday night, before Monday) to the close. If it has, drop one level.<details class="fn"><summary>How the start-of-week line is set</summary>TeamRankings books 2 and 3, each book’s last quote before Monday 12:00 AM ET, averaged. Quotes older than 7 days are skipped; if only one book has a quote, that book is used.</details></li>
 <li><b>Our QB1 is playing.</b> If he is out, doubtful or questionable on the official injury report, or on IR, drop one level. QB1 = the team’s starter when healthy (its Week 1 starter, or its named starter if Week 1 was a fill-in). Weeks 1–4, with no saved reports: he didn’t start.</li>
 </ol>
-<p class="sm">Mixed signals between sources also drop the rating one level. If the books have the money on different teams, it is type 4: PASS.</p>
+<p class="sm">Mixed signals: when the sources disagree (all books and DraftKings have the money on different teams, type 4) or the money and the bets are on different teams, the game is a PASS.</p>
 <h2>STRONG, LEAN, PASS</h2>
 <div class="pills"><span style="color:#3fae6c;border-color:#3fae6c">STRONG · top rating</span><span style="color:#b8860b;border-color:#b8860b">LEAN · optional</span><span style="color:#9a9da4;border-color:#9a9da4">PASS · no bet</span></div>
 <ul>
@@ -504,14 +516,13 @@ table.wk3 td,table.wk3 th{white-space:normal} table.wk3 td{font-size:13px;line-h
 <li><b>PASS:</b> types 4 and 5, money and bets on different sides, or a LEAN that dropped.</li>
 </ul>
 <p class="sm">STRONG and LEAN records are always kept separate, never added together.</p>
-<h2>How records are kept</h2>
+<h2 id="records">How records are kept</h2>
 <ul>
-<li>Every STRONG and LEAN play is graded at flat $100, settled at the DraftKings closing price and counted from our side. A loss is −$100 and a push is $0. Wins, losses and pushes all stay on the record.</li>
+<li>Every STRONG and LEAN play is graded at flat $100, counted from our side. A loss is −$100 and a push is $0. Wins, losses and pushes all stay on the record.</li>
 <li>Weeks 1–4 are a look back: today’s rules applied afterward to the same 64 games used to set them. Small samples; treat them as a best case.</li>
-<li>Plays lock at the Saturday evening update (Thursday games: the last update before kickoff); from Week 5 the live record is graded the same way, at the DraftKings closing price; the posted line, price and time are saved too.</li>
-<li>Calls posted Tuesday to Saturday can change as the money moves; only the locked call counts.</li>
-<li>The live log (<a href="data/live_log.csv">data/live_log.csv</a>) saves each play’s posted line, price and time, and the closing line, so both are on file.</li>
+<li>Plays lock at the Saturday evening update (Thursday games: the last update before kickoff), and only the locked call counts. From Week 5, each play is graded at the line and price we posted when it locked; Weeks 1–4 are graded at the DraftKings closing price.</li>
+<li>The live log (<a href="data/live_log.csv">data/live_log.csv</a>) saves each play’s posted line, price and time, and the closing line; Records shows how often we beat the closing line.</li>
 </ul>
 <h2>Sources</h2>
-<p>ScoresAndOdds (all-sportsbook money and bet splits) · DraftKings (its own splits and lines) · TeamRankings (Monday’s line) · ESPN (scores and closing lines) · nflverse (Weeks 1–4 starting quarterbacks) · team injury reports.</p>
-</div></main><footer>tygif's model · free public data · records use flat $100 bets at the DraftKings closing price · small samples, no guarantees · not financial advice</footer></body></html>
+<p>ScoresAndOdds (all-sportsbook money and bet splits) · DraftKings (its own splits and lines) · TeamRankings (start-of-week line) · ESPN (scores and closing lines) · nflverse (Weeks 1–4 starting quarterbacks) · team injury reports.</p>
+</div></main><footer>tygif's model · free public data · records use flat $100 bets · small samples, no guarantees · not financial advice</footer></body></html>
