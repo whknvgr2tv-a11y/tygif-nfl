@@ -1,7 +1,7 @@
-tygif LOCK SHEET · Week 5
+tygif STRONG plays · Week 5
 Canonical snap: week_5_20261006T211347Z.json
 generated_utc: 2026-10-06T21:13Z
-Gate note: STRONG = FTC + money ≥65%, measured on the all-books consensus % (the Weeks 1–4 backtest used consensus splits); DK must agree on the side or it is a tracked pass.
+Gate note: STRONG = Fade the Crowd + money ≥65% on the DraftKings split; the all-books split must agree on the side, or it is a tracked pass.
 
 LEAN: Tampa Bay +8.5
   Tampa Bay at Dallas · Thu Oct 8 · 8:15 PM ET · Prime Video
@@ -17,7 +17,7 @@ STRONG: Tennessee +7.5
   Best: Tennessee +7.5 (-110) at BetRivers
   QB: C.J. Stroud (no injury listed) / Cam Ward (no injury listed)
   Watches: Divisional dog, Heavy + big-fav stack
-  LOCK-NOW (recheck Sun AM injury report)
+  Bet now (recheck Sun AM injury report)
 
 STRONG: NY Jets -2.5
   Cleveland at NY Jets · Sun Oct 11 · 1:00 PM ET · CBS
@@ -25,7 +25,7 @@ STRONG: NY Jets -2.5
   Best: NY Jets -1.5 (-115) at FanDuel
   QB: Deshaun Watson (no injury listed) / Geno Smith (no injury listed)
   Watches: Fading off-TNF, Very heavy money
-  LOCK-NOW (recheck Sun AM injury report)
+  Bet now (recheck Sun AM injury report)
 
 STRONG: Miami +7.5
   Cincinnati at Miami · Sun Oct 11 · 1:00 PM ET · Fox
@@ -33,7 +33,7 @@ STRONG: Miami +7.5
   Best: Miami +7.5 (-114) at BetRivers
   QB: Joe Burrow (no injury listed) / Malik Willis (no injury listed)
   Watches: RLM vs money, Heavy + big-fav stack
-  LOCK-NOW (recheck Sun AM injury report)
+  Bet now (recheck Sun AM injury report)
 
 LEAN: Washington -3.5
   NY Giants at Washington · Sun Oct 11 · 1:00 PM ET · Fox
