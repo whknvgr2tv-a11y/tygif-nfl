@@ -1,7 +1,7 @@
 tygif STRONG plays · Week 5
 Canonical snap: week_5_20261006T211347Z.json
 generated_utc: 2026-10-06T21:13Z
-Gate note: STRONG = Fade the Crowd + money ≥65% on the DraftKings split; the all-books split must agree on the side, or it is a tracked pass.
+Gate note: STRONG = Fade the Crowd + money ≥65% on the all-sportsbooks split; the DraftKings split must agree on the side, or it is a tracked pass.
 
 LEAN: Tampa Bay +8.5
   Tampa Bay at Dallas · Thu Oct 8 · 8:15 PM ET · Prime Video
