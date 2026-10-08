@@ -1,0 +1,141 @@
+{
+ "week": 5,
+ "definition": "Monday line = average of TeamRankings books 2 and 3, each book's last spread quote before Monday Oct 5, 2026 12:00 AM ET (from the spread history table, not the \"Open\" row).",
+ "games": [
+  {
+   "game": "TB@DAL",
+   "team": "TB",
+   "book2": 9.5,
+   "book2_at_et": "10/04 10:56 PM",
+   "book3": 9.5,
+   "book3_at_et": "10/04 10:56 PM",
+   "monday_line": 9.5
+  },
+  {
+   "game": "CIN@MIA",
+   "team": "MIA",
+   "book2": 7.5,
+   "book2_at_et": "10/04 09:54 PM",
+   "book3": 7.5,
+   "book3_at_et": "10/04 08:53 PM",
+   "monday_line": 7.5
+  },
+  {
+   "game": "CLE@NYJ",
+   "team": "NYJ",
+   "book2": -2.0,
+   "book2_at_et": "10/04 10:55 PM",
+   "book3": -2.5,
+   "book3_at_et": "10/04 10:55 PM",
+   "monday_line": -2.25
+  },
+  {
+   "game": "NYG@WSH",
+   "team": "WSH",
+   "book2": -3.5,
+   "book2_at_et": "10/04 10:56 PM",
+   "book3": -3.5,
+   "book3_at_et": "10/04 10:56 PM",
+   "monday_line": -3.5
+  },
+  {
+   "game": "PHI@JAX",
+   "team": "JAX",
+   "book2": -4.5,
+   "book2_at_et": "10/04 11:57 PM",
+   "book3": -4.5,
+   "book3_at_et": "10/04 10:56 PM",
+   "monday_line": -4.5
+  },
+  {
+   "game": "CHI@GB",
+   "team": "CHI",
+   "book2": -2.5,
+   "book2_at_et": "10/04 11:56 PM",
+   "book3": -2.5,
+   "book3_at_et": "10/04 11:56 PM",
+   "monday_line": -2.5
+  },
+  {
+   "game": "LV@NE",
+   "team": "LV",
+   "book2": 3.5,
+   "book2_at_et": "10/04 11:26 PM",
+   "book3": 3.5,
+   "book3_at_et": "10/04 07:52 PM",
+   "monday_line": 3.5
+  },
+  {
+   "game": "HOU@TEN",
+   "team": "TEN",
+   "book2": 6.5,
+   "book2_at_et": "10/04 09:23 PM",
+   "book3": 6.5,
+   "book3_at_et": "10/04 10:56 PM",
+   "monday_line": 6.5
+  },
+  {
+   "game": "MIN@NO",
+   "team": "NO",
+   "book2": 1.5,
+   "book2_at_et": "10/04 11:26 PM",
+   "book3": 1.5,
+   "book3_at_et": "10/04 10:24 PM",
+   "monday_line": 1.5
+  },
+  {
+   "game": "IND@PIT",
+   "team": "IND",
+   "book2": 2.0,
+   "book2_at_et": "10/04 11:57 PM",
+   "book3": 2.5,
+   "book3_at_et": "10/04 10:56 PM",
+   "monday_line": 2.25
+  },
+  {
+   "game": "DEN@LAC",
+   "team": "DEN",
+   "book2": -3.5,
+   "book2_at_et": "10/04 11:26 PM",
+   "book3": -3.5,
+   "book3_at_et": "10/04 10:56 PM",
+   "monday_line": -3.5
+  },
+  {
+   "game": "DET@ARI",
+   "team": "DET",
+   "book2": -5.5,
+   "book2_at_et": "10/04 08:22 PM",
+   "book3": -5.5,
+   "book3_at_et": "09/30 03:10 PM",
+   "monday_line": -5.5
+  },
+  {
+   "game": "SF@SEA",
+   "team": "SF",
+   "book2": 3.0,
+   "book2_at_et": "10/04 11:57 PM",
+   "book3": 3.0,
+   "book3_at_et": "10/04 10:24 PM",
+   "monday_line": 3.0
+  },
+  {
+   "game": "BAL@ATL",
+   "team": "BAL",
+   "book2": -4.0,
+   "book2_at_et": "10/04 11:26 PM",
+   "book3": -3.5,
+   "book3_at_et": "10/04 10:55 PM",
+   "monday_line": -3.75
+  },
+  {
+   "game": "BUF@LAR",
+   "team": "BUF",
+   "book2": 2.5,
+   "book2_at_et": "10/04 11:57 PM",
+   "book3": 2.5,
+   "book3_at_et": "10/04 10:25 PM",
+   "monday_line": 2.5
+  }
+ ]
+}
