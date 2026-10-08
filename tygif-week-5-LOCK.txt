@@ -1,56 +1,40 @@
 tygif STRONG plays · Week 5
-Canonical snap: week_5_20261006T211347Z.json
-generated_utc: 2026-10-06T21:13Z
+Splits: all books (ScoresAndOdds) and DraftKings, pulled Thu Oct 8, 1:58 PM ET. Lines from DraftKings at the same time.
 Gate note: STRONG = Fade the Crowd + money ≥65% on the all-sportsbooks split; DraftKings must have the money on the same side, or it is a tracked pass.
 
-LEAN: Tampa Bay +8.5
+LEAN: Tampa Bay +9.5
   Tampa Bay at Dallas · Thu Oct 8 · 8:15 PM ET · Prime Video
-  Updated Thu Oct 8: all-books money 69% on Dallas (ScoresAndOdds 11:01 AM ET) · DK bets/money on Dallas 71/85 (10:59 AM ET)
-  Best: Tampa Bay +8.5 (-105) at DraftKings
+  All-books money 66% on Dallas (bets 73%) · DK money/bets on Dallas 83/68
+  Best: Tampa Bay +9.5 (-112) at DraftKings
   QB: Jalon Daniels starts (Baker Mayfield out, thumb) / Dallas: no QB injury listed
   Watches: Heavy + big-fav stack · Cowboys game
-  LEAN (QB ding). Was PASS on Tuesday when DK and all books disagreed.
+  LEAN (QB ding).
 
-STRONG: Tennessee +7.5
-  Houston at Tennessee · Sun Oct 11 · 1:00 PM ET · CBS
-  Primary money (all-books) 88.0% · DK away bets/money 78.0/76.0 · home 22.0/24.0
-  Best: Tennessee +7.5 (-110) at BetRivers
-  QB: C.J. Stroud (no injury listed) / Cam Ward (no injury listed)
-  Watches: Divisional dog, Heavy + big-fav stack
-  Bet now (recheck Sun AM injury report)
+STRONG: Miami +7
+  Cincinnati at Miami · Sun Oct 11 · 1:00 PM ET · Fox
+  All-books money 84% on Cincinnati (bets 79%) · DK money/bets on Cincinnati 69/76
+  Best: Miami +7 (-110) at BetMGM
+  QB: Joe Burrow (no injury listed) / Malik Willis (no injury listed)
+  Watches: RLM vs money, Heavy + big-fav stack
+  Recheck Sun AM injury report
 
 STRONG: NY Jets -2.5
   Cleveland at NY Jets · Sun Oct 11 · 1:00 PM ET · CBS
-  Primary money (all-books) 84.0% · DK away bets/money 88.0/89.0 · home 12.0/11.0
-  Best: NY Jets -1.5 (-115) at FanDuel
+  All-books money 70% on Cleveland (bets 83%) · DK money/bets on Cleveland 90/84
+  Best: NY Jets -1.5 (-115) at bet365
   QB: Deshaun Watson (no injury listed) / Geno Smith (no injury listed)
-  Watches: Fading off-TNF, Very heavy money
-  Bet now (recheck Sun AM injury report)
-
-STRONG: Miami +7.5
-  Cincinnati at Miami · Sun Oct 11 · 1:00 PM ET · Fox
-  Primary money (all-books) 67.0% · DK away bets/money 71.0/67.0 · home 29.0/33.0
-  Best: Miami +7.5 (-114) at BetRivers
-  QB: Joe Burrow (no injury listed) / Malik Willis (no injury listed)
-  Watches: RLM vs money, Heavy + big-fav stack
-  Bet now (recheck Sun AM injury report)
+  Watches: Fading off-TNF, Heavy money
+  Recheck Sun AM injury report
 
 LEAN: Washington -3.5
   NY Giants at Washington · Sun Oct 11 · 1:00 PM ET · Fox
-  Primary money (all-books) 90.0% · DK away bets/money 81.0/99.0 · home 19.0/1.0
-  Best: Washington -3 (-118) at BetRivers
+  All-books money 79% on NY Giants (bets 82%) · DK money/bets on NY Giants 86/78
+  Best: Washington -3.5 (-110) at BetMGM
   QB: Jameis Winston (no injury listed) / Jayden Daniels (listed Questionable; off ESPN injury list Oct 8, official status Fri)
-  Watches: RLM vs money, Very heavy money
-  WAIT — Daniels Questionable; only if active
+  Watches: RLM vs money, Heavy money
+  WAIT — LEAN until Friday's official status
 
-STRONG: Detroit -4.5
-  Detroit at Arizona · Sun Oct 11 · 4:25 PM ET · Fox
-  Primary money (all-books) 68.0% on Arizona, 60% of bets · DK money 64% on Arizona (DK bets 55% Detroit; not required)
-  Line: Detroit -4.5 (-112) at DraftKings (ESPN odds, Tue Oct 6) · opened -5.5 (1 pt toward Arizona, no drop)
-  QB: Jared Goff (no injury designation) / Arizona: no QB designation
-  Updated Thu Oct 8: moved from PASS to STRONG. DraftKings only has to have the money on the same side.
-  Bet now (recheck Sun AM injury report)
-
-PASS / DO NOT BET: PHI@JAX, CHI@GB, LV@NE, MIN@NO, IND@PIT, DEN@LAC, SF@SEA, BAL@ATL, BUF@LAR.
+Changed since Tuesday: Houston at Tennessee and Detroit at Arizona were STRONG on Tuesday's numbers; money shifted by Thu Oct 8, both now PASS.
+PASS / DO NOT BET: PHI@JAX, CHI@GB, LV@NE, HOU@TEN, MIN@NO, IND@PIT, DEN@LAC, DET@ARI, SF@SEA, BAL@ATL, BUF@LAR.
 Totals watched only — not plays.
 Historical LEAN on angles (KC@MIA, MIA@MIN) = PAST weeks, not Week 5.
