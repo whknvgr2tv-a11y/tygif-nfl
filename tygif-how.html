@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0c0d0e">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="dark" name="color-scheme"/>
+<meta content="#0c0d0e" name="theme-color"/>
 <title>tygif's model · How it works</title>
 <style>
 :root{--bg:#0c0d0e;--card:#161719;--card2:#1c1e21;--line:#2c2e32;--txt:#f4f1ea;--mut:#9a9da4;
@@ -60,66 +61,91 @@ letter-spacing:.02em;margin-right:12px}
 border:0;color:var(--mut);text-decoration:none;font-weight:600;font-size:14px;margin-right:14px}
 .rfoot a:hover{color:var(--accent)}
 footer{color:#6b6e74;font-size:12px;margin-top:22px;text-align:left}
+
+
+.tcard{margin:6px 0 14px}
+.more{margin:0 0 6px;text-align:right}
+.more>summary{display:inline-flex;align-items:center;min-height:36px;padding:0;border-radius:0;font-size:13px;font-weight:650;color:var(--accent);
+background:transparent;border:0;border-bottom:1px solid rgba(212,160,23,.4)}
+.more>summary::after{content:" ▾";margin-left:4px}.more[open]>summary::after{content:" ▴"}
+.m-c{display:none}.more[open] .m-o{display:none}.more[open] .m-c{display:inline}
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:0;background:var(--card)}
+table.data{border-collapse:separate;border-spacing:0;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+table.data th,table.data td{padding:10px 9px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap;vertical-align:middle}
+table.data tbody tr:last-child td{border-bottom:0}
+table.data th{background:#121314;color:var(--mut);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;white-space:normal;min-width:56px;line-height:1.2}
+table.data th:first-child,table.data td:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--card);
+white-space:normal;min-width:104px;max-width:150px;box-shadow:1px 0 0 var(--line)}
+table.data th:first-child{background:#121314;z-index:2}
+table.data td:first-child{font-weight:600}
+table.data td.wrap{white-space:normal;min-width:190px;font-size:13.5px;color:var(--mut)}
+table.data .x{display:none}
+.more[open]~.tblwrap .x,.more[open]~* .x{display:table-cell}
+.js table.data th.sortable{cursor:pointer;-webkit-user-select:none;user-select:none}
+.js table.data th.sorted-asc::after{content:" ▲";font-size:12px;color:var(--accent)}
+.js table.data th.sorted-desc::after{content:" ▼";font-size:12px;color:var(--accent)}
+table.data tr.pending td{background:#17181a}
+table.data tr.wbnc td{background:#241a16}
+table.data tr.grp td{background:#121314;color:var(--accent);font-weight:750;font-size:12px;text-transform:uppercase;letter-spacing:.1em;padding:8px 10px}
+table.data tr.grp td .stick{position:-webkit-sticky;position:sticky;left:10px}
+table.data tr.hidden{display:none}
+.ss{display:inline-block;font-size:12px;font-weight:650;color:#8a8e96;border:1px solid var(--line);border-radius:0;padding:0 5px;margin-left:2px;vertical-align:1px;white-space:nowrap}
+.ind1{padding-left:12px;display:inline-block}.ind2{padding-left:24px;display:inline-block}
+.games-controls{display:none}
+.js .games-controls{display:flex;gap:10px;align-items:center;margin:4px 0 8px}
+.games-controls input[type=search]{flex:1;min-width:0;min-height:46px;background:#121314;border:1px solid var(--line);color:var(--txt);border-radius:0;padding:10px 14px;font-size:16px}
+.games-controls input[type=search]:focus{outline:none;border-color:var(--accent)}
+.chk{display:flex;gap:8px;align-items:center;font-size:15px;color:var(--mut);min-height:46px;white-space:nowrap}
+.chk input{width:20px;height:20px;accent-color:#d4a017}
+.legend{color:var(--mut);font-size:13px;margin:4px 2px 8px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:0;vertical-align:-1px;margin-right:4px}.sw.wb{background:#5a3220}.sw.pe{background:#2a3040}
+.js-only{display:none}.js .js-only{display:block;flex:1 1 100%}
+.more-all{text-align:left}
+
+.meth{border-top:1px solid var(--line);margin-top:6px}
+.meth>summary{cursor:pointer;padding:16px 0;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);list-style:none}
+.meth>summary::after{content:" +"}.meth[open]>summary::after{content:" \2212"}
+.meth-b h3{font-size:15px;color:var(--paper);margin:16px 0 4px}.meth-b p{color:var(--mut);font-size:14px;line-height:1.55;margin:0 0 8px}
+.meth-b .more{display:none}.tcard{margin:6px 0 10px;overflow-x:auto}
 </style>
 </head>
 <body id="top">
-<header class="apphead"><a href="tygif-tracker.html#home" class="logo">tygif's model</a><span class="updated">Updated Tue Oct 6</span></header>
-<nav class="tabs" aria-label="Sections"><div class="tabs-in"><a class="tab" href="tygif-tracker.html#home" data-tab="home">Home</a><a class="tab" href="tygif-tracker.html#week" data-tab="week">This Week</a><a class="tab" href="tygif-tracker.html#results" data-tab="results">Results</a><a class="tab" href="tygif-tracker.html#outcomes" data-tab="outcomes">Outcomes</a><a class="tab" href="tygif-tracker.html#money" data-tab="money">Money Rule</a><a class="tab" href="tygif-tracker.html#trends" data-tab="trends">Trends</a><a class="tab" href="tygif-deep-dive.html" data-tab="deep">Deep dive</a><a class="tab" href="tygif-angles.html" data-tab="angles">Angles</a><a class="tab cur" href="#top" data-tab="how">How</a></div></nav>
+<header class="apphead"><a class="logo" href="index.html">tygif's model</a><span class="updated">Updated Thu Oct 8</span></header>
+<nav aria-label="Sections" class="tabs"><div class="tabs-in"><a class="tab" data-tab="index" href="index.html">Home</a><a class="tab" data-tab="week" href="tygif-tracker.html#week">This Week</a><a class="tab" data-tab="results" href="tygif-tracker.html#results">Records</a><a class="tab" data-tab="research" href="tygif-tracker.html#research">Research</a><a class="tab cur" data-tab="how" href="tygif-how.html">How it works</a></div></nav>
 <div class="wrap">
-  <div class="rtitle">
-    <h1>How it works</h1>
-    <a class="rback" href="tygif-tracker.html#home">Tracker</a>
-  </div>
-  <p class="lede">Short share for the group — same rules as the tracker <a href="tygif-tracker.html#money">Money Rule</a> tab. Flat $100/bet on the card. Card audit lives under <a href="tygif-tracker.html#results">Results</a>. Lines move. Process, not gospel.</p>
+<div class="rtitle"><h1>How it works</h1></div>
+<p class="lede">One rule, applied the same way every week. Records use flat $100 bets. Lines move, so this is a process, not a promise.</p>
+<div class="block"><h2>The money rule</h2>
+<p>Find the side with <b>most of the money</b> bet on it. That is where the sportsbooks have the most risk. We bet the <b>other</b> side.</p>
+<p>Splits come from <b>DraftKings first</b>, then <b>all books</b> (ScoresAndOdds or Action Network). Both must point the same way, or we pass.</p></div>
+<div class="block"><h2>Play types</h2><ul>
+<li><b>Fade the Crowd</b>: most of the money and most of the bets are on the same team. We bet the other team. This is the main play.</li>
+<li><b>Heavy money</b>: Fade the Crowd when that team holds 65% or more of the money.</li>
+<li><b>Big Favorite Fade</b>: a favorite giving 6+ points holds the money. We take the underdog.</li></ul></div>
+<div class="block"><h2>Ratings</h2>
+<p><b>STRONG</b> is our top rating: Fade the Crowd <b>and</b> 65%+ of the money. <b>LEAN</b> is a smaller edge (money under 65%) or a STRONG that dropped a level. LEANs are optional. <b>PASS</b> means no bet.</p>
+<div class="pillrow"><span class="pill g">STRONG · top rating</span><span class="pill a">LEAN · optional</span><span class="pill">PASS · no bet</span></div></div>
+<div class="block"><h2>What drops a play one level</h2><ul>
+<li>The line moved more than 1 point toward the money.</li>
+<li>Mixed signals between sources.</li>
+<li>Our quarterback is out, doubtful or questionable.</li></ul>
+<p>Small extra notes (divisional underdog, night-game home underdog, team coming off a Thursday game) are shown on the game but never change the call.</p></div>
+<div class="block"><h2>When we pass</h2><ul>
+<li><b>Big bettors vs the public</b>: the money is on one team but most bets are on the other. Betting against that lost early, so we track it and don't bet.</li>
+<li><b>Sportsbooks disagree</b>: DraftKings' money side is different from the all-books money side. Tracked, not played.</li>
+<li><b>Thin money</b>: under 55% with no big-favorite angle. No edge.</li>
+<li><b>Totals</b> (overs and unders) are tracked only, never played. Betting against the money on totals has lost so far.</li></ul></div>
+<div class="block"><h2>How records are kept</h2>
+<p>Every rated play is graded at <b>flat $100</b>, settled at the DraftKings closing price. Wins, losses and pushes all stay on the record. The Weeks 1–4 numbers are a look back: today's rules applied afterward to finished games. The <b>live record</b> starts with Week 5 and is kept separate.</p>
+<p>Any Dallas game gets a heads-up star. The call still comes from the money, not the team.</p></div>
+<details class="meth"><summary>Data notes and methods</summary><div class="meth-b"><h3>Money and lines</h3><p>Profit convention: flat $100 risked per bet. Card plays, ratings, signals and Money Rule records are settled at the actual DraftKings closing spread price (so a win pays +$83 to +$102, not always +$91); market, trend, situational and totals tables are settled at -110 (win = +$90.91). Loss = -$100, push = $0. ML at the actual DK closing price. Cover % excludes pushes. straight-up win % counts ties as half a win. Lines: DraftKings closing spread via ESPN odds API.</p><p>Games tracked: 79 (weeks 1-5) | Final: 64 | Final with a favorite (used in totals): 64 | Pick'ems: 0 | Missing spread: 0 | Not final/scheduled: 15</p><p>Week 5 games not final yet, so not counted: TB @ DAL, PHI @ JAX, CHI @ GB, CIN @ MIA, LV @ NE, MIN @ NO, CLE @ NYJ, IND @ PIT, HOU @ TEN, NYG @ WSH, DEN @ LAC, DET @ ARI, SF @ SEA, BAL @ ATL, BUF @ LAR.</p><h3>By situation</h3><p>Primetime = kickoff 7 PM ET or later. Neutral = ESPN neutral-site flag (international games); 'Alt' rows use the schedule's designated home/road team. Dog straight-up = favorite's straight-up result reversed.</p><h3>Moneyline results</h3><p>Profit: win pays price/100 on a dog (+150 -&gt; +$150) or 100/|price| on a favorite (-200 -&gt; +$50); loss −$100; straight-up tie = 0. Break-even % = average implied probability of the prices bet; beat it to profit. Games without a DK closing ML: 0. Full ML angle list under Trends.</p><h3>How our ratings would have done</h3><p>These are re-runs, not live results: today's card rules applied to every final game (weeks 1–4) using the closing betting splits. DraftKings' own splits have no history before Oct 5, so DraftKings-based downgrades can't happen here. They are the same games the rules were tuned on, so treat this as a best case. It never changes the card rules.</p><h3>When big bettors and the public split</h3><p>Sharps split = money majority on one side, bet majority on the other. Upper table: every final game, DraftKings' own splits when a pre-kickoff snapshot exists, otherwise all-books closing consensus. The smaller tables come from our own card: games we tracked but didn't bet, settled both ways.</p><h3>Bet against the money</h3><p>Standing rule: always against the side holding most of the money (books' exposure). Bet % is context only. 'Fading the public' = money and bets on the same side; 'Fading the sharps' = money on one side, bets on the other. Big favorite angle = favorite 6+ AND money on the favorite -&gt; play the dog vs spread. Splits: DraftKings first when a pre-kickoff snapshot exists, otherwise all-books closing consensus.</p><h3>Trends we're watching</h3><p>A split is flagged the first time it shows 10+ decided games and cover % (or over %) ≥ 60% or ≤ 40%. Flag date/time and the record at flag are frozen on the day it was flagged and never reset. 'Since flagged' counts ONLY final games kicking off after the flag timestamp. Lean $ = $100/bet at -110 on the lean side. Exact mirror splits (e.g. Home underdogs = Road favorites) are tracked once, under the favorite split. Retired = the lean went 40% or worse over 8+ decided games since it was flagged (kept on the list, no longer used on cards).</p><h3>All splits</h3><p>Record side = whose straight-up/vs spread record is shown (Fav or Dog). Profit = $100/bet at -110 on the record side (win +$90.91, loss -$100, push $0). Cover % excludes pushes. won-no-cover = favorite won but did not cover (pushes are not won-no-cover); won-no-cover % = won-no-cover / favorite straight-up wins. Sample warning: under 15 games. Green = cover % ≥ 60%, red ≤ 40%. Lean on watchlist = 10+ decided games and cover % ≥ 60% or ≤ 40%.</p><h3>Moneyline</h3><p>ML splits are informational only (not watchlist-flagged): a win % threshold is meaningless at varying prices; compare Win % with the break-even column instead.</p><h3>Public vs the books</h3><p>Splits source: DraftKings own splits (latest pre-kickoff snapshot Mon Oct 5, 6:56 PM ET); all-books consensus kept for the other markets / as second opinion, ScoresAndOdds consensus (Action Network data) - bet % and money % as published (final displayed values; the source gives no freeze time, treat as ~closing). This is an aggregate 'public' measure, not one sportsbook's money. Spread angles are settled at the DraftKings close (same line as the rest of the tracker); totals at the DK closing total. Public side = more than 50% of bets (50/50 excluded). Reverse game = money % majority on the side with fewer bets. Profit = $100/bet at -110 on the described side. Win % excludes pushes. p = two-sided exact binomial test vs 50%. Sample warning: under 15 games or p ≥ 0.05. Non-final games, and final games whose splits were last pulled pre-game (not refreshed), are excluded.</p><p>Coverage: 64 of 64 final games have spread splits; 63 have a public side and a favorite (spread angles); 61 settled for totals angles.</p><h3>Moneyline public angles</h3><p>ML coverage: 63 final games with a public ML side and a DK closing ML. Favorites win more often than 50%, so judge ML angles by $/ROI vs the break-even %, not win %.</p><p>Caveat: tiny samples from one season; percentages are an aggregate published measure and their exact freeze time is not given. Not a validated edge.</p><h3>Published baseline (outside source)</h3><p>Outside published baseline, covering 'most of Week 4' (63 games, i.e. before Week 4 MNF).</p><h3>Second set of closing lines</h3><div class="tcard"><details class="more"><summary><span class="m-o">More details</span><span class="m-c">Fewer details</span></summary></details><div class="tblwrap"><table class="data"><thead><tr><th data-col="0">Category</th><th class="x num" data-col="1">Games</th><th class="x num" data-col="2">Won-lost</th><th class="x num" data-col="3">Win %</th><th class="num" data-col="4">Vs spread</th><th class="num" data-col="5">Cover %</th><th class="num" data-col="6">Profit</th></tr></thead><tbody><tr><td>Favorites (nflverse lines)</td><td class="x">64</td><td class="x">41-23-0</td><td class="x">64.1%</td><td>27-32-5</td><td>45.8%</td><td><span class="dollar neg">−$745</span></td></tr><tr><td>Underdogs (nflverse lines)</td><td class="x">64</td><td class="x">23-41-0</td><td class="x">35.9%</td><td>32-27-5</td><td>54.2%</td><td><span class="dollar pos">+$209</span></td></tr></tbody></table></div></div><h3>Published baseline (outside source, for comparison only)</h3><div class="tcard"><div class="tblwrap"><table class="data"><thead><tr><th data-col="0">Category</th><th class="num" data-col="1">Record</th><th class="num" data-col="2">$</th></tr></thead><tbody><tr><td>Favorites straight-up</td><td>40-23 (63.5%)</td><td></td></tr><tr><td>Favorites vs spread</td><td>26-33-4 (44.4%)</td><td>−$940</td></tr><tr><td>Underdogs vs spread</td><td>33-26-4 (55.6%)</td><td>+$410</td></tr><tr><td>Road favorites vs spread</td><td>9-14-1</td><td></td></tr><tr><td>Divisional favorites vs spread</td><td>5-11</td><td></td></tr><tr><td>Primetime favorites vs spread</td><td>3-8-1</td><td></td></tr><tr><td>Home dogs vs spread</td><td>14-9-1</td><td></td></tr><tr><td>Primetime dogs vs spread</td><td>8-3-1</td><td></td></tr><tr><td>For comparison only; none of our numbers use it.</td><td></td><td></td></tr></tbody></table></div></div><h3>Sources</h3><p>DraftKings Network (DraftKings' own betting splits) · ScoresAndOdds / Action Network (all-sportsbook splits and lines) · ESPN (scores, closing lines) · TeamRankings · nflverse (second set of closing lines).</p></div></details>
 
-  <div class="block">
-    <h2>The money rule</h2>
-    <p>Find the side with <b>most of the money</b> (DraftKings first, all books second). That is the books' exposure.
-    We bet the <b>other</b> side.</p>
-    <p><b>Fade the Crowd</b> = money and bets on the same team. That is the main play type.</p>
-  </div>
 
-  <div class="block">
-    <h2>What STRONG means</h2>
-    <div class="num">12-0-3 · +$1,095</div>
-    <p>A hammer. Needs <b>Fade the Crowd</b> <b>and</b> money at <b>65%+</b> (DraftKings split first; the all-books split must agree on the side). That is the Weeks 1–4 record at $100/bet.
-    <b>LEAN</b> = a smaller edge (money under 65%) or a STRONG that took a ding. Mid-money spots stay LEAN on purpose — optional for the group, not hammers.</p>
-    <div class="pillrow">
-      <span class="pill g">STRONG · top rating</span>
-      <span class="pill a">LEAN · optional</span>
-      <span class="pill">QB ding · drops one level</span>
-    </div>
-  </div>
 
-  <div class="block">
-    <h2>When we pass</h2>
-    <ul>
-      <li><b>Sharps split</b> — money one side, most bets the other. Fading those lost early; we track both ways, don't bet.</li>
-      <li><b>Sources disagree</b> — DraftKings' money side ≠ all-books money side. Tracked, not played.</li>
-      <li><b>Thin money</b> — under 55% with no big-fav angle. No edge.</li>
-    </ul>
-  </div>
 
-  <div class="block">
-    <h2>What can ding a play</h2>
-    <p>Mixed signals, line moved more than 1 pt toward the money, or our QB out/doubtful/questionable — each drops the rating one level.
-    Soft watches (divisional dog, primetime home dog, off-TNF, etc.) are badges only — they do not flip the play.</p>
-  </div>
 
-  <div class="block">
-    <h2>Cowboys note</h2>
-    <p>Any Dallas game gets a heads-up. Stick to the money rule — the call comes from the numbers, not the logo.</p>
-  </div>
 
-  <nav class="rfoot">
-    <a href="tygif.html">Hub</a>
-    <a href="tygif-tracker.html#home">Home</a>
-    <a href="tygif-tracker.html#week">This Week</a>
-    <a href="tygif-tracker.html#results">Results · audit</a>
-    <a href="tygif-tracker.html#money">Money Rule</a>
-    <a href="tygif-week-5-report.html">Week 5</a>
-  </nav>
-  <footer>tygif's model · free public data · small samples, no guarantees</footer>
+<footer>tygif's model · free public data · small samples, no guarantees · not financial advice</footer>
 </div>
 </body>
 </html>
