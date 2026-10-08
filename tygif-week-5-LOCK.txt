@@ -5,7 +5,7 @@ Gate note: STRONG = Fade the Crowd + money ≥65% on the all-sportsbooks split; 
 LEAN: Tampa Bay +9.5
   Tampa Bay at Dallas · Thu Oct 8 · 8:15 PM ET · Prime Video
   All-books money 66% on Dallas (bets 73%) · DK money/bets on Dallas 83/68
-  Best: Tampa Bay +9.5 (-112) at DraftKings
+  Line: Tampa Bay +9.5 (-112) at DraftKings
   QB: Jalon Daniels starts (Baker Mayfield out, thumb) / Dallas: no QB injury listed
   Watches: Heavy + big-fav stack · Cowboys game
   LEAN (QB ding).
@@ -13,7 +13,7 @@ LEAN: Tampa Bay +9.5
 STRONG: Miami +7
   Cincinnati at Miami · Sun Oct 11 · 1:00 PM ET · Fox
   All-books money 84% on Cincinnati (bets 79%) · DK money/bets on Cincinnati 69/76
-  Best: Miami +7 (-110) at BetMGM
+  Line: Miami +7 (-115) at DraftKings
   QB: Joe Burrow (no injury listed) / Malik Willis (no injury listed)
   Watches: RLM vs money, Heavy + big-fav stack
   Recheck Sun AM injury report
@@ -21,18 +21,18 @@ STRONG: Miami +7
 STRONG: NY Jets -2.5
   Cleveland at NY Jets · Sun Oct 11 · 1:00 PM ET · CBS
   All-books money 70% on Cleveland (bets 83%) · DK money/bets on Cleveland 90/84
-  Best: NY Jets -1.5 (-115) at bet365
+  Line: NY Jets -2.5 (-110) at DraftKings
   QB: Deshaun Watson (no injury listed) / Geno Smith (no injury listed)
   Watches: Fading off-TNF, Heavy money
   Recheck Sun AM injury report
 
-LEAN: Washington -3.5
+STRONG: Washington -3.5
   NY Giants at Washington · Sun Oct 11 · 1:00 PM ET · Fox
   All-books money 79% on NY Giants (bets 82%) · DK money/bets on NY Giants 86/78
-  Best: Washington -3.5 (-110) at BetMGM
-  QB: Jameis Winston (no injury listed) / Jayden Daniels (listed Questionable; off ESPN injury list Oct 8, official status Fri)
+  Line: Washington -3.5 (-115) at DraftKings
+  QB: Jameis Winston (no injury listed) / Jayden Daniels (full practice Wed, Commanders injury report Oct 7; no game status; final status Fri)
   Watches: RLM vs money, Heavy money
-  WAIT — LEAN until Friday's official status
+  Recheck Friday's final injury report
 
 Changed since Tuesday: Houston at Tennessee and Detroit at Arizona were STRONG on Tuesday's numbers; money shifted by Thu Oct 8, both now PASS.
 PASS / DO NOT BET: PHI@JAX, CHI@GB, LV@NE, HOU@TEN, MIN@NO, IND@PIT, DEN@LAC, DET@ARI, SF@SEA, BAL@ATL, BUF@LAR.
