@@ -1,7 +1,7 @@
 tygif STRONG plays · Week 5
 Canonical snap: week_5_20261006T211347Z.json
 generated_utc: 2026-10-06T21:13Z
-Gate note: STRONG = Fade the Crowd + money ≥65% on the all-sportsbooks split; the DraftKings split must agree on the side, or it is a tracked pass.
+Gate note: STRONG = Fade the Crowd + money ≥65% on the all-sportsbooks split; DraftKings must have the money on the same side, or it is a tracked pass.
 
 LEAN: Tampa Bay +8.5
   Tampa Bay at Dallas · Thu Oct 8 · 8:15 PM ET · Prime Video
@@ -43,6 +43,14 @@ LEAN: Washington -3.5
   Watches: RLM vs money, Very heavy money
   WAIT — Daniels Questionable; only if active
 
-PASS / DO NOT BET: PHI@JAX, CHI@GB, LV@NE, MIN@NO, IND@PIT, DEN@LAC, DET@ARI, SF@SEA, BAL@ATL, BUF@LAR.
+STRONG: Detroit -4.5
+  Detroit at Arizona · Sun Oct 11 · 4:25 PM ET · Fox
+  Primary money (all-books) 68.0% on Arizona, 60% of bets · DK money 64% on Arizona (DK bets 55% Detroit; not required)
+  Line: Detroit -4.5 (-112) at DraftKings (ESPN odds, Tue Oct 6) · opened -5.5 (1 pt toward Arizona, no drop)
+  QB: Jared Goff (no injury designation) / Arizona: no QB designation
+  Updated Thu Oct 8: moved from PASS to STRONG. DraftKings only has to have the money on the same side.
+  Bet now (recheck Sun AM injury report)
+
+PASS / DO NOT BET: PHI@JAX, CHI@GB, LV@NE, MIN@NO, IND@PIT, DEN@LAC, SF@SEA, BAL@ATL, BUF@LAR.
 Totals watched only — not plays.
 Historical LEAN on angles (KC@MIA, MIA@MIN) = PAST weeks, not Week 5.
