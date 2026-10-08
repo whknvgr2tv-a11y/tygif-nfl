@@ -1,41 +1,43 @@
 tygif's model | Week 5 plays (splits and lines pulled Thu Oct 8, 1:58 PM ET; they move until kickoff)
 Play = against the money. All sportsbooks first (ScoresAndOdds); DraftKings must have the money on the same side.
+Plays lock at the Saturday evening update (Thursday games: the last update before kickoff); from Week 5 the live record is graded at the line we posted, with the time.
+Calls posted Tuesday to Saturday can change as the money moves; only the Saturday call counts.
 3 STRONG, 1 LEAN, 11 passes.
 
-LEAN: Tampa Bay +9.5 [Fading the public, Big favorite angle]. Line +9.5 (-112) at DraftKings. Thu Oct 8, 8:15 PM ET
-  Check: ✓ Fade the Crowd · ✓ Money 66% · ✓ Big favorite angle · ✓ DraftKings agrees · ✗ QB1 playing · ✓ Line not against us
-  Dallas holds most of the money (all books 66%, DraftKings 83%) and most of the bets (all books 73%, DraftKings 68%). Play Tampa Bay.
-  Tampa Bay QB Baker Mayfield is out; Jalon Daniels is expected to start. That drops it from STRONG to LEAN.
-  Line: reopened +9.5 this week (TeamRankings), now +9.5.
-  * Cowboys game. Heads-up: this is your team, so stick to the money rule. The call comes from the numbers, not the logo.
-STRONG: Miami +7 [Fading the public, Big favorite angle]. Line +7 (-115) at DraftKings. Sun Oct 11, 1:00 PM ET
-  Check: ✓ Fade the Crowd · ✓ Money 84% · ✓ Big favorite angle · ✓ DraftKings agrees · ✓ QB1 playing · ✓ Line not against us
-  Cincinnati holds most of the money (all books 84%, DraftKings 69%) and most of the bets (all books 79%, DraftKings 76%). Play Miami.
-  Line: reopened +7.5 / +8.5 this week, now +7.
-STRONG: NY Jets -2.5 [Fading the public]. Line -2.5 (-110) at DraftKings. Sun Oct 11, 1:00 PM ET
-  Check: ✓ Fade the Crowd · ✓ Money 70% · ✗ Big favorite angle · ✓ DraftKings agrees · ✓ QB1 playing · ✓ Line not against us
-  Cleveland holds most of the money (all books 70%, DraftKings 90%) and most of the bets (all books 83%, DraftKings 84%). Play NY Jets.
-  Line: reopened -2.5 / -1 this week, now -2.5.
-STRONG: Washington -3.5 [Fading the public]. Line -3.5 (-115) at DraftKings. Sun Oct 11, 1:00 PM ET
-  Check: ✓ Fade the Crowd · ✓ Money 79% · ✗ Big favorite angle · ✓ DraftKings agrees · ✓ QB1 playing · ✓ Line not against us
-  NY Giants hold most of the money (all books 79%, DraftKings 86%) and most of the bets (all books 82%, DraftKings 78%). Play Washington.
-  Washington QB Jayden Daniels: full practice Wed (Commanders injury report, Oct 7); no game status. Final status Friday.
-  Line: reopened -3.5 / -2.5 this week, now -3.5.
+LEAN: Tampa Bay +9.5 · Type 1 (Crowd piled on a big favorite). DraftKings +9.5 (−112). Thu Oct 8 · 8:15 PM ET · Prime Video
+  Checks: ✓ money and bets same side · ✓ 65%+ money · ✓ DraftKings agrees · ✓ 6+ pt favorite · ✓ line not moved toward the money · ✕ QB1 playing
+  Dallas holds most of the money (all books 66%, DraftKings 83%) and most of the bets (all books 73%). Play Tampa Bay.
+  Tampa Bay QB Baker Mayfield is out (thumb); Jalon Daniels starts. That drops it from STRONG to LEAN.
+  Opened TB +9.5 Monday, now +9.5.
+STRONG: Miami +7 · Type 1 (Crowd piled on a big favorite). DraftKings +7 (−115). Sun Oct 11 · 1:00 PM ET · Fox
+  Checks: ✓ money and bets same side · ✓ 65%+ money · ✓ DraftKings agrees · ✓ 6+ pt favorite · ✓ line not moved toward the money · ✓ QB1 playing
+  Cincinnati holds most of the money (all books 84%, DraftKings 69%) and most of the bets (all books 79%). Play Miami.
+  Opened MIA +7.5 / +8.5 Monday (two books), now +7.
+STRONG: NY Jets −2.5 · Type 2 (Crowd piled on, no big favorite). DraftKings −2.5 (−110). Sun Oct 11 · 1:00 PM ET · CBS
+  Checks: ✓ money and bets same side · ✓ 65%+ money · ✓ DraftKings agrees · – 6+ pt favorite · ✓ line not moved toward the money · ✓ QB1 playing
+  Cleveland holds most of the money (all books 70%, DraftKings 90%) and most of the bets (all books 83%). Play NY Jets.
+  Opened NYJ −2.5 / −1 Monday (two books), now −2.5.
+STRONG: Washington −3.5 · Type 2 (Crowd piled on, no big favorite). DraftKings −3.5 (−115). Sun Oct 11 · 1:00 PM ET · Fox
+  Checks: ✓ money and bets same side · ✓ 65%+ money · ✓ DraftKings agrees · – 6+ pt favorite · ✓ line not moved toward the money · ✓ QB1 playing
+  NY Giants holds most of the money (all books 79%, DraftKings 86%) and most of the bets (all books 82%). Play Washington.
+  Washington QB Jayden Daniels practiced fully Wednesday with no game status; final status Friday.
+  Opened WSH −3.5 / −2.5 Monday (two books), now −3.5.
 
 Changed since Tuesday (now passes):
-  Houston at Tennessee: was STRONG Tennessee +7.5 on Tuesday's numbers. DraftKings now has 65% of the money on Tennessee while all books have 70% on Houston, so the books disagree. No bet.
-  Detroit at Arizona: was STRONG Detroit -4.5 on Tuesday's numbers. All books now have only 53% of the money on Arizona (DraftKings 52%), under 55%, so there is no clear crowd. No bet.
+  Houston at Tennessee: was STRONG Tennessee +7.5 on Tuesday's numbers. DraftKings now has 65% of the money on Tennessee while all books have 70% on Houston, so the books disagree (type 4). No bet.
+  Detroit at Arizona: was STRONG Detroit -4.5 on Tuesday's numbers. All books now have only 53% of the money on Arizona, under 55% (type 5). No bet.
 
-Tracked pass (DraftKings and all books disagree, not played): Houston at Tennessee, Philadelphia at Jacksonville, Chicago at Green Bay, Las Vegas at New England, Indianapolis at Pittsburgh, Denver at LA Chargers, San Francisco at Seattle, Baltimore at Atlanta, Buffalo at LA Rams
-  Philadelphia at Jacksonville: DraftKings' money is on Philadelphia (58%) but all books' money is on Jacksonville (71%). Tracked, not played.
-  Chicago at Green Bay: DraftKings' money is on Chicago (89%) but all books' money is on Green Bay (58%). Tracked, not played.
-  Las Vegas at New England: DraftKings' money is on New England (67%) but all books' money is on Las Vegas (77%). Tracked, not played.
-  Indianapolis at Pittsburgh: DraftKings' money is on Pittsburgh (71%) but all books' money is on Indianapolis (63%). Tracked, not played.
-  Denver at LA Chargers: DraftKings' money is on LA Chargers (71%) but all books' money is on Denver (55%). Tracked, not played.
-  San Francisco at Seattle: DraftKings' money is on Seattle (63%) but all books' money is on San Francisco (88%). Tracked, not played.
-  Baltimore at Atlanta: DraftKings' money is on Baltimore (71%) but all books' money is on Atlanta (52%; Baltimore QB Lamar Jackson missed Wed–Thu practice, no game status yet). Tracked, not played.
-  Buffalo at LA Rams: DraftKings' money is on LA Rams (86%) but all books' money is on Buffalo (51%). Tracked, not played.
-
-Tracked pass (no clear crowd, under 55% of the money): Minnesota at New Orleans (all books 54% on Minnesota), Detroit at Arizona.
+Passes:
+  Philadelphia at Jacksonville: Type 4 (books disagree) — all books have the money on Jacksonville (71%), DraftKings on Philadelphia (58%). No bet.
+  Chicago at Green Bay: Type 4 (books disagree) — all books have the money on Green Bay (58%), DraftKings on Chicago (89%). No bet.
+  Las Vegas at New England: Type 4 (books disagree) — all books have the money on Las Vegas (77%), DraftKings on New England (67%). No bet.
+  Houston at Tennessee: Type 4 (books disagree) — all books have the money on Houston (70%), DraftKings on Tennessee (65%). No bet.
+  Minnesota at New Orleans: Type 5 (no clear crowd) — only 54% of the money on Minnesota. No bet.
+  Indianapolis at Pittsburgh: Type 4 (books disagree) — all books have the money on Indianapolis (63%), DraftKings on Pittsburgh (71%). No bet.
+  Denver at LA Chargers: Type 4 (books disagree) — all books have the money on Denver (55%), DraftKings on LA Chargers (71%). No bet.
+  Detroit at Arizona: Type 5 (no clear crowd) — only 53% of the money on Arizona. No bet.
+  San Francisco at Seattle: Type 4 (books disagree) — all books have the money on San Francisco (88%), DraftKings on Seattle (63%). No bet.
+  Baltimore at Atlanta: Type 4 (books disagree) — all books have the money on Atlanta (52%), DraftKings on Baltimore (71%). No bet.
+  Buffalo at LA Rams: Type 4 (books disagree) — all books have the money on Buffalo (51%), DraftKings on LA Rams (86%). No bet.
 
 Small samples, no guarantees.

@@ -1,39 +1,28 @@
-tygif STRONG plays · Week 5
+tygif's model · Week 5 card
 Splits: all books (ScoresAndOdds) and DraftKings, pulled Thu Oct 8, 1:58 PM ET. Lines from DraftKings at the same time.
-Gate note: STRONG = Fade the Crowd + money ≥65% on the all-sportsbooks split; DraftKings must have the money on the same side, or it is a tracked pass.
+Plays lock at the Saturday evening update (Thursday games: the last update before kickoff); from Week 5 the live record is graded at the line we posted, with the time.
 
 LEAN: Tampa Bay +9.5
   Tampa Bay at Dallas · Thu Oct 8 · 8:15 PM ET · Prime Video
-  All-books money 66% on Dallas (bets 73%) · DK money/bets on Dallas 83/68
-  Line: Tampa Bay +9.5 (-112) at DraftKings
-  QB: Jalon Daniels starts (Baker Mayfield out, thumb) / Dallas: no QB injury listed
-  Watches: Heavy + big-fav stack · Cowboys game
-  LEAN (QB ding).
+  All books: 66% of the money on Dallas (73% of bets) · DraftKings: 83% of the money on Dallas
+  Line: Tampa Bay +9.5 (−112) at DraftKings · Type 1
+  Tampa Bay QB Baker Mayfield is out (thumb); Jalon Daniels starts. That drops it from STRONG to LEAN.
 
 STRONG: Miami +7
   Cincinnati at Miami · Sun Oct 11 · 1:00 PM ET · Fox
-  All-books money 84% on Cincinnati (bets 79%) · DK money/bets on Cincinnati 69/76
-  Line: Miami +7 (-115) at DraftKings
-  QB: Joe Burrow (no injury listed) / Malik Willis (no injury listed)
-  Watches: RLM vs money, Heavy + big-fav stack
-  Recheck Sun AM injury report
+  All books: 84% of the money on Cincinnati (79% of bets) · DraftKings: 69% of the money on Cincinnati
+  Line: Miami +7 (−115) at DraftKings · Type 1
 
-STRONG: NY Jets -2.5
+STRONG: NY Jets −2.5
   Cleveland at NY Jets · Sun Oct 11 · 1:00 PM ET · CBS
-  All-books money 70% on Cleveland (bets 83%) · DK money/bets on Cleveland 90/84
-  Line: NY Jets -2.5 (-110) at DraftKings
-  QB: Deshaun Watson (no injury listed) / Geno Smith (no injury listed)
-  Watches: Fading off-TNF, Heavy money
-  Recheck Sun AM injury report
+  All books: 70% of the money on Cleveland (83% of bets) · DraftKings: 90% of the money on Cleveland
+  Line: NY Jets −2.5 (−110) at DraftKings · Type 2
 
-STRONG: Washington -3.5
+STRONG: Washington −3.5
   NY Giants at Washington · Sun Oct 11 · 1:00 PM ET · Fox
-  All-books money 79% on NY Giants (bets 82%) · DK money/bets on NY Giants 86/78
-  Line: Washington -3.5 (-115) at DraftKings
-  QB: Jameis Winston (no injury listed) / Jayden Daniels (full practice Wed, Commanders injury report Oct 7; no game status; final status Fri)
-  Watches: RLM vs money, Heavy money
-  Recheck Friday's final injury report
+  All books: 79% of the money on NY Giants (82% of bets) · DraftKings: 86% of the money on NY Giants
+  Line: Washington −3.5 (−115) at DraftKings · Type 2
+  Washington QB Jayden Daniels practiced fully Wednesday with no game status; final status Friday.
 
-Changed since Tuesday: Houston at Tennessee and Detroit at Arizona were STRONG on Tuesday's numbers; money shifted by Thu Oct 8, both now PASS.
+Changed since Tuesday: Houston at Tennessee and Detroit at Arizona were STRONG on Tuesday's numbers; the money shifted by Thursday, both now PASS.
 PASS / DO NOT BET: PHI@JAX, CHI@GB, LV@NE, HOU@TEN, MIN@NO, IND@PIT, DEN@LAC, DET@ARI, SF@SEA, BAL@ATL, BUF@LAR.
-Historical LEAN on angles (KC@MIA, MIA@MIN) = PAST weeks, not Week 5.
