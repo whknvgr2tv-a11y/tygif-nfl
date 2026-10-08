@@ -1,6 +1,6 @@
 tygif's model | Week 5 plays (splits and lines pulled Thu Oct 8, 1:58 PM ET; they move until kickoff)
 Play = against the money. All sportsbooks first (ScoresAndOdds); DraftKings must have the money on the same side.
-Plays lock at the Saturday evening update (Thursday games: the last update before kickoff), and only the locked call counts. From Week 5, each play is graded at the line and price we posted when it locked; Weeks 1–4 are graded at the DraftKings closing price.
+Plays lock before kickoff (Thursday games that afternoon, the rest at the Saturday evening update), and only the locked call counts. From Week 5, each play is graded at the line and price we posted when it locked; Weeks 1–4 are graded at the DraftKings closing price.
 3 STRONG, 1 LEAN, 11 passes.
 
 LEAN: Tampa Bay +9.5 · Type 1 (Crowd piled on a big favorite). DraftKings +9.5 (−112). Thu Oct 8 · 8:15 PM ET · Prime Video
