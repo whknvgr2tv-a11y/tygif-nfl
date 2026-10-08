@@ -481,7 +481,7 @@ table.wk3 td,table.wk3 th{white-space:normal} table.wk3 td{font-size:13px;line-h
 <ol>
 <li><b>Crowd piled on a big favorite:</b> 65%+ of the money is on a favorite giving 6+ points. We take the underdog.</li>
 <li><b>Crowd piled on, no big favorite:</b> 65%+ of the money and most of the bets are on one team that isn’t a 6+ point favorite. We take the other team.</li>
-<li><b>Crowd leaning:</b> 55–64% of the money is on one team, or the money and bets are on different teams. LEAN at most.</li>
+<li><b>Crowd leaning:</b> 55–64% of the money is on one team, or the money and bets are on different teams. LEAN at most, and a money-vs-bets split is a pass.</li>
 <li><b>Books disagree:</b> all sportsbooks and DraftKings have the money on different teams. No bet.</li>
 <li><b>No clear crowd:</b> under 55% of the money on either team. No bet.</li>
 </ol>
@@ -492,23 +492,24 @@ table.wk3 td,table.wk3 th{white-space:normal} table.wk3 td{font-size:13px;line-h
 <li><b>65%+ of the money</b> (all books). Yes starts at STRONG; 55–64% starts at LEAN.</li>
 <li><b>DraftKings has the money on the same side.</b> If not, it is type 4: PASS.</li>
 <li><b>A 6+ point favorite holds the money.</b> Sets type 1 instead of type 2. Doesn’t change the rating.</li>
-<li><b>The line hasn’t moved over 1 point toward the money</b> since Monday’s line (TeamRankings, average of two books). If it has, drop one level.</li>
+<li><b>The line hasn’t moved over 1 point toward the money</b> from Monday’s line (TeamRankings, average of two books) to the close. If it has, drop one level.</li>
 <li><b>Our QB1 is playing.</b> If he is out, doubtful or questionable on the official injury report, or on IR, drop one level. QB1 = the team’s starter when healthy (its Week 1 starter, or its named starter if Week 1 was a fill-in). Weeks 1–4, with no saved reports: he didn’t start.</li>
 </ol>
+<p class="sm">Mixed signals between sources also drop the rating one level. If the books have the money on different teams, it is type 4: PASS.</p>
 <h2>STRONG, LEAN, PASS</h2>
 <div class="pills"><span style="color:#3fae6c;border-color:#3fae6c">STRONG · top rating</span><span style="color:#b8860b;border-color:#b8860b">LEAN · optional</span><span style="color:#9a9da4;border-color:#9a9da4">PASS · no bet</span></div>
 <ul>
-<li><b>STRONG:</b> money and bets on the same side, 65%+ of the money, DraftKings agrees, nothing drops it.</li>
+<li><b>STRONG:</b> money and bets on the same side (all books), 65%+ of the money (all books), DraftKings money on the same side (DraftKings bets don’t need to agree), nothing drops it.</li>
 <li><b>LEAN:</b> 55–64% of the money, or a STRONG that dropped one level.</li>
 <li><b>PASS:</b> types 4 and 5, money and bets on different sides, or a LEAN that dropped.</li>
 </ul>
 <p class="sm">STRONG and LEAN records are always kept separate, never added together.</p>
 <h2>How records are kept</h2>
 <ul>
-<li>Every STRONG and LEAN play is graded at flat $100, settled at the DraftKings closing price and counted from our side. Wins, losses and pushes all stay on the record.</li>
+<li>Every STRONG and LEAN play is graded at flat $100, settled at the DraftKings closing price and counted from our side. A loss is −$100 and a push is $0. Wins, losses and pushes all stay on the record.</li>
 <li>Weeks 1–4 are a look back: today’s rules applied afterward to the same 64 games used to set them. Small samples; treat them as a best case.</li>
-<li>Plays lock at the Saturday evening update (Thursday games: the last update before kickoff); from Week 5 the live record is graded at the line we posted, with the time.</li>
-<li>Calls posted Tuesday to Saturday can change as the money moves; only the Saturday call counts.</li>
+<li>Plays lock at the Saturday evening update (Thursday games: the last update before kickoff); from Week 5 the live record is graded the same way, at the DraftKings closing price; the posted line, price and time are saved too.</li>
+<li>Calls posted Tuesday to Saturday can change as the money moves; only the locked call counts.</li>
 <li>The live log (<a href="data/live_log.csv">data/live_log.csv</a>) saves each play’s posted line, price and time, and the closing line, so both are on file.</li>
 </ul>
 <h2>Sources</h2>
