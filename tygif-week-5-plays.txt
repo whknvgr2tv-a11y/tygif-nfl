@@ -2,6 +2,13 @@ tygif's model | Week 5 plays (lines as of Tue Oct 6, 5:13 PM ET; they move until
 Play = against the money. DK splits first, all books as second opinion.
 Sizing vibe: STRONG ≈ full $100 feel · LEAN ≈ half · QB ding = cut further (guidance only).
 
+LEAN: Tampa Bay +8.5 [Fading the public, Big favorite angle]. Best +8.5 (-105) at DraftKings. Thu Oct 8, 8:15 PM ET
+  Updated Thu Oct 8 (DraftKings 9:59 AM CT, all books via ScoresAndOdds 10:01 AM CT). Was a pass Tuesday because the books disagreed then (DraftKings 80% of the money on Dallas, all books 62% on Tampa Bay).
+  Check: ✓ Fade the Crowd · ✓ Money 69% · ✓ Big favorite angle · ✓ Books read · ✗ QB clean on our side · ✓ Line not against us
+  Dallas holds most of the money (DraftKings 85%, all books 69%) and most of the bets (DraftKings 71%, all books 72%). Play Tampa Bay.
+  Tampa Bay QB Baker Mayfield is out; Jalon Daniels is expected to start. That drops it from STRONG to LEAN.
+  Line: reopened +9.5 this week (TeamRankings), now +8.5. The original +3.5 was before Mayfield's injury.
+  * Cowboys game. Heads-up: this is your team, so stick to the money rule. The call comes from the numbers, not the logo.
 STRONG: Tennessee +7.5 [Fading the public, Big favorite angle]. Best +7.5 (-110) at BetRivers
   Watch: Divisional dog, Heavy + big-fav stack (not a play rule)
   Check: ✓ Fade the Crowd · ✓ Money 88% · ✓ Big favorite angle · ✓ Books read · ✓ QB clean on our side · ✓ Line not against us
@@ -27,9 +34,7 @@ LEAN: Washington -3.5 [Fading the public]. Best -3 (-118) at BetRivers
 Pass: Baltimore at Atlanta
   Baltimore at Atlanta: The money (DraftKings 54%, all books 75% on Atlanta) points to Baltimore, which would be LEAN, but it drops to PASS: mixed signals + line moved against us.
 
-Tracked pass (DK and all books disagree, not played): Tampa Bay at Dallas (★ Cowboys game), Philadelphia at Jacksonville, Chicago at Green Bay, Las Vegas at New England, Minnesota at New Orleans, Indianapolis at Pittsburgh, San Francisco at Seattle, Buffalo at LA Rams
-  Tampa Bay at Dallas: Sources disagree: DraftKings' money is on Dallas (80%) but all books' money is on Tampa Bay (62%). Tracked, not played.
-  Tampa Bay at Dallas: * Cowboys game. Heads-up: this is your team, so stick to the money rule. The call comes from the numbers, not the logo.
+Tracked pass (DK and all books disagree, not played): Philadelphia at Jacksonville, Chicago at Green Bay, Las Vegas at New England, Minnesota at New Orleans, Indianapolis at Pittsburgh, San Francisco at Seattle, Buffalo at LA Rams
   Philadelphia at Jacksonville: Sources disagree: DraftKings' money is on Philadelphia (67%) but all books' money is on Jacksonville (55%). Tracked, not played.
   Chicago at Green Bay: Sources disagree: DraftKings' money is on Green Bay (64%) but all books' money is on Chicago (58%). Tracked, not played.
   Las Vegas at New England: Sources disagree: DraftKings' money is on New England (59%) but all books' money is on Las Vegas (84%). Tracked, not played.

@@ -4,6 +4,14 @@ generated_utc: 2026-10-06T21:13Z
 Bank ~$200 → about $65 × 3 STRONG hammers · WSH WAIT/half (real-money sizes; model records are tracked at $100/bet)
 Gate note: STRONG = FTC + money ≥65%, measured on the all-books consensus % (the Weeks 1–4 backtest used consensus splits); DK must agree on the side or it is a tracked pass.
 
+LEAN: Tampa Bay +8.5
+  Tampa Bay at Dallas · Thu Oct 8 · 8:15 PM ET · Prime Video
+  Updated Thu Oct 8: all-books money 69% on Dallas (ScoresAndOdds 10:01 AM CT) · DK bets/money on Dallas 71/85 (9:59 AM CT)
+  Best: Tampa Bay +8.5 (-105) at DraftKings
+  QB: Jalon Daniels starts (Baker Mayfield out, thumb) / Dallas: no QB injury listed
+  Watches: Heavy + big-fav stack · Cowboys game
+  Size ~$30 · LEAN (QB ding). Was PASS on Tuesday when DK and all books disagreed.
+
 STRONG: Tennessee +7.5
   Houston at Tennessee · Sun Oct 11 · 1:00 PM ET · CBS
   Primary money (all-books) 88.0% · DK away bets/handle 78.0/76.0 · home 22.0/24.0
@@ -36,6 +44,6 @@ LEAN: Washington -3.5
   Watches: RLM vs money, Very heavy money
   Size ~$30 or $0 · WAIT — Daniels Questionable; only if active
 
-PASS / DO NOT BET: TB@DAL (Cowboys + sources disagree), PHI@JAX, CHI@GB, LV@NE, MIN@NO, IND@PIT, DEN@LAC, DET@ARI, SF@SEA, BAL@ATL, BUF@LAR.
+PASS / DO NOT BET: PHI@JAX, CHI@GB, LV@NE, MIN@NO, IND@PIT, DEN@LAC, DET@ARI, SF@SEA, BAL@ATL, BUF@LAR.
 Totals watched only — not plays.
 Historical LEAN on angles (KC@MIA, MIA@MIN) = PAST weeks, not Week 5.
