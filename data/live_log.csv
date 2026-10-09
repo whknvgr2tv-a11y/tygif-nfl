@@ -1,2 +1,2 @@
-week,game,kickoff_et,rating,type,our_side,posted_line,posted_price,posted_at_et,pulled_at_et,closing_line,closing_price,result,profit_usd
-5,TB@DAL,2026-10-08 8:15 PM,LEAN,1,TB,+9.5,-112,2026-10-08 2:10 PM,2026-10-08 1:58 PM,+8.5,-102,W,89.29
+week,game,kickoff_et,rating,type,our_side,posted_line,posted_price,posted_at_et,pulled_at_et,closing_line,closing_price,result,profit_usd,close_all_money,close_all_bets,close_dk_money,close_split_at,close_split_source
+5,TB@DAL,2026-10-08 8:15 PM,LEAN,1,TB,+9.5,-112,2026-10-08 2:10 PM,2026-10-08 1:58 PM,+8.5,-102,W,98.04,DAL 70,DAL 73,not found (last pull 1:58 PM ET: DAL 83),"final pre-kickoff split, read 2026-10-08 11:36 PM ET",ScoresAndOdds consensus (all books); DraftKings splits page had dropped the game

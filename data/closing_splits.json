@@ -1,0 +1,22 @@
+{
+  "_rule": "Closing split = last pull before kickoff (all books from ScoresAndOdds, DraftKings from its betting-splits page). Saturday and Tuesday runs must refresh every game to this; a game without one shows its pull time.",
+  "tbdal-card": {
+    "all_books": {
+      "side": "Dallas",
+      "money": 70,
+      "bets": 73,
+      "at": "final pre-kickoff split, read after kickoff (Thu Oct 8, 11:36 PM ET)",
+      "source": "ScoresAndOdds NFL consensus page"
+    },
+    "draftkings": null,
+    "draftkings_note": "DraftKings closing split not found: its splits page dropped the game at kickoff and no archived copy exists. Last DraftKings pull: Thu Oct 8, 1:58 PM ET, Dallas 83% of the money.",
+    "dk_close": {
+      "sp": {
+        "TB": "+8.5",
+        "DAL": "−8.5"
+      },
+      "price": "−102",
+      "source": "ESPN game summary (DraftKings close)"
+    }
+  }
+}
