@@ -3,13 +3,11 @@
 
 Writes to OUT (default ./snapshots):
   dk_<UTC stamp>.json   parsed DraftKings spread splits (money = % handle, bets = % bets)
-  dk_<UTC stamp>.html.gz  only the splits blocks of each DK page (audit copy)
   sao_<UTC stamp>.json  parsed ScoresAndOdds spread splits for the NFL week page
-  sao_<UTC stamp>.html.gz only the spread consensus cards (audit copy)
 Prunes snapshot files older than KEEP_DAYS (21). Exits 1 if either source
 returns no games (bot block or layout change), so the run shows as failed.
 """
-import gzip, json, os, re, sys, time, urllib.request
+import json, os, re, sys, time, urllib.request
 from datetime import datetime, timezone, timedelta
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'snapshots'
@@ -76,7 +74,6 @@ def main():
         time.sleep(2)
     meta = {'fetched_utc': now.isoformat(timespec='seconds'), 'source': DK.format('N')}
     json.dump(dict(meta, games=dk), open(f'{OUT}/dk_{stamp}.json', 'w'), indent=1)
-    with gzip.open(f'{OUT}/dk_{stamp}.html.gz', 'wt') as f: f.write('\n'.join(raw))
     print(f'DraftKings: {len(dk)} games with spread splits')
     if not dk: ok = False
     # ScoresAndOdds: current NFL week page
@@ -85,7 +82,6 @@ def main():
     sao = sao_parse(h)
     json.dump({'fetched_utc': now.isoformat(timespec='seconds'), 'source': SAO, 'week': wk.group(1) if wk else None,
                'games': [g for g, _ in sao]}, open(f'{OUT}/sao_{stamp}.json', 'w'), indent=1)
-    with gzip.open(f'{OUT}/sao_{stamp}.html.gz', 'wt') as f: f.write('\n'.join(b for _, b in sao))
     print(f'ScoresAndOdds: {len(sao)} games with spread splits (week {wk.group(1) if wk else "?"})')
     if not sao: ok = False
     # prune

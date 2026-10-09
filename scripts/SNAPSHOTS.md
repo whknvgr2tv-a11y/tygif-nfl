@@ -1,9 +1,8 @@
 # Split snapshots: how the Tuesday run uses them
 
-The `split-snapshots` workflow saves DraftKings and ScoresAndOdds spread splits about
-20 and 5 minutes before every kickoff slot to the separate `snapshots` branch
-(`snapshots/dk_<UTC>.json`, `snapshots/sao_<UTC>.json`, plus trimmed `.html.gz` audit copies).
-Files older than 21 days are pruned. Nothing here is on main, so the site never serves it.
+The `split-snapshots` workflow saves DraftKings and ScoresAndOdds spread splits about 20 and 5 minutes before every kickoff slot to the separate `snapshots` branch
+(`snapshots/dk_<UTC>.json` and `snapshots/sao_<UTC>.json`, parsed splits only; files older than 21 days are pruned).
+Nothing here is on main, so the site never serves it; the branch is still visible in this public repo.
 
 Tuesday run, for each game of the week:
 1. `git fetch origin snapshots` and read `snapshots/*.json` from it.
