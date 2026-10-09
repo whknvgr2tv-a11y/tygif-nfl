@@ -1,8 +1,8 @@
 tygif's model · Week 5 card
-Splits: all books (ScoresAndOdds) and DraftKings, pulled Thu Oct 8, 1:58 PM ET. Lines from DraftKings at the same time.
-Calls posted before kickoff are previews and can change as the money moves. Every week is rated and graded at the closing numbers: the DraftKings closing line and price, and the money splits (all books and DraftKings) from the last pull before kickoff.
+Splits: all books (ScoresAndOdds) and DraftKings, pulled Thu Oct 8, 1:58 PM ET unless marked final. Lines from DraftKings at the same time.
+Calls posted before kickoff are previews and can change as the money moves. Every week is rated and graded at the closing numbers: the DraftKings closing line and price, and the money splits (all books and DraftKings) from the last pull before kickoff (Weeks 1–4: all-books splits only).
 
-LEAN: Tampa Bay +8.5
+LEAN: Tampa Bay +8.5 · Final: TB 24–16 · win +$98
   Tampa Bay at Dallas · Thu Oct 8 · 8:15 PM ET · Prime Video
   All books: 70% of the money on Dallas (73% of bets) (all books, final split; read after kickoff, page not timestamped) · DraftKings: 83% of the money on Dallas (1:58 PM pull; closing split not found)
   Line: Tampa Bay +8.5 (−102) at DraftKings · Type 1

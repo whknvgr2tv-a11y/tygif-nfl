@@ -1,0 +1,59 @@
+# Pre-kickoff split snapshots. Two runs per kickoff slot (about 20 and 5 min before).
+# Cron is UTC. Each slot is listed for both EDT (UTC-4) and EST (UTC-5); the off-season
+# copy just takes an extra snapshot after kickoff. GitHub can start scheduled runs late,
+# hence two runs per slot.
+# Output goes to the separate `snapshots` branch (one commit, force-pushed), never to main,
+# so GitHub Pages (served from main) never serves or links it.
+name: split-snapshots
+on:
+  workflow_dispatch:
+  schedule:
+    # Thu 8:15 PM ET  (Fri 00:15 UTC EDT / 01:15 EST)
+    - cron: '55 23 * * 4'
+    - cron: '10,55 0 * * 5'
+    - cron: '10 1 * * 5'
+    # Sun 9:30 AM ET international (13:30 / 14:30 UTC)
+    - cron: '10,25 13,14 * * 0'
+    # Sun 1:00 PM ET (17:00 / 18:00 UTC)
+    - cron: '40,55 16,17 * * 0'
+    # Sun 4:05 / 4:25 PM ET (20:05,20:25 / 21:05,21:25 UTC)
+    - cron: '45 19,20 * * 0'
+    - cron: '0,5,20 20,21 * * 0'
+    # Sun 8:20 PM ET (Mon 00:20 / 01:20 UTC)
+    - cron: '0,15 0,1 * * 1'
+    # Mon 8:15 PM ET (Tue 00:15 / 01:15 UTC)
+    - cron: '55 23 * * 1'
+    - cron: '10,55 0 * * 2'
+    - cron: '10 1 * * 2'
+permissions:
+  contents: write
+concurrency:
+  group: split-snapshots
+  cancel-in-progress: false
+jobs:
+  snap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts
+      - name: Restore existing snapshots
+        run: |
+          mkdir -p out
+          if git fetch --depth=1 origin snapshots 2>/dev/null; then
+            git --work-tree=out checkout FETCH_HEAD -- snapshots 2>/dev/null || true
+          fi
+          mkdir -p out/snapshots
+      - name: Take snapshot
+        run: python3 scripts/snapshot.py out/snapshots
+      - name: Save to snapshots branch (single commit, pruned to 21 days)
+        if: always()
+        run: |
+          cd out
+          git init -q -b snapshots
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add snapshots
+          git commit -q -m "snapshots $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" snapshots

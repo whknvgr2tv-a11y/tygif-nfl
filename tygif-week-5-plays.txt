@@ -1,9 +1,9 @@
-tygif's model | Week 5 plays (splits and lines pulled Thu Oct 8, 1:58 PM ET; they move until kickoff)
+tygif's model | Week 5 plays (splits and lines pulled Thu Oct 8, 1:58 PM ET unless marked final; they move until kickoff)
 Play = against the money. All sportsbooks first (ScoresAndOdds); DraftKings must have the money on the same side.
-Calls posted before kickoff are previews and can change as the money moves. Every week is rated and graded at the closing numbers: the DraftKings closing line and price, and the money splits (all books and DraftKings) from the last pull before kickoff.
+Calls posted before kickoff are previews and can change as the money moves. Every week is rated and graded at the closing numbers: the DraftKings closing line and price, and the money splits (all books and DraftKings) from the last pull before kickoff (Weeks 1–4: all-books splits only).
 3 STRONG, 1 LEAN, 11 passes.
 
-LEAN: Tampa Bay +8.5 · Type 1 (Crowd piled on a big favorite). DraftKings +8.5 (−102). Thu Oct 8 · 8:15 PM ET · Prime Video
+LEAN: Tampa Bay +8.5 · Type 1 (Crowd piled on a big favorite). DraftKings +8.5 (−102). Thu Oct 8 · 8:15 PM ET · Prime Video · Final: TB 24–16 · win +$98
   Checks: ✓ money and bets same side · ✓ 65%+ money · ✓ DraftKings agrees · – 6+ pt favorite (type 1) · ✓ line not moved toward the money · ✕ QB1 playing
   Dallas holds most of the money: 70% (all books, final split; read after kickoff, page not timestamped), with 73% of the bets. DraftKings: 83% on Dallas at the 1:58 PM pull (closing DraftKings split not found). Play Tampa Bay.
   Tampa Bay QB Baker Mayfield is out (thumb); Jalon Daniels starts. That drops it from STRONG to LEAN.
@@ -22,9 +22,9 @@ STRONG: Washington −3.5 · Type 2 (Crowd piled on, no big favorite). DraftKing
   Washington QB Jayden Daniels practiced fully Wednesday with no game status; final status Friday.
   Start-of-week line WSH −3.5, now −3.5.
 
-Changed since Tuesday (now passes):
-  Houston at Tennessee: was STRONG Tennessee +7.5 on Tuesday's numbers. DraftKings now has 65% of the money on Tennessee while all books have 70% on Houston, so the books disagree (type 4). No bet.
-  Detroit at Arizona: was STRONG Detroit -4.5 on Tuesday's numbers. All books now have only 53% of the money on Arizona, under 55% (type 5). No bet.
+Changed since Tuesday (passes as of the Thu 1:58 PM ET pull):
+  Houston at Tennessee: was STRONG Tennessee +7.5 on Tuesday's numbers. DraftKings had 65% of the money (as of the Thu 1:58 PM ET pull) on Tennessee while all books have 70% on Houston, so the books disagree (type 4). No bet.
+  Detroit at Arizona: was STRONG Detroit -4.5 on Tuesday's numbers. All books had only 53% of the money (as of the Thu 1:58 PM ET pull) on Arizona, under 55% (type 5). No bet.
 
 Passes:
   Philadelphia at Jacksonville: Type 4 (books disagree) — all books have the money on Jacksonville (71%), DraftKings on Philadelphia (58%). No bet.
