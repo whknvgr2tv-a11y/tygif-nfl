@@ -1,0 +1,117 @@
+{
+ "checked": "2026-10-10 8:49 PM ET (Saturday refresh; final injury reports Fri Oct 9, Saturday news checked: no change for any team we play)",
+ "teams": {
+  "MIA": {
+   "drop": false,
+   "note": "Malik Willis has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "NYJ": {
+   "drop": false,
+   "note": "Geno Smith has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "ARI": {
+   "drop": false,
+   "note": "Jacoby Brissett has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "PHI": {
+   "drop": false,
+   "note": "Jalen Hurts has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "GB": {
+   "drop": false,
+   "note": "Jordan Love has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "NE": {
+   "drop": false,
+   "note": "Drake Maye has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "TEN": {
+   "drop": false,
+   "note": "Cam Ward has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "NO": {
+   "drop": false,
+   "note": "Tyler Shough has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "PIT": {
+   "drop": false,
+   "note": "Aaron Rodgers has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "LAC": {
+   "drop": false,
+   "note": "Justin Herbert has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "SEA": {
+   "drop": false,
+   "note": "Drew Lock has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "LAR": {
+   "drop": false,
+   "note": "Matthew Stafford has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "DET": {
+   "drop": false,
+   "note": "Jared Goff has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "CIN": {
+   "drop": false,
+   "note": "Joe Burrow has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "CLE": {
+   "drop": false,
+   "note": "Deshaun Watson has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "NYG": {
+   "drop": false,
+   "note": "Jameis Winston has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "LV": {
+   "drop": false,
+   "note": "Kirk Cousins has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "HOU": {
+   "drop": false,
+   "note": "C.J. Stroud has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "MIN": {
+   "drop": false,
+   "note": "Kyler Murray has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "IND": {
+   "drop": false,
+   "note": "Daniel Jones has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "DEN": {
+   "drop": false,
+   "note": "Bo Nix has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "SF": {
+   "drop": false,
+   "note": "Brock Purdy has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "ATL": {
+   "drop": false,
+   "note": "Michael Penix Jr. has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "BUF": {
+   "drop": false,
+   "note": "Josh Allen has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "JAX": {
+   "drop": false,
+   "note": "Trevor Lawrence has no game status and plays (final injury report, Fri Oct 9)"
+  },
+  "WSH": {
+   "drop": false,
+   "note": "Jayden Daniels has no game status and plays (full practice all week; final injury report, Fri Oct 9)"
+  },
+  "BAL": {
+   "drop": true,
+   "note": "Lamar Jackson is out with an ankle injury and Tyler Huntley starts (final injury report, Fri Oct 9)"
+  },
+  "CHI": {
+   "drop": true,
+   "note": "Caleb Williams is questionable with a hamstring injury (final injury report, Fri Oct 9)"
+  }
+ }
+}

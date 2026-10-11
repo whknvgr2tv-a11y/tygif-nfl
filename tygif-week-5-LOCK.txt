@@ -1,5 +1,5 @@
 tygif's model · Week 5 card
-Splits: all books (ScoresAndOdds) and DraftKings, pulled Sat Oct 10, 9:11 AM ET; final games graded at the close. Lines from DraftKings at the same time.
+Splits: all books (ScoresAndOdds) and DraftKings, pulled Sat Oct 10, 8:49 PM ET; final games graded at the close. Lines from DraftKings at the same time.
 Calls posted before kickoff are previews and can change as the money moves. Every week is rated and graded at the closing numbers: the DraftKings closing line and price, and the money splits (all books and DraftKings) from the last pull before kickoff (Weeks 1–4: all-books splits only).
 
 LEAN: Tampa Bay +8.5 · Final: TB 24–16 · win +$98
@@ -10,24 +10,29 @@ LEAN: Tampa Bay +8.5 · Final: TB 24–16 · win +$98
 
 STRONG: Miami +7
   Cincinnati at Miami · Sun Oct 11 · 1:00 PM ET · Fox
-  All books: 86% of the money on Cincinnati (75% of bets) · DraftKings: 73% of the money on Cincinnati
-  Line: Miami +7 (−110) at DraftKings · Type 1
+  All books: 86% of the money on Cincinnati (74% of bets) · DraftKings: 78% of the money on Cincinnati
+  Line: Miami +7 (−112) at DraftKings · Type 1
 
 STRONG: NY Jets −2.5
   Cleveland at NY Jets · Sun Oct 11 · 1:00 PM ET · CBS
-  All books: 77% of the money on Cleveland (84% of bets) · DraftKings: 82% of the money on Cleveland
+  All books: 79% of the money on Cleveland (83% of bets) · DraftKings: 86% of the money on Cleveland
   Line: NY Jets −2.5 (−110) at DraftKings · Type 2
 
 STRONG: Washington −3.5
   NY Giants at Washington · Sun Oct 11 · 1:00 PM ET · Fox
-  All books: 73% of the money on NY Giants (73% of bets) · DraftKings: 93% of the money on NY Giants
-  Line: Washington −3.5 (−110) at DraftKings · Type 2
+  All books: 71% of the money on NY Giants (71% of bets) · DraftKings: 93% of the money on NY Giants
+  Line: Washington −3.5 (−112) at DraftKings · Type 2
   Washington QB Jayden Daniels has no game status on the final injury report (full practice all week); he plays.
+
+LEAN: Tennessee +7
+  Houston at Tennessee · Sun Oct 11 · 1:00 PM ET · CBS
+  All books: 64% of the money on Houston (67% of bets) · DraftKings: 55% of the money on Houston
+  Line: Tennessee +7 (−112) at DraftKings · Type 3
 
 LEAN: Arizona +5.5
   Detroit at Arizona · Sun Oct 11 · 4:25 PM ET · Fox
-  All books: 58% of the money on Detroit (52% of bets) · DraftKings: 62% of the money on Detroit
-  Line: Arizona +5.5 (−110) at DraftKings · Type 3
+  All books: 61% of the money on Detroit (54% of bets) · DraftKings: 55% of the money on Detroit
+  Line: Arizona +5.5 (−112) at DraftKings · Type 3
 
-Changed this week: Houston at Tennessee was STRONG on Tuesday, now PASS (books disagree). Detroit at Arizona was STRONG Detroit −4.5 on Tuesday, a pass on Thursday, now LEAN Arizona +5.5.
-PASS / DO NOT BET: PHI@JAX, CHI@GB, LV@NE, HOU@TEN, MIN@NO, IND@PIT, DEN@LAC, SF@SEA, BAL@ATL, BUF@LAR.
+Changed since Thursday: Houston at Tennessee was a pass, now LEAN Tennessee +7. Detroit at Arizona was a pass, now LEAN Arizona +5.5.
+PASS / DO NOT BET: PHI@JAX, CHI@GB, LV@NE, MIN@NO, IND@PIT, DEN@LAC, SF@SEA, BAL@ATL, BUF@LAR.
