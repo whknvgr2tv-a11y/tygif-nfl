@@ -1,40 +1,23 @@
-tygif's model · Week 5 card
-Splits: all books (ScoresAndOdds) and DraftKings (final: called on the Sat Oct 10, 8:49 PM ET pull; graded at the DraftKings close with the last splits before kickoff). Lines from DraftKings at the same time.
+TYGIF'S MODEL · WEEK 5
+Final
 
-LEAN: Tampa Bay +8.5 · Final: TB 24–16 · win +$98
-  Tampa Bay at Dallas · Thu Oct 8 · 8:15 PM ET · Prime Video
-  All books: 66% of the money on Dallas (73% of bets) (all books, last pull before kickoff: Thu Oct 8, 1:58 PM ET) · DraftKings: 83% of the money on Dallas (last pull Thu Oct 8, 1:58 PM ET; DraftKings closing split not found)
-  Line: Tampa Bay +8.5 at DraftKings · Type 1
-  Tampa Bay QB Baker Mayfield is out (thumb); Jalon Daniels starts. That drops it from STRONG to LEAN.
-  Moneyline: Tampa Bay · win +$380
+STRONG
+  Miami +7.5  ·  Sun Oct 11 · 1:00 PM ET · Final MIA 24–31 · win +$89  ·  Moneyline: Miami · loss −$100
+  NY Jets −2.5  ·  Sun Oct 11 · 1:00 PM ET · Final NYJ 17–12 · win +$87
+  Washington −3.5  ·  Sun Oct 11 · 1:00 PM ET · Final WSH 27–27 · loss −$100
 
-STRONG: Miami +7.5 · Final: MIA 24–31 · win +$89
-  Cincinnati at Miami · Sun Oct 11 · 1:00 PM ET · Fox
-  All books: 86% of the money on Cincinnati (74% of bets) (all books, last pull before kickoff: Sat Oct 10, 9:56 PM ET) · DraftKings: 78% of the money on Cincinnati (last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved)
-  Line: Miami +7.5 at DraftKings · Type 1
-  Moneyline: Miami · loss −$100
+LEAN
+  Tampa Bay +8.5  ·  Thu Oct 8 · 8:15 PM ET · Final TB 24–16 · win +$98  ·  Moneyline: Tampa Bay · win +$380
+  Tennessee +6.5  ·  Sun Oct 11 · 1:00 PM ET · Final TEN 3–26 · loss −$100  ·  Moneyline: Tennessee · loss −$100
+  Arizona +4.5  ·  Sun Oct 11 · 4:25 PM ET · Final ARI 21–45 · loss −$100  ·  Moneyline: Arizona · loss −$100
 
-STRONG: NY Jets −2.5 · Final: NYJ 17–12 · win +$87
-  Cleveland at NY Jets · Sun Oct 11 · 1:00 PM ET · CBS
-  All books: 79% of the money on Cleveland (83% of bets) (all books, last pull before kickoff: Sat Oct 10, 9:56 PM ET) · DraftKings: 86% of the money on Cleveland (last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved)
-  Line: NY Jets −2.5 at DraftKings · Type 2
-
-STRONG: Washington −3.5 · Final: WSH 27–27 · loss −$100
-  NY Giants at Washington · Sun Oct 11 · 1:00 PM ET · Fox
-  All books: 71% of the money on NY Giants (71% of bets) (all books, last pull before kickoff: Sat Oct 10, 9:56 PM ET) · DraftKings: 93% of the money on NY Giants (last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved)
-  Line: Washington −3.5 at DraftKings · Type 2
-  Washington QB Jayden Daniels has no game status on the final injury report (full practice all week); he plays.
-
-LEAN: Tennessee +6.5 · Final: TEN 3–26 · loss −$100
-  Houston at Tennessee · Sun Oct 11 · 1:00 PM ET · CBS
-  All books: 64% of the money on Houston (67% of bets) (all books, last pull before kickoff: Sat Oct 10, 9:56 PM ET) · DraftKings: 56% of the money on Houston (last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved)
-  Line: Tennessee +6.5 at DraftKings · Type 3
-  Moneyline: Tennessee · loss −$100
-
-LEAN: Arizona +4.5 · Final: ARI 21–45 · loss −$100
-  Detroit at Arizona · Sun Oct 11 · 4:25 PM ET · Fox
-  All books: 56% of the money on Detroit (50% of bets) (all books, last pull before kickoff: Sun Oct 11, 1:59 PM ET) · DraftKings: 66% of the money on Detroit (DraftKings split Sun Oct 11, 1:59 PM ET, the last before kickoff)
-  Line: Arizona +4.5 at DraftKings · Type 3
-  Moneyline: Arizona · loss −$100
-
-PASS / DO NOT BET: PHI@JAX, CHI@GB, LV@NE, MIN@NO, IND@PIT, DEN@LAC, SF@SEA, BAL@ATL, BUF@LAR.
+PASS
+  Philadelphia at Jacksonville
+  Chicago at Green Bay
+  Las Vegas at New England
+  Minnesota at New Orleans
+  Indianapolis at Pittsburgh
+  Denver at LA Chargers
+  San Francisco at Seattle
+  Baltimore at Atlanta
+  Buffalo at LA Rams

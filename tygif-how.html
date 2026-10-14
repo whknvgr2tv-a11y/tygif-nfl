@@ -1,5 +1,6 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>tygif's model · How it works</title><style>
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>tygif's model · How it works</title><style>
 :root{--bg:#0c0d0e;--card:#161719;--card2:#1c1e21;--line:#2c2e32;--txt:#f4f1ea;--mut:#9a9da4;
 --org1:#d4a017;--org2:#d4a017;--accent:#d4a017;--rule:#d4a017;
 --strong:#3fae6c;--lean:#b8860b;--pass:#9a9da4;--neg:#e07a7a;--pos:#3fae6c;
@@ -559,50 +560,42 @@ details.gm.cdw .g-b{border:1px solid var(--line);border-top:0;background:var(--c
 .ps-m{font-weight:700;flex:1}.ps-k{font-size:12px;color:var(--mut);white-space:nowrap}
 .ps-2{display:block;font-size:12.5px;color:var(--mut);margin:4px 0 0 56px;line-height:1.35}
 .ps-2 b{color:var(--txt);font-weight:700}
-</style></head><body><header class="apphead"><a class="logo" href="index.html">tygif's model</a></header><nav class="tabs" aria-label="Sections"><div class="tabs-in"><a class="tab" href="index.html" data-tab="index">Home</a><a class="tab" href="tygif-tracker.html#week" data-tab="week">This Week</a><a class="tab" href="tygif-tracker.html#results" data-tab="results">Records</a><a class="tab cur" href="tygif-how.html" data-tab="how">How</a></div></nav><main><div class="hw">
+</style></head><body><header class="apphead"><a class="logo" href="index.html">tygif's model</a></header><nav aria-label="Sections" class="tabs"><div class="tabs-in"><a class="tab" data-tab="index" href="index.html">Home</a><a class="tab" data-tab="week" href="tygif-tracker.html#week">This Week</a><a class="tab" data-tab="results" href="tygif-tracker.html#results">Records</a><a class="tab cur" data-tab="how" href="tygif-how.html">How</a></div></nav><main><div class="hw">
 <h1>How it works</h1>
-<p class="sm">One rule, applied the same way to every game. Spread bets only. Records use flat $100 bets.</p>
 <h2>The rule</h2>
-<p>Find the side holding most of the money. That is where the sportsbooks have the most risk. We bet the other side.</p>
-<p>Splits come from all sportsbooks first (ScoresAndOdds), then DraftKings. DraftKings must have the money on the same side, or we pass.</p>
-<h2>Five game types</h2>
-<p class="sm">Every game goes in exactly one type, based only on where the money is. Checked in this order: 4, 5, 1, 2, 3.</p>
+<ul>
+<li>Bet against the team holding most of the money.</li>
+<li>Spreads, plus the moneyline on plus-money underdogs.</li>
+<li>Money and bets: ScoresAndOdds consensus. DraftKings must have the money on the same team.</li>
+</ul>
+<h2>Game types</h2>
+<p class="sm">Checked in this order: 4, 5, 1, 2, 3.</p>
 <ol>
-<li><b>Fade the big favorite:</b> 65%+ of the money is on a favorite giving 6+ points. We take the underdog.</li>
-<li><b>Fade the crowd:</b> 65%+ of the money and most of the bets are on one team that isn’t a 6+ point favorite. We take the other team.</li>
-<li><b>Crowd leaning:</b> 55–64% of the money is on one team, or the money and bets are on different teams. LEAN at most, and a money-vs-bets split is a pass.</li>
-<li><b>Books disagree:</b> all sportsbooks and DraftKings have the money on different teams. No bet.</li>
+<li><b>Fade the big favorite:</b> 65%+ of the money on a favorite giving 6+ points. Take the underdog.</li>
+<li><b>Fade the crowd:</b> 65%+ of the money and most bets on one team. Take the other team.</li>
+<li><b>Crowd leaning:</b> 55–64% of the money on one team. LEAN at most; money and bets on different teams is a pass.</li>
+<li><b>Books disagree:</b> consensus and DraftKings have the money on different teams. No bet.</li>
 <li><b>No clear crowd:</b> under 55% of the money on either team. No bet.</li>
 </ol>
-<p class="sm">Injuries and line moves never change the type. They only drop the rating one level inside it.</p>
-<h2>Six checks</h2>
-<ol type="a">
-<li><b>Money and bets on the same side.</b> If not, PASS.</li>
-<li><b>65%+ of the money</b> (all books). Yes starts at STRONG; 55–64% starts at LEAN.</li>
-<li><b>DraftKings has the money on the same side.</b> If not, it is type 4: PASS.</li>
-<li><b>A 6+ point favorite holds the money.</b> Sets type 1 instead of type 2. Doesn’t change the rating.</li>
-<li><b>The line hasn’t moved over 1 point toward the money</b> from the start-of-week line (Sunday night, before Monday) to the close. If it has, drop one level.<details class="fn"><summary>How the start-of-week line is set</summary>TeamRankings books 2 and 3, each book’s last quote before Monday 12:00 AM ET, averaged. Quotes older than 7 days are skipped; if only one book has a quote, that book is used.</details></li>
-<li><b>Our QB1 is playing.</b> If he is out, doubtful or questionable on the official injury report, or on IR, drop one level. QB1 = the team’s starter when healthy (its Week 1 starter, or its named starter if Week 1 was a fill-in).</li>
-</ol>
-<p class="sm">Mixed signals: when the sources disagree (all books and DraftKings have the money on different teams, type 4) or the money and the bets are on different teams, the game is a PASS.</p>
-<h2>STRONG, LEAN, PASS</h2>
-<div class="pills"><span style="color:#3fae6c;border-color:#3fae6c">STRONG · top rating</span><span style="color:#b8860b;border-color:#b8860b">LEAN · optional</span><span style="color:#9a9da4;border-color:#9a9da4">PASS · no bet</span></div>
+<h2>Ratings</h2>
 <ul>
-<li><b>STRONG:</b> money and bets on the same side (all books), 65%+ of the money (all books), DraftKings money on the same side (DraftKings bets don’t need to agree), nothing drops it.</li>
-<li><b>LEAN:</b> 55–64% of the money, or a STRONG that dropped one level.</li>
-<li><b>PASS:</b> types 4 and 5, money and bets on different sides, or a LEAN that dropped.</li>
+<li><b>STRONG:</b> 65%+ of the money, most bets on the same team, DraftKings money on the same team (its bets need not agree).</li>
+<li><b>LEAN:</b> 55–64% of the money, or a STRONG that drops one level.</li>
+<li><b>PASS:</b> types 4 and 5, money and bets on different teams, or a LEAN that drops.</li>
+<li><b>Drop one level</b> if the line moves more than 1 point toward the money from the Monday line, or our starting quarterback (Week 1 starter, or the named starter if Week 1 was a fill-in) is out, doubtful, questionable or on IR. These never change the type.</li>
+<li><b>Monday line:</b> average of TeamRankings books 2 and 3, each book’s last quote before Monday 12:00 AM ET (quotes older than 7 days skipped).</li>
 </ul>
-<p class="sm">STRONG and LEAN records are always kept separate, never added together.</p>
-<h2>Moneyline plays</h2>
-<p>When a STRONG or LEAN play’s team is a plus-money underdog on DraftKings’ moneyline, we also play that team on the moneyline, to win outright. A favorite, a pick’em or an even-money team gets no moneyline play. Moneyline plays are graded at flat $100 at DraftKings’ closing moneyline, with their own STRONG and LEAN records, never added to the spread records. A tie on the moneyline is a push, $0.</p>
-<h2 id="records">How records are kept</h2>
+<h2>Moneyline</h2>
 <ul>
-<li>Every STRONG and LEAN play is graded at flat $100, counted from our side. A loss is −$100 and a push is $0. Wins, losses and pushes all stay on the record.</li>
-<li>Records cover every week to date.</li>
+<li>Same team as a STRONG or LEAN play, only when it is a plus-money underdog at DraftKings. Favorites, pick’em and even money: no play.</li>
+<li>A tie on the moneyline is a push, $0.</li>
+</ul>
+<h2 id="records">Records</h2>
+<ul>
+<li>Flat $100 per play, graded at the DraftKings closing line and price. A loss is −$100; a push is $0.</li>
+<li>Every week to date. STRONG, LEAN and moneyline are kept separate, never combined.</li>
 <li>Rules frozen Oct 8, 2026. Any future rule change applies going forward only; graded weeks are never redone.</li>
-<li>Calls posted before kickoff are previews and can change as the money moves. Every week is rated and graded at the closing numbers: the DraftKings closing line and price, and the money splits (all books and DraftKings) from the last pull before kickoff.</li>
-<li>The play log (<a href="data/live_log.csv">data/live_log.csv</a>) saves each play’s closing line and splits.</li>
 </ul>
 <h2>Sources</h2>
-<p>ScoresAndOdds (all-sportsbook money and bet splits) · DraftKings (its own splits and lines) · TeamRankings (start-of-week line) · ESPN (scores and closing lines) · nflverse (starting quarterbacks) · team injury reports.</p>
+<p class="sm">ScoresAndOdds · DraftKings · TeamRankings · ESPN · nflverse · team injury reports</p>
 </div></main><footer>tygif's model · free public data · records use flat $100 bets · small samples, no guarantees · not financial advice</footer></body></html>

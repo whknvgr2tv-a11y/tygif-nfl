@@ -1,61 +1,49 @@
-tygif's model | Week 6 plays (splits and lines pulled Tue Oct 13, 11:03 PM ET; they move until kickoff; final games graded at the close)
-Play = against the money. All sportsbooks first (ScoresAndOdds); DraftKings must have the money on the same side.
-4 STRONG, 6 LEAN, 4 passes.
+TYGIF'S MODEL · WEEK 6
+Odds as of Tue Oct 13, 11:03 PM ET
 
-LEAN: Denver +2.5 · Type 3 (Crowd leaning). DraftKings +2.5. Thu Oct 15 · 8:15 PM ET · Prime Video
-  Checks: money and bets same team: yes · 65%+ of the money: no · DraftKings same team: yes · line steady: yes · our QB1 playing: yes
-  Seattle holds most of the money (all books 56%, DraftKings 60%) and most of the bets (all books 55%). Play Denver.
-  Start-of-week line SEA −3 / −2.5 (avg −2.75), now −2.5.
-  Moneyline: Denver
-LEAN: Chicago −3 · Type 2 (Fade the crowd). DraftKings −3. Sun Oct 18 · 1:00 PM ET · Fox
-  Checks: money and bets same team: yes · 65%+ of the money: yes · DraftKings same team: yes · line steady: yes · our QB1 playing: no
-  Atlanta holds most of the money (all books 88%, DraftKings 86%) and most of the bets (all books 77%). Play Chicago.
-  Caleb Williams is questionable. That drops it one level.
-  Start-of-week line CHI −2.5 / −1.5 (avg −2), now −3.
-STRONG: Cleveland +4.5 · Type 2 (Fade the crowd). DraftKings +4.5. Sun Oct 18 · 1:00 PM ET · Fox
-  Checks: money and bets same team: yes · 65%+ of the money: yes · DraftKings same team: yes · line steady: yes · our QB1 playing: yes
-  Baltimore holds most of the money (all books 82%, DraftKings 83%) and most of the bets (all books 64%). Play Cleveland.
-  Start-of-week line BAL −4.5, now −4.5.
-  Moneyline: Cleveland
-STRONG: Tennessee +7 · Type 1 (Fade the big favorite). DraftKings +7. Sun Oct 18 · 1:00 PM ET · Fox
-  Checks: money and bets same team: yes · 65%+ of the money: yes · DraftKings same team: yes · line steady: yes · our QB1 playing: yes
-  Indianapolis holds most of the money (all books 84%, DraftKings 95%) and most of the bets (all books 76%). Play Tennessee.
-  Start-of-week line IND −7 / −6.5 (avg −6.75), now −7.
-  Moneyline: Tennessee
-STRONG: NY Jets +7.5 · Type 1 (Fade the big favorite). DraftKings +7.5. Sun Oct 18 · 1:00 PM ET · CBS
-  Checks: money and bets same team: yes · 65%+ of the money: yes · DraftKings same team: yes · line steady: yes · our QB1 playing: yes
-  New England holds most of the money (all books 87%, DraftKings 88%) and most of the bets (all books 77%). Play NY Jets.
-  Start-of-week line NE −7 / −7.5 (avg −7.25), now −7.5.
-  Moneyline: NY Jets
-LEAN: New Orleans −1.5 · Type 3 (Crowd leaning). DraftKings −1.5. Sun Oct 18 · 1:00 PM ET · Fox
-  Checks: money and bets same team: yes · 65%+ of the money: no · DraftKings same team: yes · line steady: yes · our QB1 playing: yes
-  NY Giants holds most of the money (all books 64%, DraftKings 51%) and most of the bets (all books 57%). Play New Orleans.
-  Start-of-week line NO +1 / +1.5 (avg +1.25), now −1.5.
-LEAN: Carolina +1.5 · Type 3 (Crowd leaning). DraftKings +1.5. Sun Oct 18 · 1:00 PM ET · CBS
-  Checks: money and bets same team: yes · 65%+ of the money: no · DraftKings same team: yes · line steady: yes · our QB1 playing: yes
-  Philadelphia holds most of the money (all books 57%, DraftKings 94%) and most of the bets (all books 56%). Play Carolina.
-  Start-of-week line PHI −1.5, now −1.5.
-LEAN: Tampa Bay +2.5 · Type 2 (Fade the crowd). DraftKings +2.5. Sun Oct 18 · 1:00 PM ET · CBS
-  Checks: money and bets same team: yes · 65%+ of the money: yes · DraftKings same team: yes · line steady: yes · our QB1 playing: no
-  Pittsburgh holds most of the money (all books 81%, DraftKings 58%) and most of the bets (all books 70%). Play Tampa Bay.
-  Baker Mayfield is out. That drops it one level.
-  Start-of-week line PIT −3 / −2.5 (avg −2.75), now −2.5.
-  Moneyline: Tampa Bay
-LEAN: LA Chargers +8.5 · Type 3 (Crowd leaning). DraftKings +8.5. Sun Oct 18 · 4:25 PM ET · CBS
-  Checks: money and bets same team: yes · 65%+ of the money: no · DraftKings same team: yes · line steady: yes · our QB1 playing: yes
-  Kansas City holds most of the money (all books 55%, DraftKings 65%) and most of the bets (all books 59%). Play LA Chargers.
-  Start-of-week line KC −8 / −8.5 (avg −8.25), now −8.5.
-  Moneyline: LA Chargers
-STRONG: Washington +7.5 · Type 1 (Fade the big favorite). DraftKings +7.5. Mon Oct 19 · 8:15 PM ET · ESPN, ABC
-  Checks: money and bets same team: yes · 65%+ of the money: yes · DraftKings same team: yes · line steady: yes · our QB1 playing: yes
-  San Francisco holds most of the money (all books 88%, DraftKings 91%) and most of the bets (all books 73%). Play Washington.
-  Start-of-week line SF −7.5, now −7.5.
-  Moneyline: Washington
+STRONG
+  Cleveland +4.5  ·  Baltimore at Cleveland, Sun Oct 18 · 1:00 PM ET
+    Type 2 · Fade the crowd · STRONG: 5-3-2, +$154
+    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+    Moneyline: Cleveland
+  Tennessee +7  ·  Tennessee at Indianapolis, Sun Oct 18 · 1:00 PM ET
+    Type 1 · Fade the big favorite · STRONG: 10-2-1, +$707
+    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+    Moneyline: Tennessee
+  NY Jets +7.5  ·  NY Jets at New England, Sun Oct 18 · 1:00 PM ET
+    Type 1 · Fade the big favorite · STRONG: 10-2-1, +$707
+    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+    Moneyline: NY Jets
+  Washington +7.5  ·  Washington at San Francisco, Mon Oct 19 · 8:15 PM ET
+    Type 1 · Fade the big favorite · STRONG: 10-2-1, +$707
+    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+    Moneyline: Washington
 
-Passes:
-  Houston at Jacksonville: Type 4 (books disagree) — all books have the money on Jacksonville (56%), DraftKings on Houston (54%). No bet.
-  Arizona at LA Rams: Type 4 (books disagree) — all books have the money on Arizona (55%), DraftKings on LA Rams (60%). No bet.
-  Buffalo at Las Vegas: Type 5 (no clear crowd) — only 53% of the money on Las Vegas. No bet.
-  Dallas at Green Bay: Type 4 (books disagree) — all books have the money on Dallas (63%), DraftKings on Green Bay (55%). No bet.
+LEAN
+  Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 8:15 PM ET
+    Type 3 · Crowd leaning · LEAN: 8-7-1, +$48
+    a: Yes · b: No · c: Yes · d: Yes · e: Yes
+    Moneyline: Denver
+  Chicago −3  ·  Chicago at Atlanta, Sun Oct 18 · 1:00 PM ET
+    Type 2 · Fade the crowd · LEAN: 1-0-0, +$95
+    a: Yes · b: Yes · c: Yes · d: Yes · e: No
+  New Orleans −1.5  ·  New Orleans at NY Giants, Sun Oct 18 · 1:00 PM ET
+    Type 3 · Crowd leaning · LEAN: 8-7-1, +$48
+    a: Yes · b: No · c: Yes · d: Yes · e: Yes
+  Carolina +1.5  ·  Carolina at Philadelphia, Sun Oct 18 · 1:00 PM ET
+    Type 3 · Crowd leaning · LEAN: 8-7-1, +$48
+    a: Yes · b: No · c: Yes · d: Yes · e: Yes
+  Tampa Bay +2.5  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 1:00 PM ET
+    Type 2 · Fade the crowd · LEAN: 1-0-0, +$95
+    a: Yes · b: Yes · c: Yes · d: Yes · e: No
+    Moneyline: Tampa Bay
+  LA Chargers +8.5  ·  LA Chargers at Kansas City, Sun Oct 18 · 4:25 PM ET
+    Type 3 · Crowd leaning · LEAN: 8-7-1, +$48
+    a: Yes · b: No · c: Yes · d: Yes · e: Yes
+    Moneyline: LA Chargers
 
-Small samples, no guarantees.
+PASS
+  Houston at Jacksonville
+  Arizona at LA Rams
+  Buffalo at Las Vegas
+  Dallas at Green Bay
