@@ -23,7 +23,7 @@ Tuesday run, for each game of the week:
 
 ## Moneyline plays (TG, Oct 13)
 Every weekly run handles ML alongside the spread, using the same card template and records kept separate:
-- A STRONG or LEAN spread play whose side is the underdog (spread line > 0) also gets a moneyline play on that team. A favorite gets none.
+- A STRONG or LEAN spread play gets a moneyline play on that team only if its DraftKings moneyline (close; current for upcoming games) is plus money (over +100). Pick'em, −100 or a favorite: none.
 - Saturday run: show 'Moneyline: <team>' on qualifying cards (team only; never a price), using the current DraftKings moneyline
   from the ESPN game summary, with its time on the section's one pull-time line.
 - Tuesday run: grade each ML play W/L/P from the final score at the DraftKings closing moneyline (ESPN game summary `pickcenter`,

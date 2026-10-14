@@ -1,6 +1,6 @@
 {
  "source": "ESPN game summaries, DraftKings moneyline (close for final games; current for Week 6, pulled Tue Oct 13, 11:17 PM ET)",
- "rule": "Moneyline play = the same side as a STRONG or LEAN spread play when that side is the underdog (spread line > 0). Flat $100 at the DraftKings closing price. Never combined with spread, STRONG never combined with LEAN.",
+ "rule": "Moneyline play = the same side as a STRONG or LEAN spread play when its DraftKings moneyline (close; current for upcoming games) is plus money (over +100). Pick\u2019em, \u2212100 or a favorite: no play. Flat $100 at the DraftKings closing price. Never combined with spread, STRONG never combined with LEAN.",
  "plays": [
   {
    "week": 1,
@@ -379,16 +379,6 @@
    "status": "preview",
    "espn_event": "401873001",
    "price": 275
-  },
-  {
-   "week": 6,
-   "game": "CAR@PHI",
-   "rating": "LEAN",
-   "side": "CAR",
-   "spread_line": 1.5,
-   "status": "preview",
-   "espn_event": "401872998",
-   "price": -105
   },
   {
    "week": 6,
