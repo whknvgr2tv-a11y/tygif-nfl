@@ -541,6 +541,7 @@ table.wk3 td,table.wk3 th{white-space:normal} table.wk3 td{font-size:13px;line-h
 .cd-3 .ok{color:#3fae6c}.cd-3 .md{color:#d9a520}.cd-3 .no{color:#e07a7a}
 .cd-4{margin:9px 0 0;font-size:13px;color:var(--mut)}
 .cd-4 .fin{color:#3fae6c;font-weight:700}.cd-4 .fin.L{color:#e07a7a}.cd-4 .fin.P{color:var(--txt)}
+.cd-ml{display:block;margin:6px 0 0;font-size:13px;font-weight:700;color:var(--txt)}
 .cdl{display:flex;flex-direction:column;gap:10px;margin:12px 0}
 details.gm.cdw{border:0;background:transparent}
 details.gm.cdw>summary{padding:0;list-style:none}
@@ -558,7 +559,7 @@ details.gm.cdw .g-b{border:1px solid var(--line);border-top:0;background:var(--c
 .ps-m{font-weight:700;flex:1}.ps-k{font-size:12px;color:var(--mut);white-space:nowrap}
 .ps-2{display:block;font-size:12.5px;color:var(--mut);margin:4px 0 0 56px;line-height:1.35}
 .ps-2 b{color:var(--txt);font-weight:700}
-</style></head><body><header class="apphead"><a class="logo" href="index.html">tygif's model</a><span class="updated">Updated Tue Oct 13</span></header><nav class="tabs" aria-label="Sections"><div class="tabs-in"><a class="tab" href="index.html" data-tab="index">Home</a><a class="tab" href="tygif-tracker.html#week" data-tab="week">This Week</a><a class="tab" href="tygif-tracker.html#results" data-tab="results">Records</a><a class="tab cur" href="tygif-how.html" data-tab="how">How</a></div></nav><main><div class="hw">
+</style></head><body><header class="apphead"><a class="logo" href="index.html">tygif's model</a></header><nav class="tabs" aria-label="Sections"><div class="tabs-in"><a class="tab" href="index.html" data-tab="index">Home</a><a class="tab" href="tygif-tracker.html#week" data-tab="week">This Week</a><a class="tab" href="tygif-tracker.html#results" data-tab="results">Records</a><a class="tab cur" href="tygif-how.html" data-tab="how">How</a></div></nav><main><div class="hw">
 <h1>How it works</h1>
 <p class="sm">One rule, applied the same way to every game. Spread bets only. Records use flat $100 bets.</p>
 <h2>The rule</h2>
@@ -592,11 +593,12 @@ details.gm.cdw .g-b{border:1px solid var(--line);border-top:0;background:var(--c
 <li><b>PASS:</b> types 4 and 5, money and bets on different sides, or a LEAN that dropped.</li>
 </ul>
 <p class="sm">STRONG and LEAN records are always kept separate, never added together.</p>
+<h2>Moneyline plays</h2>
+<p>When a STRONG or LEAN play’s side is the underdog (getting points), we also play that team on the moneyline, to win outright. A favorite gets no moneyline play. Moneyline plays are graded at flat $100 at DraftKings’ closing moneyline, with their own STRONG and LEAN records, never added to the spread records.</p>
 <h2 id="records">How records are kept</h2>
 <ul>
 <li>Every STRONG and LEAN play is graded at flat $100, counted from our side. A loss is −$100 and a push is $0. Wins, losses and pushes all stay on the record.</li>
 <li>Weeks 1–4 are a look back: today’s rules applied afterward to the same 64 games used to set them. Small samples; treat them as a best case.</li>
-<li>Rules frozen Oct 8, 2026. Any future rule change applies going forward only; graded weeks are never redone.</li>
 <li>Calls posted before kickoff are previews and can change as the money moves. Every week is rated and graded at the closing numbers: the DraftKings closing line and price, and the money splits (all books and DraftKings) from the last pull before kickoff (Weeks 1–4: all-books splits only).</li>
 <li>The live log (<a href="data/live_log.csv">data/live_log.csv</a>) saves each play’s closing line, price and splits, which it is graded on, and the posted call (line, price, time) as history.</li>
 </ul>

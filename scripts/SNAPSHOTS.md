@@ -20,3 +20,13 @@ Tuesday run, for each game of the week:
 7. If a game has no DraftKings snapshot before kickoff, say so in `closing_splits.json`
    (`draftkings: null` plus a note) and keep the last real pull labeled with its time. Never fill
    a closing value from an earlier pull without its label.
+
+## Moneyline plays (TG, Oct 13)
+Every weekly run handles ML alongside the spread, using the same card template and records kept separate:
+- A STRONG or LEAN spread play whose side is the underdog (spread line > 0) also gets a moneyline play on that team. A favorite gets none.
+- Saturday run: show 'Moneyline: <team>' on qualifying cards (team only; never a price), using the current DraftKings moneyline
+  from the ESPN game summary, with its time on the section's one pull-time line.
+- Tuesday run: grade each ML play W/L/P from the final score at the DraftKings closing moneyline (ESPN game summary `pickcenter`,
+  DraftKings `moneyline.<home|away>.close.odds`), flat $100. Write it to `data/ml_log.json`. If the price is missing, record that and
+  grade nothing. STRONG ML and LEAN ML records stay separate and are never added to the spread records.
+- Prices live only in the data files. No prices or odds on the site or in the txt files; no dated update or change notes.

@@ -8,10 +8,12 @@ LEAN: Tampa Bay +8.5 · Type 1 (Fade the big favorite). DraftKings +8.5. Thu Oct
   Dallas holds most of the money: 66% (all books, last pull before kickoff: Thu Oct 8, 1:58 PM ET), with 73% of the bets. DraftKings: 83% on Dallas (last pull Thu Oct 8, 1:58 PM ET; DraftKings closing split not found). Play Tampa Bay.
   Tampa Bay QB Baker Mayfield is out (thumb); Jalon Daniels starts. That drops it from STRONG to LEAN.
   Start-of-week line TB +9.5, now +8.5.
+  Moneyline: Tampa Bay · win +$380
 STRONG: Miami +7.5 · Type 1 (Fade the big favorite). DraftKings +7.5. Sun Oct 11 · 1:00 PM ET · Fox · Final: MIA 24–31 · win +$89
   Checks: money and bets same team: yes · 65%+ of the money: yes · DraftKings same team: yes · line steady: yes · our QB1 playing: yes
   Cincinnati holds most of the money: 86% (all books, last pull before kickoff: Sat Oct 10, 9:56 PM ET), with 74% of the bets. DraftKings: 78% on Cincinnati (last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved). Play Miami.
   Start-of-week line MIA +7.5, now +7.5.
+  Moneyline: Miami · loss −$100
 STRONG: NY Jets −2.5 · Type 2 (Fade the crowd). DraftKings −2.5. Sun Oct 11 · 1:00 PM ET · CBS · Final: NYJ 17–12 · win +$87
   Checks: money and bets same team: yes · 65%+ of the money: yes · DraftKings same team: yes · line steady: yes · our QB1 playing: yes
   Cleveland holds most of the money: 79% (all books, last pull before kickoff: Sat Oct 10, 9:56 PM ET), with 83% of the bets. DraftKings: 86% on Cleveland (last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved). Play NY Jets.
@@ -25,14 +27,12 @@ LEAN: Tennessee +6.5 · Type 3 (Crowd leaning). DraftKings +6.5. Sun Oct 11 · 1
   Checks: money and bets same team: yes · 65%+ of the money: no · DraftKings same team: yes · line steady: yes · our QB1 playing: yes
   Houston holds most of the money: 64% (all books, last pull before kickoff: Sat Oct 10, 9:56 PM ET), with 67% of the bets. DraftKings: 56% on Houston (last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved). Play Tennessee.
   Start-of-week line TEN +6.5, now +6.5.
+  Moneyline: Tennessee · loss −$100
 LEAN: Arizona +4.5 · Type 3 (Crowd leaning). DraftKings +4.5. Sun Oct 11 · 4:25 PM ET · Fox · Final: ARI 21–45 · loss −$100
   Checks: money and bets same team: yes · 65%+ of the money: no · DraftKings same team: yes · line steady: yes · our QB1 playing: yes
   Detroit holds most of the money: 56% (all books, last pull before kickoff: Sun Oct 11, 1:59 PM ET), with 50% of the bets. DraftKings: 66% on Detroit (DraftKings split Sun Oct 11, 1:59 PM ET, the last before kickoff). Play Arizona.
   Start-of-week line DET −5.5, now −4.5.
-
-Changed since Thursday (now = the Sat Oct 10, 8:49 PM ET pull):
-  Houston at Tennessee: a pass on Thursday (books disagreed). Now all books have 64% of the money and 67% of the bets on Houston, DraftKings 56% on Houston: LEAN Tennessee +6.5.
-  Detroit at Arizona: a pass on Thursday (only 53% of the money, on Arizona). Now all books have 56% of the money and 50% of the bets on Detroit, DraftKings 66% on Detroit: LEAN Arizona +4.5.
+  Moneyline: Arizona · loss −$100
 
 Passes:
   Philadelphia at Jacksonville: Type 4 (books disagree) — all books have the money on Philadelphia (52%), DraftKings on Jacksonville (53%). No bet.
