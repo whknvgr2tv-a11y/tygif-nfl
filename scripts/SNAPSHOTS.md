@@ -30,3 +30,11 @@ Every weekly run handles ML alongside the spread, using the same card template a
   DraftKings `moneyline.<home|away>.close.odds`), flat $100. Write it to `data/ml_log.json`. If the price is missing, record that and
   grade nothing. STRONG ML and LEAN ML records stay separate and are never added to the spread records.
 - Prices live only in the data files. No prices or odds on the site or in the txt files; no dated update or change notes.
+
+## Records (TG, Oct 13)
+Every record on the site covers all weeks to date (Week 1 through the last graded week), built from the
+look-back games plus every graded row in `data/live_log.csv` and `data/ml_log.json`. No split or label by
+period anywhere (no 'Weeks 1–4', 'look back', 'backtest' or 'live'). STRONG, LEAN, STRONG ML and LEAN ML stay
+separate, never combined. Card record line: 'Type N · <type name> · <RATING>: W-L-P, +$X' for that type and rating.
+After the Tuesday grade, rebuild with clean_build.py; its self-check and deep check recompute these from the data.
+No explanatory prose on cards or pages beyond plays, records and the checklist; How keeps the brief rules.
