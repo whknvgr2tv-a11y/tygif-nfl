@@ -13,7 +13,7 @@
    "price": 370,
    "score": "26-14",
    "result": "W",
-   "profit": 370
+   "profit": 370.0
   },
   {
    "week": 1,
@@ -39,7 +39,7 @@
    "price": 140,
    "score": "20-28",
    "result": "W",
-   "profit": 140
+   "profit": 140.0
   },
   {
    "week": 1,
@@ -78,7 +78,7 @@
    "price": 330,
    "score": "23-19",
    "result": "W",
-   "profit": 330
+   "profit": 330.0
   },
   {
    "week": 2,
@@ -104,7 +104,7 @@
    "price": 285,
    "score": "24-17",
    "result": "W",
-   "profit": 285
+   "profit": 285.0
   },
   {
    "week": 2,
@@ -195,7 +195,7 @@
    "price": 154,
    "score": "7-27",
    "result": "W",
-   "profit": 154
+   "profit": 154.0
   },
   {
    "week": 4,
@@ -221,7 +221,7 @@
    "price": 160,
    "score": "26-32",
    "result": "W",
-   "profit": 160
+   "profit": 160.0
   },
   {
    "week": 4,
@@ -273,7 +273,7 @@
    "price": 275,
    "score": "29-26",
    "result": "W",
-   "profit": 275
+   "profit": 275.0
   },
   {
    "week": 4,
@@ -299,7 +299,7 @@
    "price": 380,
    "score": "24-16",
    "result": "W",
-   "profit": 380
+   "profit": 380.0
   },
   {
    "week": 5,
