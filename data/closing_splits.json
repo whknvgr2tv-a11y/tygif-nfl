@@ -1,13 +1,6 @@
 {
- "_rule": "Closing split = last pull before kickoff (all books from ScoresAndOdds, DraftKings from its betting-splits page). Saturday and Tuesday runs must refresh every game to this; a game without one shows its pull time.",
+ "_rule": "Closing split = the last real pull before kickoff (snapshot or our own dated pull), labeled with its exact time and source. A page read after kickoff is never a closing source (TG, Tue Oct 13). DraftKings removes a game at kickoff.",
  "tbdal-card": {
-  "all_books": {
-   "side": "Dallas",
-   "money": 70,
-   "bets": 73,
-   "at": "final pre-kickoff split, read after kickoff (Thu Oct 8, 11:36 PM ET)",
-   "source": "ScoresAndOdds NFL consensus page"
-  },
   "draftkings": null,
   "draftkings_note": "DraftKings closing split not found: its splits page dropped the game at kickoff and no archived copy exists. Last DraftKings pull: Thu Oct 8, 1:58 PM ET, Dallas 83% of the money.",
   "dk_close": {
@@ -17,6 +10,29 @@
    },
    "price": "−102",
    "source": "ESPN game summary (DraftKings close)"
+  },
+  "all_books_week_page_not_used": {
+   "side": "Dallas",
+   "money": 66,
+   "bets": 73,
+   "at": "Thu Oct 8, 1:58 PM ET",
+   "source": "ScoresAndOdds pull (week5_refresh.py, audit_src/sao_all.csv)",
+   "label": "last pull before kickoff: Thu Oct 8, 1:58 PM ET",
+   "why": "read after kickoff; never a closing source"
+  },
+  "closing_rating": {
+   "rating": "LEAN",
+   "type": 1,
+   "line_moved_over_1_toward_money": false,
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
+  },
+  "all_books": {
+   "side": "Dallas",
+   "money": 66,
+   "bets": 73,
+   "at": "Thu Oct 8, 1:58 PM ET",
+   "source": "ScoresAndOdds pull (week5_refresh.py, audit_src/sao_all.csv)",
+   "label": "last pull before kickoff: Thu Oct 8, 1:58 PM ET"
   }
  },
  "g-mia": {
@@ -26,11 +42,12 @@
    "rating": "STRONG",
    "type": 1
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "Cincinnati",
    "money": 80,
    "bets": 73,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "Cincinnati",
@@ -67,21 +84,18 @@
    "rating": "STRONG",
    "type": 1,
    "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
-  },
-  "rating_with_last_pre_kickoff_sao": {
-   "rating": "STRONG",
-   "type": 1
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
   "matches_locked": true,
   "draftkings_note": "DraftKings closing split not captured: no snapshot in the pre-kickoff slot. Last DraftKings pull before kickoff: Sat Oct 10, 9:56 PM ET (scripts/snapshot.py pull dk_20261011T0156Z.json), Cincinnati 78% of the money.",
   "dk_note_short": "last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved",
   "all_books": {
    "side": "Cincinnati",
-   "money": 80,
-   "bets": 73,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
-   "source": "ScoresAndOdds week page"
+   "money": 86,
+   "bets": 74,
+   "at": "Sat Oct 10, 9:56 PM ET",
+   "source": "ScoresAndOdds, scripts/snapshot.py pull sao_20261011T0156Z.json",
+   "label": "last pull before kickoff: Sat Oct 10, 9:56 PM ET"
   }
  },
  "g-nyj": {
@@ -91,11 +105,12 @@
    "rating": "STRONG",
    "type": 2
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "Cleveland",
    "money": 77,
    "bets": 82,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "Cleveland",
@@ -132,21 +147,18 @@
    "rating": "STRONG",
    "type": 2,
    "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
-  },
-  "rating_with_last_pre_kickoff_sao": {
-   "rating": "STRONG",
-   "type": 2
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
   "matches_locked": true,
   "draftkings_note": "DraftKings closing split not captured: no snapshot in the pre-kickoff slot. Last DraftKings pull before kickoff: Sat Oct 10, 9:56 PM ET (scripts/snapshot.py pull dk_20261011T0156Z.json), Cleveland 86% of the money.",
   "dk_note_short": "last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved",
   "all_books": {
    "side": "Cleveland",
-   "money": 77,
-   "bets": 82,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
-   "source": "ScoresAndOdds week page"
+   "money": 79,
+   "bets": 83,
+   "at": "Sat Oct 10, 9:56 PM ET",
+   "source": "ScoresAndOdds, scripts/snapshot.py pull sao_20261011T0156Z.json",
+   "label": "last pull before kickoff: Sat Oct 10, 9:56 PM ET"
   }
  },
  "g-wsh": {
@@ -156,11 +168,12 @@
    "rating": "STRONG",
    "type": 2
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "NY Giants",
    "money": 53,
    "bets": 63,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "NY Giants",
@@ -194,18 +207,22 @@
    "status": "final"
   },
   "closing_rating": {
-   "rating": "PASS",
-   "type": 5,
-   "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
-  },
-  "rating_with_last_pre_kickoff_sao": {
    "rating": "STRONG",
-   "type": 2
+   "type": 2,
+   "line_moved_over_1_toward_money": false,
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
-  "matches_locked": false,
+  "matches_locked": true,
   "draftkings_note": "DraftKings closing split not captured: no snapshot in the pre-kickoff slot. Last DraftKings pull before kickoff: Sat Oct 10, 9:56 PM ET (scripts/snapshot.py pull dk_20261011T0156Z.json), NY Giants 93% of the money.",
-  "dk_note_short": "last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved"
+  "dk_note_short": "last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved",
+  "all_books": {
+   "side": "NY Giants",
+   "money": 71,
+   "bets": 71,
+   "at": "Sat Oct 10, 9:56 PM ET",
+   "source": "ScoresAndOdds, scripts/snapshot.py pull sao_20261011T0156Z.json",
+   "label": "last pull before kickoff: Sat Oct 10, 9:56 PM ET"
+  }
  },
  "g-philadelphia-at-jacksonville": {
   "game": "PHI@JAX",
@@ -214,11 +231,12 @@
    "rating": "PASS",
    "type": 4
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "Philadelphia",
    "money": 52,
    "bets": 48,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "Philadelphia",
@@ -243,22 +261,11 @@
    "rating": "PASS",
    "type": 4,
    "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
-  },
-  "rating_with_last_pre_kickoff_sao": {
-   "rating": "PASS",
-   "type": 4
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
   "matches_locked": true,
   "draftkings_note": "DraftKings closing split not captured: no snapshot in the pre-kickoff slot. Last DraftKings pull before kickoff: Sat Oct 10, 9:56 PM ET (scripts/snapshot.py pull dk_20261011T0156Z.json), Jacksonville 51% of the money.",
   "dk_note_short": "last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved",
-  "all_books": {
-   "side": "Philadelphia",
-   "money": 52,
-   "bets": 48,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
-   "source": "ScoresAndOdds week page"
-  },
   "dk_close_line": {
    "sp": {
     "JAX": "−7.5",
@@ -274,11 +281,12 @@
    "rating": "PASS",
    "type": 5
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "Green Bay",
    "money": 54,
    "bets": 48,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "Chicago",
@@ -301,15 +309,11 @@
   },
   "closing_rating": {
    "rating": "PASS",
-   "type": 4,
+   "type": 5,
    "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
-  "rating_with_last_pre_kickoff_sao": {
-   "rating": "PASS",
-   "type": 5
-  },
-  "matches_locked": false,
+  "matches_locked": true,
   "draftkings_note": "DraftKings closing split not captured: no snapshot in the pre-kickoff slot. Last DraftKings pull before kickoff: Sat Oct 10, 9:56 PM ET (scripts/snapshot.py pull dk_20261011T0156Z.json), Chicago 87% of the money.",
   "dk_note_short": "last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved",
   "dk_close_line": {
@@ -327,11 +331,12 @@
    "rating": "PASS",
    "type": 4
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "Las Vegas",
    "money": 71,
    "bets": 70,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "Las Vegas",
@@ -356,22 +361,11 @@
    "rating": "PASS",
    "type": 4,
    "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
-  },
-  "rating_with_last_pre_kickoff_sao": {
-   "rating": "PASS",
-   "type": 4
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
   "matches_locked": true,
   "draftkings_note": "DraftKings closing split not captured: no snapshot in the pre-kickoff slot. Last DraftKings pull before kickoff: Sat Oct 10, 9:56 PM ET (scripts/snapshot.py pull dk_20261011T0156Z.json), New England 75% of the money.",
   "dk_note_short": "last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved",
-  "all_books": {
-   "side": "Las Vegas",
-   "money": 71,
-   "bets": 70,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
-   "source": "ScoresAndOdds week page"
-  },
   "dk_close_line": {
    "sp": {
     "NE": "−3.5",
@@ -387,11 +381,12 @@
    "rating": "LEAN",
    "type": 3
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "Houston",
    "money": 51,
    "bets": 69,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "Houston",
@@ -425,18 +420,22 @@
    "status": "final"
   },
   "closing_rating": {
-   "rating": "PASS",
-   "type": 5,
-   "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
-  },
-  "rating_with_last_pre_kickoff_sao": {
    "rating": "LEAN",
-   "type": 3
+   "type": 3,
+   "line_moved_over_1_toward_money": false,
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
-  "matches_locked": false,
+  "matches_locked": true,
   "draftkings_note": "DraftKings closing split not captured: no snapshot in the pre-kickoff slot. Last DraftKings pull before kickoff: Sat Oct 10, 9:56 PM ET (scripts/snapshot.py pull dk_20261011T0156Z.json), Houston 56% of the money.",
-  "dk_note_short": "last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved"
+  "dk_note_short": "last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved",
+  "all_books": {
+   "side": "Houston",
+   "money": 64,
+   "bets": 67,
+   "at": "Sat Oct 10, 9:56 PM ET",
+   "source": "ScoresAndOdds, scripts/snapshot.py pull sao_20261011T0156Z.json",
+   "label": "last pull before kickoff: Sat Oct 10, 9:56 PM ET"
+  }
  },
  "g-minnesota-at-new-orleans": {
   "game": "MIN@NO",
@@ -445,11 +444,12 @@
    "rating": "PASS",
    "type": 5
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "New Orleans",
    "money": 52,
    "bets": 51,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "Minnesota",
@@ -472,15 +472,11 @@
   },
   "closing_rating": {
    "rating": "PASS",
-   "type": 4,
+   "type": 5,
    "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
-  "rating_with_last_pre_kickoff_sao": {
-   "rating": "PASS",
-   "type": 5
-  },
-  "matches_locked": false,
+  "matches_locked": true,
   "draftkings_note": "DraftKings closing split not captured: no snapshot in the pre-kickoff slot. Last DraftKings pull before kickoff: Sat Oct 10, 9:56 PM ET (scripts/snapshot.py pull dk_20261011T0156Z.json), Minnesota 52% of the money.",
   "dk_note_short": "last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved",
   "dk_close_line": {
@@ -498,11 +494,12 @@
    "rating": "PASS",
    "type": 4
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "Indianapolis",
    "money": 57,
    "bets": 62,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "Indianapolis",
@@ -527,22 +524,11 @@
    "rating": "PASS",
    "type": 4,
    "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
-  },
-  "rating_with_last_pre_kickoff_sao": {
-   "rating": "PASS",
-   "type": 4
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
   "matches_locked": true,
   "draftkings_note": "DraftKings closing split not captured: no snapshot in the pre-kickoff slot. Last DraftKings pull before kickoff: Sat Oct 10, 9:56 PM ET (scripts/snapshot.py pull dk_20261011T0156Z.json), Pittsburgh 67% of the money.",
   "dk_note_short": "last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved",
-  "all_books": {
-   "side": "Indianapolis",
-   "money": 57,
-   "bets": 62,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
-   "source": "ScoresAndOdds week page"
-  },
   "dk_close_line": {
    "sp": {
     "PIT": "−3",
@@ -558,11 +544,12 @@
    "rating": "PASS",
    "type": 5
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "Denver",
    "money": 52,
    "bets": 53,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "LA Chargers",
@@ -591,15 +578,11 @@
   },
   "closing_rating": {
    "rating": "PASS",
-   "type": 4,
+   "type": 5,
    "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
-  "rating_with_last_pre_kickoff_sao": {
-   "rating": "PASS",
-   "type": 5
-  },
-  "matches_locked": false,
+  "matches_locked": true,
   "dk_note_short": "DraftKings split Sun Oct 11, 1:59 PM ET, the last before kickoff",
   "dk_close_line": {
    "sp": {
@@ -616,11 +599,12 @@
    "rating": "LEAN",
    "type": 3
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "Detroit",
    "money": 78,
    "bets": 56,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "Detroit",
@@ -660,17 +644,21 @@
    "status": "final"
   },
   "closing_rating": {
-   "rating": "STRONG",
-   "type": 2,
-   "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
-  },
-  "rating_with_last_pre_kickoff_sao": {
    "rating": "LEAN",
-   "type": 3
+   "type": 3,
+   "line_moved_over_1_toward_money": false,
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
-  "matches_locked": false,
-  "dk_note_short": "DraftKings split Sun Oct 11, 1:59 PM ET, the last before kickoff"
+  "matches_locked": true,
+  "dk_note_short": "DraftKings split Sun Oct 11, 1:59 PM ET, the last before kickoff",
+  "all_books": {
+   "side": "Detroit",
+   "money": 56,
+   "bets": 50,
+   "at": "Sun Oct 11, 1:59 PM ET",
+   "source": "ScoresAndOdds, snapshots branch sao_20261011T1759Z.json",
+   "label": "last pull before kickoff: Sun Oct 11, 1:59 PM ET"
+  }
  },
  "g-san-francisco-at-seattle": {
   "game": "SF@SEA",
@@ -679,11 +667,12 @@
    "rating": "PASS",
    "type": 4
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "San Francisco",
    "money": 79,
    "bets": 78,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "San Francisco",
@@ -714,21 +703,10 @@
    "rating": "PASS",
    "type": 4,
    "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
-  },
-  "rating_with_last_pre_kickoff_sao": {
-   "rating": "PASS",
-   "type": 4
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
   "matches_locked": true,
   "dk_note_short": "DraftKings split Sun Oct 11, 1:59 PM ET, the last before kickoff",
-  "all_books": {
-   "side": "San Francisco",
-   "money": 79,
-   "bets": 78,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
-   "source": "ScoresAndOdds week page"
-  },
   "dk_close_line": {
    "sp": {
     "SEA": "−3",
@@ -744,11 +722,12 @@
    "rating": "PASS",
    "type": 5
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "Baltimore",
    "money": 54,
    "bets": 53,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "Baltimore",
@@ -777,13 +756,9 @@
   },
   "closing_rating": {
    "rating": "PASS",
-   "type": 5,
+   "type": 3,
    "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
-  },
-  "rating_with_last_pre_kickoff_sao": {
-   "rating": "PASS",
-   "type": 3
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
   "matches_locked": false,
   "dk_note_short": "DraftKings split Sun Oct 11, 7:14 PM ET, the last before kickoff",
@@ -802,11 +777,12 @@
    "rating": "PASS",
    "type": 4
   },
-  "all_books_week_page": {
+  "all_books_week_page_not_used": {
    "side": "Buffalo",
    "money": 61,
    "bets": 74,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped"
+   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
+   "why": "read after kickoff; never a closing source"
   },
   "sao_last_before_kickoff": {
    "side": "Buffalo",
@@ -831,22 +807,11 @@
    "rating": "PASS",
    "type": 4,
    "line_moved_over_1_toward_money": false,
-   "on": "week page all-books split + last DraftKings pull before kickoff + DraftKings closing line"
-  },
-  "rating_with_last_pre_kickoff_sao": {
-   "rating": "PASS",
-   "type": 4
+   "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
   "matches_locked": true,
   "draftkings_note": "DraftKings closing split not captured: no snapshot in the pre-kickoff slot. Last DraftKings pull before kickoff: Sun Oct 11, 11:32 PM ET (snapshots branch dk_20261012T0332Z.json), LA Rams 71% of the money.",
   "dk_note_short": "last DraftKings pull Sun Oct 11, 11:32 PM ET; no closer split was saved",
-  "all_books": {
-   "side": "Buffalo",
-   "money": 61,
-   "bets": 74,
-   "at": "ScoresAndOdds week page (consensus-picks?week=2026-reg-5), fetched Tue Oct 13, 11:02 PM ET, after the games; the page keeps one split per game and is not timestamped",
-   "source": "ScoresAndOdds week page"
-  },
   "dk_close_line": {
    "sp": {
     "LAR": "−3.5",
@@ -855,5 +820,5 @@
    "source": "ESPN game summary 401872994 (DraftKings close)"
   }
  },
- "_catchup1": "Week 5 settled Tue Oct 13 from: ESPN (DraftKings closing line and price, final score), the ScoresAndOdds week page (all-books final split), and the last DraftKings split saved before kickoff (snapshots branch or a dated scripts/snapshot.py pull). The 1:00 PM ET slot has no pre-kickoff snapshot on the snapshots branch. Where the closing rating differs from the locked card, the locked rating stays on the record until TG decides."
+ "_catchup1": "Week 5 settled Tue Oct 13 from: ESPN (DraftKings closing line and price, final score), the last all-books pull before kickoff (ScoresAndOdds), and the last DraftKings split saved before kickoff (snapshots branch or a dated scripts/snapshot.py pull). The 1:00 PM ET slot has no pre-kickoff snapshot on the snapshots branch."
 }
