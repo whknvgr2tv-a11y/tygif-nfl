@@ -1,12 +1,19 @@
 Week 6 · odds as of Tue Oct 13, 11:03 PM ET
 
-STRONG Cleveland +4.5 · Moneyline: Cleveland
-STRONG Tennessee +7 · Moneyline: Tennessee
-STRONG NY Jets +7.5 · Moneyline: NY Jets
-STRONG Washington +7.5 · Moneyline: Washington
-LEAN Denver +2.5 · Moneyline: Denver
+STRONG Cleveland +4.5
+STRONG Tennessee +7
+STRONG NY Jets +7.5
+STRONG Washington +7.5
+LEAN Denver +2.5
 LEAN Chicago −3
 LEAN New Orleans −1.5
 LEAN Carolina +1.5
-LEAN Tampa Bay +2.5 · Moneyline: Tampa Bay
-LEAN LA Chargers +8.5 · Moneyline: LA Chargers
+LEAN Tampa Bay +2.5
+LEAN LA Chargers +8.5
+STRONG Cleveland ML
+STRONG Tennessee ML
+STRONG NY Jets ML
+STRONG Washington ML
+LEAN Denver ML
+LEAN Tampa Bay ML
+LEAN LA Chargers ML

@@ -2,18 +2,27 @@ TYGIF'S MODEL · WEEK 6
 Odds as of Tue Oct 13, 11:03 PM ET
 
 STRONG
-  Cleveland +4.5  ·  Sun Oct 18 · 1:00 PM ET  ·  Moneyline: Cleveland
-  Tennessee +7  ·  Sun Oct 18 · 1:00 PM ET  ·  Moneyline: Tennessee
-  NY Jets +7.5  ·  Sun Oct 18 · 1:00 PM ET  ·  Moneyline: NY Jets
-  Washington +7.5  ·  Mon Oct 19 · 8:15 PM ET  ·  Moneyline: Washington
+  Cleveland +4.5  ·  Sun Oct 18 · 1:00 PM ET
+  Tennessee +7  ·  Sun Oct 18 · 1:00 PM ET
+  NY Jets +7.5  ·  Sun Oct 18 · 1:00 PM ET
+  Washington +7.5  ·  Mon Oct 19 · 8:15 PM ET
 
 LEAN
-  Denver +2.5  ·  Thu Oct 15 · 8:15 PM ET  ·  Moneyline: Denver
+  Denver +2.5  ·  Thu Oct 15 · 8:15 PM ET
   Chicago −3  ·  Sun Oct 18 · 1:00 PM ET
   New Orleans −1.5  ·  Sun Oct 18 · 1:00 PM ET
   Carolina +1.5  ·  Sun Oct 18 · 1:00 PM ET
-  Tampa Bay +2.5  ·  Sun Oct 18 · 1:00 PM ET  ·  Moneyline: Tampa Bay
-  LA Chargers +8.5  ·  Sun Oct 18 · 4:25 PM ET  ·  Moneyline: LA Chargers
+  Tampa Bay +2.5  ·  Sun Oct 18 · 1:00 PM ET
+  LA Chargers +8.5  ·  Sun Oct 18 · 4:25 PM ET
+
+MONEYLINE
+  STRONG Cleveland ML  ·  Sun Oct 18 · 1:00 PM ET
+  STRONG Tennessee ML  ·  Sun Oct 18 · 1:00 PM ET
+  STRONG NY Jets ML  ·  Sun Oct 18 · 1:00 PM ET
+  STRONG Washington ML  ·  Mon Oct 19 · 8:15 PM ET
+  LEAN Denver ML  ·  Thu Oct 15 · 8:15 PM ET
+  LEAN Tampa Bay ML  ·  Sun Oct 18 · 1:00 PM ET
+  LEAN LA Chargers ML  ·  Sun Oct 18 · 4:25 PM ET
 
 PASS
   Houston at Jacksonville

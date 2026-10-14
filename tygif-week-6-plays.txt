@@ -5,25 +5,20 @@ STRONG
   Cleveland +4.5  ·  Baltimore at Cleveland, Sun Oct 18 · 1:00 PM ET
     Type 2 · Fade the crowd · STRONG: 5-3-2, +$155
     a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
-    Moneyline: Cleveland
   Tennessee +7  ·  Tennessee at Indianapolis, Sun Oct 18 · 1:00 PM ET
     Type 1 · Fade the big favorite · STRONG: 10-2-1, +$707
     a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
-    Moneyline: Tennessee
   NY Jets +7.5  ·  NY Jets at New England, Sun Oct 18 · 1:00 PM ET
     Type 1 · Fade the big favorite · STRONG: 10-2-1, +$707
     a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
-    Moneyline: NY Jets
   Washington +7.5  ·  Washington at San Francisco, Mon Oct 19 · 8:15 PM ET
     Type 1 · Fade the big favorite · STRONG: 10-2-1, +$707
     a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
-    Moneyline: Washington
 
 LEAN
   Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 8:15 PM ET
     Type 3 · Crowd leaning · LEAN: 8-7-1, +$47
     a: Yes · b: No · c: Yes · d: Yes · e: Yes
-    Moneyline: Denver
   Chicago −3  ·  Chicago at Atlanta, Sun Oct 18 · 1:00 PM ET
     Type 2 · Fade the crowd · LEAN: 1-0-0, +$95
     a: Yes · b: Yes · c: Yes · d: Yes · e: No
@@ -36,11 +31,32 @@ LEAN
   Tampa Bay +2.5  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 1:00 PM ET
     Type 2 · Fade the crowd · LEAN: 1-0-0, +$95
     a: Yes · b: Yes · c: Yes · d: Yes · e: No
-    Moneyline: Tampa Bay
   LA Chargers +8.5  ·  LA Chargers at Kansas City, Sun Oct 18 · 4:25 PM ET
     Type 3 · Crowd leaning · LEAN: 8-7-1, +$47
     a: Yes · b: No · c: Yes · d: Yes · e: Yes
-    Moneyline: LA Chargers
+
+MONEYLINE
+  STRONG Cleveland ML  ·  Baltimore at Cleveland, Sun Oct 18 · 1:00 PM ET
+    Type 2 · Fade the crowd · STRONG ML: 1-1-0, +$40
+    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+  STRONG Tennessee ML  ·  Tennessee at Indianapolis, Sun Oct 18 · 1:00 PM ET
+    Type 1 · Fade the big favorite · STRONG ML: 4-9-0, +$360
+    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+  STRONG NY Jets ML  ·  NY Jets at New England, Sun Oct 18 · 1:00 PM ET
+    Type 1 · Fade the big favorite · STRONG ML: 4-9-0, +$360
+    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+  STRONG Washington ML  ·  Washington at San Francisco, Mon Oct 19 · 8:15 PM ET
+    Type 1 · Fade the big favorite · STRONG ML: 4-9-0, +$360
+    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+  LEAN Denver ML  ·  Seattle at Denver, Thu Oct 15 · 8:15 PM ET
+    Type 3 · Crowd leaning · LEAN ML: 1-8-0, −$640
+    a: Yes · b: No · c: Yes · d: Yes · e: Yes
+  LEAN Tampa Bay ML  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 1:00 PM ET
+    Type 2 · Fade the crowd · LEAN ML: 1-0-0, +$154
+    a: Yes · b: Yes · c: Yes · d: Yes · e: No
+  LEAN LA Chargers ML  ·  LA Chargers at Kansas City, Sun Oct 18 · 4:25 PM ET
+    Type 3 · Crowd leaning · LEAN ML: 1-8-0, −$640
+    a: Yes · b: No · c: Yes · d: Yes · e: Yes
 
 PASS
   Houston at Jacksonville
