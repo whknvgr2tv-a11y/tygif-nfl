@@ -15,6 +15,11 @@ on:
     # Every 10 minutes through the ~90+ minutes before each kickoff slot, in both EDT and EST (UTC).
     # GitHub delays or drops scheduled runs under load (Oct 11: nothing ran 13:10-17:58 UTC), so
     # one or two runs per slot is not enough. Off-the-hour minutes avoid the busiest start times.
+    # Mid-week line-move checks (card posts Tue; Thu/Sun games need alerts before the kickoff window).
+    # Sparse on purpose to save Actions minutes; kickoff windows stay dense.
+    - cron: '17 15,21 * * 2'                   # Tue 10:17 AM / 4:17 PM CT
+    - cron: '17 14,17,20,23 * * 3'              # Wed ~9 AM, noon, 3 PM, 6 PM CT
+    - cron: '17 14,17,20 * * 4'                 # Thu daytime before evening kickoff window
     - cron: '3,13,23,33,43,53 22,23 * * 4'      # Thu 8:15 PM ET
     - cron: '3,13,23,33,43,53 0,1 * * 5'
     - cron: '3,13,23,33,43,53 11-23 * * 0'      # Sun 9:30 AM, 1:00, 4:05/4:25, 8:20 PM ET
