@@ -1,4 +1,4 @@
 {
- "note_for_build": "games whose card uses the full matchup header (both teams), set by TG",
- "full": ["w6-sea-den"]
+ "note_for_build": "cards with the full matchup header (both teams); \"all\" = every card (TG, Oct 15)",
+ "full": "all"
 }
