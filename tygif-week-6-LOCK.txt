@@ -2,20 +2,19 @@ TYGIF'S MODEL · WEEK 6
 Lines as of Wed Oct 14, 11:27 PM CT
 
 STRONG
+  Denver +2.5  ·  Thu Oct 15 · 7:15 PM CT
   Chicago −1.5  ·  Sun Oct 18 · 12:00 PM CT
-  Cleveland +5.5  ·  Sun Oct 18 · 12:00 PM CT
+  Cleveland +4.5  ·  Sun Oct 18 · 12:00 PM CT
   Tennessee +7  ·  Sun Oct 18 · 12:00 PM CT
   NY Jets +7.5  ·  Sun Oct 18 · 12:00 PM CT
   Tampa Bay +2.5  ·  Sun Oct 18 · 12:00 PM CT
   Washington +7.5  ·  Mon Oct 19 · 7:15 PM CT
 
 LEAN
-  Denver +2.5  ·  Thu Oct 15 · 7:15 PM CT
   New Orleans −1.5  ·  Sun Oct 18 · 12:00 PM CT
-  Carolina −1.5  ·  Sun Oct 18 · 12:00 PM CT
-  Green Bay −1.5  ·  Sun Oct 18 · 7:20 PM CT
 
 MONEYLINE
+  STRONG Denver ML  ·  Thu Oct 15 · 7:15 PM CT
   STRONG Chicago ML  ·  Sun Oct 18 · 12:00 PM CT
   STRONG Cleveland ML  ·  Sun Oct 18 · 12:00 PM CT
   STRONG Tennessee ML  ·  Sun Oct 18 · 12:00 PM CT
@@ -25,6 +24,8 @@ MONEYLINE
 
 PASS
   Houston at Jacksonville
+  Carolina at Philadelphia
   Arizona at LA Rams
   LA Chargers at Kansas City
   Buffalo at Las Vegas
+  Dallas at Green Bay

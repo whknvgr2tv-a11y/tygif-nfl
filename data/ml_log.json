@@ -649,7 +649,7 @@
   {
    "week": 6,
    "game": "SEA@DEN",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "DEN",
    "spread_line": 2.5,
    "status": "preview",
@@ -673,10 +673,10 @@
    "game": "BAL@CLE",
    "rating": "STRONG",
    "side": "CLE",
-   "spread_line": 5.5,
+   "spread_line": 4.5,
    "status": "preview",
    "espn_event": "401872997",
-   "price": 210,
+   "price": 180,
    "fd": "Dog"
   },
   {
@@ -698,7 +698,7 @@
    "spread_line": 7.5,
    "status": "preview",
    "espn_event": "401873001",
-   "price": 270,
+   "price": 260,
    "fd": "Dog"
   },
   {
@@ -714,36 +714,14 @@
   },
   {
    "week": 6,
-   "game": "CAR@PHI",
-   "rating": "LEAN",
-   "side": "CAR",
-   "spread_line": -1.5,
-   "status": "preview",
-   "espn_event": "401872998",
-   "price": -115,
-   "fd": "Fav"
-  },
-  {
-   "week": 6,
    "game": "PIT@TB",
    "rating": "STRONG",
    "side": "TB",
    "spread_line": 2.5,
    "status": "preview",
    "espn_event": "401873002",
-   "price": 120,
+   "price": 124,
    "fd": "Dog"
-  },
-  {
-   "week": 6,
-   "game": "DAL@GB",
-   "rating": "LEAN",
-   "side": "GB",
-   "spread_line": -1.5,
-   "status": "preview",
-   "espn_event": "401873007",
-   "price": -122,
-   "fd": "Fav"
   },
   {
    "week": 6,

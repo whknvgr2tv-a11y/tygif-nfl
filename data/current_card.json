@@ -8,7 +8,7 @@
    "team": "DEN",
    "name": "Denver",
    "nick": "Broncos",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "line": "+2.5",
    "kickoff_utc": "2026-10-16T00:15:00Z"
   },
@@ -27,7 +27,7 @@
    "name": "Cleveland",
    "nick": "Browns",
    "rating": "STRONG",
-   "line": "+5.5",
+   "line": "+4.5",
    "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
@@ -58,15 +58,6 @@
    "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
-   "game": "CAR@PHI",
-   "team": "CAR",
-   "name": "Carolina",
-   "nick": "Panthers",
-   "rating": "LEAN",
-   "line": "-1.5",
-   "kickoff_utc": "2026-10-18T17:00:00Z"
-  },
-  {
    "game": "PIT@TB",
    "team": "TB",
    "name": "Tampa Bay",
@@ -74,15 +65,6 @@
    "rating": "STRONG",
    "line": "+2.5",
    "kickoff_utc": "2026-10-18T17:00:00Z"
-  },
-  {
-   "game": "DAL@GB",
-   "team": "GB",
-   "name": "Green Bay",
-   "nick": "Packers",
-   "rating": "LEAN",
-   "line": "-1.5",
-   "kickoff_utc": "2026-10-19T00:20:00Z"
   },
   {
    "game": "WSH@SF",

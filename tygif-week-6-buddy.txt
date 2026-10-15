@@ -1,15 +1,14 @@
 Week 6 · Lines as of Wed Oct 14, 11:27 PM CT
 
+STRONG Denver +2.5
 STRONG Chicago −1.5
-STRONG Cleveland +5.5
+STRONG Cleveland +4.5
 STRONG Tennessee +7
 STRONG NY Jets +7.5
 STRONG Tampa Bay +2.5
 STRONG Washington +7.5
-LEAN Denver +2.5
 LEAN New Orleans −1.5
-LEAN Carolina −1.5
-LEAN Green Bay −1.5
+STRONG Denver ML
 STRONG Chicago ML
 STRONG Cleveland ML
 STRONG Tennessee ML
