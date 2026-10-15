@@ -37,19 +37,19 @@ LEAN
 
 MONEYLINE
   STRONG Cleveland ML  ·  Baltimore at Cleveland, Sun Oct 18 · 1:00 PM ET
-    Type 2 · Fade the crowd · STRONG ML: 1-1-0, +$40
+    Type 2 · Fade the crowd · STRONG ML · Underdog: 1-1-0, +$40
     a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
   STRONG Tennessee ML  ·  Tennessee at Indianapolis, Sun Oct 18 · 1:00 PM ET
-    Type 1 · Fade the big favorite · STRONG ML: 4-9-0, +$360
+    Type 1 · Fade the big favorite · STRONG ML · Underdog: 4-9-0, +$360
     a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
   STRONG NY Jets ML  ·  NY Jets at New England, Sun Oct 18 · 1:00 PM ET
-    Type 1 · Fade the big favorite · STRONG ML: 4-9-0, +$360
+    Type 1 · Fade the big favorite · STRONG ML · Underdog: 4-9-0, +$360
     a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
   STRONG Washington ML  ·  Washington at San Francisco, Mon Oct 19 · 8:15 PM ET
-    Type 1 · Fade the big favorite · STRONG ML: 4-9-0, +$360
+    Type 1 · Fade the big favorite · STRONG ML · Underdog: 4-9-0, +$360
     a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
   LEAN Tampa Bay ML  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 1:00 PM ET
-    Type 2 · Fade the crowd · LEAN ML: 1-0-0, +$154
+    Type 2 · Fade the crowd · LEAN ML · Underdog: 1-0-0, +$154
     a: Yes · b: Yes · c: Yes · d: Yes · e: No
 
 PASS

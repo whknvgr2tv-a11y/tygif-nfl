@@ -39,6 +39,8 @@ separate, never combined. Card record line: 'Type N · <type name> · <RATING>: 
 After the Tuesday grade, rebuild with clean_build.py; its self-check and deep check recompute these from the data.
 No explanatory prose on cards or pages beyond plays, records and the checklist; How keeps the brief rules.
 
-## Moneyline cards only for profitable groups (TG, Oct 14)
-- Post a moneyline card only when its rating + type group (e.g. LEAN Type 3) has an all-weeks ML record with profit > $0 through the last graded week. No ML history: no card.
-- Re-check every weekly run after grading. Graded history and the Records ML records are never changed by this rule.
+## Moneyline groups (TG, Oct 14)
+- Every STRONG or LEAN spread play also has our side graded on the DraftKings closing moneyline, favorite or underdog, flat $100, profit rounded per play (ESPN game summary `pickcenter`). Write every row to `data/ml_log.json` with `fd` (Fav/Dog).
+- Groups: rating + type + favorite/underdog (e.g. LEAN Type 3 Underdog). Post a moneyline play only when its group record is profitable (> $0) through the last graded week. $0 or no history: no play.
+- Re-check after every Tuesday grade. Graded history is never changed by this rule; STRONG and LEAN ML records stay separate from each other and from the spread.
+- Home and This Week: one card per game in kickoff order, with the spread call (STRONG/LEAN/PASS + type record + games list), the ML call (play or no play + group record + games list), the checks row and kickoff/final.
