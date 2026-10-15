@@ -37,6 +37,16 @@ MONEYLINE
     Type 2 · Fade the crowd · STRONG ML · Favorite: 5-2-1, +$124
     a: Yes · b: Yes · c: Yes · d: Yes
 
+MONEY SIDE AND PASS-GAME SIDES
+  PASS money side · Chicago −1.5 · loss −$100  ·  Chicago at Green Bay, Sun Oct 11 · 1:00 PM ET
+    group: 7-5-0, +$138
+  LEAN money side · Houston ML · win +$34  ·  Houston at Tennessee, Sun Oct 11 · 1:00 PM ET
+    group: 8-2-0, +$87
+  PASS money side · Minnesota −2.5 · win +$95  ·  Minnesota at New Orleans, Sun Oct 11 · 1:00 PM ET
+    group: 7-5-0, +$138
+  LEAN money side · Detroit ML · win +$41  ·  Detroit at Arizona, Sun Oct 11 · 4:25 PM ET
+    group: 8-2-0, +$87
+
 PASS
   Philadelphia at Jacksonville
   Chicago at Green Bay

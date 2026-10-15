@@ -23,6 +23,16 @@ MONEYLINE
   STRONG Tampa Bay ML  ·  Sun Oct 18 · 1:00 PM ET
   STRONG Washington ML  ·  Mon Oct 19 · 8:15 PM ET
 
+MONEY SIDE AND PASS-GAME SIDES
+  LEAN money side · Seattle ML  ·  Thu Oct 15 · 8:15 PM ET
+  PASS money side · Jacksonville −2.5  ·  Sun Oct 18 · 9:30 AM ET
+  LEAN money side · NY Giants ML  ·  Sun Oct 18 · 1:00 PM ET
+  LEAN money side · Philadelphia ML  ·  Sun Oct 18 · 1:00 PM ET
+  PASS money side · Arizona +12.5  ·  Sun Oct 18 · 4:05 PM ET
+  PASS money side · Arizona ML  ·  Sun Oct 18 · 4:05 PM ET
+  PASS money side · LA Chargers +8.5  ·  Sun Oct 18 · 4:25 PM ET
+  PASS money side · Las Vegas +5.5  ·  Sun Oct 18 · 4:25 PM ET
+
 PASS
   Houston at Jacksonville
   Arizona at LA Rams

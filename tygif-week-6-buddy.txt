@@ -16,3 +16,11 @@ STRONG Tennessee ML
 STRONG NY Jets ML
 STRONG Tampa Bay ML
 STRONG Washington ML
+LEAN money side · Seattle ML
+PASS money side · Jacksonville −2.5
+LEAN money side · NY Giants ML
+LEAN money side · Philadelphia ML
+PASS money side · Arizona +12.5
+PASS money side · Arizona ML
+PASS money side · LA Chargers +8.5
+PASS money side · Las Vegas +5.5

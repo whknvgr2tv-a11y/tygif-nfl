@@ -55,6 +55,24 @@ MONEYLINE
     Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740
     a: Yes · b: Yes · c: Yes · d: Yes
 
+MONEY SIDE AND PASS-GAME SIDES
+  LEAN money side · Seattle ML  ·  Seattle at Denver, Thu Oct 15 · 8:15 PM ET
+    group: 8-2-0, +$87
+  PASS money side · Jacksonville −2.5  ·  Houston at Jacksonville, Sun Oct 18 · 9:30 AM ET
+    group: 7-5-0, +$138
+  LEAN money side · NY Giants ML  ·  New Orleans at NY Giants, Sun Oct 18 · 1:00 PM ET
+    group: 8-2-0, +$87
+  LEAN money side · Philadelphia ML  ·  Carolina at Philadelphia, Sun Oct 18 · 1:00 PM ET
+    group: 8-2-0, +$87
+  PASS money side · Arizona +12.5  ·  Arizona at LA Rams, Sun Oct 18 · 4:05 PM ET
+    group: 9-4-0, +$411
+  PASS money side · Arizona ML  ·  Arizona at LA Rams, Sun Oct 18 · 4:05 PM ET
+    group: 4-4-0, +$239
+  PASS money side · LA Chargers +8.5  ·  LA Chargers at Kansas City, Sun Oct 18 · 4:25 PM ET
+    group: 3-2-0, +$76
+  PASS money side · Las Vegas +5.5  ·  Buffalo at Las Vegas, Sun Oct 18 · 4:25 PM ET
+    group: 3-2-0, +$76
+
 PASS
   Houston at Jacksonville
   Arizona at LA Rams
