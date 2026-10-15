@@ -1,57 +1,57 @@
 TYGIF'S MODEL · WEEK 6
-Odds as of Thu Oct 15, 12:27 AM ET
+Odds as of Wed Oct 14, 11:27 PM CT
 
 STRONG
-  Chicago −1.5  ·  Chicago at Atlanta, Sun Oct 18 · 1:00 PM ET
+  Chicago −1.5  ·  Chicago at Atlanta, Sun Oct 18 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG: 6-3-2, +$250
     a: Yes · b: Yes · c: Yes · d: Yes
-  Cleveland +5.5  ·  Baltimore at Cleveland, Sun Oct 18 · 1:00 PM ET
+  Cleveland +5.5  ·  Baltimore at Cleveland, Sun Oct 18 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG: 6-3-2, +$250
     a: Yes · b: Yes · c: Yes · d: Yes
-  Tennessee +7  ·  Tennessee at Indianapolis, Sun Oct 18 · 1:00 PM ET
+  Tennessee +7  ·  Tennessee at Indianapolis, Sun Oct 18 · 12:00 PM CT
     Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
     a: Yes · b: Yes · c: Yes · d: Yes
-  NY Jets +7.5  ·  NY Jets at New England, Sun Oct 18 · 1:00 PM ET
+  NY Jets +7.5  ·  NY Jets at New England, Sun Oct 18 · 12:00 PM CT
     Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
     a: Yes · b: Yes · c: Yes · d: Yes
-  Tampa Bay +2.5  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 1:00 PM ET
+  Tampa Bay +2.5  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG: 6-3-2, +$250
     a: Yes · b: Yes · c: Yes · d: Yes
-  Washington +7.5  ·  Washington at San Francisco, Mon Oct 19 · 8:15 PM ET
+  Washington +7.5  ·  Washington at San Francisco, Mon Oct 19 · 7:15 PM CT
     Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
     a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN
-  Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 8:15 PM ET
+  Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 7:15 PM CT
     Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
-  New Orleans −1.5  ·  New Orleans at NY Giants, Sun Oct 18 · 1:00 PM ET
+  New Orleans −1.5  ·  New Orleans at NY Giants, Sun Oct 18 · 12:00 PM CT
     Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
-  Carolina −1.5  ·  Carolina at Philadelphia, Sun Oct 18 · 1:00 PM ET
+  Carolina −1.5  ·  Carolina at Philadelphia, Sun Oct 18 · 12:00 PM CT
     Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
-  Green Bay −1.5  ·  Dallas at Green Bay, Sun Oct 18 · 8:20 PM ET
+  Green Bay −1.5  ·  Dallas at Green Bay, Sun Oct 18 · 7:20 PM CT
     Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
 
 MONEYLINE
-  STRONG Chicago ML  ·  Chicago at Atlanta, Sun Oct 18 · 1:00 PM ET
+  STRONG Chicago ML  ·  Chicago at Atlanta, Sun Oct 18 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG ML · Favorite: 5-2-1, +$124
     a: Yes · b: Yes · c: Yes · d: Yes
-  STRONG Cleveland ML  ·  Baltimore at Cleveland, Sun Oct 18 · 1:00 PM ET
+  STRONG Cleveland ML  ·  Baltimore at Cleveland, Sun Oct 18 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG ML · Underdog: 2-1-0, +$194
     a: Yes · b: Yes · c: Yes · d: Yes
-  STRONG Tennessee ML  ·  Tennessee at Indianapolis, Sun Oct 18 · 1:00 PM ET
+  STRONG Tennessee ML  ·  Tennessee at Indianapolis, Sun Oct 18 · 12:00 PM CT
     Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740
     a: Yes · b: Yes · c: Yes · d: Yes
-  STRONG NY Jets ML  ·  NY Jets at New England, Sun Oct 18 · 1:00 PM ET
+  STRONG NY Jets ML  ·  NY Jets at New England, Sun Oct 18 · 12:00 PM CT
     Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740
     a: Yes · b: Yes · c: Yes · d: Yes
-  STRONG Tampa Bay ML  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 1:00 PM ET
+  STRONG Tampa Bay ML  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG ML · Underdog: 2-1-0, +$194
     a: Yes · b: Yes · c: Yes · d: Yes
-  STRONG Washington ML  ·  Washington at San Francisco, Mon Oct 19 · 8:15 PM ET
+  STRONG Washington ML  ·  Washington at San Francisco, Mon Oct 19 · 7:15 PM CT
     Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740
     a: Yes · b: Yes · c: Yes · d: Yes
 
