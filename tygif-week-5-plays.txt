@@ -3,10 +3,10 @@ Final
 
 STRONG
   Tampa Bay +8.5  ·  Tampa Bay at Dallas, Thu Oct 8 · 8:15 PM ET · Final TB 24–16 · win +$98
-    Type 1 · Fade the big favorite · STRONG: 10-2-1, +$707
+    Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
     a: Yes · b: Yes · c: Yes · d: Yes
   Miami +7.5  ·  Cincinnati at Miami, Sun Oct 11 · 1:00 PM ET · Final MIA 24–31 · win +$89
-    Type 1 · Fade the big favorite · STRONG: 10-2-1, +$707
+    Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
     a: Yes · b: Yes · c: Yes · d: Yes
   NY Jets −2.5  ·  Cleveland at NY Jets, Sun Oct 11 · 1:00 PM ET · Final NYJ 17–12 · win +$87
     Type 2 · Fade the crowd · STRONG: 6-3-2, +$250
@@ -25,10 +25,10 @@ LEAN
 
 MONEYLINE
   STRONG Tampa Bay ML  ·  Tampa Bay at Dallas, Thu Oct 8 · 8:15 PM ET · Final 24–16 · win +$380
-    Type 1 · Fade the big favorite · STRONG ML · Underdog: 4-9-0, +$360
+    Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Miami ML  ·  Cincinnati at Miami, Sun Oct 11 · 1:00 PM ET · Final 24–31 · loss −$100
-    Type 1 · Fade the big favorite · STRONG ML · Underdog: 4-9-0, +$360
+    Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG NY Jets ML  ·  Cleveland at NY Jets, Sun Oct 11 · 1:00 PM ET · Final 17–12 · win +$74
     Type 2 · Fade the crowd · STRONG ML · Favorite: 5-2-1, +$124
