@@ -189,8 +189,12 @@ table.data td .pb{margin-top:6px;max-width:120px}
 .tier-s .rc-k{color:var(--strong)}.tier-l .rc-k{color:var(--lean)}
 @media (max-width:440px){.sd{column-gap:10px;grid-template-columns:minmax(0,.62fr) minmax(0,1fr) minmax(0,1fr)}.sd-t{grid-template-columns:1fr}.sd-t .slg{grid-row:auto;width:20px;height:20px;margin-bottom:2px}.c1{font-size:12.5px}.sd-r{font-size:11.5px}.c3{font-size:10.5px}.sd-t small{font-size:10.5px}.cd-3 b{font-size:12.5px}}
 .nw{white-space:nowrap}
-@media (max-width:440px){.tyn{display:none}}
 @media (min-width:600px){.rgrid.r3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.tyl,.cx{}
+@media (max-width:440px){.tyl,.cx,.rtw{display:none}.grp{overflow:hidden;text-overflow:ellipsis}.sd{grid-template-columns:minmax(0,.55fr) minmax(0,1fr) minmax(0,1fr)!important}.grp{font-size:11px;white-space:nowrap;letter-spacing:-.01em}.sd{column-gap:8px}}
+table.data{table-layout:auto}table.data td,table.data th{white-space:nowrap}table.games{min-width:0}
+.tblwrap{overflow-x:auto}
+main:has(table.games){max-width:1240px}
 </style></head><body><header class="apphead"><a class="logo" href="index.html">tygif's model</a></header><nav aria-label="Sections" class="tabs"><div class="tabs-in"><a class="tab" data-tab="index" href="index.html">Home</a><a class="tab" data-tab="week" href="tygif-tracker.html#week">This Week</a><a class="tab" data-tab="results" href="tygif-tracker.html#results">Records</a><a class="tab cur" data-tab="how" href="tygif-how.html">How</a></div></nav><main><div class="hw">
 <h1>How it works</h1>
 <h2>The rule</h2>
@@ -198,7 +202,7 @@ table.data td .pb{margin-top:6px;max-width:120px}
 <li>Fade side: the team against most of the money. Our STRONG and LEAN spread calls are always the fade side.</li>
 <li>Money side: the team holding most of the money.</li>
 <li>Every side is grouped by rating, type and side (and favorite or underdog for the moneyline). A money-side play, a PASS-game play, and every moneyline are posted only when that group is above $0 from earlier weeks. Plays on opposite teams in one game can both post; two spread plays in one game never do.</li>
-<li>Spreads, plus the moneyline on plus-money underdogs.</li>
+<li>Spreads and moneylines, favorite or underdog.</li>
 <li>Money and bets: all books (ScoresAndOdds). DraftKings must have the money on the same team.</li>
 </ul>
 <h2>Game types</h2>
@@ -229,7 +233,7 @@ table.data td .pb{margin-top:6px;max-width:120px}
 <li>Flat $100 per play, graded at the DraftKings closing line and price. A loss is −$100; a push is $0.</li>
 <li>Every week to date. STRONG, LEAN, PASS, fade side, money side and moneyline are kept separate, never combined.</li>
 <li>Weeks 1–4: all-books splits only; DraftKings split not recorded.</li>
-<li>Rules v3 · Oct 15, 2026: both sides of every game tracked; PASS-game sides graded and shown. Rules v2 · Oct 15, 2026: QB factor removed; every week rated again under v2.</li>
+<li>Rules v3 · Oct 15, 2026: both sides of every game tracked, grouped by rating, type and side (fade/money; moneyline also favorite/underdog). Our STRONG/LEAN spread calls always post; any other side or moneyline posts only when its group is above $0 from earlier weeks. Opposite teams in one game can both post.</li>
 </ul>
 <h2>Sources</h2>
 <p class="sm">ScoresAndOdds · DraftKings · TeamRankings · ESPN · nflverse</p>
