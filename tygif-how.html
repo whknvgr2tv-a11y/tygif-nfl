@@ -50,15 +50,16 @@ details.gm>summary{display:block}
 .cd-1,.cd-3,.cd-4{grid-column:1/-1}
 .cd-1{display:flex;align-items:center;gap:10px;min-width:0}
 .cd-b{flex:0 0 auto}
-.cd-lg{display:flex;flex:0 0 auto;margin-left:6px}.cd-lg .lg{width:30px;height:30px;object-fit:contain}.cd-lg .lg+.lg{margin-left:-4px}
+.cd-lg{display:flex;flex:0 0 auto;margin-left:6px}.cd-lg .lg{width:30px;height:30px;object-fit:contain}.cd-lg{gap:4px}
 .cd-c{font-size:19px;font-weight:700;letter-spacing:-.02em;flex:1;min-width:0;line-height:1.25}
 .cd-ar{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--bg);color:var(--mut);display:grid;place-items:center;font-size:16px;line-height:1;transition:transform .3s}
 details[open]>summary .cd-ar{transform:rotate(45deg)}
-.cd-2,.cd-m{margin-top:14px;font-size:13px;line-height:1.45;color:var(--mut)}
-.cd-2 b{color:var(--txt);font-weight:600}.cd-2 .tn{color:var(--mut)}
-.cd-m{display:block;padding-left:20px;border-left:1px solid var(--line)}
-.cd-m>b{display:inline-block;font-size:11px;letter-spacing:.08em;font-weight:700;color:var(--faint);margin-right:8px}
-.cd-m .mc{color:var(--txt);font-weight:600}.cd-m small{display:block;font-size:12.5px}
+.cd{grid-template-rows:auto repeat(4,auto) auto auto}
+.cd-2,.cd-m{grid-row:2/span 4;display:grid;grid-template-rows:subgrid;row-gap:2px;margin-top:14px;font-size:13px;line-height:1.4;color:var(--mut);min-width:0}
+.cd-2>*,.cd-m>*{display:block;margin:0;min-width:0}
+.ck{font-size:10.5px;letter-spacing:.08em;font-weight:700;color:var(--faint);text-transform:uppercase;margin-bottom:2px!important}
+.c1{color:var(--txt);font-weight:600;font-size:14px}.c2{color:var(--mut)}.c3{font-size:12.5px;color:var(--mut)}
+.cd-m{padding-left:20px;border-left:1px solid var(--line)}
 .cd-3{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
 .cd-3 span{display:flex;flex-direction:column;font-size:11.5px;color:var(--faint);line-height:1.3;min-width:0}
 .cd-3 b{font-size:13.5px;font-weight:600;color:var(--txt);white-space:nowrap;margin-top:2px}
@@ -93,7 +94,7 @@ details[open]>summary .cd-ar{transform:rotate(45deg)}
 .cd-rl{font-size:13px;background:var(--card)}
 .cd-rl>summary{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:13px 22px;color:var(--mut)}
 .cd-rl>summary b{color:var(--txt);font-weight:600;white-space:nowrap;margin-left:auto}
-.cd-rl>summary::after{content:"+";color:var(--faint);transition:transform .3s}
+.cd-rl>summary::after{content:"+";color:var(--mut);transition:transform .3s}
 .cd-rl[open]>summary::after{transform:rotate(45deg)}
 .ng{white-space:nowrap}
 .rl{list-style:none;margin:0;padding:0 22px 12px}
@@ -111,7 +112,7 @@ details[open]>summary .cd-ar{transform:rotate(45deg)}
 .rc{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:22px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .rc-r{font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.1;color:var(--txt);font-style:normal}
 .rc .rc-m{font-size:13px;color:var(--mut)}
-.gt-row.rc em{font-style:normal;font-size:15px;font-weight:600}
+.gt-row.rc em{font-style:normal}
 .wl{display:flex;height:6px;border-radius:3px;overflow:hidden;margin-top:12px;background:var(--line);gap:2px}
 .wl i{display:block}.wl .w{background:var(--txt)}.wl .p{background:var(--faint)}.wl .l{background:var(--neg)}
 .groups,.types{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
@@ -124,10 +125,12 @@ details[open]>summary .cd-ar{transform:rotate(45deg)}
 .pb{display:flex;height:8px;min-width:60px}
 .pb>span{flex:1;display:flex}.pb .pn{justify-content:flex-end;border-right:1px solid var(--faint)}
 .pb i{display:block;height:100%}.pb .pn i{background:var(--neg);border-radius:4px 0 0 4px}.pb .pp i{background:var(--txt);border-radius:0 4px 4px 0}
-.tblwrap{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);overflow-x:auto}
-table.data{width:100%;border-collapse:collapse;font-size:13.5px}
+.tblwrap{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);overflow-x:auto;max-width:100%}
+table.data{width:100%;border-collapse:collapse;font-size:13.5px;table-layout:fixed}
+table.games{min-width:760px;font-size:12.5px}table.games td,table.games th{padding:10px 8px}
+table.wk3{min-width:560px}
 table.data th{text-align:left;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);padding:14px 16px 10px;white-space:nowrap}
-table.data td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.data td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top;white-space:normal;overflow-wrap:anywhere}
 table.data td small{display:block;font-size:12.5px;margin-top:1px}
 table.data td .pb{margin-top:6px;max-width:120px}
 .tb{padding:20px 22px 8px;border-top:1px solid var(--line)}.types>.tb:first-child{border-top:0}
@@ -180,6 +183,7 @@ table.data td .pb{margin-top:6px;max-width:120px}
 .rgrid.tiers{margin-bottom:8px}
 .rc-k{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--mut)}
 .tier-s .rc-k{color:var(--strong)}.tier-l .rc-k{color:var(--lean)}
+@media (max-width:440px){.cd{column-gap:12px}.cd-m{padding-left:12px}.c1{font-size:13px}.cd-2,.cd-m{font-size:12px}.c3{font-size:11.5px}.cd-3 b{font-size:12.5px}}
 </style></head><body><header class="apphead"><a class="logo" href="index.html">tygif's model</a></header><nav aria-label="Sections" class="tabs"><div class="tabs-in"><a class="tab" data-tab="index" href="index.html">Home</a><a class="tab" data-tab="week" href="tygif-tracker.html#week">This Week</a><a class="tab" data-tab="results" href="tygif-tracker.html#results">Records</a><a class="tab cur" data-tab="how" href="tygif-how.html">How</a></div></nav><main><div class="hw">
 <h1>How it works</h1>
 <h2>The rule</h2>
