@@ -17,7 +17,7 @@
    "team": "CHI",
    "name": "Chicago",
    "nick": "Bears",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "line": "-1.5",
    "kickoff_utc": "2026-10-18T17:00Z"
   },
@@ -71,7 +71,7 @@
    "team": "TB",
    "name": "Tampa Bay",
    "nick": "Buccaneers",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "line": "+2.5",
    "kickoff_utc": "2026-10-18T17:00Z"
   },

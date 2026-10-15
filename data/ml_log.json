@@ -18,6 +18,20 @@
   },
   {
    "week": 1,
+   "game": "ATL@PIT",
+   "rating": "LEAN",
+   "side": "ATL",
+   "spread_line": 6.5,
+   "status": "look back",
+   "espn_event": "401872658",
+   "price": 240,
+   "fd": "Dog",
+   "score": "13-20",
+   "result": "L",
+   "profit": -100.0
+  },
+  {
+   "week": 1,
    "game": "CLE@JAX",
    "rating": "STRONG",
    "side": "CLE",
@@ -155,6 +169,20 @@
    "score": "13-20",
    "result": "W",
    "profit": 70.0
+  },
+  {
+   "week": 2,
+   "game": "MIN@CHI",
+   "rating": "LEAN",
+   "side": "MIN",
+   "spread_line": 4.5,
+   "status": "look back",
+   "espn_event": "401872937",
+   "price": 180,
+   "fd": "Dog",
+   "score": "9-3",
+   "result": "W",
+   "profit": 180.0
   },
   {
    "week": 2,
@@ -341,7 +369,7 @@
   {
    "week": 3,
    "game": "PHI@CHI",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "CHI",
    "spread_line": 3.0,
    "status": "look back",
@@ -351,6 +379,34 @@
    "score": "7-27",
    "result": "W",
    "profit": 154.0
+  },
+  {
+   "week": 3,
+   "game": "SEA@WSH",
+   "rating": "LEAN",
+   "side": "WSH",
+   "spread_line": 8.5,
+   "status": "look back",
+   "espn_event": "401872955",
+   "price": 320,
+   "fd": "Dog",
+   "score": "31-33",
+   "result": "W",
+   "profit": 320.0
+  },
+  {
+   "week": 3,
+   "game": "TEN@NYG",
+   "rating": "LEAN",
+   "side": "NYG",
+   "spread_line": -2.5,
+   "status": "look back",
+   "espn_event": "401872956",
+   "price": -135,
+   "fd": "Fav",
+   "score": "7-12",
+   "result": "W",
+   "profit": 74.0
   },
   {
    "week": 4,
@@ -590,7 +646,7 @@
   {
    "week": 6,
    "game": "CHI@ATL",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "CHI",
    "spread_line": -1.5,
    "status": "preview",
@@ -656,7 +712,7 @@
   {
    "week": 6,
    "game": "PIT@TB",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "TB",
    "spread_line": 2.5,
    "status": "preview",

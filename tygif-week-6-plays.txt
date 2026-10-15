@@ -2,55 +2,58 @@ TYGIF'S MODEL · WEEK 6
 Odds as of Thu Oct 15, 12:27 AM ET
 
 STRONG
+  Chicago −1.5  ·  Chicago at Atlanta, Sun Oct 18 · 1:00 PM ET
+    Type 2 · Fade the crowd · STRONG: 6-3-2, +$250
+    a: Yes · b: Yes · c: Yes · d: Yes
   Cleveland +5.5  ·  Baltimore at Cleveland, Sun Oct 18 · 1:00 PM ET
-    Type 2 · Fade the crowd · STRONG: 5-3-2, +$155
-    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+    Type 2 · Fade the crowd · STRONG: 6-3-2, +$250
+    a: Yes · b: Yes · c: Yes · d: Yes
   Tennessee +7  ·  Tennessee at Indianapolis, Sun Oct 18 · 1:00 PM ET
     Type 1 · Fade the big favorite · STRONG: 10-2-1, +$707
-    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+    a: Yes · b: Yes · c: Yes · d: Yes
   NY Jets +7.5  ·  NY Jets at New England, Sun Oct 18 · 1:00 PM ET
     Type 1 · Fade the big favorite · STRONG: 10-2-1, +$707
-    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+    a: Yes · b: Yes · c: Yes · d: Yes
+  Tampa Bay +2.5  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 1:00 PM ET
+    Type 2 · Fade the crowd · STRONG: 6-3-2, +$250
+    a: Yes · b: Yes · c: Yes · d: Yes
   Washington +7.5  ·  Washington at San Francisco, Mon Oct 19 · 8:15 PM ET
     Type 1 · Fade the big favorite · STRONG: 10-2-1, +$707
-    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+    a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN
   Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 8:15 PM ET
-    Type 3 · Crowd leaning · LEAN: 8-7-1, +$47
-    a: Yes · b: No · c: Yes · d: Yes · e: Yes
-  Chicago −1.5  ·  Chicago at Atlanta, Sun Oct 18 · 1:00 PM ET
-    Type 2 · Fade the crowd · LEAN: 1-0-0, +$95
-    a: Yes · b: Yes · c: Yes · d: Yes · e: No
+    Type 3 · Crowd leaning · LEAN: 9-7-1, +$140
+    a: Yes · b: No · c: Yes · d: Yes
   New Orleans −1.5  ·  New Orleans at NY Giants, Sun Oct 18 · 1:00 PM ET
-    Type 3 · Crowd leaning · LEAN: 8-7-1, +$47
-    a: Yes · b: No · c: Yes · d: Yes · e: Yes
+    Type 3 · Crowd leaning · LEAN: 9-7-1, +$140
+    a: Yes · b: No · c: Yes · d: Yes
   Carolina −1.5  ·  Carolina at Philadelphia, Sun Oct 18 · 1:00 PM ET
-    Type 3 · Crowd leaning · LEAN: 8-7-1, +$47
-    a: Yes · b: No · c: Yes · d: Yes · e: Yes
-  Tampa Bay +2.5  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 1:00 PM ET
-    Type 2 · Fade the crowd · LEAN: 1-0-0, +$95
-    a: Yes · b: Yes · c: Yes · d: Yes · e: No
+    Type 3 · Crowd leaning · LEAN: 9-7-1, +$140
+    a: Yes · b: No · c: Yes · d: Yes
   Green Bay −1.5  ·  Dallas at Green Bay, Sun Oct 18 · 8:20 PM ET
-    Type 3 · Crowd leaning · LEAN: 8-7-1, +$47
-    a: Yes · b: No · c: Yes · d: Yes · e: Yes
+    Type 3 · Crowd leaning · LEAN: 9-7-1, +$140
+    a: Yes · b: No · c: Yes · d: Yes
 
 MONEYLINE
+  STRONG Chicago ML  ·  Chicago at Atlanta, Sun Oct 18 · 1:00 PM ET
+    Type 2 · Fade the crowd · STRONG ML · Favorite: 5-2-1, +$124
+    a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Cleveland ML  ·  Baltimore at Cleveland, Sun Oct 18 · 1:00 PM ET
-    Type 2 · Fade the crowd · STRONG ML · Underdog: 1-1-0, +$40
-    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+    Type 2 · Fade the crowd · STRONG ML · Underdog: 2-1-0, +$194
+    a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Tennessee ML  ·  Tennessee at Indianapolis, Sun Oct 18 · 1:00 PM ET
     Type 1 · Fade the big favorite · STRONG ML · Underdog: 4-9-0, +$360
-    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+    a: Yes · b: Yes · c: Yes · d: Yes
   STRONG NY Jets ML  ·  NY Jets at New England, Sun Oct 18 · 1:00 PM ET
     Type 1 · Fade the big favorite · STRONG ML · Underdog: 4-9-0, +$360
-    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
+    a: Yes · b: Yes · c: Yes · d: Yes
+  STRONG Tampa Bay ML  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 1:00 PM ET
+    Type 2 · Fade the crowd · STRONG ML · Underdog: 2-1-0, +$194
+    a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Washington ML  ·  Washington at San Francisco, Mon Oct 19 · 8:15 PM ET
     Type 1 · Fade the big favorite · STRONG ML · Underdog: 4-9-0, +$360
-    a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
-  LEAN Tampa Bay ML  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 1:00 PM ET
-    Type 2 · Fade the crowd · LEAN ML · Underdog: 1-0-0, +$154
-    a: Yes · b: Yes · c: Yes · d: Yes · e: No
+    a: Yes · b: Yes · c: Yes · d: Yes
 
 PASS
   Houston at Jacksonville

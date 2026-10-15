@@ -21,7 +21,7 @@
    "why": "read after kickoff; never a closing source"
   },
   "closing_rating": {
-   "rating": "LEAN",
+   "rating": "STRONG",
    "type": 1,
    "line_moved_over_1_toward_money": false,
    "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
@@ -755,7 +755,7 @@
    "status": "final"
   },
   "closing_rating": {
-   "rating": "PASS",
+   "rating": "LEAN",
    "type": 3,
    "line_moved_over_1_toward_money": false,
    "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
