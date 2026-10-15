@@ -10,7 +10,7 @@
    "nick": "Broncos",
    "rating": "LEAN",
    "line": "+2.5",
-   "kickoff_utc": "2026-10-16T00:15Z"
+   "kickoff_utc": "2026-10-16T00:15:00Z"
   },
   {
    "game": "CHI@ATL",
@@ -19,7 +19,7 @@
    "nick": "Bears",
    "rating": "STRONG",
    "line": "-1.5",
-   "kickoff_utc": "2026-10-18T17:00Z"
+   "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
    "game": "BAL@CLE",
@@ -28,7 +28,7 @@
    "nick": "Browns",
    "rating": "STRONG",
    "line": "+5.5",
-   "kickoff_utc": "2026-10-18T17:00Z"
+   "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
    "game": "TEN@IND",
@@ -37,7 +37,7 @@
    "nick": "Titans",
    "rating": "STRONG",
    "line": "+7",
-   "kickoff_utc": "2026-10-18T17:00Z"
+   "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
    "game": "NYJ@NE",
@@ -46,7 +46,7 @@
    "nick": "Jets",
    "rating": "STRONG",
    "line": "+7.5",
-   "kickoff_utc": "2026-10-18T17:00Z"
+   "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
    "game": "NO@NYG",
@@ -55,7 +55,7 @@
    "nick": "Saints",
    "rating": "LEAN",
    "line": "-1.5",
-   "kickoff_utc": "2026-10-18T17:00Z"
+   "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
    "game": "CAR@PHI",
@@ -64,7 +64,7 @@
    "nick": "Panthers",
    "rating": "LEAN",
    "line": "-1.5",
-   "kickoff_utc": "2026-10-18T17:00Z"
+   "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
    "game": "PIT@TB",
@@ -73,7 +73,7 @@
    "nick": "Buccaneers",
    "rating": "STRONG",
    "line": "+2.5",
-   "kickoff_utc": "2026-10-18T17:00Z"
+   "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
    "game": "DAL@GB",
@@ -82,7 +82,7 @@
    "nick": "Packers",
    "rating": "LEAN",
    "line": "-1.5",
-   "kickoff_utc": "2026-10-19T00:20Z"
+   "kickoff_utc": "2026-10-19T00:20:00Z"
   },
   {
    "game": "WSH@SF",
@@ -91,7 +91,7 @@
    "nick": "Commanders",
    "rating": "STRONG",
    "line": "+7.5",
-   "kickoff_utc": "2026-10-20T00:15Z"
+   "kickoff_utc": "2026-10-20T00:15:00Z"
   }
  ]
 }
