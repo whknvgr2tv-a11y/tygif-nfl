@@ -18,12 +18,12 @@ STRONG W4 spread : 2-2-0 −$24 n4
 STRONG W5 spread : 3-1-0 +$174 n4
 LEAN spread : 11-9-1 +$112 n21
 LEAN fadeML : 8-13-0 −$372 n21
-LEAN postedML : 3-3-0 −$157 n6
+LEAN postedML : 3-2-0 −$57 n5
 LEAN money sp : 9-11-1 −$267 n21
 LEAN money ML : 13-8-0 +$51 n21
-LEAN bucket spread only : 8-6-1 +$127 n15
-LEAN bucket spread+ML : 3-3-0 −$15 n6
-LEAN bucket spread+ML ML : 3-3-0 −$157 n6
+LEAN bucket spread only : 8-7-1 +$27 n16
+LEAN bucket spread+ML : 3-2-0 +$85 n5
+LEAN bucket spread+ML ML : 3-2-0 −$57 n5
 LEAN T1 spread : 1-1-0 −$13 n2
 LEAN T1 Dog ML : 1-1-0 +$220 n2
 LEAN T2 spread : 1-0-0 +$85 n1
@@ -40,4 +40,4 @@ PASS money sp : 19-12-0 +$525 n31
 PASS money ML : 16-15-0 +$209 n31
 PASS fade sp : 12-19-0 −$810 n31
 PASS fade ML : 15-16-0 −$403 n31
-buckets : {'spread only': 22, 'pass money trend': 31, 'spread+ML': 24, 'pass no clear side': 2}
+buckets : {'spread only': 23, 'pass money trend': 31, 'spread+ML': 23, 'pass no clear side': 2}
