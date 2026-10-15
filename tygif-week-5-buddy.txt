@@ -6,6 +6,7 @@ STRONG NY Jets −2.5 · Final NYJ 17–12 · win +$87
 STRONG Washington −3.5 · Final WSH 27–27 · loss −$100
 LEAN Tennessee +6.5 · Final TEN 3–26 · loss −$100
 LEAN Arizona +4.5 · Final ARI 21–45 · loss −$100
+LEAN Atlanta −3 · Final ATL 23–30 · loss −$100
 STRONG Tampa Bay ML · Final 24–16 · win +$380
 STRONG Miami ML · Final 24–31 · loss −$100
 STRONG NY Jets ML · Final 17–12 · win +$74

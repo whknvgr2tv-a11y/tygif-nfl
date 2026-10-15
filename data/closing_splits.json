@@ -750,6 +750,18 @@
    "at": "Sun Oct 11, 7:14 PM ET",
    "source": "snapshots branch dk_20261011T2314Z.json"
   },
+  "dk_close": {
+   "sp": {
+    "ATL": "−3",
+    "BAL": "+3"
+   },
+   "price": "−118",
+   "prices": {
+    "ATL": "−118",
+    "BAL": "−102"
+   },
+   "source": "ESPN game summary 401872993 (DraftKings close)"
+  },
   "final": {
    "score": "30-23",
    "status": "final"
@@ -762,12 +774,13 @@
   },
   "matches_locked": false,
   "dk_note_short": "DraftKings split Sun Oct 11, 7:14 PM ET, the last before kickoff",
-  "dk_close_line": {
-   "sp": {
-    "ATL": "−3",
-    "BAL": "+3"
-   },
-   "source": "ESPN game summary 401872993 (DraftKings close)"
+  "all_books": {
+   "side": "Baltimore",
+   "money": 56,
+   "bets": 54,
+   "at": "Sun Oct 11, 7:14 PM ET",
+   "source": "ScoresAndOdds, snapshots branch sao_20261011T2314Z.json",
+   "label": "last pull before kickoff: Sun Oct 11, 7:14 PM ET"
   }
  },
  "g-buffalo-at-la-rams": {

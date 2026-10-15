@@ -17,10 +17,13 @@ STRONG
 
 LEAN
   Tennessee +6.5  ·  Houston at Tennessee, Sun Oct 11 · 1:00 PM ET · Final TEN 3–26 · loss −$100
-    Type 3 · Crowd leaning · LEAN: 9-7-1, +$140
+    Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
   Arizona +4.5  ·  Detroit at Arizona, Sun Oct 11 · 4:25 PM ET · Final ARI 21–45 · loss −$100
-    Type 3 · Crowd leaning · LEAN: 9-7-1, +$140
+    Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
+    a: Yes · b: No · c: Yes · d: Yes
+  Atlanta −3  ·  Baltimore at Atlanta, Sun Oct 11 · 8:20 PM ET · Final ATL 23–30 · loss −$100
+    Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
 
 MONEYLINE
@@ -45,5 +48,4 @@ PASS
   Indianapolis at Pittsburgh
   Denver at LA Chargers
   San Francisco at Seattle
-  Baltimore at Atlanta
   Buffalo at LA Rams

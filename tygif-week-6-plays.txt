@@ -23,16 +23,16 @@ STRONG
 
 LEAN
   Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 8:15 PM ET
-    Type 3 · Crowd leaning · LEAN: 9-7-1, +$140
+    Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
   New Orleans −1.5  ·  New Orleans at NY Giants, Sun Oct 18 · 1:00 PM ET
-    Type 3 · Crowd leaning · LEAN: 9-7-1, +$140
+    Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
   Carolina −1.5  ·  Carolina at Philadelphia, Sun Oct 18 · 1:00 PM ET
-    Type 3 · Crowd leaning · LEAN: 9-7-1, +$140
+    Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
   Green Bay −1.5  ·  Dallas at Green Bay, Sun Oct 18 · 8:20 PM ET
-    Type 3 · Crowd leaning · LEAN: 9-7-1, +$140
+    Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
 
 MONEYLINE

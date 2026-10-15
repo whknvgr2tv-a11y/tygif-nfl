@@ -10,6 +10,7 @@ STRONG
 LEAN
   Tennessee +6.5  ·  Sun Oct 11 · 1:00 PM ET · Final TEN 3–26 · loss −$100
   Arizona +4.5  ·  Sun Oct 11 · 4:25 PM ET · Final ARI 21–45 · loss −$100
+  Atlanta −3  ·  Sun Oct 11 · 8:20 PM ET · Final ATL 23–30 · loss −$100
 
 MONEYLINE
   STRONG Tampa Bay ML  ·  Thu Oct 8 · 8:15 PM ET · Final 24–16 · win +$380
@@ -25,5 +26,4 @@ PASS
   Indianapolis at Pittsburgh
   Denver at LA Chargers
   San Francisco at Seattle
-  Baltimore at Atlanta
   Buffalo at LA Rams
