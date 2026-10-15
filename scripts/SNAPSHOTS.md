@@ -44,3 +44,6 @@ No explanatory prose on cards or pages beyond plays, records and the checklist; 
 - Groups: rating + type + favorite/underdog (e.g. LEAN Type 3 Underdog). Post a moneyline play only when its group record is profitable (> $0) through the last graded week. $0 or no history: no play.
 - Re-check after every Tuesday grade. Graded history is never changed by this rule; STRONG and LEAN ML records stay separate from each other and from the spread.
 - Home and This Week: one card per game in kickoff order, with the spread call (STRONG/LEAN/PASS + type record + games list), the ML call (play or no play + group record + games list), the checks row and kickoff/final.
+
+## Fixed process (TG, Oct 15)
+The weekly process and its sources live in `data/process.json`. clean_build.py reads it; the build fails if any game in any week misses a required field or uses a source not listed there (recorded gaps only: Weeks 1-4 splits, Week 5 DraftKings closing splits).

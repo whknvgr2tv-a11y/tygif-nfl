@@ -1,0 +1,49 @@
+{
+ "version": 1,
+ "name": "tygif weekly process (every game, every week)",
+ "sources": {
+  "splits_consensus": "ScoresAndOdds consensus (all books), last pull before kickoff",
+  "splits_draftkings": "DraftKings Network betting splits, last pull before kickoff",
+  "spread_line": "DraftKings via ESPN game summary (pickcenter); close for graded games",
+  "moneyline": "DraftKings via ESPN game summary (pickcenter); close for graded games",
+  "monday_line": "TeamRankings books 2-3, last quote before Monday 12:00 AM ET",
+  "qb": "ESPN injury report (Week 1 starter or named starter)"
+ },
+ "steps": [
+  "Saturday: scripts/snapshot.py pulls ScoresAndOdds + DraftKings splits for every game; ESPN scoreboard, game summaries and injury report for every game",
+  "Rate every game under Rules v1 (rating, type, checks a-e) from those sources only",
+  "Spread call = fade the money side; ML call = same side, graded in its rating + type + favorite/underdog group; posted only if the group is profitable (> $0)",
+  "Tuesday: grade every STRONG/LEAN spread and moneyline at the DraftKings close (ESPN), flat $100, profit rounded per play; write data/live_log.csv and data/ml_log.json",
+  "Rebuild with clean_build.py; the build fails if any game misses a field or uses a source not listed here (unless it is a recorded gap)"
+ ],
+ "required_fields": {
+  "all": [
+   "sp",
+   "ab_side",
+   "ab_m",
+   "ab_b",
+   "rating",
+   "type",
+   "when",
+   "a",
+   "b",
+   "d",
+   "e",
+   "f",
+   "src"
+  ],
+  "graded_play": [
+   "final",
+   "ml_price",
+   "ml_result"
+  ]
+ },
+ "known_gaps": {
+  "weeks_1_4": {
+   "splits_consensus": "ScoresAndOdds consensus as displayed after the game (page not timestamped); pre-kickoff pulls were not saved",
+   "splits_draftkings": "not recorded",
+   "qb": "nflverse starters (Week 1 starter vs actual starter)"
+  },
+  "week_5_draftkings": "DraftKings closing split not captured for some games; last DraftKings pull before kickoff used (listed per game in data/closing_splits.json)"
+ }
+}
