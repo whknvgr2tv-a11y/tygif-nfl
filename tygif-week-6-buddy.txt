@@ -14,5 +14,4 @@ STRONG Cleveland ML
 STRONG Tennessee ML
 STRONG NY Jets ML
 STRONG Washington ML
-LEAN Denver ML
 LEAN Tampa Bay ML

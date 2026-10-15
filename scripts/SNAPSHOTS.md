@@ -38,3 +38,7 @@ period anywhere (no 'Weeks 1–4', 'look back', 'backtest' or 'live'). STRONG, L
 separate, never combined. Card record line: 'Type N · <type name> · <RATING>: W-L-P, +$X' for that type and rating.
 After the Tuesday grade, rebuild with clean_build.py; its self-check and deep check recompute these from the data.
 No explanatory prose on cards or pages beyond plays, records and the checklist; How keeps the brief rules.
+
+## Moneyline cards only for profitable groups (TG, Oct 14)
+- Post a moneyline card only when its rating + type group (e.g. LEAN Type 3) has an all-weeks ML record with profit > $0 through the last graded week. No ML history: no card.
+- Re-check every weekly run after grading. Graded history and the Records ML records are never changed by this rule.

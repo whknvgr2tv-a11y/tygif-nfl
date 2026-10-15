@@ -48,9 +48,6 @@ MONEYLINE
   STRONG Washington ML  ·  Washington at San Francisco, Mon Oct 19 · 8:15 PM ET
     Type 1 · Fade the big favorite · STRONG ML: 4-9-0, +$360
     a: Yes · b: Yes · c: Yes · d: Yes · e: Yes
-  LEAN Denver ML  ·  Seattle at Denver, Thu Oct 15 · 8:15 PM ET
-    Type 3 · Crowd leaning · LEAN ML: 1-8-0, −$640
-    a: Yes · b: No · c: Yes · d: Yes · e: Yes
   LEAN Tampa Bay ML  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 1:00 PM ET
     Type 2 · Fade the crowd · LEAN ML: 1-0-0, +$154
     a: Yes · b: Yes · c: Yes · d: Yes · e: No
