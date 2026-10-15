@@ -1,5 +1,5 @@
 {
- "source": "ESPN game summaries, DraftKings moneyline (close for final games; current for Week 6, pulled Tue Oct 13, 11:17 PM ET)",
+ "source": "ESPN game summaries, DraftKings moneyline (close for final games; current for Week 6, pulled Thu Oct 15, 12:25 AM ET)",
  "rule": "Moneyline play = the same side as a STRONG or LEAN spread play when its DraftKings moneyline (close; current for upcoming games) is plus money (over +100). Pick\u2019em, \u2212100 or a favorite: no play. Flat $100 at the DraftKings closing price. Never combined with spread, STRONG never combined with LEAN.",
  "plays": [
   {
@@ -348,17 +348,17 @@
    "spread_line": 2.5,
    "status": "preview",
    "espn_event": "401872995",
-   "price": 124
+   "price": 120
   },
   {
    "week": 6,
    "game": "BAL@CLE",
    "rating": "STRONG",
    "side": "CLE",
-   "spread_line": 4.5,
+   "spread_line": 5.5,
    "status": "preview",
    "espn_event": "401872997",
-   "price": 195
+   "price": 210
   },
   {
    "week": 6,
@@ -378,7 +378,7 @@
    "spread_line": 7.5,
    "status": "preview",
    "espn_event": "401873001",
-   "price": 275
+   "price": 270
   },
   {
    "week": 6,
@@ -388,17 +388,7 @@
    "spread_line": 2.5,
    "status": "preview",
    "espn_event": "401873002",
-   "price": 114
-  },
-  {
-   "week": 6,
-   "game": "LAC@KC",
-   "rating": "LEAN",
-   "side": "LAC",
-   "spread_line": 8.5,
-   "status": "preview",
-   "espn_event": "401873006",
-   "price": 380
+   "price": 120
   },
   {
    "week": 6,
@@ -408,7 +398,7 @@
    "spread_line": 7.5,
    "status": "preview",
    "espn_event": "401873008",
-   "price": 340
+   "price": 330
   }
  ]
 }

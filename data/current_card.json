@@ -1,6 +1,6 @@
 {
  "week": 6,
- "posted_at_et": "Tue Oct 13, 11:03 PM ET",
+ "posted_at_et": "Thu Oct 15, 12:25 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -18,7 +18,7 @@
    "name": "Chicago",
    "nick": "Bears",
    "rating": "LEAN",
-   "line": "-3",
+   "line": "-1.5",
    "kickoff_utc": "2026-10-18T17:00Z"
   },
   {
@@ -27,7 +27,7 @@
    "name": "Cleveland",
    "nick": "Browns",
    "rating": "STRONG",
-   "line": "+4.5",
+   "line": "+5.5",
    "kickoff_utc": "2026-10-18T17:00Z"
   },
   {
@@ -63,7 +63,7 @@
    "name": "Carolina",
    "nick": "Panthers",
    "rating": "LEAN",
-   "line": "+1.5",
+   "line": "-1.5",
    "kickoff_utc": "2026-10-18T17:00Z"
   },
   {
@@ -76,13 +76,13 @@
    "kickoff_utc": "2026-10-18T17:00Z"
   },
   {
-   "game": "LAC@KC",
-   "team": "LAC",
-   "name": "LA Chargers",
-   "nick": "Chargers",
+   "game": "DAL@GB",
+   "team": "GB",
+   "name": "Green Bay",
+   "nick": "Packers",
    "rating": "LEAN",
-   "line": "+8.5",
-   "kickoff_utc": "2026-10-18T20:25Z"
+   "line": "-1.5",
+   "kickoff_utc": "2026-10-19T00:20Z"
   },
   {
    "game": "WSH@SF",
