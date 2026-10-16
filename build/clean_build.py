@@ -2006,10 +2006,11 @@ def _deepcheck():
     if _now!=sorted(_SO['rows']): errs.append(('signed-off per-game rows changed',[r for r in _now if r not in _SO['rows']][:5],[r for r in _SO['rows'] if r not in _now][:5]))
     if not FZ<={_nk(*k) for k in _DONE}: errs.append(('signed-off game no longer settled',sorted(FZ-{_nk(*k) for k in _DONE})))
     _G0=dict(RECS=RECS,ML=ML,SIDES=SIDES,POSTED=POSTED,BUCKETS=BUCKETS)
+    _MLP={id(x) for x in SIDES if ml_post(x)}   # posting is decided on the full data (prior weeks), then counted per subset
     def _subset(keep):
         gl=globals(); gl['RECS']=[r for r in _G0['RECS'] if keep(_nk(r['week'],r['game']))]; gl['ML']=[r for r in _G0['ML'] if keep(_nk(r['week'],r['game']))]
         gl['SIDES']=[x for x in _G0['SIDES'] if keep(_nk(x['week'],x['game']))]; gr=[x for x in gl['SIDES'] if x['sp_res']]
-        gl['POSTED']={f'{m}|{rt}':_pt([x for x in gr if _OUR(x) and x['rating']==rt and (m=='sp' or ml_post(x))],m) for m in ('sp','ml') for rt in ('STRONG','LEAN')}
+        gl['POSTED']={f'{m}|{rt}':_pt([x for x in gr if _OUR(x) and x['rating']==rt and (m=='sp' or id(x) in _MLP)],m) for m in ('sp','ml') for rt in ('STRONG','LEAN')}
         gl['BUCKETS']={b:[k for k in v if keep(_nk(*k))] for b,v in _G0['BUCKETS'].items()}
         try: return _figs()
         finally: gl.update(_G0)
