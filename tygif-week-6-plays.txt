@@ -1,15 +1,15 @@
 TYGIF'S MODEL · WEEK 6
-Lines as of Thu Oct 15, 5:47 PM CT
+Lines as of Thu Oct 15, 7:06 PM CT
 
 STRONG
-  Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 7:15 PM CT
-    Type 2 · Fade the crowd · STRONG: 6-3-2, +$250
+  Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 7:15 PM CT · Final DEN 17–14 · win +$95
+    Type 2 · Fade the crowd · STRONG: 7-3-2, +$345
     a: Yes · b: Yes · c: Yes · d: Yes
   Chicago −1.5  ·  Chicago at Atlanta, Sun Oct 18 · 12:00 PM CT
-    Type 2 · Fade the crowd · STRONG: 6-3-2, +$250
+    Type 2 · Fade the crowd · STRONG: 7-3-2, +$345
     a: Yes · b: Yes · c: Yes · d: Yes
   Cleveland +3.5  ·  Baltimore at Cleveland, Sun Oct 18 · 12:00 PM CT
-    Type 2 · Fade the crowd · STRONG: 6-3-2, +$250
+    Type 2 · Fade the crowd · STRONG: 7-3-2, +$345
     a: Yes · b: Yes · c: Yes · d: Yes
   Tennessee +7  ·  Tennessee at Indianapolis, Sun Oct 18 · 12:00 PM CT
     Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
@@ -18,7 +18,7 @@ STRONG
     Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
     a: Yes · b: Yes · c: Yes · d: Yes
   Tampa Bay +2.5  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 12:00 PM CT
-    Type 2 · Fade the crowd · STRONG: 6-3-2, +$250
+    Type 2 · Fade the crowd · STRONG: 7-3-2, +$345
     a: Yes · b: Yes · c: Yes · d: Yes
   Washington +7.5  ·  Washington at San Francisco, Mon Oct 19 · 7:15 PM CT
     Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
@@ -30,14 +30,14 @@ LEAN
     a: Yes · b: No · c: Yes · d: Yes
 
 MONEYLINE
-  STRONG Denver ML  ·  Seattle at Denver, Thu Oct 15 · 7:15 PM CT
-    Type 2 · Fade the crowd · STRONG ML · Underdog: 2-1-0, +$194
+  STRONG Denver ML  ·  Seattle at Denver, Thu Oct 15 · 7:15 PM CT · Final 17–14 · win +$124
+    Type 2 · Fade the crowd · STRONG ML · Underdog: 3-1-0, +$318
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Chicago ML  ·  Chicago at Atlanta, Sun Oct 18 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG ML · Favorite: 5-2-1, +$124
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Cleveland ML  ·  Baltimore at Cleveland, Sun Oct 18 · 12:00 PM CT
-    Type 2 · Fade the crowd · STRONG ML · Underdog: 2-1-0, +$194
+    Type 2 · Fade the crowd · STRONG ML · Underdog: 3-1-0, +$318
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Tennessee ML  ·  Tennessee at Indianapolis, Sun Oct 18 · 12:00 PM CT
     Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740
@@ -46,7 +46,7 @@ MONEYLINE
     Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Tampa Bay ML  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 12:00 PM CT
-    Type 2 · Fade the crowd · STRONG ML · Underdog: 2-1-0, +$194
+    Type 2 · Fade the crowd · STRONG ML · Underdog: 3-1-0, +$318
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Washington ML  ·  Washington at San Francisco, Mon Oct 19 · 7:15 PM CT
     Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740

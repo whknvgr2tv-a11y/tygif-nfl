@@ -652,10 +652,13 @@
    "rating": "STRONG",
    "side": "DEN",
    "spread_line": 2.5,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401872995",
    "price": 124,
-   "fd": "Dog"
+   "fd": "Dog",
+   "score": "14-17",
+   "result": "W",
+   "profit": 124.0
   },
   {
    "week": 6,

@@ -1,8 +1,8 @@
 TYGIF'S MODEL · WEEK 6
-Lines as of Thu Oct 15, 5:47 PM CT
+Lines as of Thu Oct 15, 7:06 PM CT
 
 STRONG
-  Denver +2.5  ·  Thu Oct 15 · 7:15 PM CT
+  Denver +2.5  ·  Thu Oct 15 · 7:15 PM CT · Final DEN 17–14 · win +$95
   Chicago −1.5  ·  Sun Oct 18 · 12:00 PM CT
   Cleveland +3.5  ·  Sun Oct 18 · 12:00 PM CT
   Tennessee +7  ·  Sun Oct 18 · 12:00 PM CT
@@ -14,7 +14,7 @@ LEAN
   New Orleans −1.5  ·  Sun Oct 18 · 12:00 PM CT
 
 MONEYLINE
-  STRONG Denver ML  ·  Thu Oct 15 · 7:15 PM CT
+  STRONG Denver ML  ·  Thu Oct 15 · 7:15 PM CT · Final 17–14 · win +$124
   STRONG Chicago ML  ·  Sun Oct 18 · 12:00 PM CT
   STRONG Cleveland ML  ·  Sun Oct 18 · 12:00 PM CT
   STRONG Tennessee ML  ·  Sun Oct 18 · 12:00 PM CT
