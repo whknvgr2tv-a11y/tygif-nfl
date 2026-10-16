@@ -26,9 +26,11 @@ Tuesday run, for each game of the week:
 
 ## Moneyline plays (TG, Oct 13)
 Every weekly run handles ML alongside the spread, using the same card template and records kept separate:
-- A STRONG or LEAN spread play gets a moneyline play on that team only if its DraftKings moneyline (recorded before kickoff) is plus money (over +100). Pick'em, −100 or a favorite: none.
-- Saturday run: show 'Moneyline: <team>' on qualifying cards (team only; never a price), using the current DraftKings moneyline
-  from the ESPN game summary, with its time on the section's one pull-time line.
+- A STRONG or LEAN spread play gets a moneyline play on our team only when its group (rating + type + favorite/underdog)
+  is above $0 over prior weeks (all weeks before the game's week). Never on a Type 3 underdog.
+- Card run (any build before kickoff; the card is rebuilt as new pulls arrive): show 'Moneyline: <team>' on qualifying cards
+  (team only; never a price). Favorite/underdog comes from the latest ESPN DraftKings moneyline capture (`espn_dk_*`, taken by
+  the snapshot workflow and by build/settle.py); the card's one 'As of' line gives the time of the pull it uses.
 - Tuesday run: grade each ML play W/L/P from the final score at the DraftKings moneyline recorded last before kickoff (`espn_dk_*`;
   ESPN `pickcenter` close only if nothing was recorded), flat $100. Write it to `data/ml_log.json`. If the price is missing, record that and
   grade nothing. STRONG ML and LEAN ML records stay separate and are never added to the spread records.
@@ -39,7 +41,7 @@ Every record on the site covers all weeks to date (Week 1 through the last grade
 look-back games plus every graded row in `data/live_log.csv` and `data/ml_log.json`. No split or label by
 period anywhere (no 'Weeks 1–4', 'look back', 'backtest' or 'live'). STRONG, LEAN, STRONG ML and LEAN ML stay
 separate, never combined. Card record line: 'Type N · <type name> · <RATING>: W-L-P, +$X' for that type and rating.
-After the Tuesday grade, rebuild with clean_build.py; its self-check and deep check recompute these from the data.
+After each settle (`python3 build/settle.py`; Monday: `--monday` first writes the Monday lines), the build (build/clean_build.py) rebuilds; its self-check and deep check recompute these from the data.
 No explanatory prose on cards or pages beyond plays, records and the checklist; How keeps the brief rules.
 
 ## Moneyline groups (TG, Oct 14)
@@ -52,3 +54,8 @@ No explanatory prose on cards or pages beyond plays, records and the checklist; 
 
 ## Fixed process (TG, Oct 15)
 The weekly process and its sources live in `data/process.json`. clean_build.py reads it; the build fails if any game in any week misses a required field or uses a source not listed there (recorded gaps only: Weeks 1-4 splits, Week 5 DraftKings closing splits).
+
+## Settle (Oct 15)
+`python3 build/settle.py` settles finished games (any day, e.g. after Thursday night), builds twice and runs the deep checks.
+`python3 build/settle.py --monday` first writes `build/inputs/tr_monday_w<N>.json` for the next week (`build/monday_lines.py`: TeamRankings books 2 and 3, last quote before Sun 11:00 PM CT / Mon 12:00 AM ET).
+Signed-off games are frozen in `data/signed_off_games.json`; the build fails if any of their rows change.

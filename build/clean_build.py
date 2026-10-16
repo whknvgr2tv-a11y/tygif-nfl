@@ -350,7 +350,7 @@ def rate_v1(A,H,ab,dk_side,mon,close_sp,qb_drop):
     lvl=(2 if bb else 1)-e-qb_drop
     return ['PASS','LEAN','STRONG'][max(lvl,0)],ty,e,d
 def settle_w5():
-    sb=json.load(open(_W+'/espn_sb_w5_now.json'))
+    sb=json.load(open(_W+'/espn_sum/sb_w5.json'))
     wk=None
     import importlib.util as _iu
     _sp=_iu.spec_from_file_location('snapmod',R+'scripts/snapshot.py'); _sm=_iu.module_from_spec(_sp); _sp.loader.exec_module(_sm)
@@ -467,15 +467,15 @@ _apply_close()
 def _live_weeks():
     # every week from 6 that has its Monday line file and a scoreboard; TYGIF_WEEK caps it (the card week)
     out=[]; w=6
-    while os.path.exists(_I+f'/tr_monday_w{w}.json') and os.path.exists(_W+f'/espn_sb_w{w}_now.json'): out.append(w); w+=1
+    while os.path.exists(_I+f'/tr_monday_w{w}.json') and os.path.exists(_W+f'/espn_sum/sb_w{w}.json'): out.append(w); w+=1
     cap=os.environ.get('TYGIF_WEEK')
     return [w for w in out if not cap or w<=int(cap)]
-LIVEW=_live_weeks(); GW=LIVEW[-1]   # GW = current card week
+class _NotReady(Exception): pass
 def build_wk(WK):
     # same as settle_w5: every pull (snapshots branch + our dated pulls), per game the latest one before kickoff
     DKS6=_snaps('dk',_W+f'/snap_w{WK}_*/'); SAOS6=_snaps('sao',_W+f'/snap_w{WK}_*/')
     TRM=json.load(open(_I+f'/tr_monday_w{WK}.json'))
-    sb=json.load(open(_W+f'/espn_sb_w{WK}_now.json'))
+    sb=json.load(open(_W+f'/espn_sum/sb_w{WK}.json'))
     out=[]
     for e in sorted(sb['events'],key=lambda e:e['date']):
         c=e['competitions'][0]; t={x['homeAway']:x['team']['abbreviation'] for x in c['competitors']}
@@ -485,6 +485,7 @@ def build_wk(WK):
         lo_s=(_dt.datetime.fromisoformat(ko_s.replace('Z','+00:00'))-_dt.timedelta(days=8)).isoformat()
         dkp=[(t_,src,_dk_rows(d)[key]) for t_,src,d in DKS6 if lo_s<t_<ko_s and key in _dk_rows(d)]
         sap=[(t_,src,_sao_rows(d)[key]) for t_,src,d in SAOS6 if lo_s<t_<ko_s and key in _sao_rows(d)]
+        if not dkp or not sap: raise _NotReady(f'week {WK}: {A}@{H} has no DraftKings/ScoresAndOdds pull before kickoff yet')
         dk_t,dk_src,dk=dkp[-1]; sa_t,sa_src,sa_row=sap[-1]
         sar={key:sa_row}
         sp={k:v['line'].replace('-',M) for k,v in dk.items()}   # DraftKings line at the last pre-kickoff pull (never an ESPN summary read after kickoff)
@@ -512,7 +513,13 @@ def build_wk(WK):
         g['wy']=f"{abm}% of the money is on {NAME[abs_]} (all books)."+''
         out.append(g)
     return out
-GBY={w:build_wk(w) for w in LIVEW}
+LIVEW=[]; GBY={}
+for _w in _live_weeks():
+    try: GBY[_w]=build_wk(_w); LIVEW.append(_w)
+    except _NotReady as _e:
+        if _w!=_live_weeks()[-1]: raise SystemExit(str(_e))   # only the newest week may be waiting for its card
+        print(f'week {_w} not built yet (card not ready): {_e}')
+GW=LIVEW[-1]   # GW = current card week
 GALL=[g for w in LIVEW for g in GBY[w]]   # every game, weeks 6 on
 G6=GBY[GW]                                # the current card week (name kept: G6 = current week)
 PULL6=_etdata(max(g['split_utc'] for g in G6))   # newest pre-kickoff all-books pull used on the current card (stored ET; shown in CT)
@@ -583,7 +590,7 @@ def _settle_rows():
         if g['rating']=='PASS' or g['status']!='STATUS_FINAL' or k in have: continue
         side=AB[g['fade']]; p=_sg0.pre_line(g['week'],g['A'],g['H'],side)
         if not p: raise SystemExit(f'{k}: no DraftKings line recorded before kickoff; cannot settle')
-        c=[x for x in json.load(open(_W+f"/espn_sb_w{g['week']}_now.json"))['events'] if x['id']==g['eid']][0]['competitions'][0]
+        c=[x for x in json.load(open(_W+f"/espn_sum/sb_w{g['week']}.json"))['events'] if x['id']==g['eid']][0]['competitions'][0]
         sc={x['homeAway']:int(x['score']) for x in c['competitors']}
         mg=(sc['away']-sc['home'] if side==g['A'] else sc['home']-sc['away'])+float(p['line'])
         res='W' if mg>0 else 'L' if mg<0 else 'P'; pr=int(p['price'])
@@ -1973,41 +1980,63 @@ def _deepcheck():
     def _pb(ks,rt,k,role='fade'):
         xs=[SDX[x][role] for x in ks if x in SDX and SDX[x][role]['rating']==rt and SDX[x][role][k+'_res']]; return _pt(xs,k)
     _mt=ml_tally
-    got={}
-    for rt in ('STRONG','LEAN'):
-        got[f'{rt} spread']=_f(at(rt)); got[f'{rt} fadeML']=_f(_mt(rt,('look back','live'))); got[f'{rt} postedML']=_f(POSTED['ml|'+rt])
-        got[f'{rt} money sp']=_f(_stally('money',rt)); got[f'{rt} money ML']=_f(_stally('money',rt,True))
-        got[f'{rt} bucket spread only']=_f(_pb(BUCKETS['spread'],rt,'sp')); got[f'{rt} bucket spread+ML']=_f(_pb(BUCKETS['both'],rt,'sp')); got[f'{rt} bucket spread+ML ML']=_f(_pb(BUCKETS['both'],rt,'ml'))
-        for t in (1,2,3):
-            if at(rt,t)[4]: got[f'{rt} T{t} spread']=_f(at(rt,t))
-            for fd in ('Fav','Dog'):
-                if ml_at(rt,t,fd)[4]: got[f'{rt} T{t} {fd} ML']=_f(ml_at(rt,t,fd))
-        for w in WEEKS:
-            if at(rt,None,w)[4]: got[f'{rt} W{w} spread']=_f(at(rt,None,w))
-    got['PASS money sp']=_f(_stally('money','PASS')); got['PASS money ML']=_f(_stally('money','PASS',True))
-    got['PASS fade sp']=_f(_stally('fade','PASS')); got['PASS fade ML']=_f(_stally('fade','PASS',True))
+    def _figs():
+        got={}
+        for rt in ('STRONG','LEAN'):
+            got[f'{rt} spread']=_f(at(rt)); got[f'{rt} fadeML']=_f(_mt(rt,('look back','live'))); got[f'{rt} postedML']=_f(POSTED['ml|'+rt])
+            got[f'{rt} money sp']=_f(_stally('money',rt)); got[f'{rt} money ML']=_f(_stally('money',rt,True))
+            got[f'{rt} bucket spread only']=_f(_pb(BUCKETS['spread'],rt,'sp')); got[f'{rt} bucket spread+ML']=_f(_pb(BUCKETS['both'],rt,'sp')); got[f'{rt} bucket spread+ML ML']=_f(_pb(BUCKETS['both'],rt,'ml'))
+            for t in (1,2,3):
+                if at(rt,t)[4]: got[f'{rt} T{t} spread']=_f(at(rt,t))
+                for fd in ('Fav','Dog'):
+                    if ml_at(rt,t,fd)[4]: got[f'{rt} T{t} {fd} ML']=_f(ml_at(rt,t,fd))
+            for w in WEEKS:
+                if at(rt,None,w)[4]: got[f'{rt} W{w} spread']=_f(at(rt,None,w))
+        got['PASS money sp']=_f(_stally('money','PASS')); got['PASS money ML']=_f(_stally('money','PASS',True))
+        got['PASS fade sp']=_f(_stally('fade','PASS')); got['PASS fade ML']=_f(_stally('fade','PASS',True))
+        _bx={'spread only':len(BUCKETS['spread']),'pass money trend':len(BUCKETS['pass_money']),'spread+ML':len(BUCKETS['both']),'pass no clear side':len(BUCKETS['pass_even'])}
+        return got,_bx
+    # signed-off games (data/signed_off_games.json): their per-side rows are frozen, and every Site Auditor figure is
+    # recomputed over exactly those games and must match data/audit_expected.txt on every build (never skipped).
+    # Games settled since then may only add to the totals: all-games figure = signed-off figure + new-games figure.
+    _nk=lambda w,g:(int(w),g.replace('LA@','LAR@'))
+    _SO=json.load(open(R+'data/signed_off_games.json')); FZ={_nk(*k) for k in _SO['games']}
+    _row=lambda x:[x['week'],x['game'],x['team'],x['role'],x['rating'],x['type'],x['fd'],x['sp_res'],x['sp_usd'],x['ml_res'],x['ml_usd']]
+    _now=sorted(_row(x) for x in SIDES if _nk(x['week'],x['game']) in FZ)
+    if _now!=sorted(_SO['rows']): errs.append(('signed-off per-game rows changed',[r for r in _now if r not in _SO['rows']][:5],[r for r in _SO['rows'] if r not in _now][:5]))
+    if not FZ<={_nk(*k) for k in _DONE}: errs.append(('signed-off game no longer settled',sorted(FZ-{_nk(*k) for k in _DONE})))
+    _G0=dict(RECS=RECS,ML=ML,SIDES=SIDES,POSTED=POSTED,BUCKETS=BUCKETS)
+    def _subset(keep):
+        gl=globals(); gl['RECS']=[r for r in _G0['RECS'] if keep(_nk(r['week'],r['game']))]; gl['ML']=[r for r in _G0['ML'] if keep(_nk(r['week'],r['game']))]
+        gl['SIDES']=[x for x in _G0['SIDES'] if keep(_nk(x['week'],x['game']))]; gr=[x for x in gl['SIDES'] if x['sp_res']]
+        gl['POSTED']={f'{m}|{rt}':_pt([x for x in gr if _OUR(x) and x['rating']==rt and (m=='sp' or ml_post(x))],m) for m in ('sp','ml') for rt in ('STRONG','LEAN')}
+        gl['BUCKETS']={b:[k for k in v if keep(_nk(*k))] for b,v in _G0['BUCKETS'].items()}
+        try: return _figs()
+        finally: gl.update(_G0)
+    got,_bx=_subset(lambda k:k in FZ); gotn,_=_subset(lambda k:k not in FZ); gota,_bxa=_figs()
+    def _parse(v):
+        q=re.match(r'(\d+)-(\d+)-(\d+) ([+−]?)\$([\d,]+) n(\d+)',v); return (int(q[1]),int(q[2]),int(q[3]),(-1 if q[4]=='−' else 1)*int(q[5].replace(',','')),int(q[6]))
+    for k_,v_ in gota.items():
+        a_=_parse(got[k_]) if k_ in got else (0,)*5; n_=_parse(gotn[k_]) if k_ in gotn else (0,)*5; t_=_parse(v_)
+        if any(t_[i]!=a_[i]+n_[i] for i in (0,1,2,4)) or abs(t_[3]-a_[3]-n_[3])>len(gota): errs.append(('total is not signed-off + newly settled',k_,v_,got.get(k_),gotn.get(k_)))
     _exp={}
     for ln in open(R+'data/audit_expected.txt',encoding='utf-8'):
         if ' : ' in ln: k_,v_=ln.rstrip('\n').split(' : ',1); _exp[k_.strip()]=v_.strip()
-    _bx={'spread only':len(BUCKETS['spread']),'pass money trend':len(BUCKETS['pass_money']),'spread+ML':len(BUCKETS['both']),'pass no clear side':len(BUCKETS['pass_even'])}
-    # figures are frozen for the settled games the auditor signed off on; once more games settle, the differences go to
-    # data/audit_pending.txt for the next sweep (the recompute checks above still hold every figure to the data)
-    _frozen=int(_exp.pop('settled games','0'))
-    _roll=len(_DONE)>_frozen
-    if len(_DONE)<_frozen: errs.append(('settled games went down',len(_DONE),_frozen))
-    if _roll:
-        _pend=[f'{k_} : {got.get(k_)}   (signed off: {v_})' for k_,v_ in _exp.items() if k_!='buckets' and got.get(k_)!=v_]
-        open(R+'data/audit_pending.txt','w').write(f'settled games : {len(_DONE)} (signed off: {_frozen})\n'+''.join(x+'\n' for x in _pend))
-        print(f'audit figures: {len(_DONE)-_frozen} newly settled game(s); {len(_pend)} figure(s) changed, listed in data/audit_pending.txt for the Site Auditor')
-        _exp={}
+    if int(_exp.pop('settled games','0'))!=len(FZ): errs.append(('audit_expected settled games != signed_off_games.json',len(FZ)))
+    _new=len(_DONE)-len(FZ)
+    if _new:
+        _pend=[f'{k_} : {gota.get(k_)}   (signed off: {v_})' for k_,v_ in _exp.items() if k_!='buckets' and gota.get(k_)!=v_]
+        open(R+'data/audit_pending.txt','w').write(f'settled games : {len(_DONE)} (signed off: {len(FZ)})\n'+''.join(x+'\n' for x in _pend))
+        print(f'audit: {_new} newly settled game(s) on top of the {len(FZ)} signed off; all-games figures in data/audit_pending.txt')
     elif os.path.exists(R+'data/audit_pending.txt'): os.rename(R+'data/audit_pending.txt','/tmp/audit_pending.old.txt')
     for k_,v_ in _exp.items():
         if k_=='buckets':
             if eval(v_)!=_bx: errs.append(('audit mismatch','buckets',_bx,v_))
         elif got.get(k_)!=v_: errs.append(('audit mismatch',k_,got.get(k_),v_))
-    # Rules v3.1: spread records frozen at ca32973; no Type 3 underdog moneyline ever posts
+    # Rules v3.1: spread records over the signed-off games stay frozen; no Type 3 underdog moneyline ever posts
     for k_,v_ in (('STRONG spread','17-5-4 +$1,065 n26'),('LEAN spread','11-9-1 +$112 n21')):   # ca32973 + W6 SEA@DEN settled (DEN +2.5 −105 W)
-        if not _roll and got.get(k_)!=v_: errs.append(('spread records changed',k_,got.get(k_),v_))
+        if got.get(k_)!=v_: errs.append(('spread records changed',k_,got.get(k_),v_))
+    got=gota
     for r_ in SIDES:
         if r_['role']=='fade' and r_['type']==3 and r_['fd']=='Dog' and ml_post(r_): errs.append(('T3 underdog ML posted',r_['week'],r_['game']))
     for g_ in GALL:
@@ -2068,6 +2097,10 @@ def _deepcheck():
         for m in re.finditer(r' ET\b|Eastern',x): errs.append((f.split('/')[-1],'Eastern time shown',x[max(0,m.start()-40):m.end()+5]))
     assert not errs, errs
     print('deep check ok:', sum(n for v in want.values() for n in v[:3]), 'ML plays graded')
+import os as _os
+if _os.environ.get('SIGNOFF'):
+    json.dump({'note':'Games Site Auditor signed off (2da0581). Per-side rows: week, game, team, role, rating, type, fd, sp_res, sp_usd, ml_res, ml_usd. Frozen: the build fails if any changes.',
+               'games':sorted([list(k) for k in _DONE]),'rows':sorted([x['week'],x['game'],x['team'],x['role'],x['rating'],x['type'],x['fd'],x['sp_res'],x['sp_usd'],x['ml_res'],x['ml_usd']] for x in SIDES if (x['week'],x['game']) in set(_DONE))},open(_os.environ['SIGNOFF'],'w'),indent=0)
 _deepcheck()
 
 import os as _os

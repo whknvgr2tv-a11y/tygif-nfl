@@ -3,10 +3,13 @@
 
   python3 build/settle.py            # fetch, pull, settle, build twice, deep checks
   python3 build/settle.py --offline  # skip network (rebuild from what is in build/raw + origin/snapshots)
+  python3 build/settle.py --monday   # Monday run: first build/monday_lines.py for the next week (TeamRankings books 2-3,
+                                     # last quote before Sun 11 PM CT -> build/inputs/tr_monday_w<N>.json), then the settle
 
 1. git fetch origin snapshots (pre-kickoff DraftKings/ScoresAndOdds/ESPN-DraftKings pulls).
 2. ESPN scoreboard for every live week (6 on, each with build/inputs/tr_monday_w<N>.json) into
-   build/raw/pulls/<UTC stamp>/sb_w<N>.json, then copied to build/raw/espn_sb_w<N>_now.json and espn_sum/sb_w<N>.json.
+   build/raw/pulls/<UTC stamp>/sb_w<N>.json, then copied to build/raw/espn_sum/sb_w<N>.json,
+   the one scoreboard copy the build reads scores and status from.
    Game summaries go to the same dated folder, kept apart:
      prekick/<event>.json   fetched while the game was still scheduled -> also written as an ESPN DraftKings
                             capture data/espn_dk/espn_dk_<stamp>.json (the grading moneyline source)
@@ -33,9 +36,9 @@ def pull():
     os.makedirs(out + '/prekick', exist_ok=True); os.makedirs(out + '/postgame', exist_ok=True)
     w = 6; caps = []
     while os.path.exists(f'{B}/inputs/tr_monday_w{w}.json'):
-        y = json.load(open(f'{RAW}/espn_sb_w{w}_now.json'))['season']['year'] if os.path.exists(f'{RAW}/espn_sb_w{w}_now.json') else datetime.now().year
+        y = json.load(open(f'{RAW}/espn_sum/sb_w{w - 1}.json'))['season']['year']
         st, h = snap.get(SB.format(w=w, y=y)); sb = json.loads(h)
-        for p in (f'{out}/sb_w{w}.json', f'{RAW}/espn_sb_w{w}_now.json', f'{RAW}/espn_sum/sb_w{w}.json'):
+        for p in (f'{out}/sb_w{w}.json', f'{RAW}/espn_sum/sb_w{w}.json'):
             json.dump(sb, open(p, 'w'))
         for e in sb['events']:
             state = e['competitions'][0]['status']['type']['state']
@@ -63,6 +66,10 @@ def site_hash():
     return h.hexdigest()
 
 def main():
+    if '--monday' in sys.argv:
+        w = 6
+        while os.path.exists(f'{B}/inputs/tr_monday_w{w}.json'): w += 1
+        run(sys.executable, 'build/monday_lines.py', '--week', str(w))
     if '--offline' not in sys.argv:
         run('git', 'fetch', 'origin', 'snapshots:refs/remotes/origin/snapshots')
         pull()
