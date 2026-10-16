@@ -674,7 +674,7 @@
   {
    "week": 6,
    "game": "BAL@CLE",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "CLE",
    "spread_line": 3.5,
    "status": "preview",
@@ -701,7 +701,7 @@
    "spread_line": 7.5,
    "status": "preview",
    "espn_event": "401873001",
-   "price": 260,
+   "price": 275,
    "fd": "Dog"
   },
   {
@@ -724,6 +724,17 @@
    "status": "preview",
    "espn_event": "401873002",
    "price": 124,
+   "fd": "Dog"
+  },
+  {
+   "week": 6,
+   "game": "LAC@KC",
+   "rating": "LEAN",
+   "side": "LAC",
+   "spread_line": 8.5,
+   "status": "preview",
+   "espn_event": "401873006",
+   "price": 350,
    "fd": "Dog"
   },
   {

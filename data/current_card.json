@@ -1,6 +1,6 @@
 {
  "week": 6,
- "posted_at_et": "Thu Oct 15, 8:09 PM ET",
+ "posted_at_et": "Fri Oct 16, 12:19 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -26,7 +26,7 @@
    "team": "CLE",
    "name": "Cleveland",
    "nick": "Browns",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "line": "+3.5",
    "kickoff_utc": "2026-10-18T17:00:00Z"
   },
@@ -65,6 +65,15 @@
    "rating": "STRONG",
    "line": "+2.5",
    "kickoff_utc": "2026-10-18T17:00:00Z"
+  },
+  {
+   "game": "LAC@KC",
+   "team": "LAC",
+   "name": "LA Chargers",
+   "nick": "Chargers",
+   "rating": "LEAN",
+   "line": "+8.5",
+   "kickoff_utc": "2026-10-18T20:25:00Z"
   },
   {
    "game": "WSH@SF",
