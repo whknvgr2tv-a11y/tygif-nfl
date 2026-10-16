@@ -3,23 +3,23 @@ Final
 
 STRONG
   Tampa Bay +8.5  ·  Tampa Bay at Dallas, Thu Oct 8 · 7:15 PM CT · Final TB 24–16 · win +$98
-    Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
+    Type 1 · Fade the big favorite · STRONG: 10-2-2, +$716
     a: Yes · b: Yes · c: Yes · d: Yes
-  Miami +7.5  ·  Cincinnati at Miami, Sun Oct 11 · 12:00 PM CT · Final MIA 24–31 · win +$89
-    Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
+  Miami +7  ·  Cincinnati at Miami, Sun Oct 11 · 12:00 PM CT · Final MIA 24–31 · push $0
+    Type 1 · Fade the big favorite · STRONG: 10-2-2, +$716
     a: Yes · b: Yes · c: Yes · d: Yes
-  NY Jets −2.5  ·  Cleveland at NY Jets, Sun Oct 11 · 12:00 PM CT · Final NYJ 17–12 · win +$87
-    Type 2 · Fade the crowd · STRONG: 7-3-2, +$345
+  NY Jets −2.5  ·  Cleveland at NY Jets, Sun Oct 11 · 12:00 PM CT · Final NYJ 17–12 · win +$91
+    Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
     a: Yes · b: Yes · c: Yes · d: Yes
   Washington −3.5  ·  NY Giants at Washington, Sun Oct 11 · 12:00 PM CT · Final WSH 27–27 · loss −$100
-    Type 2 · Fade the crowd · STRONG: 7-3-2, +$345
+    Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
     a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN
-  Tennessee +6.5  ·  Houston at Tennessee, Sun Oct 11 · 12:00 PM CT · Final TEN 3–26 · loss −$100
+  Tennessee +7  ·  Houston at Tennessee, Sun Oct 11 · 12:00 PM CT · Final TEN 3–26 · loss −$100
     Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
-  Arizona +4.5  ·  Detroit at Arizona, Sun Oct 11 · 3:25 PM CT · Final ARI 21–45 · loss −$100
+  Arizona +5.5  ·  Detroit at Arizona, Sun Oct 11 · 3:25 PM CT · Final ARI 21–45 · loss −$100
     Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
   Atlanta −3  ·  Baltimore at Atlanta, Sun Oct 11 · 7:20 PM CT · Final ATL 23–30 · loss −$100

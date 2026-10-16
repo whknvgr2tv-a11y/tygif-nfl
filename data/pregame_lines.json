@@ -1,0 +1,257 @@
+{
+ "rule": "Grading line and price = the DraftKings main line from our last pull before kickoff (splits page). Games with no pre-kickoff pull (Weeks 1-4, W5 TB@DAL) keep the DraftKings close from the ESPN game summary. Moneylines: no pre-kickoff DraftKings moneyline was saved before W6, so W1-5 moneylines use the ESPN DraftKings close.",
+ "lines": [
+  {
+   "week": 5,
+   "game": "PHI@JAX",
+   "side": "PHI",
+   "line": 7.5,
+   "price": -112,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "PHI@JAX",
+   "side": "JAX",
+   "line": -7.5,
+   "price": -108,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "CHI@GB",
+   "side": "CHI",
+   "line": -1.5,
+   "price": -115,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "CHI@GB",
+   "side": "GB",
+   "line": 1.5,
+   "price": -105,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "HOU@TEN",
+   "side": "HOU",
+   "line": -7.0,
+   "price": -108,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "HOU@TEN",
+   "side": "TEN",
+   "line": 7.0,
+   "price": -112,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "CIN@MIA",
+   "side": "CIN",
+   "line": -7.0,
+   "price": -110,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "CIN@MIA",
+   "side": "MIA",
+   "line": 7.0,
+   "price": -110,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "LV@NE",
+   "side": "LV",
+   "line": 3.5,
+   "price": -112,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "LV@NE",
+   "side": "NE",
+   "line": -3.5,
+   "price": -108,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "MIN@NO",
+   "side": "MIN",
+   "line": -2.5,
+   "price": -105,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "MIN@NO",
+   "side": "NO",
+   "line": 2.5,
+   "price": -115,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "CLE@NYJ",
+   "side": "CLE",
+   "line": 2.5,
+   "price": -110,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "CLE@NYJ",
+   "side": "NYJ",
+   "line": -2.5,
+   "price": -110,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "IND@PIT",
+   "side": "IND",
+   "line": 3.0,
+   "price": -115,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "IND@PIT",
+   "side": "PIT",
+   "line": -3.0,
+   "price": -105,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "NYG@WSH",
+   "side": "NYG",
+   "line": 3.5,
+   "price": -108,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "NYG@WSH",
+   "side": "WSH",
+   "line": -3.5,
+   "price": -112,
+   "at_utc": "2026-10-11T01:56:00+00:00",
+   "source": "snap_w5_20261010_2056/dk_20261011T0156Z.json"
+  },
+  {
+   "week": 5,
+   "game": "DEN@LAC",
+   "side": "DEN",
+   "line": -3.5,
+   "price": -108,
+   "at_utc": "2026-10-11T17:59:37+00:00",
+   "source": "branch dk_20261011T1759Z.json"
+  },
+  {
+   "week": 5,
+   "game": "DEN@LAC",
+   "side": "LAC",
+   "line": 3.5,
+   "price": -112,
+   "at_utc": "2026-10-11T17:59:37+00:00",
+   "source": "branch dk_20261011T1759Z.json"
+  },
+  {
+   "week": 5,
+   "game": "DET@ARI",
+   "side": "DET",
+   "line": -5.5,
+   "price": -108,
+   "at_utc": "2026-10-11T17:59:37+00:00",
+   "source": "branch dk_20261011T1759Z.json"
+  },
+  {
+   "week": 5,
+   "game": "DET@ARI",
+   "side": "ARI",
+   "line": 5.5,
+   "price": -112,
+   "at_utc": "2026-10-11T17:59:37+00:00",
+   "source": "branch dk_20261011T1759Z.json"
+  },
+  {
+   "week": 5,
+   "game": "SF@SEA",
+   "side": "SF",
+   "line": 3.0,
+   "price": -105,
+   "at_utc": "2026-10-11T17:59:37+00:00",
+   "source": "branch dk_20261011T1759Z.json"
+  },
+  {
+   "week": 5,
+   "game": "SF@SEA",
+   "side": "SEA",
+   "line": -3.0,
+   "price": -115,
+   "at_utc": "2026-10-11T17:59:37+00:00",
+   "source": "branch dk_20261011T1759Z.json"
+  },
+  {
+   "week": 5,
+   "game": "BAL@ATL",
+   "side": "BAL",
+   "line": 3.0,
+   "price": 100,
+   "at_utc": "2026-10-11T23:14:40+00:00",
+   "source": "branch dk_20261011T2314Z.json"
+  },
+  {
+   "week": 5,
+   "game": "BAL@ATL",
+   "side": "ATL",
+   "line": -3.0,
+   "price": -120,
+   "at_utc": "2026-10-11T23:14:40+00:00",
+   "source": "branch dk_20261011T2314Z.json"
+  },
+  {
+   "week": 5,
+   "game": "BUF@LAR",
+   "side": "BUF",
+   "line": 3.5,
+   "price": -115,
+   "at_utc": "2026-10-12T03:32:25+00:00",
+   "source": "branch dk_20261012T0332Z.json"
+  },
+  {
+   "week": 5,
+   "game": "BUF@LAR",
+   "side": "LAR",
+   "line": -3.5,
+   "price": -105,
+   "at_utc": "2026-10-12T03:32:25+00:00",
+   "source": "branch dk_20261012T0332Z.json"
+  }
+ ]
+}

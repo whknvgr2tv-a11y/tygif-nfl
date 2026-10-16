@@ -3,25 +3,25 @@ Lines as of Thu Oct 15, 7:09 PM CT
 
 STRONG
   Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 7:15 PM CT · Final DEN 17–14 · win +$95
-    Type 2 · Fade the crowd · STRONG: 7-3-2, +$345
+    Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
     a: Yes · b: Yes · c: Yes · d: Yes
   Chicago −1.5  ·  Chicago at Atlanta, Sun Oct 18 · 12:00 PM CT
-    Type 2 · Fade the crowd · STRONG: 7-3-2, +$345
+    Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
     a: Yes · b: Yes · c: Yes · d: Yes
   Cleveland +3.5  ·  Baltimore at Cleveland, Sun Oct 18 · 12:00 PM CT
-    Type 2 · Fade the crowd · STRONG: 7-3-2, +$345
+    Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
     a: Yes · b: Yes · c: Yes · d: Yes
   Tennessee +7  ·  Tennessee at Indianapolis, Sun Oct 18 · 12:00 PM CT
-    Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
+    Type 1 · Fade the big favorite · STRONG: 10-2-2, +$716
     a: Yes · b: Yes · c: Yes · d: Yes
   NY Jets +7.5  ·  NY Jets at New England, Sun Oct 18 · 12:00 PM CT
-    Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
+    Type 1 · Fade the big favorite · STRONG: 10-2-2, +$716
     a: Yes · b: Yes · c: Yes · d: Yes
   Tampa Bay +2.5  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 12:00 PM CT
-    Type 2 · Fade the crowd · STRONG: 7-3-2, +$345
+    Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
     a: Yes · b: Yes · c: Yes · d: Yes
   Washington +7.5  ·  Washington at San Francisco, Mon Oct 19 · 7:15 PM CT
-    Type 1 · Fade the big favorite · STRONG: 11-2-1, +$805
+    Type 1 · Fade the big favorite · STRONG: 10-2-2, +$716
     a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN

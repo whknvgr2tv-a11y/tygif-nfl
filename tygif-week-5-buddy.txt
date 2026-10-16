@@ -1,11 +1,11 @@
 Week 5 · Final
 
 STRONG Tampa Bay +8.5 · Final TB 24–16 · win +$98
-STRONG Miami +7.5 · Final MIA 24–31 · win +$89
-STRONG NY Jets −2.5 · Final NYJ 17–12 · win +$87
+STRONG Miami +7 · Final MIA 24–31 · push $0
+STRONG NY Jets −2.5 · Final NYJ 17–12 · win +$91
 STRONG Washington −3.5 · Final WSH 27–27 · loss −$100
-LEAN Tennessee +6.5 · Final TEN 3–26 · loss −$100
-LEAN Arizona +4.5 · Final ARI 21–45 · loss −$100
+LEAN Tennessee +7 · Final TEN 3–26 · loss −$100
+LEAN Arizona +5.5 · Final ARI 21–45 · loss −$100
 LEAN Atlanta −3 · Final ATL 23–30 · loss −$100
 STRONG Tampa Bay ML · Final 24–16 · win +$380
 STRONG Miami ML · Final 24–31 · loss −$100

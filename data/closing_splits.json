@@ -66,13 +66,13 @@
   },
   "dk_close": {
    "sp": {
-    "MIA": "+7.5",
-    "CIN": "−7.5"
+    "MIA": "+7",
+    "CIN": "−7"
    },
-   "price": "−112",
+   "price": "−110",
    "prices": {
-    "MIA": "−112",
-    "CIN": "−108"
+    "MIA": "−110",
+    "CIN": "−110"
    },
    "source": "ESPN game summary 401872982 (DraftKings close)"
   },
@@ -132,10 +132,10 @@
     "NYJ": "−2.5",
     "CLE": "+2.5"
    },
-   "price": "−115",
+   "price": "−110",
    "prices": {
-    "NYJ": "−115",
-    "CLE": "−105"
+    "NYJ": "−110",
+    "CLE": "−110"
    },
    "source": "ESPN game summary 401872983 (DraftKings close)"
   },
@@ -195,10 +195,10 @@
     "WSH": "−3.5",
     "NYG": "+3.5"
    },
-   "price": "−108",
+   "price": "−112",
    "prices": {
-    "WSH": "−108",
-    "NYG": "−112"
+    "WSH": "−112",
+    "NYG": "−108"
    },
    "source": "ESPN game summary 401872988 (DraftKings close)"
   },
@@ -405,13 +405,13 @@
   },
   "dk_close": {
    "sp": {
-    "TEN": "+6.5",
-    "HOU": "−6.5"
+    "TEN": "+7",
+    "HOU": "−7"
    },
-   "price": "−110",
+   "price": "−112",
    "prices": {
-    "TEN": "−110",
-    "HOU": "−110"
+    "TEN": "−112",
+    "HOU": "−108"
    },
    "source": "ESPN game summary 401872984 (DraftKings close)"
   },
@@ -586,8 +586,8 @@
   "dk_note_short": "DraftKings split Sun Oct 11, 1:59 PM ET, the last before kickoff",
   "dk_close_line": {
    "sp": {
-    "LAC": "+3",
-    "DEN": "−3"
+    "LAC": "+3.5",
+    "DEN": "−3.5"
    },
    "source": "ESPN game summary 401872989 (DraftKings close)"
   }
@@ -629,13 +629,13 @@
   },
   "dk_close": {
    "sp": {
-    "ARI": "+4.5",
-    "DET": "−4.5"
+    "ARI": "+5.5",
+    "DET": "−5.5"
    },
-   "price": "−105",
+   "price": "−112",
    "prices": {
-    "ARI": "−105",
-    "DET": "−115"
+    "ARI": "−112",
+    "DET": "−108"
    },
    "source": "ESPN game summary 401872991 (DraftKings close)"
   },
@@ -755,10 +755,10 @@
     "ATL": "−3",
     "BAL": "+3"
    },
-   "price": "−118",
+   "price": "−120",
    "prices": {
-    "ATL": "−118",
-    "BAL": "−102"
+    "ATL": "−120",
+    "BAL": "+100"
    },
    "source": "ESPN game summary 401872993 (DraftKings close)"
   },

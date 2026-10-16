@@ -3,13 +3,13 @@ Final
 
 STRONG
   Tampa Bay +8.5  ·  Thu Oct 8 · 7:15 PM CT · Final TB 24–16 · win +$98
-  Miami +7.5  ·  Sun Oct 11 · 12:00 PM CT · Final MIA 24–31 · win +$89
-  NY Jets −2.5  ·  Sun Oct 11 · 12:00 PM CT · Final NYJ 17–12 · win +$87
+  Miami +7  ·  Sun Oct 11 · 12:00 PM CT · Final MIA 24–31 · push $0
+  NY Jets −2.5  ·  Sun Oct 11 · 12:00 PM CT · Final NYJ 17–12 · win +$91
   Washington −3.5  ·  Sun Oct 11 · 12:00 PM CT · Final WSH 27–27 · loss −$100
 
 LEAN
-  Tennessee +6.5  ·  Sun Oct 11 · 12:00 PM CT · Final TEN 3–26 · loss −$100
-  Arizona +4.5  ·  Sun Oct 11 · 3:25 PM CT · Final ARI 21–45 · loss −$100
+  Tennessee +7  ·  Sun Oct 11 · 12:00 PM CT · Final TEN 3–26 · loss −$100
+  Arizona +5.5  ·  Sun Oct 11 · 3:25 PM CT · Final ARI 21–45 · loss −$100
   Atlanta −3  ·  Sun Oct 11 · 7:20 PM CT · Final ATL 23–30 · loss −$100
 
 MONEYLINE
