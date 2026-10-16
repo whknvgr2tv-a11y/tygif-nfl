@@ -1,7 +1,8 @@
 # Split snapshots: how the Tuesday run uses them
 
 The `split-snapshots` workflow saves DraftKings and ScoresAndOdds spread splits every 10 minutes through the 90+ minutes before every kickoff slot (GitHub delays and drops scheduled runs; on Oct 11 nothing ran between 13:10 and 17:58 UTC) to the separate `snapshots` branch
-(`snapshots/dk_<UTC>.json` and `snapshots/sao_<UTC>.json`, parsed splits only; files older than 21 days are pruned).
+(`snapshots/dk_<UTC>.json`, `snapshots/sao_<UTC>.json` and `snapshots/espn_dk_<UTC>.json`; never pruned, they are the grading record).
+`espn_dk_*` holds the ESPN DraftKings moneyline and spread (line, price) with `fetched_utc` for every game not yet started.
 Nothing here is on main, so the site never serves it; the branch is still visible in this public repo.
 
 Tuesday run, for each game of the week:
@@ -13,7 +14,9 @@ Tuesday run, for each game of the week:
    before kickoff. Never use a page read after kickoff: the ScoresAndOdds week page keeps changing
    after kickoff (Week 5: DET@ARI read 56% pre-kickoff, 78% after), so it is not a closing source (TG, Oct 13).
 4. Write both, with their times and sources, to `data/closing_splits.json`; rate the game under
-   Rules v1 with them, then grade at the DraftKings closing line and price (ESPN).
+   Rules v1 with them, then grade at the DraftKings line, price and moneyline recorded last before kickoff
+   (`dk_*` for line/price, `espn_dk_*` for the moneyline). ESPN's post-game close is used only when nothing was
+   recorded before kickoff. Never grade from an ESPN summary fetched after kickoff.
 5. Label every closing split with its exact pull time and source, e.g. 'last pull before kickoff: Sat Oct 10, 8:49 PM ET'.
 6. `scripts/check_coverage.py` runs after each snapshot and fails the run when a game kicked off without a
    DraftKings snapshot in its last 90 minutes. A red run means a gap: fall back to step 7.
@@ -23,11 +26,11 @@ Tuesday run, for each game of the week:
 
 ## Moneyline plays (TG, Oct 13)
 Every weekly run handles ML alongside the spread, using the same card template and records kept separate:
-- A STRONG or LEAN spread play gets a moneyline play on that team only if its DraftKings moneyline (close; current for upcoming games) is plus money (over +100). Pick'em, −100 or a favorite: none.
+- A STRONG or LEAN spread play gets a moneyline play on that team only if its DraftKings moneyline (recorded before kickoff) is plus money (over +100). Pick'em, −100 or a favorite: none.
 - Saturday run: show 'Moneyline: <team>' on qualifying cards (team only; never a price), using the current DraftKings moneyline
   from the ESPN game summary, with its time on the section's one pull-time line.
-- Tuesday run: grade each ML play W/L/P from the final score at the DraftKings closing moneyline (ESPN game summary `pickcenter`,
-  DraftKings `moneyline.<home|away>.close.odds`), flat $100. Write it to `data/ml_log.json`. If the price is missing, record that and
+- Tuesday run: grade each ML play W/L/P from the final score at the DraftKings moneyline recorded last before kickoff (`espn_dk_*`;
+  ESPN `pickcenter` close only if nothing was recorded), flat $100. Write it to `data/ml_log.json`. If the price is missing, record that and
   grade nothing. STRONG ML and LEAN ML records stay separate and are never added to the spread records.
 - Prices live only in the data files. No prices or odds on the site or in the txt files; no dated update or change notes.
 
@@ -40,8 +43,10 @@ After the Tuesday grade, rebuild with clean_build.py; its self-check and deep ch
 No explanatory prose on cards or pages beyond plays, records and the checklist; How keeps the brief rules.
 
 ## Moneyline groups (TG, Oct 14)
-- Every STRONG or LEAN spread play also has our side graded on the DraftKings closing moneyline, favorite or underdog, flat $100, profit rounded per play (ESPN game summary `pickcenter`). Write every row to `data/ml_log.json` with `fd` (Fav/Dog).
-- Groups: rating + type + favorite/underdog (e.g. LEAN Type 3 Underdog). Post a moneyline play only when its group record is profitable (> $0) through the last graded week. $0 or no history: no play.
+- Every STRONG or LEAN spread play also has our side graded on the DraftKings moneyline recorded before kickoff, favorite or underdog, flat $100, profit rounded per play (ESPN game summary `pickcenter`). Write every row to `data/ml_log.json` with `fd` (Fav/Dog).
+- Groups: rating + type + favorite/underdog (e.g. LEAN Type 3 Underdog).
+- ML posting rule: post a moneyline play only when its group record over prior weeks (all weeks before the game's week) is > $0. $0 or no history: no play.
+- Type 3 underdog: never a moneyline play (pass on the moneyline; the spread is unaffected).
 - Re-check after every Tuesday grade. Graded history is never changed by this rule; STRONG and LEAN ML records stay separate from each other and from the spread.
 - Home and This Week: one card per game in kickoff order, with the spread call (STRONG/LEAN/PASS + type record + games list), the ML call (play or no play + group record + games list), the checks row and kickoff/final.
 

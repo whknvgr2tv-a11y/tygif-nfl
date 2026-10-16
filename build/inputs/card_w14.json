@@ -1,0 +1,332 @@
+[
+ {
+  "week": 1,
+  "rating": "STRONG",
+  "game": "ARI@LAC",
+  "play": "Arizona +8.5 (Big fav)",
+  "money": "74%",
+  "res": "W",
+  "type": 1,
+  "ourside": "ARI"
+ },
+ {
+  "week": 1,
+  "rating": "STRONG",
+  "game": "DAL@NYG",
+  "play": "NY Giants +3",
+  "money": "69%",
+  "res": "W",
+  "type": 2,
+  "ourside": "NYG"
+ },
+ {
+  "week": 1,
+  "rating": "STRONG",
+  "game": "DEN@KC",
+  "play": "Kansas City -2.5",
+  "money": "79%",
+  "res": "W",
+  "type": 2,
+  "ourside": "KC"
+ },
+ {
+  "week": 1,
+  "rating": "STRONG",
+  "game": "NE@SEA",
+  "play": "Seattle -3",
+  "money": "65%",
+  "res": "P",
+  "type": 2,
+  "ourside": "SEA"
+ },
+ {
+  "week": 1,
+  "rating": "STRONG",
+  "game": "NO@DET",
+  "play": "New Orleans +7 (Big fav)",
+  "money": "73%",
+  "res": "W",
+  "type": 1,
+  "ourside": "NO"
+ },
+ {
+  "week": 2,
+  "rating": "STRONG",
+  "game": "CLE@TB",
+  "play": "Cleveland +8.5 (Big fav)",
+  "money": "89%",
+  "res": "W",
+  "type": 1,
+  "ourside": "CLE"
+ },
+ {
+  "week": 2,
+  "rating": "STRONG",
+  "game": "JAX@DEN",
+  "play": "Denver -2.5",
+  "money": "81%",
+  "res": "W",
+  "type": 2,
+  "ourside": "DEN"
+ },
+ {
+  "week": 2,
+  "rating": "STRONG",
+  "game": "NO@BAL",
+  "play": "New Orleans +8.5 (Big fav)",
+  "money": "86%",
+  "res": "W",
+  "type": 1,
+  "ourside": "NO"
+ },
+ {
+  "week": 2,
+  "rating": "STRONG",
+  "game": "WSH@DAL",
+  "play": "Dallas -4.5",
+  "money": "68%",
+  "res": "W",
+  "type": 2,
+  "ourside": "DAL"
+ },
+ {
+  "week": 3,
+  "rating": "STRONG",
+  "game": "ARI@SF",
+  "play": "Arizona +7.5 (Big fav)",
+  "money": "79%",
+  "res": "W",
+  "type": 1,
+  "ourside": "ARI"
+ },
+ {
+  "week": 3,
+  "rating": "STRONG",
+  "game": "BAL@DAL",
+  "play": "Dallas +3",
+  "money": "67%",
+  "res": "P",
+  "type": 2,
+  "ourside": "DAL"
+ },
+ {
+  "week": 3,
+  "rating": "STRONG",
+  "game": "NYJ@DET",
+  "play": "NY Jets +7 (Big fav)",
+  "money": "85%",
+  "res": "P",
+  "type": 1,
+  "ourside": "NYJ"
+ },
+ {
+  "week": 4,
+  "rating": "STRONG",
+  "game": "NE@BUF",
+  "play": "New England +7 (Big fav)",
+  "money": "68%",
+  "res": "W",
+  "type": 1,
+  "ourside": "NE"
+ },
+ {
+  "week": 4,
+  "rating": "STRONG",
+  "game": "TEN@BAL",
+  "play": "Tennessee +11.5 (Big fav)",
+  "money": "81%",
+  "res": "W",
+  "type": 1,
+  "ourside": "TEN"
+ },
+ {
+  "week": 1,
+  "rating": "LEAN",
+  "game": "CLE@JAX",
+  "play": "Cleveland +8.5 (Big fav, Line moved against us)",
+  "money": "82%",
+  "res": "L",
+  "type": 1,
+  "ourside": "CLE"
+ },
+ {
+  "week": 1,
+  "rating": "LEAN",
+  "game": "TB@CIN",
+  "play": "Cincinnati -3.5",
+  "money": "59%",
+  "res": "W",
+  "type": 3,
+  "ourside": "CIN"
+ },
+ {
+  "week": 1,
+  "rating": "LEAN",
+  "game": "WSH@PHI",
+  "play": "Washington +6 (Big fav, Line moved against us)",
+  "money": "76%",
+  "res": "W",
+  "type": 1,
+  "ourside": "WSH"
+ },
+ {
+  "week": 2,
+  "rating": "LEAN",
+  "game": "IND@KC",
+  "play": "Indianapolis +6 (Big fav)",
+  "money": "59%",
+  "res": "W",
+  "type": 3,
+  "ourside": "IND"
+ },
+ {
+  "week": 2,
+  "rating": "LEAN",
+  "game": "PHI@TEN",
+  "play": "Tennessee +7 (Big fav, Line moved against us)",
+  "money": "92%",
+  "res": "W",
+  "type": 1,
+  "ourside": "TEN"
+ },
+ {
+  "week": 2,
+  "rating": "LEAN",
+  "game": "PIT@NE",
+  "play": "New England -4.5",
+  "money": "55%",
+  "res": "W",
+  "type": 3,
+  "ourside": "NE"
+ },
+ {
+  "week": 3,
+  "rating": "LEAN",
+  "game": "HOU@IND",
+  "play": "Houston -1.5",
+  "money": "58%",
+  "res": "L",
+  "type": 3,
+  "ourside": "HOU"
+ },
+ {
+  "week": 3,
+  "rating": "LEAN",
+  "game": "KC@MIA",
+  "play": "Miami +10 (Big fav)",
+  "money": "64%",
+  "res": "L",
+  "type": 3,
+  "ourside": "MIA"
+ },
+ {
+  "week": 3,
+  "rating": "LEAN",
+  "game": "LAC@BUF",
+  "play": "LA Chargers +7 (Big fav, Line moved against us)",
+  "money": "70%",
+  "res": "L",
+  "type": 1,
+  "ourside": "LAC"
+ },
+ {
+  "week": 3,
+  "rating": "LEAN",
+  "game": "LV@NO",
+  "play": "New Orleans -3.5",
+  "money": "64%",
+  "res": "L",
+  "type": 3,
+  "ourside": "NO"
+ },
+ {
+  "week": 3,
+  "rating": "LEAN",
+  "game": "NE@JAX",
+  "play": "Jacksonville -3",
+  "money": "63%",
+  "res": "W",
+  "type": 3,
+  "ourside": "JAX"
+ },
+ {
+  "week": 4,
+  "rating": "LEAN",
+  "game": "ATL@NO",
+  "play": "New Orleans -1.5 (Line moved against us)",
+  "money": "75%",
+  "res": "L",
+  "type": 2,
+  "ourside": "NO"
+ },
+ {
+  "week": 4,
+  "rating": "STRONG",
+  "game": "DAL@HOU",
+  "play": "Houston -3",
+  "money": "83%",
+  "res": "L",
+  "type": 2,
+  "ourside": "HOU"
+ },
+ {
+  "week": 4,
+  "rating": "LEAN",
+  "game": "DEN@SF",
+  "play": "Denver +3",
+  "money": "59%",
+  "res": "L",
+  "type": 3,
+  "ourside": "DEN"
+ },
+ {
+  "week": 4,
+  "rating": "LEAN",
+  "game": "DET@CAR",
+  "play": "Carolina +3.5",
+  "money": "56%",
+  "res": "W",
+  "type": 3,
+  "ourside": "CAR"
+ },
+ {
+  "week": 4,
+  "rating": "LEAN",
+  "game": "JAX@CIN",
+  "play": "Cincinnati -2.5",
+  "money": "62%",
+  "res": "L",
+  "type": 3,
+  "ourside": "CIN"
+ },
+ {
+  "week": 4,
+  "rating": "LEAN",
+  "game": "KC@LV",
+  "play": "Las Vegas +3.5",
+  "money": "58%",
+  "res": "W",
+  "type": 3,
+  "ourside": "LV"
+ },
+ {
+  "week": 4,
+  "rating": "LEAN",
+  "game": "LAC@SEA",
+  "play": "LA Chargers +7 (Big fav)",
+  "money": "55%",
+  "res": "P",
+  "type": 3,
+  "ourside": "LAC"
+ },
+ {
+  "week": 4,
+  "rating": "LEAN",
+  "game": "MIA@MIN",
+  "play": "Miami +10 (Big fav)",
+  "money": "58%",
+  "res": "W",
+  "type": 3,
+  "ourside": "MIA"
+ }
+]

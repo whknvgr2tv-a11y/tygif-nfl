@@ -1,6 +1,6 @@
 {
- "source": "ESPN game summaries, DraftKings moneyline (close for final games; current for Week 6, pulled Thu Oct 15, 12:27 AM ET)",
- "rule": "Every STRONG or LEAN spread play also has our side graded on the DraftKings moneyline (close), favorite or underdog, flat $100, profit rounded per play. Groups: rating + type + favorite/underdog. A moneyline play is posted only when its group record is profitable (> $0) through the last graded week. Never combined with spread; STRONG never combined with LEAN.",
+ "source": "DraftKings moneyline recorded last before kickoff (data/pregame_lines.json); ESPN game summary close only where nothing was recorded (Weeks 1-4)",
+ "rule": "Every STRONG or LEAN spread play also has our side graded on the DraftKings moneyline recorded before kickoff, favorite or underdog, flat $100, profit rounded per play. Groups: rating + type + favorite/underdog. A moneyline play is posted only when its group record over prior weeks is profitable (> $0); never on a Type 3 underdog. Never combined with spread; STRONG never combined with LEAN.",
  "plays": [
   {
    "week": 1,

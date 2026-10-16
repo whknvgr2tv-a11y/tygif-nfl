@@ -4,14 +4,18 @@
 Writes to OUT (default ./snapshots):
   dk_<UTC stamp>.json   parsed DraftKings spread splits (money = % handle, bets = % bets)
   sao_<UTC stamp>.json  parsed ScoresAndOdds spread splits for the NFL week page
-Prunes snapshot files older than KEEP_DAYS (21). Exits 1 if either source
+  espn_dk_<UTC stamp>.json  DraftKings moneyline + spread (line, price) from ESPN for every game
+                        not yet started (the grading numbers recorded before kickoff)
+Snapshots are kept (they are the grading record). Exits 1 if any source
 returns no games (bot block or layout change), so the run shows as failed.
 """
 import json, os, re, sys, time, urllib.request
 from datetime import datetime, timezone, timedelta
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'snapshots'
-KEEP_DAYS = 21
+KEEP_DAYS = None   # never prune: pre-kickoff pulls are the grading record
+ESPN_SB = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard'
+ESPN_SUM = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event={}'
 UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'
 DK = ('https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/'
       '?tb_eg=88808&tb_edate=n7days&tb_emt=Spread&tb_page={}')
@@ -59,6 +63,28 @@ def sao_parse(h):
                          'money_away': int(pa[1]), 'money_home': int(pb[1])}, blk[:6000]))
     return out
 
+def espn_dk_game(e, s):
+    """one scheduled ESPN scoreboard event + its game summary -> DraftKings ML and spread (current = pre-kickoff numbers)"""
+    c = e['competitions'][0]
+    t = {x['homeAway']: x['team']['abbreviation'] for x in c['competitors']}
+    pc = [p for p in s.get('pickcenter', []) if 'DraftKings' in p['provider']['name']]
+    if not pc: return None
+    pc = pc[0]; ml = pc.get('moneyline') or {}; ps = pc.get('pointSpread') or {}
+    cur = lambda d, k: ((d.get(k) or {}).get('close') or {})   # ESPN 'close' = current number while the game is still scheduled
+    return {'id': e['id'], 'away': t['away'], 'home': t['home'], 'kickoff_utc': e['date'],
+            'ml': {'away': cur(ml, 'away').get('odds'), 'home': cur(ml, 'home').get('odds')},
+            'spread': {k: {'line': cur(ps, k).get('line'), 'odds': cur(ps, k).get('odds')} for k in ('away', 'home')}}
+
+def espn_dk():
+    """DraftKings ML + spread from ESPN for games still scheduled (pre-kickoff numbers only)."""
+    st, h = get(ESPN_SB); sb = json.loads(h); out = []
+    for e in sb.get('events', []):
+        if e['competitions'][0]['status']['type']['state'] != 'pre': continue
+        st, h = get(ESPN_SUM.format(e['id'])); g = espn_dk_game(e, json.loads(h))
+        if g: out.append(g)
+        time.sleep(0.5)
+    return {'season': sb.get('season', {}).get('year'), 'week': sb.get('week', {}).get('number')}, out
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     now = datetime.now(timezone.utc); stamp = now.strftime('%Y%m%dT%H%MZ')
@@ -84,9 +110,17 @@ def main():
                'games': [g for g, _ in sao]}, open(f'{OUT}/sao_{stamp}.json', 'w'), indent=1)
     print(f'ScoresAndOdds: {len(sao)} games with spread splits (week {wk.group(1) if wk else "?"})')
     if not sao: ok = False
-    # prune
-    cut = now - timedelta(days=KEEP_DAYS)
-    for fn in os.listdir(OUT):
+    # ESPN DraftKings moneyline + spread for games not yet started
+    try:
+        wkm, ed = espn_dk()
+        json.dump(dict({'fetched_utc': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'source': ESPN_SB}, **wkm, games=ed),
+                  open(f'{OUT}/espn_dk_{stamp}.json', 'w'), indent=1)
+        print(f'ESPN DraftKings: {len(ed)} games not yet started (week {wkm["week"]})')
+    except Exception as ex:
+        print('ESPN DraftKings capture failed:', ex); ok = False
+    # prune (disabled when KEEP_DAYS is None)
+    cut = now - timedelta(days=KEEP_DAYS) if KEEP_DAYS else None
+    for fn in (os.listdir(OUT) if cut else []):
         m = re.search(r'_(\d{8}T\d{4})Z', fn)
         if m and datetime.strptime(m.group(1), '%Y%m%dT%H%M').replace(tzinfo=timezone.utc) < cut:
             os.remove(os.path.join(OUT, fn))

@@ -41,3 +41,4 @@ PASS money ML : 16-15-0 +$185 n31
 PASS fade sp : 12-19-0 −$807 n31
 PASS fade ML : 15-16-0 −$372 n31
 buckets : {'spread only': 23, 'pass money trend': 31, 'spread+ML': 24, 'pass no clear side': 2}
+settled games : 80

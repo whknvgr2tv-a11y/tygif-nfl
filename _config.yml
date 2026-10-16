@@ -1,0 +1,3 @@
+# GitHub Pages: never serve the build sources or raw pulls
+exclude:
+  - build
