@@ -662,6 +662,17 @@
   },
   {
    "week": 6,
+   "game": "TEN@IND",
+   "rating": "STRONG",
+   "side": "TEN",
+   "spread_line": 6.5,
+   "status": "preview",
+   "espn_event": "401873003",
+   "price": 245,
+   "fd": "Dog"
+  },
+  {
+   "week": 6,
    "game": "NYJ@NE",
    "rating": "STRONG",
    "side": "NYJ",
@@ -690,7 +701,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401872998",
-   "price": 140,
+   "price": 136,
    "fd": "Dog"
   },
   {
@@ -718,12 +729,12 @@
   {
    "week": 6,
    "game": "LAC@KC",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "LAC",
    "spread_line": 7.5,
    "status": "preview",
    "espn_event": "401873006",
-   "price": 330,
+   "price": 320,
    "fd": "Dog"
   },
   {
@@ -740,7 +751,7 @@
   {
    "week": 6,
    "game": "DAL@GB",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "GB",
    "spread_line": -1.5,
    "status": "preview",

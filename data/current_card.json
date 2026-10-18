@@ -1,6 +1,6 @@
 {
  "week": 6,
- "posted_at_et": "Sun Oct 18, 8:03 AM ET",
+ "posted_at_et": "Sun Oct 18, 9:03 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -11,6 +11,15 @@
    "rating": "STRONG",
    "line": "+2.5",
    "kickoff_utc": "2026-10-16T00:15:00Z"
+  },
+  {
+   "game": "TEN@IND",
+   "team": "TEN",
+   "name": "Tennessee",
+   "nick": "Titans",
+   "rating": "STRONG",
+   "line": "+6.5",
+   "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
    "game": "NYJ@NE",
@@ -62,7 +71,7 @@
    "team": "LAC",
    "name": "LA Chargers",
    "nick": "Chargers",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "line": "+7.5",
    "kickoff_utc": "2026-10-18T20:25:00Z"
   },
@@ -80,7 +89,7 @@
    "team": "GB",
    "name": "Green Bay",
    "nick": "Packers",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "line": "-1.5",
    "kickoff_utc": "2026-10-19T00:20:00Z"
   },
