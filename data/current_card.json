@@ -1,6 +1,6 @@
 {
  "week": 6,
- "posted_at_et": "Sun Oct 18, 12:14 AM ET",
+ "posted_at_et": "Sun Oct 18, 8:03 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -27,7 +27,7 @@
    "name": "New Orleans",
    "nick": "Saints",
    "rating": "LEAN",
-   "line": "+1.5",
+   "line": "-1.5",
    "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
@@ -44,7 +44,7 @@
    "team": "TB",
    "name": "Tampa Bay",
    "nick": "Buccaneers",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "line": "+2.5",
    "kickoff_utc": "2026-10-18T17:00:00Z"
   },
@@ -62,7 +62,7 @@
    "team": "LAC",
    "name": "LA Chargers",
    "nick": "Chargers",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "line": "+7.5",
    "kickoff_utc": "2026-10-18T20:25:00Z"
   },
@@ -74,6 +74,15 @@
    "rating": "LEAN",
    "line": "+5.5",
    "kickoff_utc": "2026-10-18T20:25:00Z"
+  },
+  {
+   "game": "DAL@GB",
+   "team": "GB",
+   "name": "Green Bay",
+   "nick": "Packers",
+   "rating": "LEAN",
+   "line": "-1.5",
+   "kickoff_utc": "2026-10-19T00:20:00Z"
   },
   {
    "game": "WSH@SF",
