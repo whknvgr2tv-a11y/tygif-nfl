@@ -1,6 +1,6 @@
 {
  "week": 6,
- "posted_at_et": "Sun Oct 18, 9:03 AM ET",
+ "posted_at_et": "Sun Oct 18, 10:06 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -89,7 +89,7 @@
    "team": "GB",
    "name": "Green Bay",
    "nick": "Packers",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "line": "-1.5",
    "kickoff_utc": "2026-10-19T00:20:00Z"
   },

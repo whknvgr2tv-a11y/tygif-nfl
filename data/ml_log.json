@@ -690,7 +690,7 @@
    "spread_line": -1.5,
    "status": "preview",
    "espn_event": "401873000",
-   "price": -110,
+   "price": -108,
    "fd": "Fav"
   },
   {
@@ -745,13 +745,13 @@
    "spread_line": 5.5,
    "status": "preview",
    "espn_event": "401873005",
-   "price": 210,
+   "price": 200,
    "fd": "Dog"
   },
   {
    "week": 6,
    "game": "DAL@GB",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "GB",
    "spread_line": -1.5,
    "status": "preview",
@@ -767,7 +767,7 @@
    "spread_line": 7.5,
    "status": "preview",
    "espn_event": "401873008",
-   "price": 360,
+   "price": 350,
    "fd": "Dog"
   }
  ]
