@@ -1,6 +1,6 @@
 {
  "week": 6,
- "posted_at_et": "Sun Oct 18, 10:06 AM ET",
+ "posted_at_et": "Sun Oct 18, 11:10 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -54,7 +54,7 @@
    "name": "Tampa Bay",
    "nick": "Buccaneers",
    "rating": "LEAN",
-   "line": "+2.5",
+   "line": "+1.5",
    "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {

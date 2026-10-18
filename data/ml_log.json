@@ -668,7 +668,7 @@
    "spread_line": 6.5,
    "status": "preview",
    "espn_event": "401873003",
-   "price": 245,
+   "price": 235,
    "fd": "Dog"
   },
   {
@@ -679,7 +679,7 @@
    "spread_line": 7.5,
    "status": "preview",
    "espn_event": "401873001",
-   "price": 285,
+   "price": 275,
    "fd": "Dog"
   },
   {
@@ -709,10 +709,10 @@
    "game": "PIT@TB",
    "rating": "LEAN",
    "side": "TB",
-   "spread_line": 2.5,
+   "spread_line": 1.5,
    "status": "preview",
    "espn_event": "401873002",
-   "price": 120,
+   "price": 110,
    "fd": "Dog"
   },
   {
