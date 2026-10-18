@@ -1,15 +1,9 @@
 TYGIF'S MODEL · WEEK 6
-Lines as of Sat Oct 17, 7:01 PM CT
+Lines as of Sat Oct 17, 11:14 PM CT
 
 STRONG
   Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 7:15 PM CT · Final DEN 17–14 · win +$95
     Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
-    a: Yes · b: Yes · c: Yes · d: Yes
-  Chicago −1.5  ·  Chicago at Atlanta, Sun Oct 18 · 12:00 PM CT
-    Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
-    a: Yes · b: Yes · c: Yes · d: Yes
-  Tennessee +7  ·  Tennessee at Indianapolis, Sun Oct 18 · 12:00 PM CT
-    Type 1 · Fade the big favorite · STRONG: 10-2-2, +$716
     a: Yes · b: Yes · c: Yes · d: Yes
   NY Jets +7.5  ·  NY Jets at New England, Sun Oct 18 · 12:00 PM CT
     Type 1 · Fade the big favorite · STRONG: 10-2-2, +$716
@@ -25,28 +19,22 @@ STRONG
     a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN
-  New Orleans −1.5  ·  New Orleans at NY Giants, Sun Oct 18 · 12:00 PM CT
+  New Orleans +1.5  ·  New Orleans at NY Giants, Sun Oct 18 · 12:00 PM CT
     Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
+  Philadelphia +3  ·  Carolina at Philadelphia, Sun Oct 18 · 12:00 PM CT
+    Type 2 · Fade the crowd · LEAN: 1-0-0, +$85
+    a: Yes · b: Yes · c: Yes · d: No
   LA Chargers +7.5  ·  LA Chargers at Kansas City, Sun Oct 18 · 3:25 PM CT
     Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
   Las Vegas +5.5  ·  Buffalo at Las Vegas, Sun Oct 18 · 3:25 PM CT
     Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
-  Green Bay −1.5  ·  Dallas at Green Bay, Sun Oct 18 · 7:20 PM CT
-    Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
-    a: Yes · b: No · c: Yes · d: Yes
 
 MONEYLINE
   STRONG Denver ML  ·  Seattle at Denver, Thu Oct 15 · 7:15 PM CT · Final 17–14 · win +$124
     Type 2 · Fade the crowd · STRONG ML · Underdog: 3-1-0, +$318
-    a: Yes · b: Yes · c: Yes · d: Yes
-  STRONG Chicago ML  ·  Chicago at Atlanta, Sun Oct 18 · 12:00 PM CT
-    Type 2 · Fade the crowd · STRONG ML · Favorite: 5-2-1, +$127
-    a: Yes · b: Yes · c: Yes · d: Yes
-  STRONG Tennessee ML  ·  Tennessee at Indianapolis, Sun Oct 18 · 12:00 PM CT
-    Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG NY Jets ML  ·  NY Jets at New England, Sun Oct 18 · 12:00 PM CT
     Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740
@@ -63,5 +51,7 @@ MONEYLINE
 
 PASS
   Houston at Jacksonville
+  Chicago at Atlanta
   Baltimore at Cleveland
-  Carolina at Philadelphia
+  Tennessee at Indianapolis
+  Dallas at Green Bay

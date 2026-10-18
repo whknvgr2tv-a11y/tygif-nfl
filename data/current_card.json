@@ -1,6 +1,6 @@
 {
  "week": 6,
- "posted_at_et": "Sat Oct 17, 8:01 PM ET",
+ "posted_at_et": "Sun Oct 18, 12:14 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -11,24 +11,6 @@
    "rating": "STRONG",
    "line": "+2.5",
    "kickoff_utc": "2026-10-16T00:15:00Z"
-  },
-  {
-   "game": "CHI@ATL",
-   "team": "CHI",
-   "name": "Chicago",
-   "nick": "Bears",
-   "rating": "STRONG",
-   "line": "-1.5",
-   "kickoff_utc": "2026-10-18T17:00:00Z"
-  },
-  {
-   "game": "TEN@IND",
-   "team": "TEN",
-   "name": "Tennessee",
-   "nick": "Titans",
-   "rating": "STRONG",
-   "line": "+7",
-   "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
    "game": "NYJ@NE",
@@ -45,7 +27,16 @@
    "name": "New Orleans",
    "nick": "Saints",
    "rating": "LEAN",
-   "line": "-1.5",
+   "line": "+1.5",
+   "kickoff_utc": "2026-10-18T17:00:00Z"
+  },
+  {
+   "game": "CAR@PHI",
+   "team": "PHI",
+   "name": "Philadelphia",
+   "nick": "Eagles",
+   "rating": "LEAN",
+   "line": "+3",
    "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
@@ -83,15 +74,6 @@
    "rating": "LEAN",
    "line": "+5.5",
    "kickoff_utc": "2026-10-18T20:25:00Z"
-  },
-  {
-   "game": "DAL@GB",
-   "team": "GB",
-   "name": "Green Bay",
-   "nick": "Packers",
-   "rating": "LEAN",
-   "line": "-1.5",
-   "kickoff_utc": "2026-10-19T00:20:00Z"
   },
   {
    "game": "WSH@SF",
