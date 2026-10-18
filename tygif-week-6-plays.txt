@@ -1,5 +1,5 @@
 TYGIF'S MODEL · WEEK 6
-Lines as of Thu Oct 15, 11:19 PM CT
+Lines as of Sat Oct 17, 7:01 PM CT
 
 STRONG
   Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 7:15 PM CT · Final DEN 17–14 · win +$95
@@ -17,18 +17,24 @@ STRONG
   Tampa Bay +2.5  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
     a: Yes · b: Yes · c: Yes · d: Yes
+  Arizona +12.5  ·  Arizona at LA Rams, Sun Oct 18 · 3:05 PM CT
+    Type 1 · Fade the big favorite · STRONG: 10-2-2, +$716
+    a: Yes · b: Yes · c: Yes · d: Yes
   Washington +7.5  ·  Washington at San Francisco, Mon Oct 19 · 7:15 PM CT
     Type 1 · Fade the big favorite · STRONG: 10-2-2, +$716
     a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN
-  Cleveland +3.5  ·  Baltimore at Cleveland, Sun Oct 18 · 12:00 PM CT
-    Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
-    a: Yes · b: No · c: Yes · d: Yes
   New Orleans −1.5  ·  New Orleans at NY Giants, Sun Oct 18 · 12:00 PM CT
     Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
-  LA Chargers +8.5  ·  LA Chargers at Kansas City, Sun Oct 18 · 3:25 PM CT
+  LA Chargers +7.5  ·  LA Chargers at Kansas City, Sun Oct 18 · 3:25 PM CT
+    Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
+    a: Yes · b: No · c: Yes · d: Yes
+  Las Vegas +5.5  ·  Buffalo at Las Vegas, Sun Oct 18 · 3:25 PM CT
+    Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
+    a: Yes · b: No · c: Yes · d: Yes
+  Green Bay −1.5  ·  Dallas at Green Bay, Sun Oct 18 · 7:20 PM CT
     Type 3 · Crowd leaning · LEAN: 9-8-1, +$40
     a: Yes · b: No · c: Yes · d: Yes
 
@@ -48,13 +54,14 @@ MONEYLINE
   STRONG Tampa Bay ML  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG ML · Underdog: 3-1-0, +$318
     a: Yes · b: Yes · c: Yes · d: Yes
+  STRONG Arizona ML  ·  Arizona at LA Rams, Sun Oct 18 · 3:05 PM CT
+    Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740
+    a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Washington ML  ·  Washington at San Francisco, Mon Oct 19 · 7:15 PM CT
     Type 1 · Fade the big favorite · STRONG ML · Underdog: 5-9-0, +$740
     a: Yes · b: Yes · c: Yes · d: Yes
 
 PASS
   Houston at Jacksonville
+  Baltimore at Cleveland
   Carolina at Philadelphia
-  Arizona at LA Rams
-  Buffalo at Las Vegas
-  Dallas at Green Bay

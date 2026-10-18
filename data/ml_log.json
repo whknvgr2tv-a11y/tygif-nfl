@@ -668,19 +668,8 @@
    "spread_line": -1.5,
    "status": "preview",
    "espn_event": "401872999",
-   "price": -115,
+   "price": -120,
    "fd": "Fav"
-  },
-  {
-   "week": 6,
-   "game": "BAL@CLE",
-   "rating": "LEAN",
-   "side": "CLE",
-   "spread_line": 3.5,
-   "status": "preview",
-   "espn_event": "401872997",
-   "price": 170,
-   "fd": "Dog"
   },
   {
    "week": 6,
@@ -712,7 +701,7 @@
    "spread_line": -1.5,
    "status": "preview",
    "espn_event": "401873000",
-   "price": -112,
+   "price": -110,
    "fd": "Fav"
   },
   {
@@ -728,14 +717,47 @@
   },
   {
    "week": 6,
+   "game": "ARI@LAR",
+   "rating": "STRONG",
+   "side": "ARI",
+   "spread_line": 12.5,
+   "status": "preview",
+   "espn_event": "401873004",
+   "price": 550,
+   "fd": "Dog"
+  },
+  {
+   "week": 6,
    "game": "LAC@KC",
    "rating": "LEAN",
    "side": "LAC",
-   "spread_line": 8.5,
+   "spread_line": 7.5,
    "status": "preview",
    "espn_event": "401873006",
-   "price": 350,
+   "price": 330,
    "fd": "Dog"
+  },
+  {
+   "week": 6,
+   "game": "BUF@LV",
+   "rating": "LEAN",
+   "side": "LV",
+   "spread_line": 5.5,
+   "status": "preview",
+   "espn_event": "401873005",
+   "price": 210,
+   "fd": "Dog"
+  },
+  {
+   "week": 6,
+   "game": "DAL@GB",
+   "rating": "LEAN",
+   "side": "GB",
+   "spread_line": -1.5,
+   "status": "preview",
+   "espn_event": "401873007",
+   "price": -115,
+   "fd": "Fav"
   },
   {
    "week": 6,
@@ -745,7 +767,7 @@
    "spread_line": 7.5,
    "status": "preview",
    "espn_event": "401873008",
-   "price": 330,
+   "price": 360,
    "fd": "Dog"
   }
  ]

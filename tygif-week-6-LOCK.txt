@@ -1,5 +1,5 @@
 TYGIF'S MODEL · WEEK 6
-Lines as of Thu Oct 15, 11:19 PM CT
+Lines as of Sat Oct 17, 7:01 PM CT
 
 STRONG
   Denver +2.5  ·  Thu Oct 15 · 7:15 PM CT · Final DEN 17–14 · win +$95
@@ -7,12 +7,14 @@ STRONG
   Tennessee +7  ·  Sun Oct 18 · 12:00 PM CT
   NY Jets +7.5  ·  Sun Oct 18 · 12:00 PM CT
   Tampa Bay +2.5  ·  Sun Oct 18 · 12:00 PM CT
+  Arizona +12.5  ·  Sun Oct 18 · 3:05 PM CT
   Washington +7.5  ·  Mon Oct 19 · 7:15 PM CT
 
 LEAN
-  Cleveland +3.5  ·  Sun Oct 18 · 12:00 PM CT
   New Orleans −1.5  ·  Sun Oct 18 · 12:00 PM CT
-  LA Chargers +8.5  ·  Sun Oct 18 · 3:25 PM CT
+  LA Chargers +7.5  ·  Sun Oct 18 · 3:25 PM CT
+  Las Vegas +5.5  ·  Sun Oct 18 · 3:25 PM CT
+  Green Bay −1.5  ·  Sun Oct 18 · 7:20 PM CT
 
 MONEYLINE
   STRONG Denver ML  ·  Thu Oct 15 · 7:15 PM CT · Final 17–14 · win +$124
@@ -20,11 +22,10 @@ MONEYLINE
   STRONG Tennessee ML  ·  Sun Oct 18 · 12:00 PM CT
   STRONG NY Jets ML  ·  Sun Oct 18 · 12:00 PM CT
   STRONG Tampa Bay ML  ·  Sun Oct 18 · 12:00 PM CT
+  STRONG Arizona ML  ·  Sun Oct 18 · 3:05 PM CT
   STRONG Washington ML  ·  Mon Oct 19 · 7:15 PM CT
 
 PASS
   Houston at Jacksonville
+  Baltimore at Cleveland
   Carolina at Philadelphia
-  Arizona at LA Rams
-  Buffalo at Las Vegas
-  Dallas at Green Bay

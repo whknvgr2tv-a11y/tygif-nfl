@@ -1,0 +1,57 @@
+{
+ "checked": "2026-10-17 7:03 PM CT (Saturday refresh; ESPN injuries API, final injury reports Fri Oct 16 plus Saturday news)",
+ "rule": "Rules v2 (Oct 15): the QB rule was removed, so QB status never drops a rating; recorded for the record only",
+ "teams": {
+  "CHI": {
+   "drop": false,
+   "note": "Caleb Williams is questionable with a hamstring injury; expected to start per ESPN/Schefter Sat Oct 17 (backups Case Keenum, Tyson Bagent)"
+  },
+  "TEN": {
+   "drop": false,
+   "note": "Cam Ward has no game status and plays"
+  },
+  "NYJ": {
+   "drop": false,
+   "note": "Geno Smith has no game status and plays"
+  },
+  "TB": {
+   "drop": false,
+   "note": "Baker Mayfield is out (right thumb); Jalon Daniels starts"
+  },
+  "ARI": {
+   "drop": false,
+   "note": "Jacoby Brissett has no game status and plays"
+  },
+  "WSH": {
+   "drop": false,
+   "note": "Jayden Daniels has no game status and plays (backup Marcus Mariota out, knee)"
+  },
+  "NO": {
+   "drop": false,
+   "note": "Tyler Shough has no game status and plays"
+  },
+  "LAC": {
+   "drop": false,
+   "note": "Justin Herbert has no game status and plays"
+  },
+  "LV": {
+   "drop": false,
+   "note": "Kirk Cousins has no game status and plays"
+  },
+  "GB": {
+   "drop": false,
+   "note": "Jordan Love has no game status and plays"
+  }
+ },
+ "opponents_and_pass_games": {
+  "ATL": {
+   "note": "Michael Penix Jr. (ribs) has no designation and plays"
+  },
+  "BAL": {
+   "note": "Lamar Jackson is out (ankle); Tyler Huntley starts (BAL@CLE is a PASS)"
+  },
+  "PHI": {
+   "note": "Jalen Hurts placed on injured reserve (calf) Sat Oct 17; Tanner McKee starts (CAR@PHI is a PASS)"
+  }
+ }
+}
