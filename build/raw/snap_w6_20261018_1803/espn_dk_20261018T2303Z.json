@@ -1,0 +1,48 @@
+{
+ "fetched_utc": "2026-10-18T23:03:53+00:00",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard",
+ "season": 2026,
+ "week": 6,
+ "games": [
+  {
+   "id": "401873007",
+   "away": "DAL",
+   "home": "GB",
+   "kickoff_utc": "2026-10-19T00:20Z",
+   "ml": {
+    "away": "-112",
+    "home": "-108"
+   },
+   "spread": {
+    "away": {
+     "line": "-1.5",
+     "odds": "+102"
+    },
+    "home": {
+     "line": "+1.5",
+     "odds": "-122"
+    }
+   }
+  },
+  {
+   "id": "401873008",
+   "away": "WSH",
+   "home": "SF",
+   "kickoff_utc": "2026-10-20T00:15Z",
+   "ml": {
+    "away": "+350",
+    "home": "-455"
+   },
+   "spread": {
+    "away": {
+     "line": "+7.5",
+     "odds": "-110"
+    },
+    "home": {
+     "line": "-7.5",
+     "odds": "-110"
+    }
+   }
+  }
+ ]
+}

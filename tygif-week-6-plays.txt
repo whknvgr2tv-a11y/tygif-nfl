@@ -1,38 +1,38 @@
 TYGIF'S MODEL · WEEK 6
-Lines as of Sun Oct 18, 2:31 PM CT
+Lines as of Sun Oct 18, 6:03 PM CT
 
 STRONG
   Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 7:15 PM CT · Final DEN 17–14 · win +$95
     Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
     a: Yes · b: Yes · c: Yes · d: Yes
   Tennessee +6.5  ·  Tennessee at Indianapolis, Sun Oct 18 · 12:00 PM CT · Final TEN 26–20 · win +$93
-    Type 1 · Fade the big favorite · STRONG: 12-2-2, +$898
+    Type 1 · Fade the big favorite · STRONG: 13-2-2, +$993
     a: Yes · b: Yes · c: Yes · d: Yes
   NY Jets +7.5  ·  NY Jets at New England, Sun Oct 18 · 12:00 PM CT · Final NYJ 19–26 · win +$89
-    Type 1 · Fade the big favorite · STRONG: 12-2-2, +$898
+    Type 1 · Fade the big favorite · STRONG: 13-2-2, +$993
     a: Yes · b: Yes · c: Yes · d: Yes
-  Arizona +12.5  ·  Arizona at LA Rams, Sun Oct 18 · 3:05 PM CT
-    Type 1 · Fade the big favorite · STRONG: 12-2-2, +$898
+  Arizona +12.5  ·  Arizona at LA Rams, Sun Oct 18 · 3:05 PM CT · Final ARI 18–16 · win +$95
+    Type 1 · Fade the big favorite · STRONG: 13-2-2, +$993
     a: Yes · b: Yes · c: Yes · d: Yes
   Washington +7.5  ·  Washington at San Francisco, Mon Oct 19 · 7:15 PM CT
-    Type 1 · Fade the big favorite · STRONG: 12-2-2, +$898
+    Type 1 · Fade the big favorite · STRONG: 13-2-2, +$993
     a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN
   New Orleans −1.5  ·  New Orleans at NY Giants, Sun Oct 18 · 12:00 PM CT · Final NO 34–27 · win +$105
-    Type 3 · Crowd leaning · LEAN: 10-8-1, +$145
+    Type 3 · Crowd leaning · LEAN: 10-9-1, +$45
     a: Yes · b: No · c: Yes · d: Yes
   Philadelphia +3  ·  Carolina at Philadelphia, Sun Oct 18 · 12:00 PM CT · Final PHI 14–25 · loss −$100
     Type 2 · Fade the crowd · LEAN: 1-1-0, −$15
     a: Yes · b: Yes · c: Yes · d: No
-  Tampa Bay +1.5  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 12:00 PM CT
-    Type 3 · Crowd leaning · LEAN: 10-8-1, +$145
+  Tampa Bay +1.5  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 12:00 PM CT · Final TB 19–26 · loss −$100
+    Type 3 · Crowd leaning · LEAN: 10-9-1, +$45
     a: Yes · b: No · c: Yes · d: Yes
   LA Chargers +7.5  ·  LA Chargers at Kansas City, Sun Oct 18 · 3:25 PM CT
-    Type 3 · Crowd leaning · LEAN: 10-8-1, +$145
+    Type 3 · Crowd leaning · LEAN: 10-9-1, +$45
     a: Yes · b: No · c: Yes · d: Yes
   Las Vegas +5.5  ·  Buffalo at Las Vegas, Sun Oct 18 · 3:25 PM CT
-    Type 3 · Crowd leaning · LEAN: 10-8-1, +$145
+    Type 3 · Crowd leaning · LEAN: 10-9-1, +$45
     a: Yes · b: No · c: Yes · d: Yes
 
 MONEYLINE
@@ -40,16 +40,16 @@ MONEYLINE
     Type 2 · Fade the crowd · STRONG ML · Underdog: 3-1-0, +$318
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Tennessee ML  ·  Tennessee at Indianapolis, Sun Oct 18 · 12:00 PM CT · Final 26–20 · win +$235
-    Type 1 · Fade the big favorite · STRONG ML · Underdog: 6-10-0, +$875
+    Type 1 · Fade the big favorite · STRONG ML · Underdog: 7-10-0, +$1,400
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG NY Jets ML  ·  NY Jets at New England, Sun Oct 18 · 12:00 PM CT · Final 19–26 · loss −$100
-    Type 1 · Fade the big favorite · STRONG ML · Underdog: 6-10-0, +$875
+    Type 1 · Fade the big favorite · STRONG ML · Underdog: 7-10-0, +$1,400
     a: Yes · b: Yes · c: Yes · d: Yes
-  STRONG Arizona ML  ·  Arizona at LA Rams, Sun Oct 18 · 3:05 PM CT
-    Type 1 · Fade the big favorite · STRONG ML · Underdog: 6-10-0, +$875
+  STRONG Arizona ML  ·  Arizona at LA Rams, Sun Oct 18 · 3:05 PM CT · Final 18–16 · win +$525
+    Type 1 · Fade the big favorite · STRONG ML · Underdog: 7-10-0, +$1,400
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Washington ML  ·  Washington at San Francisco, Mon Oct 19 · 7:15 PM CT
-    Type 1 · Fade the big favorite · STRONG ML · Underdog: 6-10-0, +$875
+    Type 1 · Fade the big favorite · STRONG ML · Underdog: 7-10-0, +$1,400
     a: Yes · b: Yes · c: Yes · d: Yes
 
 PASS

@@ -1,17 +1,17 @@
 TYGIF'S MODEL · WEEK 6
-Lines as of Sun Oct 18, 2:31 PM CT
+Lines as of Sun Oct 18, 6:03 PM CT
 
 STRONG
   Denver +2.5  ·  Thu Oct 15 · 7:15 PM CT · Final DEN 17–14 · win +$95
   Tennessee +6.5  ·  Sun Oct 18 · 12:00 PM CT · Final TEN 26–20 · win +$93
   NY Jets +7.5  ·  Sun Oct 18 · 12:00 PM CT · Final NYJ 19–26 · win +$89
-  Arizona +12.5  ·  Sun Oct 18 · 3:05 PM CT
+  Arizona +12.5  ·  Sun Oct 18 · 3:05 PM CT · Final ARI 18–16 · win +$95
   Washington +7.5  ·  Mon Oct 19 · 7:15 PM CT
 
 LEAN
   New Orleans −1.5  ·  Sun Oct 18 · 12:00 PM CT · Final NO 34–27 · win +$105
   Philadelphia +3  ·  Sun Oct 18 · 12:00 PM CT · Final PHI 14–25 · loss −$100
-  Tampa Bay +1.5  ·  Sun Oct 18 · 12:00 PM CT
+  Tampa Bay +1.5  ·  Sun Oct 18 · 12:00 PM CT · Final TB 19–26 · loss −$100
   LA Chargers +7.5  ·  Sun Oct 18 · 3:25 PM CT
   Las Vegas +5.5  ·  Sun Oct 18 · 3:25 PM CT
 
@@ -19,7 +19,7 @@ MONEYLINE
   STRONG Denver ML  ·  Thu Oct 15 · 7:15 PM CT · Final 17–14 · win +$124
   STRONG Tennessee ML  ·  Sun Oct 18 · 12:00 PM CT · Final 26–20 · win +$235
   STRONG NY Jets ML  ·  Sun Oct 18 · 12:00 PM CT · Final 19–26 · loss −$100
-  STRONG Arizona ML  ·  Sun Oct 18 · 3:05 PM CT
+  STRONG Arizona ML  ·  Sun Oct 18 · 3:05 PM CT · Final 18–16 · win +$525
   STRONG Washington ML  ·  Mon Oct 19 · 7:15 PM CT
 
 PASS

@@ -1,6 +1,6 @@
 {
  "week": 6,
- "posted_at_et": "Sun Oct 18, 3:31 PM ET",
+ "posted_at_et": "Sun Oct 18, 7:03 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -11,6 +11,24 @@
    "rating": "STRONG",
    "line": "+2.5",
    "kickoff_utc": "2026-10-16T00:15:00Z"
+  },
+  {
+   "game": "TEN@IND",
+   "team": "TEN",
+   "name": "Tennessee",
+   "nick": "Titans",
+   "rating": "STRONG",
+   "line": "+6.5",
+   "kickoff_utc": "2026-10-18T17:00:00Z"
+  },
+  {
+   "game": "NYJ@NE",
+   "team": "NYJ",
+   "name": "NY Jets",
+   "nick": "Jets",
+   "rating": "STRONG",
+   "line": "+7.5",
+   "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
    "game": "NO@NYG",
@@ -37,24 +55,6 @@
    "nick": "Buccaneers",
    "rating": "LEAN",
    "line": "+1.5",
-   "kickoff_utc": "2026-10-18T17:00:00Z"
-  },
-  {
-   "game": "TEN@IND",
-   "team": "TEN",
-   "name": "Tennessee",
-   "nick": "Titans",
-   "rating": "STRONG",
-   "line": "+6.5",
-   "kickoff_utc": "2026-10-18T17:00:00Z"
-  },
-  {
-   "game": "NYJ@NE",
-   "team": "NYJ",
-   "name": "NY Jets",
-   "nick": "Jets",
-   "rating": "STRONG",
-   "line": "+7.5",
    "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {

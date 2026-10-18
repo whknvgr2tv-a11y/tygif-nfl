@@ -3,10 +3,10 @@ Final
 
 STRONG
   Tampa Bay +8.5  ·  Tampa Bay at Dallas, Thu Oct 8 · 7:15 PM CT · Final TB 24–16 · win +$98
-    Type 1 · Fade the big favorite · STRONG: 12-2-2, +$898
+    Type 1 · Fade the big favorite · STRONG: 13-2-2, +$993
     a: Yes · b: Yes · c: Yes · d: Yes
   Miami +7  ·  Cincinnati at Miami, Sun Oct 11 · 12:00 PM CT · Final MIA 24–31 · push $0
-    Type 1 · Fade the big favorite · STRONG: 12-2-2, +$898
+    Type 1 · Fade the big favorite · STRONG: 13-2-2, +$993
     a: Yes · b: Yes · c: Yes · d: Yes
   NY Jets −2.5  ·  Cleveland at NY Jets, Sun Oct 11 · 12:00 PM CT · Final NYJ 17–12 · win +$91
     Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
@@ -17,21 +17,21 @@ STRONG
 
 LEAN
   Tennessee +7  ·  Houston at Tennessee, Sun Oct 11 · 12:00 PM CT · Final TEN 3–26 · loss −$100
-    Type 3 · Crowd leaning · LEAN: 10-8-1, +$145
+    Type 3 · Crowd leaning · LEAN: 10-9-1, +$45
     a: Yes · b: No · c: Yes · d: Yes
   Arizona +5.5  ·  Detroit at Arizona, Sun Oct 11 · 3:25 PM CT · Final ARI 21–45 · loss −$100
-    Type 3 · Crowd leaning · LEAN: 10-8-1, +$145
+    Type 3 · Crowd leaning · LEAN: 10-9-1, +$45
     a: Yes · b: No · c: Yes · d: Yes
   Atlanta −3  ·  Baltimore at Atlanta, Sun Oct 11 · 7:20 PM CT · Final ATL 23–30 · loss −$100
-    Type 3 · Crowd leaning · LEAN: 10-8-1, +$145
+    Type 3 · Crowd leaning · LEAN: 10-9-1, +$45
     a: Yes · b: No · c: Yes · d: Yes
 
 MONEYLINE
   STRONG Tampa Bay ML  ·  Tampa Bay at Dallas, Thu Oct 8 · 7:15 PM CT · Final 24–16 · win +$380
-    Type 1 · Fade the big favorite · STRONG ML · Underdog: 6-10-0, +$875
+    Type 1 · Fade the big favorite · STRONG ML · Underdog: 7-10-0, +$1,400
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Miami ML  ·  Cincinnati at Miami, Sun Oct 11 · 12:00 PM CT · Final 24–31 · loss −$100
-    Type 1 · Fade the big favorite · STRONG ML · Underdog: 6-10-0, +$875
+    Type 1 · Fade the big favorite · STRONG ML · Underdog: 7-10-0, +$1,400
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG NY Jets ML  ·  Cleveland at NY Jets, Sun Oct 11 · 12:00 PM CT · Final 17–12 · win +$77
     Type 2 · Fade the crowd · STRONG ML · Favorite: 5-2-1, +$127

@@ -722,10 +722,13 @@
    "rating": "LEAN",
    "side": "TB",
    "spread_line": 1.5,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401873002",
    "price": 110,
-   "fd": "Dog"
+   "fd": "Dog",
+   "score": "26-19",
+   "result": "L",
+   "profit": -100.0
   },
   {
    "week": 6,
@@ -733,10 +736,13 @@
    "rating": "STRONG",
    "side": "ARI",
    "spread_line": 12.5,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401873004",
    "price": 525,
-   "fd": "Dog"
+   "fd": "Dog",
+   "score": "18-16",
+   "result": "W",
+   "profit": 525.0
   },
   {
    "week": 6,
