@@ -22,7 +22,10 @@ DK = ('https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/'
 SAO = 'https://www.scoresandodds.com/nfl/consensus-picks'
 
 def get(url):
-    req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept-Language': 'en-US,en;q=0.9'})
+    if 'dknetwork' in url:   # the DK splits page is CDN-cached; bust it so every pull is fresh
+        url += ('&' if '?' in url else '?') + '_cb=' + str(int(time.time() * 1000))
+    req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept-Language': 'en-US,en;q=0.9',
+                                               'Cache-Control': 'no-cache', 'Pragma': 'no-cache'})
     with urllib.request.urlopen(req, timeout=40) as r:
         return r.status, r.read().decode('utf-8', 'replace')
 

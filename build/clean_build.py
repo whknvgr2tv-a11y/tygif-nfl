@@ -2086,6 +2086,13 @@ def _deepcheck():
         for t_,src,d in _snaps('dk',_W+f"/snap_w{g['week']}_*/"):
             if g['dk_utc']<t_<g['ko_utc'] and frozenset((g['A'],g['H'])) in _dk_rows(d): errs.append(('W6 newer pre-kickoff DraftKings pull ignored',g['gid'],t_))
     print(f'W{GW} pulls ok:',sorted({_etlbl(g['split_utc']) for g in G6}))
+    # DK splits line/price must equal ESPN DK from the same pull (newest pull folder: the one the card is built on)
+    import importlib.util as _ilu
+    _ms=_ilu.spec_from_file_location('dk_match',R+'scripts/dk_match.py'); _dm=_ilu.module_from_spec(_ms); _ms.loader.exec_module(_dm)
+    _sf=sorted(f for f in _g0.glob(_W+f'/snap_w{GW}_*') if _g0.glob(f+'/dk_*.json') and _g0.glob(f+'/espn_dk_*.json'))
+    if _sf:
+        for _b in _dm.check(_sf[-1]): errs.append(('DK splits vs ESPN DK mismatch',_b))
+        print('dk/espn same-pull match ok:',os.path.basename(_sf[-1]))
     if _etlbl('2026-11-08T18:00Z')!='Sun Nov 8, 12:00 PM CT': errs.append(('DST: 2026-11-08T18:00Z',_etlbl('2026-11-08T18:00Z')))
     if _etlbl('2026-10-18T18:00Z')!='Sun Oct 18, 1:00 PM CT': errs.append(('DST: 2026-10-18T18:00Z',_etlbl('2026-10-18T18:00Z')))
     if _fmt(_to_ct('Jan','10','1:00','PM'),', ')!='Sun Jan 10, 12:00 PM' : errs.append(('January year',_fmt(_to_ct('Jan','10','1:00','PM'),', ')))
