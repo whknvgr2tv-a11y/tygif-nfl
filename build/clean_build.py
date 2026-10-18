@@ -1146,6 +1146,59 @@ SIDEREC=(f'<h3 class="sh" id="trends">Trend tracking · not bets</h3><p class="s
    f'<h3 class="sh" id="sidegroups">Side groups · tracking</h3><div class="groups">{"".join(_sgrow(k) for k in _SGK)}{"".join(_sgrow(k,fd) for k in _SGK for fd in ("Fav","Dog"))}</div>')
 def _pt(xs,k):
     return (sum(x[k+'_res']=='W' for x in xs),sum(x[k+'_res']=='L' for x in xs),sum(x[k+'_res']=='P' for x in xs),sum(x[k+'_usd'] for x in xs),len(xs))
+# ---------- PASS games: own Records section, tracking only (TG, Oct 18) ----------
+# Reuses the sides_log rows (rating PASS, fade + money side). Exact 50-50 games (SFLAGS, no money side) are graded here per team
+# as Favorite / Underdog, at the same DraftKings numbers as everything else; sides_log and its groups are untouched.
+_PSX=[x for x in SIDES if x['rating']=='PASS']
+def _gt(xs,k): return _pt([x for x in xs if x[k+'_res']],k)
+EVR=[]
+for _w,_g,_ in SFLAGS:
+    _A,_H=_g.split('@'); _ty=[x['type'] for x in _SG if x['week']==_w and x['A']==_A and x['H']==_H]
+    assert len(_ty)==1 and _ty[0]==5, ('even split game not Type 5',_w,_g,_ty)
+    for _tm in (_A,_H):
+        _s,_=_sd.sg.grade(_w,_A,_H,_tm); _m=_sd._ml(_w,_A,_H,_tm)
+        if _s: assert _s['line']!=0, ('even split: pick-em spread, no favorite',_w,_g)
+        EVR.append(dict(week=_w,game=_g,team=_tm,role='even',rating='PASS',type=5,money_pct=50,spread_line=_s and _s['line'],
+                        sfd=_s and ('Fav' if _s['line']<0 else 'Dog'),sp_res=_s and _s['res'],sp_usd=_s and _s['usd'],
+                        fd=_m and _m['fd'],ml_res=_m and _m['res'],ml_usd=_m and _m['usd']))
+def _ev(fd,ml): return [x for x in EVR if (x['fd'] if ml else x['sfd'])==fd and x['ml_res' if ml else 'sp_res']]
+PASSTALLY={}
+for _r in ('fade','money'):
+    for _k in ('sp','ml'): PASSTALLY[f'{_r}|{_k}']=_gt([x for x in _PSX if x['role']==_r],_k)
+for _fd in ('Fav','Dog'):
+    PASSTALLY[f'even|sp|{_fd}']=_pt(_ev(_fd,False),'sp'); PASSTALLY[f'even|ml|{_fd}']=_pt(_ev(_fd,True),'ml')
+def _cls(u): return 'pos' if u>0 else ('neg' if u<0 else '')
+def _pgtile(k,lab):
+    w,l,p,u,n=PASSTALLY[k]
+    return (f'<div class="rc tier-p pgt" data-k="{k}"><div class="rc-k"><span class="tg PASS">PASS</span> · {lab}</div><div class="rc-r">{wlp(w,l,p)}</div>'
+            f'<div class="rc-m"><span class="{_cls(u)}">{usd(u)}</span> · {n} game{"s" if n!=1 else ""}</div>{_wl(w,l,p)}</div>')
+_PGK=[k for k in _SGK if k[0]=='PASS']
+def _evrow(fd,ml):
+    rs=_ev(fd,ml); k='ml' if ml else 'sp'
+    if not rs: return ''
+    w,l,p,u,n=_pt(rs,k); lab=f'PASS even split{" ML" if ml else ""} · {FDN[fd]}'
+    return (f'<div class="grow" data-k="{lab}"><span class="tg PASS">PASS</span><span class="gl">Even split · {"ML · " if ml else "Spread · "}{FDN[fd]}</span><b>{wlp(w,l,p)}</b>'
+            f'{_pb(u,_SMX)}<em class="{_cls(u)}">{usd(u)}</em></div>'
+            f'<details class="sd-rl gr-rl" data-k="{lab}"><summary><span>{lab} · <span class="ng">{n} game{"s" if n!=1 else ""}</span></span><b>{wlp(w,l,p)}, {usd(u)}</b></summary><ul class="rl">{_rows_html(_srows(rs,k))}</ul></details>')
+def _cmp(rt,ml):
+    a=ml_tally(rt,('look back','live')) if ml else at(rt)
+    w,l,p,u,n=a
+    return (f'<div class="rc {"tier-s" if rt=="STRONG" else "tier-l"} pgc" data-k="{rt}|{"ml" if ml else "sp"}"><div class="rc-k"><span class="tg {rt}">{rt}</span> · {"Moneyline" if ml else "Spread"}</div><div class="rc-r">{wlp(w,l,p)}</div>'
+            f'<div class="rc-m"><span class="{_cls(u)}">{usd(u)}</span> · {n} {"games" if ml else "plays"}</div>{_wl(w,l,p)}</div>')
+_PW=max(x['week'] for x in SIDES if x['sp_res'])
+PASSREC=(f'<h3 class="sh" id="passgames">PASS games · tracking</h3><p class="sub"><span class="tg trk">Tracking · not bets</span><br>Every PASS game, Weeks 1 to {_PW}, flat $100 at the same DraftKings numbers as our plays. '
+   f'Fade side = the team against the money. Money side = the team with the money. Each is its own record, never combined with STRONG or LEAN.</p>'
+   f'<div class="rgrid"><h3 class="sh">Spread · PASS games</h3>{_pgtile("fade|sp","Fade side · Spread")}{_pgtile("money|sp","Money side · Spread")}</div>'
+   f'<div class="rgrid"><h3 class="sh">Moneyline · PASS games</h3>{_pgtile("fade|ml","Fade side · Moneyline")}{_pgtile("money|ml","Money side · Moneyline")}</div>'
+   f'<h3 class="sh" id="passgroups">PASS games by group</h3><div class="groups">{"".join(_sgrow(k) for k in _PGK)}{"".join(_sgrow(k,fd) for k in _PGK for fd in ("Fav","Dog"))}</div>'
+   f'<h3 class="sh" id="passeven">Even split · tracking</h3><p class="sub">Type 5 games with the money split exactly 50–50 on all books, so neither team holds it. Each team is graded as the favorite or the underdog.</p>'
+   f'<div class="rgrid"><h3 class="sh">Spread · even split</h3>{_pgtile("even|sp|Fav","Even split · Favorite · Spread")}{_pgtile("even|sp|Dog","Even split · Underdog · Spread")}</div>'
+   f'<div class="rgrid"><h3 class="sh">Moneyline · even split</h3>{_pgtile("even|ml|Fav","Even split · Favorite · ML")}{_pgtile("even|ml|Dog","Even split · Underdog · ML")}</div>'
+   f'<div class="groups">{_evrow("Fav",False)}{_evrow("Dog",False)}{_evrow("Fav",True)}{_evrow("Dog",True)}</div>'
+   f'<h3 class="sh" id="passcompare">Our plays next to PASS games</h3><p class="sub">The STRONG and LEAN records from above, shown beside the PASS records for comparison. Nothing is added together.</p>'
+   f'<div class="rgrid r3">{_cmp("STRONG",False)}{_cmp("LEAN",False)}{_pgtile("fade|sp","Fade side · Spread")}'
+   f'{_cmp("STRONG",True)}{_cmp("LEAN",True)}{_pgtile("fade|ml","Fade side · Moneyline")}</div>')
+EXTRA_CSS+='#results .tier-p .rc-k{color:var(--pass)}\n'
 _GR=[x for x in SIDES if x['sp_res']]
 _OUR=lambda x:x['role']=='fade' and x['rating']!='PASS'
 POSTED={'sp|STRONG':_pt([x for x in _GR if _OUR(x) and x['rating']=='STRONG'],'sp'),'sp|LEAN':_pt([x for x in _GR if _OUR(x) and x['rating']=='LEAN'],'sp'),
@@ -1189,6 +1242,7 @@ RESULTS=(f'<div class="sec-h" id="audit"><h2>Records</h2><p class="sub">Weeks 1 
    f'<div class="rgrid"><h3 class="sh" id="moneyline">Moneyline · tracking</h3>{_mltile("STRONG")}{_mltile("LEAN")}</div>'
    f'<h3 class="sh" id="mlgroups">Moneyline by group</h3><p class="sub">An ML play is posted only when its group is above $0 from earlier weeks.</p>'
    f'<div class="groups">{"".join(_grow(*k) for k in MLGROUPS)}</div>'
+   f'{PASSREC}'
    f'{SIDEREC}'
    f'<h3 class="sh">By week</h3>{BYWEEK2}'
    f'<h3 class="sh" id="types">By game type</h3><div class="types">{TYPES}</div>'
@@ -1960,6 +2014,20 @@ def _deepcheck():
     for L in tr.select('.sd-rl'):
         rs=L.select('li'); tot=sum(_P(x.select_one('.rl-r').get_text()) for x in rs)
         if L.select_one('summary b').get_text()!=f"{sum(x.select_one('.rl-r')['class'][-1]=='W' for x in rs)}-{sum(x.select_one('.rl-r')['class'][-1]=='L' for x in rs)}-{sum(x.select_one('.rl-r')['class'][-1]=='P' for x in rs)}, {usd(tot)}": errs.append(('side list≠record',L['data-k']))
+    # PASS games section: tiles match their own tallies, never mix with STRONG/LEAN, never posted
+    for tl in tr.select('.pgt'):
+        a=PASSTALLY[tl['data-k']]
+        if tl.select_one('.rc-r').get_text()!=f"{a[0]}-{a[1]}-{a[2]}" or usd(a[3]) not in tl.get_text() or tl.select('.tg.STRONG,.tg.LEAN'): errs.append(('pass tile',tl['data-k']))
+    for tl in tr.select('.pgc'):
+        rt,m=tl['data-k'].split('|'); a=ml_tally(rt,('look back','live')) if m=='ml' else at(rt)
+        if tl.select_one('.rc-r').get_text()!=f"{a[0]}-{a[1]}-{a[2]}" or usd(a[3]) not in tl.get_text(): errs.append(('pass compare tile',tl['data-k']))
+    for r_ in ('sp','ml'):
+        f_,m_=PASSTALLY['fade|'+r_],PASSTALLY['money|'+r_]
+        if f_[4]!=m_[4] or f_[0]!=m_[1] or f_[1]!=m_[0]: errs.append(('pass fade/money not mirrored',r_,f_,m_))
+        ev=[PASSTALLY[f'even|{r_}|{f_}'] for f_ in ('Fav','Dog')]
+        if ev[0][4]!=ev[1][4] or ev[0][0]!=ev[1][1] or ev[0][1]!=ev[1][0]: errs.append(('even split fav/dog not mirrored',r_,ev))
+    if any(_ours(x) for x in _PSX+EVR) or not tr.select_one('#passgames') or len(tr.select('.pgt'))!=10: errs.append(('pass section',))
+    print('pass games ok:',{k:v[:4] for k,v in PASSTALLY.items()})
     print('sides check ok:',len(SIDES),'sides,',len(SFLAGS),'even-money games, no tracking side posted')
     # one shared card template: every card on every page has the same sections in the same order
     SECT=['cdh','gm','cd','cd-1','cd-b','cd-c','cd-ar','cd-2','cd-m','cd-3','cd-4','g-b','tbdc','tbdc-match','tbdc-meta','uc-h','uc','uc-r','uc-res']
