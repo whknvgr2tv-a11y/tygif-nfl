@@ -1,6 +1,6 @@
 {
  "week": 6,
- "posted_at_et": "Sun Oct 18, 11:10 AM ET",
+ "posted_at_et": "Sun Oct 18, 3:31 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -11,24 +11,6 @@
    "rating": "STRONG",
    "line": "+2.5",
    "kickoff_utc": "2026-10-16T00:15:00Z"
-  },
-  {
-   "game": "TEN@IND",
-   "team": "TEN",
-   "name": "Tennessee",
-   "nick": "Titans",
-   "rating": "STRONG",
-   "line": "+6.5",
-   "kickoff_utc": "2026-10-18T17:00:00Z"
-  },
-  {
-   "game": "NYJ@NE",
-   "team": "NYJ",
-   "name": "NY Jets",
-   "nick": "Jets",
-   "rating": "STRONG",
-   "line": "+7.5",
-   "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
    "game": "NO@NYG",
@@ -58,6 +40,24 @@
    "kickoff_utc": "2026-10-18T17:00:00Z"
   },
   {
+   "game": "TEN@IND",
+   "team": "TEN",
+   "name": "Tennessee",
+   "nick": "Titans",
+   "rating": "STRONG",
+   "line": "+6.5",
+   "kickoff_utc": "2026-10-18T17:00:00Z"
+  },
+  {
+   "game": "NYJ@NE",
+   "team": "NYJ",
+   "name": "NY Jets",
+   "nick": "Jets",
+   "rating": "STRONG",
+   "line": "+7.5",
+   "kickoff_utc": "2026-10-18T17:00:00Z"
+  },
+  {
    "game": "ARI@LAR",
    "team": "ARI",
    "name": "Arizona",
@@ -83,15 +83,6 @@
    "rating": "LEAN",
    "line": "+5.5",
    "kickoff_utc": "2026-10-18T20:25:00Z"
-  },
-  {
-   "game": "DAL@GB",
-   "team": "GB",
-   "name": "Green Bay",
-   "nick": "Packers",
-   "rating": "LEAN",
-   "line": "-1.5",
-   "kickoff_utc": "2026-10-19T00:20:00Z"
   },
   {
    "game": "WSH@SF",

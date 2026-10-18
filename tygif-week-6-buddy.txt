@@ -1,18 +1,17 @@
-Week 6 · Lines as of Sun Oct 18, 10:10 AM CT
+Week 6 · Lines as of Sun Oct 18, 2:31 PM CT
 
 STRONG Denver +2.5 · Final DEN 17–14 · win +$95
-STRONG Tennessee +6.5
-STRONG NY Jets +7.5
+STRONG Tennessee +6.5 · Final TEN 26–20 · win +$93
+STRONG NY Jets +7.5 · Final NYJ 19–26 · win +$89
 STRONG Arizona +12.5
 STRONG Washington +7.5
-LEAN New Orleans −1.5
-LEAN Philadelphia +3
+LEAN New Orleans −1.5 · Final NO 34–27 · win +$105
+LEAN Philadelphia +3 · Final PHI 14–25 · loss −$100
 LEAN Tampa Bay +1.5
 LEAN LA Chargers +7.5
 LEAN Las Vegas +5.5
-LEAN Green Bay −1.5
 STRONG Denver ML · Final 17–14 · win +$124
-STRONG Tennessee ML
-STRONG NY Jets ML
+STRONG Tennessee ML · Final 26–20 · win +$235
+STRONG NY Jets ML · Final 19–26 · loss −$100
 STRONG Arizona ML
 STRONG Washington ML
