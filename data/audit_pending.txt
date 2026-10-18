@@ -1,4 +1,4 @@
-settled games : 84 (signed off: 80)
+settled games : 87 (signed off: 80)
 STRONG spread : 19-5-4 +$1,247 n28   (signed off: 17-5-4 +$1,065 n26)
 STRONG fadeML : 14-13-1 +$1,320 n28   (signed off: 13-12-1 +$1,185 n26)
 STRONG postedML : 10-10-1 +$974 n21   (signed off: 9-9-1 +$839 n19)

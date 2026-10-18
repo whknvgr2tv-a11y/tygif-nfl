@@ -1214,7 +1214,8 @@ POSTREC=(f'<h3 class="sh" id="posted">As posted</h3><p class="sub">What actually
    f'</div>'
    f'<p class="sub">Everything below is tracking: every graded side, posted or not.</p>')
 # season breakdown: every completed game in exactly one bucket
-_DONE=[(x['week'],f"{x['A']}@{x['H']}") for x in _SG if x['week']<=5 or (x['week'],f"{x['A']}@{x['H']}") in FINW]
+_FINALL=FINW|{(_g['week'],f"{_g['A']}@{_g['H']}") for _g in GALL if _g['status']=='STATUS_FINAL' and _g['rating']=='PASS'}   # PASS games have no live_log row; final on ESPN = completed
+_DONE=[(x['week'],f"{x['A']}@{x['H']}") for x in _SG if x['week']<=5 or (x['week'],f"{x['A']}@{x['H']}") in _FINALL]
 _EVEN={(w_,g_) for w_,g_,_ in SFLAGS}
 def _bucket(k):
     o=SDX.get(k,{}); f=o.get('fade')
@@ -1997,7 +1998,7 @@ def _deepcheck():
     if 'If both teams qualify on the spread, only our original call posts.' not in open(R+'tygif-how.html').read(): errs.append(('How v3 sentence missing',))
     _all=[k for b in BUCKETS.values() for k in b]
     if len(_all)!=len(set(_all)) or set(_all)!=set(_DONE) or len(_all)!=len(_DONE): errs.append(('season buckets',len(_all),len(set(_all)),len(_DONE)))
-    if len(_DONE)!=sum(1 for x in G14+G+GALL if x['week']<=5 or x.get('final')): errs.append(('season: games',len(_DONE)))
+    if len(_DONE)!=sum(1 for x in G14+G+GALL if x['week']<=5 or x.get('final') or (x['week']>=6 and x.get('rating')=='PASS' and x.get('status')=='STATUS_FINAL')): errs.append(('season: games',len(_DONE)))
     _rows=tr.select('table.season tr[data-b]')
     if sum(int(r.select_one('.num').get_text()) for r in _rows)!=len(_DONE) or tr.select_one('table.season tr.tot .num').get_text()!=str(len(_DONE)): errs.append(('season: counts on page',))
     print('season ok:',{b:len(v) for b,v in BUCKETS.items()},'total',len(_DONE))
