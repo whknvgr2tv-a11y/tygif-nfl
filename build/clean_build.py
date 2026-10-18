@@ -1183,7 +1183,7 @@ def _evrow(fd,ml):
 def _cmp(rt,ml):
     a=ml_tally(rt,('look back','live')) if ml else at(rt)
     w,l,p,u,n=a
-    return (f'<div class="rc {"tier-s" if rt=="STRONG" else "tier-l"} pgc" data-k="{rt}|{"ml" if ml else "sp"}"><div class="rc-k"><span class="tg {rt}">{rt}</span> · {"Moneyline" if ml else "Spread"}</div><div class="rc-r">{wlp(w,l,p)}</div>'
+    return (f'<div class="rc {"tier-s" if rt=="STRONG" else "tier-l"} pgc" data-k="{rt}|{"ml" if ml else "sp"}"><div class="rc-k"><span class="tg {rt}">{rt}</span> · {"All ML calls" if ml else "Spread"}</div><div class="rc-r">{wlp(w,l,p)}</div>'
             f'<div class="rc-m"><span class="{_cls(u)}">{usd(u)}</span> · {n} {"games" if ml else "plays"}</div>{_wl(w,l,p)}</div>')
 _PW=max(x['week'] for x in SIDES if x['sp_res'])
 PASSREC=(f'<h3 class="sh" id="passgames">PASS games · tracking</h3><p class="sub"><span class="tg trk">Tracking · not bets</span><br>Every PASS game, Weeks 1 to {_PW}, flat $100 at the same DraftKings numbers as our plays. '
@@ -1195,7 +1195,7 @@ PASSREC=(f'<h3 class="sh" id="passgames">PASS games · tracking</h3><p class="su
    f'<div class="rgrid"><h3 class="sh">Spread · even split</h3>{_pgtile("even|sp|Fav","Even split · Favorite · Spread")}{_pgtile("even|sp|Dog","Even split · Underdog · Spread")}</div>'
    f'<div class="rgrid"><h3 class="sh">Moneyline · even split</h3>{_pgtile("even|ml|Fav","Even split · Favorite · ML")}{_pgtile("even|ml|Dog","Even split · Underdog · ML")}</div>'
    f'<div class="groups">{_evrow("Fav",False)}{_evrow("Dog",False)}{_evrow("Fav",True)}{_evrow("Dog",True)}</div>'
-   f'<h3 class="sh" id="passcompare">Our plays next to PASS games</h3><p class="sub">The STRONG and LEAN records from above, shown beside the PASS records for comparison. Nothing is added together.</p>'
+   f'<h3 class="sh" id="passcompare">Our plays next to PASS games</h3><p class="sub">The STRONG and LEAN records from above, shown beside the PASS records for comparison. Moneyline here is all ML calls (every STRONG or LEAN game, posted or not), the like-for-like match for PASS games; the posted ML records are above. Nothing is added together.</p>'
    f'<div class="rgrid r3">{_cmp("STRONG",False)}{_cmp("LEAN",False)}{_pgtile("fade|sp","Fade side · Spread")}'
    f'{_cmp("STRONG",True)}{_cmp("LEAN",True)}{_pgtile("fade|ml","Fade side · Moneyline")}</div>')
 EXTRA_CSS+='#results .tier-p .rc-k{color:var(--pass)}\n'
