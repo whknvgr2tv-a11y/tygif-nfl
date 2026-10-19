@@ -1,0 +1,60 @@
+{
+ "fetched_utc": "2026-10-18T23:46:55+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Spread&tb_page=N",
+ "games": [
+  {
+   "matchup": "DAL Cowboys @ GB Packers",
+   "kickoff_local": "10/18, 08:20PM",
+   "spread": [
+    {
+     "side": "DAL Cowboys -1.5",
+     "odds": "+102",
+     "handle_pct": 50,
+     "bets_pct": 48
+    },
+    {
+     "side": "GB Packers +1.5",
+     "odds": "\u2212122",
+     "handle_pct": 50,
+     "bets_pct": 52
+    }
+   ]
+  },
+  {
+   "matchup": "WAS Commanders @ SF 49ers",
+   "kickoff_local": "10/19, 08:15PM",
+   "spread": [
+    {
+     "side": "SF 49ers -7.5",
+     "odds": "\u2212110",
+     "handle_pct": 65,
+     "bets_pct": 72
+    },
+    {
+     "side": "WAS Commanders +7.5",
+     "odds": "\u2212110",
+     "handle_pct": 35,
+     "bets_pct": 28
+    }
+   ]
+  },
+  {
+   "matchup": "NE Patriots @ CHI Bears",
+   "kickoff_local": "10/22, 08:15PM",
+   "spread": [
+    {
+     "side": "CHI Bears -2.5",
+     "odds": "\u2212115",
+     "handle_pct": 8,
+     "bets_pct": 12
+    },
+    {
+     "side": "NE Patriots +2.5",
+     "odds": "\u2212105",
+     "handle_pct": 92,
+     "bets_pct": 88
+    }
+   ]
+  }
+ ]
+}

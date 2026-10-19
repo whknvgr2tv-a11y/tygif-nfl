@@ -1,0 +1,26 @@
+{
+ "fetched_utc": "2026-10-19T00:36:25+00:00",
+ "source": "build/settle.py (ESPN game summaries, games not yet started)",
+ "games": [
+  {
+   "id": "401873008",
+   "away": "WSH",
+   "home": "SF",
+   "kickoff_utc": "2026-10-20T00:15Z",
+   "ml": {
+    "away": "+350",
+    "home": "-455"
+   },
+   "spread": {
+    "away": {
+     "line": "+7.5",
+     "odds": "-110"
+    },
+    "home": {
+     "line": "-7.5",
+     "odds": "-110"
+    }
+   }
+  }
+ ]
+}
