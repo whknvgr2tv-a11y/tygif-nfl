@@ -2632,11 +2632,11 @@
    "type": 3,
    "money_pct": 39,
    "spread_line": 7.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 6,
@@ -2647,11 +2647,11 @@
    "type": 3,
    "money_pct": 61,
    "spread_line": -7.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 95.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 24.0
   },
   {
    "week": 6,
@@ -2662,11 +2662,11 @@
    "type": 3,
    "money_pct": 37,
    "spread_line": 5.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 89.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 6,
@@ -2677,11 +2677,11 @@
    "type": 3,
    "money_pct": 63,
    "spread_line": -5.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 41.0
   },
   {
    "week": 6,
