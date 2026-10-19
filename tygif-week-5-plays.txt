@@ -28,16 +28,16 @@ LEAN
 
 MONEYLINE
   STRONG Tampa Bay ML  ·  Tampa Bay at Dallas, Thu Oct 8 · 7:15 PM CT · Final 24–16 · win +$380
-    Type 1 · Fade the big favorite · STRONG ML · Underdog: 7-10-0, +$1,400
+    Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 7-10-0, +$1,400
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Miami ML  ·  Cincinnati at Miami, Sun Oct 11 · 12:00 PM CT · Final 24–31 · loss −$100
-    Type 1 · Fade the big favorite · STRONG ML · Underdog: 7-10-0, +$1,400
+    Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 7-10-0, +$1,400
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG NY Jets ML  ·  Cleveland at NY Jets, Sun Oct 11 · 12:00 PM CT · Final 17–12 · win +$77
-    Type 2 · Fade the crowd · STRONG ML · Favorite: 5-2-1, +$127
+    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 5-2-1, +$127
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Washington ML  ·  NY Giants at Washington, Sun Oct 11 · 12:00 PM CT · Final 27–27 · push $0
-    Type 2 · Fade the crowd · STRONG ML · Favorite: 5-2-1, +$127
+    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 5-2-1, +$127
     a: Yes · b: Yes · c: Yes · d: Yes
 
 PASS

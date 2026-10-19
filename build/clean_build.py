@@ -698,7 +698,7 @@ def rlist(rt,ty,ml=False,cls='cd-rl',fd=None):
     rs=ml_rows(rt,ty,fd) if ml else spread_rows(rt,ty)
     if not rs: return ''
     w=sum(r['res']=='W' for r in rs); l=sum(r['res']=='L' for r in rs); p=sum(r['res']=='P' for r in rs); u=sum(r['usd'] for r in rs)
-    lab=f'{rt}{" ML" if ml else ""}{f" · Type {ty}" if ty else ""}{f" · {FDN[fd]}" if fd else ""}'
+    lab=f'{rt}{" · All ML calls" if ml else ""}{f" · Type {ty}" if ty else ""}{f" · {FDN[fd]}" if fd else ""}'
     return (f'<details class="{cls}" data-k="{lab}"><summary><span>{lab} · <span class="ng">{len(rs)} game{"s" if len(rs)!=1 else ""}</span></span><b>{wlp(w,l,p)}, {usd(u)}</b></summary>'
             f'<ul class="rl">{_rows_html(rs)}</ul></details>')
 FDN={'Fav':'Favorite','Dog':'Underdog'}
@@ -799,7 +799,7 @@ def ml_block(g):
     if r=='PASS' or not mr or mr.get('price') is None:
         return f'<span class="cd-m"><b class="ck">Moneyline</b><span class="mc c1 neu">{g["fade"]} ML</span><span class="c2">Type {t}</span><small class="c3">{"PASS" if r=="PASS" else "no moneyline"}</small></span>',None
     fd=mr['fd']; a=ml_at(r,t,fd,before=_cb(g)); lab=f'Type {t} · {FDN[fd]}'
-    grp=f'Group: {wlp(*a[:3])}, {usd(a[3])}' if a[4] else 'Group: no games yet'
+    grp=f'All ML calls: {wlp(*a[:3])}, {usd(a[3])}' if a[4] else 'All ML calls: no games yet'
     if not ml_ok(g): call=None
     elif mr.get('result'): call=f'{g["fade"]} ML · <span class="fin {mr["result"]}">{dict(W="win",L="loss",P="push")[mr["result"]]} {usd(mr["profit"])}</span>'
     elif True: call=f'{g["fade"]} ML'
@@ -996,7 +996,7 @@ def li(k):
 TYPES=''
 for t in (1,2,3,4,5):
     rows=''.join(f'<div class="gt-row"><span class="tg {rt}">{rt}</span><b>{rec(*at(rt,t)[:3])}</b><em class="{"pos" if at(rt,t)[3]>0 else ("neg" if at(rt,t)[3]<0 else "")}">{usd(at(rt,t)[3])}</em></div>' for rt in ('STRONG','LEAN') if at(rt,t)[4])
-    rows+=''.join(f'<div class="gt-row"><span class="tg {rt}">{rt} ML · {FDN[fd]}</span><b>{rec(*ml_at(rt,t,fd)[:3])}</b><em class="{"pos" if ml_at(rt,t,fd)[3]>0 else ("neg" if ml_at(rt,t,fd)[3]<0 else "")}">{usd(ml_at(rt,t,fd)[3])}</em></div>' for rt in ('STRONG','LEAN') for fd in ('Fav','Dog') if ml_at(rt,t,fd)[4])
+    rows+=''.join(f'<div class="gt-row"><span class="tg {rt}">{rt} · All ML calls · {FDN[fd]}</span><b>{rec(*ml_at(rt,t,fd)[:3])}</b><em class="{"pos" if ml_at(rt,t,fd)[3]>0 else ("neg" if ml_at(rt,t,fd)[3]<0 else "")}">{usd(ml_at(rt,t,fd)[3])}</em></div>' for rt in ('STRONG','LEAN') for fd in ('Fav','Dog') if ml_at(rt,t,fd)[4])
     if t in (4,5): rows='<div class="gt-row"><b class="none">PASS: see Side groups</b></div>'
     rs=[]
     lst=''.join(f'<li><span class="w">Week {r["week"]} · {r["game"].replace("@"," at ")}<i class="{r["rating"]}">{r["rating"]}</i></span><b class="{dict(W="pos",L="neg",P="")[r["res"]]}">{r["play"]} · {dict(W="win",L="loss",P="push")[r["res"]]} {usd(r["usd"])}</b></li>' for r in rs)
@@ -1118,7 +1118,7 @@ def _wcell(rt,w):
     a=at(rt,None,w)
     if not a[4]: return '<td>—</td>'
     return f'<td>{rec(*a[:3])}<small class="{"pos" if a[3]>0 else "neg"}">{usd(a[3])}</small>{_pb(a[3],_WMX)}</td>'
-BYWEEK2=('<div class="tblwrap"><table class="data wk3" id="byweek"><thead><tr><th>Week</th><th>Spread STRONG</th><th>Spread LEAN</th><th>ML STRONG</th><th>ML LEAN</th></tr></thead><tbody>'
+BYWEEK2=('<div class="tblwrap"><table class="data wk3" id="byweek"><thead><tr><th>Week</th><th>Spread STRONG</th><th>Spread LEAN</th><th>All ML calls STRONG</th><th>All ML calls LEAN</th></tr></thead><tbody>'
     +''.join(f'<tr><td>Week {w}</td>{_wcell("STRONG",w)}{_wcell("LEAN",w)}{_mlwk("STRONG",w)}{_mlwk("LEAN",w)}</tr>' for w in sorted(WEEKS,reverse=True))
     +'</tbody></table></div>')
 def _stally(role,rt,ml=False):
@@ -1241,7 +1241,7 @@ RESULTS=(f'<div class="sec-h" id="audit"><h2>Records</h2><p class="sub">Weeks 1 
    f'{POSTREC}{SEASON}'
    f'<div class="rgrid"><h3 class="sh">Spread · all calls</h3>{_tile("STRONG",at("STRONG"),"tier-s")}{_tile("LEAN",at("LEAN"),"tier-l")}</div>'
    f'<div class="rgrid"><h3 class="sh" id="moneyline">Moneyline · tracking</h3>{_mltile("STRONG")}{_mltile("LEAN")}</div>'
-   f'<h3 class="sh" id="mlgroups">Moneyline by group</h3><p class="sub">An ML play is posted only when its group is above $0 from earlier weeks.</p>'
+   f'<h3 class="sh" id="mlgroups">Moneyline by group · all ML calls</h3><p class="sub">An ML play is posted only when its group is above $0 from earlier weeks.</p>'
    f'<div class="groups">{"".join(_grow(*k) for k in MLGROUPS)}</div>'
    f'{PASSREC}'
    f'{SIDEREC}'
@@ -1590,7 +1590,7 @@ def txt_clean(GG,wk,asof):
         for g in mg:
             r=ml_for(g,wk); side=g['fade']; when=' · '.join(g['when'].split(' · ')[:2])
             rr=f" · Final {g['final']['tag'].split(' · ')[0].replace('Final: ','').split(' ',1)[1]} · {dict(W='win',L='loss',P='push')[r['result']]} {usd(r['profit'])}" if r.get('result') else ''
-            a=ml_at(g['rating'],g['type'],r['fd'],before=_cb(g)); mrec=f"Type {g['type']} · {TY[g['type']]['name']} · {g['rating']} ML · {FDN[r['fd']]}: "+(f"{wlp(*a[:3])}, {usd(a[3])}" if a[4] else 'no plays yet')
+            a=ml_at(g['rating'],g['type'],r['fd'],before=_cb(g)); mrec=f"Type {g['type']} · {TY[g['type']]['name']} · {g['rating']} · All ML calls · {FDN[r['fd']]}: "+(f"{wlp(*a[:3])}, {usd(a[3])}" if a[4] else 'no plays yet')
             P+=[f"  {g['rating']} {side} ML  ·  {g['away']} at {g['home']}, {when}{rr}",f"    {mrec}","    "+' · '.join(f"{l}: {'Yes' if v else 'No'}" for l,_,v,_,_ in qa(g))]
             L.append(f"  {g['rating']} {side} ML  ·  {when}{rr}"); B.append(f"{g['rating']} {side} ML{rr}")
         P.append(''); L.append('')
@@ -1777,7 +1777,7 @@ def _deepcheck():
             if g['rating']=='PASS' or not mr or mr.get('price') is None:
                 if g['rating']!='PASS' and 'neu' not in m.select_one('.mc')['class']: errs.append((f,gid,'ML should be neutral',mt))
                 continue
-            a=ml_at(g['rating'],g['type'],mr['fd'],before=_bqi(g.get('week',5),f"{g['A']}@{g['H']}")); lab="Group"
+            a=ml_at(g['rating'],g['type'],mr['fd'],before=_bqi(g.get('week',5),f"{g['A']}@{g['H']}")); lab="All ML calls"
             want_g=f"{lab}: {wlp(*a[:3])}, {usd(a[3])}" if a[4] else f"{lab}: no games yet"
             if m.small.get_text()!=want_g or m.select_one('.c2').get_text()!=f"Type {g['type']} · {FDN[mr['fd']]}": errs.append((f,gid,'ML group record',m.small.get_text(),want_g))
             ap=ml_at(g['rating'],g['type'],mr['fd'],before=g.get('week',5)); posted=ap[4]>0 and ap[3]>0
