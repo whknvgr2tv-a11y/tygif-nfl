@@ -71,7 +71,7 @@ def main():
         while os.path.exists(f'{B}/inputs/tr_monday_w{w}.json'): w += 1
         run(sys.executable, 'build/monday_lines.py', '--week', str(w))
     if '--offline' not in sys.argv:
-        run('git', 'fetch', 'origin', 'snapshots:refs/remotes/origin/snapshots')
+        run('git', 'fetch', 'origin', '+snapshots:refs/remotes/origin/snapshots')
         pull()
     run(sys.executable, 'build/pregame.py')
     run(sys.executable, 'build/clean_build.py', env={'TYGIF_SETTLE': '1'})
