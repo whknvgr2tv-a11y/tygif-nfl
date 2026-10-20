@@ -1,6 +1,6 @@
 {
  "week": 6,
- "posted_at_et": "Sun Oct 18, 11:39 PM ET",
+ "posted_at_et": "Mon Oct 19, 8:10 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -83,15 +83,6 @@
    "rating": "LEAN",
    "line": "+5.5",
    "kickoff_utc": "2026-10-18T20:25:00Z"
-  },
-  {
-   "game": "WSH@SF",
-   "team": "WSH",
-   "name": "Washington",
-   "nick": "Commanders",
-   "rating": "STRONG",
-   "line": "+7.5",
-   "kickoff_utc": "2026-10-20T00:15:00Z"
   }
  ]
 }

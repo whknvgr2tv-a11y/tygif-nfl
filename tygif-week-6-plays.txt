@@ -1,5 +1,5 @@
 TYGIF'S MODEL · WEEK 6
-Lines as of Sun Oct 18, 10:39 PM CT
+Final
 
 STRONG
   Denver +2.5  ·  Seattle at Denver, Thu Oct 15 · 7:15 PM CT · Final DEN 17–14 · win +$95
@@ -12,9 +12,6 @@ STRONG
     Type 1 · Fade the big favorite · STRONG: 13-2-2, +$993
     a: Yes · b: Yes · c: Yes · d: Yes
   Arizona +12.5  ·  Arizona at LA Rams, Sun Oct 18 · 3:05 PM CT · Final ARI 18–16 · win +$95
-    Type 1 · Fade the big favorite · STRONG: 13-2-2, +$993
-    a: Yes · b: Yes · c: Yes · d: Yes
-  Washington +7.5  ·  Washington at San Francisco, Mon Oct 19 · 7:15 PM CT
     Type 1 · Fade the big favorite · STRONG: 13-2-2, +$993
     a: Yes · b: Yes · c: Yes · d: Yes
 
@@ -48,12 +45,10 @@ MONEYLINE
   STRONG Arizona ML  ·  Arizona at LA Rams, Sun Oct 18 · 3:05 PM CT · Final 18–16 · win +$525
     Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 7-10-0, +$1,400
     a: Yes · b: Yes · c: Yes · d: Yes
-  STRONG Washington ML  ·  Washington at San Francisco, Mon Oct 19 · 7:15 PM CT
-    Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 7-10-0, +$1,400
-    a: Yes · b: Yes · c: Yes · d: Yes
 
 PASS
   Houston at Jacksonville
   Chicago at Atlanta
   Baltimore at Cleveland
   Dallas at Green Bay
+  Washington at San Francisco
