@@ -78,9 +78,10 @@ def espn_dk_game(e, s):
             'ml': {'away': cur(ml, 'away').get('odds'), 'home': cur(ml, 'home').get('odds')},
             'spread': {k: {'line': cur(ps, k).get('line'), 'odds': cur(ps, k).get('odds')} for k in ('away', 'home')}}
 
-def espn_dk():
-    """DraftKings ML + spread from ESPN for games still scheduled (pre-kickoff numbers only)."""
-    st, h = get(ESPN_SB); sb = json.loads(h); out = []
+def espn_dk(week):
+    """DraftKings ML + spread from ESPN for games still scheduled (pre-kickoff numbers only), for the card week explicitly
+    (ESPN's default scoreboard can still be on the previous week)."""
+    st, h = get(f'{ESPN_SB}?week={week}&seasontype=2'); sb = json.loads(h); out = []
     for e in sb.get('events', []):
         if e['competitions'][0]['status']['type']['state'] != 'pre': continue
         st, h = get(ESPN_SUM.format(e['id'])); g = espn_dk_game(e, json.loads(h))
@@ -115,10 +116,13 @@ def main():
     if not sao: ok = False
     # ESPN DraftKings moneyline + spread for games not yet started
     try:
-        wkm, ed = espn_dk()
-        json.dump(dict({'fetched_utc': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'source': ESPN_SB}, **wkm, games=ed),
+        cw = os.environ.get('TYGIF_WEEK') or (re.search(r'(\d+)$', wk.group(1)).group(1) if wk else None)
+        if not cw: raise ValueError('card week unknown (no ScoresAndOdds week, TYGIF_WEEK unset)')
+        wkm, ed = espn_dk(int(cw))
+        json.dump(dict({'fetched_utc': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'source': f'{ESPN_SB}?week={cw}&seasontype=2'}, **wkm, games=ed),
                   open(f'{OUT}/espn_dk_{stamp}.json', 'w'), indent=1)
         print(f'ESPN DraftKings: {len(ed)} games not yet started (week {wkm["week"]})')
+        if not ed: ok = False
     except Exception as ex:
         print('ESPN DraftKings capture failed:', ex); ok = False
     # prune (disabled when KEEP_DAYS is None)

@@ -9,10 +9,11 @@ def ab(name):
 def norm(s): return s.replace('\u2212', '-').replace('PK', '0').strip()
 def num(s):
     s = norm(str(s)); return 0.0 if s in ('0', 'EVEN') else float(s.replace('EVEN', '100'))
-def check(folder):
-    dk = sorted(glob.glob(folder + '/dk_*.json')); es = sorted(glob.glob(folder + '/espn_dk_*.json'))
+def check(folder, espn=None):
+    dk = sorted(glob.glob(folder + '/dk_*.json')); es = [espn] if espn else sorted(glob.glob(folder + '/espn_dk_*.json'))
     if not dk or not es: return []
     d = json.load(open(dk[-1])); e = json.load(open(es[-1])); pairs = {}
+    if not e.get('games'): return [f"{os.path.basename(folder)}: ESPN DK {os.path.basename(es[-1])} has 0 games"]
     for g in e['games']: pairs[(g['away'], g['home'])] = {g['away']: g['spread']['away'], g['home']: g['spread']['home']}
     bad = []
     for g in d['games']:
@@ -29,6 +30,9 @@ def check(folder):
                 bad.append(f"{os.path.basename(folder)} {t}: DK splits {m.group(2)} ({norm(r['odds'])}) vs ESPN DK {el} ({eo})")
     return bad
 if __name__ == '__main__':
-    fs = sys.argv[1:] or [sorted(glob.glob(os.path.dirname(os.path.abspath(__file__)) + '/../build/raw/snap_w6_*'))[-1]]
-    bad = [b for f in fs for b in check(f)]
+    a = sys.argv[1:]; es = None
+    if '--espn' in a: i = a.index('--espn'); es = a[i + 1]; del a[i:i + 2]   # ESPN DK file outside the folder (e.g. data/espn_dk)
+    fs = a or [max(glob.glob(os.path.dirname(os.path.abspath(__file__)) + '/../build/raw/snap_w*_*'),
+                   key=lambda f: os.path.basename(f).split('_', 2)[2])]   # newest by date_time stamp, any week
+    bad = [b for f in fs for b in check(f, es)]
     print('\n'.join(bad) or 'dk/espn match ok'); sys.exit(1 if bad else 0)
