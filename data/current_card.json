@@ -1,88 +1,79 @@
 {
- "week": 6,
- "posted_at_et": "Mon Oct 19, 8:10 PM ET",
+ "week": 7,
+ "posted_at_et": "Tue Oct 20, 8:50 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
-   "game": "SEA@DEN",
-   "team": "DEN",
-   "name": "Denver",
-   "nick": "Broncos",
+   "game": "NE@CHI",
+   "team": "CHI",
+   "name": "Chicago",
+   "nick": "Bears",
    "rating": "STRONG",
-   "line": "+2.5",
-   "kickoff_utc": "2026-10-16T00:15:00Z"
+   "line": "-3",
+   "kickoff_utc": "2026-10-23T00:15:00Z"
   },
   {
-   "game": "TEN@IND",
+   "game": "CLE@TEN",
    "team": "TEN",
    "name": "Tennessee",
    "nick": "Titans",
    "rating": "STRONG",
-   "line": "+6.5",
-   "kickoff_utc": "2026-10-18T17:00:00Z"
+   "line": "+1.5",
+   "kickoff_utc": "2026-10-25T17:00:00Z"
   },
   {
-   "game": "NYJ@NE",
-   "team": "NYJ",
-   "name": "NY Jets",
-   "nick": "Jets",
-   "rating": "STRONG",
-   "line": "+7.5",
-   "kickoff_utc": "2026-10-18T17:00:00Z"
-  },
-  {
-   "game": "NO@NYG",
-   "team": "NO",
-   "name": "New Orleans",
-   "nick": "Saints",
-   "rating": "LEAN",
-   "line": "-1.5",
-   "kickoff_utc": "2026-10-18T17:00:00Z"
-  },
-  {
-   "game": "CAR@PHI",
-   "team": "PHI",
-   "name": "Philadelphia",
-   "nick": "Eagles",
-   "rating": "LEAN",
-   "line": "+3",
-   "kickoff_utc": "2026-10-18T17:00:00Z"
-  },
-  {
-   "game": "PIT@TB",
+   "game": "TB@CAR",
    "team": "TB",
    "name": "Tampa Bay",
    "nick": "Buccaneers",
-   "rating": "LEAN",
-   "line": "+1.5",
-   "kickoff_utc": "2026-10-18T17:00:00Z"
+   "rating": "STRONG",
+   "line": "+3.5",
+   "kickoff_utc": "2026-10-25T17:00:00Z"
   },
   {
-   "game": "ARI@LAR",
+   "game": "CIN@BAL",
+   "team": "BAL",
+   "name": "Baltimore",
+   "nick": "Ravens",
+   "rating": "STRONG",
+   "line": "-3",
+   "kickoff_utc": "2026-10-25T17:00:00Z"
+  },
+  {
+   "game": "NYG@HOU",
+   "team": "HOU",
+   "name": "Houston",
+   "nick": "Texans",
+   "rating": "STRONG",
+   "line": "-10",
+   "kickoff_utc": "2026-10-25T17:00:00Z"
+  },
+  {
+   "game": "DEN@ARI",
    "team": "ARI",
    "name": "Arizona",
    "nick": "Cardinals",
+   "rating": "LEAN",
+   "line": "+4.5",
+   "kickoff_utc": "2026-10-25T20:05:00Z"
+  },
+  {
+   "game": "KC@SEA",
+   "team": "SEA",
+   "name": "Seattle",
+   "nick": "Seahawks",
    "rating": "STRONG",
-   "line": "+12.5",
-   "kickoff_utc": "2026-10-18T20:05:00Z"
+   "line": "-2.5",
+   "kickoff_utc": "2026-10-26T00:20:00Z"
   },
   {
-   "game": "LAC@KC",
-   "team": "LAC",
-   "name": "LA Chargers",
-   "nick": "Chargers",
-   "rating": "LEAN",
-   "line": "+7.5",
-   "kickoff_utc": "2026-10-18T20:25:00Z"
-  },
-  {
-   "game": "BUF@LV",
-   "team": "LV",
-   "name": "Las Vegas",
-   "nick": "Raiders",
-   "rating": "LEAN",
-   "line": "+5.5",
-   "kickoff_utc": "2026-10-18T20:25:00Z"
+   "game": "DAL@PHI",
+   "team": "PHI",
+   "name": "Philadelphia",
+   "nick": "Eagles",
+   "rating": "STRONG",
+   "line": "+4.5",
+   "kickoff_utc": "2026-10-27T00:15:00Z"
   }
  ]
 }

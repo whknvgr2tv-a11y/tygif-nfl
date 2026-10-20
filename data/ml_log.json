@@ -771,6 +771,94 @@
    "score": "33-30",
    "result": "L",
    "profit": -100.0
+  },
+  {
+   "week": 7,
+   "game": "NE@CHI",
+   "rating": "STRONG",
+   "side": "CHI",
+   "spread_line": -3.0,
+   "status": "preview",
+   "espn_event": "401873010",
+   "price": -148,
+   "fd": "Fav"
+  },
+  {
+   "week": 7,
+   "game": "CLE@TEN",
+   "rating": "STRONG",
+   "side": "TEN",
+   "spread_line": 1.5,
+   "status": "preview",
+   "espn_event": "401873013",
+   "price": 110,
+   "fd": "Dog"
+  },
+  {
+   "week": 7,
+   "game": "TB@CAR",
+   "rating": "STRONG",
+   "side": "TB",
+   "spread_line": 3.5,
+   "status": "preview",
+   "espn_event": "401873018",
+   "price": 160,
+   "fd": "Dog"
+  },
+  {
+   "week": 7,
+   "game": "CIN@BAL",
+   "rating": "STRONG",
+   "side": "BAL",
+   "spread_line": -3.0,
+   "status": "preview",
+   "espn_event": "401873012",
+   "price": -148,
+   "fd": "Fav"
+  },
+  {
+   "week": 7,
+   "game": "NYG@HOU",
+   "rating": "STRONG",
+   "side": "HOU",
+   "spread_line": -10.0,
+   "status": "preview",
+   "espn_event": "401873016",
+   "price": -520,
+   "fd": "Fav"
+  },
+  {
+   "week": 7,
+   "game": "DEN@ARI",
+   "rating": "LEAN",
+   "side": "ARI",
+   "spread_line": 4.5,
+   "status": "preview",
+   "espn_event": "401873019",
+   "price": 195,
+   "fd": "Dog"
+  },
+  {
+   "week": 7,
+   "game": "KC@SEA",
+   "rating": "STRONG",
+   "side": "SEA",
+   "spread_line": -2.5,
+   "status": "preview",
+   "espn_event": "401873022",
+   "price": -135,
+   "fd": "Fav"
+  },
+  {
+   "week": 7,
+   "game": "DAL@PHI",
+   "rating": "STRONG",
+   "side": "PHI",
+   "spread_line": 4.5,
+   "status": "preview",
+   "espn_event": "401873009",
+   "price": 180,
+   "fd": "Dog"
   }
  ]
 }
