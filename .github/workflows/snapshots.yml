@@ -53,6 +53,7 @@ jobs:
       - name: Take snapshot
         run: python3 scripts/snapshot.py out/snapshots
       - name: Line-move alerts (GitHub issue, label line-move)
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
           ALERT_TEST: ${{ github.event.inputs.alert_test || '0' }}
