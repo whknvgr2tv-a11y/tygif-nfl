@@ -89,12 +89,22 @@ def espn_dk(week):
         time.sleep(0.5)
     pre = sum(e['competitions'][0]['status']['type']['state'] == 'pre' for e in sb.get('events', []))
     return {'season': sb.get('season', {}).get('year'), 'week': sb.get('week', {}).get('number'),
-            'events': len(sb.get('events', [])), 'pre': pre}, out
+            'events': len(sb.get('events', [])), 'pre': pre,
+            'last': max((e['date'] for e in sb.get('events', [])), default=None)}, out
+
+def espn_status(wkm, ed, now):
+    """'ok', 'done' (all kicked off, latest kickoff < 36h ago) or an error string."""
+    if ed: return 'ok'
+    if wkm['events'] and not wkm['pre'] and wkm.get('last'):
+        last = datetime.fromisoformat(wkm['last'].replace('Z', '+00:00'))
+        if now - last < timedelta(hours=36): return 'done'
+        return f"week {wkm['week']} looks wrong: 0 games left, latest kickoff {wkm['last']} is over 36h ago"
+    return 'ESPN returned 0 pre-kickoff games'
 
 def main():
     os.makedirs(OUT, exist_ok=True)
     now = datetime.now(timezone.utc); stamp = now.strftime('%Y%m%dT%H%MZ')
-    ok = True; done = False
+    ok = True
     # DraftKings: walk pages until one adds nothing new
     dk, raw, seen = [], [], set()
     for p in range(1, 7):
@@ -124,10 +134,9 @@ def main():
         json.dump(dict({'fetched_utc': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'source': f'{ESPN_SB}?week={cw}&seasontype=2'}, **wkm, games=ed),
                   open(f'{OUT}/espn_dk_{stamp}.json', 'w'), indent=1)
         print(f'ESPN DraftKings: {len(ed)} games not yet started (week {wkm["week"]})')
-        if wkm['events'] and not wkm['pre']:
-            print('Every game of the week has kicked off (0 games left); nothing to snapshot, exiting cleanly.')
-            done = True
-        elif not ed: ok = False
+        es = espn_status(wkm, ed, datetime.now(timezone.utc))
+        if es == 'done': print('Every game of the week has kicked off (latest kickoff < 36h ago); ESPN not failed.')
+        elif es != 'ok': print('ESPN DraftKings:', es); ok = False
     except Exception as ex:
         print('ESPN DraftKings capture failed:', ex); ok = False
     # prune (disabled when KEEP_DAYS is None)
@@ -136,7 +145,7 @@ def main():
         m = re.search(r'_(\d{8}T\d{4})Z', fn)
         if m and datetime.strptime(m.group(1), '%Y%m%dT%H%M').replace(tzinfo=timezone.utc) < cut:
             os.remove(os.path.join(OUT, fn))
-    sys.exit(0 if ok or done else 1)
+    sys.exit(0 if ok else 1)
 
 if __name__ == '__main__':
     main()
