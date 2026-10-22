@@ -785,17 +785,6 @@
   },
   {
    "week": 7,
-   "game": "CLE@TEN",
-   "rating": "LEAN",
-   "side": "TEN",
-   "spread_line": 1.5,
-   "status": "preview",
-   "espn_event": "401873013",
-   "price": 105,
-   "fd": "Dog"
-  },
-  {
-   "week": 7,
    "game": "TB@CAR",
    "rating": "STRONG",
    "side": "TB",

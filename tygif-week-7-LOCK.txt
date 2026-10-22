@@ -1,12 +1,11 @@
 TYGIF'S MODEL · WEEK 7
-Lines as of Thu Oct 22, 8:37 AM CT
+Lines as of Thu Oct 22, 11:52 AM CT
 
 STRONG
   Chicago −3  ·  Thu Oct 22 · 7:15 PM CT
   Tampa Bay +3  ·  Sun Oct 25 · 12:00 PM CT
 
 LEAN
-  Tennessee +1.5  ·  Sun Oct 25 · 12:00 PM CT
   Baltimore +1.5  ·  Sun Oct 25 · 12:00 PM CT
   LA Rams −3.5  ·  Sun Oct 25 · 3:25 PM CT
 
@@ -18,6 +17,7 @@ MONEYLINE
 PASS
   Pittsburgh at New Orleans
   San Francisco at Atlanta
+  Cleveland at Tennessee
   Indianapolis at Minnesota
   Miami at NY Jets
   NY Giants at Houston

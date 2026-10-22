@@ -1,6 +1,6 @@
 {
  "week": 7,
- "posted_at_et": "Thu Oct 22, 9:37 AM ET",
+ "posted_at_et": "Thu Oct 22, 12:52 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -11,15 +11,6 @@
    "rating": "STRONG",
    "line": "-3",
    "kickoff_utc": "2026-10-23T00:15:00Z"
-  },
-  {
-   "game": "CLE@TEN",
-   "team": "TEN",
-   "name": "Tennessee",
-   "nick": "Titans",
-   "rating": "LEAN",
-   "line": "+1.5",
-   "kickoff_utc": "2026-10-25T17:00:00Z"
   },
   {
    "game": "TB@CAR",
