@@ -785,17 +785,6 @@
   },
   {
    "week": 7,
-   "game": "PIT@NO",
-   "rating": "LEAN",
-   "side": "PIT",
-   "spread_line": -3.5,
-   "status": "preview",
-   "espn_event": "401873011",
-   "price": -180,
-   "fd": "Fav"
-  },
-  {
-   "week": 7,
    "game": "CLE@TEN",
    "rating": "LEAN",
    "side": "TEN",
@@ -830,9 +819,9 @@
   {
    "week": 7,
    "game": "LAR@LV",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "LAR",
-   "spread_line": -4.5,
+   "spread_line": -3.5,
    "status": "preview",
    "espn_event": "401873021",
    "price": -218,

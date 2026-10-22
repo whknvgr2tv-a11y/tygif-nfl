@@ -1,5 +1,5 @@
 TYGIF'S MODEL · WEEK 7
-Lines as of Wed Oct 21, 10:14 PM CT
+Lines as of Thu Oct 22, 8:37 AM CT
 
 STRONG
   Chicago −3  ·  New England at Chicago, Thu Oct 22 · 7:15 PM CT
@@ -8,18 +8,15 @@ STRONG
   Tampa Bay +3  ·  Tampa Bay at Carolina, Sun Oct 25 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
     a: Yes · b: Yes · c: Yes · d: Yes
-  LA Rams −4.5  ·  LA Rams at Las Vegas, Sun Oct 25 · 3:25 PM CT
-    Type 2 · Fade the crowd · STRONG: 7-3-2, +$349
-    a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN
-  Pittsburgh −3.5  ·  Pittsburgh at New Orleans, Sun Oct 25 · 8:30 AM CT
-    Type 3 · Crowd leaning · LEAN: 11-10-1, +$34
-    a: Yes · b: No · c: Yes · d: Yes
   Tennessee +1.5  ·  Cleveland at Tennessee, Sun Oct 25 · 12:00 PM CT
     Type 3 · Crowd leaning · LEAN: 11-10-1, +$34
     a: Yes · b: No · c: Yes · d: Yes
   Baltimore +1.5  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT
+    Type 2 · Fade the crowd · LEAN: 1-1-0, −$15
+    a: Yes · b: Yes · c: Yes · d: No
+  LA Rams −3.5  ·  LA Rams at Las Vegas, Sun Oct 25 · 3:25 PM CT
     Type 2 · Fade the crowd · LEAN: 1-1-0, −$15
     a: Yes · b: Yes · c: Yes · d: No
 
@@ -30,11 +27,12 @@ MONEYLINE
   STRONG Tampa Bay ML  ·  Tampa Bay at Carolina, Sun Oct 25 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-1-0, +$318
     a: Yes · b: Yes · c: Yes · d: Yes
-  STRONG LA Rams ML  ·  LA Rams at Las Vegas, Sun Oct 25 · 3:25 PM CT
-    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 5-2-1, +$127
-    a: Yes · b: Yes · c: Yes · d: Yes
+  LEAN LA Rams ML  ·  LA Rams at Las Vegas, Sun Oct 25 · 3:25 PM CT
+    Type 2 · Fade the crowd · LEAN · All ML calls · Favorite: 1-0-0, +$74
+    a: Yes · b: Yes · c: Yes · d: No
 
 PASS
+  Pittsburgh at New Orleans
   San Francisco at Atlanta
   Indianapolis at Minnesota
   Miami at NY Jets
