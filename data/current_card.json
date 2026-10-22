@@ -1,6 +1,6 @@
 {
  "week": 7,
- "posted_at_et": "Thu Oct 22, 5:26 PM ET",
+ "posted_at_et": "Thu Oct 22, 6:58 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -8,7 +8,7 @@
    "team": "CHI",
    "name": "Chicago",
    "nick": "Bears",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "line": "-3",
    "kickoff_utc": "2026-10-23T00:15:00Z"
   },

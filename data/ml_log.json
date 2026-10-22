@@ -775,7 +775,7 @@
   {
    "week": 7,
    "game": "NE@CHI",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "CHI",
    "spread_line": -3.0,
    "status": "preview",
@@ -813,7 +813,7 @@
    "spread_line": -3.5,
    "status": "preview",
    "espn_event": "401873021",
-   "price": -205,
+   "price": -192,
    "fd": "Fav"
   }
  ]
