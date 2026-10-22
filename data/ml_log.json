@@ -799,11 +799,11 @@
    "game": "CIN@BAL",
    "rating": "LEAN",
    "side": "BAL",
-   "spread_line": 1.5,
+   "spread_line": -1.5,
    "status": "preview",
    "espn_event": "401873012",
-   "price": 102,
-   "fd": "Dog"
+   "price": -118,
+   "fd": "Fav"
   },
   {
    "week": 7,

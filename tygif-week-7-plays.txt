@@ -1,5 +1,5 @@
 TYGIF'S MODEL · WEEK 7
-Lines as of Thu Oct 22, 11:52 AM CT
+Lines as of Thu Oct 22, 1:19 PM CT
 
 STRONG
   Chicago −3  ·  New England at Chicago, Thu Oct 22 · 7:15 PM CT
@@ -10,7 +10,7 @@ STRONG
     a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN
-  Baltimore +1.5  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT
+  Baltimore −1.5  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT
     Type 2 · Fade the crowd · LEAN: 1-1-0, −$15
     a: Yes · b: Yes · c: Yes · d: No
   LA Rams −3.5  ·  LA Rams at Las Vegas, Sun Oct 25 · 3:25 PM CT
@@ -24,6 +24,9 @@ MONEYLINE
   STRONG Tampa Bay ML  ·  Tampa Bay at Carolina, Sun Oct 25 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-1-0, +$318
     a: Yes · b: Yes · c: Yes · d: Yes
+  LEAN Baltimore ML  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT
+    Type 2 · Fade the crowd · LEAN · All ML calls · Favorite: 1-0-0, +$74
+    a: Yes · b: Yes · c: Yes · d: No
   LEAN LA Rams ML  ·  LA Rams at Las Vegas, Sun Oct 25 · 3:25 PM CT
     Type 2 · Fade the crowd · LEAN · All ML calls · Favorite: 1-0-0, +$74
     a: Yes · b: Yes · c: Yes · d: No
