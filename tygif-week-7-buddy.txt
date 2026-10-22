@@ -1,17 +1,11 @@
-Week 7 · Lines as of Tue Oct 20, 7:50 AM CT
+Week 7 · Lines as of Wed Oct 21, 10:14 PM CT
 
 STRONG Chicago −3
-STRONG Tennessee +1.5
-STRONG Tampa Bay +3.5
-STRONG Baltimore −3
-STRONG Houston −10
-STRONG Seattle −2.5
-STRONG Philadelphia +4.5
-LEAN Arizona +4.5
+STRONG Tampa Bay +3
+STRONG LA Rams −4.5
+LEAN Pittsburgh −3.5
+LEAN Tennessee +1.5
+LEAN Baltimore +1.5
 STRONG Chicago ML
-STRONG Tennessee ML
 STRONG Tampa Bay ML
-STRONG Baltimore ML
-STRONG Houston ML
-STRONG Seattle ML
-STRONG Philadelphia ML
+STRONG LA Rams ML
