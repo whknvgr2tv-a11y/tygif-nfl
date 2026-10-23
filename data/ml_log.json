@@ -773,9 +773,23 @@
    "profit": -100.0
   },
   {
+   "week": 6,
+   "game": "WSH@SF",
+   "rating": "STRONG",
+   "side": "WSH",
+   "spread_line": 7.5,
+   "status": "live",
+   "espn_event": "401873008",
+   "price": 310,
+   "fd": "Dog",
+   "score": "17-23",
+   "result": "L",
+   "profit": -100.0
+  },
+  {
    "week": 7,
    "game": "NE@CHI",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "CHI",
    "spread_line": -3.0,
    "status": "live",

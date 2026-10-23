@@ -35,7 +35,7 @@ NAVRE=re.compile(r'<nav[^>]*class="tabs"[^>]*>.*?</nav>|<nav[^>]*aria-label="Sec
 
 FOOT="tygif's model · free public data · records use flat $100 bets · small samples, no guarantees · not financial advice" #  small samples, no guarantees · not financial advice"
 TUE="Calls posted Tuesday to Saturday can change as the money moves; only the Saturday call counts."
-GRADE="Every week is rated on the money splits (all books and DraftKings) from the last pull before kickoff and graded at the DraftKings line, price and moneyline recorded before kickoff."
+GRADE="Every week is rated on the money splits (all books and DraftKings) from the last saved pull at least 5 minutes before kickoff and graded at the DraftKings line, price and moneyline from that pull."
 LOCK2="Calls posted before kickoff are previews and can change as the money moves. "+GRADE
 OLDNAMES={1:TY[1]['name'],2:TY[2]['name']}
 for _t,_n in ((1,'Fade the big favorite'),(2,'Fade the crowd')): TY[_t]=dict(TY[_t]); TY[_t]['name']=_n
@@ -377,8 +377,8 @@ def settle_w5():
             if _p:   # grading/closing number = last pre-kickoff DraftKings pull (TG, Oct 15)
                 _l=_p['line']; csp[_t]=('PK' if _l==0 else (f"+{_l:g}" if _l>0 else f"{M}{abs(_l):g}")); _pp=_p['price']; cpr[_t]=(f"+{_pp}" if _pp>0 else f"{M}{abs(_pp)}")
         fade=AB[g['fade']]
-        dkp=[(t,src,_dk_rows(d)[key]) for t,src,d in DKS if t<ko and key in _dk_rows(d)]
-        sap=[(t,src,_sao_rows(d)[key]) for t,src,d in SAOS if t<ko and key in _sao_rows(d)]
+        dkp=[(t,src,_dk_rows(d)[key]) for t,src,d in DKS if _ET(t)<_ET(ko)-_dt.timedelta(minutes=5) and key in _dk_rows(d)]
+        sap=[(t,src,_sao_rows(d)[key]) for t,src,d in SAOS if _ET(t)<_ET(ko)-_dt.timedelta(minutes=5) and key in _sao_rows(d)]
         dk_t,dk_src,dk=dkp[-1]; dks=max(dk,key=lambda k:dk[k]['money'])
         branch_pre=[p for p in dkp if p[1].startswith('snapshots branch') and _ET(p[0])>_ET(ko)-_dt.timedelta(hours=3)]
         ab=_side(wk[key]); sa_t,sa_src,sa=sap[-1]; abp=_side(sa)
@@ -482,9 +482,10 @@ def build_wk(WK):
         A,H=t['away'],t['home']; key=frozenset((A,H))
         # any status other than final (scheduled, in progress, delayed, postponed) stays pending; only finals settle
         ko_s=e['date'].replace('Z',':00Z') if e['date'].count(':')==1 else e['date']
+        cut_s=(_dt.datetime.fromisoformat(ko_s.replace('Z','+00:00'))-_dt.timedelta(minutes=5)).isoformat()   # TG, Oct 22: last pull >=5 min before kickoff
         lo_s=(_dt.datetime.fromisoformat(ko_s.replace('Z','+00:00'))-_dt.timedelta(days=8)).isoformat()
-        dkp=[(t_,src,_dk_rows(d)[key]) for t_,src,d in DKS6 if lo_s<t_<ko_s and key in _dk_rows(d)]
-        sap=[(t_,src,_sao_rows(d)[key]) for t_,src,d in SAOS6 if lo_s<t_<ko_s and key in _sao_rows(d)]
+        dkp=[(t_,src,_dk_rows(d)[key]) for t_,src,d in DKS6 if lo_s<t_<cut_s and key in _dk_rows(d)]
+        sap=[(t_,src,_sao_rows(d)[key]) for t_,src,d in SAOS6 if lo_s<t_<cut_s and key in _sao_rows(d)]
         if not dkp or not sap: raise _NotReady(f'week {WK}: {A}@{H} has no DraftKings/ScoresAndOdds pull before kickoff yet')
         dk_t,dk_src,dk=dkp[-1]; sa_t,sa_src,sa_row=sap[-1]
         sar={key:sa_row}
@@ -2147,13 +2148,14 @@ def _deepcheck():
         c_=SETTLED[gid_]
         if c_['sao_last_before_kickoff']['at']!=sa_at: errs.append(('closing pull',gid_))
     if len(CLOSE_APPLIED)!=len(G)-1: errs.append(('closing rule not applied to every W5 game',len(CLOSE_APPLIED)))
+    _cut=lambda g:(_dt.datetime.fromisoformat(g['ko_utc'].replace('Z','+00:00'))-_dt.timedelta(minutes=5)).isoformat()   # 5-minute cutoff (TG, Oct 22)
     for g in GALL:
         if not (g['split_utc']<g['ko_utc'] and g['dk_utc']<g['ko_utc']): errs.append(('split after kickoff',g['gid'],g['split_utc'],g['dk_utc'],g['ko_utc']))
         for t_,src,d in _snaps('sao',_W+f"/snap_w{g['week']}_*/"):
             k_=frozenset((g['A'],g['H']))
-            if g['split_utc']<t_<g['ko_utc'] and k_ in _sao_rows(d): errs.append(('W6 newer pre-kickoff pull ignored',g['gid'],t_))
+            if g['split_utc']<t_<_cut(g) and k_ in _sao_rows(d): errs.append(('W6 newer pre-kickoff pull ignored',g['gid'],t_))
         for t_,src,d in _snaps('dk',_W+f"/snap_w{g['week']}_*/"):
-            if g['dk_utc']<t_<g['ko_utc'] and frozenset((g['A'],g['H'])) in _dk_rows(d): errs.append(('W6 newer pre-kickoff DraftKings pull ignored',g['gid'],t_))
+            if g['dk_utc']<t_<_cut(g) and frozenset((g['A'],g['H'])) in _dk_rows(d): errs.append(('W6 newer pre-kickoff DraftKings pull ignored',g['gid'],t_))
     print(f'W{GW} pulls ok:',sorted({_etlbl(g['split_utc']) for g in G6}))
     # DK splits line/price must equal ESPN DK from the same pull (newest pull folder: the one the card is built on)
     import importlib.util as _ilu

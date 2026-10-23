@@ -21,7 +21,8 @@ def _num(s): return float(str(s).replace('\u2212','-').replace('PK','0'))
 # W7 NE@CHI dk_20261023T0014Z (7:14:55 PM CT, 5 s before kickoff): the splits page flipped kickoff to 8:20 PM ET and showed
 # -110/-110 on both sides, while every pull from 5:58 PM on (dk_* and ESPN DK, incl. ESPN at 7:15:09 PM CT) had -108/-112.
 # The line (-3) is unchanged; the price is taken from the previous DK splits pull (dk_20261023T0004Z, 7:04 PM CT). Site Auditor, Oct 22.
-SKIP_DK={('NE','CHI','dk_20261023T0014Z.json')}
+SKIP_DK=set()   # NE@CHI exception retired: the 5-minute cutoff (TG, Oct 22) already excludes dk_20261023T0014Z
+CUTOFF=dt.timedelta(minutes=5)   # TG, Oct 22: grade at the last saved pull at least 5 minutes before kickoff
 def _iso(ts): return dt.datetime.fromisoformat(ts.replace('Z','+00:00'))
 def build(R):
     git=lambda *a: subprocess.run(['git','-C',R]+list(a),capture_output=True,text=True).stdout
@@ -39,7 +40,7 @@ def build(R):
         snaps.sort(key=lambda x:x[0]); caps.sort(key=lambda x:x[0])
         for e in json.load(open(_W+f'/espn_sum/sb_w{w}.json'))['events']:
             c=e['competitions'][0]; t={x['homeAway']:x['team']['abbreviation'] for x in c['competitors']}; A,H=t['away'],t['home']
-            ko=_iso(e['date']); lo=ko-dt.timedelta(days=8)
+            ko=_iso(e['date'])-CUTOFF; lo=ko-dt.timedelta(days=8)
             last=None
             for ts,src,d in snaps:
                 if not (lo<_iso(ts)<ko): continue
