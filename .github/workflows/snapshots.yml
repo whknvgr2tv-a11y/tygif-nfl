@@ -27,6 +27,11 @@ on:
     - cron: '3,13,23,33,43,53 0,1 * * 1'
     - cron: '3,13,23,33,43,53 22,23 * * 1'      # Mon 8:15 PM ET
     - cron: '3,13,23,33,43,53 0,1 * * 2'
+    # Non-standard slots (Saturday games, Friday international/Brazil, any odd kickoff): every 10 min
+    # all day Fri/Sat UTC (+ early Sat/Sun UTC for Fri/Sat night games), gated by scripts/kick_gate.py
+    # so only runs within 75 min of an ESPN-listed kickoff actually pull. Gated crons end in 8.
+    - cron: '8,18,28,38,48,58 * * * 5,6'
+    - cron: '8,18,28,38,48,58 0-4 * * 0'
 permissions:
   contents: write
   issues: write
@@ -43,7 +48,15 @@ jobs:
           sparse-checkout: |
             scripts
             data
+      - name: Kickoff gate (only the Fri/Sat catch-all crons; standard slots always run)
+        id: gate
+        run: |
+          case "${{ github.event.schedule }}" in
+            8,18,28,38,48,58*) python3 scripts/kick_gate.py ;;
+            *) echo run=1 >> "$GITHUB_OUTPUT" ;;
+          esac
       - name: Restore existing snapshots
+        if: steps.gate.outputs.run == '1'
         run: |
           mkdir -p out
           if git fetch --depth=1 origin snapshots 2>/dev/null; then
@@ -51,17 +64,18 @@ jobs:
           fi
           mkdir -p out/snapshots
       - name: Take snapshot
+        if: steps.gate.outputs.run == '1'
         run: python3 scripts/snapshot.py out/snapshots
       - name: Line-move alerts (GitHub issue, label line-move)
-        if: always()
+        if: always() && steps.gate.outputs.run == '1'
         env:
           GH_TOKEN: ${{ github.token }}
           ALERT_TEST: ${{ github.event.inputs.alert_test || '0' }}
         run: |
           gh label create line-move --color D4A017 --description "DraftKings line moved on a posted play" 2>/dev/null || true
           python3 scripts/line_alerts.py out/snapshots data/current_card.json
-      - name: Save to snapshots branch (single commit, pruned to 21 days)
-        if: always()
+      - name: Save to snapshots branch (single commit, every pull kept, never pruned)
+        if: always() && steps.gate.outputs.run == '1'
         run: |
           cd out
           git init -q -b snapshots
@@ -71,4 +85,5 @@ jobs:
           git commit -q -m "snapshots $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" snapshots
       - name: Coverage check (fails loudly on a pre-kickoff gap)
+        if: steps.gate.outputs.run == '1'
         run: python3 scripts/check_coverage.py out/snapshots
