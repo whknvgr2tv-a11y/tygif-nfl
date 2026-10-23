@@ -2,8 +2,8 @@
   "version": 1,
   "name": "tygif weekly process (every game, every week)",
   "sources": {
-    "splits_consensus": "ScoresAndOdds consensus (all books), last pull before kickoff",
-    "splits_draftkings": "DraftKings Network betting splits, last pull before kickoff",
+    "splits_consensus": "ScoresAndOdds consensus (all books), last pull at least 5 min before kickoff",
+    "splits_draftkings": "DraftKings Network betting splits, last pull at least 5 min before kickoff",
     "spread_line": "DraftKings via ESPN game summary (pickcenter); close for graded games",
     "moneyline": "DraftKings via ESPN game summary (pickcenter); close for graded games",
     "monday_line": "TeamRankings books 2-3, last quote before Monday 12:00 AM ET"

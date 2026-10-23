@@ -1,5 +1,5 @@
 {
- "rule": "Grading line, price and moneyline = DraftKings as recorded last before kickoff: spreads from the DraftKings splits page pulls, moneylines from the ESPN DraftKings odds saved Fri Oct 9, 10:04 PM CT (Week 5) and from the ESPN DraftKings captures (Week 6 on). Games with nothing recorded before kickoff (Weeks 1-4, and Week 5 TB@DAL) use the DraftKings close from the ESPN game summary.",
+ "rule": "Grading line, price and moneyline = DraftKings at the last pull at least 5 min before kickoff: spreads from the DraftKings splits page pulls, moneylines from the ESPN DraftKings odds saved Fri Oct 9, 10:04 PM CT (Week 5) and from the ESPN DraftKings captures (Week 6 on). Games with nothing recorded before kickoff (Weeks 1-4, and Week 5 TB@DAL) use the DraftKings close from the ESPN game summary.",
  "lines": [
   {
    "week": 5,

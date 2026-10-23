@@ -8,7 +8,7 @@ _B=_P_os.path.dirname(_P_os.path.abspath(__file__)); _I=_B+'/inputs'; _W=_P_os.e
 
 import json,glob,subprocess,os,datetime as dt
 NK={'Cardinals':'ARI','Falcons':'ATL','Ravens':'BAL','Bills':'BUF','Panthers':'CAR','Bears':'CHI','Bengals':'CIN','Browns':'CLE','Cowboys':'DAL','Broncos':'DEN','Lions':'DET','Packers':'GB','Texans':'HOU','Colts':'IND','Jaguars':'JAX','Chiefs':'KC','Raiders':'LV','Chargers':'LAC','Rams':'LAR','Dolphins':'MIA','Vikings':'MIN','Patriots':'NE','Saints':'NO','Giants':'NYG','Jets':'NYJ','Eagles':'PHI','Steelers':'PIT','49ers':'SF','Seahawks':'SEA','Buccaneers':'TB','Titans':'TEN','Commanders':'WSH'}
-RULE=('Grading line, price and moneyline = DraftKings as recorded last before kickoff: spreads from the DraftKings splits page pulls, '
+RULE=('Grading line, price and moneyline = DraftKings at the last pull at least 5 min before kickoff: spreads from the DraftKings splits page pulls, '
       'moneylines from the ESPN DraftKings odds saved Fri Oct 9, 10:04 PM CT (Week 5) and from the ESPN DraftKings captures (Week 6 on). '
       'Games with nothing recorded before kickoff (Weeks 1-4, and Week 5 TB@DAL) use the DraftKings close from the ESPN game summary.')
 FIRST_LIVE=5
@@ -21,7 +21,6 @@ def _num(s): return float(str(s).replace('\u2212','-').replace('PK','0'))
 # W7 NE@CHI dk_20261023T0014Z (7:14:55 PM CT, 5 s before kickoff): the splits page flipped kickoff to 8:20 PM ET and showed
 # -110/-110 on both sides, while every pull from 5:58 PM on (dk_* and ESPN DK, incl. ESPN at 7:15:09 PM CT) had -108/-112.
 # The line (-3) is unchanged; the price is taken from the previous DK splits pull (dk_20261023T0004Z, 7:04 PM CT). Site Auditor, Oct 22.
-SKIP_DK=set()   # NE@CHI exception retired: the 5-minute cutoff (TG, Oct 22) already excludes dk_20261023T0014Z
 CUTOFF=dt.timedelta(minutes=5)   # TG, Oct 22: grade at the last saved pull at least 5 minutes before kickoff
 def _iso(ts): return dt.datetime.fromisoformat(ts.replace('Z','+00:00'))
 def build(R):
@@ -43,9 +42,8 @@ def build(R):
             ko=_iso(e['date'])-CUTOFF; lo=ko-dt.timedelta(days=8)
             last=None
             for ts,src,d in snaps:
-                if not (lo<_iso(ts)<ko): continue
+                if not (lo<_iso(ts)<=ko): continue
                 for g in d['games']:
-                    if any({A,H}=={a,h} and src.endswith(n) for a,h,n in SKIP_DK): continue
                     sp={NK[s['side'].split()[1]]:(_num(s['side'].split()[-1]),int(_num(s['odds']))) for s in g['spread']}
                     if set(sp)=={A,H}: last=(ts,src,sp)
             ml=None
@@ -58,7 +56,7 @@ def build(R):
                         ml=(at.isoformat(timespec='seconds'),{A:int(it['awayTeamOdds']['moneyLine']),H:int(it['homeTeamOdds']['moneyLine'])},f'ESPN DraftKings odds data/odds_w5/{e["id"]}.json (saved Fri Oct 9)')
             else:
                 for ts,src,d in caps:
-                    if not (lo<_iso(ts)<ko): continue
+                    if not (lo<_iso(ts)<=ko): continue
                     for g in d['games']:
                         if {g['away'],g['home']}=={A,H} and g['ml']['away'] and g['ml']['home'] and 'OFF' not in (g['ml']['away'],g['ml']['home']):
                             v=lambda o:100 if o=='EVEN' else int(o.replace('+',''))

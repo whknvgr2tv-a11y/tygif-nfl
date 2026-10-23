@@ -17,7 +17,7 @@ Tuesday run, for each game of the week:
    Rules v1 with them, then grade at the DraftKings line, price and moneyline recorded last before kickoff
    (`dk_*` for line/price, `espn_dk_*` for the moneyline). ESPN's post-game close is used only when nothing was
    recorded before kickoff. Never grade from an ESPN summary fetched after kickoff.
-5. Label every closing split with its exact pull time and source, e.g. 'last pull before kickoff: Sat Oct 10, 8:49 PM ET'.
+5. Label every closing split with its exact pull time and source, e.g. 'last split at least 5 min before kickoff: Sat Oct 10, 8:49 PM ET'.
 6. `scripts/check_coverage.py` runs after each snapshot and fails the run when a game kicked off without a
    DraftKings snapshot in its last 90 minutes. A red run means a gap: fall back to step 7.
 7. If a game has no DraftKings snapshot before kickoff, say so in `closing_splits.json`
