@@ -4,7 +4,6 @@ STRONG Denver +2.5 · Final DEN 17–14 · win +$95
 STRONG Tennessee +6.5 · Final TEN 26–20 · win +$93
 STRONG NY Jets +7.5 · Final NYJ 19–26 · win +$89
 STRONG Arizona +12.5 · Final ARI 18–16 · win +$95
-STRONG Washington +7.5 · Final WSH 17–23 · win +$85
 LEAN New Orleans −1.5 · Final NO 34–27 · win +$105
 LEAN Philadelphia +3 · Final PHI 14–25 · loss −$100
 LEAN Tampa Bay +1.5 · Final TB 19–26 · loss −$100
@@ -14,4 +13,3 @@ STRONG Denver ML · Final 17–14 · win +$124
 STRONG Tennessee ML · Final 26–20 · win +$235
 STRONG NY Jets ML · Final 19–26 · loss −$100
 STRONG Arizona ML · Final 18–16 · win +$525
-STRONG Washington ML · Final 17–23 · loss −$100

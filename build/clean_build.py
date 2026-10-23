@@ -384,7 +384,7 @@ def settle_w5():
         ab=_side(wk[key]); sa_t,sa_src,sa=sap[-1]; abp=_side(sa)
         qb=False
         # TG decision Oct 13: closing split = last real pull before kickoff; a page read after kickoff is never a closing source
-        rt,ty,e,d=rate_v1(A,H,abp,dks,g['mon'],csp,qb)
+        rt,ty,e,d=rate_v1(A,H,abp,(None if len({v['money'] for v in dk.values()})==1 else dks),g['mon'],csp,qb)   # TG, Oct 22: DK exactly 50/50 = no side -> Type 4 PASS
         same=(rt,ty)==(g['rating'],g['type']) and abp[0]==AB[g['ab_side']]
         assert same or g['rating']=='PASS', (g['gid'],'closing rating differs from the locked card: TG decides',rt,ty)
         ent=dict(game=f'{A}@{H}',kickoff_utc=ko,locked=dict(rating=g['rating'],type=g['type']),
@@ -401,16 +401,16 @@ def settle_w5():
                                     f"{_etdata(dk_t)} ({dk_src}), {NAME[dks]} {dk[dks]['money']}% of the money.")
             ent['dk_note_short']=f"last DraftKings pull {_etdata(dk_t)}; no closer split was saved"
         else:
-            ent['dk_note_short']=f"DraftKings split {_etdata(dk_t)}, the last before kickoff"
+            ent['dk_note_short']=f"DraftKings split {_etdata(dk_t)}, the last at least 5 min before kickoff"
         if rt!='PASS':
             ent['all_books']=dict(side=NAME[abp[0]],money=abp[1],bets=abp[2],at=_etdata(sa_t),source='ScoresAndOdds, '+sa_src,
-                                  label=f"last pull before kickoff: {_etdata(sa_t)}")
+                                  label=f"last split at least 5 min before kickoff: {_etdata(sa_t)}")
         if rt=='PASS':
             ent.pop('dk_close'); ent['dk_close_line']=dict(sp=csp,source=f"ESPN game summary {x['id']} (DraftKings close)")
         out[g['gid']]=ent
     tb=close['tbdal-card']
     tb['all_books_week_page_not_used']=dict(tb.pop('all_books'),why='read after kickoff; never a closing source')
-    tb['all_books']=dict(side='Dallas',money=66,bets=73,at='Thu Oct 8, 1:58 PM ET',source='ScoresAndOdds pull (week5_refresh.py, audit_src/sao_all.csv)',label='last pull before kickoff: Thu Oct 8, 1:58 PM ET')
+    tb['all_books']=dict(side='Dallas',money=66,bets=73,at='Thu Oct 8, 1:58 PM ET',source='ScoresAndOdds pull (week5_refresh.py, audit_src/sao_all.csv)',label='last split at least 5 min before kickoff: Thu Oct 8, 1:58 PM ET')
     tb['closing_rating']=dict(rating='STRONG',type=1,line_moved_over_1_toward_money=False,on='last all-books and DraftKings pulls before kickoff + DraftKings closing line')
     close.update(out)
     close['_rule']=close.get('_rule','')
@@ -427,7 +427,7 @@ def settle_w5():
         if r['week']!='5': continue   # later weeks are settled by hand from their last pre-kickoff pull
         g=byg[r['game']]; c=out.get(g['gid'])
         if r['game']=='TB@DAL':
-            r['close_all_money']='DAL 66'; r['close_all_bets']='DAL 73'; r['close_split_at']='last pull before kickoff: Thu Oct 8, 1:58 PM ET'; r['close_split_source']='ScoresAndOdds (all books); DraftKings splits page had dropped the game'
+            r['close_all_money']='DAL 66'; r['close_all_bets']='DAL 73'; r['close_split_at']='last split at least 5 min before kickoff: Thu Oct 8, 1:58 PM ET'; r['close_split_source']='ScoresAndOdds (all books); DraftKings splits page had dropped the game'
         if not c: continue
         side=r['our_side']; a,h=map(int,c['final']['score'].split('-'))
         ln_=float(c['dk_close']['sp'][side].replace(M,'-')); mg=(a-h if side==g['A'] else h-a)+ln_
@@ -496,18 +496,19 @@ def build_wk(WK):
         mon=dict(team=mon['team'],b2=b2 if b2 is not None else b3,b3=b3 if b3 is not None else b2,avg=mon['avg'],source='TeamRankings books 2-3, last quote before Monday 12:00 AM ET')
         fade_ab=H if abs_==A else A
         drop=False; qbnote=''
-        rt,ty,ee,dd=rate_v1(A,H,(abs_,abm,abb),dks,mon,sp,drop)
+        dk_tie=len({v['money'] for v in dk.values()})==1   # TG, Oct 22: DK exactly 50/50 = no side -> Type 4 PASS
+        rt,ty,ee,dd=rate_v1(A,H,(abs_,abm,abb),(None if dk_tie else dks),mon,sp,drop)
         ko=_ET(e['date'].replace('Z',':00Z'))
         city=c.get('venue',{}).get('address',{}).get('city','')
         when=f"{ko.strftime('%a %b')} {ko.day} · {int(ko.strftime('%I'))}:{ko.strftime('%M %p')} CT · "+', '.join(n for b in c.get('broadcasts',[]) for n in b['names'])+(' · London' if city=='London' else '')
-        if ty==4: why='DraftKings has the money on the other side'
+        if ty==4: why=('DraftKings money split exactly 50/50 (no side)' if dk_tie else 'DraftKings has the money on the other side')
         elif ty==5: why='Under 55% of the money on either side'
         elif abb<50: why='Money and bets on different sides'
         else:
             drops=[n for n,v in (('line move',ee),) if v]
             why=f"Starts at {'STRONG' if abm>=65 else 'LEAN'}"+(''.join(f' · −1 for {x}' for x in drops) if drops else ' · no drops')
         g=dict(gid=f'w{WK}-{A.lower()}-{H.lower()}',A=A,H=H,away=NAME[A],home=NAME[H],sp=sp,ab_side=NAME[abs_],ab_m=abm,ab_b=abb,
-               dk_side=NAME[dks],dk_m=dk[dks]['money'],dk_b=dk[dks]['bets'],a=abb>=50,b=abm>=65,c=dks==abs_,d=dd,e=ee,f=drop,
+               dk_side=NAME[dks],dk_m=dk[dks]['money'],dk_b=dk[dks]['bets'],a=abb>=50,b=abm>=65,c=(dks==abs_ and not dk_tie),d=dd,e=ee,f=drop,
                fade=NAME[fade_ab],fade_line=float(sp[fade_ab].replace(M,'-')),rating=rt,type=ty,why=why,when=when,mon=mon,qbnote=qbnote,
                split_at=_etlbl(sa_t),split_utc=sa_t,dk_utc=dk_t,split_src=sa_src,dk_src=dk_src,final=None,held=False,week=WK,ko_utc=ko_s,eid=e['id'],status=c['status']['type']['name'])
         g['call']=f"{g['fade']} {sp[fade_ab]}"
@@ -553,7 +554,7 @@ for g in G:
         ab=c['all_books']; assert ab['side']==g['ab_side'], (g['gid'],'closing money flipped sides: re-rate by hand')
         old=g['ab_m']; g['ab_m'],g['ab_b']=ab['money'],ab['bets']
         g['a']=g['ab_b']>=50; g['b']=g['ab_m']>=65
-        g['wy']=g['wy'].replace(f"{old}% of the money",f"{g['ab_m']}% of the money").replace('(all books)',f"(all books, {ab.get('label','last pull before kickoff')})")
+        g['wy']=g['wy'].replace(f"{old}% of the money",f"{g['ab_m']}% of the money").replace('(all books)',f"(all books, {ab.get('label','last split at least 5 min before kickoff')})")
         g['split_at']='closing'; g['clbl']=f"(all books, {ab['label']})" if ab.get('label') else CLBL
     else:
         pass
@@ -603,9 +604,9 @@ def _settle_rows():
         new.append(dict(week=g['week'],game=k[1],kickoff_et=f"{ko:%Y-%m-%d} {int(ko.strftime('%I'))}:{ko:%M %p}",rating=g['rating'],type=g['type'],our_side=side,
             posted_line=ln(float(p['line'])),posted_price=str(pr),posted_at_et=_ny(g['split_utc']),pulled_at_et=_ny(g['split_utc']),closing_line=ln(float(p['line'])),closing_price=str(pr),
             final_score=f"{sc['away']}-{sc['home']}",result=res,profit_usd=format(usd_,'g'),close_all_money=f"{AB[g['ab_side']]} {g['ab_m']}",close_all_bets=f"{AB[g['ab_side']]} {g['ab_b']}",
-            close_dk_money=f"{AB[g['dk_side']]} {g['dk_m']} ({dk_at})",close_split_at=f"last pull before kickoff: {at_}",
+            close_dk_money=f"{AB[g['dk_side']]} {g['dk_m']} ({dk_at})",close_split_at=f"last split at least 5 min before kickoff: {at_}",
             close_split_source=f"ScoresAndOdds, {g['split_src']} + DraftKings {g['dk_src'].split()[-1]}",
-            card_source=f"line+price: DraftKings splits page {side} {ln(float(p['line']))} {pr} at the last pre-kickoff pull ({p['source']}); ML: {p.get('ml_source','none recorded')}"))
+            card_source=f"line+price: DraftKings splits page {side} {ln(float(p['line']))} {pr} at the last pull at least 5 min before kickoff ({p['source']}); ML: {p.get('ml_source','none recorded')}"))
     if new:
         w=_csv.DictWriter(open(R+'data/live_log.csv','a',newline=''),fieldnames=fn,lineterminator='\n'); w.writerows(new)
         print('settled:',', '.join(f"W{r['week']} {r['game']} {r['our_side']} {r['closing_line']} {r['result']}" for r in new))
@@ -655,7 +656,7 @@ def build_ml():
         add(int(r['week']),r['game'].replace('LA@','LAR@'),r['rating'],r['our_side'],float((r.get('closing_line') or r['posted_line']).replace('−','-')),'live')
     for g in GALL:
         if g['rating']!='PASS' and (g['week'],f"{g['A']}@{g['H']}") not in FINW: add(g['week'],f"{g['A']}@{g['H']}",g['rating'],AB[g['fade']],g['fade_line'],'preview')
-    json.dump({'source':'DraftKings moneyline recorded last before kickoff ('+ML_PULL+'); ESPN game summary close only where nothing was recorded (Weeks 1-4)',
+    json.dump({'source':'DraftKings moneyline from the last pull at least 5 min before kickoff ('+ML_PULL+'); ESPN game summary close only where nothing was recorded (Weeks 1-4)',
                'rule':'Every STRONG or LEAN spread play also has our side graded on the DraftKings moneyline recorded before kickoff, favorite or underdog, flat $100, profit rounded per play. Groups: rating + type + favorite/underdog. A moneyline play is posted only when its group record over prior weeks is profitable (> $0); never on a Type 3 underdog. Never combined with spread; STRONG never combined with LEAN.',
                'plays':rows},open(R+'data/ml_log.json','w'),indent=1)
     return rows
@@ -1310,7 +1311,7 @@ HOW=f'''<div class="hw">
 <li><b>{TY[2]['name']}:</b> 65%+ of the money and most bets on one team. Take the other team.</li>
 <li><b>Crowd leaning:</b> 55–64% of the money on one team. LEAN at most; money and bets on different teams is a pass.</li>
 <li><b>Type 3 underdog:</b> pass on the moneyline; spread unaffected.</li>
-<li><b>Grading:</b> Every game is graded at the DraftKings line, price and moneyline we recorded last before kickoff; where nothing was recorded, at the DraftKings closing numbers.</li>
+<li><b>Grading:</b> Every game is graded at the DraftKings line, price and moneyline we recorded last at least 5 minutes before kickoff; where nothing was recorded, at the DraftKings closing numbers.</li>
 <li><b>Books disagree:</b> all books and DraftKings have the money on different teams. PASS.</li>
 <li><b>No clear crowd:</b> under 55% of the money on either team. PASS.</li>
 </ol>
@@ -1448,7 +1449,7 @@ def w5row(g):
         cov=g['A'] if mg>0 else (g['H'] if mg<0 else 'Push')
         return (f'<tr data-final="1"><td>{g["A"]} @ {g["H"]}</td><td>{ko}</td><td>{fa} {fl}</td><td>{_score(g) or f["score"]}</td><td>{cov}</td>'
                 f'<td>{A} {g["ab_m"]}%</td><td>{bs} {bp}%</td><td>{g["type"]}</td><td>{call}</td><td class="{"pos" if f["usd"]>0 else ("neg" if f["usd"]<0 else "")}">{f["word"]} {usd(f["usd"])}{_mlres(_gwk(g),f"{g['A']}@{g['H']}")}</td></tr>')
-    sc=_score(g) if g.get('week',5)==5 else ''
+    sc=_score(g)   # every finished game shows its ESPN final, pass games included
     if sc:
         return (f'<tr data-final="1"><td>{g["A"]} @ {g["H"]}</td><td>{ko}</td><td>{fa} {fl}</td><td>{sc}</td><td>—</td>'
                 f'<td>{A} {g["ab_m"]}%</td><td>{bs} {bp}%</td><td>{g["type"]}</td><td>{call}</td><td>—</td></tr>')
@@ -1457,7 +1458,7 @@ def w5row(g):
 def wk(w,rows,fs):
     return (f'<details class="fold wk" open><summary><span class="ft">Week {w}</span><span class="fs">{fs}</span></summary><div class="fold-b"><div class="tcard"><div class="tblwrap">'
             f'<table class="data games">{th(COLS)}<tbody>{rows}</tbody></table></div></div></div></details>')
-ARC=(f'<section class="pane on" id="games"><div class="sec-h"><h2>All games</h2><p class="sub">Newest week first. Lines: DraftKings, recorded last before kickoff (Week {GW} upcoming games: lines as of {PULL6}). Results from our side, $100 per play.</p></div>'
+ARC=(f'<section class="pane on" id="games"><div class="sec-h"><h2>All games</h2><p class="sub">Newest week first. Lines: DraftKings, recorded last at least 5 minutes before kickoff (Week {GW} upcoming games: lines as of {PULL6}). Results from our side, $100 per play.</p></div>'
      f'<p class="sub2"><a href="tygif-tracker.html#results">‹ Back to Records</a></p>'
      f'<div class="games-controls"><input aria-label="Search games" autocomplete="off" id="games-q" placeholder="Search a team, e.g. DAL" type="search"/>'
      f'<label class="chk"><input id="games-final-only" type="checkbox"/> Final only</label></div><p class="legend"><span class="js-only">Tap a column name to sort</span></p>')
@@ -2126,7 +2127,7 @@ def _deepcheck():
                 if 'Pass' in c.select_one('.c1').get_text() or 'neu' in c.select_one('.c1')['class']: errs.append(('orange on a pass cell',f_,g_['gid']))
     _p6=_etlbl(max(g_['split_utc'] for g_ in G6))
     if f'As of {_p6}' not in re.sub(r'<[^>]+>','',open(R+'index.html').read()): errs.append(('W6 As of does not match the W6 pull',_p6))
-    if 'Every game is graded at the DraftKings line, price and moneyline we recorded last before kickoff; where nothing was recorded, at the DraftKings closing numbers.' not in re.sub(r'<[^>]+>','',open(R+'tygif-how.html').read()): errs.append(('How grading sentence missing',))
+    if 'Every game is graded at the DraftKings line, price and moneyline we recorded last at least 5 minutes before kickoff; where nothing was recorded, at the DraftKings closing numbers.' not in re.sub(r'<[^>]+>','',open(R+'tygif-how.html').read()): errs.append(('How grading sentence missing',))
     import slight_grade as _sgc
     for r_ in SIDES:   # graded at the last pre-kickoff DraftKings line wherever we saved one
         p_=_sgc.pre_line(r_['week'],*r_['game'].split('@'),r_['team'])

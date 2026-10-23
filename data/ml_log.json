@@ -1,5 +1,5 @@
 {
- "source": "DraftKings moneyline recorded last before kickoff (data/pregame_lines.json); ESPN game summary close only where nothing was recorded (Weeks 1-4)",
+ "source": "DraftKings moneyline from the last pull at least 5 min before kickoff (data/pregame_lines.json); ESPN game summary close only where nothing was recorded (Weeks 1-4)",
  "rule": "Every STRONG or LEAN spread play also has our side graded on the DraftKings moneyline recorded before kickoff, favorite or underdog, flat $100, profit rounded per play. Groups: rating + type + favorite/underdog. A moneyline play is posted only when its group record over prior weeks is profitable (> $0); never on a Type 3 underdog. Never combined with spread; STRONG never combined with LEAN.",
  "plays": [
   {
@@ -769,20 +769,6 @@
    "price": 200,
    "fd": "Dog",
    "score": "33-30",
-   "result": "L",
-   "profit": -100.0
-  },
-  {
-   "week": 6,
-   "game": "WSH@SF",
-   "rating": "STRONG",
-   "side": "WSH",
-   "spread_line": 7.5,
-   "status": "live",
-   "espn_event": "401873008",
-   "price": 310,
-   "fd": "Dog",
-   "score": "17-23",
    "result": "L",
    "profit": -100.0
   },

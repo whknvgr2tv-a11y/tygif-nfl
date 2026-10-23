@@ -17,7 +17,7 @@
    "bets": 73,
    "at": "Thu Oct 8, 1:58 PM ET",
    "source": "ScoresAndOdds pull (week5_refresh.py, audit_src/sao_all.csv)",
-   "label": "last pull before kickoff: Thu Oct 8, 1:58 PM ET",
+   "label": "last split at least 5 min before kickoff: Thu Oct 8, 1:58 PM ET",
    "why": "read after kickoff; never a closing source"
   },
   "closing_rating": {
@@ -32,7 +32,7 @@
    "bets": 73,
    "at": "Thu Oct 8, 1:58 PM ET",
    "source": "ScoresAndOdds pull (week5_refresh.py, audit_src/sao_all.csv)",
-   "label": "last pull before kickoff: Thu Oct 8, 1:58 PM ET"
+   "label": "last split at least 5 min before kickoff: Thu Oct 8, 1:58 PM ET"
   }
  },
  "g-mia": {
@@ -95,7 +95,7 @@
    "bets": 74,
    "at": "Sat Oct 10, 9:56 PM ET",
    "source": "ScoresAndOdds, scripts/snapshot.py pull sao_20261011T0156Z.json",
-   "label": "last pull before kickoff: Sat Oct 10, 9:56 PM ET"
+   "label": "last split at least 5 min before kickoff: Sat Oct 10, 9:56 PM ET"
   }
  },
  "g-nyj": {
@@ -158,7 +158,7 @@
    "bets": 83,
    "at": "Sat Oct 10, 9:56 PM ET",
    "source": "ScoresAndOdds, scripts/snapshot.py pull sao_20261011T0156Z.json",
-   "label": "last pull before kickoff: Sat Oct 10, 9:56 PM ET"
+   "label": "last split at least 5 min before kickoff: Sat Oct 10, 9:56 PM ET"
   }
  },
  "g-wsh": {
@@ -221,7 +221,7 @@
    "bets": 71,
    "at": "Sat Oct 10, 9:56 PM ET",
    "source": "ScoresAndOdds, scripts/snapshot.py pull sao_20261011T0156Z.json",
-   "label": "last pull before kickoff: Sat Oct 10, 9:56 PM ET"
+   "label": "last split at least 5 min before kickoff: Sat Oct 10, 9:56 PM ET"
   }
  },
  "g-philadelphia-at-jacksonville": {
@@ -434,7 +434,7 @@
    "bets": 67,
    "at": "Sat Oct 10, 9:56 PM ET",
    "source": "ScoresAndOdds, scripts/snapshot.py pull sao_20261011T0156Z.json",
-   "label": "last pull before kickoff: Sat Oct 10, 9:56 PM ET"
+   "label": "last split at least 5 min before kickoff: Sat Oct 10, 9:56 PM ET"
   }
  },
  "g-minnesota-at-new-orleans": {
@@ -583,7 +583,7 @@
    "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
   "matches_locked": true,
-  "dk_note_short": "DraftKings split Sun Oct 11, 1:59 PM ET, the last before kickoff",
+  "dk_note_short": "DraftKings split Sun Oct 11, 1:59 PM ET, the last at least 5 min before kickoff",
   "dk_close_line": {
    "sp": {
     "LAC": "+3.5",
@@ -650,14 +650,14 @@
    "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
   "matches_locked": true,
-  "dk_note_short": "DraftKings split Sun Oct 11, 1:59 PM ET, the last before kickoff",
+  "dk_note_short": "DraftKings split Sun Oct 11, 1:59 PM ET, the last at least 5 min before kickoff",
   "all_books": {
    "side": "Detroit",
    "money": 56,
    "bets": 50,
    "at": "Sun Oct 11, 1:59 PM ET",
    "source": "ScoresAndOdds, snapshots branch sao_20261011T1759Z.json",
-   "label": "last pull before kickoff: Sun Oct 11, 1:59 PM ET"
+   "label": "last split at least 5 min before kickoff: Sun Oct 11, 1:59 PM ET"
   }
  },
  "g-san-francisco-at-seattle": {
@@ -706,7 +706,7 @@
    "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
   "matches_locked": true,
-  "dk_note_short": "DraftKings split Sun Oct 11, 1:59 PM ET, the last before kickoff",
+  "dk_note_short": "DraftKings split Sun Oct 11, 1:59 PM ET, the last at least 5 min before kickoff",
   "dk_close_line": {
    "sp": {
     "SEA": "−3",
@@ -773,14 +773,14 @@
    "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
   "matches_locked": false,
-  "dk_note_short": "DraftKings split Sun Oct 11, 7:14 PM ET, the last before kickoff",
+  "dk_note_short": "DraftKings split Sun Oct 11, 7:14 PM ET, the last at least 5 min before kickoff",
   "all_books": {
    "side": "Baltimore",
    "money": 56,
    "bets": 54,
    "at": "Sun Oct 11, 7:14 PM ET",
    "source": "ScoresAndOdds, snapshots branch sao_20261011T2314Z.json",
-   "label": "last pull before kickoff: Sun Oct 11, 7:14 PM ET"
+   "label": "last split at least 5 min before kickoff: Sun Oct 11, 7:14 PM ET"
   }
  },
  "g-buffalo-at-la-rams": {

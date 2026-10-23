@@ -6,7 +6,6 @@ STRONG
   Tennessee +6.5  ·  Sun Oct 18 · 12:00 PM CT · Final TEN 26–20 · win +$93
   NY Jets +7.5  ·  Sun Oct 18 · 12:00 PM CT · Final NYJ 19–26 · win +$89
   Arizona +12.5  ·  Sun Oct 18 · 3:05 PM CT · Final ARI 18–16 · win +$95
-  Washington +7.5  ·  Mon Oct 19 · 7:15 PM CT · Final WSH 17–23 · win +$85
 
 LEAN
   New Orleans −1.5  ·  Sun Oct 18 · 12:00 PM CT · Final NO 34–27 · win +$105
@@ -20,10 +19,10 @@ MONEYLINE
   STRONG Tennessee ML  ·  Sun Oct 18 · 12:00 PM CT · Final 26–20 · win +$235
   STRONG NY Jets ML  ·  Sun Oct 18 · 12:00 PM CT · Final 19–26 · loss −$100
   STRONG Arizona ML  ·  Sun Oct 18 · 3:05 PM CT · Final 18–16 · win +$525
-  STRONG Washington ML  ·  Mon Oct 19 · 7:15 PM CT · Final 17–23 · loss −$100
 
 PASS
   Houston at Jacksonville
   Chicago at Atlanta
   Baltimore at Cleveland
   Dallas at Green Bay
+  Washington at San Francisco
