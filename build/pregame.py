@@ -17,6 +17,11 @@ def weeks():
     while os.path.exists(_W+f'/espn_sum/sb_w{w}.json'): out.append(w); w+=1
     return out
 def _num(s): return float(str(s).replace('\u2212','-').replace('PK','0'))
+# Narrow, documented exceptions: a DraftKings splits row that is a kickoff-transition placeholder, not a price.
+# W7 NE@CHI dk_20261023T0014Z (7:14:55 PM CT, 5 s before kickoff): the splits page flipped kickoff to 8:20 PM ET and showed
+# -110/-110 on both sides, while every pull from 5:58 PM on (dk_* and ESPN DK, incl. ESPN at 7:15:09 PM CT) had -108/-112.
+# The line (-3) is unchanged; the price is taken from the previous DK splits pull (dk_20261023T0004Z, 7:04 PM CT). Site Auditor, Oct 22.
+SKIP_DK={('NE','CHI','dk_20261023T0014Z.json')}
 def _iso(ts): return dt.datetime.fromisoformat(ts.replace('Z','+00:00'))
 def build(R):
     git=lambda *a: subprocess.run(['git','-C',R]+list(a),capture_output=True,text=True).stdout
@@ -39,6 +44,7 @@ def build(R):
             for ts,src,d in snaps:
                 if not (lo<_iso(ts)<ko): continue
                 for g in d['games']:
+                    if any({A,H}=={a,h} and src.endswith(n) for a,h,n in SKIP_DK): continue
                     sp={NK[s['side'].split()[1]]:(_num(s['side'].split()[-1]),int(_num(s['odds']))) for s in g['spread']}
                     if set(sp)=={A,H}: last=(ts,src,sp)
             ml=None

@@ -9,12 +9,17 @@ def ab(name):
 def norm(s): return s.replace('\u2212', '-').replace('PK', '0').strip()
 def num(s):
     s = norm(str(s)); return 0.0 if s in ('0', 'EVEN') else float(s.replace('EVEN', '100'))
+def _t(s):
+    import datetime as dt; return dt.datetime.fromisoformat(s.replace('Z', '+00:00'))
 def check(folder, espn=None):
     dk = sorted(glob.glob(folder + '/dk_*.json')); es = [espn] if espn else sorted(glob.glob(folder + '/espn_dk_*.json'))
     if not dk or not es: return []
     d = json.load(open(dk[-1])); e = json.load(open(es[-1])); pairs = {}
     if not e.get('games'): return [f"{os.path.basename(folder)}: ESPN DK {os.path.basename(es[-1])} has 0 games"]
-    for g in e['games']: pairs[(g['away'], g['home'])] = {g['away']: g['spread']['away'], g['home']: g['spread']['home']}
+    # An ESPN capture fetched at/after a game's kickoff is not a pre-kickoff price for that game: skip it.
+    for g in e['games']:
+        if g.get('kickoff_utc') and _t(e['fetched_utc']) >= _t(g['kickoff_utc']): continue
+        pairs[(g['away'], g['home'])] = {g['away']: g['spread']['away'], g['home']: g['spread']['home']}
     bad = []
     for g in d['games']:
         a, h = [ab(x.strip()) for x in g['matchup'].split('@')]

@@ -1,16 +1,15 @@
 TYGIF'S MODEL · WEEK 7
-Lines as of Thu Oct 22, 5:58 PM CT
+Lines as of Thu Oct 22, 7:14 PM CT
 
 STRONG
-  Chicago −3  ·  Thu Oct 22 · 7:15 PM CT
   Tampa Bay +3  ·  Sun Oct 25 · 12:00 PM CT
 
 LEAN
+  Chicago −3  ·  Thu Oct 22 · 7:15 PM CT
   Baltimore −1.5  ·  Sun Oct 25 · 12:00 PM CT
   LA Rams −3.5  ·  Sun Oct 25 · 3:25 PM CT
 
 MONEYLINE
-  STRONG Chicago ML  ·  Thu Oct 22 · 7:15 PM CT
   STRONG Tampa Bay ML  ·  Sun Oct 25 · 12:00 PM CT
   LEAN Baltimore ML  ·  Sun Oct 25 · 12:00 PM CT
   LEAN LA Rams ML  ·  Sun Oct 25 · 3:25 PM CT
