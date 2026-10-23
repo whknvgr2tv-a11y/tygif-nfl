@@ -7,10 +7,18 @@ SB = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard'
 now = datetime.now(timezone.utc); run = 0; why = 'no kickoff in next 75 min'
 try:
     d = json.load(urllib.request.urlopen(urllib.request.Request(SB, headers={'User-Agent': 'Mozilla/5.0'}), timeout=20))
-    for e in d.get('events', []):
-        k = datetime.fromisoformat(e['date'].replace('Z', '+00:00'))
-        if timedelta(0) <= k - now <= timedelta(minutes=75):
-            run = 1; why = f"{e.get('shortName')} kicks {k:%Y-%m-%d %H:%MZ}"; break
+    ev = d.get('events') if isinstance(d, dict) else None
+    if not ev:
+        run = 1; why = 'ESPN scoreboard has no events; pulling anyway'
+    else:
+        for e in ev:
+            try:
+                k = datetime.fromisoformat(e['date'].replace('Z', '+00:00'))
+                if k.tzinfo is None: raise ValueError('naive date')
+            except Exception as x:
+                run = 1; why = f'malformed ESPN event {e.get("shortName") if isinstance(e, dict) else e!r} ({x}); pulling anyway'; break
+            if timedelta(0) <= k - now <= timedelta(minutes=75):
+                run = 1; why = f"{e.get('shortName')} kicks {k:%Y-%m-%d %H:%MZ}"; break
 except Exception as x:
     run = 1; why = f'ESPN schedule unavailable ({x}); pulling anyway'
 print(why)

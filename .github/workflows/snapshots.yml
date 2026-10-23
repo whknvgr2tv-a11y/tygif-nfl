@@ -56,13 +56,22 @@ jobs:
             *) echo run=1 >> "$GITHUB_OUTPUT" ;;
           esac
       - name: Restore existing snapshots
+        id: restore
         if: steps.gate.outputs.run == '1'
         run: |
           mkdir -p out
-          if git fetch --depth=1 origin snapshots 2>/dev/null; then
-            git --work-tree=out checkout FETCH_HEAD -- snapshots 2>/dev/null || true
+          ok=0; sha=""; n=0
+          if git fetch --depth=1 origin snapshots; then
+            sha=$(git rev-parse FETCH_HEAD)
+            if git --work-tree=out checkout FETCH_HEAD -- snapshots; then
+              n=$(find out/snapshots -mindepth 1 -maxdepth 1 | wc -l)
+              [ "$n" -gt 0 ] && ok=1
+            fi
           fi
           mkdir -p out/snapshots
+          echo "Restored $n prior pulls (ok=$ok, sha=$sha)"
+          [ "$ok" = 1 ] || echo "::error::Snapshot restore failed or restored 0 prior pulls; save will be aborted"
+          { echo "ok=$ok"; echo "sha=$sha"; echo "count=$n"; } >> "$GITHUB_OUTPUT"
       - name: Take snapshot
         if: steps.gate.outputs.run == '1'
         run: python3 scripts/snapshot.py out/snapshots
@@ -77,13 +86,17 @@ jobs:
       - name: Save to snapshots branch (single commit, every pull kept, never pruned)
         if: always() && steps.gate.outputs.run == '1'
         run: |
+          if [ "${{ steps.restore.outputs.ok }}" != "1" ] || [ -z "${{ steps.restore.outputs.sha }}" ]; then
+            echo "::error::Refusing to save: restore failed or restored 0 prior pulls (would wipe snapshot history)"
+            exit 1
+          fi
           cd out
           git init -q -b snapshots
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add snapshots
           git commit -q -m "snapshots $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" snapshots
+          git push --force-with-lease=snapshots:${{ steps.restore.outputs.sha }} "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" snapshots
       - name: Coverage check (fails loudly on a pre-kickoff gap)
         if: steps.gate.outputs.run == '1'
         run: python3 scripts/check_coverage.py out/snapshots
