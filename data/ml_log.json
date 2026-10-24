@@ -669,7 +669,7 @@
    "status": "live",
    "espn_event": "401873000",
    "price": -108,
-   "fd": "Fav",
+   "fd": "Dog",
    "score": "34-27",
    "result": "W",
    "profit": 93.0
@@ -788,13 +788,24 @@
   },
   {
    "week": 7,
-   "game": "TB@CAR",
-   "rating": "STRONG",
-   "side": "TB",
-   "spread_line": 3.0,
+   "game": "SF@ATL",
+   "rating": "LEAN",
+   "side": "ATL",
+   "spread_line": 2.5,
    "status": "preview",
-   "espn_event": "401873018",
-   "price": 136,
+   "espn_event": "401873017",
+   "price": 124,
+   "fd": "Dog"
+  },
+  {
+   "week": 7,
+   "game": "CLE@TEN",
+   "rating": "LEAN",
+   "side": "TEN",
+   "spread_line": 2.5,
+   "status": "preview",
+   "espn_event": "401873013",
+   "price": 110,
    "fd": "Dog"
   },
   {
@@ -802,22 +813,22 @@
    "game": "CIN@BAL",
    "rating": "LEAN",
    "side": "BAL",
-   "spread_line": -1.5,
+   "spread_line": 1.5,
    "status": "preview",
    "espn_event": "401873012",
-   "price": -118,
-   "fd": "Fav"
+   "price": -105,
+   "fd": "Dog"
   },
   {
    "week": 7,
-   "game": "LAR@LV",
-   "rating": "LEAN",
-   "side": "LAR",
-   "spread_line": -3.5,
+   "game": "DAL@PHI",
+   "rating": "STRONG",
+   "side": "PHI",
+   "spread_line": 4.5,
    "status": "preview",
-   "espn_event": "401873021",
-   "price": -192,
-   "fd": "Fav"
+   "espn_event": "401873009",
+   "price": 180,
+   "fd": "Dog"
   }
  ]
 }

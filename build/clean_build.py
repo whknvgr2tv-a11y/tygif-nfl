@@ -637,6 +637,9 @@ def ml_profit(price,res):
     if res=='L': return -100.0
     if res=='P' or res is None: return 0.0 if res=='P' else None
     return float(round(price if price>0 else 100*100/abs(price)))
+def _opx(x,week,A,H,o):   # the opponent's moneyline from the same sources add() uses
+    p=_ml_price(x['id'],o==H) if (x and week<_sg0.PRE_ONLY) else None
+    q=_sg0.pre_ml(week,A,H,o); return q if q is not None else p
 def build_ml():
     ix=_espn_index(); rows=[]
     def add(week,game,rating,side,line,status):
@@ -644,7 +647,7 @@ def build_ml():
         price=_ml_price(x['id'],side==H) if (x and week<_sg0.PRE_ONLY) else None   # weeks 6 on: never an ESPN summary (may be read after kickoff)
         if _sg0.pre_ml(week,A,H,side) is not None: price=_sg0.pre_ml(week,A,H,side)   # last pre-kickoff DraftKings moneyline
         r=dict(week=week,game=game,rating=rating,side=side,spread_line=line,status=status,espn_event=x['id'] if x else None,price=price,
-               fd=(None if price is None else ('Dog' if price>0 else 'Fav')))
+               fd=(None if price is None else _sg0.fd_of(price,_opx(x,week,A,H,A if side==H else H))))
         if price is None: r['note']='no DraftKings moneyline recorded before kickoff: no ML play graded'
         if x and x['final']:
             a,h=int(x['a']),int(x['h']); mg=(a-h) if side==A else (h-a)
@@ -1752,9 +1755,11 @@ def _deepcheck():
         o=pc['home' if home else 'away']['close']['odds']; pr=100 if o=='EVEN' else int(o)
         _q=_sg0.pre_ml(w,*gm.split('@'),side)
         if _q is not None: pr=_q   # last pre-kickoff DraftKings moneyline
+        _o=[x for x in gm.split('@') if x!=side][0]; o2=pc['away' if home else 'home']['close']['odds']; po=100 if o2=='EVEN' else (int(o2) if o2 not in (None,'OFF') else None)
+        _q2=_sg0.pre_ml(w,*gm.split('@'),_o); po=_q2 if _q2 is not None else po
         us=int(tm['home' if home else 'away']['score']); th=int(tm['away' if home else 'home']['score'])
         u=round(pr if pr>0 else 10000/-pr) if us>th else (-100 if us<th else 0)
-        for kk in ((rt,'all'),(rt,ty,'Dog' if pr>0 else 'Fav')):
+        for kk in ((rt,'all'),(rt,ty,_sg0.fd_of(pr,po))):
             a=(want if kk[1]=='all' else grp).setdefault(kk,[0,0,0,0.0]); a[0 if us>th else (1 if us<th else 2)]+=1; a[3]+=u
     for (rt,ty,fd),(w,l,p,u) in grp.items():
         if ml_at(rt,ty,fd)[:4]!=(w,l,p,u): errs.append(('ML group',rt,ty,fd,ml_at(rt,ty,fd),(w,l,p,u)))

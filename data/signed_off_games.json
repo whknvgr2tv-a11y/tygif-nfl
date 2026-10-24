@@ -1,5 +1,5 @@
 {
-"note": "Games Site Auditor signed off (2da0581). Per-side rows: week, game, team, role, rating, type, fd, sp_res, sp_usd, ml_res, ml_usd. Frozen: the build fails if any changes.",
+"note": "Games Site Auditor signed off (2da0581). Per-side rows: week, game, team, role, rating, type, fd, sp_res, sp_usd, ml_res, ml_usd. Frozen: the build fails if any changes. | Oct 24: fav/dog fix (favorite = shorter of the two DraftKings moneylines; both-negative prices no longer make both teams favorites): W1 NYJ@TEN NYJ, W3 LAR@DEN LAR, W3 MIN@TB MIN, W4 ATL@NO ATL Fav->Dog. Results and $ unchanged.",
 "games": [
 [
 1,
@@ -642,7 +642,7 @@
 "money",
 "PASS",
 5,
-"Fav",
+"Dog",
 "W",
 87.0,
 "W",
@@ -1357,7 +1357,7 @@
 "fade",
 "PASS",
 3,
-"Fav",
+"Dog",
 "L",
 -100.0,
 "L",
@@ -1396,7 +1396,7 @@
 "fade",
 "PASS",
 5,
-"Fav",
+"Dog",
 "W",
 85.0,
 "W",
@@ -1578,7 +1578,7 @@
 "money",
 "STRONG",
 2,
-"Fav",
+"Dog",
 "W",
 83.0,
 "W",

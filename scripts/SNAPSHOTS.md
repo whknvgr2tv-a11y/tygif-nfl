@@ -14,7 +14,7 @@ Tuesday run, for each game of the week:
    before kickoff. Never use a page read after kickoff: the ScoresAndOdds week page keeps changing
    after kickoff (Week 5: DET@ARI read 56% pre-kickoff, 78% after), so it is not a closing source (TG, Oct 13).
 4. Write both, with their times and sources, to `data/closing_splits.json`; rate the game under
-   Rules v1 with them, then grade at the DraftKings line, price and moneyline recorded last before kickoff
+   Rules v1 with them, then grade at the DraftKings line, price and moneyline at the last saved pull at least 5 minutes before kickoff
    (`dk_*` for line/price, `espn_dk_*` for the moneyline). ESPN's post-game close is used only when nothing was
    recorded before kickoff. Never grade from an ESPN summary fetched after kickoff.
 5. Label every closing split with its exact pull time and source, e.g. 'last split at least 5 min before kickoff: Sat Oct 10, 8:49 PM ET'.
@@ -31,7 +31,7 @@ Every weekly run handles ML alongside the spread, using the same card template a
 - Card run (any build before kickoff; the card is rebuilt as new pulls arrive): show 'Moneyline: <team>' on qualifying cards
   (team only; never a price). Favorite/underdog comes from the latest ESPN DraftKings moneyline capture (`espn_dk_*`, taken by
   the snapshot workflow and by build/settle.py); the card's one 'As of' line gives the time of the pull it uses.
-- Tuesday run: grade each ML play W/L/P from the final score at the DraftKings moneyline recorded last before kickoff (`espn_dk_*`;
+- Tuesday run: grade each ML play W/L/P from the final score at the DraftKings moneyline at the last saved pull at least 5 minutes before kickoff (`espn_dk_*`;
   ESPN `pickcenter` close only if nothing was recorded), flat $100. Write it to `data/ml_log.json`. If the price is missing, record that and
   grade nothing. STRONG ML and LEAN ML records stay separate and are never added to the spread records.
 - Prices live only in the data files. No prices or odds on the site or in the txt files; no dated update or change notes.

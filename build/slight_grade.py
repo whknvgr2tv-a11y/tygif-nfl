@@ -38,6 +38,13 @@ def _pre():
     return _PRE
 def pre_line(w,A,H,side):
     p=_pre().get((w,f'{A}@{H}',side)); return p if p and 'line' in p else None
+def _imp(pr): return -pr/(-pr+100) if pr<0 else 100/(pr+100)
+def fd_of(pr,opp=None):
+    """Favorite/underdog from both DraftKings moneylines of the same game: the favorite is the side with the shorter
+    price (higher implied chance), so CIN -115 / BAL -105 makes BAL the underdog. Fix Oct 24: the old test (price > 0 = underdog)
+    called both teams favorites whenever both prices were negative. Equal prices (no favorite) or no opponent price: old test."""
+    if opp is None or _imp(pr)==_imp(opp): return 'Dog' if pr>0 else 'Fav'
+    return 'Fav' if _imp(pr)>_imp(opp) else 'Dog'
 def pre_ml(w,A,H,side):
     p=_pre().get((w,f'{A}@{H}',side)); return p['ml'] if p and 'ml' in p else None
 def grade(w,A,H,side):

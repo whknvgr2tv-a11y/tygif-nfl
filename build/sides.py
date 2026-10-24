@@ -9,6 +9,22 @@ def r0(x): return int(_Dec(str(x)).quantize(_Dec('1'),_RHU))
 def round(x,n=None): return r0(x) if n is None else _bi.round(x,n)   # half-up everywhere (TG, Oct 15)
 import json
 import slight_grade as sg
+def _opp(w,A,H,side):
+    return A if sg.ALIAS.get(side,side)==sg.key(w,A,H)[2] else H
+def _ml_px(w,A,H,side):
+    """The price _ml grades at for this side (same sources, same order), or None."""
+    x=sg.IX.get(sg.key(w,A,H))
+    if not x: return None
+    s=json.load(open(_W+f'/espn_sum/{x["id"]}.json')); home=sg.ALIAS.get(side,side)==sg.key(w,A,H)[2]
+    for p in s.get('pickcenter',[]):
+        if 'DraftKings' in p['provider']['name'] and p.get('moneyline'):
+            o=((p['moneyline'].get('home' if home else 'away') or {}).get('close') or {}).get('odds')
+            if not o or o=='OFF': return None
+            pr=100 if o=='EVEN' else int(o.replace('+',''))
+            if sg.pre_ml(w,A,H,side) is not None: pr=sg.pre_ml(w,A,H,side)
+            elif w>=sg.PRE_ONLY: return None
+            return pr
+    return None
 def _ml(w,A,H,side):
     x=sg.IX.get(sg.key(w,A,H))
     if not x: return None
@@ -20,7 +36,7 @@ def _ml(w,A,H,side):
             pr=100 if o=='EVEN' else int(o.replace('+',''))
             if sg.pre_ml(w,A,H,side) is not None: pr=sg.pre_ml(w,A,H,side)   # last pre-kickoff DraftKings moneyline
             elif w>=sg.PRE_ONLY: return None   # weeks 6 on: nothing recorded before kickoff = no grade
-            r=dict(fd='Dog' if pr>0 else 'Fav',res=None,usd=None)
+            r=dict(fd=sg.fd_of(pr,_ml_px(w,A,H,_opp(w,A,H,side))),res=None,usd=None)
             if x['final']:
                 a,h=int(x['a']),int(x['h']); mg=(h-a) if home else (a-h)
                 r['res']='W' if mg>0 else 'L' if mg<0 else 'P'
