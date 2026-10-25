@@ -1,0 +1,79 @@
+{
+ "fetched_utc": "2026-10-25T20:09:13+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Moneyline&tb_page=N",
+ "market": "moneyline",
+ "games": [
+  {
+   "matchup": "GB Packers @ DET Lions",
+   "kickoff_local": "10/25, 04:25PM",
+   "spread": [
+    {
+     "side": "DET Lions",
+     "odds": "\u2212192",
+     "handle_pct": 62,
+     "bets_pct": 61
+    },
+    {
+     "side": "GB Packers",
+     "odds": "+160",
+     "handle_pct": 38,
+     "bets_pct": 39
+    }
+   ]
+  },
+  {
+   "matchup": "LA Rams @ LV Raiders",
+   "kickoff_local": "10/25, 04:25PM",
+   "spread": [
+    {
+     "side": "LV Raiders",
+     "odds": "+150",
+     "handle_pct": 24,
+     "bets_pct": 25
+    },
+    {
+     "side": "LA Rams",
+     "odds": "\u2212180",
+     "handle_pct": 76,
+     "bets_pct": 75
+    }
+   ]
+  },
+  {
+   "matchup": "KC Chiefs @ SEA Seahawks",
+   "kickoff_local": "10/25, 08:20PM",
+   "spread": [
+    {
+     "side": "SEA Seahawks",
+     "odds": "\u2212148",
+     "handle_pct": 29,
+     "bets_pct": 30
+    },
+    {
+     "side": "KC Chiefs",
+     "odds": "+124",
+     "handle_pct": 71,
+     "bets_pct": 70
+    }
+   ]
+  },
+  {
+   "matchup": "DAL Cowboys @ PHI Eagles",
+   "kickoff_local": "10/26, 08:15PM",
+   "spread": [
+    {
+     "side": "PHI Eagles",
+     "odds": "+180",
+     "handle_pct": 23,
+     "bets_pct": 12
+    },
+    {
+     "side": "DAL Cowboys",
+     "odds": "\u2212218",
+     "handle_pct": 77,
+     "bets_pct": 88
+    }
+   ]
+  }
+ ]
+}

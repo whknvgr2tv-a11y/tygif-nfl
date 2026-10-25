@@ -1,16 +1,16 @@
-Week 7 · Lines as of Sun Oct 25, 2:41 PM CT
+Week 7 · Lines as of Sun Oct 25, 3:09 PM CT
 
 STRONG Chicago −3 · Final CHI 30–24 · win +$93
-STRONG Baltimore +3
+STRONG Baltimore +3 · Final BAL 13–35 · loss −$100
 STRONG Arizona +4.5
 STRONG Seattle −3
 STRONG Philadelphia +4.5
-LEAN Tennessee +1.5
-LEAN Tampa Bay +3
+LEAN Tennessee +1.5 · Final TEN 24–27 · loss −$100
+LEAN Tampa Bay +3 · Final TB 43–13 · win +$91
 LEAN Green Bay +3.5
 LEAN Las Vegas +3.5
 STRONG Chicago ML · Final 30–24 · win +$65
-STRONG Baltimore ML
+STRONG Baltimore ML · Final 13–35 · loss −$100
 STRONG Arizona ML
 STRONG Seattle ML
 STRONG Philadelphia ML
