@@ -805,7 +805,7 @@ def ml_block(g):
     if r=='PASS' or not mr or mr.get('price') is None:
         return f'<span class="cd-m"><b class="ck">Moneyline</b><span class="mc c1 neu">{g["fade"]} ML</span><span class="c2">Type {t}</span><small class="c3">{"PASS" if r=="PASS" else "no moneyline"}</small></span>',None
     fd=mr['fd']; a=ml_at(r,t,fd,before=_cb(g)); lab=f'Type {t} · {FDN[fd]}'
-    grp=f'All ML calls: {wlp(*a[:3])}, {usd(a[3])}' if a[4] else 'All ML calls: no games yet'
+    _ml=f'Type {t} {FDN[fd].lower()} ML group'; grp=f'{_ml}: {wlp(*a[:3])}, {usd(a[3])}' if a[4] else f'{_ml}: no games yet'
     if not ml_ok(g): call=None
     elif mr.get('result'): call=f'{g["fade"]} ML · <span class="fin {mr["result"]}">{dict(W="win",L="loss",P="push")[mr["result"]]} {usd(mr["profit"])}</span>'
     elif True: call=f'{g["fade"]} ML'
@@ -821,7 +821,7 @@ def card_inner(g):
     if r!='PASS':
         side=g['fade']; ab=AB[side]; title=f'{side} {g["sp"][ab]}'
         other=g['home'] if side==g['away'] else g['away']; vs=('at ' if side==g['away'] else 'vs ')+other
-        w,l,p_,u,n=at(r,t,before=_cb(g)); trec=f'Group: {wlp(w,l,p_)}, {usd(u)}' if n else 'Group: no plays yet'
+        w,l,p_,u,n=at(r,t,before=_cb(g)); _gl=f'Type {t} group'; trec=f'{_gl}: {wlp(w,l,p_)}, {usd(u)}' if n else f'{_gl}: no plays yet'
     else:
         title=f'{g["away"]} at {g["home"]}'; vs=''; trec='PASS'
     m=g['ab_m']; mcls='ok' if m>=65 else 'md'
@@ -865,16 +865,16 @@ def side_rows(g,sc1,trec,mlh):
             post=sp_post(x); a=sp_grp(x,_cb(g))
             c1=f'{nm} {g["sp"].get(team,"")}'.strip()
             cls='cd-2 sdc' if role=='fade' else 'sd-sp sdc'
-            _nl="Tracking · not a play"
+            _nl=f"Tracking · not a play · fits Type {t} {'against-the-crowd' if role=='fade' else 'crowd'} side{' on passed games' if r=='PASS' else ''}"
             spc=f'<span class="{cls}"><span class="c1 neu">{c1}</span><span class="c2">{tyl}</span><small class="c3">{_grec(a,_nl)}</small></span>'
             mp_=ml_post(x); b=ml_grp(x,_cb(g))
             m1=f'{nm} ML'
             cls='cd-m sdc' if role=='fade' else 'sd-ml sdc'
-            mlc=f'<span class="{cls}"><span class="mc c1 neu">{m1}</span><span class="c2">Type {t}{" · "+FDN[x["fd"]] if x["fd"] else ""}</span><small class="c3">{_grec(b,_nl)}</small></span>'
+            mlc=f'<span class="{cls}"><span class="mc c1 neu">{m1}</span><span class="c2">Type {t}{" · "+FDN[x["fd"]] if x["fd"] else ""}</span><small class="c3">{_grec(b,_nl+(' '+FDN[x['fd']].lower() if x['fd'] else '')+' ML')}</small></span>'
         else:
             first=team==g['A']
-            spc=f'<span class="{"cd-2 " if first else "sd-sp "}sdc"><span class="c1 neu">{f'{nm} {g["sp"].get(team,"")}'.strip()}</span><span class="c2">{tyl}</span><small class="c3">Group: even split</small></span>'
-            mlc=f'<span class="{"cd-m " if first else "sd-ml "}sdc"><span class="mc c1 neu">{nm} ML</span><span class="c2">Type {t}</span><small class="c3">Group: even split</small></span>'
+            spc=f'<span class="{"cd-2 " if first else "sd-sp "}sdc"><span class="c1 neu">{f'{nm} {g["sp"].get(team,"")}'.strip()}</span><span class="c2">{tyl}</span><small class="c3">Tracking · not a play: even split, no group</small></span>'
+            mlc=f'<span class="{"cd-m " if first else "sd-ml "}sdc"><span class="mc c1 neu">{nm} ML</span><span class="c2">Type {t}</span><small class="c3">Tracking · not a play: even split, no group</small></span>'
         _sp=g['sp'].get(team,'')
         spc=re.sub(r'^(<span class="[^"]*sdc">)',lambda m_:m_.group(1)+f'<span class="tlab">{nm} spread {_sp}</span>',spc,count=1)
         mlc=re.sub(r'^(<span class="[^"]*sdc">)',lambda m_:m_.group(1)+f'<span class="tlab">{nm} moneyline</span>',mlc,count=1)
@@ -1785,7 +1785,7 @@ def _deepcheck():
             if g['rating']=='PASS' or not mr or mr.get('price') is None:
                 if g['rating']!='PASS' and 'neu' not in m.select_one('.mc')['class']: errs.append((f,gid,'ML should be neutral',mt))
                 continue
-            a=ml_at(g['rating'],g['type'],mr['fd'],before=_bqi(g.get('week',5),f"{g['A']}@{g['H']}")); lab="All ML calls"
+            a=ml_at(g['rating'],g['type'],mr['fd'],before=_bqi(g.get('week',5),f"{g['A']}@{g['H']}")); lab=f"Type {g['type']} {FDN[mr['fd']].lower()} ML group"
             want_g=f"{lab}: {wlp(*a[:3])}, {usd(a[3])}" if a[4] else f"{lab}: no games yet"
             if m.small.get_text()!=want_g or m.select_one('.c2').get_text()!=f"Type {g['type']} · {FDN[mr['fd']]}": errs.append((f,gid,'ML group record',m.small.get_text(),want_g))
             ap=ml_at(g['rating'],g['type'],mr['fd'],before=g.get('week',5)); posted=ap[4]>0 and ap[3]>0
@@ -1935,7 +1935,7 @@ def _deepcheck():
         _id=c.find_parent('details')['id']; _m=_id.endswith('-ml'); g=_GD[_id[:-3] if _m else _id];
         if g['rating']=='PASS': continue
         a=(ml_at if _m else at)(g['rating'],g['type'],before=_bqi(g.get('week',5),f"{g['A']}@{g['H']}")); _k=g['rating']+(' ML' if _m else '')
-        want_t=f"Group: {wlp(*a[:3])}, {usd(a[3])}" if a[4] else "Group: no plays yet"
+        want_t=f"{wlp(*a[:3])}, {usd(a[3])}" if a[4] else "no plays yet"
         if want_t not in c.select_one('.cd-2').get_text(): errs.append(('card record',g['gid']))
     PR=re.compile(r'(?<![\d.$])[+\-−][1-9]\d{2}(?![\d.%])')
     NOTE=re.compile(r'\bconsensus\b|\bpull(ed|s)?\b|snapshot|\bagrees\b|start-of-week|vibes|\bpts\b|weeks 1–4|weeks 1-4|look[- ]?back|backtest|\blive\b|calls can change|updated|changed since|rated differently|regrad|was (lean|strong) before|restated',re.I)
