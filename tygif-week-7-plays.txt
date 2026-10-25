@@ -1,8 +1,11 @@
 TYGIF'S MODEL · WEEK 7
-Lines as of Sat Oct 24, 9:09 AM CT
+Lines as of Sat Oct 24, 7:09 PM CT
 
 STRONG
   Chicago −3  ·  New England at Chicago, Thu Oct 22 · 7:15 PM CT · Final CHI 30–24 · win +$93
+    Type 2 · Fade the crowd · STRONG: 8-3-2, +$442
+    a: Yes · b: Yes · c: Yes · d: Yes
+  Tennessee +2.5  ·  Cleveland at Tennessee, Sun Oct 25 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG: 8-3-2, +$442
     a: Yes · b: Yes · c: Yes · d: Yes
   Philadelphia +4.5  ·  Dallas at Philadelphia, Mon Oct 26 · 7:15 PM CT
@@ -13,16 +16,16 @@ LEAN
   Atlanta +2.5  ·  San Francisco at Atlanta, Sun Oct 25 · 12:00 PM CT
     Type 3 · Crowd leaning · LEAN: 11-10-1, +$34
     a: Yes · b: No · c: Yes · d: Yes
-  Tennessee +2.5  ·  Cleveland at Tennessee, Sun Oct 25 · 12:00 PM CT
-    Type 3 · Crowd leaning · LEAN: 11-10-1, +$34
-    a: Yes · b: No · c: Yes · d: Yes
-  Baltimore +1.5  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT
+  Baltimore +3  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT
     Type 2 · Fade the crowd · LEAN: 1-1-0, −$15
     a: Yes · b: Yes · c: Yes · d: No
 
 MONEYLINE
   STRONG Chicago ML  ·  New England at Chicago, Thu Oct 22 · 7:15 PM CT · Final 30–24 · win +$65
     Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 6-2-1, +$192
+    a: Yes · b: Yes · c: Yes · d: Yes
+  STRONG Tennessee ML  ·  Cleveland at Tennessee, Sun Oct 25 · 12:00 PM CT
+    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-1-0, +$318
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Philadelphia ML  ·  Dallas at Philadelphia, Mon Oct 26 · 7:15 PM CT
     Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-1-0, +$318

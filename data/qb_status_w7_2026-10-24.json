@@ -1,0 +1,22 @@
+{
+ "checked": "2026-10-24 7:10 PM CT (Saturday refresh; ESPN injuries API, final injury reports Fri Oct 23 plus Saturday news)",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/injuries",
+ "rule": "Rules v2 (Oct 15): the QB rule was removed, so QB status never drops a rating; recorded for the record only",
+ "teams": {
+  "TEN": {"drop": false, "note": "Cam Ward has no game status and plays"},
+  "ATL": {"drop": false, "note": "Michael Penix Jr. has no game status and plays (Andy Dalton inactive, ramp-up)"},
+  "BAL": {"drop": false, "note": "Lamar Jackson (ankle) downgraded to out Sat Oct 24 (ESPN 2:35 PM CT); Tyler Huntley starts"},
+  "PHI": {"drop": false, "note": "Jalen Hurts on injured reserve (calf); Tanner McKee starts"}
+ },
+ "opponents_and_pass_games": {
+  "CLE": {"note": "Dillon Gabriel (back) ruled out; Taylen Green on roster"},
+  "SF": {"note": "Brock Purdy has no game status and plays"},
+  "CIN": {"note": "Joe Burrow has no game status and plays"},
+  "DAL": {"note": "Dak Prescott has no game status and plays"},
+  "TB": {"note": "Baker Mayfield (right thumb) questionable, expected to start (TB@CAR is a PASS)"},
+  "ARI": {"note": "Carson Beck (back) questionable; Jacoby Brissett active (DEN@ARI is a PASS)"},
+  "SEA": {"note": "Drew Lock (elbow) questionable (KC@SEA is a PASS)"},
+  "GB": {"note": "Jordan Love (back) full practice Thursday, plays (GB@DET is a PASS)"},
+  "NYG": {"note": "J.J. McCarthy starts (NYG@HOU is a PASS)"}
+ }
+}
