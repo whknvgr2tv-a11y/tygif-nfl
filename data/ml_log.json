@@ -805,7 +805,7 @@
    "game": "CLE@TEN",
    "rating": "LEAN",
    "side": "TEN",
-   "spread_line": 1.5,
+   "spread_line": 2.5,
    "status": "preview",
    "espn_event": "401873013",
    "price": 110,
@@ -819,7 +819,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873018",
-   "price": 136,
+   "price": 140,
    "fd": "Dog"
   },
   {
@@ -841,7 +841,7 @@
    "spread_line": 4.5,
    "status": "preview",
    "espn_event": "401873019",
-   "price": 195,
+   "price": 190,
    "fd": "Dog"
   },
   {
