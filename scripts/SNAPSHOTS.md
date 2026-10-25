@@ -66,3 +66,11 @@ ScoresAndOdds game. A game gets a `warning` when AN's money differs from SAO's b
 majority on the other side (or AN has no row). Warnings are for review only: SAO stays the all-books source, and
 DraftKings agreement stays the second-source rule. A warning never blocks or re-rates a play. If AN is down the
 pull continues (fail open).
+
+## Multi-source status and VSiN capture (evidence only)
+Each pull also writes `sources_<UTC stamp>.json` (what each source returned) and raw `vsin_circa_*.html` / `vsin_dk_*.html`
+from VSiN's free splits board. Circa (Las Vegas) is a money source independent of DraftKings and of ScoresAndOdds/Action
+Network (which share data). The free board only lists today's games, so nothing is parsed or rated from VSiN until the row
+format is verified on a game-day pull. Fails open: a VSiN error never fails the pull.
+Sources checked Oct 24 and not usable: Covers (pick counts, 60% KC, not money), OddsShark (picks), SportsBettingDime
+(echoes 88% KC = same feed), BetPercent (no response), fadethepublicanalytics and Pregame (JS app; needs a browser).

@@ -130,6 +130,22 @@ def an_check(sao, now):
         rows.append(r)
     return rows
 
+VSIN = 'https://data.vsin.com/betting-splits/?source={}&sport=NFL&view=today'
+
+def vsin_capture(stamp):
+    """Raw capture of VSiN free splits (DK + CIRCA, an independent Las Vegas book). Evidence only, no parse/rating yet:
+    the free board lists only today's games, so the row format is verified on a game-day pull before any parser ships."""
+    out = {}
+    for b in ('CIRCA', 'DK'):
+        try:
+            st, h = get(VSIN.format(b))
+            open(f'{OUT}/vsin_{b.lower()}_{stamp}.html', 'w').write(h)
+            out[b] = {'http': st, 'bytes': len(h), 'no_data_notice': 'No splits data available' in h,
+                      'nfl_team_mentions': len(re.findall(r'Chiefs|Seahawks|Bears|Eagles|Cowboys|Packers|Lions|Ravens', h))}
+        except Exception as ex:
+            out[b] = {'error': str(ex)[:200]}
+    return out
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     now = datetime.now(timezone.utc); stamp = now.strftime('%Y%m%dT%H%MZ')
@@ -166,6 +182,16 @@ def main():
             if 'warning' in r: print('  WARN', r['game'], r['warning'])
     except Exception as ex:
         print('Action Network cross-check skipped (fail open):', ex)
+    # Multi-source status: one file per pull listing what each source returned (fail open)
+    src = {'fetched_utc': datetime.now(timezone.utc).isoformat(timespec='seconds'),
+           'draftkings_splits': len(dk), 'scoresandodds': len(sao)}
+    try:
+        src['vsin'] = vsin_capture(stamp)
+        print('VSiN capture:', {k: v.get('bytes', v.get('error')) for k, v in src['vsin'].items()})
+    except Exception as ex:
+        src['vsin'] = {'error': str(ex)[:200]}
+    src['note'] = 'independent money sources: DraftKings (own book), VSiN Circa (raw capture, unparsed). SAO and AN share data.'
+    json.dump(src, open(f'{OUT}/sources_{stamp}.json', 'w'), indent=1)
     # ESPN DraftKings moneyline + spread for games not yet started
     try:
         cw = os.environ.get('TYGIF_WEEK') or (re.search(r'(\d+)$', wk.group(1)).group(1) if wk else None)
