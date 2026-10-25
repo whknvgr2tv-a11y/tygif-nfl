@@ -1,0 +1,251 @@
+{
+ "fetched_utc": "2026-10-25T16:19:47+00:00",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=7&seasontype=2",
+ "season": 2026,
+ "week": 7,
+ "events": 14,
+ "pre": 12,
+ "last": "2026-10-27T00:15Z",
+ "games": [
+  {
+   "id": "401873017",
+   "away": "SF",
+   "home": "ATL",
+   "kickoff_utc": "2026-10-25T17:00Z",
+   "ml": {
+    "away": "-148",
+    "home": "+124"
+   },
+   "spread": {
+    "away": {
+     "line": "-2.5",
+     "odds": "-115"
+    },
+    "home": {
+     "line": "+2.5",
+     "odds": "-105"
+    }
+   }
+  },
+  {
+   "id": "401873013",
+   "away": "CLE",
+   "home": "TEN",
+   "kickoff_utc": "2026-10-25T17:00Z",
+   "ml": {
+    "away": "-135",
+    "home": "+114"
+   },
+   "spread": {
+    "away": {
+     "line": "-2.5",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "+2.5",
+     "odds": "-112"
+    }
+   }
+  },
+  {
+   "id": "401873014",
+   "away": "IND",
+   "home": "MIN",
+   "kickoff_utc": "2026-10-25T17:00Z",
+   "ml": {
+    "away": "+260",
+    "home": "-325"
+   },
+   "spread": {
+    "away": {
+     "line": "+6.5",
+     "odds": "+100"
+    },
+    "home": {
+     "line": "-6.5",
+     "odds": "-120"
+    }
+   }
+  },
+  {
+   "id": "401873015",
+   "away": "MIA",
+   "home": "NYJ",
+   "kickoff_utc": "2026-10-25T17:00Z",
+   "ml": {
+    "away": "+180",
+    "home": "-218"
+   },
+   "spread": {
+    "away": {
+     "line": "+3.5",
+     "odds": "+100"
+    },
+    "home": {
+     "line": "-3.5",
+     "odds": "-120"
+    }
+   }
+  },
+  {
+   "id": "401873018",
+   "away": "TB",
+   "home": "CAR",
+   "kickoff_utc": "2026-10-25T17:00Z",
+   "ml": {
+    "away": "+140",
+    "home": "-166"
+   },
+   "spread": {
+    "away": {
+     "line": "+3",
+     "odds": "-110"
+    },
+    "home": {
+     "line": "-3",
+     "odds": "-110"
+    }
+   }
+  },
+  {
+   "id": "401873012",
+   "away": "CIN",
+   "home": "BAL",
+   "kickoff_utc": "2026-10-25T17:00Z",
+   "ml": {
+    "away": "-148",
+    "home": "+124"
+   },
+   "spread": {
+    "away": {
+     "line": "-3",
+     "odds": "-105"
+    },
+    "home": {
+     "line": "+3",
+     "odds": "-115"
+    }
+   }
+  },
+  {
+   "id": "401873016",
+   "away": "NYG",
+   "home": "HOU",
+   "kickoff_utc": "2026-10-25T17:00Z",
+   "ml": {
+    "away": "+390",
+    "home": "-520"
+   },
+   "spread": {
+    "away": {
+     "line": "+10",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "-10",
+     "odds": "-112"
+    }
+   }
+  },
+  {
+   "id": "401873019",
+   "away": "DEN",
+   "home": "ARI",
+   "kickoff_utc": "2026-10-25T20:05Z",
+   "ml": {
+    "away": "-230",
+    "home": "+190"
+   },
+   "spread": {
+    "away": {
+     "line": "-4.5",
+     "odds": "-115"
+    },
+    "home": {
+     "line": "+4.5",
+     "odds": "-105"
+    }
+   }
+  },
+  {
+   "id": "401873020",
+   "away": "GB",
+   "home": "DET",
+   "kickoff_utc": "2026-10-25T20:25Z",
+   "ml": {
+    "away": "+150",
+    "home": "-180"
+   },
+   "spread": {
+    "away": {
+     "line": "+3.5",
+     "odds": "-112"
+    },
+    "home": {
+     "line": "-3.5",
+     "odds": "-108"
+    }
+   }
+  },
+  {
+   "id": "401873021",
+   "away": "LAR",
+   "home": "LV",
+   "kickoff_utc": "2026-10-25T20:25Z",
+   "ml": {
+    "away": "-185",
+    "home": "+154"
+   },
+   "spread": {
+    "away": {
+     "line": "-3.5",
+     "odds": "+100"
+    },
+    "home": {
+     "line": "+3.5",
+     "odds": "-120"
+    }
+   }
+  },
+  {
+   "id": "401873022",
+   "away": "KC",
+   "home": "SEA",
+   "kickoff_utc": "2026-10-26T00:20Z",
+   "ml": {
+    "away": "+120",
+    "home": "-142"
+   },
+   "spread": {
+    "away": {
+     "line": "+3",
+     "odds": "-120"
+    },
+    "home": {
+     "line": "-3",
+     "odds": "+100"
+    }
+   }
+  },
+  {
+   "id": "401873009",
+   "away": "DAL",
+   "home": "PHI",
+   "kickoff_utc": "2026-10-27T00:15Z",
+   "ml": {
+    "away": "-205",
+    "home": "+170"
+   },
+   "spread": {
+    "away": {
+     "line": "-4.5",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "+4.5",
+     "odds": "-112"
+    }
+   }
+  }
+ ]
+}

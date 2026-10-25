@@ -1,0 +1,20 @@
+{
+ "fetched_utc": "2026-10-25T16:19:35+00:00",
+ "draftkings_splits": 13,
+ "scoresandodds": 13,
+ "vsin": {
+  "CIRCA": {
+   "http": 200,
+   "bytes": 359564,
+   "no_data_notice": false,
+   "nfl_team_mentions": 0
+  },
+  "DK": {
+   "http": 200,
+   "bytes": 360053,
+   "no_data_notice": false,
+   "nfl_team_mentions": 0
+  }
+ },
+ "note": "independent money sources: DraftKings (own book), VSiN Circa (raw capture, unparsed, not rated). SAO and AN share data."
+}
