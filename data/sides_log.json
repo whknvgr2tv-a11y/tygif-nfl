@@ -2805,6 +2805,36 @@
   },
   {
    "week": 7,
+   "game": "NYG@HOU",
+   "team": "NYG",
+   "role": "fade",
+   "rating": "PASS",
+   "type": 3,
+   "money_pct": 41,
+   "spread_line": 10.0,
+   "sp_res": "W",
+   "sp_usd": 93.0,
+   "fd": "Dog",
+   "ml_res": "W",
+   "ml_usd": 390.0
+  },
+  {
+   "week": 7,
+   "game": "NYG@HOU",
+   "team": "HOU",
+   "role": "money",
+   "rating": "PASS",
+   "type": 3,
+   "money_pct": 59,
+   "spread_line": -10.0,
+   "sp_res": "L",
+   "sp_usd": -100.0,
+   "fd": "Fav",
+   "ml_res": "L",
+   "ml_usd": -100.0
+  },
+  {
+   "week": 7,
    "game": "SF@ATL",
    "team": "ATL",
    "role": "fade",
@@ -2812,11 +2842,11 @@
    "type": 5,
    "money_pct": 47,
    "spread_line": 2.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 98.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 130.0
   },
   {
    "week": 7,
@@ -2827,11 +2857,11 @@
    "type": 5,
    "money_pct": 53,
    "spread_line": -2.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 7,
@@ -2862,36 +2892,6 @@
    "fd": "Fav",
    "ml_res": "W",
    "ml_usd": 77.0
-  },
-  {
-   "week": 7,
-   "game": "NYG@HOU",
-   "team": "NYG",
-   "role": "fade",
-   "rating": "PASS",
-   "type": 3,
-   "money_pct": 41,
-   "spread_line": 10.0,
-   "sp_res": null,
-   "sp_usd": null,
-   "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
-  },
-  {
-   "week": 7,
-   "game": "NYG@HOU",
-   "team": "HOU",
-   "role": "money",
-   "rating": "PASS",
-   "type": 3,
-   "money_pct": 59,
-   "spread_line": -10.0,
-   "sp_res": null,
-   "sp_usd": null,
-   "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
   },
   {
    "week": 7,
