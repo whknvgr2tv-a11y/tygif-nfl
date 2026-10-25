@@ -830,7 +830,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873012",
-   "price": 130,
+   "price": 124,
    "fd": "Dog"
   },
   {
@@ -863,7 +863,7 @@
    "spread_line": -3.0,
    "status": "preview",
    "espn_event": "401873022",
-   "price": -148,
+   "price": -142,
    "fd": "Fav"
   }
  ]
