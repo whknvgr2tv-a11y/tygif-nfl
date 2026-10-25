@@ -3,6 +3,7 @@
 
 Writes to OUT (default ./snapshots):
   dk_<UTC stamp>.json   parsed DraftKings spread splits (money = % handle, bets = % bets)
+  dkml_/saoml_<UTC stamp>.json  same, moneyline market (TG Oct 25: rating = spread+ML money averaged)
   sao_<UTC stamp>.json  parsed ScoresAndOdds spread splits for the NFL week page
   espn_dk_<UTC stamp>.json  DraftKings moneyline + spread (line, price) from ESPN for every game
                         not yet started (the grading numbers recorded before kickoff)
@@ -19,7 +20,7 @@ ESPN_SB = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard
 ESPN_SUM = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event={}'
 UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'
 DK = ('https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/'
-      '?tb_eg=88808&tb_edate=n7days&tb_emt=Spread&tb_page={}')
+      '?tb_eg=88808&tb_edate=n7days&tb_emt={mkt}&tb_page={p}')
 SAO = 'https://www.scoresandodds.com/nfl/consensus-picks'
 
 def _implied(o):
@@ -39,14 +40,14 @@ def get(url):
 def txt(s):
     return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', s)).strip()
 
-def dk_parse(h):
+def dk_parse(h, mkt='Spread'):
     games, blocks = [], h.split('<div class="tb-se ')[1:]
     for b in blocks:
         b = b.split('<div class="tb-se ')[0]
         t = re.search(r'<h5[^>]*>(.*?)</h5>\s*<span[^>]*>(.*?)</span>', b, re.S)
         if not t: continue
         g = {'matchup': txt(t.group(1)), 'kickoff_local': txt(t.group(2)), 'spread': []}
-        mk = b.find('>Spread<')
+        mk = b.find('>' + mkt + '<')
         if mk < 0: continue
         seg = b[mk:]; nxt = re.search(r'tb-se-head', seg[20:])
         if nxt: seg = seg[:nxt.start() + 20]
@@ -60,12 +61,13 @@ def dk_parse(h):
         if g['spread']: games.append((g, b))
     return games
 
-def sao_parse(h):
+def sao_parse(h, mkt='spread'):
     out = []
     for blk in h.split('<div class="trend-card consensus consensus-table-')[1:]:
-        if not blk.startswith('spread'): continue
+        if not blk.startswith(mkt): continue
         tm = re.findall(r'<span class="team-flag" (\w+)""', blk)
-        pa = re.findall(r'class="percentage-a"[^>]*>(\d+)%', blk); pb = re.findall(r'class="percentage-b"[^>]*>(\d+)%', blk)
+        # bar width, not the label: SAO blanks the label (&nbsp;) on lopsided bars (e.g. TB@CAR ML money 7%)
+        pa = re.findall(r'class="percentage-a" style="width:(\d+)%', blk); pb = re.findall(r'class="percentage-b" style="width:(\d+)%', blk)
         t = re.search(r'data-value="([^"]+)"', blk)
         if len(tm) >= 2 and len(pa) >= 2 and len(pb) >= 2:
             out.append(({'away': tm[0], 'home': tm[1], 'kickoff_utc': t.group(1) if t else None,
@@ -158,14 +160,23 @@ def main():
     ok = True
     # DraftKings: walk pages until one adds nothing new
     dk, raw, seen = [], [], set()
+    def dk_pages(mkt):
+        rows, seen_ = [], set()
+        for p in range(1, 7):
+            st, h = get(DK.format(mkt=mkt, p=p))
+            got = [g for g, b in dk_parse(h, mkt) if g['matchup'] + g['kickoff_local'] not in seen_]
+            if not got: break
+            for g in got: seen_.add(g['matchup'] + g['kickoff_local']); rows.append(g)
+            time.sleep(2)
+        return rows
     for p in range(1, 7):
-        st, h = get(DK.format(p))
+        st, h = get(DK.format(mkt='Spread', p=p))
         got = [(g, b) for g, b in dk_parse(h) if g['matchup'] + g['kickoff_local'] not in seen]
         if not got: break
         for g, b in got:
             seen.add(g['matchup'] + g['kickoff_local']); dk.append(g); raw.append(b)
         time.sleep(2)
-    meta = {'fetched_utc': now.isoformat(timespec='seconds'), 'source': DK.format('N')}
+    meta = {'fetched_utc': now.isoformat(timespec='seconds'), 'source': DK.format(mkt='Spread', p='N')}
     for g in dk:  # book math from prices already pulled (no new scrape); fail-open
         try:
             sp = g['spread']; ip = [_implied(x['odds']) for x in sp]
@@ -180,6 +191,15 @@ def main():
     json.dump(dict(meta, games=dk), open(f'{OUT}/dk_{stamp}.json', 'w'), indent=1)
     print(f'DraftKings: {len(dk)} games with spread splits')
     if not dk: ok = False
+    # TG, Oct 25: ratings use ALL money (spread + moneyline). DK moneyline splits -> dkml_<stamp>.json
+    # (rows keep key 'spread' = the market rows, same shape as dk_; fail open: build falls back to spread-only + warns)
+    try:
+        dkml = dk_pages('Moneyline')
+        json.dump({'fetched_utc': now.isoformat(timespec='seconds'), 'source': DK.format(mkt='Moneyline', p='N'), 'market': 'moneyline',
+                   'games': dkml}, open(f'{OUT}/dkml_{stamp}.json', 'w'), indent=1)
+        print(f'DraftKings: {len(dkml)} games with moneyline splits')
+    except Exception as ex:
+        print('DraftKings moneyline pull failed (fail open, spread-only):', ex)
     # ScoresAndOdds: current NFL week page
     st, h = get(SAO)
     wk = re.search(r'consensus-picks\?week=([\w-]+)', h)
@@ -188,6 +208,10 @@ def main():
                'games': [g for g, _ in sao]}, open(f'{OUT}/sao_{stamp}.json', 'w'), indent=1)
     print(f'ScoresAndOdds: {len(sao)} games with spread splits (week {wk.group(1) if wk else "?"})')
     if not sao: ok = False
+    saoml = sao_parse(h, 'moneyline')
+    json.dump({'fetched_utc': now.isoformat(timespec='seconds'), 'source': SAO, 'market': 'moneyline', 'week': wk.group(1) if wk else None,
+               'games': [g for g, _ in saoml]}, open(f'{OUT}/saoml_{stamp}.json', 'w'), indent=1)
+    print(f'ScoresAndOdds: {len(saoml)} games with moneyline splits')
     # Action Network book 15 cross-check: FLAG only (SAO stays the all-books source); fails open
     try:
         rows = an_check([g for g, _ in sao], now)

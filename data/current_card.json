@@ -1,6 +1,6 @@
 {
  "week": 7,
- "posted_at_et": "Sun Oct 25, 2:00 PM ET",
+ "posted_at_et": "Sun Oct 25, 2:10 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -44,18 +44,45 @@
    "team": "ARI",
    "name": "Arizona",
    "nick": "Cardinals",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "line": "+4.5",
    "kickoff_utc": "2026-10-25T20:05:00Z"
   },
   {
-   "game": "LAR@LV",
-   "team": "LAR",
-   "name": "LA Rams",
-   "nick": "Rams",
+   "game": "GB@DET",
+   "team": "GB",
+   "name": "Green Bay",
+   "nick": "Packers",
    "rating": "LEAN",
-   "line": "-3.5",
+   "line": "+3.5",
    "kickoff_utc": "2026-10-25T20:25:00Z"
+  },
+  {
+   "game": "LAR@LV",
+   "team": "LV",
+   "name": "Las Vegas",
+   "nick": "Raiders",
+   "rating": "LEAN",
+   "line": "+3.5",
+   "kickoff_utc": "2026-10-25T20:25:00Z"
+  },
+  {
+   "game": "KC@SEA",
+   "team": "SEA",
+   "name": "Seattle",
+   "nick": "Seahawks",
+   "rating": "STRONG",
+   "line": "-3",
+   "kickoff_utc": "2026-10-26T00:20:00Z"
+  },
+  {
+   "game": "DAL@PHI",
+   "team": "PHI",
+   "name": "Philadelphia",
+   "nick": "Eagles",
+   "rating": "STRONG",
+   "line": "+4.5",
+   "kickoff_utc": "2026-10-27T00:15:00Z"
   }
  ]
 }

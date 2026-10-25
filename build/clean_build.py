@@ -332,6 +332,28 @@ def _dk_rows(d):
             t=s['side'].split(); sp[_NK[t[1]]]=dict(line=t[-1],money=s['handle_pct'],bets=s['bets_pct'])
         o[frozenset(sp)]=sp
     return o
+def _dkml_rows(d):   # DK moneyline splits page: side text 'ARI Cardinals' (no line)
+    o={}
+    for g in d['games']:
+        sp={_NK[s_['side'].split()[-1]]:dict(money=s_['handle_pct'],bets=s_['bets_pct']) for s_ in g['spread'] if s_['side'].split()[-1] in _NK}
+        if len(sp)==2: o[frozenset(sp)]=sp
+    return o
+def _stamp(src): return src.split('_')[-1]   # '..._20261025T1800Z.json'
+def _ml_for(MLS,src,key,rows):
+    """same-pull moneyline row for this game (matched by file stamp), else None"""
+    st=_stamp(src)
+    for t_,s_,d in MLS:
+        if _stamp(s_)==st:
+            r=rows(d); return r.get(key)
+    return None
+ALLMONEY_WARN=[]
+def _allmoney(sp,ml,src,game):
+    """TG, Oct 25: rating uses ALL money = spread + moneyline. No dollar volumes, so per team pct = round(mean(spread pct, ML pct)).
+    sp/ml: {abbr:(money,bets)}. Missing ML -> spread only + warning (never invented)."""
+    if not ml or set(ml)!=set(sp):
+        ALLMONEY_WARN.append(f'{game}: no same-pull {src} moneyline split; spread-only'); return dict(sp),False
+    r=lambda a,b:int((a+b)/2+0.5)
+    return {k:(r(sp[k][0],ml[k][0]),r(sp[k][1],ml[k][1])) for k in sp},True
 def _sao_rows(d):
     return {frozenset((_SAOAB.get(g['away'],g['away']),_SAOAB.get(g['home'],g['home']))):
             {_SAOAB.get(g['away'],g['away']):(g['money_away'],g['bets_away']),_SAOAB.get(g['home'],g['home']):(g['money_home'],g['bets_home'])} for g in d['games']}
@@ -475,6 +497,7 @@ class _NotReady(Exception): pass
 def build_wk(WK):
     # same as settle_w5: every pull (snapshots branch + our dated pulls), per game the latest one before kickoff
     DKS6=_snaps('dk',_W+f'/snap_w{WK}_*/'); SAOS6=_snaps('sao',_W+f'/snap_w{WK}_*/')
+    DKML6=_snaps('dkml',_W+f'/snap_w{WK}_*/'); SAOML6=_snaps('saoml',_W+f'/snap_w{WK}_*/')
     TRM=json.load(open(_I+f'/tr_monday_w{WK}.json'))
     sb=json.load(open(_W+f'/espn_sum/sb_w{WK}.json'))
     out=[]
@@ -489,8 +512,16 @@ def build_wk(WK):
         sap=[(t_,src,_sao_rows(d)[key]) for t_,src,d in SAOS6 if _P(lo_s)<_P(t_)<=_P(cut_s) and key in _sao_rows(d)]
         if not dkp or not sap: raise _NotReady(f'week {WK}: {A}@{H} has no DraftKings/ScoresAndOdds pull before kickoff yet')
         dk_t,dk_src,dk=dkp[-1]; sa_t,sa_src,sa_row=sap[-1]
-        sar={key:sa_row}
+        gm=f'{A}@{H}'
+        sa_ml=_ml_for(SAOML6,sa_src,key,_sao_rows); dk_ml=_ml_for(DKML6,dk_src,key,_dkml_rows)
+        sa_all,sa_has=_allmoney(sa_row,sa_ml,'ScoresAndOdds',gm)
+        dk_all,dk_has=_allmoney({k:(v['money'],v['bets']) for k,v in dk.items()},{k:(v['money'],v['bets']) for k,v in dk_ml.items()} if dk_ml else None,'DraftKings',gm)
+        allm=dict(sao_spread=sa_row,sao_ml=sa_ml,dk_spread={k:(v['money'],v['bets']) for k,v in dk.items()},
+                  dk_ml={k:(v['money'],v['bets']) for k,v in dk_ml.items()} if dk_ml else None,sao_all=sa_all,dk_all=dk_all,
+                  sao_has_ml=sa_has,dk_has_ml=dk_has)
+        sar={key:sa_all}
         sp={k:v['line'].replace('-',M) for k,v in dk.items()}   # DraftKings line at the last pre-kickoff pull (never an ESPN summary read after kickoff)
+        dk={k:dict(v,money=dk_all[k][0],bets=dk_all[k][1]) for k,v in dk.items()}   # all-money DK pct (line unchanged)
         dks=max(dk,key=lambda k:dk[k]['money']); abs_,abm,abb=_side(sar[key])
         mon=[v for v in TRM.values() if {v['team'],v['other']}=={A,H}][0]
         b2=mon['books'].get('2',{}).get('line'); b3=mon['books'].get('3',{}).get('line')
@@ -511,7 +542,7 @@ def build_wk(WK):
         g=dict(gid=f'w{WK}-{A.lower()}-{H.lower()}',A=A,H=H,away=NAME[A],home=NAME[H],sp=sp,ab_side=NAME[abs_],ab_m=abm,ab_b=abb,
                dk_side=NAME[dks],dk_m=dk[dks]['money'],dk_b=dk[dks]['bets'],a=abb>=50,b=abm>=65,c=(dks==abs_ and not dk_tie),d=dd,e=ee,f=drop,
                fade=NAME[fade_ab],fade_line=float(sp[fade_ab].replace(M,'-')),rating=rt,type=ty,why=why,when=when,mon=mon,qbnote=qbnote,
-               split_at=_etlbl(sa_t),split_utc=sa_t,dk_utc=dk_t,split_src=sa_src,dk_src=dk_src,final=None,held=False,week=WK,ko_utc=ko_s,eid=e['id'],status=c['status']['type']['name'])
+               split_at=_etlbl(sa_t),split_utc=sa_t,dk_utc=dk_t,split_src=sa_src,dk_src=dk_src,final=None,held=False,week=WK,ko_utc=ko_s,eid=e['id'],status=c['status']['type']['name'],allmoney=allm)
         g['call']=f"{g['fade']} {sp[fade_ab]}"
         g['wy']=f"{abm}% of the money is on {NAME[abs_]} (all books)."+''
         out.append(g)
@@ -522,6 +553,7 @@ for _w in _live_weeks():
     except _NotReady as _e:
         if _w!=_live_weeks()[-1]: raise SystemExit(str(_e))   # only the newest week may be waiting for its card
         print(f'week {_w} not built yet (card not ready): {_e}')
+for _x in ALLMONEY_WARN: print('ALL-MONEY WARN', _x)
 GW=LIVEW[-1]   # GW = current card week
 GALL=[g for w in LIVEW for g in GBY[w]]   # every game, weeks 6 on
 G6=GBY[GW]                                # the current card week (name kept: G6 = current week)

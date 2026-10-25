@@ -836,7 +836,7 @@
   {
    "week": 7,
    "game": "DEN@ARI",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "ARI",
    "spread_line": 4.5,
    "status": "preview",
@@ -846,14 +846,47 @@
   },
   {
    "week": 7,
+   "game": "GB@DET",
+   "rating": "LEAN",
+   "side": "GB",
+   "spread_line": 3.5,
+   "status": "preview",
+   "espn_event": "401873020",
+   "price": 160,
+   "fd": "Dog"
+  },
+  {
+   "week": 7,
    "game": "LAR@LV",
    "rating": "LEAN",
-   "side": "LAR",
-   "spread_line": -3.5,
+   "side": "LV",
+   "spread_line": 3.5,
    "status": "preview",
    "espn_event": "401873021",
-   "price": -185,
+   "price": 154,
+   "fd": "Dog"
+  },
+  {
+   "week": 7,
+   "game": "KC@SEA",
+   "rating": "STRONG",
+   "side": "SEA",
+   "spread_line": -3.0,
+   "status": "preview",
+   "espn_event": "401873022",
+   "price": -148,
    "fd": "Fav"
+  },
+  {
+   "week": 7,
+   "game": "DAL@PHI",
+   "rating": "STRONG",
+   "side": "PHI",
+   "spread_line": 4.5,
+   "status": "preview",
+   "espn_event": "401873009",
+   "price": 180,
+   "fd": "Dog"
   }
  ]
 }
