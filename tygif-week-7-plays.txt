@@ -1,5 +1,5 @@
 TYGIF'S MODEL · WEEK 7
-Lines as of Sun Oct 25, 12:22 PM CT
+Lines as of Sun Oct 25, 12:56 PM CT
 
 STRONG
   Chicago −3  ·  New England at Chicago, Thu Oct 22 · 7:15 PM CT · Final CHI 30–24 · win +$93
@@ -8,9 +8,6 @@ STRONG
   Baltimore +3  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG: 9-4-2, +$427
     a: Yes · b: Yes · c: Yes · d: No
-  Seattle −3  ·  Kansas City at Seattle, Sun Oct 25 · 7:20 PM CT
-    Type 2 · Fade the crowd · STRONG: 9-4-2, +$427
-    a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN
   Tennessee +1.5  ·  Cleveland at Tennessee, Sun Oct 25 · 12:00 PM CT
@@ -33,9 +30,6 @@ MONEYLINE
   STRONG Baltimore ML  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-2-0, +$218
     a: Yes · b: Yes · c: Yes · d: No
-  STRONG Seattle ML  ·  Kansas City at Seattle, Sun Oct 25 · 7:20 PM CT
-    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 7-2-1, +$266
-    a: Yes · b: Yes · c: Yes · d: Yes
 
 PASS
   Pittsburgh at New Orleans
@@ -44,4 +38,5 @@ PASS
   Miami at NY Jets
   NY Giants at Houston
   Green Bay at Detroit
+  Kansas City at Seattle
   Dallas at Philadelphia

@@ -1,6 +1,6 @@
 {
  "week": 7,
- "posted_at_et": "Sun Oct 25, 1:22 PM ET",
+ "posted_at_et": "Sun Oct 25, 1:56 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -56,15 +56,6 @@
    "rating": "LEAN",
    "line": "-3.5",
    "kickoff_utc": "2026-10-25T20:25:00Z"
-  },
-  {
-   "game": "KC@SEA",
-   "team": "SEA",
-   "name": "Seattle",
-   "nick": "Seahawks",
-   "rating": "STRONG",
-   "line": "-3",
-   "kickoff_utc": "2026-10-26T00:20:00Z"
   }
  ]
 }
