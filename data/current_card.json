@@ -1,6 +1,6 @@
 {
  "week": 7,
- "posted_at_et": "Sun Oct 25, 11:24 AM ET",
+ "posted_at_et": "Sun Oct 25, 11:41 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -47,6 +47,15 @@
    "rating": "LEAN",
    "line": "+4.5",
    "kickoff_utc": "2026-10-25T20:05:00Z"
+  },
+  {
+   "game": "LAR@LV",
+   "team": "LAR",
+   "name": "LA Rams",
+   "nick": "Rams",
+   "rating": "LEAN",
+   "line": "-3.5",
+   "kickoff_utc": "2026-10-25T20:25:00Z"
   },
   {
    "game": "KC@SEA",
