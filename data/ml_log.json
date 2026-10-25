@@ -854,17 +854,6 @@
    "espn_event": "401873022",
    "price": -148,
    "fd": "Fav"
-  },
-  {
-   "week": 7,
-   "game": "DAL@PHI",
-   "rating": "LEAN",
-   "side": "PHI",
-   "spread_line": 4.5,
-   "status": "preview",
-   "espn_event": "401873009",
-   "price": 170,
-   "fd": "Dog"
   }
  ]
 }
