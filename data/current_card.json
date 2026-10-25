@@ -1,6 +1,6 @@
 {
  "week": 7,
- "posted_at_et": "Sat Oct 24, 11:40 PM ET",
+ "posted_at_et": "Sun Oct 25, 8:54 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -17,8 +17,17 @@
    "team": "TEN",
    "name": "Tennessee",
    "nick": "Titans",
-   "rating": "STRONG",
-   "line": "+2.5",
+   "rating": "LEAN",
+   "line": "+1.5",
+   "kickoff_utc": "2026-10-25T17:00:00Z"
+  },
+  {
+   "game": "TB@CAR",
+   "team": "TB",
+   "name": "Tampa Bay",
+   "nick": "Buccaneers",
+   "rating": "LEAN",
+   "line": "+3",
    "kickoff_utc": "2026-10-25T17:00:00Z"
   },
   {
@@ -35,9 +44,18 @@
    "team": "ARI",
    "name": "Arizona",
    "nick": "Cardinals",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "line": "+4.5",
    "kickoff_utc": "2026-10-25T20:05:00Z"
+  },
+  {
+   "game": "KC@SEA",
+   "team": "SEA",
+   "name": "Seattle",
+   "nick": "Seahawks",
+   "rating": "STRONG",
+   "line": "-3",
+   "kickoff_utc": "2026-10-26T00:20:00Z"
   },
   {
    "game": "DAL@PHI",
