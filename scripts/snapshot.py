@@ -22,6 +22,12 @@ DK = ('https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/'
       '?tb_eg=88808&tb_edate=n7days&tb_emt=Spread&tb_page={}')
 SAO = 'https://www.scoresandodds.com/nfl/consensus-picks'
 
+def _implied(o):
+    """Break-even win share for an American price, e.g. -110 -> 0.5238."""
+    o = float(str(o).replace('\u2212', '-').replace('+', ''))
+    return -o / (100 - o) if o < 0 else 100 / (o + 100)
+
+
 def get(url):
     if 'dknetwork' in url:   # the DK splits page is CDN-cached; bust it so every pull is fresh
         url += ('&' if '?' in url else '?') + '_cb=' + str(int(time.time() * 1000))
@@ -160,6 +166,17 @@ def main():
             seen.add(g['matchup'] + g['kickoff_local']); dk.append(g); raw.append(b)
         time.sleep(2)
     meta = {'fetched_utc': now.isoformat(timespec='seconds'), 'source': DK.format('N')}
+    for g in dk:  # book math from prices already pulled (no new scrape); fail-open
+        try:
+            sp = g['spread']; ip = [_implied(x['odds']) for x in sp]
+            g['hold_pct'] = round(100 * (sum(ip) - 1) / sum(ip), 2)
+            for i, x in enumerate(sp):
+                # book wins on both outcomes while this side's money share sits in [lock_lo, breakeven]
+                x['breakeven_money_pct'] = round(100 * ip[i], 1)
+                x['lock_lo_money_pct'] = round(100 * (1 - ip[1 - i]), 1)
+                x['book_exposed'] = x['handle_pct'] > 100 * ip[i]
+        except Exception as e:
+            g['hold_error'] = str(e)
     json.dump(dict(meta, games=dk), open(f'{OUT}/dk_{stamp}.json', 'w'), indent=1)
     print(f'DraftKings: {len(dk)} games with spread splits')
     if not dk: ok = False

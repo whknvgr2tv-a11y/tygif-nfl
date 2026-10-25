@@ -75,3 +75,6 @@ format is verified on a game-day pull. Fails open: a VSiN error never fails the 
 
 Sources checked Oct 24 and not usable: WagerTalk (removed Oct 24, not useful), Covers (pick counts, 60% KC, not money), OddsShark (picks), SportsBettingDime
 (echoes 88% KC = same feed), BetPercent (no response), fadethepublicanalytics and Pregame (JS app; needs a browser).
+
+## Book math (dk_*.json)
+Per game `hold_pct` (DK spread vig). Per side `breakeven_money_pct` (= implied prob; book loses if that side covers and its handle share is above this), `lock_lo_money_pct` (book profits on both outcomes while handle share is between this and break-even), `book_exposed`. Computed from prices already pulled; no new source.
