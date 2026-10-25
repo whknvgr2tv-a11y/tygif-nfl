@@ -865,11 +865,12 @@ def side_rows(g,sc1,trec,mlh):
             post=sp_post(x); a=sp_grp(x,_cb(g))
             c1=f'{nm} {g["sp"].get(team,"")}'.strip()
             cls='cd-2 sdc' if role=='fade' else 'sd-sp sdc'
-            spc=f'<span class="{cls}"><span class="c1 neu">{c1}</span><span class="c2">{tyl}</span><small class="c3">{_grec(a,"Group")}</small></span>'
+            _nl="Tracking · not a play"
+            spc=f'<span class="{cls}"><span class="c1 neu">{c1}</span><span class="c2">{tyl}</span><small class="c3">{_grec(a,_nl)}</small></span>'
             mp_=ml_post(x); b=ml_grp(x,_cb(g))
             m1=f'{nm} ML'
             cls='cd-m sdc' if role=='fade' else 'sd-ml sdc'
-            mlc=f'<span class="{cls}"><span class="mc c1 neu">{m1}</span><span class="c2">Type {t}{" · "+FDN[x["fd"]] if x["fd"] else ""}</span><small class="c3">{_grec(b,"Group")}</small></span>'
+            mlc=f'<span class="{cls}"><span class="mc c1 neu">{m1}</span><span class="c2">Type {t}{" · "+FDN[x["fd"]] if x["fd"] else ""}</span><small class="c3">{_grec(b,_nl)}</small></span>'
         else:
             first=team==g['A']
             spc=f'<span class="{"cd-2 " if first else "sd-sp "}sdc"><span class="c1 neu">{f'{nm} {g["sp"].get(team,"")}'.strip()}</span><span class="c2">{tyl}</span><small class="c3">Group: even split</small></span>'
@@ -926,7 +927,7 @@ def card_lists(g):
         rs=[y for y in SIDES if y['rating']==x['rating'] and y['type']==x['type'] and y['role']==x['role'] and (k=='sp' or y['fd']==x['fd']) and y[k+'_res'] and (_fb(g,x) is None or y['week']<x['week'])]
         w,l,p,u,n=a
         h+=(f'<details class="cd-rl cd-ft{"" if ours else " cd-mn"}" data-k="{lab}" data-m="{k}" data-team="{x["team"]}" data-role="{x["role"]}" data-g="{x["week"]}|{x["game"]}">'
-            f'<summary><span><span class="tg {"PASS" if not ours else x["rating"]}">{tag}</span> {lab} · <span class="ng">{n} game{"s" if n!=1 else ""}</span></span><b>{wlp(w,l,p)}, {usd(u)}</b></summary>'
+            f'<summary><span><span class="tg {"PASS" if not ours else x["rating"]}">{tag}</span> {lab}{"" if ours else " · <i class=\'nap\'>tracking · not a play</i>"} · <span class="ng">{n} game{"s" if n!=1 else ""}</span></span><b>{wlp(w,l,p)}, {usd(u)}</b></summary>'
             f'<ul class="rl">{_rows_html(_srows(rs,k))}</ul></details>')
     return h
 def _kick(g):
