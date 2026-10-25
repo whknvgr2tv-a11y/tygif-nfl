@@ -59,3 +59,10 @@ The weekly process and its sources live in `data/process.json`. clean_build.py r
 `python3 build/settle.py` settles finished games (any day, e.g. after Thursday night), builds twice and runs the deep checks.
 `python3 build/settle.py --monday` first writes `build/inputs/tr_monday_w<N>.json` for the next week (`build/monday_lines.py`: TeamRankings books 2 and 3, last quote before Sun 11:00 PM CT / Mon 12:00 AM ET).
 Signed-off games are frozen in `data/signed_off_games.json`; the build fails if any of their rows change.
+
+## Action Network cross-check (flag only)
+Each pull also writes `an_check_<UTC stamp>.json`: Action Network book 15 (all-books) spread money % for every
+ScoresAndOdds game. A game gets a `warning` when AN's money differs from SAO's by more than 5 pts or puts the
+majority on the other side (or AN has no row). Warnings are for review only: SAO stays the all-books source, and
+DraftKings agreement stays the second-source rule. A warning never blocks or re-rates a play. If AN is down the
+pull continues (fail open).

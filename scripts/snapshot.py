@@ -6,6 +6,7 @@ Writes to OUT (default ./snapshots):
   sao_<UTC stamp>.json  parsed ScoresAndOdds spread splits for the NFL week page
   espn_dk_<UTC stamp>.json  DraftKings moneyline + spread (line, price) from ESPN for every game
                         not yet started (the grading numbers recorded before kickoff)
+  an_check_<UTC stamp>.json  Action Network book 15 (all-books) money % vs SAO; warnings only
 Snapshots are kept (they are the grading record). Exits 1 if any source
 returns no games (bot block or layout change), so the run shows as failed.
 """
@@ -101,6 +102,34 @@ def espn_status(wkm, ed, now):
         return f"week {wkm['week']} looks wrong: 0 games left, latest kickoff {wkm['last']} is over 36h ago"
     return 'ESPN returned 0 pre-kickoff games'
 
+AN = 'https://api.actionnetwork.com/web/v2/scoreboard/publicbetting/nfl?bookIds=15,30,68&date={}'
+AN_FIX = {'WAS': 'WSH', 'JAC': 'JAX', 'LA': 'LAR'}
+
+def an_check(sao, now):
+    """Cross-check SAO money % vs Action Network book 15 (all-books). FLAG only: never blocks or rates."""
+    days = sorted({(datetime.fromisoformat(g['kickoff_utc'].replace('Z', '+00:00')) - timedelta(hours=5)).strftime('%Y%m%d')
+                   for g in sao if g.get('kickoff_utc')} or {now.strftime('%Y%m%d')})
+    an = {}
+    for d in days:
+        for g in json.loads(get(AN.format(d))[1]).get('games', []):
+            ab = {t['id']: AN_FIX.get(t['abbr'].upper(), t['abbr'].upper()) for t in g['teams']}
+            sp = {o['side']: o['bet_info']['money']['percent'] for o in g.get('markets', {}).get('15', {}).get('event', {}).get('spread', [])
+                  if (o.get('bet_info') or {}).get('money', {}).get('percent') is not None}
+            if 'away' in sp and 'home' in sp:
+                an[(ab[g['away_team_id']], ab[g['home_team_id']])] = sp
+    rows = []
+    for g in sao:
+        k = (AN_FIX.get(g['away'].upper(), g['away'].upper()), AN_FIX.get(g['home'].upper(), g['home'].upper()))
+        a = an.get(k); r = {'game': f'{k[0]}@{k[1]}', 'sao_money_away': g['money_away'], 'sao_money_home': g['money_home']}
+        if not a: r['warning'] = 'AN book 15: game not found'
+        else:
+            r.update(an_money_away=a['away'], an_money_home=a['home'])
+            diff = abs(a['away'] - g['money_away']); side = lambda x, y: 'away' if x > y else 'home' if y > x else 'even'
+            if side(a['away'], a['home']) != side(g['money_away'], g['money_home']): r['warning'] = f'AN book 15 money side disagrees with SAO ({diff} pts)'
+            elif diff > 5: r['warning'] = f'AN book 15 money differs from SAO by {diff} pts'
+        rows.append(r)
+    return rows
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     now = datetime.now(timezone.utc); stamp = now.strftime('%Y%m%dT%H%MZ')
@@ -126,6 +155,17 @@ def main():
                'games': [g for g, _ in sao]}, open(f'{OUT}/sao_{stamp}.json', 'w'), indent=1)
     print(f'ScoresAndOdds: {len(sao)} games with spread splits (week {wk.group(1) if wk else "?"})')
     if not sao: ok = False
+    # Action Network book 15 cross-check: FLAG only (SAO stays the all-books source); fails open
+    try:
+        rows = an_check([g for g, _ in sao], now)
+        json.dump({'fetched_utc': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'source': AN.format('YYYYMMDD'),
+                   'rule': 'warn if AN book 15 money differs from SAO by >5 pts or picks the other side; never blocks or re-rates',
+                   'warnings': [r for r in rows if 'warning' in r], 'games': rows}, open(f'{OUT}/an_check_{stamp}.json', 'w'), indent=1)
+        print(f'Action Network cross-check: {len(rows)} games, {sum("warning" in r for r in rows)} warnings')
+        for r in rows:
+            if 'warning' in r: print('  WARN', r['game'], r['warning'])
+    except Exception as ex:
+        print('Action Network cross-check skipped (fail open):', ex)
     # ESPN DraftKings moneyline + spread for games not yet started
     try:
         cw = os.environ.get('TYGIF_WEEK') or (re.search(r'(\d+)$', wk.group(1)).group(1) if wk else None)
