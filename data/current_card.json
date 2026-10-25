@@ -1,6 +1,6 @@
 {
  "week": 7,
- "posted_at_et": "Sun Oct 25, 12:19 PM ET",
+ "posted_at_et": "Sun Oct 25, 12:36 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -18,7 +18,7 @@
    "name": "Tennessee",
    "nick": "Titans",
    "rating": "LEAN",
-   "line": "+2.5",
+   "line": "+1.5",
    "kickoff_utc": "2026-10-25T17:00:00Z"
   },
   {
