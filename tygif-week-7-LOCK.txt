@@ -23,7 +23,7 @@ MONEYLINE
 
 PASS
   Pittsburgh at New Orleans
-  NY Giants at Houston
   San Francisco at Atlanta
   Indianapolis at Minnesota
   Miami at NY Jets
+  NY Giants at Houston
