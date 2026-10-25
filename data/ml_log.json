@@ -876,10 +876,13 @@
    "rating": "LEAN",
    "side": "LV",
    "spread_line": 3.5,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401873021",
    "price": 150,
-   "fd": "Dog"
+   "fd": "Dog",
+   "score": "35-21",
+   "result": "L",
+   "profit": -100.0
   },
   {
    "week": 7,
@@ -900,7 +903,7 @@
    "spread_line": 4.5,
    "status": "preview",
    "espn_event": "401873009",
-   "price": 180,
+   "price": 185,
    "fd": "Dog"
   }
  ]

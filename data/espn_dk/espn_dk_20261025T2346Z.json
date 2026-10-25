@@ -1,0 +1,46 @@
+{
+ "fetched_utc": "2026-10-25T23:46:46+00:00",
+ "source": "build/settle.py (ESPN game summaries, games not yet started)",
+ "games": [
+  {
+   "id": "401873022",
+   "away": "KC",
+   "home": "SEA",
+   "kickoff_utc": "2026-10-26T00:20Z",
+   "ml": {
+    "away": "+130",
+    "home": "-155"
+   },
+   "spread": {
+    "away": {
+     "line": "+3",
+     "odds": "-118"
+    },
+    "home": {
+     "line": "-3",
+     "odds": "-102"
+    }
+   }
+  },
+  {
+   "id": "401873009",
+   "away": "DAL",
+   "home": "PHI",
+   "kickoff_utc": "2026-10-27T00:15Z",
+   "ml": {
+    "away": "-225",
+    "home": "+185"
+   },
+   "spread": {
+    "away": {
+     "line": "-4.5",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "+4.5",
+     "odds": "-112"
+    }
+   }
+  }
+ ]
+}

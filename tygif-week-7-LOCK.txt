@@ -1,5 +1,5 @@
 TYGIF'S MODEL · WEEK 7
-Lines as of Sun Oct 25, 5:37 PM CT
+Lines as of Sun Oct 25, 6:45 PM CT
 
 STRONG
   Chicago −3  ·  Thu Oct 22 · 7:15 PM CT · Final CHI 30–24 · win +$93
@@ -11,8 +11,8 @@ STRONG
 LEAN
   Tennessee +1.5  ·  Sun Oct 25 · 12:00 PM CT · Final TEN 24–27 · loss −$100
   Tampa Bay +3  ·  Sun Oct 25 · 12:00 PM CT · Final TB 43–13 · win +$91
+  Las Vegas +3.5  ·  Sun Oct 25 · 3:25 PM CT · Final LV 21–35 · loss −$100
   Green Bay +3.5  ·  Sun Oct 25 · 3:25 PM CT · Final GB 17–20 · win +$93
-  Las Vegas +3.5  ·  Sun Oct 25 · 3:25 PM CT
 
 MONEYLINE
   STRONG Chicago ML  ·  Thu Oct 22 · 7:15 PM CT · Final 30–24 · win +$65

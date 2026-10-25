@@ -1,0 +1,61 @@
+{
+ "fetched_utc": "2026-10-25T23:45:54+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Moneyline&tb_page=N",
+ "market": "moneyline",
+ "games": [
+  {
+   "matchup": "KC Chiefs @ SEA Seahawks",
+   "kickoff_local": "10/25, 08:20PM",
+   "spread": [
+    {
+     "side": "SEA Seahawks",
+     "odds": "\u2212162",
+     "handle_pct": 24,
+     "bets_pct": 29
+    },
+    {
+     "side": "KC Chiefs",
+     "odds": "+136",
+     "handle_pct": 76,
+     "bets_pct": 71
+    }
+   ]
+  },
+  {
+   "matchup": "DAL Cowboys @ PHI Eagles",
+   "kickoff_local": "10/26, 08:15PM",
+   "spread": [
+    {
+     "side": "PHI Eagles",
+     "odds": "+185",
+     "handle_pct": 22,
+     "bets_pct": 13
+    },
+    {
+     "side": "DAL Cowboys",
+     "odds": "\u2212225",
+     "handle_pct": 78,
+     "bets_pct": 87
+    }
+   ]
+  },
+  {
+   "matchup": "CAR Panthers @ GB Packers",
+   "kickoff_local": "10/29, 08:15PM",
+   "spread": [
+    {
+     "side": "GB Packers",
+     "odds": "\u2212192",
+     "handle_pct": 94,
+     "bets_pct": 55
+    },
+    {
+     "side": "CAR Panthers",
+     "odds": "+160",
+     "handle_pct": 6,
+     "bets_pct": 45
+    }
+   ]
+  }
+ ]
+}
