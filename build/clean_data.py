@@ -54,7 +54,7 @@ def grade(k):
     if r['bets_side']!=ms: return 'PASS',steps
     lvl=2 if mp>=65 else 1
     mv=rc.mv_toward_money(k)
-    if mv>1: lvl-=1; steps.append(('move',mv))
+    # TG, Oct 25: line move no longer drops a level
     return LV[max(lvl,0)],steps
 # --- Monday-line restatement (monday1): TeamRankings books 2-3, last quote before Monday 12:00 AM ET ---
 MONDAY={(o['week'],o['game']):o for o in json.load(open(_RR+'data/monday_lines_w1-4.json'))['games']}

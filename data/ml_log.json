@@ -19,7 +19,7 @@
   {
    "week": 1,
    "game": "ATL@PIT",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "ATL",
    "spread_line": 6.5,
    "status": "look back",
@@ -125,6 +125,20 @@
    "price": 195,
    "fd": "Dog",
    "score": "22-24",
+   "result": "L",
+   "profit": -100.0
+  },
+  {
+   "week": 2,
+   "game": "CAR@ATL",
+   "rating": "LEAN",
+   "side": "ATL",
+   "spread_line": 2.5,
+   "status": "look back",
+   "espn_event": "401872933",
+   "price": 120,
+   "fd": "Dog",
+   "score": "34-3",
    "result": "L",
    "profit": -100.0
   },
@@ -383,7 +397,7 @@
   {
    "week": 3,
    "game": "SEA@WSH",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "WSH",
    "spread_line": 8.5,
    "status": "look back",
@@ -397,7 +411,7 @@
   {
    "week": 3,
    "game": "TEN@NYG",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "NYG",
    "spread_line": -2.5,
    "status": "look back",
@@ -677,7 +691,7 @@
   {
    "week": 6,
    "game": "CAR@PHI",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "PHI",
    "spread_line": 3.0,
    "status": "live",
@@ -811,7 +825,7 @@
   {
    "week": 7,
    "game": "CIN@BAL",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "BAL",
    "spread_line": 3.0,
    "status": "preview",

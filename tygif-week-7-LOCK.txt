@@ -3,17 +3,18 @@ Lines as of Sun Oct 25, 7:54 AM CT
 
 STRONG
   Chicago −3  ·  Thu Oct 22 · 7:15 PM CT · Final CHI 30–24 · win +$93
+  Baltimore +3  ·  Sun Oct 25 · 12:00 PM CT
   Seattle −3  ·  Sun Oct 25 · 7:20 PM CT
 
 LEAN
   Tennessee +1.5  ·  Sun Oct 25 · 12:00 PM CT
   Tampa Bay +3  ·  Sun Oct 25 · 12:00 PM CT
-  Baltimore +3  ·  Sun Oct 25 · 12:00 PM CT
   Arizona +4.5  ·  Sun Oct 25 · 3:05 PM CT
   Philadelphia +4.5  ·  Mon Oct 26 · 7:15 PM CT
 
 MONEYLINE
   STRONG Chicago ML  ·  Thu Oct 22 · 7:15 PM CT · Final 30–24 · win +$65
+  STRONG Baltimore ML  ·  Sun Oct 25 · 12:00 PM CT
   STRONG Seattle ML  ·  Sun Oct 25 · 7:20 PM CT
 
 PASS

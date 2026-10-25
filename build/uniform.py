@@ -58,7 +58,7 @@ def game(gname, rating_pub):
     if not cc: rt,why='PASS','DraftKings has the money on the other side'
     elif not a: rt,why='PASS','Money and bets on different sides'
     else:
-        lvl=2 if b else 1; drops=[n for n,v in (('line move',e),('QB',f)) if v]
+        lvl=2 if b else 1; drops=[n for n,v in (('QB',f),) if v]   # TG, Oct 25: no line-move drop
         lvl-=len(drops); rt=LEVEL[max(lvl,0)]
         base='STRONG' if b else 'LEAN'
         why=f"Starts at {base}" + ("".join(f" · −1 for {x}" for x in drops) if drops else " · no drops")

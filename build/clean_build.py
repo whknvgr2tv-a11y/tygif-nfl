@@ -238,9 +238,9 @@ def qa(g):
     else: dd=f"{fa} {fl} is the favorite, but the money is on {_other(g,fa)}"
     rows.append(('d','Is the favorite giving 6+ points holding the money?',yes_d,dd+'. This only picks the type, not the rating','nu'))
     # e: line steady (yes helps)
-    EQ='Has the line moved 1 point or less toward the money since Monday?'
+    EQ='Line move since Monday (info only, does not change the rating)'   # TG, Oct 25
     if even: rows.append(('e',EQ,True,"money is split 50–50, so there's no money side for the line to move toward.",'ok'))
-    else: rows.append(('e',EQ,not g['e'],opener(g)+_dir(g),'ok' if not g['e'] else 'no'))
+    else: rows.append(('e',EQ,not g['e'],opener(g)+_dir(g),'nu'))
     rows=[(l,t,v,(d[0].lower()+d[1:] if d.split()[0] in ('Money','All','The','Start-of-week') else d),e) for l,t,v,d,e in rows]
     # consistency: rebuild rating and type from the answers
     ans={l:v for l,_,v,_,_ in rows}
@@ -250,7 +250,7 @@ def qa(g):
         ty=1 if (ans['b'] and ans['d']) else 2 if (ans['b'] and ans['a']) else 3
         if not ans['a']: rt='PASS'
         else:
-            lvl=(2 if ans['b'] else 1)-(not ans['e']); rt=['PASS','LEAN','STRONG'][max(lvl,0)]
+            lvl=(2 if ans['b'] else 1); rt=['PASS','LEAN','STRONG'][max(lvl,0)]
     assert (rt,ty)==(g['rating'],g['type']), (g['gid'],rt,ty,g['rating'],g['type'])
     # d (6+ favorite) only decides type 1 vs 2 and is shown on the card as the type; not a checklist row
     shown=[r for r in rows if r[0]!='d']
@@ -348,7 +348,7 @@ def rate_v1(A,H,ab,dk_side,mon,close_sp,qb_drop):
     a=b>=50; bb=m>=65
     ty=1 if (bb and d) else 2 if (bb and a) else 3
     if not a: return 'PASS',ty,e,d
-    lvl=(2 if bb else 1)-e-qb_drop
+    lvl=(2 if bb else 1)-qb_drop   # TG, Oct 25: line move no longer drops a level (info only)
     return ['PASS','LEAN','STRONG'][max(lvl,0)],ty,e,d
 def settle_w5():
     sb=json.load(open(_W+'/espn_sum/sb_w5.json'))
@@ -459,7 +459,7 @@ def _apply_close():
         g['d']=g['type']==1
         ty=g['type']
         g['why']=('DraftKings has the money on the other side' if ty==4 else 'Under 55% of the money on either side' if ty==5 else
-                  'Money and bets on different sides' if not g['a'] else f"Starts at {'STRONG' if m>=65 else 'LEAN'}"+(' · −1 for line move' if g['e'] else ' · no drops'))
+                  'Money and bets on different sides' if not g['a'] else f"Starts at {'STRONG' if m>=65 else 'LEAN'}"+' · no drops')
         g['wy']=f"{m}% of the money is on {side} (all books)."
         g['call']=f"{fade} {sp[AB[fade]]}"
         CLOSE_APPLIED.append((g['gid'],sa['at'],dk['at']))
@@ -506,7 +506,7 @@ def build_wk(WK):
         elif ty==5: why='Under 55% of the money on either side'
         elif abb<50: why='Money and bets on different sides'
         else:
-            drops=[n for n,v in (('line move',ee),) if v]
+            drops=[]   # TG, Oct 25: no line-move drop
             why=f"Starts at {'STRONG' if abm>=65 else 'LEAN'}"+(''.join(f' · −1 for {x}' for x in drops) if drops else ' · no drops')
         g=dict(gid=f'w{WK}-{A.lower()}-{H.lower()}',A=A,H=H,away=NAME[A],home=NAME[H],sp=sp,ab_side=NAME[abs_],ab_m=abm,ab_b=abb,
                dk_side=NAME[dks],dk_m=dk[dks]['money'],dk_b=dk[dks]['bets'],a=abb>=50,b=abm>=65,c=(dks==abs_ and not dk_tie),d=dd,e=ee,f=drop,
@@ -827,7 +827,7 @@ def card_inner(g):
     m=g['ab_m']; mcls='ok' if m>=65 else 'md'
     cells=[('Money',f'{AB[g["ab_side"]]} {m}%',mcls),('Bets',f'{AB[g["ab_side"]]} {g["ab_b"]}%','ok' if g['a'] else 'no'),
            (('DraftKings','—','md') if g['c'] is None else ('DraftKings','Same' if g['c'] else 'Opposite','ok' if g['c'] else 'no')),
-           ('Line','Steady' if _steady(g) else 'Moved','ok' if _steady(g) else 'no')]
+           ('Line','Steady' if _steady(g) else 'Moved','md')]   # TG, Oct 25: info only
     grid=''.join(f'<span>{a}<b class="{c}">{v}</b></span>' for a,v,c in cells)
     fz=g.get('final'); sc=g.get('score_txt') or _score(g)
     if fz: st=f'{vs} · <span class="fin {fz["word"][0].upper()}">{fz["tag"]}</span>'
@@ -1012,7 +1012,6 @@ def _lvl_noqb(k):
     r=T[k]; ms=r['money_side']; mp=r['money_pct'] or 0
     if not ms or mp<55 or r['bets_side']!=ms: return 'PASS'
     l=2 if mp>=65 else 1
-    if rc.mv_toward_money(k)>1: l-=1
     return LV[max(l,0)]
 _P=[k for k in T if grade(k)[0]=='PASS']
 _even=[k for k in _P if not T[k]['money_side'] or T[k]['money_pct']==50]
@@ -1025,7 +1024,7 @@ assert [_ty[t][:3] for t in (1,2,3,5)]==[(10,3,1),(6,2,2),(13,14,1),(4,6,0)]
 def _drow(lbl,ks):
     w,l,p,u,n=tally(ks); return f'<tr><td>{lbl}</td><td>{rec(w,l,p)}<small class="{"pos" if u>0 else "neg"}">{usd(u)}</small></td><td>{n}</td></tr>'
 DROPS=('<div class="tcard" id="drops"><div class="tblwrap"><table class="data wk3"><thead><tr><th>Group</th><th>Record</th><th>Games</th></tr></thead><tbody>'
-       +_drow('PASS games without a money-vs-bets split',_pass)+_drow('Dropped a level: line moved over 1 pt toward the money',_mv)
+       +_drow('PASS games without a money-vs-bets split',_pass)+_drow('Line moved over 1 pt toward the money (old drop rule, removed Oct 25; info only)',_mv)
        +'</tbody></table></div><p>Every game by type: '+' · '.join(f'Type {t}: {rec(*_ty[t][:3])}' for t in (1,2,3,5))+' (NYJ@CHI and MIA@SF at exactly even money, not graded). Type 4 can only be spotted from Week 5: Weeks 1–4 saved one split per game.</p></div>')
 N4=sum(g['type']==4 for g in G6)
 LR=live_rows()
@@ -1322,9 +1321,9 @@ HOW=f'''<div class="hw">
 <h2>Ratings</h2>
 <ul>
 <li><b>STRONG:</b> 65%+ of the money, most bets on the same team, DraftKings money on the same team (its bets need not agree).</li>
-<li><b>LEAN:</b> 55–64% of the money, or a STRONG that drops one level.</li>
-<li><b>PASS:</b> types 4 and 5, money and bets on different teams, or a LEAN that drops.</li>
-<li><b>Drop one level</b> if the line moves more than 1 point toward the money from the Monday line This never changes the type.</li>
+<li><b>LEAN:</b> 55–64% of the money, most bets on the same team, DraftKings money on the same team.</li>
+<li><b>PASS:</b> types 4 and 5, or money and bets on different teams.</li>
+<li><b>Line movement</b> is shown for information only. Since Oct 25 it never changes the rating, for every week.</li>
 <li><b>Monday line:</b> average of TeamRankings books 2 and 3, each book’s last quote before Monday 12:00 AM ET (quotes older than 7 days skipped).</li>
 </ul>
 <h2>Moneyline</h2>
@@ -2112,7 +2111,7 @@ def _deepcheck():
             if eval(v_)!=_bx: errs.append(('audit mismatch','buckets',_bx,v_))
         elif got.get(k_)!=v_: errs.append(('audit mismatch',k_,got.get(k_),v_))
     # Rules v3.1: spread records over the signed-off games stay frozen; no Type 3 underdog moneyline ever posts
-    for k_,v_ in (('STRONG spread','17-5-4 +$1,065 n26'),('LEAN spread','11-9-1 +$112 n21')):   # ca32973 + W6 SEA@DEN settled (DEN +2.5 −105 W)
+    for k_,v_ in (('STRONG spread','19-6-4 +$1,137 n29'),('LEAN spread','9-9-1 −$60 n19')):   # TG Oct 25: line-move drop removed, all weeks re-rated; was ca32973 + W6 SEA@DEN settled (DEN +2.5 −105 W)
         if got.get(k_)!=v_: errs.append(('spread records changed',k_,got.get(k_),v_))
     got=gota
     for r_ in SIDES:

@@ -5,11 +5,11 @@ STRONG
   Denver +2.5  ·  Thu Oct 15 · 7:15 PM CT · Final DEN 17–14 · win +$95
   Tennessee +6.5  ·  Sun Oct 18 · 12:00 PM CT · Final TEN 26–20 · win +$93
   NY Jets +7.5  ·  Sun Oct 18 · 12:00 PM CT · Final NYJ 19–26 · win +$89
+  Philadelphia +3  ·  Sun Oct 18 · 12:00 PM CT · Final PHI 14–25 · loss −$100
   Arizona +12.5  ·  Sun Oct 18 · 3:05 PM CT · Final ARI 18–16 · win +$95
 
 LEAN
   New Orleans −1.5  ·  Sun Oct 18 · 12:00 PM CT · Final NO 34–27 · win +$105
-  Philadelphia +3  ·  Sun Oct 18 · 12:00 PM CT · Final PHI 14–25 · loss −$100
   Tampa Bay +1.5  ·  Sun Oct 18 · 12:00 PM CT · Final TB 19–26 · loss −$100
   LA Chargers +7.5  ·  Sun Oct 18 · 3:25 PM CT · Final LAC 6–22 · loss −$100
   Las Vegas +5.5  ·  Sun Oct 18 · 3:25 PM CT · Final LV 30–33 · win +$89
@@ -18,6 +18,7 @@ MONEYLINE
   STRONG Denver ML  ·  Thu Oct 15 · 7:15 PM CT · Final 17–14 · win +$124
   STRONG Tennessee ML  ·  Sun Oct 18 · 12:00 PM CT · Final 26–20 · win +$235
   STRONG NY Jets ML  ·  Sun Oct 18 · 12:00 PM CT · Final 19–26 · loss −$100
+  STRONG Philadelphia ML  ·  Sun Oct 18 · 12:00 PM CT · Final 14–25 · loss −$100
   STRONG Arizona ML  ·  Sun Oct 18 · 3:05 PM CT · Final 18–16 · win +$525
 
 PASS

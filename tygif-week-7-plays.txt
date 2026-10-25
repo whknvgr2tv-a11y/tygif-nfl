@@ -3,35 +3,38 @@ Lines as of Sun Oct 25, 7:54 AM CT
 
 STRONG
   Chicago −3  ·  New England at Chicago, Thu Oct 22 · 7:15 PM CT · Final CHI 30–24 · win +$93
-    Type 2 · Fade the crowd · STRONG: 8-3-2, +$442
+    Type 2 · Fade the crowd · STRONG: 9-4-2, +$427
     a: Yes · b: Yes · c: Yes · d: Yes
+  Baltimore +3  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT
+    Type 2 · Fade the crowd · STRONG: 9-4-2, +$427
+    a: Yes · b: Yes · c: Yes · d: No
   Seattle −3  ·  Kansas City at Seattle, Sun Oct 25 · 7:20 PM CT
-    Type 2 · Fade the crowd · STRONG: 8-3-2, +$442
+    Type 2 · Fade the crowd · STRONG: 9-4-2, +$427
     a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN
   Tennessee +1.5  ·  Cleveland at Tennessee, Sun Oct 25 · 12:00 PM CT
-    Type 3 · Crowd leaning · LEAN: 11-10-1, +$34
+    Type 3 · Crowd leaning · LEAN: 11-11-1, −$66
     a: Yes · b: No · c: Yes · d: Yes
   Tampa Bay +3  ·  Tampa Bay at Carolina, Sun Oct 25 · 12:00 PM CT
-    Type 3 · Crowd leaning · LEAN: 11-10-1, +$34
+    Type 3 · Crowd leaning · LEAN: 11-11-1, −$66
     a: Yes · b: No · c: Yes · d: Yes
-  Baltimore +3  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT
-    Type 2 · Fade the crowd · LEAN: 1-1-0, −$15
-    a: Yes · b: Yes · c: Yes · d: No
   Arizona +4.5  ·  Denver at Arizona, Sun Oct 25 · 3:05 PM CT
-    Type 3 · Crowd leaning · LEAN: 11-10-1, +$34
+    Type 3 · Crowd leaning · LEAN: 11-11-1, −$66
     a: Yes · b: No · c: Yes · d: Yes
   Philadelphia +4.5  ·  Dallas at Philadelphia, Mon Oct 26 · 7:15 PM CT
-    Type 3 · Crowd leaning · LEAN: 11-10-1, +$34
+    Type 3 · Crowd leaning · LEAN: 11-11-1, −$66
     a: Yes · b: No · c: Yes · d: Yes
 
 MONEYLINE
   STRONG Chicago ML  ·  New England at Chicago, Thu Oct 22 · 7:15 PM CT · Final 30–24 · win +$65
-    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 6-2-1, +$192
+    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 7-2-1, +$266
     a: Yes · b: Yes · c: Yes · d: Yes
+  STRONG Baltimore ML  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT
+    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-2-0, +$218
+    a: Yes · b: Yes · c: Yes · d: No
   STRONG Seattle ML  ·  Kansas City at Seattle, Sun Oct 25 · 7:20 PM CT
-    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 6-2-1, +$192
+    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 7-2-1, +$266
     a: Yes · b: Yes · c: Yes · d: Yes
 
 PASS
