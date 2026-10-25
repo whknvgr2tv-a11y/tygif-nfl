@@ -4,20 +4,20 @@ Lines as of Sun Oct 25, 5:37 PM CT
 STRONG
   Chicago −3  ·  Thu Oct 22 · 7:15 PM CT · Final CHI 30–24 · win +$93
   Baltimore +3  ·  Sun Oct 25 · 12:00 PM CT · Final BAL 13–35 · loss −$100
-  Arizona +4.5  ·  Sun Oct 25 · 3:05 PM CT
+  Arizona +4.5  ·  Sun Oct 25 · 3:05 PM CT · Final ARI 16–30 · loss −$100
   Seattle −3  ·  Sun Oct 25 · 7:20 PM CT
   Philadelphia +4.5  ·  Mon Oct 26 · 7:15 PM CT
 
 LEAN
   Tennessee +1.5  ·  Sun Oct 25 · 12:00 PM CT · Final TEN 24–27 · loss −$100
   Tampa Bay +3  ·  Sun Oct 25 · 12:00 PM CT · Final TB 43–13 · win +$91
-  Green Bay +3.5  ·  Sun Oct 25 · 3:25 PM CT
+  Green Bay +3.5  ·  Sun Oct 25 · 3:25 PM CT · Final GB 17–20 · win +$93
   Las Vegas +3.5  ·  Sun Oct 25 · 3:25 PM CT
 
 MONEYLINE
   STRONG Chicago ML  ·  Thu Oct 22 · 7:15 PM CT · Final 30–24 · win +$65
   STRONG Baltimore ML  ·  Sun Oct 25 · 12:00 PM CT · Final 13–35 · loss −$100
-  STRONG Arizona ML  ·  Sun Oct 25 · 3:05 PM CT
+  STRONG Arizona ML  ·  Sun Oct 25 · 3:05 PM CT · Final 16–30 · loss −$100
   STRONG Seattle ML  ·  Sun Oct 25 · 7:20 PM CT
   STRONG Philadelphia ML  ·  Mon Oct 26 · 7:15 PM CT
 
