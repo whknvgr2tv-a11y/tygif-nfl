@@ -72,5 +72,11 @@ Each pull also writes `sources_<UTC stamp>.json` (what each source returned) and
 from VSiN's free splits board. Circa (Las Vegas) is a money source independent of DraftKings and of ScoresAndOdds/Action
 Network (which share data). The free board only lists today's games, so nothing is parsed or rated from VSiN until the row
 format is verified on a game-day pull. Fails open: a VSiN error never fails the pull.
+
+## WagerTalk capture (evidence only)
+Each pull also saves raw `wagertalk_<n>_<UTC stamp>.html` from https://www.wagertalk.com/odds (plus NFL-specific URL tries).
+WagerTalk shows Tickets/Money columns per book (DraftKings, FanDuel, Circa, Caesars, BetMGM, ...): a candidate independent
+multi-book money source. Cells carry prefixes like `o93%`, so nothing is parsed or rated from it until NFL rows are verified
+on a game-day (Sunday) pull. Status per URL goes into `sources_<stamp>.json`. Fails open; ratings are unaffected.
 Sources checked Oct 24 and not usable: Covers (pick counts, 60% KC, not money), OddsShark (picks), SportsBettingDime
 (echoes 88% KC = same feed), BetPercent (no response), fadethepublicanalytics and Pregame (JS app; needs a browser).

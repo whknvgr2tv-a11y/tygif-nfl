@@ -146,6 +146,23 @@ def vsin_capture(stamp):
             out[b] = {'error': str(ex)[:200]}
     return out
 
+WAGERTALK = ('https://www.wagertalk.com/odds', 'https://www.wagertalk.com/odds?sport=nfl')
+
+def wagertalk_capture(stamp):
+    """Raw capture of WagerTalk odds board (Tickets/Money columns per book: DK, FanDuel, Circa, Caesars, BetMGM...).
+    Candidate independent multi-book money. Evidence only: no parse/rating until game-day rows are verified
+    (cells look like 'o93%', so the parser needs care)."""
+    out = {}
+    for i, u in enumerate(WAGERTALK):
+        try:
+            st, h = get(u)
+            open(f'{OUT}/wagertalk_{i}_{stamp}.html', 'w').write(h)
+            out[u] = {'http': st, 'bytes': len(h), 'pct_cells': len(re.findall(r'[ou]?\d{1,3}%', h)),
+                      'nfl_team_mentions': len(re.findall(r'Chiefs|Seahawks|Bears|Eagles|Cowboys|Packers|Lions|Ravens', h))}
+        except Exception as ex:
+            out[u] = {'error': str(ex)[:200]}
+    return out
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     now = datetime.now(timezone.utc); stamp = now.strftime('%Y%m%dT%H%MZ')
@@ -190,8 +207,17 @@ def main():
         print('VSiN capture:', {k: v.get('bytes', v.get('error')) for k, v in src['vsin'].items()})
     except Exception as ex:
         src['vsin'] = {'error': str(ex)[:200]}
-    src['note'] = 'independent money sources: DraftKings (own book), VSiN Circa (raw capture, unparsed). SAO and AN share data.'
-    json.dump(src, open(f'{OUT}/sources_{stamp}.json', 'w'), indent=1)
+    try:
+        src['wagertalk'] = wagertalk_capture(stamp)
+        print('WagerTalk capture:', {k: v.get('bytes', v.get('error')) for k, v in src['wagertalk'].items()})
+    except Exception as ex:
+        src['wagertalk'] = {'error': str(ex)[:200]}
+    src['note'] = ('independent money sources: DraftKings (own book), VSiN Circa and WagerTalk multi-book (raw capture, '
+                   'unparsed, not rated). SAO and AN share data.')
+    try:
+        json.dump(src, open(f'{OUT}/sources_{stamp}.json', 'w'), indent=1)
+    except Exception as ex:
+        print('sources json write failed (fail open):', ex)
     # ESPN DraftKings moneyline + spread for games not yet started
     try:
         cw = os.environ.get('TYGIF_WEEK') or (re.search(r'(\d+)$', wk.group(1)).group(1) if wk else None)
