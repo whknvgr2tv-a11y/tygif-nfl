@@ -703,11 +703,11 @@
    "side": "PIT",
    "line": -3.0,
    "price": -112,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": -162,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -715,11 +715,11 @@
    "side": "NO",
    "line": 3.0,
    "price": -108,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": 136,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -727,11 +727,11 @@
    "side": "SF",
    "line": -2.5,
    "price": -115,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": -148,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -739,11 +739,11 @@
    "side": "ATL",
    "line": 2.5,
    "price": -105,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": 124,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -751,11 +751,11 @@
    "side": "CLE",
    "line": -2.5,
    "price": -108,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": -130,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -763,35 +763,35 @@
    "side": "TEN",
    "line": 2.5,
    "price": -112,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": 110,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
    "game": "IND@MIN",
    "side": "IND",
    "line": 6.5,
-   "price": -112,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
-   "ml": 250,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "price": -110,
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
+   "ml": 260,
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
    "game": "IND@MIN",
    "side": "MIN",
    "line": -6.5,
-   "price": -108,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
-   "ml": -310,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "price": -110,
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
+   "ml": -325,
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -799,11 +799,11 @@
    "side": "MIA",
    "line": 4.5,
    "price": -110,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": 180,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -811,35 +811,35 @@
    "side": "NYJ",
    "line": -4.5,
    "price": -110,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": -218,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
    "game": "TB@CAR",
    "side": "TB",
    "line": 3.0,
-   "price": -115,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "price": -118,
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": 130,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
    "game": "TB@CAR",
    "side": "CAR",
    "line": -3.0,
-   "price": -105,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "price": -102,
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": -155,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -847,11 +847,11 @@
    "side": "CIN",
    "line": -3.0,
    "price": -105,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
-   "ml": -155,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
+   "ml": -148,
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -859,35 +859,35 @@
    "side": "BAL",
    "line": 3.0,
    "price": -115,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
-   "ml": 130,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
+   "ml": 124,
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
    "game": "NYG@HOU",
    "side": "NYG",
    "line": 10.0,
-   "price": -105,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
-   "ml": 390,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "price": -108,
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
+   "ml": 370,
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
    "game": "NYG@HOU",
    "side": "HOU",
    "line": -10.0,
-   "price": -115,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
-   "ml": -520,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "price": -112,
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
+   "ml": -485,
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -895,11 +895,11 @@
    "side": "DEN",
    "line": -4.5,
    "price": -110,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": -225,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -907,35 +907,35 @@
    "side": "ARI",
    "line": 4.5,
    "price": -110,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": 185,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
    "game": "GB@DET",
    "side": "GB",
    "line": 3.5,
-   "price": -118,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
-   "ml": 160,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "price": -115,
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
+   "ml": 150,
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
    "game": "GB@DET",
    "side": "DET",
    "line": -3.5,
-   "price": -102,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
-   "ml": -192,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "price": -105,
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
+   "ml": -180,
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -943,11 +943,11 @@
    "side": "LAR",
    "line": -3.0,
    "price": -118,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": -175,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -955,11 +955,11 @@
    "side": "LV",
    "line": 3.0,
    "price": -102,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": 145,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -967,11 +967,11 @@
    "side": "KC",
    "line": 3.0,
    "price": -115,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": 124,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -979,11 +979,11 @@
    "side": "SEA",
    "line": -3.0,
    "price": -105,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
    "ml": -148,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -991,11 +991,11 @@
    "side": "DAL",
    "line": -4.5,
    "price": -112,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
-   "ml": -225,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
+   "ml": -218,
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   },
   {
    "week": 7,
@@ -1003,11 +1003,11 @@
    "side": "PHI",
    "line": 4.5,
    "price": -108,
-   "at_utc": "2026-10-25T00:09:01+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T0009Z.json",
-   "ml": 185,
-   "ml_at_utc": "2026-10-25T00:09:18+00:00",
-   "ml_source": "ESPN DraftKings capture scripts/snapshot.py pull espn_dk_20261025T0009Z.json"
+   "at_utc": "2026-10-25T03:40:53+00:00",
+   "source": "scripts/snapshot.py pull dk_20261025T0340Z.json",
+   "ml": 180,
+   "ml_at_utc": "2026-10-25T03:42:57+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T0342Z.json"
   }
  ]
 }

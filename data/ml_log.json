@@ -788,17 +788,6 @@
   },
   {
    "week": 7,
-   "game": "SF@ATL",
-   "rating": "LEAN",
-   "side": "ATL",
-   "spread_line": 2.5,
-   "status": "preview",
-   "espn_event": "401873017",
-   "price": 124,
-   "fd": "Dog"
-  },
-  {
-   "week": 7,
    "game": "CLE@TEN",
    "rating": "STRONG",
    "side": "TEN",
@@ -816,18 +805,29 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873012",
-   "price": 130,
+   "price": 124,
+   "fd": "Dog"
+  },
+  {
+   "week": 7,
+   "game": "DEN@ARI",
+   "rating": "STRONG",
+   "side": "ARI",
+   "spread_line": 4.5,
+   "status": "preview",
+   "espn_event": "401873019",
+   "price": 185,
    "fd": "Dog"
   },
   {
    "week": 7,
    "game": "DAL@PHI",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "PHI",
    "spread_line": 4.5,
    "status": "preview",
    "espn_event": "401873009",
-   "price": 185,
+   "price": 180,
    "fd": "Dog"
   }
  ]
