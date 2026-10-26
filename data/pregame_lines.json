@@ -675,30 +675,6 @@
   },
   {
    "week": 7,
-   "game": "LAR@LV",
-   "side": "LAR",
-   "line": -3.5,
-   "price": 100,
-   "at_utc": "2026-10-25T20:17:45+00:00",
-   "source": "snapshots branch dk_20261025T2017Z.json",
-   "ml": -180,
-   "ml_at_utc": "2026-10-25T20:17:56+00:00",
-   "ml_source": "ESPN DraftKings capture snapshots branch espn_dk_20261025T2017Z.json"
-  },
-  {
-   "week": 7,
-   "game": "LAR@LV",
-   "side": "LV",
-   "line": 3.5,
-   "price": -120,
-   "at_utc": "2026-10-25T20:17:45+00:00",
-   "source": "snapshots branch dk_20261025T2017Z.json",
-   "ml": 150,
-   "ml_at_utc": "2026-10-25T20:17:56+00:00",
-   "ml_source": "ESPN DraftKings capture snapshots branch espn_dk_20261025T2017Z.json"
-  },
-  {
-   "week": 7,
    "game": "PIT@NO",
    "side": "PIT",
    "line": -3.0,
@@ -939,27 +915,51 @@
   },
   {
    "week": 7,
+   "game": "LAR@LV",
+   "side": "LAR",
+   "line": -3.5,
+   "price": 100,
+   "at_utc": "2026-10-25T20:17:45+00:00",
+   "source": "snapshots branch dk_20261025T2017Z.json",
+   "ml": -180,
+   "ml_at_utc": "2026-10-25T20:17:56+00:00",
+   "ml_source": "ESPN DraftKings capture snapshots branch espn_dk_20261025T2017Z.json"
+  },
+  {
+   "week": 7,
+   "game": "LAR@LV",
+   "side": "LV",
+   "line": 3.5,
+   "price": -120,
+   "at_utc": "2026-10-25T20:17:45+00:00",
+   "source": "snapshots branch dk_20261025T2017Z.json",
+   "ml": 150,
+   "ml_at_utc": "2026-10-25T20:17:56+00:00",
+   "ml_source": "ESPN DraftKings capture snapshots branch espn_dk_20261025T2017Z.json"
+  },
+  {
+   "week": 7,
    "game": "KC@SEA",
    "side": "KC",
    "line": 3.0,
-   "price": -118,
-   "at_utc": "2026-10-25T23:45:54+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T2345Z.json",
-   "ml": 130,
-   "ml_at_utc": "2026-10-25T23:46:46+00:00",
-   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T2346Z.json"
+   "price": -115,
+   "at_utc": "2026-10-26T00:03:50+00:00",
+   "source": "scripts/snapshot.py pull dk_20261026T0003Z.json",
+   "ml": 136,
+   "ml_at_utc": "2026-10-26T00:04:27+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261026T0004Z.json"
   },
   {
    "week": 7,
    "game": "KC@SEA",
    "side": "SEA",
    "line": -3.0,
-   "price": -102,
-   "at_utc": "2026-10-25T23:45:54+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T2345Z.json",
-   "ml": -155,
-   "ml_at_utc": "2026-10-25T23:46:46+00:00",
-   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T2346Z.json"
+   "price": -105,
+   "at_utc": "2026-10-26T00:03:50+00:00",
+   "source": "scripts/snapshot.py pull dk_20261026T0003Z.json",
+   "ml": -162,
+   "ml_at_utc": "2026-10-26T00:04:27+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261026T0004Z.json"
   },
   {
    "week": 7,
@@ -991,11 +991,11 @@
    "side": "DAL",
    "line": -4.5,
    "price": -108,
-   "at_utc": "2026-10-25T23:45:54+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T2345Z.json",
+   "at_utc": "2026-10-26T00:03:50+00:00",
+   "source": "scripts/snapshot.py pull dk_20261026T0003Z.json",
    "ml": -225,
-   "ml_at_utc": "2026-10-25T23:46:46+00:00",
-   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T2346Z.json"
+   "ml_at_utc": "2026-10-26T00:04:27+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261026T0004Z.json"
   },
   {
    "week": 7,
@@ -1003,11 +1003,11 @@
    "side": "PHI",
    "line": 4.5,
    "price": -112,
-   "at_utc": "2026-10-25T23:45:54+00:00",
-   "source": "scripts/snapshot.py pull dk_20261025T2345Z.json",
+   "at_utc": "2026-10-26T00:03:50+00:00",
+   "source": "scripts/snapshot.py pull dk_20261026T0003Z.json",
    "ml": 185,
-   "ml_at_utc": "2026-10-25T23:46:46+00:00",
-   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261025T2346Z.json"
+   "ml_at_utc": "2026-10-26T00:04:27+00:00",
+   "ml_source": "ESPN DraftKings capture data/espn_dk/espn_dk_20261026T0004Z.json"
   }
  ]
 }

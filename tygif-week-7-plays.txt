@@ -1,5 +1,5 @@
 TYGIF'S MODEL · WEEK 7
-Lines as of Sun Oct 25, 6:45 PM CT
+Lines as of Sun Oct 25, 7:03 PM CT
 
 STRONG
   Chicago −3  ·  New England at Chicago, Thu Oct 22 · 7:15 PM CT · Final CHI 30–24 · win +$93
@@ -25,10 +25,10 @@ LEAN
   Tampa Bay +3  ·  Tampa Bay at Carolina, Sun Oct 25 · 12:00 PM CT · Final TB 43–13 · win +$91
     Type 3 · Crowd leaning · LEAN: 13-13-1, −$82
     a: Yes · b: No · c: Yes · d: Yes
-  Las Vegas +3.5  ·  LA Rams at Las Vegas, Sun Oct 25 · 3:25 PM CT · Final LV 21–35 · loss −$100
+  Green Bay +3.5  ·  Green Bay at Detroit, Sun Oct 25 · 3:25 PM CT · Final GB 17–20 · win +$93
     Type 3 · Crowd leaning · LEAN: 13-13-1, −$82
     a: Yes · b: No · c: Yes · d: Yes
-  Green Bay +3.5  ·  Green Bay at Detroit, Sun Oct 25 · 3:25 PM CT · Final GB 17–20 · win +$93
+  Las Vegas +3.5  ·  LA Rams at Las Vegas, Sun Oct 25 · 3:25 PM CT · Final LV 21–35 · loss −$100
     Type 3 · Crowd leaning · LEAN: 13-13-1, −$82
     a: Yes · b: No · c: Yes · d: Yes
 
