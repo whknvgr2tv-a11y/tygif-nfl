@@ -890,10 +890,13 @@
    "rating": "STRONG",
    "side": "SEA",
    "spread_line": -3.0,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401873022",
    "price": -162,
-   "fd": "Fav"
+   "fd": "Fav",
+   "score": "3-20",
+   "result": "W",
+   "profit": 62.0
   },
   {
    "week": 7,
@@ -903,7 +906,7 @@
    "spread_line": 4.5,
    "status": "preview",
    "espn_event": "401873009",
-   "price": 185,
+   "price": 180,
    "fd": "Dog"
   }
  ]

@@ -9,10 +9,10 @@ STRONG
     Type 1 · Fade the big favorite · STRONG: 14-3-2, +$980
     a: Yes · b: Yes · c: Yes · d: Yes
   NY Jets −2.5  ·  Cleveland at NY Jets, Sun Oct 11 · 12:00 PM CT · Final NYJ 17–12 · win +$91
-    Type 2 · Fade the crowd · STRONG: 9-6-2, +$227
+    Type 2 · Fade the crowd · STRONG: 10-6-2, +$322
     a: Yes · b: Yes · c: Yes · d: Yes
   Washington −3.5  ·  NY Giants at Washington, Sun Oct 11 · 12:00 PM CT · Final WSH 27–27 · loss −$100
-    Type 2 · Fade the crowd · STRONG: 9-6-2, +$227
+    Type 2 · Fade the crowd · STRONG: 10-6-2, +$322
     a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN
@@ -34,10 +34,10 @@ MONEYLINE
     Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 8-11-0, +$1,620
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG NY Jets ML  ·  Cleveland at NY Jets, Sun Oct 11 · 12:00 PM CT · Final 17–12 · win +$77
-    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 7-2-1, +$266
+    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 8-2-1, +$328
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Washington ML  ·  NY Giants at Washington, Sun Oct 11 · 12:00 PM CT · Final 27–27 · push $0
-    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 7-2-1, +$266
+    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 8-2-1, +$328
     a: Yes · b: Yes · c: Yes · d: Yes
 
 PASS

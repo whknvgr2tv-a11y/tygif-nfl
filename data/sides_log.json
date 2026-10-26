@@ -3112,11 +3112,11 @@
    "type": 2,
    "money_pct": 23,
    "spread_line": -3.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 95.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 62.0
   },
   {
    "week": 7,
@@ -3127,11 +3127,11 @@
    "type": 2,
    "money_pct": 77,
    "spread_line": 3.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 7,
@@ -3140,7 +3140,7 @@
    "role": "fade",
    "rating": "STRONG",
    "type": 2,
-   "money_pct": 29,
+   "money_pct": 27,
    "spread_line": 4.5,
    "sp_res": null,
    "sp_usd": null,
@@ -3155,7 +3155,7 @@
    "role": "money",
    "rating": "STRONG",
    "type": 2,
-   "money_pct": 71,
+   "money_pct": 73,
    "spread_line": -4.5,
    "sp_res": null,
    "sp_usd": null,
