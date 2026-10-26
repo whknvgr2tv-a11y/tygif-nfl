@@ -154,6 +154,27 @@ def vsin_capture(stamp):
             out[b] = {'error': str(ex)[:200]}
     return out
 
+def vsin_dk_parse(h, mkt='Spread'):
+    """Backup only: VSiN's DraftKings splits table -> same rows as dk_parse (used when the DK page is empty/unavailable).
+    side text 'VSiN <Nickname> <line>' (spread) / 'VSiN <Nickname>' (ML) so build's _dk_rows/_dkml_rows read it unchanged."""
+    out = []
+    for tb in re.findall(r'<tbody>(.*?)</tbody>', h, re.S):
+        rows = re.findall(r'<tr class="sp-row">(.*?)</tr>', tb, re.S)
+        if len(rows) != 2: continue
+        sides = []
+        for r in rows:
+            nm = re.search(r'sp-team-link[^>]*>([^<]+)<', r)
+            b = [txt(x) for x in re.findall(r'<span class="sp-badge[^"]*">(.*?)</span>\s*</td>', r, re.S)]
+            if not nm or len(b) < 9: break
+            nk = nm.group(1).split()[-1]; i = 0 if mkt == 'Spread' else 6
+            pc = lambda x: int(re.match(r'(\d+)', x).group(1))
+            sides.append({'side': f'VSiN {nk} {b[i]}' if mkt == 'Spread' else f'VSiN {nk}',
+                          'odds': None if mkt == 'Spread' else b[i], 'handle_pct': pc(b[i+1]), 'bets_pct': pc(b[i+2])})
+        if len(sides) == 2:
+            out.append({'matchup': sides[0]['side'].split()[1] + ' @ ' + sides[1]['side'].split()[1],
+                        'kickoff_local': None, 'source': 'vsin_dk_backup', 'spread': sides})
+    return out
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     now = datetime.now(timezone.utc); stamp = now.strftime('%Y%m%dT%H%MZ')
@@ -177,6 +198,13 @@ def main():
             seen.add(g['matchup'] + g['kickoff_local']); dk.append(g); raw.append(b)
         time.sleep(2)
     meta = {'fetched_utc': now.isoformat(timespec='seconds'), 'source': DK.format(mkt='Spread', p='N')}
+    vh = None
+    if not dk:   # DK splits page empty/'temporarily unavailable' -> VSiN's DraftKings table (backup only)
+        try:
+            vh = get(VSIN.format('DK'))[1]; dk = vsin_dk_parse(vh)
+            if dk: meta['source'] = VSIN.format('DK') + ' (backup: DK page empty)'
+            print(f'DK page empty -> VSiN DK backup: {len(dk)} games')
+        except Exception as ex: print('VSiN DK backup failed:', ex)
     for g in dk:  # book math from prices already pulled (no new scrape); fail-open
         try:
             sp = g['spread']; ip = [_implied(x['odds']) for x in sp]
@@ -195,6 +223,7 @@ def main():
     # (rows keep key 'spread' = the market rows, same shape as dk_; fail open: build falls back to spread-only + warns)
     try:
         dkml = dk_pages('Moneyline')
+        if not dkml and vh: dkml = vsin_dk_parse(vh, 'Moneyline')
         json.dump({'fetched_utc': now.isoformat(timespec='seconds'), 'source': DK.format(mkt='Moneyline', p='N'), 'market': 'moneyline',
                    'games': dkml}, open(f'{OUT}/dkml_{stamp}.json', 'w'), indent=1)
         print(f'DraftKings: {len(dkml)} games with moneyline splits')
@@ -245,6 +274,13 @@ def main():
         json.dump(dict({'fetched_utc': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'source': f'{ESPN_SB}?week={cw}&seasontype=2'}, **wkm, games=ed),
                   open(f'{OUT}/espn_dk_{stamp}.json', 'w'), indent=1)
         print(f'ESPN DraftKings: {len(ed)} games not yet started (week {wkm["week"]})')
+        if dk and dk[0].get('source') == 'vsin_dk_backup':   # VSiN has no spread prices -> same-pull ESPN DraftKings price
+            NK = {'Cardinals':'ARI','Falcons':'ATL','Ravens':'BAL','Bills':'BUF','Panthers':'CAR','Bears':'CHI','Bengals':'CIN','Browns':'CLE','Cowboys':'DAL','Broncos':'DEN','Lions':'DET','Packers':'GB','Texans':'HOU','Colts':'IND','Jaguars':'JAX','Chiefs':'KC','Raiders':'LV','Chargers':'LAC','Rams':'LAR','Dolphins':'MIA','Vikings':'MIN','Patriots':'NE','Saints':'NO','Giants':'NYG','Jets':'NYJ','Eagles':'PHI','Steelers':'PIT','49ers':'SF','Seahawks':'SEA','Buccaneers':'TB','Titans':'TEN','Commanders':'WSH'}
+            for g in dk:
+                for e in ed:
+                    for s_, k in zip(g['spread'], ('away', 'home')):
+                        if NK.get(s_['side'].split()[1]) == e[k]: s_['odds'] = e['spread'][k]['odds']
+            json.dump(dict(meta, games=dk), open(f'{OUT}/dk_{stamp}.json', 'w'), indent=1)
         es = espn_status(wkm, ed, datetime.now(timezone.utc))
         if es == 'done': print('Every game of the week has kicked off (latest kickoff < 36h ago); ESPN not failed.')
         elif es != 'ok': print('ESPN DraftKings:', es); ok = False
