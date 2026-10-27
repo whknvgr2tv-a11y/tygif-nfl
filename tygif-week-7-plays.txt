@@ -1,21 +1,21 @@
 TYGIF'S MODEL · WEEK 7
-Lines as of Mon Oct 26, 7:05 PM CT
+Final
 
 STRONG
   Chicago −3  ·  New England at Chicago, Thu Oct 22 · 7:15 PM CT · Final CHI 30–24 · win +$93
-    Type 2 · Fade the crowd · STRONG: 10-6-2, +$322
+    Type 2 · Fade the crowd · STRONG: 10-7-2, +$222
     a: Yes · b: Yes · c: Yes · d: Yes
   Baltimore +3  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT · Final BAL 13–35 · loss −$100
-    Type 2 · Fade the crowd · STRONG: 10-6-2, +$322
+    Type 2 · Fade the crowd · STRONG: 10-7-2, +$222
     a: Yes · b: Yes · c: Yes · d: No
   Arizona +4.5  ·  Denver at Arizona, Sun Oct 25 · 3:05 PM CT · Final ARI 16–30 · loss −$100
-    Type 2 · Fade the crowd · STRONG: 10-6-2, +$322
+    Type 2 · Fade the crowd · STRONG: 10-7-2, +$222
     a: Yes · b: Yes · c: Yes · d: Yes
   Seattle −3  ·  Kansas City at Seattle, Sun Oct 25 · 7:20 PM CT · Final SEA 20–3 · win +$95
-    Type 2 · Fade the crowd · STRONG: 10-6-2, +$322
+    Type 2 · Fade the crowd · STRONG: 10-7-2, +$222
     a: Yes · b: Yes · c: Yes · d: Yes
-  Philadelphia +4.5  ·  Dallas at Philadelphia, Mon Oct 26 · 7:15 PM CT
-    Type 2 · Fade the crowd · STRONG: 10-6-2, +$322
+  Philadelphia +4.5  ·  Dallas at Philadelphia, Mon Oct 26 · 7:15 PM CT · Final PHI 21–38 · loss −$100
+    Type 2 · Fade the crowd · STRONG: 10-7-2, +$222
     a: Yes · b: Yes · c: Yes · d: Yes
 
 LEAN
@@ -37,16 +37,16 @@ MONEYLINE
     Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 8-2-1, +$328
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Baltimore ML  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT · Final 13–35 · loss −$100
-    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-4-0, +$18
+    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-5-0, −$82
     a: Yes · b: Yes · c: Yes · d: No
   STRONG Arizona ML  ·  Denver at Arizona, Sun Oct 25 · 3:05 PM CT · Final 16–30 · loss −$100
-    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-4-0, +$18
+    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-5-0, −$82
     a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Seattle ML  ·  Kansas City at Seattle, Sun Oct 25 · 7:20 PM CT · Final 20–3 · win +$62
     Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 8-2-1, +$328
     a: Yes · b: Yes · c: Yes · d: Yes
-  STRONG Philadelphia ML  ·  Dallas at Philadelphia, Mon Oct 26 · 7:15 PM CT
-    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-4-0, +$18
+  STRONG Philadelphia ML  ·  Dallas at Philadelphia, Mon Oct 26 · 7:15 PM CT · Final 21–38 · loss −$100
+    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-5-0, −$82
     a: Yes · b: Yes · c: Yes · d: Yes
 
 PASS

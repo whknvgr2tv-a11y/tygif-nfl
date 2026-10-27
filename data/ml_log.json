@@ -904,10 +904,13 @@
    "rating": "STRONG",
    "side": "PHI",
    "spread_line": 4.5,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401873009",
    "price": 185,
-   "fd": "Dog"
+   "fd": "Dog",
+   "score": "38-21",
+   "result": "L",
+   "profit": -100.0
   }
  ]
 }

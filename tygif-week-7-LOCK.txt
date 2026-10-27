@@ -1,12 +1,12 @@
 TYGIF'S MODEL · WEEK 7
-Lines as of Mon Oct 26, 7:05 PM CT
+Final
 
 STRONG
   Chicago −3  ·  Thu Oct 22 · 7:15 PM CT · Final CHI 30–24 · win +$93
   Baltimore +3  ·  Sun Oct 25 · 12:00 PM CT · Final BAL 13–35 · loss −$100
   Arizona +4.5  ·  Sun Oct 25 · 3:05 PM CT · Final ARI 16–30 · loss −$100
   Seattle −3  ·  Sun Oct 25 · 7:20 PM CT · Final SEA 20–3 · win +$95
-  Philadelphia +4.5  ·  Mon Oct 26 · 7:15 PM CT
+  Philadelphia +4.5  ·  Mon Oct 26 · 7:15 PM CT · Final PHI 21–38 · loss −$100
 
 LEAN
   Tennessee +1.5  ·  Sun Oct 25 · 12:00 PM CT · Final TEN 24–27 · loss −$100
@@ -19,7 +19,7 @@ MONEYLINE
   STRONG Baltimore ML  ·  Sun Oct 25 · 12:00 PM CT · Final 13–35 · loss −$100
   STRONG Arizona ML  ·  Sun Oct 25 · 3:05 PM CT · Final 16–30 · loss −$100
   STRONG Seattle ML  ·  Sun Oct 25 · 7:20 PM CT · Final 20–3 · win +$62
-  STRONG Philadelphia ML  ·  Mon Oct 26 · 7:15 PM CT
+  STRONG Philadelphia ML  ·  Mon Oct 26 · 7:15 PM CT · Final 21–38 · loss −$100
 
 PASS
   Pittsburgh at New Orleans

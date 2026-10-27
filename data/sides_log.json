@@ -3142,11 +3142,11 @@
    "type": 2,
    "money_pct": 25,
    "spread_line": 4.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 7,
@@ -3157,11 +3157,11 @@
    "type": 2,
    "money_pct": 75,
    "spread_line": -4.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 95.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 44.0
   }
  ]
 }
