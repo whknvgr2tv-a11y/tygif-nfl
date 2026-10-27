@@ -510,7 +510,8 @@ def build_wk(WK):
         lo_s=(_dt.datetime.fromisoformat(ko_s.replace('Z','+00:00'))-_dt.timedelta(days=8)).isoformat()
         dkp=[(t_,src,_dk_rows(d)[key]) for t_,src,d in DKS6 if _P(lo_s)<_P(t_)<=_P(cut_s) and key in _dk_rows(d)]
         sap=[(t_,src,_sao_rows(d)[key]) for t_,src,d in SAOS6 if _P(lo_s)<_P(t_)<=_P(cut_s) and key in _sao_rows(d)]
-        if not dkp or not sap: raise _NotReady(f'week {WK}: {A}@{H} has no DraftKings/ScoresAndOdds pull before kickoff yet')
+        if not dkp or not sap:   # TG, Oct 27: no DK (or VSiN DK backup) / SAO pull yet -> game left off the card (no rating, never an invented split)
+            NODK.setdefault(WK,[]).append(f'{A}@{H}'); continue
         dk_t,dk_src,dk=dkp[-1]; sa_t,sa_src,sa_row=sap[-1]
         gm=f'{A}@{H}'
         sa_ml=_ml_for(SAOML6,sa_src,key,_sao_rows); dk_ml=_ml_for(DKML6,dk_src,key,_dkml_rows)
@@ -546,7 +547,9 @@ def build_wk(WK):
         g['call']=f"{g['fade']} {sp[fade_ab]}"
         g['wy']=f"{abm}% of the money is on {NAME[abs_]} (all books)."+''
         out.append(g)
+    if not out: raise _NotReady(f'week {WK}: no game has a DraftKings/ScoresAndOdds pull before kickoff yet')
     return out
+NODK={}
 LIVEW=[]; GBY={}
 for _w in _live_weeks():
     try: GBY[_w]=build_wk(_w); LIVEW.append(_w)
@@ -554,6 +557,7 @@ for _w in _live_weeks():
         if _w!=_live_weeks()[-1]: raise SystemExit(str(_e))   # only the newest week may be waiting for its card
         print(f'week {_w} not built yet (card not ready): {_e}')
 for _x in ALLMONEY_WARN: print('ALL-MONEY WARN', _x)
+for _w,_l in NODK.items(): print(f'week {_w}: not on card yet (no DraftKings pull): '+', '.join(_l))
 GW=LIVEW[-1]   # GW = current card week
 GALL=[g for w in LIVEW for g in GBY[w]]   # every game, weeks 6 on
 G6=GBY[GW]                                # the current card week (name kept: G6 = current week)
@@ -1861,7 +1865,7 @@ def _deepcheck():
     for w in _sg0.WEEKS:
         gs=[g for g in (G14+G+GALL) if g.get('week')==w]
         if w>max(LIVEW): continue
-        if len(gs)!=nG.get(w,len(gs)) or len(gs)!=len({x for (ww,x) in raw if ww==w}): errs.append(('process: game count',w,len(gs)))
+        if len(gs)!=nG.get(w,len(gs)) or len(gs)!=len({x for (ww,x) in raw if ww==w})-len(NODK.get(w,[])): errs.append(('process: game count',w,len(gs)))
     for g in G14+G+GALL:
         for f in PROCESS['required_fields']['all']:
             if g.get(f) is None and not (f=='a' and False): errs.append(('process: missing',g['gid'],f))

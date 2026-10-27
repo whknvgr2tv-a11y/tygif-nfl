@@ -3162,6 +3162,36 @@
    "fd": "Fav",
    "ml_res": "W",
    "ml_usd": 44.0
+  },
+  {
+   "week": 8,
+   "game": "CAR@GB",
+   "team": "CAR",
+   "role": "fade",
+   "rating": "STRONG",
+   "type": 2,
+   "money_pct": 35,
+   "spread_line": 3.5,
+   "sp_res": null,
+   "sp_usd": null,
+   "fd": "Dog",
+   "ml_res": null,
+   "ml_usd": null
+  },
+  {
+   "week": 8,
+   "game": "CAR@GB",
+   "team": "GB",
+   "role": "money",
+   "rating": "STRONG",
+   "type": 2,
+   "money_pct": 65,
+   "spread_line": -3.5,
+   "sp_res": null,
+   "sp_usd": null,
+   "fd": "Fav",
+   "ml_res": null,
+   "ml_usd": null
   }
  ]
 }
