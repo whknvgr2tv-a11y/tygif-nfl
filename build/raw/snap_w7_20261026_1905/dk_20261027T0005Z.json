@@ -1,0 +1,26 @@
+{
+ "fetched_utc": "2026-10-27T00:05:21+00:00",
+ "source": "https://data.vsin.com/betting-splits/?source=DK&sport=NFL&view=today (backup: DK page empty)",
+ "games": [
+  {
+   "matchup": "Cowboys @ Eagles",
+   "kickoff_local": null,
+   "source": "vsin_dk_backup",
+   "spread": [
+    {
+     "side": "VSiN Cowboys -4.5",
+     "odds": "-105",
+     "handle_pct": 44,
+     "bets_pct": 58
+    },
+    {
+     "side": "VSiN Eagles +4.5",
+     "odds": "-115",
+     "handle_pct": 56,
+     "bets_pct": 42
+    }
+   ],
+   "hold_error": "could not convert string to float: 'None'"
+  }
+ ]
+}

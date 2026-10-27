@@ -1,0 +1,26 @@
+{
+ "fetched_utc": "2026-10-27T00:06:00+00:00",
+ "source": "build/settle.py (ESPN game summaries, games not yet started)",
+ "games": [
+  {
+   "id": "401873009",
+   "away": "DAL",
+   "home": "PHI",
+   "kickoff_utc": "2026-10-27T00:15Z",
+   "ml": {
+    "away": "-225",
+    "home": "+185"
+   },
+   "spread": {
+    "away": {
+     "line": "-4.5",
+     "odds": "-105"
+    },
+    "home": {
+     "line": "+4.5",
+     "odds": "-115"
+    }
+   }
+  }
+ ]
+}

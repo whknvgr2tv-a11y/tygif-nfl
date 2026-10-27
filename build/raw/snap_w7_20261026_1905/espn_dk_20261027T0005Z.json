@@ -1,0 +1,31 @@
+{
+ "fetched_utc": "2026-10-27T00:05:27+00:00",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=7&seasontype=2",
+ "season": 2026,
+ "week": 7,
+ "events": 14,
+ "pre": 1,
+ "last": "2026-10-27T00:15Z",
+ "games": [
+  {
+   "id": "401873009",
+   "away": "DAL",
+   "home": "PHI",
+   "kickoff_utc": "2026-10-27T00:15Z",
+   "ml": {
+    "away": "-225",
+    "home": "+185"
+   },
+   "spread": {
+    "away": {
+     "line": "-4.5",
+     "odds": "-105"
+    },
+    "home": {
+     "line": "+4.5",
+     "odds": "-115"
+    }
+   }
+  }
+ ]
+}
