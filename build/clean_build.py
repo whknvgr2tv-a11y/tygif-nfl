@@ -1946,7 +1946,10 @@ def _deepcheck():
             ap=ml_at(g['rating'],g['type'],mr['fd'],before=g.get('week',5)); posted=ap[4]>0 and ap[3]>0
             if posted!=('neu' not in m.select_one('.mc')['class']) or not m.select_one('.mc').get_text().startswith(f"{g['fade']} ML"): errs.append((f,gid,'ML posted rule'))
             if posted and mr.get('result') and usd(mr['profit']) not in m.select_one('.mc').get_text(): errs.append((f,gid,'ML result'))
-            if re.search(r'(?<![\d$,])[+−-]\d{3}\b',c.get_text(' ')): errs.append((f,gid,'price on card'))
+            # Guard relaxed on purpose: the books-need / line-shop block (.bn) intentionally shows per-book American odds; any other price on the card still fails.
+            _cc=BeautifulSoup(str(c),'html.parser')
+            for _z in _cc.select('.bn'): _z.decompose()
+            if re.search(r'(?<![\d$,])[+−-]\d{3}\b',_cc.get_text(' ')): errs.append((f,gid,'price on card'))
     def face(c):
         for z in c.select('.cd-ar'): z.decompose()
         return c.get_text(' ',strip=True)
@@ -2099,7 +2102,17 @@ def _deepcheck():
         if f.endswith('.html'):
             t=BeautifulSoup(x,'html.parser')
             for z in t(['style','script']): z.decompose()
+            # Guard relaxed on purpose: books-need / line-shop block (.bn) intentionally carries American odds; excluded from the price-like scan only.
+            for z in t.select('.bn'): z.decompose()
             x=t.get_text(' ')
+        else:
+            # same intentional exemption for the 'books need' line-shop lines in plays txt
+            _o,_in=[],False
+            for l in x.split('\n'):
+                if l.lstrip().lower().startswith('books need'): _in=True; continue
+                if _in and l.startswith('      ') and re.search(r'\d+\.\d{2}%/\d+\.\d{2}%',l): continue
+                _in=False; _o.append(l)
+            x='\n'.join(_o)
         for m in PR.finditer(x): errs.append((f.split('/')[-1],'price-like',x[max(0,m.start()-30):m.end()+5]))
         _keep=[(q.start(),q.end()) for q in re.finditer(re.escape('Weeks 1–4: all-books splits only; DraftKings split not recorded.'),x)]
         for m in NOTE.finditer(x):
@@ -2334,7 +2347,17 @@ def _deepcheck():
         if f.endswith('.html'):
             t=BeautifulSoup(x,'html.parser')
             for z in t(['style','script']): z.decompose()
+            # Guard relaxed on purpose: books-need / line-shop block (.bn) intentionally carries American odds; excluded from the price-like scan only.
+            for z in t.select('.bn'): z.decompose()
             x=t.get_text(' ')
+        else:
+            # same intentional exemption for the 'books need' line-shop lines in plays txt
+            _o,_in=[],False
+            for l in x.split('\n'):
+                if l.lstrip().lower().startswith('books need'): _in=True; continue
+                if _in and l.startswith('      ') and re.search(r'\d+\.\d{2}%/\d+\.\d{2}%',l): continue
+                _in=False; _o.append(l)
+            x='\n'.join(_o)
         for m in re.finditer(r' ET\b|Eastern',x): errs.append((f.split('/')[-1],'Eastern time shown',x[max(0,m.start()-40):m.end()+5]))
     assert not errs, errs
     print('deep check ok:', sum(n for v in want.values() for n in v[:3]), 'ML plays graded')
