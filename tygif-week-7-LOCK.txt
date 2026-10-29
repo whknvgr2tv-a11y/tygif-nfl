@@ -15,12 +15,21 @@ LEAN
   Las Vegas +3.5  ·  Sun Oct 25 · 3:25 PM CT · Final LV 21–35 · loss −$100
 
 MONEYLINE
-  STRONG Chicago ML  ·  Thu Oct 22 · 7:15 PM CT · Final 30–24 · win +$65
+  STRONG Atlanta ML  ·  Sun Oct 25 · 12:00 PM CT
+  STRONG Tennessee ML  ·  Sun Oct 25 · 12:00 PM CT · Final 24–27 · loss −$100
+  STRONG Indianapolis ML  ·  Sun Oct 25 · 12:00 PM CT
+  STRONG Miami ML  ·  Sun Oct 25 · 12:00 PM CT
+  STRONG Tampa Bay ML  ·  Sun Oct 25 · 12:00 PM CT · Final 43–13 · win +$140
   STRONG Baltimore ML  ·  Sun Oct 25 · 12:00 PM CT · Final 13–35 · loss −$100
   STRONG Arizona ML  ·  Sun Oct 25 · 3:05 PM CT · Final 16–30 · loss −$100
   STRONG Las Vegas ML  ·  Sun Oct 25 · 3:25 PM CT · Final 21–35 · loss −$100
   STRONG Seattle ML  ·  Sun Oct 25 · 7:20 PM CT · Final 20–3 · win +$62
   STRONG Philadelphia ML  ·  Mon Oct 26 · 7:15 PM CT · Final 21–38 · loss −$100
+
+MONEY SIDE AND PASS-GAME SIDES
+  PASS fade side · Atlanta ML · win +$130  ·  Sun Oct 25 · 12:00 PM CT
+  PASS money side · Indianapolis ML · loss −$100  ·  Sun Oct 25 · 12:00 PM CT
+  PASS money side · Miami ML · win +$180  ·  Sun Oct 25 · 12:00 PM CT
 
 PASS
   Pittsburgh at New Orleans

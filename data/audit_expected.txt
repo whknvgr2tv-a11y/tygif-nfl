@@ -1,11 +1,11 @@
 STRONG spread : 19-6-4 +$1,137 n29
 STRONG fadeML : 15-13-1 +$1,479 n29
-STRONG postedML : 9-8-1 +$718 n18
+STRONG postedML : 21-38-0 +$295 n59
 STRONG money sp : 6-19-4 −$1,374 n29
 STRONG money ML : 13-15-1 −$932 n29
-STRONG bucket spread only : 8-2-1 +$537 n11
-STRONG bucket spread+ML : 11-4-3 +$600 n18
-STRONG bucket spread+ML ML : 9-8-1 +$718 n18
+STRONG bucket spread only : 3-2-1 +$75 n6
+STRONG bucket spread+ML : 16-4-3 +$1,062 n23
+STRONG bucket spread+ML ML : 11-12-0 +$1,329 n23
 STRONG T1 spread : 11-3-2 +$703 n16
 STRONG T1 Dog ML : 6-10-0 +$960 n16
 STRONG T2 spread : 8-3-2 +$434 n13
@@ -18,12 +18,12 @@ STRONG W4 spread : 2-2-0 −$24 n4
 STRONG W5 spread : 2-1-1 +$89 n4
 LEAN spread : 9-9-1 −$60 n19
 LEAN fadeML : 6-13-0 −$766 n19
-LEAN postedML : 3-2-0 −$57 n5
+LEAN postedML : 0-1-0 −$100 n1
 LEAN money sp : 9-9-1 −$61 n19
 LEAN money ML : 13-6-0 +$275 n19
-LEAN bucket spread only : 6-7-1 −$145 n14
-LEAN bucket spread+ML : 3-2-0 +$85 n5
-LEAN bucket spread+ML ML : 3-2-0 −$57 n5
+LEAN bucket spread only : 0-3-0 −$300 n3
+LEAN bucket spread+ML : 9-6-1 +$240 n16
+LEAN bucket spread+ML ML : 6-10-0 −$466 n16
 LEAN T3 spread : 9-9-1 −$60 n19
 LEAN T3 Fav ML : 4-4-0 −$206 n8
 LEAN T3 Dog ML : 2-9-0 −$560 n11
@@ -36,6 +36,7 @@ PASS money sp : 18-12-0 +$435 n30
 PASS money ML : 15-15-0 +$115 n30
 PASS fade sp : 12-18-0 −$707 n30
 PASS fade ML : 15-15-0 −$272 n30
-buckets : {'spread only': 25, 'pass money trend': 30, 'spread+ML': 23, 'pass no clear side': 2}
+buckets : {'spread only': 9, 'pass money trend': 9, 'spread+ML': 39, 'pass no clear side': 2}
 settled games : 80
 STRONG W6 spread : 1-0-0 +$95 n1
+# Oct 29 2026 (TG): moneyline rated on its own for every graded game W1+; ML/bucket figures above restated for that rule. Spread records unchanged.

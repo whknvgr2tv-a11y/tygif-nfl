@@ -169,7 +169,7 @@ def game_card(g):
             f'<div><dt>Result</dt><dd>{spres}</dd></div></dl>{bn}</details>'
             f'<details class="gx gx-ml" data-kind="moneyline" data-posted="{"yes" if mlok else "no"}"><summary><span class="gx-k">Moneyline details</span><span class="gx-v">{_E(mlct)}</span><span class="gx-r">{_E(mlres)}</span></summary><dl>'
             f'<div><dt>Side</dt><dd>{mt} ({mfd})</dd></div>'
-            f'<div><dt>Moneyline rating</dt><dd>{_E(mc["raw"])}{(" · Type "+str(mc["type"])) if mc["indep"] else ""} · {_E(mc["m"]["why"] if mc["indep"] else "no separate ML split on file — as-posted ML call")}</dd></div>'
+            f'<div><dt>Moneyline rating</dt><dd>{_E(mc["raw"])}{(" · Type "+str(mc["type"])) if mc["indep"] else ""} · {_E(mc["m"]["why"] if mc["indep"] else "not graded: spread money split exactly 50–50, so no sides are tracked for this game")}</dd></div>'
             f'<div><dt>Posted</dt><dd>{("Yes — moneyline "+mc["rating"]) if mlok else "No — "+_E(_mlwhy(g))}</dd></div>'
             f'<div><dt>Result</dt><dd>{_E(mlres)}</dd></div></dl></details></article></li>')
 def _rt(rt):

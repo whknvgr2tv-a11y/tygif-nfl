@@ -33,12 +33,18 @@ LEAN
     a: Yes · b: No · c: Yes · d: Yes
 
 MONEYLINE
-  STRONG Chicago ML  ·  New England at Chicago, Thu Oct 22 · 7:15 PM CT · Final 30–24 · win +$65
-    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 8-2-1, +$328
-    a: Yes · b: Yes · c: Yes · d: Yes
+  STRONG Atlanta ML  ·  San Francisco at Atlanta, Sun Oct 25 · 12:00 PM CT
+    Moneyline rated on its own · Type 2 · STRONG · Underdog · SF has 87% of moneyline dollars, 91% of bets · DraftKings on the same side (spread split)
+  STRONG Tennessee ML  ·  Cleveland at Tennessee, Sun Oct 25 · 12:00 PM CT · Final 24–27 · loss −$100
+    Moneyline rated on its own · Type 2 · STRONG · Underdog · CLE has 89% of moneyline dollars, 85% of bets · DraftKings on the same side (spread split)
+  STRONG Indianapolis ML  ·  Indianapolis at Minnesota, Sun Oct 25 · 12:00 PM CT
+    Moneyline rated on its own · Type 1 · STRONG · Underdog · MIN has 86% of moneyline dollars, 92% of bets · DraftKings on the same side (spread split)
+  STRONG Miami ML  ·  Miami at NY Jets, Sun Oct 25 · 12:00 PM CT
+    Moneyline rated on its own · Type 2 · STRONG · Underdog · NYJ has 85% of moneyline dollars, 87% of bets · DraftKings on the same side (spread split)
+  STRONG Tampa Bay ML  ·  Tampa Bay at Carolina, Sun Oct 25 · 12:00 PM CT · Final 43–13 · win +$140
+    Moneyline rated on its own · Type 2 · STRONG · Underdog · CAR has 93% of moneyline dollars, 87% of bets · DraftKings on the same side (spread split)
   STRONG Baltimore ML  ·  Cincinnati at Baltimore, Sun Oct 25 · 12:00 PM CT · Final 13–35 · loss −$100
-    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-5-0, −$82
-    a: Yes · b: Yes · c: Yes · d: No
+    Moneyline rated on its own · Type 2 · STRONG · Underdog · CIN has 83% of moneyline dollars, 63% of bets · DraftKings on the same side (spread split)
   STRONG Arizona ML  ·  Denver at Arizona, Sun Oct 25 · 3:05 PM CT · Final 16–30 · loss −$100
     Moneyline rated on its own · Type 2 · STRONG · Underdog · DEN has 90% of moneyline dollars, 93% of bets · DraftKings on the same side
   STRONG Las Vegas ML  ·  LA Rams at Las Vegas, Sun Oct 25 · 3:25 PM CT · Final 21–35 · loss −$100
@@ -47,6 +53,14 @@ MONEYLINE
     Moneyline rated on its own · Type 2 · STRONG · Favorite · KC has 79% of moneyline dollars, 71% of bets · DraftKings on the same side
   STRONG Philadelphia ML  ·  Dallas at Philadelphia, Mon Oct 26 · 7:15 PM CT · Final 21–38 · loss −$100
     Moneyline rated on its own · Type 2 · STRONG · Underdog · DAL has 79% of moneyline dollars, 83% of bets · DraftKings on the same side
+
+MONEY SIDE AND PASS-GAME SIDES
+  PASS fade side · Atlanta ML · win +$130  ·  San Francisco at Atlanta, Sun Oct 25 · 12:00 PM CT
+    group: 5-3-0, +$308
+  PASS money side · Indianapolis ML · loss −$100  ·  Indianapolis at Minnesota, Sun Oct 25 · 12:00 PM CT
+    group: 4-5-0, +$76
+  PASS money side · Miami ML · win +$180  ·  Miami at NY Jets, Sun Oct 25 · 12:00 PM CT
+    group: 4-5-0, +$76
 
 PASS
   Pittsburgh at New Orleans

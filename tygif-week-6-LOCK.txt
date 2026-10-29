@@ -16,10 +16,16 @@ LEAN
 
 MONEYLINE
   STRONG Denver ML  ·  Thu Oct 15 · 7:15 PM CT · Final 17–14 · win +$124
+  STRONG Cleveland ML  ·  Sun Oct 18 · 12:00 PM CT
   STRONG Tennessee ML  ·  Sun Oct 18 · 12:00 PM CT · Final 26–20 · win +$235
   STRONG NY Jets ML  ·  Sun Oct 18 · 12:00 PM CT · Final 19–26 · loss −$100
-  STRONG Philadelphia ML  ·  Sun Oct 18 · 12:00 PM CT · Final 14–25 · loss −$100
+  STRONG Tampa Bay ML  ·  Sun Oct 18 · 12:00 PM CT · Final 19–26 · loss −$100
   STRONG Arizona ML  ·  Sun Oct 18 · 3:05 PM CT · Final 18–16 · win +$525
+  STRONG LA Chargers ML  ·  Sun Oct 18 · 3:25 PM CT · Final 6–22 · loss −$100
+  STRONG Las Vegas ML  ·  Sun Oct 18 · 3:25 PM CT · Final 30–33 · loss −$100
+
+MONEY SIDE AND PASS-GAME SIDES
+  PASS fade side · Cleveland ML · win +$145  ·  Sun Oct 18 · 12:00 PM CT
 
 PASS
   Houston at Jacksonville

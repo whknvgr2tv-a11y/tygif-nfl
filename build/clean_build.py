@@ -376,7 +376,7 @@ def rate_v1(A,H,ab,dk_side,mon,close_sp,qb_drop):
     if not a: return 'PASS',ty,e,d
     lvl=(2 if bb else 1)-qb_drop   # TG, Oct 25: line move no longer drops a level (info only)
     return ['PASS','LEAN','STRONG'][max(lvl,0)],ty,e,d
-def _rate_ml(A,H,sa_ml,dk_ml,sp,agree):
+def _rate_ml(A,H,sa_ml,dk_ml,sp,agree,dk_sp=None):
     """TG, Oct 29 (t251u): the moneyline is rated on its own. Same rules as the spread, applied to the MONEYLINE money split only:
     all-books (ScoresAndOdds) ML money side; DraftKings ML split must agree (else Type 4 PASS); under 55% = Type 5 PASS;
     bets on the money side under 50% = PASS; 65%+ = STRONG (Type 1 if a 6+ point favorite, else Type 2), 55-64% = LEAN (Type 3).
@@ -385,7 +385,10 @@ def _rate_ml(A,H,sa_ml,dk_ml,sp,agree):
     s,m,b=_side(sa_ml); o=H if s==A else A
     r=dict(money_side=s,m=m,b=b,team=o,src='ScoresAndOdds moneyline split (all books)',dk=None)
     if m<=50: return dict(r,rating='PASS',type=5,why='Moneyline split 50–50 (no side)')
-    if agree=='none' or not dk_ml or set(dk_ml)!={A,H}: return dict(r,rating='PASS',type=4,why='No DraftKings moneyline split — PASS')
+    if agree=='none': return dict(r,rating='PASS',type=4,why='No DraftKings split — PASS')
+    if not dk_ml or set(dk_ml)!={A,H}:   # TG, Oct 29: same fallback as all-money: no DK ML split -> DK spread split decides the DK check (labeled)
+        if not dk_sp or set(dk_sp)!={A,H} or any(v[0] is None for v in dk_sp.values()): return dict(r,rating='PASS',type=4,why='No DraftKings split — PASS')
+        dk_ml=dk_sp; agree=agree+' spread split (no DK moneyline split)'; r['warn']='ALL-MONEY WARN: no DraftKings moneyline split; DK check from the DK spread split'
     dv={k:v[0] for k,v in dk_ml.items()}; dks=max(dv,key=dv.get); r['dk']=(dks,dv[dks],agree)
     if len(set(dv.values()))==1: return dict(r,rating='PASS',type=4,why=f'DraftKings moneyline split exactly 50/50 (no side)')
     if dks!=s: return dict(r,rating='PASS',type=4,why=f'DraftKings moneyline dollars on the other side ({dks} {dv[dks]}%)')
@@ -622,7 +625,7 @@ def build_wk(WK):
                split_at=_etlbl(sa_t),split_utc=sa_t,dk_utc=dk_t,split_src=sa_src,dk_src=dk_src,dk_vsin=dk_vsin,final=None,held=False,week=WK,ko_utc=ko_s,eid=e['id'],status=c['status']['type']['name'],allmoney=allm)
         g['call']=f"{g['fade']} {sp[fade_ab]}"
         g['wy']=f"{abm}% of the money is on {NAME[abs_]} (all books)."+''
-        g['mlr']=_rate_ml(A,H,sa_ml,allm['dk_ml'],sp,agree)
+        g['mlr']=_rate_ml(A,H,sa_ml,allm['dk_ml'],sp,agree,allm['dk_spread'])
         out.append(g)
     if not out: raise _NotReady(f'week {WK}: no game has a DraftKings/ScoresAndOdds pull before kickoff yet')
     return out
@@ -650,6 +653,59 @@ json.dump({'rule':'Both sides of every game. fade = against the money (our call 
            'flags':SFLAGS,'rows':SIDES},open(R+'data/sides_log.json','w'),indent=1)
 SDX={}
 for _r in SIDES: SDX.setdefault((_r['week'],_r['game']),{})[_r['role']]=_r
+# TG, Oct 29 (t253u): every rule applies to every past game. The moneyline is rated on its own for EVERY graded game, Weeks 1 on.
+# Games without a same-pull pre-kickoff ML split (Weeks 1-6, Week 7 before Sat Oct 25) use the ScoresAndOdds week page
+# (consensus-picks?week=2026-reg-N, fetched Thu Oct 29; final split, read after the games, page not timestamped).
+# DraftKings check = the same DraftKings read the game's spread rating used (DK moneyline split never archived before Oct 25):
+# Weeks 1-4 had no DraftKings splits recorded (spread rated without a DK check, so the ML is too); Weeks 5-7 use the DK spread money side.
+# Week page has no ML split (W3 KC@MIA only) -> documented fallback: all-books SPREAD money split, labeled ALL-MONEY WARN. Never invented.
+import importlib.util as _iu2
+_sp2=_iu2.spec_from_file_location('snapmod2',R+'scripts/snapshot.py'); _sm2=_iu2.module_from_spec(_sp2); _sp2.loader.exec_module(_sm2)
+_SAOWK={}
+for _w in range(1,8):
+    _p=_W+f'/sao_weekpages_20261029/sao_w{_w}.html'
+    if os.path.exists(_p): _SAOWK[_w]=_sao_rows({'games':[g for g,_ in _sm2.sao_parse(open(_p).read(),'moneyline')]})
+HML_SRC='ScoresAndOdds week page moneyline split (all books; final split read after the games, fetched Thu Oct 29)'
+def _rate_ml_hist(A,H,sa_ml,sp,dk,src,warn=None):
+    s,m,b=_side(sa_ml); o=H if s==A else A
+    r=dict(money_side=s,m=m,b=b,team=o,src=src,dk=None,hist=True,warn=warn,dkn=dk[0])
+    if m<=50: return dict(r,rating='PASS',type=5,why='Moneyline split 50–50 (no side)')
+    if dk[0]=='none': return dict(r,rating='PASS',type=4,why='No DraftKings split on file — PASS')
+    if dk[0]=='side':
+        if dk[1] is None: return dict(r,rating='PASS',type=4,why='DraftKings split exactly 50/50 (no side) — PASS')
+        r['dk']=(dk[1],dk[2],'DraftKings spread split (no DK moneyline archive)')
+        if dk[1]!=s: return dict(r,rating='PASS',type=4,why=f'DraftKings dollars on the other side ({dk[1]} {dk[2]}%)')
+    if m<55: return dict(r,rating='PASS',type=5,why=f'Under 55% of moneyline dollars on either side ({s} {m}%)')
+    a=b>=50; bb=m>=65; ln=float(str(sp[s]).replace(M,'-').replace('PK','0'))
+    ty=1 if (bb and ln<=-6) else 2 if (bb and a) else 3
+    if not a: return dict(r,rating='PASS',type=ty,why=f'Moneyline dollars and bets on different sides ({s} {m}% dollars, {b}% bets)')
+    dkt=' · DraftKings on the same side (spread split)' if dk[0]=='side' else ' · no DraftKings split on file for this week (the spread was rated the same way)'
+    return dict(r,rating='STRONG' if bb else 'LEAN',type=ty,why=f"{s} has {m}% of moneyline dollars, {b}% of bets{dkt}"+(f' · {warn}' if warn else ''))
+_GLV={(g_['week'],f"{g_['A']}@{g_['H']}"):g_ for g_ in GALL}; _GLV.update({(5,f"{g_['A']}@{g_['H']}"):g_ for g_ in G})
+HMLR={}
+def _fl(v): v=float(v); return 'PK' if v==0 else (f'+{v:g}' if v>0 else f'{M}{abs(v):g}')
+for _k,_o in sorted(SDX.items()):
+    _g=_GLV.get(_k)
+    if _g is not None and _g.get('mlr'): continue
+    _w,_gm=_k; _A,_H=_gm.split('@'); _key=frozenset((_A,_H))
+    _spx={x['team']:_fl(x['spread_line']) for x in _o.values()}
+    for x in _o.values():
+        _ot=_H if x['team']==_A else _A
+        _spx.setdefault(_ot,_fl(-float(x['spread_line'])))
+    if _w<=4: _dk=('notrec',)
+    elif _g is None or not _g.get('dk_side') or _g.get('dk_side')=='—' or _g.get('agree')=='none' or _g.get('dk_m') is None: _dk=('none',)
+    else:
+        _ds=AB.get(_g['dk_side'],_g['dk_side']); _dk=('side',None if _g['dk_m']==50 else _ds,_g['dk_m'])
+    _sa=_SAOWK.get(_w,{}).get(_key)
+    if _sa and set(_sa)=={_A,_H}: HMLR[_k]=_rate_ml_hist(_A,_H,_sa,_spx,_dk,HML_SRC)
+    else:
+        if _w<=4:
+            _t=T[_k]; _ms=_t['money_side'] if (_t['money_pct'] or 0)>50 else _H; _mp=int(_t['money_pct'] or 50)
+            _a=ARCH[_k]; _fav=_a['Favorite']; _fb=float(_a['Fav bet % (spread)'].rstrip('%')); _bb=round(_fb if _ms==_fav else 100-_fb)
+            _ot=_H if _ms==_A else _A; _sa={_ms:(_mp,_bb),_ot:(100-_mp,100-_bb)}
+        else: _sa={AB.get(_g['ab_side'],_g['ab_side']):(_g['ab_m'],_g['ab_b'])}; _x=next(iter(_sa)); _sa[_H if _x==_A else _A]=(100-_g['ab_m'],100-_g['ab_b'])
+        ALLMONEY_WARN.append(f'W{_w} {_gm}: no ScoresAndOdds moneyline split on the week page; moneyline rated from the spread split (spread-only)')
+        HMLR[_k]=_rate_ml_hist(_A,_H,_sa,_spx,_dk,'ScoresAndOdds SPREAD money split (no moneyline split on the week page)',warn='ALL-MONEY WARN: no moneyline split found, rated from the spread split')
 def sp_grp(r,before=None): return _sd.grp(SIDES,r['rating'],r['type'],r['role'],before=before)
 def ml_grp(r,before=None): return _sd.grp(SIDES,r['rating'],r['type'],r['role'],fd=r['fd'],ml=True,before=before)
 def _pos(a): return a[4]>0 and a[3]>0
@@ -666,7 +722,11 @@ def _gk(w,gm):
 def ml_call(g):
     """Per-market moneyline call for a game (TG, Oct 29). Independent ML rating where a same-pull ML split exists;
     otherwise the as-posted ML call (fade side, game rating, group > $0 rule)."""
-    k=(g.get('week',5),f"{g['A']}@{g['H']}"); o=SDX.get(k,{}); m=g.get('mlr')
+    k=(g.get('week',5),f"{g['A']}@{g['H']}"); return ml_ck(k,g)
+def _mlr(k):
+    g=_gk(*k); return (g.get('mlr') if g is not None else None) or HMLR.get(k)
+def ml_ck(k,g=None):
+    o=SDX.get(k,{}); m=_mlr(k)
     if m:
         x=next((v for v in o.values() if v['team']==m['team']),None); fd=x and x['fd']
         if m['rating']=='PASS': why=m['why']
@@ -677,13 +737,13 @@ def ml_call(g):
     x=o.get('fade'); f=AB.get(g['fade'],g['fade']); play=g['rating']!='PASS' and _ml_ok_legacy(g)
     return dict(team=f,raw=g['rating'],rating=g['rating'] if play else 'PASS',type=g['type'],fd=x and x['fd'],play=play,why=None,indep=False,row=x,m=None)
 def ml_post(r):
-    g=_gk(r['week'],r['game'])
-    if g is not None and g.get('mlr'): c=ml_call(g); return c['play'] and c['team']==r['team']
+    k=(r['week'],r['game'])
+    if _mlr(k): c=ml_ck(k); return c['play'] and c['team']==r['team']
     return _ml_post_legacy(r)
 def ml_rt(r):
-    g=_gk(r['week'],r['game']); return ml_call(g)['raw'] if (g is not None and g.get('mlr')) else r['rating']
+    k=(r['week'],r['game']); return ml_ck(k)['raw'] if _mlr(k) else r['rating']
 def ml_ty(r):
-    g=_gk(r['week'],r['game']); return ml_call(g)['type'] if (g is not None and g.get('mlr')) else r['type']
+    k=(r['week'],r['game']); return ml_ck(k)['type'] if _mlr(k) else r['type']
 ROLE={'fade':'fade','money':'money'}
 for g in GALL: g['src']=dict(SRC_STD)
 CLBL='(all books, final split; read after kickoff, page not timestamped)'
@@ -1074,7 +1134,7 @@ def side_rows(g,sc1,trec,mlh):
             '</span>')
         if role=='fade' and r!='PASS':
             spc=f'<span class="cd-2 bet bet-{r} sdc"><span class="c1">{sc1}</span><span class="c2">{tyl}</span><small class="c3">{trec}</small></span>'
-            mlc=mlh.replace('class="cd-m"',f'class="cd-m bet bet-{r} sdc"' if ml_ok(g) else 'class="cd-m sdc"')   # orange = the actual bet
+            mlc=mlh.replace('class="cd-m"',f'class="cd-m bet bet-{ml_call(g)["rating"]} sdc"' if ml_ok(g) else 'class="cd-m sdc"')   # orange = the actual bet
         elif x:
             post=sp_post(x); a=sp_grp(x,_cb(g))
             c1=f'{nm} {g["sp"].get(team,"")}'.strip()
@@ -2384,10 +2444,10 @@ def _deepcheck():
             g_=_GD[h_.select_one('details.gm')['id']]
             _ow={'sp'} if g_['rating']!='PASS' else set()
             if ml_call(g_)['play']: _ow.add('ml')
-            got_={('sp' if 'cd-2' in c['class'] else 'ml' if 'cd-m' in c['class'] else 'other') for c in h_.select('.bet')}
+            got_={('sp' if 'cd-2' in c['class'] else 'ml' if ('cd-m' in c['class'] or 'sd-ml' in c['class']) else 'other') for c in h_.select('.bet')}
             if got_!=_ow or len(h_.select('.bet'))!=len(_ow): errs.append(('orange cells',f_,g_['gid'],sorted(got_),sorted(_ow)))
             for c in h_.select('.bet'):
-                if f'bet-{(ml_call(g_)["rating"] if (g_["rating"]=="PASS" and "cd-m" in c["class"]) else g_["rating"])}' not in c['class'] or len([k for k in c['class'] if k.startswith('bet-')])!=1: errs.append(('highlight hue',f_,g_['gid'],c['class']))
+                if f'bet-{(ml_call(g_)["rating"] if ("cd-m" in c["class"] or "sd-ml" in c["class"]) else g_["rating"])}' not in c['class'] or len([k for k in c['class'] if k.startswith('bet-')])!=1: errs.append(('highlight hue',f_,g_['gid'],c['class']))
                 if 'Pass' in c.select_one('.c1').get_text() or 'neu' in c.select_one('.c1')['class']: errs.append(('orange on a pass cell',f_,g_['gid']))
     _p6=_etlbl(max(g_['split_utc'] for g_ in G6))
     if f'As of {_p6}' not in re.sub(r'<[^>]+>','',open(R+'index.html').read()): errs.append(('W6 As of does not match the W6 pull',_p6))
