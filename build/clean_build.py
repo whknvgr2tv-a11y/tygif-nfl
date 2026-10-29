@@ -642,7 +642,7 @@ def build_wk(WK):
         city=c.get('venue',{}).get('address',{}).get('city','')
         when=f"{ko.strftime('%a %b')} {ko.day} · {int(ko.strftime('%I'))}:{ko.strftime('%M %p')} CT · "+', '.join(n for b in c.get('broadcasts',[]) for n in b['names'])+(' · London' if city=='London' else '')
         if agree=='none' and abm>50: why='No DraftKings split (board and game page both dark) — PASS'
-        elif ty==4: why=(f'{agree} money split exactly 50/50 (no side)' if dk_tie else f'{agree} has the money on the other side')
+        elif ty==4: why=(f'{agree} money split exactly 50/50 (no side)' if dk_tie else (f'{agree} is on the other side' if agree.startswith('DraftKings bets') else f'{agree} has the money on the other side'))
         elif ty==5: why='Under 55% of the money on either side'
         elif abb<50: why='Money and bets on different sides'
         else:
@@ -1264,7 +1264,7 @@ def play_card(g,ml=False):
             f'{checks(g)}</div></div></details>'+card_lists(g)+'</div>')
 def pass_reason(g):
     A=AB[g['ab_side']]; D=AB[g['dk_side']]
-    if g['type']==4: return f"all books {g['ab_m']}% of the money on {A}, DraftKings {g['dk_m']}% on {D}"
+    if g['type']==4: return (f"all books {g['ab_m']}% of the money on {A}, DraftKings bets {g['dk_b'] if g.get('dk_b') is not None else g['dk_m']}% on {D}" if str(g.get('agree','')).startswith('DraftKings bets') else f"all books {g['ab_m']}% of the money on {A}, DraftKings {g['dk_m']}% on {D}")
     if EVEN(g): return f"money split exactly 50–50 on all books; DraftKings {g['dk_m']}% on {D}"
     O=[x for x in (g['A'],g['H']) if x!=A][0]
     if g['type'] in (1,2,3) and not g['a']: return f"{g['ab_m']}% of the money on {A}, most bets on {O}"
