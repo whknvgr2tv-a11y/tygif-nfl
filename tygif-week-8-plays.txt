@@ -7,3 +7,7 @@ LEAN
     a: Yes · b: No · c: Yes · d: Yes
 
 PASS
+
+PARTIAL SLATE: only 1 of 14 Week 8 games rated so far; the other 13 are unrated until DraftKings (or VSiN DK backup) splits exist.
+
+DK splits via VSiN (DK page empty).

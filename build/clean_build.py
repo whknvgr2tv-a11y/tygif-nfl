@@ -223,6 +223,7 @@ def qa(g):
     rows.append(('b','Does one team have 65% or more of the money?',g['b'],db,'ok' if g['b'] else 'no'))
     # c: DraftKings same side
     dkn=f" ({g['dk_note_short']})" if g.get('dk_note_short') else ''
+    if g.get('dk_vsin'): dkn+=' (DK splits via VSiN; DK page empty)'
     if g['c'] is None: dc="Not recorded for Weeks 1–4"
     elif even: dc=f"All books are split 50–50, so there is no money side to match; DraftKings has {D} {g['dk_m']}%"
     elif g['c']: dc=f"DraftKings has {D} {g['dk_m']}%{dkn}"
@@ -513,6 +514,7 @@ def build_wk(WK):
         if not dkp or not sap:   # TG, Oct 27: no DK (or VSiN DK backup) / SAO pull yet -> game left off the card (no rating, never an invented split)
             NODK.setdefault(WK,[]).append(f'{A}@{H}'); continue
         dk_t,dk_src,dk=dkp[-1]; sa_t,sa_src,sa_row=sap[-1]
+        dk_vsin=any('vsin' in str(d_.get('source','')).lower() for t_,s_,d_ in DKS6 if s_==dk_src and t_==dk_t)   # TG, Oct 29: disclose VSiN DK backup
         gm=f'{A}@{H}'
         sa_ml=_ml_for(SAOML6,sa_src,key,_sao_rows); dk_ml=_ml_for(DKML6,dk_src,key,_dkml_rows)
         sa_all,sa_has=_allmoney(sa_row,sa_ml,'ScoresAndOdds',gm)
@@ -543,7 +545,7 @@ def build_wk(WK):
         g=dict(gid=f'w{WK}-{A.lower()}-{H.lower()}',A=A,H=H,away=NAME[A],home=NAME[H],sp=sp,ab_side=NAME[abs_],ab_m=abm,ab_b=abb,
                dk_side=NAME[dks],dk_m=dk[dks]['money'],dk_b=dk[dks]['bets'],a=abb>=50,b=abm>=65,c=(dks==abs_ and not dk_tie),d=dd,e=ee,f=drop,
                fade=NAME[fade_ab],fade_line=float(sp[fade_ab].replace(M,'-')),rating=rt,type=ty,why=why,when=when,mon=mon,qbnote=qbnote,
-               split_at=_etlbl(sa_t),split_utc=sa_t,dk_utc=dk_t,split_src=sa_src,dk_src=dk_src,final=None,held=False,week=WK,ko_utc=ko_s,eid=e['id'],status=c['status']['type']['name'],allmoney=allm)
+               split_at=_etlbl(sa_t),split_utc=sa_t,dk_utc=dk_t,split_src=sa_src,dk_src=dk_src,dk_vsin=dk_vsin,final=None,held=False,week=WK,ko_utc=ko_s,eid=e['id'],status=c['status']['type']['name'],allmoney=allm)
         g['call']=f"{g['fade']} {sp[fade_ab]}"
         g['wy']=f"{abm}% of the money is on {NAME[abs_]} (all books)."+''
         out.append(g)
@@ -862,7 +864,7 @@ def card_inner(g):
         title=f'{g["away"]} at {g["home"]}'; vs=''; trec='PASS'
     m=g['ab_m']; mcls='ok' if m>=65 else 'md'
     cells=[('Money',f'{AB[g["ab_side"]]} {m}%',mcls),('Bets',f'{AB[g["ab_side"]]} {g["ab_b"]}%','ok' if g['a'] else 'no'),
-           (('DraftKings','—','md') if g['c'] is None else ('DraftKings','Same' if g['c'] else 'Opposite','ok' if g['c'] else 'no')),
+           (('DraftKings','—','md') if g['c'] is None else (('DraftKings via VSiN' if g.get('dk_vsin') else 'DraftKings'),'Same' if g['c'] else 'Opposite','ok' if g['c'] else 'no')),
            ('Line','Steady' if _steady(g) else 'Moved','md')]   # TG, Oct 25: info only
     grid=''.join(f'<span>{a}<b class="{c}">{v}</b></span>' for a,v,c in cells)
     fz=g.get('final'); sc=g.get('score_txt') or _score(g)
@@ -996,7 +998,8 @@ MLS6=sorted(ml_games(G6,GW),key=lambda g:_RO[g['rating']]); MLS5=sorted([g for g
 _up=[g for g in plays if not g.get('final')]; _fin=[g for g in plays if g.get('final')]
 FINNOTE=''
 ALL6=sorted(G6,key=_kick); ALL5=sorted(G,key=_kick)
-WEEK=(f'<div class="sec-h"><h2>Week {GW}</h2><p class="q">{SRC6}.</p></div>'
+_NOTE6=(f' Only {", ".join(g["away"]+" at "+g["home"] for g in GBY[GW])} is rated so far; the other {len(NODK[GW])} Week {GW} games are unrated until DraftKings (or VSiN DK backup) splits exist.' if NODK.get(GW) else '')+(' DK splits via VSiN (DK page empty).' if any(g.get('dk_vsin') for g in GBY[GW]) else '')
+WEEK=(f'<div class="sec-h"><h2>Week {GW}</h2><p class="q">{SRC6}.{_NOTE6}</p></div>'
       f'<div class="cdl">{"".join(play_card(g) for g in ALL6)}</div>'
       +f'<p class="sec-n">Text versions: <a href="tygif-week-{GW}-plays.txt">full card</a> · <a href="tygif-week-{GW}-LOCK.txt">one-page card</a> · <a href="tygif-week-{GW}-buddy.txt">short version</a> · Week {GW-1} finals are in <a href="tygif-deep-dive.html#w{GW-1}">Game by game</a></p>')
 EXTRA_CSS+=CARD_CSS
@@ -1651,6 +1654,8 @@ def txt_clean(GG,wk,asof):
             L.append(f"  {t_}  ·  {when}"); B.append(t_)
         P.append(''); L.append('')
     P+=['PASS']+[f"  {g['away']} at {g['home']}" for g in ps]
+    if not fin and NODK.get(wk): P+=['',f"PARTIAL SLATE: only {len(GG)} of {len(GG)+len(NODK[wk])} Week {wk} games rated so far; the other {len(NODK[wk])} are unrated until DraftKings (or VSiN DK backup) splits exist."]
+    if not fin and any(g.get('dk_vsin') for g in GG): P+=['','DK splits via VSiN (DK page empty).']
     L+=['PASS']+[f"  {g['away']} at {g['home']}" for g in ps]
     for f,lines in ((f'tygif-week-{wk}-plays.txt',P),(f'tygif-week-{wk}-LOCK.txt',L),(f'tygif-week-{wk}-buddy.txt',B)):
         open(R+f,'w').write('\n'.join(lines).rstrip()+'\n')
@@ -1742,7 +1747,7 @@ def _selfcheck():
             if c.select_one('.cd-b').get_text()!=r or f's-{r}' not in c['class'] or r not in c.select_one('.cd-b')['class']: errs.append((f,gid,'badge'))
             if c.select_one('.cd-c').get_text()!=(f"{g['away']} at {g['home']}" if (g['rating']=='PASS' or gid in FULL) else f"{g['fade']} {g['sp'][AB[g['fade']]]}") or ('full' in c['class'])!=(gid in FULL): errs.append((f,gid,'call'))
             if c.select_one('.cd-2 .c2').get_text()!=f"Type {g['type']} · {TY[g['type']]['name']}": errs.append((f,gid,'type'))
-            cells={s.contents[0]:(s.b.get_text(),s.b['class'][0]) for s in c.select('.cd-3 span')}
+            cells={('DraftKings' if s.contents[0]=='DraftKings via VSiN' else s.contents[0]):(s.b.get_text(),s.b['class'][0]) for s in c.select('.cd-3 span')}
             want={'Money':f"{A} {g['ab_m']}%",'Bets':f"{A} {g['ab_b']}%",'DraftKings':'Same' if g['c'] else 'Opposite','Line':'Steady' if _steady(g) else 'Moved'}
             for k,v in want.items():
                 if cells[k][0]!=v: errs.append((f,gid,k,cells[k],v))
@@ -1755,7 +1760,7 @@ def _selfcheck():
                 if d.select_one('.uc-res b').get_text()!=g['rating']: errs.append((d['id'],'result badge'))
                 face=d.select_one('.cd')
                 if face:
-                    cells={s.contents[0]:s.b.get_text() for s in face.select('.cd-3 span')}
+                    cells={('DraftKings' if s.contents[0]=='DraftKings via VSiN' else s.contents[0]):s.b.get_text() for s in face.select('.cd-3 span')}
                     if (cells['Bets'] and ans['a'])!=ans['a'] or (cells['DraftKings']=='Same')!=ans['c'] or (cells['Line']=='Steady')!=ans['d'] or sorted(ans)!=list('abcd'):
                         errs.append((d['id'],'face vs checklist',cells,ans))
                 if 'pr' in d['class']:
