@@ -40,7 +40,7 @@ nav.tabs,header.apphead{display:none!important}
 footer:not(.ds-foot){color:var(--mut)}
 .bn{display:block;margin:10px 0 0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg2)}.bn>span{display:block}.bn-h{padding:7px 12px;font-size:12px;color:var(--mut)}.bn-h small{margin-left:6px}.bn-view{color:var(--txt)!important;font-size:13px!important;border-bottom:1px solid var(--line)}.bn-t{padding:7px 12px 2px;font-weight:700}.bn .bn-r{display:grid!important;grid-template-columns:minmax(90px,1.3fr) minmax(110px,1.3fr) 1fr 1fr;gap:8px;padding:6px 12px;border-top:1px solid var(--line);font:13px var(--mono)}.bn-r i{font-style:normal;color:var(--st);font-size:11px;margin-left:6px}.bn-best{background:rgba(63,207,142,.08)}.cd-3{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:6px 14px;margin-top:8px}.cd-3>span{display:flex;flex-direction:column;font-size:12px;color:var(--mut)}.cd-3 b{color:var(--txt);font-size:14px}.gx{margin-top:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg2)}.gx>summary{display:flex;gap:12px;align-items:center;padding:9px 12px;list-style:none}.gx>summary::-webkit-details-marker{display:none}.gx>summary::after{content:'▸';margin-left:8px;color:var(--mut)}.gx[open]>summary::after{content:'▾'}.gx-k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:700;min-width:92px}.gx-v{font:700 14px var(--mono)}.gx-r{margin-left:auto;font-size:13px;color:var(--mut)}.gx dl{padding:10px 12px;margin:0}.gc .gc-sum{margin-top:6px}.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.ds-v.sm{font-size:14px}.ds-v.txt{font-family:Inter,sans-serif}.ds-pt{font-size:26px;font-weight:800;margin:18px 0 8px}.ds-h2{font-size:18px;margin:26px 0 8px;font-weight:800}table{border-collapse:collapse;width:100%;font-size:14px;background:var(--card)!important;color:var(--txt)!important}th{text-align:left;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)!important;background:var(--bg2)!important;font-weight:600}td,th{font-variant-numeric:tabular-nums;padding:8px 10px;border-bottom:1px solid var(--line)!important}.ds-wrap{overflow-x:auto}main h1,main h2,main h3{color:var(--txt)!important;letter-spacing:-.3px}main h2{font-size:18px}main p,main li{color:var(--txt)}details>summary{cursor:pointer}main section,main .card,main details.fold{background:var(--card)!important;border-color:var(--line)!important;color:var(--txt)!important}
 .bets{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}.bt{border:1px solid var(--line);border-radius:8px;padding:9px 12px;background:var(--bg2);border-top:3px solid var(--pa)}.bt-sp{border-top-color:#58a6ff}.bt-ml{border-top-color:#d2a8ff}.bt.t-PASS{opacity:.72}.bt-k{display:block;font:800 11px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase}.bt-sp .bt-k{color:#58a6ff}.bt-ml .bt-k{color:#d2a8ff}.bt-v{display:block;font:700 17px/1.3 var(--mono);margin-top:3px}.bt-s{display:block;font-size:12px;color:var(--mut);margin-top:2px}.bt.t-STRONG .bt-s{color:var(--st)}.bt.t-LEAN .bt-s{color:var(--le)}
-.bk{display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:10px 16px;align-items:center;border-radius:8px;padding:10px 12px;margin:0 0 10px;border:1px solid var(--line);border-left:4px solid var(--pa);background:var(--bg2)}.bk-exposed{border-left-color:var(--st)}.bk-locked{border-left-color:var(--le)}.bk-against{border-left-color:#ff8a80}.bk-k{display:block;font:800 11px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}.bk-big{display:block;font:800 20px/1.2 var(--mono)}.bk-exposed .bk-big{color:var(--st)}.bk-against .bk-big{color:#ff8a80}.bk-locked .bk-big{color:var(--le)}.bk-sub{display:block;font-size:12px;color:var(--mut)}.bk-nums{display:flex;gap:16px;flex-wrap:wrap}.bk-nums span{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}.bk-nums b{display:block;font:700 16px var(--mono);color:var(--txt);text-transform:none;letter-spacing:0}.bk-exposed .bk-d b{color:var(--st)}.bk-against .bk-d b{color:#ff8a80}.bk-bar{position:relative;height:8px;background:var(--line);border-radius:4px;margin-top:8px}.bk-fill{position:absolute;left:0;top:0;bottom:0;background:var(--acc);border-radius:4px}.bk-tick{position:absolute;top:-4px;bottom:-4px;width:2px;background:#fff}.bk-na{grid-template-columns:1fr}
+.bk{display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:10px 16px;align-items:center;border-radius:8px;padding:10px 12px;margin:0 0 10px;border:1px solid var(--line);border-left:4px solid var(--pa);background:var(--bg2)}.bk-exposed{border-left-color:var(--st)}.bk-locked{border-left-color:var(--le)}.bk-against{border-left-color:#ff8a80}.bk-k{display:block;font:800 11px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}.bk-big{display:block;font:800 20px/1.2 var(--mono)}.bk-exposed .bk-big{color:var(--st)}.bk-against .bk-big{color:#ff8a80}.bk-locked .bk-big{color:var(--le)}.bk-sub{display:block;font-size:12px;color:var(--mut)}.bk-nums{display:flex;gap:16px;flex-wrap:wrap}.bk-nums span{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}.bk-nums b{display:block;font:700 16px var(--mono);color:var(--txt);text-transform:none;letter-spacing:0}.bk-exposed .bk-d b{color:var(--st)}.bk-against .bk-d b{color:#ff8a80}.bk-bar{position:relative;height:8px;background:var(--line);border-radius:4px;margin-top:8px}.bk-fill{position:absolute;left:0;top:0;bottom:0;background:var(--acc);border-radius:4px}.bk-tick{position:absolute;top:-4px;bottom:-4px;width:2px;background:#fff}.bk-na{grid-template-columns:1fr}.bk-lead{margin:0 0 4px;font:700 15px/1.35 Inter,sans-serif;color:var(--txt)}.bk-plain{margin:0;font-size:13px;line-height:1.45;color:var(--txt)}.bk-r .bk-sub{margin-top:4px}@media(max-width:640px){.bk{grid-template-columns:1fr}}
 .mo{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:14px;padding:2px 0 4px}.mo span{display:flex;flex-direction:column}.mo i{font-style:normal;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:600}.mo b{font-family:var(--mono)}.mo b.ok{color:var(--st)}.mo b.no{color:#ff8a80}
 .gc-pass{margin:4px 0 0;font-size:13px;color:var(--txt);background:rgba(139,152,165,.12);border-radius:6px;padding:6px 10px}.gx>summary{cursor:pointer;min-height:40px}.gx-sp{border-left:3px solid #58a6ff}.gx-ml{border-left:3px solid #d2a8ff}.gx-sp .gx-k{color:#58a6ff}.gx-ml .gx-k{color:#d2a8ff}.gx .bn{margin:0 12px 12px}
 @media (max-width:560px){.bk{grid-template-columns:1fr}.bets{grid-template-columns:1fr}}
@@ -101,20 +101,26 @@ def _sdr(g,kind):
 def _bk(g):
     try: v=book_view(g)
     except Exception: v=None
-    if not v: return ('<div class="bk bk-na" data-state="none"><span class="bk-k">Book needs</span><span class="bk-big">Not recorded</span>'
+    if not v: return ('<div class="bk bk-na" data-state="none"><span class="bk-k">What the books need</span><span class="bk-big">Not recorded</span>'
                       '<span class="bk-sub">No DraftKings price on file for this game</span></div>')
-    st=v['state']; m=v['money']; be=v['be']; lo=v['lock_lo']; d=round(m-be,1)
-    big={'exposed':f"{v['fade']}",'locked':'Balanced','against':f"{v['pub']}"}[st]
-    lab={'exposed':f"Book is exposed on {v['pub']} — needs {v['fade']} to win",
-         'locked':f"Book wins either way at this split — no tailwind for the fade",
-         'against':f"Book needs the crowd side {v['pub']} — fade has no book help"}[st]
+    st=v['state']; m=v['money']; be=v['be']; lo=v['lock_lo']; d=round(m-be,1); P=v['pub']; F=v['fade']
+    big={'exposed':f"Books need {F}",'locked':'Books are about even','against':f"Books want {P}"}[st]
+    lead={'exposed':f"Books are overloaded on {P} — they need {F} to cover.",
+          'locked':"Books are about even — they win either way, so no clear lean from the book.",
+          'against':f"Books want the crowd side ({P}) — fading {P} is riskier."}[st]
+    dd=f"{abs(round(d)):g}" if abs(d)>=1 else f"{abs(d):g}"
+    if st=='exposed' and d<2:
+        big=f"Slight lean to {F}"; lead=f"Books are only a little heavy on {P} — close to even, small lean to {F}."
+    tail={'exposed':(f"So {P} is +{dd} over what the book needs — the book is rooting for {F}." if d>=2 else f"So {P} is just +{dd} over what the book needs — barely tilted toward {F}."),
+          'locked':f"So {P} money ({m}%) sits in the book's safe range ({lo:.0f}–{be:.0f}%) — the book is happy with either side.",
+          'against':f"So {P} is {dd} under break-even — the book is rooting for {P}, not us."}[st]
+    nums=f"Public money on {P}: {m}%. Book break-even: ~{be:.0f}%. {tail}"
     pos=lambda x:max(0,min(100,(x-40)*100/40))   # bar shows 40%..80%
-    return (f'<div class="bk bk-{st}" data-state="{st}"><div class="bk-l"><span class="bk-k">Book needs</span><span class="bk-big">{_E(big)}</span>'
-            f'<span class="bk-sub">{_E(lab)}</span></div>'
-            f'<div class="bk-r"><div class="bk-nums"><span><b>{m}%</b>{_E(v["pub"])} money</span><span><b>{be:.1f}%</b>DK break-even</span>'
-            f'<span class="bk-d"><b>{"+" if d>0 else ""}{d:g}</b>{"over" if d>0 else "under"} break-even</span></div>'
-            f'<div class="bk-bar" role="img" aria-label="{_E(v["pub"])} money {m}% versus break-even {be:.1f}%"><span class="bk-fill" style="width:{pos(m):.0f}%"></span>'
-            f'<span class="bk-tick" style="left:{pos(be):.0f}%"></span></div></div></div>')
+    return (f'<div class="bk bk-{st}" data-state="{st}"><div class="bk-l"><span class="bk-k">What the books need</span><span class="bk-big">{_E(big)}</span></div>'
+            f'<div class="bk-r"><p class="bk-lead">{_E(lead)}</p><p class="bk-plain">{_E(nums)}</p>'
+            f'<div class="bk-bar" role="img" aria-label="{_E(P)} money {m}% versus book break-even {be:.0f}%"><span class="bk-fill" style="width:{pos(m):.0f}%"></span>'
+            f'<span class="bk-tick" style="left:{pos(be):.0f}%"></span></div>'
+            f'<span class="bk-sub">Bar = {_E(P)} money · white line = book break-even</span></div></div>')
 def _mlwhy(g):
     if g['rating']=='PASS': return 'Game is PASS'
     r=ml_for(g,_gwk(g))
@@ -193,11 +199,23 @@ wr('tygif-history.html','<!doctype html>\n<html lang="en"><head><meta charset="u
 # re-skin every other generated page: shared header, skip link, design-system CSS (appended last so it wins)
 _CUR={'tygif-tracker.html':'results','tygif-how.html':'how'}
 _TTL={'tygif-tracker.html':'Records','tygif-angles.html':'Angles','tygif-games-archive.html':'Games archive','tygif-deep-dive.html':'Game by game','tygif.html':'Week card','tygif-week-5-report.html':'Week 5 report'}
+_STUB={'tygif.html':('Week card','This page moved. <a href="index.html">Go there now</a>.'),
+       'tygif-week-5-report.html':('Week 5 report','The Week 5 report moved. <a href="tygif-tracker.html#results">Go there now</a>.')}
+def _strip_skin(_x):
+    _x=re.sub(r'<style id="ds">.*?</style>','',_x,flags=re.S)
+    _x=re.sub(r'<a class="skip".*?</header>','',_x,flags=re.S)
+    _x=re.sub(r'<header class="ds-head".*?</header>','',_x,flags=re.S)
+    _x=re.sub(r'<footer class="ds-foot".*?</footer>','',_x,flags=re.S)
+    return _x
 for _f in _gg.glob(R+'*.html'):
     _b=os.path.basename(_f)
     if _b in ('index.html','tygif-history.html'): continue
-    _x=open(_f,encoding='utf-8').read()
-    if 'id="ds"' in _x: _x=re.sub(r'<style id="ds">.*?</style>','',_x,flags=re.S); _x=re.sub(r'<a class="skip".*?</header>','',_x,flags=re.S); _x=re.sub(r'<footer class="ds-foot".*?</footer>','',_x,flags=re.S)
+    if _b in _STUB:
+        _ti,_msg=_STUB[_b]
+        wr(_b,'<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">'
+           f"<title>tygif's model · {_ti}</title>{DS_CSS}</head><body>{ds_head('')}<main id=\"main\" class=\"ds-main\" tabindex=\"-1\"><h1 class=\"ds-pt\">{_ti}</h1><p>{_msg}</p></main>{DS_FOOT}</body></html>\n")
+        continue
+    _x=_strip_skin(open(_f,encoding='utf-8').read())
     _x=_x.replace('</head>',DS_CSS+'</head>',1)
     _x=re.sub(r'(<body[^>]*>)',lambda m:m.group(1)+ds_head(_CUR.get(_b,'')),_x,count=1)
     if 'id="main"' not in _x: _x=re.sub(r'<main(?![^>]*id=)',r'<main id="main" tabindex="-1"',_x,count=1)
