@@ -253,6 +253,9 @@ def qa(g):
         if not ans['a']: rt='PASS'
         else:
             lvl=(2 if ans['b'] else 1); rt=['PASS','LEAN','STRONG'][max(lvl,0)]
+            gp=g.get('ubgap')
+            if gp is not None:   # unified weeks (rate_unified): STRONG 65%+ or 63-64% with gap>=10; LEAN 55%+ with gap>0
+                rt='STRONG' if (m>=65 or (m>=63 and gp>=10)) else 'LEAN' if gp>0 else 'PASS'
     assert (rt,ty)==(g['rating'],g['type']), (g['gid'],rt,ty,g['rating'],g['type'])
     # d (6+ favorite) only decides type 1 vs 2 and is shown on the card as the type; not a checklist row
     shown=[r for r in rows if r[0]!='d']
@@ -650,6 +653,7 @@ def build_wk(WK):
                dk_side=(NAME[dks] if dks else '—'),dk_m=(dk[dks]['money'] if dks else None),dk_b=(dk[dks]['bets'] if dks else None),a=abb>=50,b=abm>=65,c=(dks==abs_ and not dk_tie),agree=agree,d=dd,e=ee,f=drop,
                fade=NAME[fade_ab],fade_line=float(sp[fade_ab].replace(M,'-')),rating=rt,type=ty,why=why,when=when,mon=mon,qbnote=qbnote,
                split_at=_etlbl(sa_t),split_utc=sa_t,dk_utc=dk_t,split_src=sa_src,dk_src=dk_src,dk_vsin=dk_vsin,final=None,held=False,week=WK,ko_utc=ko_s,eid=e['id'],status=c['status']['type']['name'],allmoney=allm)
+        g['ubgap']=bgap
         g['call']=f"{g['fade']} {sp[fade_ab]}"
         g['wy']=f"{abm}% of the money is on {NAME[abs_]} (all books)."+''
         g['mlr']=_rate_ml(A,H,sa_ml,allm['dk_ml'],sp,agree,allm['dk_spread'])
@@ -1103,7 +1107,7 @@ def book_line(g):
     v=book_view(g)
     if not v: return ''
     return {'exposed':f"Book needs {v['fade']}: {v['pub']} has {v['money']}% of the money vs {v['be']:.1f}% DK break-even (+{v['edge']:g}) — fade sits with the book",
-            'locked':f"Book locked: {v['pub']} {v['money']}% is inside DK's win-both range {v['lock_lo']:.1f}–{v['be']:.1f}% — no book tailwind",
+            'locked':f"Book is safe: {v['pub']} {v['money']}% is inside DK's win-both range {v['lock_lo']:.1f}–{v['be']:.1f}% — no book tailwind",
             'against':f"Book needs {v['pub']}: money {v['money']}% under {v['lock_lo']:.1f}% — fade is against the book"}[v['state']]
 def bn_html(g):
     bn=books_need(g); bl=book_line(g)
