@@ -1382,11 +1382,11 @@ def _ptile(k,lab,tag):
     w,l,p,u,n=POSTED[k]
     return (f'<div class="rc pst" data-k="{k}"><div class="rc-k">{tag}{lab}</div><div class="rc-r">{wlp(w,l,p)}</div>'
             f'<div class="rc-m"><span class="{"pos" if u>0 else "neg"}">{usd(u)}</span> · {n} posted</div>{_wl(w,l,p)}</div>')
-POSTREC=(f'<h3 class="sh" id="posted">As posted</h3><p class="sub">What actually posted each week: our STRONG and LEAN spread calls, plus our moneyline when its group was above $0 from earlier weeks.</p>'
+POSTREC=(f'<h3 class="sh" id="posted">As posted (actual bets)</h3><p class="sub">Only what was posted each week: our STRONG and LEAN spread calls, plus our moneyline when its group was above $0 from earlier weeks.</p>'
    f'<div class="rgrid r3">{_ptile("sp|STRONG"," · Spread","<span class=\"tg STRONG\">STRONG</span>")}{_ptile("sp|LEAN"," · Spread","<span class=\"tg LEAN\">LEAN</span>")}'
    f'{_ptile("ml|STRONG"," · Moneyline","<span class=\"tg STRONG\">STRONG</span>")}{_ptile("ml|LEAN"," · Moneyline","<span class=\"tg LEAN\">LEAN</span>")}'
    f'</div>'
-   f'<p class="sub">Everything below is tracking: every graded side, posted or not.</p>')
+   f'')
 # season breakdown: every completed game in exactly one bucket
 _FINALL=FINW|{(_g['week'],f"{_g['A']}@{_g['H']}") for _g in GALL if _g['status']=='STATUS_FINAL' and _g['rating']=='PASS'}   # PASS games have no live_log row; final on ESPN = completed
 _DONE=[(x['week'],f"{x['A']}@{x['H']}") for x in _SG if x['week']<=5 or (x['week'],f"{x['A']}@{x['H']}") in _FINALL]
@@ -1412,7 +1412,8 @@ SEASON=('<h3 class="sh" id="season">Season breakdown</h3><p class="sub">Every co
   +_brow('Pass · no clear side','pass_even','<td colspan="2">—</td>')
   +f'<tr class="tot"><td><b>Total games played</b></td><td class="num"><b>{len(_DONE)}</b></td><td colspan="2"></td></tr></tbody></table></div>')
 RESULTS=(f'<div class="sec-h" id="audit"><h2>Records</h2><p class="sub">Weeks 1 to {max(x["week"] for x in SIDES if x["sp_res"])}, flat $100 a bet at the DraftKings close. Fade side = against the money (our STRONG and LEAN calls). Money side = with the money, tracked for trends only, never a play.</p></div>'
-   f'{POSTREC}{SEASON}'
+   f'{POSTREC}'
+   f'<details class="gx" id="more"><summary>More breakdowns · tracking only (by rating, moneyline groups, PASS, sides, week, game type)</summary>'
    f'<div class="rgrid"><h3 class="sh">Spread · all calls</h3>{_tile("STRONG",at("STRONG"),"tier-s")}{_tile("LEAN",at("LEAN"),"tier-l")}</div>'
    f'<div class="rgrid"><h3 class="sh" id="moneyline">Moneyline · tracking</h3>{_mltile("STRONG")}{_mltile("LEAN")}</div>'
    f'<h3 class="sh" id="mlgroups">Moneyline by group · all ML calls</h3><p class="sub">An ML play is posted only when its group is above $0 from earlier weeks.</p>'
@@ -1421,6 +1422,7 @@ RESULTS=(f'<div class="sec-h" id="audit"><h2>Records</h2><p class="sub">Weeks 1 
    f'{SIDEREC}'
    f'<h3 class="sh">By week</h3>{BYWEEK2}'
    f'<h3 class="sh" id="types">By game type</h3><div class="types">{TYPES}</div>'
+   f'</details>'
    f'<p class="sub fine-s">Weeks 1–4: all-books splits only; DraftKings split not recorded.</p>'
    f'<p class="allg"><a href="tygif-deep-dive.html">Game by game</a><a href="tygif-games-archive.html">All games</a></p>')
 
@@ -2207,8 +2209,8 @@ def _deepcheck():
     _all=[k for b in BUCKETS.values() for k in b]
     if len(_all)!=len(set(_all)) or set(_all)!=set(_DONE) or len(_all)!=len(_DONE): errs.append(('season buckets',len(_all),len(set(_all)),len(_DONE)))
     if len(_DONE)!=sum(1 for x in G14+G+GALL if x['week']<=5 or x.get('final') or (x['week']>=6 and x.get('rating')=='PASS' and x.get('status')=='STATUS_FINAL')): errs.append(('season: games',len(_DONE)))
-    _rows=tr.select('table.season tr[data-b]')
-    if sum(int(r.select_one('.num').get_text()) for r in _rows)!=len(_DONE) or tr.select_one('table.season tr.tot .num').get_text()!=str(len(_DONE)): errs.append(('season: counts on page',))
+    _rows=tr.select('#hub > .tblwrap table tbody tr')   # Season records hub is the single on-page season table (Oct 29)
+    if tr.select_one('table.season') or len(_rows)!=4 or sum(int(r.select('td')[0].get_text()) for r in _rows)!=len(_DONE) or sum(len(d.select('tbody tr')) for d in tr.select('#hub details'))!=len(_DONE): errs.append(('season: hub counts on page',len(_rows)))
     print('season ok:',{b:len(v) for b,v in BUCKETS.items()},'total',len(_DONE))
     for tl in tr.select('.pst'):
         a=POSTED[tl['data-k']]
