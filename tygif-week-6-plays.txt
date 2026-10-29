@@ -34,25 +34,32 @@ LEAN
 
 MONEYLINE
   STRONG Denver ML  ·  Seattle at Denver, Thu Oct 15 · 7:15 PM CT · Final 17–14 · win +$124
-    Moneyline rated on its own · Type 2 · STRONG · Underdog · SEA has 79% of moneyline dollars, 78% of bets · DraftKings on the same side (spread split)
-  STRONG Cleveland ML  ·  Baltimore at Cleveland, Sun Oct 18 · 12:00 PM CT
-    Moneyline rated on its own · Type 2 · STRONG · Underdog · BAL has 94% of moneyline dollars, 88% of bets · DraftKings on the same side (spread split)
+    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-5-0, −$82
+    a: Yes · b: Yes · c: Yes · d: Yes
   STRONG Tennessee ML  ·  Tennessee at Indianapolis, Sun Oct 18 · 12:00 PM CT · Final 26–20 · win +$235
-    Moneyline rated on its own · Type 1 · STRONG · Underdog · IND has 97% of moneyline dollars, 95% of bets · DraftKings on the same side (spread split)
+    Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 8-11-0, +$1,620
+    a: Yes · b: Yes · c: Yes · d: Yes
   STRONG NY Jets ML  ·  NY Jets at New England, Sun Oct 18 · 12:00 PM CT · Final 19–26 · loss −$100
-    Moneyline rated on its own · Type 1 · STRONG · Underdog · NE has 97% of moneyline dollars, 96% of bets · DraftKings on the same side (spread split)
-  STRONG Tampa Bay ML  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 12:00 PM CT · Final 19–26 · loss −$100
-    Moneyline rated on its own · Type 2 · STRONG · Underdog · PIT has 89% of moneyline dollars, 84% of bets · DraftKings on the same side (spread split)
+    Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 8-11-0, +$1,620
+    a: Yes · b: Yes · c: Yes · d: Yes
+  STRONG Philadelphia ML  ·  Carolina at Philadelphia, Sun Oct 18 · 12:00 PM CT · Final 14–25 · loss −$100
+    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-5-0, −$82
+    a: Yes · b: Yes · c: Yes · d: No
   STRONG Arizona ML  ·  Arizona at LA Rams, Sun Oct 18 · 3:05 PM CT · Final 18–16 · win +$525
-    Moneyline rated on its own · Type 1 · STRONG · Underdog · LAR has 93% of moneyline dollars, 97% of bets · DraftKings on the same side (spread split)
-  STRONG LA Chargers ML  ·  LA Chargers at Kansas City, Sun Oct 18 · 3:25 PM CT · Final 6–22 · loss −$100
-    Moneyline rated on its own · Type 1 · STRONG · Underdog · KC has 96% of moneyline dollars, 97% of bets · DraftKings on the same side (spread split)
-  STRONG Las Vegas ML  ·  Buffalo at Las Vegas, Sun Oct 18 · 3:25 PM CT · Final 30–33 · loss −$100
-    Moneyline rated on its own · Type 2 · STRONG · Underdog · BUF has 94% of moneyline dollars, 94% of bets · DraftKings on the same side (spread split)
-
-MONEY SIDE AND PASS-GAME SIDES
-  PASS fade side · Cleveland ML · win +$145  ·  Baltimore at Cleveland, Sun Oct 18 · 12:00 PM CT
-    group: 5-3-0, +$308
+    Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 8-11-0, +$1,620
+    a: Yes · b: Yes · c: Yes · d: Yes
+  LEAN New Orleans ML  ·  New Orleans at NY Giants, Sun Oct 18 · 12:00 PM CT · Final 34–27 · win +$93
+    Type 3 · Crowd leaning · LEAN · All ML calls · Underdog: 4-15-0, −$927
+    a: Yes · b: No · c: Yes · d: Yes
+  LEAN Tampa Bay ML  ·  Pittsburgh at Tampa Bay, Sun Oct 18 · 12:00 PM CT · Final 19–26 · loss −$100
+    Type 3 · Crowd leaning · LEAN · All ML calls · Underdog: 4-15-0, −$927
+    a: Yes · b: No · c: Yes · d: Yes
+  LEAN LA Chargers ML  ·  LA Chargers at Kansas City, Sun Oct 18 · 3:25 PM CT · Final 6–22 · loss −$100
+    Type 3 · Crowd leaning · LEAN · All ML calls · Underdog: 4-15-0, −$927
+    a: Yes · b: No · c: Yes · d: Yes
+  LEAN Las Vegas ML  ·  Buffalo at Las Vegas, Sun Oct 18 · 3:25 PM CT · Final 30–33 · loss −$100
+    Type 3 · Crowd leaning · LEAN · All ML calls · Underdog: 4-15-0, −$927
+    a: Yes · b: No · c: Yes · d: Yes
 
 PASS
   Houston at Jacksonville

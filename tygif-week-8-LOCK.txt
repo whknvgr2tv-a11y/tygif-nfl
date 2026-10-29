@@ -14,6 +14,7 @@ STRONG
 LEAN
   Carolina +3.5  ·  Thu Oct 29 · 7:15 PM CT
   Minnesota +3  ·  Sun Nov 1 · 12:00 PM CT
+  Cleveland +3.5  ·  Sun Nov 1 · 12:00 PM CT
 
 MONEYLINE
   STRONG Baltimore ML  ·  Sun Nov 1 · 12:00 PM CT
@@ -26,9 +27,9 @@ MONEYLINE
   STRONG Philadelphia ML  ·  Sun Nov 1 · 7:20 PM CT
   LEAN Carolina ML  ·  Thu Oct 29 · 7:15 PM CT
   LEAN Minnesota ML  ·  Sun Nov 1 · 12:00 PM CT
+  LEAN Cleveland ML  ·  Sun Nov 1 · 12:00 PM CT
 
 PASS
   Arizona at Dallas
-  Cleveland at Pittsburgh
   Kansas City at Denver
   Chicago at Seattle

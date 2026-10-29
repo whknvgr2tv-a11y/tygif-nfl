@@ -64,6 +64,12 @@ LEAN
     Book needs MIN: DET has 61% of the money vs 54.5% DK break-even (+6.5) — fade sits with the book
     books need MIN: best BetMGM MIN +3.5 −115 (hold 3.83%, break-even 53.49%) · worst BetRivers +3 −107 (hold 4.73%, break-even 51.69%)
       BetMGM +3.5 −115 3.83%/53.49% · bet365 +3.5 −116 4.47%/53.70% · FanDuel +3.5 −118 4.86%/54.13% · Caesars +3.5 −120 4.35%/54.55% · Fanatics +3.5 −120 4.35%/54.55% · DraftKings +3 +100 4.35%/50.00% · BetRivers +3 −107 4.73%/51.69%
+  Cleveland +3.5  ·  Cleveland at Pittsburgh, Sun Nov 1 · 12:00 PM CT
+    Type 3 · Crowd leaning · LEAN: 13-13-1, −$82
+    a: Yes · b: No · c: Yes · d: Yes
+    Book needs CLE: PIT has 60% of the money vs 52.4% DK break-even (+7.6) — fade sits with the book
+    books need CLE: best DraftKings CLE +3.5 −110 (hold 4.55%, break-even 52.38%) · worst FanDuel/Fanatics +3.5 −115 (hold 4.50%, break-even 53.49%)
+      DraftKings +3.5 −110 4.55%/52.38% · BetMGM +3.5 −112 3.89%/52.83% · BetRivers +3.5 −112 4.54%/52.83% · bet365 +3.5 −113 4.53%/53.05% · Caesars +3.5 −114 4.51%/53.27% · FanDuel +3.5 −115 4.50%/53.49% · Fanatics +3.5 −115 4.50%/53.49%
 
 MONEYLINE
   STRONG Baltimore ML  ·  Baltimore at Buffalo, Sun Nov 1 · 12:00 PM CT
@@ -86,6 +92,8 @@ MONEYLINE
     Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 59% on GB, book exposed +6.2
   LEAN Minnesota ML  ·  Minnesota at Detroit, Sun Nov 1 · 12:00 PM CT
     Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 61% on DET, book exposed +6.5
+  LEAN Cleveland ML  ·  Cleveland at Pittsburgh, Sun Nov 1 · 12:00 PM CT
+    Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 60% on PIT, book exposed +7.6
 
 PASS
   Arizona at Dallas
@@ -94,12 +102,6 @@ PASS
       Fanatics +7 −110 4.55%/52.38% · Caesars +7 −112 4.54%/52.83% · DraftKings +7 −115 4.50%/53.49% · BetMGM +7 −115 4.50%/53.49% · FanDuel +6.5 −100 4.72%/50.00% · bet365 +6.5 −102 4.42%/50.50% · BetRivers +6.5 −108 5.13%/51.92%
     books need DAL: best BetRivers DAL −6.5 −115 (hold 5.13%, break-even 53.49%) · worst Fanatics −7 −110 (hold 4.55%, break-even 52.38%)
       BetRivers −6.5 −115 5.13%/53.49% · bet365 −6.5 −118 4.42%/54.13% · FanDuel −6.5 −122 4.72%/54.95% · DraftKings −7 −105 4.50%/51.22% · BetMGM −7 −105 4.50%/51.22% · Caesars −7 −108 4.54%/51.92% · Fanatics −7 −110 4.55%/52.38%
-  Cleveland at Pittsburgh
-    Book needs CLE: PIT has 60% of the money vs 52.4% DK break-even (+7.6) — fade sits with the book
-    books need CLE: best DraftKings CLE +3.5 −110 (hold 4.55%, break-even 52.38%) · worst FanDuel/Fanatics +3.5 −115 (hold 4.50%, break-even 53.49%)
-      DraftKings +3.5 −110 4.55%/52.38% · BetMGM +3.5 −112 3.89%/52.83% · BetRivers +3.5 −112 4.54%/52.83% · bet365 +3.5 −113 4.53%/53.05% · Caesars +3.5 −114 4.51%/53.27% · FanDuel +3.5 −115 4.50%/53.49% · Fanatics +3.5 −115 4.50%/53.49%
-    books need PIT: best BetMGM/FanDuel/Fanatics PIT −3.5 −105 (hold 3.89%, break-even 51.22%) · worst DraftKings −3.5 −110 (hold 4.55%, break-even 52.38%)
-      BetMGM −3.5 −105 3.89%/51.22% · FanDuel −3.5 −105 4.50%/51.22% · Fanatics −3.5 −105 4.50%/51.22% · Caesars −3.5 −106 4.51%/51.46% · bet365 −3.5 −107 4.53%/51.69% · BetRivers −3.5 −108 4.54%/51.92% · DraftKings −3.5 −110 4.55%/52.38%
   Kansas City at Denver
     Book needs KC: DEN has 55% of the money vs 53.5% DK break-even (+1.5) — fade sits with the book
     books need KC: best DraftKings/Fanatics KC −1.5 −105 (hold 4.50%, break-even 51.22%) · worst BetRivers −1.5 −110 (hold 4.34%, break-even 52.38%)
@@ -113,14 +115,15 @@ PASS
     books need SEA: best FanDuel SEA −3 −114 (hold 4.51%, break-even 53.27%) · worst bet365 −3.5 +104 (hold 4.19%, break-even 49.02%)
       FanDuel −3 −114 4.51%/53.27% · DraftKings −3 −115 4.50%/53.49% · BetRivers −3 −115 4.50%/53.49% · BetMGM −3 −115 4.50%/53.49% · Fanatics −3 −115 4.50%/53.49% · Caesars −3 −117 4.67%/53.92% · bet365 −3.5 +104 4.19%/49.02%
 
-DraftKings board down: agreement = DraftKings game-page % of bets (bets only, no handle).
-  agreement book for Carolina at Green Bay: DraftKings bets %
-  agreement book for Baltimore at Buffalo: DraftKings bets %
-  agreement book for Tennessee at Cincinnati: DraftKings bets %
-  agreement book for Minnesota at Detroit: DraftKings bets %
-  agreement book for Las Vegas at NY Jets: DraftKings bets %
-  agreement book for Atlanta at Tampa Bay: DraftKings bets %
-  agreement book for Indianapolis at Jacksonville: DraftKings bets %
-  agreement book for LA Chargers at LA Rams: DraftKings bets %
-  agreement book for New England at Miami: DraftKings bets %
-  agreement book for Philadelphia at Washington: DraftKings bets %
+Agreement: all-books money (ScoresAndOdds) primary, SportsBettingDime money % secondary. DraftKings and bets % are not used.
+  agreement book for Carolina at Green Bay: SBD money
+  agreement book for Baltimore at Buffalo: SBD money
+  agreement book for Tennessee at Cincinnati: SBD money
+  agreement book for Minnesota at Detroit: SBD money
+  agreement book for Las Vegas at NY Jets: SBD money
+  agreement book for Cleveland at Pittsburgh: SBD money
+  agreement book for Atlanta at Tampa Bay: SBD money
+  agreement book for Indianapolis at Jacksonville: SBD money
+  agreement book for LA Chargers at LA Rams: SBD money
+  agreement book for New England at Miami: SBD money
+  agreement book for Philadelphia at Washington: SBD money

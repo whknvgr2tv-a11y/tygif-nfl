@@ -969,6 +969,17 @@
   },
   {
    "week": 8,
+   "game": "CLE@PIT",
+   "rating": "LEAN",
+   "side": "CLE",
+   "spread_line": 3.5,
+   "status": "preview",
+   "espn_event": "401873027",
+   "price": 160,
+   "fd": "Dog"
+  },
+  {
+   "week": 8,
    "game": "ATL@TB",
    "rating": "STRONG",
    "side": "TB",

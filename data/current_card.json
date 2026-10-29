@@ -49,6 +49,15 @@
    "kickoff_utc": "2026-11-01T18:00:00Z"
   },
   {
+   "game": "CLE@PIT",
+   "team": "CLE",
+   "name": "Cleveland",
+   "nick": "Browns",
+   "rating": "LEAN",
+   "line": "+3.5",
+   "kickoff_utc": "2026-11-01T18:00:00Z"
+  },
+  {
    "game": "ATL@TB",
    "team": "TB",
    "name": "Tampa Bay",

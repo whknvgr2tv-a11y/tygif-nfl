@@ -223,13 +223,18 @@ def qa(g):
     rows.append(('b','Does one team have 65% or more of the money?',g['b'],db,'ok' if g['b'] else 'no'))
     # c: DraftKings same side
     dkn=f" ({g['dk_note_short']})" if g.get('dk_note_short') else ''
-    if g.get('agree')=='DraftKings bets %': dkn+=' of bets (game page; board down, no handle)'
-    if g.get('agree')=='none': dc="No DraftKings split (board and game page both dark), so no agreement; PASS"
+    if g.get('agree')=='SBD money': dkn+=' of the money per SportsBettingDime (secondary money check)'
+    if g.get('agree') in ('SBD money','SAO only'):
+        sm=g.get('agree')=='SBD money'
+        dc=(f"SportsBettingDime money has {D} {g['dk_m']}%" if sm else "No SportsBettingDime money read; all-books money only, capped at LEAN")+('' if not sm or g['c'] else f", all books have {A} {m}%")
+        rows.append(('c','Does the second money source (SportsBettingDime) have the money on the same team?',bool(g['c']) and not even,dc,'ok' if (g['c'] and not even and sm) else ('md' if not sm else 'no')))
+        dc=None
+    elif g.get('agree')=='none': dc="No book money to check (DraftKings handle down, no money backup), so no agreement; PASS"
     elif g['c'] is None: dc="Not recorded for Weeks 1–4"
     elif even: dc=f"All books are split 50–50, so there is no money side to match; DraftKings has {D} {g['dk_m']}%"
     elif g['c']: dc=f"DraftKings has {D} {g['dk_m']}%{dkn}"
     else: dc=f"DraftKings has {D} {g['dk_m']}%, all books have {A} {m}%"
-    rows.append(('c','Does DraftKings have the money on the same team?',bool(g['c']) and not even,dc,'na' if g['c'] is None else ('ok' if (g['c'] and not even) else 'no')))
+    if dc is not None: rows.append(('c','Does DraftKings have the money on the same team?',bool(g['c']) and not even,dc,'na' if g['c'] is None else ('ok' if (g['c'] and not even) else 'no')))
     # d: 6+ favorite holds the money
     big = fa is not None and abs(float(fl.replace(M,'-')))>=6
     yes_d = big and fa==A and not even
@@ -256,6 +261,7 @@ def qa(g):
             gp=g.get('ubgap')
             if gp is not None:   # unified weeks (rate_unified): STRONG 65%+ or 63-64% with gap>=10; LEAN 55%+ with gap>0
                 rt='STRONG' if (m>=65 or (m>=63 and gp>=10)) else 'LEAN' if gp>0 else 'PASS'
+            if rt=='STRONG' and g.get('agree')=='SAO only': rt='LEAN'  # no secondary money -> LEAN cap (matches live)
     assert (rt,ty)==(g['rating'],g['type']), (g['gid'],rt,ty,g['rating'],g['type'])
     # d (6+ favorite) only decides type 1 vs 2 and is shown on the card as the type; not a checklist row
     shown=[r for r in rows if r[0]!='d']
@@ -412,9 +418,9 @@ def _rate_ml(A,H,sa_ml,dk_ml,sp,agree,dk_sp=None):
     s,m,b=_side(sa_ml); o=H if s==A else A
     r=dict(money_side=s,m=m,b=b,team=o,src='ScoresAndOdds moneyline split (all books)',dk=None)
     if m<=50: return dict(r,rating='PASS',type=5,why='Moneyline split 50–50 (no side)')
-    if agree=='none': return dict(r,rating='PASS',type=4,why='No DraftKings split — PASS')
+    if agree=='none': return dict(r,rating='PASS',type=4,why='No book money to check — PASS')
     if not dk_ml or set(dk_ml)!={A,H}:   # TG, Oct 29: same fallback as all-money: no DK ML split -> DK spread split decides the DK check (labeled)
-        if not dk_sp or set(dk_sp)!={A,H} or any(v[0] is None for v in dk_sp.values()): return dict(r,rating='PASS',type=4,why='No DraftKings split — PASS')
+        if not dk_sp or set(dk_sp)!={A,H} or any(v[0] is None for v in dk_sp.values()): return dict(r,rating='PASS',type=4,why='No book money to check — PASS')
         dk_ml=dk_sp; agree=agree+' spread split (no DK moneyline split)'; r['warn']='ALL-MONEY WARN: no DraftKings moneyline split; DK check from the DK spread split'
     dv={k:v[0] for k,v in dk_ml.items()}; dks=max(dv,key=dv.get); r['dk']=(dks,dv[dks],agree)
     if len(set(dv.values()))==1: return dict(r,rating='PASS',type=4,why=f'DraftKings moneyline split exactly 50/50 (no side)')
@@ -548,7 +554,7 @@ def _live_weeks():
 class _NotReady(Exception): pass
 def _dksb_rows(WK):
     """DraftKings sportsbook per-game % of bets placed (dk_sb_bets_<stamp>.json via scripts/dk_sb_bets.py).
-    BETS % ONLY (no handle) -> money=bets so the agreement side is DK bettors' side; labelled 'DraftKings bets %'.
+    BETS % ONLY (no handle). TG Oct 29: NOT used for agreement (money only); kept for evidence.
     -> [(utc, src, {key:{sp:{ab:{line,money,bets}}, ml:{ab:(money,bets)}}})]"""
     out=[]; fm=lambda v:('PK' if v==0 else (f'+{v:g}' if v>0 else f'{v:g}'))
     abx=_SAOAB   # WAS->WSH, JAC->JAX, LA->LAR so keys match ESPN/SAO
@@ -561,6 +567,22 @@ def _dksb_rows(WK):
             ml={A:(g['ml_bets_away'],g['ml_bets_away']),H:(g['ml_bets_home'],g['ml_bets_home'])} if g.get('ml_bets_away') is not None else {}
             rows[frozenset((A,H))]=dict(sp=sp,ml=ml)
         out.append((d['fetched_utc'],'DraftKings sportsbook game page '+f.split('/')[-1],rows))
+    return sorted(out,key=lambda x:x[0])
+SBD_BACKUP=os.environ.get('TYGIF_SBD_BACKUP','1')!='0'
+def _sbd_rows(WK):
+    """SportsBettingDime money % (stakePercentage = handle) from sbd_<stamp>.json. MONEY, not bets. Backup when DK handle is down.
+    -> [(utc, src, {key:{sp:{ab:(money,bets)}, ml:{ab:(money,bets)}}})]"""
+    out=[]
+    for f in sorted(_g0.glob(_W+f'/snap_w{WK}_*/sbd_*.json')):
+        d=json.load(open(f)); rows={}; st=d.get('stamp') or f.split('_')[-1][:-5]
+        utc=f'{st[:4]}-{st[4:6]}-{st[6:8]}T{st[9:11]}:{st[11:13]}:00Z'
+        for g in d.get('games',[]):
+            A,H=_SAOAB.get(g['away'],g['away']),_SAOAB.get(g['home'],g['home']); sm,sb=g.get('spread_money'),g.get('spread_bets') or [None,None]
+            if not sm or None in sm: continue
+            r=lambda v:None if v is None else round(v)
+            mm,mb=g.get('ml_money'),g.get('ml_bets') or [None,None]
+            rows[frozenset((A,H))]=dict(sp={A:(r(sm[0]),r(sb[0])),H:(r(sm[1]),r(sb[1]))},ml=({A:(r(mm[0]),r(mb[0])),H:(r(mm[1]),r(mb[1]))} if mm and None not in mm else {}))
+        out.append((utc,'SportsBettingDime money '+f.split('/')[-1],rows))
     return sorted(out,key=lambda x:x[0])
 def _dk_line(WK,key,at_utc):
     """DraftKings spread line (prices only) from the latest AN per-book / ESPN DK file at or before at_utc. {ab:'+3.5'} or None"""
@@ -601,23 +623,28 @@ def build_wk(WK):
         if not sap:   # no all-books (SAO) pull yet -> nothing to fade; off the card (never an invented split)
             NODK.setdefault(WK,[]).append(f'{A}@{H}'); continue
         sa_t,sa_src,sa_row=sap[-1]; gm=f'{A}@{H}'
-        # TG, Oct 29: no VSiN. Agreement = DraftKings own only: Network board (handle) -> sportsbook per-game bets % -> none.
+        # TG, Oct 29: no VSiN.
         # AN per-book money% is AN consensus (not independent) -> never used here.
         agree='none'; dk_ml=None; dk_vsin=False
-        sbp=[x for x in _dksb_rows(WK) if _P(lo_s)<_P(x[0])<=_P(cut_s) and key in x[2]]
-        if dkp and sbp and _P(sbp[-1][0])>_P(dkp[-1][0]): dkp=[]   # freshest DK-own read wins (board handle vs newer game-page bets %)
+        # TG, Oct 29 (hard rule): agreement = MONEY only. DK game-page % of bets is NEVER used as agreement money.
+        # DK Network handle -> SportsBettingDime money (stakePercentage; backup, tracks consensus) -> none (PASS, money unknown).
+        sdp=[x for x in _sbd_rows(WK) if _P(lo_s)<_P(x[0])<=_P(cut_s) and key in x[2]] if SBD_BACKUP else []
+        # TG, Oct 29 (supersedes): DraftKings is OUT of agreement (no handle, no bets %). Primary = SAO all-books money
+        # (drives the fade); secondary = SportsBettingDime money %. If SBD is missing: rate on SAO alone, capped at LEAN ('SAO only').
+        if WK>=UNIFIED_FROM: dkp=[]   # Weeks 5-7 keep their recorded DraftKings agreement (TG, Oct 29: don't change old ones)
         if dkp:
             dk_t,dk_src,dk=dkp[-1]
             agree='DraftKings'; dk_ml=_ml_for(DKML6,dk_src,key,_dkml_rows)
         else:
-            cp=sbp
-            if cp:
-                dk_t,dk_src,cr=cp[-1]; dk={k:dict(line=v['line'],money=v['money'],bets=v['bets']) for k,v in cr[key]['sp'].items()}
-                dk_ml={k:dict(money=v[0],bets=v[1]) for k,v in cr[key]['ml'].items()} or None; agree='DraftKings bets %'
-            else:   # no independent book money: PASS (Type 4), line from DK prices (AN/ESPN), money shown as unknown
-                ln=_dk_line(WK,key,sa_t)
+            ln=_dk_line(WK,key,sa_t)
+            if sdp and ln is not None:
+                dk_t,dk_src,cr=sdp[-1]; r=cr[key]
+                dk={k:dict(line=ln[k],money=r['sp'][k][0],bets=r['sp'][k][1]) for k in ln}
+                dk_ml={k:dict(money=v[0],bets=v[1]) for k,v in r['ml'].items()} or None; agree='SBD money'
+            else:   # no SBD money: SAO alone (self-agreeing), capped at LEAN below; never blank the card
                 if ln is None: NODK.setdefault(WK,[]).append(gm); continue
-                dk_t,dk_src=sa_t,'no independent book money'; dk={k:dict(line=v,money=None,bets=None) for k,v in ln.items()}
+                dk_t,dk_src=sa_t,'SAO only (no SportsBettingDime money read)'
+                dk={k:dict(line=ln[k],money=sa_row[k][0],bets=sa_row[k][1]) for k in ln}; agree='SAO only'
         sa_ml=_ml_for(SAOML6,sa_src,key,_sao_rows)
         sa_all,sa_has=_allmoney(sa_row,sa_ml,'ScoresAndOdds',gm)
         if agree=='none': dk_all,dk_has={k:(None,None) for k in dk},False
@@ -638,11 +665,12 @@ def build_wk(WK):
         rt,ty,ee,dd=rate_v1(A,H,(abs_,abm,abb),(None if dk_tie else dks),mon,sp,drop)
         bgap=None
         if WK>=UNIFIED_FROM: rt,bgap=rate_unified(rt,ty,abm,abb,abs_,_dk_be(WK,A,H,ko_s))
+        if agree=='SAO only' and rt=='STRONG': rt='LEAN'   # no independent money check -> cap
         ko=_ET(e['date'].replace('Z',':00Z'))
         city=c.get('venue',{}).get('address',{}).get('city','')
         when=f"{ko.strftime('%a %b')} {ko.day} · {int(ko.strftime('%I'))}:{ko.strftime('%M %p')} CT · "+', '.join(n for b in c.get('broadcasts',[]) for n in b['names'])+(' · London' if city=='London' else '')
-        if agree=='none' and abm>50: why='No DraftKings split (board and game page both dark) — PASS'
-        elif ty==4: why=(f'{agree} money split exactly 50/50 (no side)' if dk_tie else (f'{agree} is on the other side' if agree.startswith('DraftKings bets') else f'{agree} has the money on the other side'))
+        if agree=='none' and abm>50: why='No book money to check (DraftKings handle down, no money backup) — PASS'
+        elif ty==4: why=(f'{agree} money split exactly 50/50 (no side)' if dk_tie else f'{agree} has the money on the other side')
         elif ty==5: why='Under 55% of the money on either side'
         elif abb<50: why='Money and bets on different sides'
         else:
@@ -751,27 +779,31 @@ SCONF=[]
 def _ours(r): return r['role']=='fade' and r['rating']!='PASS'
 def sp_post(r): return _ours(r)        # plays are only our STRONG/LEAN fade-side calls; money side and PASS sides are tracking only
 def t3dog(r): return r['type']==3 and r['fd']=='Dog'   # Rules v3.1: Type 3 underdog = pass on the moneyline; spread unaffected
-def _ml_post_legacy(r): return _ours(r) and bool(r['fd']) and not t3dog(r) and _pos(ml_grp(r,r['week']))
+def _ml_post_legacy(r): return _ours(r) and bool(r['fd'])   # TG, Oct 29: one rule all weeks — ML shares the game grade (no group gate, no T3-dog pass)
 _GKC={}
 def _gk(w,gm):
     if (w,gm) not in _GKC:
         for g_ in globals().get('G14',[])+globals().get('G',[])+globals().get('GALL',[]): _GKC.setdefault((g_.get('week',5),f"{g_['A']}@{g_['H']}"),g_)
     return _GKC.get((w,gm))
 def ml_call(g):
-    """Per-market moneyline call for a game (TG, Oct 29). Independent ML rating where a same-pull ML split exists;
-    otherwise the as-posted ML call (fade side, game rating, group > $0 rule)."""
+    """Per-market moneyline call (TG, Oct 29). Week 8+: shares the unified game grade. Weeks 1-7: as-posted ML call (group > $0 rule)."""
     k=(g.get('week',5),f"{g['A']}@{g['H']}"); return ml_ck(k,g)
 def _mlr(k):
     g=_gk(*k); return (g.get('mlr') if g is not None else None) or HMLR.get(k)
 def ml_ck(k,g=None):
     o=SDX.get(k,{}); m=_mlr(k)
+    if g is None: g=_gk(*k)
+    if m and not m.get('unified'): m=None   # TG, Oct 29: every week uses the game grade for ML; old independent/group ML ratings retired
     if m:
         x=next((v for v in o.values() if v['team']==m['team']),None); fd=x and x['fd']
         if m['rating']=='PASS': why=m['why']
         elif not fd: why='No DraftKings moneyline price on file'
-        elif m['type']==3 and fd=='Dog' and not m.get('unified'): why='Type 3 underdog — moneyline is a pass'
+        elif False: why='Type 3 underdog — moneyline is a pass'
         else: why=None
         return dict(team=m['team'],raw=m['rating'],rating=m['rating'] if why is None else 'PASS',type=m['type'],fd=fd,play=why is None,why=why,indep=True,row=x,m=m)
+    if g is None:
+        x=o.get('fade') or {}; play=_ours(x) and bool(x.get('fd'))
+        return dict(team=x.get('team'),raw=x.get('rating'),rating=x.get('rating') if play else 'PASS',type=x.get('type'),fd=x.get('fd'),play=play,why=None,indep=False,row=x,m=None)
     x=o.get('fade'); f=AB.get(g['fade'],g['fade']); play=g['rating']!='PASS' and _ml_ok_legacy(g)
     return dict(team=f,raw=g['rating'],rating=g['rating'] if play else 'PASS',type=g['type'],fd=x and x['fd'],play=play,why=None,indep=False,row=x,m=None)
 def ml_post(r):
@@ -951,8 +983,7 @@ def _ml_ok_legacy(g):
     # TG rule: post an ML play only when its rating + type + favorite/underdog group is profitable (> $0) through the last graded week
     r=ml_for(g,g.get('week',5))
     if g['rating']=='PASS' or not r or r.get('price') is None: return False
-    if g['type']==3 and r['fd']=='Dog': return False   # Rules v3.1: Type 3 underdog = pass on the moneyline
-    a=ml_at(g['rating'],g['type'],r['fd'],before=g.get('week',5)); return a[4]>0 and a[3]>0
+    return True   # TG, Oct 29: ML shares the game grade every week
 def ml_games(GG,week):
     return [g for g in GG if ml_call(g)['play']]
 def ml_for(g,week):
@@ -1052,6 +1083,9 @@ def ml_block(g):
         return f'<span class="cd-m"><b class="ck">Moneyline</b><span class="mc c1 neu">{g["fade"]} ML</span><span class="c2">Type {t}</span><small class="c3">{"PASS" if r=="PASS" else "no moneyline"}</small></span>',None
     fd=mr['fd']; a=ml_at(r,t,fd,before=_cb(g)); lab=f'Type {t} · {FDN[fd]}'
     _ml=f'Type {t} {FDN[fd].lower()} ML group'; grp=f'{_ml}: {wlp(*a[:3])}, {usd(a[3])}' if a[4] else f'{_ml}: no games yet'
+    if True:   # TG, Oct 29: unified weeks — moneyline shares the game grade (same total-money + book-needs read); no group gate
+        c_=ml_call(g)
+        grp=('Same grade as the game (spread and moneyline share one read)' if ml_ok(g) else 'Moneyline is a pass'+(f': {c_["why"]}' if c_.get('why') else ''))
     if not ml_ok(g): call=None
     elif mr.get('result'): call=f'{g["fade"]} ML · <span class="fin {mr["result"]}">{dict(W="win",L="loss",P="push")[mr["result"]]} {usd(mr["profit"])}</span>'
     elif True: call=f'{g["fade"]} ML'
@@ -1264,7 +1298,7 @@ def play_card(g,ml=False):
             f'{checks(g)}</div></div></details>'+card_lists(g)+'</div>')
 def pass_reason(g):
     A=AB[g['ab_side']]; D=AB[g['dk_side']]
-    if g['type']==4: return (f"all books {g['ab_m']}% of the money on {A}, DraftKings bets {g['dk_b'] if g.get('dk_b') is not None else g['dk_m']}% on {D}" if str(g.get('agree','')).startswith('DraftKings bets') else f"all books {g['ab_m']}% of the money on {A}, DraftKings {g['dk_m']}% on {D}")
+    if g['type']==4: return f"all books {g['ab_m']}% of the money on {A}, {g.get('agree','DraftKings')} {g['dk_m']}% on {D}"
     if EVEN(g): return f"money split exactly 50–50 on all books; DraftKings {g['dk_m']}% on {D}"
     O=[x for x in (g['A'],g['H']) if x!=A][0]
     if g['type'] in (1,2,3) and not g['a']: return f"{g['ab_m']}% of the money on {A}, most bets on {O}"
@@ -1275,7 +1309,7 @@ MLS6=sorted(ml_games(G6,GW),key=lambda g:_RO[ml_call(g)['rating']]); MLS5=sorted
 _up=[g for g in plays if not g.get('final')]; _fin=[g for g in plays if g.get('final')]
 FINNOTE=''
 ALL6=sorted(G6,key=_kick); ALL5=sorted(G,key=_kick)
-_NOTE6=(f' Only {", ".join(g["away"]+" at "+g["home"] for g in GBY[GW])} is rated so far; the other {len(NODK[GW])} Week {GW} games are unrated until a DraftKings split exists.' if NODK.get(GW) else '')+(' DraftKings board down: agreement uses DraftKings game-page bets % (no handle).' if any(g.get('agree')=='DraftKings bets %' for g in GBY[GW]) else '')+(f' {sum(g.get("agree")=="none" for g in GBY[GW])} games PASS: no DraftKings split.' if any(g.get('agree')=='none' for g in GBY[GW]) else '')
+_NOTE6=(f' Only {", ".join(g["away"]+" at "+g["home"] for g in GBY[GW])} is rated so far; the other {len(NODK[GW])} Week {GW} games are unrated until a DraftKings split exists.' if NODK.get(GW) else '')+(' Agreement: SportsBettingDime money % must match the all-books money side (money only; bets % never used).' if any(g.get('agree')=='SBD money' for g in GBY[GW]) else '')+(f' {sum(g.get("agree")=="none" for g in GBY[GW])} games PASS: no book money to check.' if any(g.get('agree')=='none' for g in GBY[GW]) else '')
 WEEK=(f'<div class="sec-h"><h2>Week {GW}</h2><p class="q">{SRC6}.{_NOTE6}</p></div>'
       f'<div class="cdl">{"".join(play_card(g) for g in ALL6)}</div>'
       +f'<p class="sec-n">Text versions: <a href="tygif-week-{GW}-plays.txt">full card</a> · <a href="tygif-week-{GW}-LOCK.txt">one-page card</a> · <a href="tygif-week-{GW}-buddy.txt">short version</a> · Week {GW-1} finals are in <a href="tygif-deep-dive.html#w{GW-1}">Game by game</a></p>')
@@ -1394,7 +1428,7 @@ def _mlgrp(rt,t,fd):
     if not a[4]: return ''
     return rlist(rt,t,True,'cd-rl tb-rl',fd)
 MLGROUPS=[(rt,t,fd) for rt in ('STRONG','LEAN') for t in (1,2,3) for fd in ('Dog','Fav') if ml_at(rt,t,fd)[4]]
-MLREC=('<h3 class="sh" id="moneyline">Moneyline · tracking</h3>'+_mlrow('STRONG',('look back','live'))+_mlrow('LEAN',('look back','live'))
+MLREC=('<h3 class="sh" id="moneyline">Moneyline · all ML calls (tracking, not the posted record)</h3>'+_mlrow('STRONG',('look back','live'))+_mlrow('LEAN',('look back','live'))
        +'<div class="mlg">'+''.join(_mlgrp(*k) for k in MLGROUPS)+'</div>')
 RULES=('<div class="rules" id="rules"><h4>Rules v3 · Oct 15, 2026</h4>'
   '<p>Rules v3: both sides of every game are tracked. The money side and PASS-game sides are tracked for trends only, never a play.</p>'
@@ -1530,7 +1564,7 @@ def _ptile(k,lab,tag):
     w,l,p,u,n=POSTED[k]
     return (f'<div class="rc pst" data-k="{k}"><div class="rc-k">{tag}{lab}</div><div class="rc-r">{wlp(w,l,p)}</div>'
             f'<div class="rc-m"><span class="{"pos" if u>0 else "neg"}">{usd(u)}</span> · {n} posted</div>{_wl(w,l,p)}</div>')
-POSTREC=(f'<h3 class="sh" id="posted">As posted (actual bets)</h3><p class="sub">Only what was posted each week: our STRONG and LEAN spread calls, plus our moneyline when its group was above $0 from earlier weeks.</p>'
+POSTREC=(f'<h3 class="sh" id="posted">As posted (actual bets)</h3><p class="sub">Only what was posted each week: our STRONG and LEAN spread calls, plus our moneyline on the same team. Every week, the moneyline shares the game’s STRONG/LEAN grade (one rule sitewide; the old group-above-$0 gate is retired, Weeks 1–7 re-graded under it). STRONG and LEAN are separate records, never combined, and separate from spread.</p>'
    f'<div class="rgrid r3">{_ptile("sp|STRONG"," · Spread","<span class=\"tg STRONG\">STRONG</span>")}{_ptile("sp|LEAN"," · Spread","<span class=\"tg LEAN\">LEAN</span>")}'
    f'{_ptile("ml|STRONG"," · Moneyline","<span class=\"tg STRONG\">STRONG</span>")}{_ptile("ml|LEAN"," · Moneyline","<span class=\"tg LEAN\">LEAN</span>")}'
    f'</div>'
@@ -1565,8 +1599,8 @@ RESULTS=(f'<div class="sec-h" id="audit"><h2>Records</h2><p class="sub">Weeks 1 
    f'{POSTREC}'
    f'<details class="gx" id="more"><summary>More breakdowns · tracking only (by rating, moneyline groups, PASS, sides, week, game type)</summary>'
    f'<div class="rgrid"><h3 class="sh">Spread · all calls</h3>{_tile("STRONG",at("STRONG"),"tier-s")}{_tile("LEAN",at("LEAN"),"tier-l")}</div>'
-   f'<div class="rgrid"><h3 class="sh" id="moneyline">Moneyline · tracking</h3>{_mltile("STRONG")}{_mltile("LEAN")}</div>'
-   f'<h3 class="sh" id="mlgroups">Moneyline by group · all ML calls</h3><p class="sub">An ML play is posted only when its group is above $0 from earlier weeks.</p>'
+   f'<div class="rgrid"><h3 class="sh" id="moneyline">Moneyline · all ML calls (tracking, not the posted record)</h3>{_mltile("STRONG")}{_mltile("LEAN")}</div>'
+   f'<h3 class="sh" id="mlgroups">Moneyline by group · all ML calls</h3><p class="sub">Tracking only. Every STRONG/LEAN game’s moneyline, posted or not. There is no group gate: every week the moneyline shares the game grade.</p>'
    f'<div class="groups">{"".join(_grow(*k) for k in MLGROUPS)}</div>'
    f'{PASSREC}'
    f'{SIDEREC}'
@@ -1634,7 +1668,7 @@ HOW=f'''<div class="hw">
 <li><b>{TY[1]['name']}:</b> 65%+ of the money on a favorite giving 6+ points. Take the underdog.</li>
 <li><b>{TY[2]['name']}:</b> 65%+ of the money and most bets on one team. Take the other team.</li>
 <li><b>Crowd leaning:</b> 55–64% of the money on one team. LEAN at most; money and bets on different teams is a pass.</li>
-<li><b>Type 3 underdog:</b> pass on the moneyline; spread unaffected.</li>
+<li><b>Moneyline:</b> same team and same STRONG/LEAN/PASS grade as the spread, every week (Type 3 underdogs included).</li>
 <li><b>Grading:</b> Every game is graded at the DraftKings line, price and moneyline we recorded last at least 5 minutes before kickoff; where nothing was recorded, at the DraftKings closing numbers.</li>
 <li><b>Books disagree:</b> all books and DraftKings have the money on different teams. PASS.</li>
 <li><b>No clear crowd:</b> under 55% of the money on either team. PASS.</li>
@@ -1650,7 +1684,7 @@ HOW=f'''<div class="hw">
 <h2>Moneyline</h2>
 <ul>
 <li>Same team as every STRONG or LEAN play, favorite or underdog, graded at the DraftKings moneyline recorded before kickoff.</li>
-<li>Grouped by rating, type, and favorite or underdog. Posted only when that group has a profitable moneyline record to date.</li>
+<li>Grouped by rating, type, and favorite or underdog. Same STRONG/LEAN/PASS grade as the spread, every week (no group gate).</li>
 <li>A tie on the moneyline is a push, $0.</li>
 </ul>
 <h2 id="records">Records</h2>
@@ -1658,7 +1692,7 @@ HOW=f'''<div class="hw">
 <li>Flat $100 per play, graded at the DraftKings line and price recorded before kickoff. A loss is −$100; a push is $0.</li>
 <li>Every week to date. STRONG, LEAN, PASS, fade side, money side and moneyline are kept separate, never combined.</li>
 <li>Weeks 1–4: all-books splits only; DraftKings split not recorded.</li>
-<li>Rules v3 · Oct 15, 2026: both sides of every game tracked, grouped by rating, type and side (fade/money; moneyline also favorite/underdog). Plays are only our STRONG/LEAN spread calls and our moneyline on the same team, posted when its group is above $0 from earlier weeks. The money side and PASS-game sides are tracked for trends only and are never a play. If both teams qualify on the spread, only our original call posts.</li>
+<li>Rules v3 · Oct 15, 2026: both sides of every game tracked, grouped by rating, type and side (fade/money; moneyline also favorite/underdog). Plays are only our STRONG/LEAN spread calls and our moneyline on the same team, with the same STRONG/LEAN grade as the game, every week (TG, Oct 29: the old group-above-$0 gate is retired sitewide). The money side and PASS-game sides are tracked for trends only and are never a play. If both teams qualify on the spread, only our original call posts.</li>
 </ul>
 <h2>Sources</h2>
 <p class="sm">ScoresAndOdds · DraftKings · TeamRankings · ESPN · nflverse</p>
@@ -1939,8 +1973,8 @@ def txt_clean(GG,wk,asof):
     P+=['PASS']
     for g in ps: P+=[f"  {g['away']} at {g['home']}"+(' (no independent book money)' if g.get('agree')=='none' else '')]+([] if fin else bn_txt(g))
     if not fin and NODK.get(wk): P+=['',f"PARTIAL SLATE: only {len(GG)} of {len(GG)+len(NODK[wk])} Week {wk} games rated so far; the other {len(NODK[wk])} are unrated until a DraftKings split exists."]
-    if not fin and any(g.get('agree')=='DraftKings bets %' for g in GG): P+=['','DraftKings board down: agreement = DraftKings game-page % of bets (bets only, no handle).']
-    if not fin and any(g.get('agree')=='none' for g in GG): P+=['','Agreement: DraftKings own only (board handle -> game-page bets %). Games with neither are PASS (never invented).']
+    if not fin and any(g.get('agree')=='SBD money' for g in GG): P+=['','Agreement: all-books money (ScoresAndOdds) primary, SportsBettingDime money % secondary. DraftKings and bets % are not used.']
+    if not fin and any(g.get('agree')=='none' for g in GG): P+=['','Agreement = money only: DraftKings handle -> SportsBettingDime money. Games with neither are PASS (never invented).']
     for g in pl: P+=[f"  agreement book for {g['away']} at {g['home']}: {g.get('agree','DraftKings')}"] if not fin else []
     L+=['PASS']+[f"  {g['away']} at {g['home']}" for g in ps]
     for f,lines in ((f'tygif-week-{wk}-plays.txt',P),(f'tygif-week-{wk}-LOCK.txt',L),(f'tygif-week-{wk}-buddy.txt',B)):
@@ -2033,7 +2067,7 @@ def _selfcheck():
             if c.select_one('.cd-b').get_text()!=r or f's-{r}' not in c['class'] or r not in c.select_one('.cd-b')['class']: errs.append((f,gid,'badge'))
             if c.select_one('.cd-c').get_text()!=(f"{g['away']} at {g['home']}" if (g['rating']=='PASS' or gid in FULL) else f"{g['fade']} {g['sp'][AB[g['fade']]]}") or ('full' in c['class'])!=(gid in FULL): errs.append((f,gid,'call'))
             if c.select_one('.cd-2 .c2').get_text()!=f"Type {g['type']} · {TY[g['type']]['name']}": errs.append((f,gid,'type'))
-            cells={('DraftKings' if s.contents[0] in ('DraftKings bets %','Agree book') else s.contents[0]):(s.b.get_text(),s.b['class'][0]) for s in c.select('.cd-3 span')}
+            cells={('DraftKings' if s.contents[0] in ('DraftKings bets %','SBD money','Agree book') else s.contents[0]):(s.b.get_text(),s.b['class'][0]) for s in c.select('.cd-3 span')}
             want={'Money':f"{A} {g['ab_m']}%",'Bets':f"{A} {g['ab_b']}%",'DraftKings':'No book money' if g.get('agree')=='none' else ('Same' if g['c'] else 'Opposite'),'Line':'Steady' if _steady(g) else 'Moved'}
             for k,v in want.items():
                 if cells[k][0]!=v: errs.append((f,gid,k,cells[k],v))
@@ -2046,7 +2080,7 @@ def _selfcheck():
                 if d.select_one('.uc-res b').get_text()!=g['rating']: errs.append((d['id'],'result badge'))
                 face=d.select_one('.cd')
                 if face:
-                    cells={('DraftKings' if s.contents[0] in ('DraftKings bets %','Agree book') else s.contents[0]):s.b.get_text() for s in face.select('.cd-3 span')}
+                    cells={('DraftKings' if s.contents[0] in ('DraftKings bets %','SBD money','Agree book') else s.contents[0]):s.b.get_text() for s in face.select('.cd-3 span')}
                     if (cells['Bets'] and ans['a'])!=ans['a'] or (cells['DraftKings']=='Same')!=ans['c'] or (cells['Line']=='Steady')!=ans['d'] or sorted(ans)!=list('abcd'):
                         errs.append((d['id'],'face vs checklist',cells,ans))
                 if 'pr' in d['class']:
@@ -2131,6 +2165,8 @@ def _deepcheck():
                 continue
             a=ml_at(g['rating'],g['type'],mr['fd'],before=_bqi(g.get('week',5),f"{g['A']}@{g['H']}")); lab=f"Type {g['type']} {FDN[mr['fd']].lower()} ML group"
             want_g=f"{lab}: {wlp(*a[:3])}, {usd(a[3])}" if a[4] else f"{lab}: no games yet"
+            if True:   # unified weeks: ML shares the game grade, no group gate (TG, Oct 29)
+                _c=ml_call(g); want_g='Same grade as the game (spread and moneyline share one read)' if ml_ok(g) else 'Moneyline is a pass'+(f": {_c['why']}" if _c.get('why') else '')
             if m.small.get_text()!=want_g or m.select_one('.c2').get_text()!=f"Type {g['type']} · {FDN[mr['fd']]}": errs.append((f,gid,'ML group record',m.small.get_text(),want_g))
             ap=ml_at(g['rating'],g['type'],mr['fd'],before=g.get('week',5)); posted=(ml_ok(g) if g.get('mlr') else (ap[4]>0 and ap[3]>0))
             if posted!=('neu' not in m.select_one('.mc')['class']) or not m.select_one('.mc').get_text().startswith(f"{g['fade']} ML"): errs.append((f,gid,'ML posted rule'))
@@ -2198,7 +2234,7 @@ def _deepcheck():
         t=BeautifulSoup(open(R+f).read(),'html.parser')
         for h in t.select('div.cdh'):
             c=h.select_one('.cd'); gid=(c.get('href') or '').split('#')[-1] if c.name=='a' else c.find_parent('details')['id']; g_=_GD[gid]
-            if ml_call(g_)['type']==3 and ml_call(g_)['fd']=='Dog' and ml_call(g_)['play'] and not (ml_call(g_).get('m') or {}).get('unified'): errs.append((f,'T3 underdog ML play on card',gid))
+            if ml_call(g_)['type']==3 and ml_call(g_)['fd']=='Dog' and False: errs.append((f,'T3 underdog ML play on card',gid))
             _fw=foot_pick(g_); got_={L['data-m']:L for L in h.select(':scope > details.cd-ft')}
             if set(got_)!=set(_fw) or len(h.select(':scope > details.cd-rl'))!=len(_fw): errs.append((f,'footer set',gid,sorted(got_),sorted(_fw))); continue
             for k,(x,a,ours) in _fw.items():
@@ -2473,10 +2509,10 @@ def _deepcheck():
         if got.get(k_)!=v_: errs.append(('spread records changed',k_,got.get(k_),v_))
     got=gota
     for r_ in SIDES:
-        if ml_ty(r_)==3 and r_['fd']=='Dog' and ml_post(r_) and r_['week']<UNIFIED_FROM: errs.append(('T3 underdog ML posted',r_['week'],r_['game']))
+        if ml_ty(r_)==3 and r_['fd']=='Dog' and ml_post(r_) and False: errs.append(('T3 underdog ML posted',r_['week'],r_['game']))
     for g_ in GALL:
         if g_['type']==3 and g_['rating']!='PASS' and g_['fade_line']>0 and re.search(r'ml-post|ML play',str(g_.get('mlhtml',''))): errs.append(('T3 underdog ML on W6 card',g_['gid']))
-    if 'Type 3 underdog: pass on the moneyline; spread unaffected.' not in re.sub(r'<[^>]+>','',open(R+'tygif-how.html').read()): errs.append(('How missing T3 underdog rule',))
+    if re.search(r'Type 3 underdog: pass on the moneyline|group (was |is )?above \$0',re.sub(r'<[^>]+>','',open(R+'tygif-how.html').read()+open(R+'tygif-tracker.html').read())): errs.append(('old ML gate copy',))
     # play highlight (STRONG green, LEAN orange) sits exactly on the posted play cells (our spread call; our ML when it posts)
     for f_ in ('index.html','tygif-tracker.html','tygif-deep-dive.html'):
         for h_ in BeautifulSoup(open(R+f_).read(),'html.parser').select('div.cdh'):

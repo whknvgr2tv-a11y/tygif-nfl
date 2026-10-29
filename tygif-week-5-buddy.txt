@@ -10,9 +10,7 @@ LEAN Atlanta −3 · Final ATL 23–30 · loss −$100
 STRONG Tampa Bay ML · Final 24–16 · win +$380
 STRONG Miami ML · Final 24–31 · loss −$100
 STRONG NY Jets ML · Final 17–12 · win +$77
-STRONG Tennessee ML · Final 3–26 · loss −$100
-STRONG New Orleans ML
-STRONG Indianapolis ML
-STRONG Arizona ML · Final 21–45 · loss −$100
-PASS fade side · New Orleans ML · loss −$100
-PASS money side · Indianapolis ML · loss −$100
+STRONG Washington ML · Final 27–27 · push $0
+LEAN Tennessee ML · Final 3–26 · loss −$100
+LEAN Arizona ML · Final 21–45 · loss −$100
+LEAN Atlanta ML · Final 23–30 · loss −$100

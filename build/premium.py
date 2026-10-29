@@ -70,9 +70,12 @@ def _ct(g):
 def _logo(ab,name): 
     ab={'LA':'LAR','WAS':'WSH','JAC':'JAX'}.get(ab,ab); return f'<img src="assets/logos/{ab}.png" alt="{_E(name)} logo" width="24" height="24" loading="lazy">'
 def _agree(g):
-    if g.get('c') is None or g.get('agree')=='none': return '— (no DraftKings split on file)'
-    src='bets %' if g.get('agree')=='DraftKings bets %' else 'money %'
-    return f"DK {src}: {'same side' if g['c'] else 'opposite side'} ({AB[g['dk_side']]} {g['dk_m']}%)"
+    ag=g.get('agree')
+    if g.get('c') is None or ag=='none': return '— (no secondary money book on file)'
+    if ag=='SBD money': return f"SportsBettingDime money: {'same side' if g['c'] else 'opposite side'} ({AB[g['dk_side']]} {g['dk_m']}%)"
+    if ag=='SAO only': return 'All-books money only (no SportsBettingDime read) — capped at LEAN'
+    if ag=='DraftKings bets %': return f"DK bets %: {'same side' if g['c'] else 'opposite side'} ({AB[g['dk_side']]} {g['dk_m']}%)"
+    return f"DK money %: {'same side' if g['c'] else 'opposite side'} ({AB[g['dk_side']]} {g['dk_m']}%)"
 def _bneed(g):
     try: v=book_view(g)
     except Exception: v=None
@@ -177,14 +180,14 @@ def game_card(g):
             f'<div class="gc-hero">{badge}<p class="gc-play"><span class="sr-only">Play: </span>{_E(head)}</p></div>{passbox}'
             f'<div class="bets">{sp_t}{ml_t}</div>'
             f'{bkh}'
-            f'<p class="mo">Crowd: <b>{m}</b> {g["ab_m"]}% of money · {g["ab_b"]}% of bets · DK <b class="{dkc}">{_E(dk.replace("✓ ","").replace("✕ ","").lower() if dk!="—" else "n/a")}</b></p>'
+            f'<p class="mo">Crowd: <b>{m}</b> {g["ab_m"]}% of money · {g["ab_b"]}% of bets · Agree <b class="{dkc}">{_E(dk.replace("✓ ","").replace("✕ ","").lower() if dk!="—" else "n/a")}</b></p>'
             f'<details class="gx gx-sp" data-kind="spread"><summary><span class="gx-k">Spread details</span></summary><dl>'
             f'<div><dt>Line</dt><dd><span class="n">{g["A"]} {_E(str(g["sp"].get(g["A"],"")))} · {g["H"]} {_E(str(g["sp"].get(g["H"],"")))}</span></dd></div>'
             f'<div><dt>Call</dt><dd>{_E(sp_call)} · {_E(sp_tag)}</dd></div>'
             f'<div><dt>Why</dt><dd>{_E(why)}</dd></div>'
             f'<div><dt>Type</dt><dd>{t} · {_E(TY[t]["name"])}</dd></div>'
             f'<div><dt>Type {t} {sr} group</dt><dd>{_E(sgrp)}</dd></div>'
-            f'<div><dt>DraftKings check</dt><dd>{_E(dkd)}</dd></div>'
+            f'<div><dt>Agreement check</dt><dd>{_E(dkd)}</dd></div>'
             f'<div><dt>Result</dt><dd>{spres}</dd></div></dl></details>'
             f'<details class="gx gx-ml" data-kind="moneyline" data-posted="{"yes" if mlok else "no"}"><summary><span class="gx-k">Moneyline details</span></summary><dl>'
             f'<div><dt>Side</dt><dd>{mt} ({mfd})</dd></div>'
@@ -194,12 +197,16 @@ def game_card(g):
 def _rt(rt):
     w,l,p,u,n=at(rt); return f'<div><span class="ds-k">{rt} record</span><span class="ds-v">{w}-{l}-{p}<small class="{"pos" if u>0 else "neg"}">{usd(u)} · {n} plays</small></span></div>'
 _cnt={k:sum(g['rating']==k for g in ALL6) for k in ('STRONG','LEAN','PASS')}
-_dkbets=any(g.get('agree')=='DraftKings bets %' for g in ALL6)
+_ags=sorted({g.get('agree') for g in ALL6 if g.get('agree')})
+_asrc=('SportsBettingDime money % (all-books SAO primary)' if 'SBD money' in _ags else
+       'All-books money only (SAO; capped at LEAN)' if set(_ags)<={'SAO only'} else
+       'DraftKings bets % (handle unavailable)' if 'DraftKings bets %' in _ags else
+       'DraftKings money %' if 'DraftKings' in _ags else 'Money-only agreement')
 HOME2=(f'<main id="main" class="ds-main" tabindex="-1"><h1>Week {GW} board</h1>'
   f'<p class="ds-sub">{len(ALL6)} games tracked · {_cnt["STRONG"]} STRONG · {_cnt["LEAN"]} LEAN · {_cnt["PASS"]} PASS · sorted by kickoff (CT)</p>'
   f'<section aria-label="Season records and data source" class="ds-strip">{_rt("STRONG")}{_rt("LEAN")}'
   f'<div><span class="ds-k">Data</span><span class="ds-v sm">As of {_E(_etlbl(max(g['split_utc'] for g in ALL6)))}</span></div>'
-  f'<div><span class="ds-k">Agreement source</span><span class="ds-v sm txt">DraftKings {"bets % (handle unavailable)" if _dkbets else "money %"}</span></div></section>'
+  f'<div><span class="ds-k">Agreement source</span><span class="ds-v sm txt">{_E(_asrc)}</span></div></section>'
   f'<section aria-labelledby="slate"><h2 id="slate" class="ds-h2">Full slate</h2>'
   f'<p class="ds-legend">Each card: the play, Spread (blue) and Moneyline (purple), then what the book needs. Tap details for lines and groups.</p>'
   f'<ol class="slate">{"".join(game_card(g) for g in ALL6)}</ol></section>'
@@ -251,7 +258,7 @@ for _f in _gg.glob(R+'*.html'):
     for _a,_c in (('Tracking · not a play · ','Tracking · '),('tracking · not a play','tracking only'),(' · not a play',''),('not a play','tracking only')): _x=_x.replace(_a,_c)
     if '<h1' not in _x and _b in _TTL: _x=re.sub(r'(<main[^>]*>|<div id="main" tabindex="-1"></div>)',lambda m:m.group(1)+f'<h1 class="ds-pt">{_TTL[_b]}</h1>',_x,count=1)
     if _b=='tygif-how.html':
-        _ol='<ol>'+''.join(f'<li value="{k}"><b>Type {k} · {TY[k]["name"]}:</b> '+_d+'</li>' for k,_d in ((1,'65%+ of the money on a favorite giving 6+ points. Take the underdog.'),(2,'65%+ of the money and most bets on one team. Take the other team.'),(3,'55–64% of the money on one team. LEAN at most; money and bets on different teams is a pass. Type 3 underdog: pass on the moneyline; spread unaffected.'),(4,'all books and DraftKings have the money on different teams. PASS.'),(5,'under 55% of the money on either team. PASS.')))+'</ol>'
+        _ol='<ol>'+''.join(f'<li value="{k}"><b>Type {k} · {TY[k]["name"]}:</b> '+_d+'</li>' for k,_d in ((1,'65%+ of the money on a favorite giving 6+ points. Take the underdog.'),(2,'65%+ of the money and most bets on one team. Take the other team.'),(3,'55–64% of the money on one team. LEAN at most; money and bets on different teams is a pass. Moneyline shares the same STRONG/LEAN/PASS grade as the spread.'),(4,'all books and DraftKings have the money on different teams. PASS.'),(5,'under 55% of the money on either team. PASS.')))+'</ol>'
         _x=re.sub(r'(<h2>Game types</h2>\s*<p[^>]*>[^<]*</p>\s*)<ol>.*?</ol>',lambda m:m.group(1)+_ol,_x,count=1,flags=re.S)
         _x=_x.replace('<li>Weeks 1–4: all-books splits only','<li>Every game is graded at the DraftKings line, price and moneyline we recorded last at least 5 minutes before kickoff; where nothing was recorded, at the DraftKings closing numbers.</li><li>Weeks 1–4: all-books splits only',1)
     _x=re.sub(r'<img((?![^>]*alt=)[^>]*)>',r'<img alt=""\1>',_x)

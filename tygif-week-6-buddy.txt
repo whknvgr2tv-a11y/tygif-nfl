@@ -10,11 +10,11 @@ LEAN Tampa Bay +1.5 · Final TB 19–26 · loss −$100
 LEAN LA Chargers +7.5 · Final LAC 6–22 · loss −$100
 LEAN Las Vegas +5.5 · Final LV 30–33 · win +$89
 STRONG Denver ML · Final 17–14 · win +$124
-STRONG Cleveland ML
 STRONG Tennessee ML · Final 26–20 · win +$235
 STRONG NY Jets ML · Final 19–26 · loss −$100
-STRONG Tampa Bay ML · Final 19–26 · loss −$100
+STRONG Philadelphia ML · Final 14–25 · loss −$100
 STRONG Arizona ML · Final 18–16 · win +$525
-STRONG LA Chargers ML · Final 6–22 · loss −$100
-STRONG Las Vegas ML · Final 30–33 · loss −$100
-PASS fade side · Cleveland ML · win +$145
+LEAN New Orleans ML · Final 34–27 · win +$93
+LEAN Tampa Bay ML · Final 19–26 · loss −$100
+LEAN LA Chargers ML · Final 6–22 · loss −$100
+LEAN Las Vegas ML · Final 30–33 · loss −$100
