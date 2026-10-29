@@ -245,20 +245,24 @@ def _rec(rs,k):
     return f'{w}-{l}-{p} <small class="{"pos" if u>0 else ("neg" if u<0 else "")}">{usd(u)}</small>'
 def _hub():
     xs=[x for x in SIDES if x['role']=='fade' and (x['sp_res'] or x['ml_res'])]
+    _FLAGS=[f for f in json.load(open(R+'data/sides_log.json'))['flags']]
     rr=lambda r,u: '—' if not r else f'<span class="{dict(W="pos",L="neg",P="")[r]}">{dict(W="Win",L="Loss",P="Push")[r]} {usd(u or 0)}</span>'
     summ='';det=''
     for bk in _BK:
         g=sorted([x for x in xs if _bucket(x)==bk],key=lambda x:(x['week'],x['game']))
         spc='Spread' if bk!='PASS' else 'Spread (tracked)'; mlc='Moneyline' if bk!='PASS' else 'Moneyline (tracked)'
-        summ+=f'<tr><th scope="row">{bk}</th><td>{len(g)}</td><td>{_rec(g,"sp") if bk!="Moneyline only" else "—"}</td><td>{_rec(g,"ml") if bk in ("Moneyline only","Both","PASS") else "—"}</td><td>{_BKD[bk]}</td></tr>'
-        rows=''.join(f'<tr><td>{x["week"]}</td><td>{x["game"].replace("@"," at ")}</td><td>{x["team"]}</td><td>{x["rating"]}</td><td>Type {x["type"]}</td><td>{"Favorite" if x["fd"]=="Fav" else "Underdog"}</td>'
+        summ+=f'<tr><th scope="row">{bk}</th><td>{len(g)+(len(_FLAGS) if bk=="PASS" else 0)}</td><td>{_rec(g,"sp") if bk!="Moneyline only" else "—"}</td><td>{_rec(g,"ml") if bk in ("Moneyline only","Both","PASS") else "—"}</td><td>{_BKD[bk]}</td></tr>'
+        if bk=='PASS':
+            for w,gm,_ in _FLAGS: g.append({'week':w,'game':gm,'flag':1})
+            g.sort(key=lambda x:(x['week'],x['game']))
+        rows=''.join(f'<tr><td>{x["week"]}</td><td>{x["game"].replace("@"," at ")}</td><td colspan="6">No side: money split 50–50, nothing to track</td></tr>' if x.get('flag') else f'<tr><td>{x["week"]}</td><td>{x["game"].replace("@"," at ")}</td><td>{x["team"]}</td><td>{x["rating"]}</td><td>Type {x["type"]}</td><td>{"Favorite" if x["fd"]=="Fav" else "Underdog"}</td>'
                      f'<td>{rr(x["sp_res"],x["sp_usd"]) if bk!="Moneyline only" else "—"}</td><td>{rr(x["ml_res"],x["ml_usd"]) if bk!="Spread only" else "—"}</td></tr>' for x in g)
         det+=(f'<details class="gx" id="hub-{bk.split()[0].lower()}"><summary>{bk} · {len(g)} games</summary>'
               + (f'<div class="tblwrap"><table class="data"><thead><tr><th scope="col">Week</th><th scope="col">Game</th><th scope="col">Side</th><th scope="col">Rating</th><th scope="col">Type</th><th scope="col">Fav/Dog</th><th scope="col">{spc}</th><th scope="col">{mlc}</th></tr></thead><tbody>{rows}</tbody></table></div>' if g else '<p class="ds-legend">No games in this bucket yet.</p>')
               +'</details>')
-    n=len({(x['week'],x['game']) for x in xs})
+    n=len({(x['week'],x['game']) for x in xs})+len(_FLAGS)
     return ('<section id="hub" aria-labelledby="hubh"><h2 id="hubh" class="ds-h2">Season records</h2>'
-            f'<p class="ds-legend">All {n} graded games, each in exactly one bucket. Flat $100 per play. Open a bucket to see every game with its type, Favorite/Underdog and result.</p>'
+            f'<p class="ds-legend">All {n} graded games, each in exactly one bucket. Flat $100 per play. PASS records count only games with a trackable side (2 PASS games had a 50–50 money split). Open a bucket to see every game with its type, Favorite/Underdog and result.</p>'
             '<div class="tblwrap"><table class="data"><thead><tr><th scope="col">Bucket</th><th scope="col">Games</th><th scope="col">Spread record</th><th scope="col">Moneyline record</th><th scope="col">Meaning</th></tr></thead>'
             f'<tbody>{summ}</tbody></table></div>{det}</section>')
 _tf=R+'tygif-tracker.html'; _x=open(_tf,encoding='utf-8').read()
