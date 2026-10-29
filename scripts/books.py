@@ -108,6 +108,37 @@ def write_an_books(d, stamp):
     json.dump({'stamp': stamp, 'source': 'actionnetwork per-book prices', 'games': out}, open(f'{d}/an_books_{stamp}.json', 'w'), indent=1)
     return out
 
+SBD_API = ('https://www.sportsbettingdime.com/wp-json/adpt/v1/nfl-odds'
+           '?books=sr%3Abook%3A17324%2Csr%3Abook%3A18149%2Csr%3Abook%3A18186&format=us')
+SBD_ALIAS = {'JAX': 'JAC', 'LAR': 'LA', 'WSH': 'WAS'}
+
+def write_sbd(d, stamp):
+    """SportsBettingDime splits -> sbd_<stamp>.json. Fail-open. EVIDENCE ONLY / SAO backup.
+    Discovery 2026-10-29: SBD stake%/bets% match SAO within ~0.7 pts on all 13 overlapping W8 games
+    (CAR@GB SAO sp 52/ml 28 vs SBD 51.97/28.5) -> same upstream feed, NOT independent; never used for agreement."""
+    import urllib.request
+    try:
+        r = urllib.request.Request(SBD_API, headers={'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36'})
+        j = json.load(urllib.request.urlopen(r, timeout=25))
+    except Exception as e:
+        print(f'SBD: fail-open ({e})'); return None
+    out = []
+    for g in j.get('data', []):
+        c = g.get('competitors') or {}; b = g.get('bettingSplits') or {}
+        a, h = [SBD_ALIAS.get(c.get(k, {}).get('abbreviation'), c.get(k, {}).get('abbreviation')) for k in ('away', 'home')]
+        sp, ml = b.get('spread') or {}, b.get('moneyline') or {}
+        pick = lambda m, k, f: (lambda v: None if v in (None, '') else round(float(v), 2))((m.get(k) or {}).get(f))
+        r = {'away': a, 'home': h, 'scheduled': g.get('scheduled'), 'source': 'sbd', 'updated': sp.get('updated') or ml.get('updated'),
+             'spread_money': [pick(sp, 'away', 'stakePercentage'), pick(sp, 'home', 'stakePercentage')],
+             'spread_bets': [pick(sp, 'away', 'betsPercentage'), pick(sp, 'home', 'betsPercentage')],
+             'ml_money': [pick(ml, 'away', 'stakePercentage'), pick(ml, 'home', 'stakePercentage')],
+             'ml_bets': [pick(ml, 'away', 'betsPercentage'), pick(ml, 'home', 'betsPercentage')]}
+        if None not in r['spread_money'] + r['ml_money']:
+            r['all_money'] = [round((x + y) / 2, 1) for x, y in zip(r['spread_money'], r['ml_money'])]
+        out.append(r)
+    json.dump({'stamp': stamp, 'source': 'sportsbettingdime (SAO echo; evidence only)', 'games': out}, open(f'{d}/sbd_{stamp}.json', 'w'), indent=1)
+    return out
+
 def books_panel(d, stamp):
     """Per SAO game: books present with spread/ML/all-money % (away, home) + hold. Missing books listed explicitly."""
     sao, saoml = _load(d, 'sao', stamp), _load(d, 'saoml', stamp)
@@ -145,7 +176,9 @@ def books_panel(d, stamp):
         put((g['away'], g['home']), 'espn_dk_prices', v)
     for g in (_load(d, 'an_books', stamp) or {}).get('games', []):
         for b, v in g['books'].items(): put((g['away'], g['home']), f'an_{b}_prices', v)
-    allb = ('sao_all_books', 'draftkings', 'circa', 'espn_dk_prices') + tuple(f'an_{b}_prices' for b in AN_BOOKS.values())
+    for g in (_load(d, 'sbd', stamp) or {}).get('games', []):
+        put((g['away'], g['home']), 'sbd_sao_echo', {k: g[k] for k in ('spread_money', 'spread_bets', 'ml_money', 'all_money', 'updated') if k in g})
+    allb = ('sao_all_books', 'sbd_sao_echo', 'draftkings', 'circa', 'espn_dk_prices') + tuple(f'an_{b}_prices' for b in AN_BOOKS.values())
     for g in games.values(): g['missing'] = [b for b in allb if b not in g['books']]
     out = {'stamp': stamp, 'note': 'evidence only; ratings still SAO all-money + DK agreement. Pairs are [away, home].',
            'coverage': {b: sum(b in g['books'] for g in games.values()) for b in allb}, 'games': list(games.values())}
@@ -156,6 +189,8 @@ def run(d, stamp):
     c = write_circa(d, stamp)
     try: write_an_books(d, stamp)
     except Exception as e: print(f'AN books: fail-open ({e})')
+    try: write_sbd(d, stamp)
+    except Exception as e: print(f'SBD: fail-open ({e})')
     p = books_panel(d, stamp)
     print(f'Circa: {len(c) if c is not None else "no html"} games parsed; books panel coverage {p["coverage"]} of {len(p["games"])}')
     return p
