@@ -922,6 +922,94 @@
    "espn_event": "401873023",
    "price": 164,
    "fd": "Dog"
+  },
+  {
+   "week": 8,
+   "game": "BAL@BUF",
+   "rating": "STRONG",
+   "side": "BAL",
+   "spread_line": 3.0,
+   "status": "preview",
+   "espn_event": "401873026",
+   "price": 142,
+   "fd": "Dog"
+  },
+  {
+   "week": 8,
+   "game": "TEN@CIN",
+   "rating": "STRONG",
+   "side": "TEN",
+   "spread_line": 11.5,
+   "status": "preview",
+   "espn_event": "401873031",
+   "price": 380,
+   "fd": "Dog"
+  },
+  {
+   "week": 8,
+   "game": "MIN@DET",
+   "rating": "LEAN",
+   "side": "MIN",
+   "spread_line": 3.0,
+   "status": "preview",
+   "espn_event": "401873030",
+   "price": 142,
+   "fd": "Dog"
+  },
+  {
+   "week": 8,
+   "game": "LV@NYJ",
+   "rating": "STRONG",
+   "side": "NYJ",
+   "spread_line": -1.5,
+   "status": "preview",
+   "espn_event": "401873029",
+   "price": -125,
+   "fd": "Fav"
+  },
+  {
+   "week": 8,
+   "game": "ATL@TB",
+   "rating": "STRONG",
+   "side": "TB",
+   "spread_line": -2.5,
+   "status": "preview",
+   "espn_event": "401873025",
+   "price": -142,
+   "fd": "Fav"
+  },
+  {
+   "week": 8,
+   "game": "IND@JAX",
+   "rating": "STRONG",
+   "side": "IND",
+   "spread_line": 10.0,
+   "status": "preview",
+   "espn_event": "401873028",
+   "price": 370,
+   "fd": "Dog"
+  },
+  {
+   "week": 8,
+   "game": "LAC@LAR",
+   "rating": "STRONG",
+   "side": "LAC",
+   "spread_line": 6.5,
+   "status": "preview",
+   "espn_event": "401873032",
+   "price": 230,
+   "fd": "Dog"
+  },
+  {
+   "week": 8,
+   "game": "NE@MIA",
+   "rating": "STRONG",
+   "side": "MIA",
+   "spread_line": 7.0,
+   "status": "preview",
+   "espn_event": "401873034",
+   "price": 250,
+   "fd": "Dog"
   }
  ]
 }

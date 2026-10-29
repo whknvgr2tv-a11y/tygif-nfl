@@ -223,8 +223,8 @@ def qa(g):
     rows.append(('b','Does one team have 65% or more of the money?',g['b'],db,'ok' if g['b'] else 'no'))
     # c: DraftKings same side
     dkn=f" ({g['dk_note_short']})" if g.get('dk_note_short') else ''
-    if g.get('dk_vsin'): dkn+=' (DK splits via VSiN; DK page empty)'
-    if g.get('agree')=='none': dc="No independent book money (DraftKings, VSiN-DK, Circa all dark), so no agreement; PASS"
+    if g.get('agree')=='DraftKings bets %': dkn+=' of bets (game page; board down, no handle)'
+    if g.get('agree')=='none': dc="No DraftKings split (board and game page both dark), so no agreement; PASS"
     elif g['c'] is None: dc="Not recorded for Weeks 1–4"
     elif even: dc=f"All books are split 50–50, so there is no money side to match; DraftKings has {D} {g['dk_m']}%"
     elif g['c']: dc=f"DraftKings has {D} {g['dk_m']}%{dkn}"
@@ -321,14 +321,15 @@ def _git(*a): return subprocess.run(['git','-C',R]+list(a),capture_output=True,t
 def _snaps(kind, local_glob):
     out=[]
     for f in _git('ls-tree','--name-only','-r','origin/snapshots','snapshots/').split():
-        if f.split('/')[-1].startswith(kind+'_'):
+        if re.match(kind+r'_\d{8}T',f.split('/')[-1]):
             d=json.loads(_git('show','origin/snapshots:'+f)); out.append((d['fetched_utc'],'snapshots branch '+f.split('/')[-1],d))
-    for f in _g0.glob(local_glob+kind+'_*.json'):
+    for f in _g0.glob(local_glob+kind+'_2*.json'):   # dk_2026... only (not dk_sb_bets_*)
         d=json.load(open(f)); out.append((d['fetched_utc'],'scripts/snapshot.py pull '+f.split('/')[-1],d))
     return sorted(out,key=lambda x:x[0])
 def _dk_rows(d):
     o={}
     for g in d['games']:
+        if 'vsin' in str(g.get('source','')).lower(): continue   # TG, Oct 29: no VSiN (old backup rows ignored)
         sp={}
         for s in g['spread']:
             t=s['side'].split(); sp[_NK[t[1]]]=dict(line=t[-1],money=s['handle_pct'],bets=s['bets_pct'])
@@ -337,6 +338,7 @@ def _dk_rows(d):
 def _dkml_rows(d):   # DK moneyline splits page: side text 'ARI Cardinals' (no line)
     o={}
     for g in d['games']:
+        if 'vsin' in str(g.get('source','')).lower() or str(g.get('spread',[{}])[0].get('side','')).startswith('VSiN'): continue
         sp={_NK[s_['side'].split()[-1]]:dict(money=s_['handle_pct'],bets=s_['bets_pct']) for s_ in g['spread'] if s_['side'].split()[-1] in _NK}
         if len(sp)==2: o[frozenset(sp)]=sp
     return o
@@ -496,22 +498,20 @@ def _live_weeks():
     cap=os.environ.get('TYGIF_WEEK')
     return [w for w in out if not cap or w<=int(cap)]
 class _NotReady(Exception): pass
-def _circa_rows(WK):
-    """vsin_circa_<stamp>.json in snap_w{WK}_* -> [(utc, src, {key:{sp:{ab:{line,money,bets}}, ml:{ab:(money,bets)}}})]"""
-    out=[]
-    for f in sorted(_g0.glob(_W+f'/snap_w{WK}_*/vsin_circa_*.json')):
-        st=f.split('_')[-1][:-5]; utc=f'{st[:4]}-{st[4:6]}-{st[6:8]}T{st[9:11]}:{st[11:13]}:00Z'
-        rows={}
-        for g in json.load(open(f)).get('games',[]):
-            sp={}; ml={}
-            for x in g.get('spread',[]):
-                t=x['side'].split(); ab=_NK.get(t[-2]) if len(t)>2 else None
-                if ab and x.get('handle_pct') is not None: sp[ab]=dict(line=t[-1],money=x['handle_pct'],bets=x['bets_pct'])
-            for x in g.get('moneyline',[]):
-                ab=_NK.get(x['side'].split()[-1])
-                if ab and x.get('handle_pct') is not None: ml[ab]=(x['handle_pct'],x['bets_pct'])
-            if len(sp)==2: rows[frozenset(sp)]=dict(sp=sp,ml=ml if len(ml)==2 else {})
-        out.append((utc,'scripts/snapshot.py pull '+f.split('/')[-1],rows))
+def _dksb_rows(WK):
+    """DraftKings sportsbook per-game % of bets placed (dk_sb_bets_<stamp>.json via scripts/dk_sb_bets.py).
+    BETS % ONLY (no handle) -> money=bets so the agreement side is DK bettors' side; labelled 'DraftKings bets %'.
+    -> [(utc, src, {key:{sp:{ab:{line,money,bets}}, ml:{ab:(money,bets)}}})]"""
+    out=[]; fm=lambda v:('PK' if v==0 else (f'+{v:g}' if v>0 else f'{v:g}'))
+    for f in sorted(_g0.glob(_W+f'/snap_w{WK}_*/dk_sb_bets_*.json')):
+        d=json.load(open(f)); rows={}
+        for g in d.get('games',[]):
+            A,H=g['away'],g['home']; la=g.get('spread_line_away')
+            if la is None or g.get('spread_bets_away') is None: continue
+            sp={A:dict(line=fm(la),money=g['spread_bets_away'],bets=g['spread_bets_away']),H:dict(line=fm(-la),money=g['spread_bets_home'],bets=g['spread_bets_home'])}
+            ml={A:(g['ml_bets_away'],g['ml_bets_away']),H:(g['ml_bets_home'],g['ml_bets_home'])} if g.get('ml_bets_away') is not None else {}
+            rows[frozenset((A,H))]=dict(sp=sp,ml=ml)
+        out.append((d['fetched_utc'],'DraftKings sportsbook game page '+f.split('/')[-1],rows))
     return sorted(out,key=lambda x:x[0])
 def _dk_line(WK,key,at_utc):
     """DraftKings spread line (prices only) from the latest AN per-book / ESPN DK file at or before at_utc. {ab:'+3.5'} or None"""
@@ -552,18 +552,19 @@ def build_wk(WK):
         if not sap:   # no all-books (SAO) pull yet -> nothing to fade; off the card (never an invented split)
             NODK.setdefault(WK,[]).append(f'{A}@{H}'); continue
         sa_t,sa_src,sa_row=sap[-1]; gm=f'{A}@{H}'
-        # TG, Oct 29 ("just pull it each time ... work arounds"): fail-open agreement chain DK own -> VSiN-DK -> Circa -> none.
+        # TG, Oct 29: no VSiN. Agreement = DraftKings own only: Network board (handle) -> sportsbook per-game bets % -> none.
         # AN per-book money% is AN consensus (not independent) -> never used here.
         agree='none'; dk_ml=None; dk_vsin=False
+        sbp=[x for x in _dksb_rows(WK) if _P(lo_s)<_P(x[0])<=_P(cut_s) and key in x[2]]
+        if dkp and sbp and _P(sbp[-1][0])>_P(dkp[-1][0]): dkp=[]   # freshest DK-own read wins (board handle vs newer game-page bets %)
         if dkp:
             dk_t,dk_src,dk=dkp[-1]
-            dk_vsin=any('vsin' in str(d_.get('source','')).lower() for t_,s_,d_ in DKS6 if s_==dk_src and t_==dk_t)   # TG, Oct 29: disclose VSiN DK backup
-            agree='DraftKings via VSiN' if dk_vsin else 'DraftKings'; dk_ml=_ml_for(DKML6,dk_src,key,_dkml_rows)
+            agree='DraftKings'; dk_ml=_ml_for(DKML6,dk_src,key,_dkml_rows)
         else:
-            cp=[x for x in _circa_rows(WK) if _P(lo_s)<_P(x[0])<=_P(cut_s) and key in x[2]]
+            cp=sbp
             if cp:
                 dk_t,dk_src,cr=cp[-1]; dk={k:dict(line=v['line'],money=v['money'],bets=v['bets']) for k,v in cr[key]['sp'].items()}
-                dk_ml={k:dict(money=v[0],bets=v[1]) for k,v in cr[key]['ml'].items()} or None; agree='Circa (VSiN)'
+                dk_ml={k:dict(money=v[0],bets=v[1]) for k,v in cr[key]['ml'].items()} or None; agree='DraftKings bets %'
             else:   # no independent book money: PASS (Type 4), line from DK prices (AN/ESPN), money shown as unknown
                 ln=_dk_line(WK,key,sa_t)
                 if ln is None: NODK.setdefault(WK,[]).append(gm); continue
@@ -589,7 +590,7 @@ def build_wk(WK):
         ko=_ET(e['date'].replace('Z',':00Z'))
         city=c.get('venue',{}).get('address',{}).get('city','')
         when=f"{ko.strftime('%a %b')} {ko.day} · {int(ko.strftime('%I'))}:{ko.strftime('%M %p')} CT · "+', '.join(n for b in c.get('broadcasts',[]) for n in b['names'])+(' · London' if city=='London' else '')
-        if agree=='none' and abm>50: why='No independent book money (DraftKings, VSiN-DK and Circa all dark) — PASS'
+        if agree=='none' and abm>50: why='No DraftKings split (board and game page both dark) — PASS'
         elif ty==4: why=(f'{agree} money split exactly 50/50 (no side)' if dk_tie else f'{agree} has the money on the other side')
         elif ty==5: why='Under 55% of the money on either side'
         elif abb<50: why='Money and bets on different sides'
@@ -946,10 +947,26 @@ def books_need(g):
     return out
 def _ln(x): return ('+' if x>0 else ('' if x==0 else M))+f'{abs(x):g}' if x else 'PK'
 def _od(o): return ('+' if o>0 else M)+str(abs(o))
+def book_view(g):
+    """TG, Oct 29: what the book needs. All-books money on the public side vs DraftKings break-even (AN prices).
+    money > break-even  -> book EXPOSED on the public side, it needs the fade = we sit with the book.
+    lock_lo <= money <= break-even -> book LOCKED (wins either way; fade has no book tailwind).
+    money < lock_lo -> book needs the public side (against the fade). -> dict or None"""
+    bk=_anb(g).get('draftkings') or {}; be_=bk.get('breakeven_pct')
+    if not be_ or g.get('ab_m') is None or g['ab_m']<=50: return None
+    pub=AB[g['ab_side']]; i=0 if pub==g['A'] else 1; be,lo=be_[i],100-be_[1-i]; m=g['ab_m']
+    st='exposed' if m>be else ('locked' if m>=lo else 'against')
+    return dict(state=st,pub=pub,money=m,be=be,lock_lo=lo,edge=round(m-be,1),hold=bk.get('hold_pct'),fade=AB[g['fade']])
+def book_line(g):
+    v=book_view(g)
+    if not v: return ''
+    return {'exposed':f"Book needs {v['fade']}: {v['pub']} has {v['money']}% of the money vs {v['be']:.1f}% DK break-even (+{v['edge']:g}) — fade sits with the book",
+            'locked':f"Book locked: {v['pub']} {v['money']}% is inside DK's win-both range {v['lock_lo']:.1f}–{v['be']:.1f}% — no book tailwind",
+            'against':f"Book needs {v['pub']}: money {v['money']}% under {v['lock_lo']:.1f}% — fade is against the book"}[v['state']]
 def bn_html(g):
-    bn=books_need(g)
-    if not bn: return ''
-    h='<span class="bn"><span class="bn-h">Books need <small>spread price · hold · break-even</small></span>'
+    bn=books_need(g); bl=book_line(g)
+    if not bn: return (f'<span class="bn"><span class="bn-h">{bl}</span></span>' if bl else '')
+    h='<span class="bn">'+(f'<span class="bn-h bn-view">{bl}</span>' if bl else '')+'<span class="bn-h">Books need <small>spread price · hold · break-even</small></span>'
     for tm,rows,bs,ws in bn:
         h+=f'<span class="bn-t">{NAME[tm]}</span>'
         for b,l,o,hd,be in rows:
@@ -958,7 +975,7 @@ def bn_html(g):
             h+=f'<span class="bn-r{c}"><span>{b}{tag}</span><b>{tm} {_ln(l)} {_od(o)}</b><span>{hd:.2f}%</span><span>{be:.2f}%</span></span>'
     return h+'</span>'
 def bn_txt(g):
-    out=[]
+    out=['    '+book_line(g)] if book_line(g) else []
     for tm,rows,bs,ws in books_need(g):
         b0=rows[0]; w0=rows[-1]
         out.append(f"    books need {tm}: best {'/'.join(r[0] for r in rows if r[0] in bs)} {tm} {_ln(b0[1])} {_od(b0[2])} (hold {b0[3]:.2f}%, break-even {b0[4]:.2f}%)"
@@ -975,7 +992,7 @@ def card_inner(g):
         title=f'{g["away"]} at {g["home"]}'; vs=''; trec='PASS'
     m=g['ab_m']; mcls='ok' if m>=65 else 'md'
     cells=[('Money',f'{AB[g["ab_side"]]} {m}%',mcls),('Bets',f'{AB[g["ab_side"]]} {g["ab_b"]}%','ok' if g['a'] else 'no'),
-           (('DraftKings','—','md') if g['c'] is None else (('Agree book','No book money','md') if g.get('agree')=='none' else ((g.get('agree') or ('DraftKings via VSiN' if g.get('dk_vsin') else 'DraftKings')),'Same' if g['c'] else 'Opposite','ok' if g['c'] else 'no'))),
+           (('DraftKings','—','md') if g['c'] is None else (('Agree book','No book money','md') if g.get('agree')=='none' else ((g.get('agree') or 'DraftKings'),'Same' if g['c'] else 'Opposite','ok' if g['c'] else 'no'))),
            ('Line','Steady' if _steady(g) else 'Moved','md')]   # TG, Oct 25: info only
     grid=''.join(f'<span>{a}<b class="{c}">{v}</b></span>' for a,v,c in cells)
     fz=g.get('final'); sc=g.get('score_txt') or _score(g)
@@ -1109,7 +1126,7 @@ MLS6=sorted(ml_games(G6,GW),key=lambda g:_RO[g['rating']]); MLS5=sorted([g for g
 _up=[g for g in plays if not g.get('final')]; _fin=[g for g in plays if g.get('final')]
 FINNOTE=''
 ALL6=sorted(G6,key=_kick); ALL5=sorted(G,key=_kick)
-_NOTE6=(f' Only {", ".join(g["away"]+" at "+g["home"] for g in GBY[GW])} is rated so far; the other {len(NODK[GW])} Week {GW} games are unrated until DraftKings (or VSiN DK backup) splits exist.' if NODK.get(GW) else '')+(' DK splits via VSiN (DK page empty).' if any(g.get('dk_vsin') for g in GBY[GW]) else '')+(f' {sum(g.get("agree")=="none" for g in GBY[GW])} games PASS: no independent book money (DK, VSiN-DK, Circa).' if any(g.get('agree')=='none' for g in GBY[GW]) else '')
+_NOTE6=(f' Only {", ".join(g["away"]+" at "+g["home"] for g in GBY[GW])} is rated so far; the other {len(NODK[GW])} Week {GW} games are unrated until a DraftKings split exists.' if NODK.get(GW) else '')+(' DraftKings board down: agreement uses DraftKings game-page bets % (no handle).' if any(g.get('agree')=='DraftKings bets %' for g in GBY[GW]) else '')+(f' {sum(g.get("agree")=="none" for g in GBY[GW])} games PASS: no DraftKings split.' if any(g.get('agree')=='none' for g in GBY[GW]) else '')
 WEEK=(f'<div class="sec-h"><h2>Week {GW}</h2><p class="q">{SRC6}.{_NOTE6}</p></div>'
       f'<div class="cdl">{"".join(play_card(g) for g in ALL6)}</div>'
       +f'<p class="sec-n">Text versions: <a href="tygif-week-{GW}-plays.txt">full card</a> · <a href="tygif-week-{GW}-LOCK.txt">one-page card</a> · <a href="tygif-week-{GW}-buddy.txt">short version</a> · Week {GW-1} finals are in <a href="tygif-deep-dive.html#w{GW-1}">Game by game</a></p>')
@@ -1766,9 +1783,9 @@ def txt_clean(GG,wk,asof):
         P.append(''); L.append('')
     P+=['PASS']
     for g in ps: P+=[f"  {g['away']} at {g['home']}"+(' (no independent book money)' if g.get('agree')=='none' else '')]+([] if fin else bn_txt(g))
-    if not fin and NODK.get(wk): P+=['',f"PARTIAL SLATE: only {len(GG)} of {len(GG)+len(NODK[wk])} Week {wk} games rated so far; the other {len(NODK[wk])} are unrated until DraftKings (or VSiN DK backup) splits exist."]
-    if not fin and any(g.get('dk_vsin') for g in GG): P+=['','DK splits via VSiN (DK page empty).']
-    if not fin and any(g.get('agree')=='none' for g in GG): P+=['','Agreement chain: DraftKings -> VSiN-DK -> Circa. Games with none of these are PASS (no independent book money; never invented).']
+    if not fin and NODK.get(wk): P+=['',f"PARTIAL SLATE: only {len(GG)} of {len(GG)+len(NODK[wk])} Week {wk} games rated so far; the other {len(NODK[wk])} are unrated until a DraftKings split exists."]
+    if not fin and any(g.get('agree')=='DraftKings bets %' for g in GG): P+=['','DraftKings board down: agreement = DraftKings game-page % of bets (bets only, no handle).']
+    if not fin and any(g.get('agree')=='none' for g in GG): P+=['','Agreement: DraftKings own only (board handle -> game-page bets %). Games with neither are PASS (never invented).']
     for g in pl: P+=[f"  agreement book for {g['away']} at {g['home']}: {g.get('agree','DraftKings')}"] if not fin else []
     L+=['PASS']+[f"  {g['away']} at {g['home']}" for g in ps]
     for f,lines in ((f'tygif-week-{wk}-plays.txt',P),(f'tygif-week-{wk}-LOCK.txt',L),(f'tygif-week-{wk}-buddy.txt',B)):
@@ -1861,7 +1878,7 @@ def _selfcheck():
             if c.select_one('.cd-b').get_text()!=r or f's-{r}' not in c['class'] or r not in c.select_one('.cd-b')['class']: errs.append((f,gid,'badge'))
             if c.select_one('.cd-c').get_text()!=(f"{g['away']} at {g['home']}" if (g['rating']=='PASS' or gid in FULL) else f"{g['fade']} {g['sp'][AB[g['fade']]]}") or ('full' in c['class'])!=(gid in FULL): errs.append((f,gid,'call'))
             if c.select_one('.cd-2 .c2').get_text()!=f"Type {g['type']} · {TY[g['type']]['name']}": errs.append((f,gid,'type'))
-            cells={('DraftKings' if s.contents[0] in ('DraftKings via VSiN','Circa (VSiN)','Agree book') else s.contents[0]):(s.b.get_text(),s.b['class'][0]) for s in c.select('.cd-3 span')}
+            cells={('DraftKings' if s.contents[0] in ('DraftKings bets %','Agree book') else s.contents[0]):(s.b.get_text(),s.b['class'][0]) for s in c.select('.cd-3 span')}
             want={'Money':f"{A} {g['ab_m']}%",'Bets':f"{A} {g['ab_b']}%",'DraftKings':'No book money' if g.get('agree')=='none' else ('Same' if g['c'] else 'Opposite'),'Line':'Steady' if _steady(g) else 'Moved'}
             for k,v in want.items():
                 if cells[k][0]!=v: errs.append((f,gid,k,cells[k],v))
@@ -1874,7 +1891,7 @@ def _selfcheck():
                 if d.select_one('.uc-res b').get_text()!=g['rating']: errs.append((d['id'],'result badge'))
                 face=d.select_one('.cd')
                 if face:
-                    cells={('DraftKings' if s.contents[0] in ('DraftKings via VSiN','Circa (VSiN)','Agree book') else s.contents[0]):s.b.get_text() for s in face.select('.cd-3 span')}
+                    cells={('DraftKings' if s.contents[0] in ('DraftKings bets %','Agree book') else s.contents[0]):s.b.get_text() for s in face.select('.cd-3 span')}
                     if (cells['Bets'] and ans['a'])!=ans['a'] or (cells['DraftKings']=='Same')!=ans['c'] or (cells['Line']=='Steady')!=ans['d'] or sorted(ans)!=list('abcd'):
                         errs.append((d['id'],'face vs checklist',cells,ans))
                 if 'pr' in d['class']:

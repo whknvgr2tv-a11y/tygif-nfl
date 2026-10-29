@@ -33,7 +33,7 @@ def build(R):
     out=[]
     for w in weeks():
         snaps=list(br['dk']); caps=list(br['espn_dk'])
-        for f in glob.glob(_W+f'/snap_w{w}_*/dk_*.json'): d=json.load(open(f)); snaps.append((d['fetched_utc'],'scripts/snapshot.py pull '+f.split('/')[-1],d))
+        for f in glob.glob(_W+f'/snap_w{w}_*/dk_2*.json'): d=json.load(open(f)); snaps.append((d['fetched_utc'],'scripts/snapshot.py pull '+f.split('/')[-1],d))
         for f in glob.glob(_W+f'/snap_w{w}_*/espn_dk_*.json'): d=json.load(open(f)); caps.append((d['fetched_utc'],'scripts/snapshot.py pull '+f.split('/')[-1],d))
         for f in glob.glob(R+'data/espn_dk/espn_dk_*.json'): d=json.load(open(f)); caps.append((d['fetched_utc'],'data/espn_dk/'+f.split('/')[-1],d))
         snaps.sort(key=lambda x:x[0]); caps.sort(key=lambda x:x[0])

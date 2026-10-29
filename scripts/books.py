@@ -186,7 +186,7 @@ def books_panel(d, stamp):
     return out
 
 def run(d, stamp):
-    c = write_circa(d, stamp)
+    c = write_circa(d, stamp) if os.environ.get('TYGIF_VSIN') == '1' else None   # TG Oct 29: no VSiN
     try: write_an_books(d, stamp)
     except Exception as e: print(f'AN books: fail-open ({e})')
     try: write_sbd(d, stamp)

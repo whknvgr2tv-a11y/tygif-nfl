@@ -199,7 +199,10 @@ def main():
         time.sleep(2)
     meta = {'fetched_utc': now.isoformat(timespec='seconds'), 'source': DK.format(mkt='Spread', p='N')}
     vh = None
-    if not dk:   # DK splits page empty/'temporarily unavailable' -> VSiN's DraftKings table (backup only)
+    USE_VSIN = os.environ.get('TYGIF_VSIN') == '1'   # TG, Oct 29 2026: no VSiN. Off unless explicitly re-enabled.
+    if not dk:   # DK board empty -> fallback is DK sportsbook per-game bets% (scripts/dk_sb_bets.py ingest), never VSiN
+        print('DK Network board empty -> use scripts/dk_sb_bets.py ingest (DK sportsbook % of bets)')
+    if not dk and USE_VSIN:
         try:
             vh = get(VSIN.format('DK'))[1]; dk = vsin_dk_parse(vh)
             if dk: meta['source'] = VSIN.format('DK') + ' (backup: DK page empty)'
@@ -257,12 +260,12 @@ def main():
     src = {'fetched_utc': datetime.now(timezone.utc).isoformat(timespec='seconds'),
            'draftkings_splits': len(dk), 'scoresandodds': len(sao)}
     try:
+        if not USE_VSIN: raise RuntimeError('disabled (TG Oct 29: no VSiN)')
         src['vsin'] = vsin_capture(stamp)
         print('VSiN capture:', {k: v.get('bytes', v.get('error')) for k, v in src['vsin'].items()})
     except Exception as ex:
         src['vsin'] = {'error': str(ex)[:200]}
-    src['note'] = ('independent money sources: DraftKings (own book), VSiN Circa (parsed to vsin_circa_*.json + books_panel_*.json, '
-                   'evidence only, not rated). SAO and AN share data.')
+    src['note'] = ('agreement source: DraftKings own only (Network board handle; else sportsbook per-game bets %). SAO and AN share data.')
     try:
         json.dump(src, open(f'{OUT}/sources_{stamp}.json', 'w'), indent=1)
     except Exception as ex:
@@ -290,7 +293,7 @@ def main():
         print('ESPN DraftKings capture failed:', ex); ok = False
     # Phase 1 multi-book evidence: Circa parse + books panel (fail open, not rated)
     try:
-        import books; books.run(OUT, stamp)
+        import books; books.run(OUT, stamp)   # AN per-book prices (books-need); Circa parse only if TYGIF_VSIN=1
     except Exception as ex:
         print('Circa/books panel failed (fail open):', ex)
     # prune (disabled when KEEP_DAYS is None)

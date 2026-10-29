@@ -1,3 +1,17 @@
 Week 8 · Lines as of Thu Oct 29, 8:36 AM CT
 
+STRONG Baltimore +3
+STRONG Tennessee +11.5
+STRONG NY Jets −1.5
+STRONG Tampa Bay −2.5
+STRONG Indianapolis +10
+STRONG LA Chargers +6.5
+STRONG Miami +7
 LEAN Carolina +3.5
+LEAN Minnesota +3
+STRONG Tennessee ML
+STRONG NY Jets ML
+STRONG Tampa Bay ML
+STRONG Indianapolis ML
+STRONG LA Chargers ML
+STRONG Miami ML

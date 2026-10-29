@@ -11,6 +11,78 @@
    "rating": "LEAN",
    "line": "+3.5",
    "kickoff_utc": "2026-10-30T00:15:00Z"
+  },
+  {
+   "game": "BAL@BUF",
+   "team": "BAL",
+   "name": "Baltimore",
+   "nick": "Ravens",
+   "rating": "STRONG",
+   "line": "+3",
+   "kickoff_utc": "2026-11-01T18:00:00Z"
+  },
+  {
+   "game": "TEN@CIN",
+   "team": "TEN",
+   "name": "Tennessee",
+   "nick": "Titans",
+   "rating": "STRONG",
+   "line": "+11.5",
+   "kickoff_utc": "2026-11-01T18:00:00Z"
+  },
+  {
+   "game": "MIN@DET",
+   "team": "MIN",
+   "name": "Minnesota",
+   "nick": "Vikings",
+   "rating": "LEAN",
+   "line": "+3",
+   "kickoff_utc": "2026-11-01T18:00:00Z"
+  },
+  {
+   "game": "LV@NYJ",
+   "team": "NYJ",
+   "name": "NY Jets",
+   "nick": "Jets",
+   "rating": "STRONG",
+   "line": "-1.5",
+   "kickoff_utc": "2026-11-01T18:00:00Z"
+  },
+  {
+   "game": "ATL@TB",
+   "team": "TB",
+   "name": "Tampa Bay",
+   "nick": "Buccaneers",
+   "rating": "STRONG",
+   "line": "-2.5",
+   "kickoff_utc": "2026-11-01T18:00:00Z"
+  },
+  {
+   "game": "IND@JAX",
+   "team": "IND",
+   "name": "Indianapolis",
+   "nick": "Colts",
+   "rating": "STRONG",
+   "line": "+10",
+   "kickoff_utc": "2026-11-01T18:00:00Z"
+  },
+  {
+   "game": "LAC@LAR",
+   "team": "LAC",
+   "name": "LA Chargers",
+   "nick": "Chargers",
+   "rating": "STRONG",
+   "line": "+6.5",
+   "kickoff_utc": "2026-11-01T21:05:00Z"
+  },
+  {
+   "game": "NE@MIA",
+   "team": "MIA",
+   "name": "Miami",
+   "nick": "Dolphins",
+   "rating": "STRONG",
+   "line": "+7",
+   "kickoff_utc": "2026-11-01T21:25:00Z"
   }
  ]
 }
