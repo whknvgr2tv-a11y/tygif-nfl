@@ -10,12 +10,12 @@ html{background:var(--bg)}body{margin:0;background:var(--bg)!important;color:var
 a{color:var(--acc)}a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--focus)!important;outline-offset:2px;border-radius:4px}
 .skip{position:absolute;left:-999px;top:8px;background:var(--acc);color:#000;padding:8px 12px;border-radius:6px;z-index:99;font-weight:700}.skip:focus{left:8px}
 .ds-head{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.ds-head .in{max-width:1080px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+.ds-head .in{max-width:1200px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
 .ds-brand{color:var(--txt);text-decoration:none;font-weight:800;letter-spacing:-.2px;font-size:16px}.ds-brand span{color:var(--mut);font-weight:500;font-size:13px;margin-left:8px}
 .ds-nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}.ds-nav a{color:var(--mut);text-decoration:none;font-size:14px;font-weight:600;padding:6px 10px;border-radius:6px}
 .ds-nav a:hover{color:var(--txt);background:var(--bg2)}.ds-nav a[aria-current=page]{color:var(--txt);background:var(--card);box-shadow:inset 0 -2px 0 var(--acc)}
 nav.tabs,header.apphead{display:none!important}
-.ds-main{max-width:1080px;margin:0 auto;padding:20px 16px 48px}
+.ds-main{max-width:1200px;margin:0 auto;padding:20px 16px 48px}
 .ds-main h1{font-size:26px;letter-spacing:-.5px;margin:6px 0 4px;font-weight:800}.ds-sub{color:var(--mut);margin:0 0 18px;font-size:14px}
 .ds-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 22px}
 .ds-strip>div{background:var(--bg2);padding:12px 14px}.ds-k{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:600}
@@ -25,28 +25,29 @@ nav.tabs,header.apphead{display:none!important}
 .gc{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--pa);border-radius:10px;padding:14px 16px}
 .gc.r-STRONG{border-left-color:var(--st)}.gc.r-LEAN{border-left-color:var(--le)}
 .gc-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.gc-m{font-weight:700;font-size:16px;margin:0;display:flex;align-items:center;gap:8px}
-.gc-m img{width:24px;height:24px;object-fit:contain}.gc-at{color:var(--mut);font-weight:500}.gc-ko{color:var(--mut);font-size:13px;margin-left:auto;font-family:var(--mono)}
+.gc-m img{width:24px;height:24px;object-fit:contain;background:#e9eef4;border-radius:50%;padding:3px;box-sizing:content-box}.gc-at{color:var(--mut);font-weight:500}.gc-ko{color:var(--mut);font-size:13px;margin-left:auto;font-family:var(--mono)}
 .bdg{display:inline-block;font:800 11px/1 Inter,sans-serif;letter-spacing:.08em;padding:5px 8px;border-radius:5px;text-transform:uppercase}
 .bdg.STRONG{background:var(--st);color:var(--txt-st)}.bdg.LEAN{background:var(--le);color:var(--txt-le)}.bdg.PASS{background:transparent;color:var(--txt);border:1px solid var(--pa)}
-.gc-play{font:700 20px/1.3 var(--mono);margin:10px 0 2px;letter-spacing:-.3px}.gc.r-PASS .gc-play{color:var(--mut)}
+.gc-play{font:700 20px/1.3 var(--mono);margin:10px 0 2px;letter-spacing:-.3px}.gc.r-PASS .gc-play{color:var(--txt)}
 .gc-why{color:var(--mut);font-size:13px;margin:0 0 10px}
 .gc dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 18px;margin:0;border-top:1px solid var(--line);padding-top:10px}
-.gc dl div{min-width:0}.gc dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:600}.gc dd{margin:2px 0 0;font-size:14px}
+.gc dl div{min-width:0}.gc dt{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:600}.gc dd{margin:2px 0 0;font-size:14px}
 .gc dd .n{font-family:var(--mono);font-weight:700}
 .ds-notes{margin:24px 0 0;border:1px solid var(--line);border-radius:10px;background:var(--bg2)}.ds-notes summary{cursor:pointer;padding:12px 14px;font-weight:700}
 .ds-notes ul{margin:0;padding:0 14px 14px 32px;color:var(--mut);font-size:14px}
 .ds-links{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0}.ds-links a{border:1px solid var(--line);border-radius:8px;padding:8px 12px;text-decoration:none;font-size:14px;font-weight:600}
-.ds-foot{max-width:1080px;margin:0 auto;padding:18px 16px 40px;color:var(--mut);font-size:12px;border-top:1px solid var(--line)}
+.ds-foot{max-width:1200px;margin:0 auto;padding:18px 16px 40px;color:var(--mut);font-size:12px;border-top:1px solid var(--line)}
 footer:not(.ds-foot){color:var(--mut)}
-table{border-collapse:collapse}th{text-align:left}td,th{font-variant-numeric:tabular-nums}
+.bn{display:block;margin:10px 0 0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg2)}.bn>span{display:block}.bn-h{padding:7px 12px;font-size:12px;color:var(--mut)}.bn-h small{margin-left:6px}.bn-view{color:var(--txt)!important;font-size:13px!important;border-bottom:1px solid var(--line)}.bn-t{padding:7px 12px 2px;font-weight:700}.bn .bn-r{display:grid!important;grid-template-columns:minmax(90px,1.3fr) minmax(110px,1.3fr) 1fr 1fr;gap:8px;padding:6px 12px;border-top:1px solid var(--line);font:13px var(--mono)}.bn-r i{font-style:normal;color:var(--st);font-size:11px;margin-left:6px}.bn-best{background:rgba(63,207,142,.08)}.cd-3{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:6px 14px;margin-top:8px}.cd-3>span{display:flex;flex-direction:column;font-size:12px;color:var(--mut)}.cd-3 b{color:var(--txt);font-size:14px}.gx{margin-top:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg2)}.gx>summary{display:flex;gap:12px;align-items:center;padding:9px 12px;list-style:none}.gx>summary::-webkit-details-marker{display:none}.gx>summary::after{content:'▸';margin-left:8px;color:var(--mut)}.gx[open]>summary::after{content:'▾'}.gx-k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:700;min-width:92px}.gx-v{font:700 14px var(--mono)}.gx-r{margin-left:auto;font-size:13px;color:var(--mut)}.gx dl{padding:10px 12px;margin:0}.gc .gc-sum{margin-top:6px}.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.ds-v.sm{font-size:14px}.ds-v.txt{font-family:Inter,sans-serif}.ds-pt{font-size:26px;font-weight:800;margin:18px 0 8px}.ds-h2{font-size:18px;margin:26px 0 8px;font-weight:800}table{border-collapse:collapse;width:100%;font-size:14px;background:var(--card)!important;color:var(--txt)!important}th{text-align:left;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)!important;background:var(--bg2)!important;font-weight:600}td,th{font-variant-numeric:tabular-nums;padding:8px 10px;border-bottom:1px solid var(--line)!important}.ds-wrap{overflow-x:auto}main h1,main h2,main h3{color:var(--txt)!important;letter-spacing:-.3px}main h2{font-size:18px}main p,main li{color:var(--txt)}details>summary{cursor:pointer}main section,main .card,main details.fold{background:var(--card)!important;border-color:var(--line)!important;color:var(--txt)!important}
+html{scroll-behavior:smooth}#slate{scroll-margin-top:72px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media (max-width:560px){.gc-ko{margin-left:0;width:100%}.gc-play{font-size:18px}.ds-main h1{font-size:22px}}
 </style>'''
-_NAVI=[('index','index.html','Home'),('week','index.html#slate','This Week'),('results','tygif-tracker.html#results','Records'),('how','tygif-how.html','How')]
+_NAVI=[('index','index.html#slate','This week'),('history','tygif-history.html','Past weeks'),('results','tygif-tracker.html#results','Records'),('how','tygif-how.html','How it works')]
 def ds_head(cur):
     a=''.join(f'<a href="{h}"'+(' aria-current="page"' if k==cur else '')+f'>{t}</a>' for k,h,t in _NAVI)
     return (f'<a class="skip" href="#main">Skip to content</a><header class="ds-head" role="banner"><div class="in">'
-            f'<a class="ds-brand" href="index.html">tygif&#8217;s model<span>Week {GW} · as of {_E(PULL6.replace(" ET",""))} CT</span></a>'
+            f'<a class="ds-brand" href="index.html">tygif&#8217;s model<span>Week {GW} · as of {_E(_etlbl(max(g["split_utc"] for g in ALL6)))}</span></a>'
             f'<nav class="ds-nav" aria-label="Primary">{a}</nav></div></header>')
 DS_FOOT=f'<footer class="ds-foot" role="contentinfo">{_E(FOOT)}</footer>'
 def _ct(g):
@@ -56,19 +57,22 @@ def _ct(g):
 def _logo(ab,name): 
     ab={'LA':'LAR','WAS':'WSH','JAC':'JAX'}.get(ab,ab); return f'<img src="assets/logos/{ab}.png" alt="{_E(name)} logo" width="24" height="24" loading="lazy">'
 def _agree(g):
-    if g.get('c') is None or g.get('agree')=='none': return 'DK: no split — n/a'
+    if g.get('c') is None or g.get('agree')=='none': return '— (no DraftKings split on file)'
     src='bets %' if g.get('agree')=='DraftKings bets %' else 'money %'
     return f"DK {src}: {'same side' if g['c'] else 'opposite side'} ({AB[g['dk_side']]} {g['dk_m']}%)"
 def _bneed(g):
-    v=book_view(g)
-    if not v: return '—'
-    return {'exposed':f"Needs {v['fade']} · {v['pub']} {v['money']}% vs {v['be']:.1f}% break-even",
-            'locked':f"Locked · {v['pub']} {v['money']}% inside {v['lock_lo']:.1f}–{v['be']:.1f}%",
-            'against':f"Needs {v['pub']} · {v['pub']} {v['money']}% under {v['lock_lo']:.1f}%"}[v['state']]
+    try: v=book_view(g)
+    except Exception: v=None
+    if not v: return 'Not recorded'
+    return {'exposed':f"Book wants {v['fade']} · {v['pub']} has {v['money']}% of money vs {v['be']:.1f}% break-even",
+            'locked':f"Balanced · {v['pub']} {v['money']}% inside {v['lock_lo']:.1f}–{v['be']:.1f}%",
+            'against':f"Book wants {v['pub']} · {v['pub']} has {v['money']}% of money, under {v['lock_lo']:.1f}%"}[v['state']]
 def _best(g):
     r=g['rating']; f=AB[g['fade']]; ln=g['sp'].get(f,'')
-    if r!='PASS': return f'{f} {ln}', f"Fade the crowd on {AB[g['ab_side']]}"
-    return 'PASS — no edge', f"Fade candidate {f} {ln} · "+pass_reason(g)
+    if r!='PASS': return f'{f} {ln}', f"{_fdl(g,f)} · fading the crowd on {AB[g['ab_side']]}"
+    try: why=pass_reason(g)
+    except Exception: why=f"{AB[g['ab_side']]} {g['ab_m']}% of the money · rating rules not met"
+    return 'PASS — no edge', f"Fade side would be {f} {ln} ({_fdl(g,f)}) · "+why
 def _mlc(g):
     if g['rating']=='PASS': return '—'
     if not ml_ok(g): return '—'
@@ -78,22 +82,41 @@ def _fdl(g,ab):
     return 'Favorite' if ln.startswith('-') else ('Underdog' if ln.startswith('+') else 'Pick')
 def _res(g):
     f=g.get('final')
-    if not f: return 'No play — not graded' if g['rating']=='PASS' and _gwk(g)<GW else 'Pending'
+    if not f:
+        if g['rating']=='PASS' and _gwk(g)<GW: return 'No play'+(f" · final {_E(g['score_txt'])}" if g.get('score_txt') else '')
+        return 'Pending'
     return _E(re.sub(r'^Final:\s*','',f.get('tag') or f.get('word','Final')))
+_PRE={(x['week'],x['game'],x['side']):x for x in json.load(open(R+'data/pregame_lines.json'))['lines']}
+def _mlp(v): return '' if v is None else (f'+{v}' if v>0 else f'−{-v}')
+def _sdr(g,kind):
+    x=SDX.get((_gwk(g),f"{g['A']}@{g['H']}"),{}).get('fade') or {}
+    rr=x.get(kind+'_res'); u=x.get(kind+'_usd')
+    if not rr: return None
+    return {'W':'Win','L':'Loss','P':'Push'}.get(rr,rr)+(f' {usd(u)}' if u is not None else '')
 def game_card(g):
-    r=g['rating']; t=g['type']; play,why=_best(g); m=AB[g['ab_side']]
+    r=g['rating']; t=g['type']; play,why=_best(g); m=AB[g['ab_side']]; f=AB[g['fade']]; gm=f"{g['A']}@{g['H']}"
+    pre=_PRE.get((_gwk(g),gm,f),{}); mlp=_mlp(pre.get('ml'))
+    spres=_res(g); mlres=('No play' if r=='PASS' or not ml_ok(g) else (_sdr(g,'ml') or ('Pending' if _gwk(g)>=GW else '—')))
+    if r!='PASS' and g.get('final') and _sdr(g,'sp'): spres=_sdr(g,'sp')
+    mlplay=(f'{f} ML' if r!='PASS' and ml_ok(g) else 'No moneyline play')
     return (f'<li class="gc r-{r}" id="{g["gid"]}"><article aria-labelledby="h-{g["gid"]}"><div class="gc-top">'
             f'<span class="bdg {r}" aria-label="Rating: {r}">{r}</span>'
             f'<h3 class="gc-m" id="h-{g["gid"]}">{_logo(g["A"],g["away"])}{_E(g["away"])} <span class="gc-at">at</span> {_logo(g["H"],g["home"])}{_E(g["home"])}</h3>'
-            f'<span class="gc-ko"><span class="sr-only" style="position:absolute;left:-999px">Kickoff </span>{_E(_ct(g))}</span></div>'
-            f'<p class="gc-play"><span style="position:absolute;left:-999px">Best play: </span>{_E(play)}</p><p class="gc-why">{_E(why)}</p><dl>'
-            f'<div><dt>Favorite / Underdog</dt><dd>{g["A"]} {_fdl(g,g["A"])} · {g["H"]} {_fdl(g,g["H"])}</dd></div>'
-            f'<div><dt>Crowd money (all books)</dt><dd><span class="n">{m} {g["ab_m"]}%</span> money · {g["ab_b"]}% bets</dd></div>'
-            f'<div><dt>DraftKings agreement</dt><dd>{_E(_agree(g))}</dd></div>'
-            f'<div><dt>Book needs</dt><dd>{_E(_bneed(g))}</dd></div>'
-            f'<div><dt>Moneyline</dt><dd>{_mlc(g)}</dd></div>'
+            f'<span class="gc-ko"><span class="sr-only">Kickoff </span>{_E(_ct(g))}</span></div>'
+            f'<p class="gc-play"><span class="sr-only">Best play: </span>{_E(play)}</p><p class="gc-why">{_E(why)}</p>'
+            f'<dl class="gc-sum"><div><dt>Favorite / Underdog</dt><dd>{g["A"]} {_fdl(g,g["A"])} · {g["H"]} {_fdl(g,g["H"])}</dd></div>'
             f'<div><dt>Type</dt><dd><span class="n">{t}</span> · {_E(TY[t]["name"])}</dd></div>'
-            f'<div><dt>Result</dt><dd>{_res(g)}</dd></div></dl></article></li>')
+            f'<div><dt>Crowd money (all books)</dt><dd><span class="n">{m} {g["ab_m"]}%</span> money · {g["ab_b"]}% bets</dd></div>'
+            f'<div><dt>DraftKings agreement</dt><dd>{_E(_agree(g))}</dd></div></dl>'
+            f'<details class="gx"><summary><span class="gx-k">Spread</span><span class="gx-v">{_E(play if r!="PASS" else "No spread play")}</span><span class="gx-r">{spres}</span></summary><dl>'
+            f'<div><dt>Line</dt><dd><span class="n">{g["A"]} {_E(str(g["sp"].get(g["A"],"")))} · {g["H"]} {_E(str(g["sp"].get(g["H"],"")))}</span></dd></div>'
+            f'<div><dt>Our side</dt><dd>{f} ({_fdl(g,f)})</dd></div>'
+            f'<div><dt>Book needs</dt><dd>{_E(_bneed(g))}</dd></div>'
+            f'<div><dt>Result</dt><dd>{spres}</dd></div></dl></details>'
+            f'<details class="gx"><summary><span class="gx-k">Moneyline</span><span class="gx-v">{_E(mlplay)}</span><span class="gx-r">{_E(mlres)}</span></summary><dl>'
+            f'<div><dt>Our side</dt><dd>{f} ({_fdl(g,f)})</dd></div>'
+            f'<div><dt>Moneyline posted</dt><dd>{"Yes — group above $0" if r!="PASS" and ml_ok(g) else "No"}</dd></div>'
+            f'<div><dt>Result</dt><dd>{_E(mlres)}</dd></div></dl></details></article></li>')
 def _rt(rt):
     w,l,p,u,n=at(rt); return f'<div><span class="ds-k">{rt} record</span><span class="ds-v">{w}-{l}-{p}<small class="{"pos" if u>0 else "neg"}">{usd(u)} · {n} plays</small></span></div>'
 _cnt={k:sum(g['rating']==k for g in ALL6) for k in ('STRONG','LEAN','PASS')}
@@ -101,35 +124,35 @@ _dkbets=any(g.get('agree')=='DraftKings bets %' for g in ALL6)
 HOME2=(f'<main id="main" class="ds-main" tabindex="-1"><h1>Week {GW} board</h1>'
   f'<p class="ds-sub">{len(ALL6)} games tracked · {_cnt["STRONG"]} STRONG · {_cnt["LEAN"]} LEAN · {_cnt["PASS"]} PASS · sorted by kickoff (CT)</p>'
   f'<section aria-label="Season records and data source" class="ds-strip">{_rt("STRONG")}{_rt("LEAN")}'
-  f'<div><span class="ds-k">Data</span><span class="ds-v" style="font-size:14px">As of {_E(_etlbl(max(g['split_utc'] for g in ALL6)))}</span></div>'
-  f'<div><span class="ds-k">Agreement source</span><span class="ds-v" style="font-size:14px;font-family:Inter,sans-serif">DraftKings {"bets % (handle unavailable)" if _dkbets else "money %"}</span></div></section>'
-  f'<section aria-labelledby="slate-h"><h2 id="slate-h" style="font-size:18px;margin:0 0 10px">Full slate <span id="slate"></span></h2>'
-  f'<p class="ds-legend">Every card shows the same fields. Best play is always the fade side; PASS cards name the fade candidate and why it does not qualify.</p>'
+  f'<div><span class="ds-k">Data</span><span class="ds-v sm">As of {_E(_etlbl(max(g['split_utc'] for g in ALL6)))}</span></div>'
+  f'<div><span class="ds-k">Agreement source</span><span class="ds-v sm txt">DraftKings {"bets % (handle unavailable)" if _dkbets else "money %"}</span></div></section>'
+  f'<section aria-labelledby="slate"><h2 id="slate" class="ds-h2">Full slate</h2>'
+  f'<p class="ds-legend">Every card shows the same fields. Open Spread or Moneyline for each bet type. Best play is always the fade side; PASS cards name the side and why it does not qualify.</p>'
   f'<ol class="slate">{"".join(game_card(g) for g in ALL6)}</ol></section>'
   f'<details class="ds-notes"><summary>Notes</summary><ul><li>Calls before kickoff are previews and can change as the money moves. Graded at the DraftKings line, price and moneyline recorded at least 5 minutes before kickoff.</li><li>Crowd money = mean of all-books spread and moneyline money % on the money side (ScoresAndOdds).</li>'
   f'<li>STRONG and LEAN records are kept separate and never combined. Flat $100 per play.</li><li>Book needs compares all-books money to the DraftKings break-even; information only, never changes a rating.</li></ul></details>'
-  f'<nav class="ds-links" aria-label="More"><a href="tygif-tracker.html#results">Records</a><a href="tygif-how.html">How it works</a><a href="tygif-week-{GW}-plays.txt">Week {GW} card (text)</a><a href="tygif-week-{GW}-buddy.txt">Short version</a><a href="tygif-deep-dive.html">Game by game</a></nav></main>')
+  f'<nav class="ds-links" aria-label="Downloads"><a href="tygif-week-{GW}-plays.txt">Week {GW} card (.txt)</a></nav></main>')
 wr('index.html','<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
    f'<meta name="description" content="tygif\'s model — Week {GW} NFL board: every game rated STRONG, LEAN or PASS."><meta name="color-scheme" content="dark">'
    f'<title>tygif\'s model · Week {GW}</title>{DS_CSS}</head><body>{ds_head("index")}{HOME2}{DS_FOOT}</body></html>\n')
 # history: every earlier week in the same uniform card layout
-_HW=[(w,sorted(GBY[w],key=_kick)) for w in reversed(LIVEW) if w!=GW]+[(5,sorted(G,key=_kick))]
+_HW=[(w,sorted(GBY[w],key=_kick)) for w in reversed(LIVEW) if w!=GW]+[(5,sorted(G,key=_kick))]+[(w,sorted([g for g in G14 if g['week']==w],key=_kick)) for w in (4,3,2,1)]
 _hb=''
 for _w,_gs in _HW:
     _cards=[]
     for _g in _gs:
         try: _cards.append(game_card(_g))
-        except Exception as _e: print('history card skipped',_w,_g.get('gid'),_e)
+        except Exception as _e: import traceback; print('history card skipped',_w,_g.get('gid'),repr(_e),traceback.format_exc().splitlines()[-3])
     _c={k:sum(g['rating']==k for g in _gs) for k in ('STRONG','LEAN','PASS')}
-    _hb+=(f'<section aria-labelledby="hw{_w}" id="w{_w}"><h2 id="hw{_w}" style="font-size:18px;margin:26px 0 6px">Week {_w}</h2>'
+    _hb+=(f'<section aria-labelledby="hw{_w}" id="w{_w}"><h2 id="hw{_w}" class="ds-h2">Week {_w}</h2>'
           f'<p class="ds-legend">{len(_gs)} games · {_c["STRONG"]} STRONG · {_c["LEAN"]} LEAN · {_c["PASS"]} PASS</p><ol class="slate">{"".join(_cards)}</ol></section>')
-_NAVI.insert(3,('history','tygif-history.html','Past weeks'))
+_jump='<nav class="ds-legend" aria-label="Jump to week">'+' · '.join(f'<a href="#w{w}">Week {w}</a>' for w,_ in _HW)+'</nav>'
 wr('tygif-history.html','<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">'
-   f"<title>tygif's model · Past weeks</title>{DS_CSS}</head><body>{ds_head('history')}<main id=\"main\" class=\"ds-main\" tabindex=\"-1\"><h1>Past weeks</h1>"
-   f'<p class="ds-sub">Every graded game in the same card layout as the current board. Earlier weeks without DraftKings data are in Records.</p>{_hb}</main>{DS_FOOT}</body></html>\n')
-_x=open(R+'index.html',encoding='utf-8').read(); _x=re.sub(r'<header class="ds-head".*?</header>',ds_head('index').split('</a>',1)[1],_x,count=1,flags=re.S); wr('index.html',_x)
+   f"<title>tygif's model · Past weeks</title>{DS_CSS}</head><body>{ds_head('history')}<main id=\"main\" class=\"ds-main\" tabindex=\"-1\"><h1>Past weeks</h1>{_jump}"
+   f'<p class="ds-sub">Every game from Weeks 1–{GW-1} in the same card layout as the current board. Weeks 1–4: all-books splits only; DraftKings split not recorded.</p>{_hb}</main>{DS_FOOT}</body></html>\n')
 # re-skin every other generated page: shared header, skip link, design-system CSS (appended last so it wins)
 _CUR={'tygif-tracker.html':'results','tygif-how.html':'how'}
+_TTL={'tygif-tracker.html':'Records','tygif-angles.html':'Angles','tygif-games-archive.html':'Games archive','tygif-deep-dive.html':'Game by game','tygif.html':'Week card','tygif-week-5-report.html':'Week 5 report'}
 for _f in _gg.glob(R+'*.html'):
     _b=os.path.basename(_f)
     if _b in ('index.html','tygif-history.html'): continue
@@ -139,6 +162,12 @@ for _f in _gg.glob(R+'*.html'):
     _x=re.sub(r'(<body[^>]*>)',lambda m:m.group(1)+ds_head(_CUR.get(_b,'')),_x,count=1)
     if 'id="main"' not in _x: _x=re.sub(r'<main(?![^>]*id=)',r'<main id="main" tabindex="-1"',_x,count=1)
     if 'id="main"' not in _x: _x=_x.replace(ds_head(_CUR.get(_b,'')),ds_head(_CUR.get(_b,''))+'<div id="main" tabindex="-1"></div>',1)
+    for _a,_c in (('Tracking · not a play · ','Tracking · '),('tracking · not a play','tracking only'),(' · not a play',''),('not a play','tracking only')): _x=_x.replace(_a,_c)
+    if '<h1' not in _x and _b in _TTL: _x=re.sub(r'(<main[^>]*>|<div id="main" tabindex="-1"></div>)',lambda m:m.group(1)+f'<h1 class="ds-pt">{_TTL[_b]}</h1>',_x,count=1)
+    if _b=='tygif-how.html':
+        _ol='<ol>'+''.join(f'<li value="{k}"><b>Type {k} · {TY[k]["name"]}:</b> '+_d+'</li>' for k,_d in ((1,'65%+ of the money on a favorite giving 6+ points. Take the underdog.'),(2,'65%+ of the money and most bets on one team. Take the other team.'),(3,'55–64% of the money on one team. LEAN at most; money and bets on different teams is a pass. Type 3 underdog: pass on the moneyline; spread unaffected.'),(4,'all books and DraftKings have the money on different teams. PASS.'),(5,'under 55% of the money on either team. PASS.')))+'</ol>'
+        _x=re.sub(r'(<h2>Game types</h2>\s*<p[^>]*>[^<]*</p>\s*)<ol>.*?</ol>',lambda m:m.group(1)+_ol,_x,count=1,flags=re.S)
+        _x=_x.replace('<li>Weeks 1–4: all-books splits only','<li>Every game is graded at the DraftKings line, price and moneyline we recorded last at least 5 minutes before kickoff; where nothing was recorded, at the DraftKings closing numbers.</li><li>Weeks 1–4: all-books splits only',1)
     _x=re.sub(r'<img((?![^>]*alt=)[^>]*)>',r'<img alt=""\1>',_x)
     if '<html>' in _x: _x=_x.replace('<html>','<html lang="en">',1)
     _x=_x.replace('</body>',DS_FOOT+'</body>',1) if 'ds-foot' not in _x else _x
