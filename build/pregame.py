@@ -44,6 +44,7 @@ def build(R):
             for ts,src,d in snaps:
                 if not (lo<_iso(ts)<=ko): continue
                 for g in d['games']:
+                    if any(s.get('odds') in (None,'None','') for s in g['spread']): continue   # VSiN backup row without a price (e.g. snapshots dk_20261028T1939Z): no grading price, skip
                     sp={NK[s['side'].split()[1]]:(_num(s['side'].split()[-1]),int(_num(s['odds']))) for s in g['spread']}
                     if set(sp)=={A,H}: last=(ts,src,sp)
             ml=None
