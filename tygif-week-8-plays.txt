@@ -66,27 +66,26 @@ LEAN
       bet365 +3.5 −116 4.47%/53.70% · BetMGM +3.5 −118 4.42%/54.13% · FanDuel +3.5 −118 4.86%/54.13% · Caesars +3.5 −120 4.35%/54.55% · Fanatics +3.5 −120 4.35%/54.55% · DraftKings +3 +100 4.35%/50.00% · BetRivers +3 −105 4.89%/51.22%
 
 MONEYLINE
+  STRONG Carolina ML  ·  Carolina at Green Bay, Thu Oct 29 · 7:15 PM CT
+    Moneyline rated on its own · Type 2 · STRONG · Underdog · GB has 74% of moneyline dollars, 83% of bets · DraftKings on the same side
+  STRONG Baltimore ML  ·  Baltimore at Buffalo, Sun Nov 1 · 12:00 PM CT
+    Moneyline rated on its own · Type 2 · STRONG · Underdog · BUF has 90% of moneyline dollars, 89% of bets · DraftKings on the same side
   STRONG Tennessee ML  ·  Tennessee at Cincinnati, Sun Nov 1 · 12:00 PM CT
-    Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 8-11-0, +$1,620
-    a: Yes · b: Yes · c: Yes · d: No
+    Moneyline rated on its own · Type 1 · STRONG · Underdog · CIN has 94% of moneyline dollars, 95% of bets · DraftKings on the same side
+  STRONG Minnesota ML  ·  Minnesota at Detroit, Sun Nov 1 · 12:00 PM CT
+    Moneyline rated on its own · Type 2 · STRONG · Underdog · DET has 67% of moneyline dollars, 68% of bets · DraftKings on the same side
   STRONG NY Jets ML  ·  Las Vegas at NY Jets, Sun Nov 1 · 12:00 PM CT
-    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 8-2-1, +$328
-    a: Yes · b: Yes · c: Yes · d: Yes
-  STRONG Tampa Bay ML  ·  Atlanta at Tampa Bay, Sun Nov 1 · 12:00 PM CT
-    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 8-2-1, +$328
-    a: Yes · b: Yes · c: Yes · d: Yes
+    Moneyline rated on its own · Type 2 · STRONG · Favorite · LV has 80% of moneyline dollars, 72% of bets · DraftKings on the same side
+  STRONG Cleveland ML  ·  Cleveland at Pittsburgh, Sun Nov 1 · 12:00 PM CT
+    Moneyline rated on its own · Type 2 · STRONG · Underdog · PIT has 86% of moneyline dollars, 82% of bets · DraftKings on the same side
   STRONG Indianapolis ML  ·  Indianapolis at Jacksonville, Sun Nov 1 · 12:00 PM CT
-    Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 8-11-0, +$1,620
-    a: Yes · b: Yes · c: Yes · d: No
+    Moneyline rated on its own · Type 1 · STRONG · Underdog · JAX has 90% of moneyline dollars, 94% of bets · DraftKings on the same side
   STRONG LA Chargers ML  ·  LA Chargers at LA Rams, Sun Nov 1 · 3:05 PM CT
-    Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 8-11-0, +$1,620
-    a: Yes · b: Yes · c: Yes · d: Yes
+    Moneyline rated on its own · Type 1 · STRONG · Underdog · LAR has 94% of moneyline dollars, 95% of bets · DraftKings on the same side
   STRONG Miami ML  ·  New England at Miami, Sun Nov 1 · 3:25 PM CT
-    Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 8-11-0, +$1,620
-    a: Yes · b: Yes · c: Yes · d: Yes
+    Moneyline rated on its own · Type 1 · STRONG · Underdog · NE has 96% of moneyline dollars, 96% of bets · DraftKings on the same side
   STRONG Philadelphia ML  ·  Philadelphia at Washington, Sun Nov 1 · 7:20 PM CT
-    Type 1 · Fade the big favorite · STRONG · All ML calls · Underdog: 8-11-0, +$1,620
-    a: Yes · b: Yes · c: Yes · d: No
+    Moneyline rated on its own · Type 1 · STRONG · Underdog · WSH has 69% of moneyline dollars, 82% of bets · DraftKings on the same side
 
 PASS
   Arizona at Dallas

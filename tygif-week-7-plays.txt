@@ -40,14 +40,13 @@ MONEYLINE
     Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-5-0, −$82
     a: Yes · b: Yes · c: Yes · d: No
   STRONG Arizona ML  ·  Denver at Arizona, Sun Oct 25 · 3:05 PM CT · Final 16–30 · loss −$100
-    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-5-0, −$82
-    a: Yes · b: Yes · c: Yes · d: Yes
+    Moneyline rated on its own · Type 2 · STRONG · Underdog · DEN has 90% of moneyline dollars, 93% of bets · DraftKings on the same side
+  STRONG Las Vegas ML  ·  LA Rams at Las Vegas, Sun Oct 25 · 3:25 PM CT · Final 21–35 · loss −$100
+    Moneyline rated on its own · Type 2 · STRONG · Underdog · LAR has 84% of moneyline dollars, 80% of bets · DraftKings on the same side
   STRONG Seattle ML  ·  Kansas City at Seattle, Sun Oct 25 · 7:20 PM CT · Final 20–3 · win +$62
-    Type 2 · Fade the crowd · STRONG · All ML calls · Favorite: 8-2-1, +$328
-    a: Yes · b: Yes · c: Yes · d: Yes
+    Moneyline rated on its own · Type 2 · STRONG · Favorite · KC has 79% of moneyline dollars, 71% of bets · DraftKings on the same side
   STRONG Philadelphia ML  ·  Dallas at Philadelphia, Mon Oct 26 · 7:15 PM CT · Final 21–38 · loss −$100
-    Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-5-0, −$82
-    a: Yes · b: Yes · c: Yes · d: Yes
+    Moneyline rated on its own · Type 2 · STRONG · Underdog · DAL has 79% of moneyline dollars, 83% of bets · DraftKings on the same side
 
 PASS
   Pittsburgh at New Orleans

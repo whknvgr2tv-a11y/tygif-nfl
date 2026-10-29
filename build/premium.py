@@ -74,14 +74,17 @@ def _bneed(g):
             'against':f"Book wants {v['pub']} · {v['pub']} has {v['money']}% of money, under {v['lock_lo']:.1f}%"}[v['state']]
 def _best(g):
     r=g['rating']; f=AB[g['fade']]; ln=g['sp'].get(f,'')
+    c=ml_call(g)
+    if c['play'] and (r=='PASS' or ['STRONG','LEAN'].index(c['rating'])<['STRONG','LEAN'].index(r)) :
+        return f"{c['team']} ML", f"{FDN.get(c['fd'],'')} · moneyline {c['rating']}"+(f" · spread {r} {f} {ln}" if r!='PASS' else ' · no spread play')
     if r!='PASS': return f'{f} {ln}', f"{_fdl(g,f)} · fading the crowd on {AB[g['ab_side']]}"
     try: why=pass_reason(g)
     except Exception: why=f"{AB[g['ab_side']]} {g['ab_m']}% of the money · rating rules not met"
     return 'PASS — no edge', f"Fade side would be {f} {ln} ({_fdl(g,f)}) · "+why
 def _mlc(g):
-    if g['rating']=='PASS': return '—'
-    if not ml_ok(g): return '—'
-    return f"<span class=\"n\">{AB[g['fade']]} ML</span> · posted"
+    c=ml_call(g)
+    if not c['play']: return '—'
+    return f"<span class=\"n\">{c['team']} ML</span> · {c['rating']}"
 def _fdl(g,ab):
     ln=str(g['sp'].get(ab,'')).replace('−','-')
     return 'Favorite' if ln.startswith('-') else ('Underdog' if ln.startswith('+') else 'Pick')
@@ -122,6 +125,8 @@ def _bk(g):
             f'<span class="bk-tick" style="left:{pos(be):.0f}%"></span></div>'
             f'<span class="bk-sub">Bar = {_E(P)} money · white line = book break-even</span></div></div>')
 def _mlwhy(g):
+    c=ml_call(g)
+    if c['indep']: return c['why'] or ''
     if g['rating']=='PASS': return 'Game is PASS'
     r=ml_for(g,_gwk(g))
     if not r or r.get('price') is None: return 'No DK moneyline on file'
@@ -129,14 +134,17 @@ def _mlwhy(g):
     w,l,p,u,n=ml_at(g['rating'],g['type'],r['fd'],before=_gwk(g))
     return f"{g['rating']} Type {g['type']} {r['fd'].lower()} ML group {w}-{l}-{p}, {usd(u)} — not above $0"
 def game_card(g):
-    r=g['rating']; t=g['type']; play,why=_best(g); m=AB[g['ab_side']]; f=AB[g['fade']]; gm=f"{g['A']}@{g['H']}"
-    spres=_res(g); mlok=(r!='PASS' and ml_ok(g))
-    mlres=('No play' if not mlok else (_sdr(g,'ml') or ('Pending' if _gwk(g)>=GW else '—')))
-    if r!='PASS' and g.get('final') and _sdr(g,'sp'): spres=_sdr(g,'sp')
+    sr=g['rating']; t=g['type']; play,why=_best(g); m=AB[g['ab_side']]; f=AB[g['fade']]; gm=f"{g['A']}@{g['H']}"
+    mc=ml_call(g); mlok=mc['play']; mt=mc['team']; mx=mc['row'] or {}
+    r=sr if (sr!='PASS' and not (mlok and mc['rating']=='STRONG' and sr=='LEAN')) else (mc['rating'] if mlok else 'PASS')   # badge = best play of either market
+    spres=_res(g)
+    mlres=('No play' if not mlok else ((({'W':'Win','L':'Loss','P':'Push'}[mx['ml_res']]+f" {usd(mx['ml_usd'])}") if mx.get('ml_res') else None) or ('Pending' if _gwk(g)>=GW else '—')))
+    mfd={'Fav':'Favorite','Dog':'Underdog'}.get(mc['fd'],'—')
+    if sr!='PASS' and g.get('final') and _sdr(g,'sp'): spres=_sdr(g,'sp')
     ln=str(g['sp'].get(f,''))
-    sp_call=(f'{f} {ln}' if r!='PASS' else 'No spread play'); sp_tag=(r if r!='PASS' else 'PASS')
-    ml_call=(f'{f} ML' if mlok else 'No moneyline play'); ml_tag=(r if mlok else 'PASS')
-    try: w,l,p,u,n=at(r,t,before=_cb(g)); sgrp=(f'{w}-{l}-{p}, {usd(u)}' if n else 'no plays yet') if r!='PASS' else '—'
+    sp_call=(f'{f} {ln} ({_fdl(g,f)})' if sr!='PASS' else 'No spread play'); sp_tag=sr
+    mlct=(f'{mt} ML ({mfd})' if mlok else 'No moneyline play'); ml_tag=(mc['rating'] if mlok else 'PASS')
+    try: w,l,p,u,n=at(sr,t,before=_cb(g)); sgrp=(f'{w}-{l}-{p}, {usd(u)}' if n else 'no plays yet') if sr!='PASS' else '—'
     except Exception: sgrp='—'
     try: bn=bn_html(g)
     except Exception: bn=''
@@ -148,8 +156,8 @@ def game_card(g):
             f'<h3 class="gc-m" id="h-{g["gid"]}">{_logo(g["A"],g["away"])}{_E(g["away"])} <span class="gc-at">at</span> {_logo(g["H"],g["home"])}{_E(g["home"])}</h3>'
             f'<span class="gc-ko"><span class="sr-only">Kickoff </span>{_E(_ct(g))}</span></div>'
             f'<p class="gc-play"><span class="sr-only">Best play: </span>{_E(play)}</p>{passbox}'
-            f'<div class="bets"><div class="bt bt-sp t-{sp_tag}"><span class="bt-k">Spread</span><span class="bt-v">{_E(sp_call)}</span><span class="bt-s">{(_E(sp_tag)+" · "+spres) if r!="PASS" else _E("PASS · fade would be "+f+" "+ln)}</span></div>'
-            f'<div class="bt bt-ml t-{ml_tag}"><span class="bt-k">Moneyline</span><span class="bt-v">{_E(ml_call)}</span><span class="bt-s">{_E(ml_tag+" · "+mlres) if mlok else _E("Not posted · "+_mlwhy(g))}</span></div></div>'
+            f'<div class="bets"><div class="bt bt-sp t-{sp_tag}"><span class="bt-k">Spread</span><span class="bt-v">{_E(sp_call)}</span><span class="bt-s">{(_E(sp_tag)+" · "+spres) if sr!="PASS" else _E("PASS · fade would be "+f+" "+ln)}</span></div>'
+            f'<div class="bt bt-ml t-{ml_tag}"><span class="bt-k">Moneyline</span><span class="bt-v">{_E(mlct)}</span><span class="bt-s">{_E(ml_tag+" · "+mlres) if mlok else _E("Not posted · "+_mlwhy(g))}</span></div></div>'
             f'{_bk(g)}'
             f'<div class="mo"><span><i>Money</i><b>{m} {g["ab_m"]}%</b></span><span><i>Bets</i><b>{m} {g["ab_b"]}%</b></span>'
             f'<span><i>DraftKings</i><b class="{"ok" if g.get("c") else ("no" if g.get("c") is False else "")}">{_E(dk)}</b></span><span><i>Type</i><b>{t} · {_E(TY[t]["name"])}</b></span></div>'
@@ -159,9 +167,10 @@ def game_card(g):
             f'<div><dt>Type {t} {r} group</dt><dd>{_E(sgrp)}</dd></div>'
             f'<div><dt>DraftKings check</dt><dd>{_E(dkd)}</dd></div>'
             f'<div><dt>Result</dt><dd>{spres}</dd></div></dl>{bn}</details>'
-            f'<details class="gx gx-ml" data-kind="moneyline" data-posted="{"yes" if mlok else "no"}"><summary><span class="gx-k">Moneyline details</span><span class="gx-v">{_E(ml_call)}</span><span class="gx-r">{_E(mlres)}</span></summary><dl>'
-            f'<div><dt>Side</dt><dd>{f} ({_fdl(g,f)})</dd></div>'
-            f'<div><dt>Posted</dt><dd>{"Yes — group above $0" if mlok else "No — "+_E(_mlwhy(g))}</dd></div>'
+            f'<details class="gx gx-ml" data-kind="moneyline" data-posted="{"yes" if mlok else "no"}"><summary><span class="gx-k">Moneyline details</span><span class="gx-v">{_E(mlct)}</span><span class="gx-r">{_E(mlres)}</span></summary><dl>'
+            f'<div><dt>Side</dt><dd>{mt} ({mfd})</dd></div>'
+            f'<div><dt>Moneyline rating</dt><dd>{_E(mc["raw"])}{(" · Type "+str(mc["type"])) if mc["indep"] else ""} · {_E(mc["m"]["why"] if mc["indep"] else "no separate ML split on file — as-posted ML call")}</dd></div>'
+            f'<div><dt>Posted</dt><dd>{("Yes — moneyline "+mc["rating"]) if mlok else "No — "+_E(_mlwhy(g))}</dd></div>'
             f'<div><dt>Result</dt><dd>{_E(mlres)}</dd></div></dl></details></article></li>')
 def _rt(rt):
     w,l,p,u,n=at(rt); return f'<div><span class="ds-k">{rt} record</span><span class="ds-v">{w}-{l}-{p}<small class="{"pos" if u>0 else "neg"}">{usd(u)} · {n} plays</small></span></div>'
@@ -232,37 +241,47 @@ for _f in _gg.glob(R+'*.html'):
     wr(_b,_x)
 print('premium skin ok:',len(ALL6),'games',_cnt)
 # Records hub (Oct 29): every graded game's best-play side, by Type 1-5 x rating x Favorite/Underdog; spread, ML posted, and no-ML-play buckets
-def _bucket(x):
-    if x['rating']=='PASS': return 'PASS'
-    m=ml_post(x); sp=bool(x['sp_res'])
-    return 'Both' if (m and sp) else ('Moneyline only' if m else 'Spread only')
+def _gcall(k):
+    o=SDX.get(k,{}); f=o.get('fade'); sp=bool(f and _ours(f)); mr=next((x for x in o.values() if ml_post(x)),None)
+    g=_gk(*k); c=ml_call(g) if g is not None else None
+    return f,sp,mr,c
+def _bucket(k):
+    f,sp,mr,c=_gcall(k)
+    return 'Both' if (sp and mr) else ('Moneyline only' if mr else ('Spread only' if sp else 'PASS'))
 _BK=('Spread only','Moneyline only','Both','PASS')
-_BKD={'Spread only':'Spread is the play; moneyline not posted.','Moneyline only':'Moneyline is the play; no spread play.','Both':'Spread and moneyline both played.','PASS':'No play; best side tracked on spread and moneyline.'}
+_BKD={'Spread only':'Spread is the play; moneyline PASS.','Moneyline only':'Moneyline is the play; spread PASS.','Both':'Spread and moneyline both played.','PASS':'Both markets PASS; tracked side graded on spread and moneyline.'}
 def _rec(rs,k):
-    rs=[r for r in rs if r[k+'_res']]
+    rs=[r for r in rs if r and r[k+'_res']]
     if not rs: return '—'
     w=sum(r[k+'_res']=='W' for r in rs);l=sum(r[k+'_res']=='L' for r in rs);p=sum(r[k+'_res']=='P' for r in rs);u=sum(r[k+'_usd'] or 0 for r in rs)
     return f'{w}-{l}-{p} <small class="{"pos" if u>0 else ("neg" if u<0 else "")}">{usd(u)}</small>'
+HUBN={}
 def _hub():
-    xs=[x for x in SIDES if x['role']=='fade' and (x['sp_res'] or x['ml_res'])]
+    ks=sorted({(x['week'],x['game']) for x in SIDES if x['role']=='fade' and (x['sp_res'] or x['ml_res'])})
     _FLAGS=[f for f in json.load(open(R+'data/sides_log.json'))['flags']]
     rr=lambda r,u: '—' if not r else f'<span class="{dict(W="pos",L="neg",P="")[r]}">{dict(W="Win",L="Loss",P="Push")[r]} {usd(u or 0)}</span>'
+    FD=lambda v:{'Fav':'Favorite','Dog':'Underdog'}.get(v,'—')
     summ='';det=''
     for bk in _BK:
-        g=sorted([x for x in xs if _bucket(x)==bk],key=lambda x:(x['week'],x['game']))
-        spc='Spread' if bk!='PASS' else 'Spread (tracked)'; mlc='Moneyline' if bk!='PASS' else 'Moneyline (tracked)'
-        summ+=f'<tr><th scope="row">{bk}</th><td>{len(g)+(len(_FLAGS) if bk=="PASS" else 0)}</td><td>{_rec(g,"sp") if bk!="Moneyline only" else "—"}</td><td>{_rec(g,"ml") if bk in ("Moneyline only","Both","PASS") else "—"}</td><td>{_BKD[bk]}</td></tr>'
+        g=[k for k in ks if _bucket(k)==bk]; HUBN[bk]=len(g)
+        sprs=[_gcall(k)[0] for k in g]; mlrs=[(_gcall(k)[2] or _gcall(k)[0]) for k in g]
+        summ+=f'<tr><th scope="row">{bk}</th><td>{len(g)+(len(_FLAGS) if bk=="PASS" else 0)}</td><td>{_rec(sprs,"sp") if bk!="Moneyline only" else "—"}</td><td>{_rec(mlrs,"ml") if bk!="Spread only" else "—"}</td><td>{_BKD[bk]}</td></tr>'
+        rows=''
+        for k in g:
+            f,sp,mr,c=_gcall(k); mrow=mr or f
+            mrt=(c['raw'] if c else f['rating']); mty=(c['type'] if c else f['type'])
+            rows+=(f'<tr><td>{k[0]}</td><td>{k[1].replace("@"," at ")}</td>'
+                   f'<td>{f["team"]} · {f["rating"]} · Type {f["type"]} · {FD(f["fd"])}</td><td>{rr(f["sp_res"],f["sp_usd"]) if bk!="Moneyline only" else ("Tracked: "+rr(f["sp_res"],f["sp_usd"]))}</td>'
+                   f'<td>{mrow["team"]} · {mrt} · Type {mty} · {FD(mrow["fd"])}{"" if (c and c["indep"]) else " · as posted"}</td><td>{rr(mrow["ml_res"],mrow["ml_usd"]) if bk!="Spread only" else ("Tracked: "+rr(mrow["ml_res"],mrow["ml_usd"]))}</td></tr>')
         if bk=='PASS':
-            for w,gm,_ in _FLAGS: g.append({'week':w,'game':gm,'flag':1})
-            g.sort(key=lambda x:(x['week'],x['game']))
-        rows=''.join(f'<tr><td>{x["week"]}</td><td>{x["game"].replace("@"," at ")}</td><td colspan="6">No side: money split 50–50, nothing to track</td></tr>' if x.get('flag') else f'<tr><td>{x["week"]}</td><td>{x["game"].replace("@"," at ")}</td><td>{x["team"]}</td><td>{x["rating"]}</td><td>Type {x["type"]}</td><td>{"Favorite" if x["fd"]=="Fav" else "Underdog"}</td>'
-                     f'<td>{rr(x["sp_res"],x["sp_usd"]) if bk!="Moneyline only" else "—"}</td><td>{rr(x["ml_res"],x["ml_usd"]) if bk!="Spread only" else "—"}</td></tr>' for x in g)
-        det+=(f'<details class="gx" id="hub-{bk.split()[0].lower()}"><summary>{bk} · {len(g)} games</summary>'
-              + (f'<div class="tblwrap"><table class="data"><thead><tr><th scope="col">Week</th><th scope="col">Game</th><th scope="col">Side</th><th scope="col">Rating</th><th scope="col">Type</th><th scope="col">Fav/Dog</th><th scope="col">{spc}</th><th scope="col">{mlc}</th></tr></thead><tbody>{rows}</tbody></table></div>' if g else '<p class="ds-legend">No games in this bucket yet.</p>')
+            rows+=''.join(f'<tr><td>{w}</td><td>{gm.replace("@"," at ")}</td><td colspan="4">No side: money split 50–50, nothing to track</td></tr>' for w,gm,_ in _FLAGS)
+        nn=len(g)+(len(_FLAGS) if bk=='PASS' else 0)
+        det+=(f'<details class="gx" id="hub-{bk.split()[0].lower()}"><summary>{bk} · {nn} games</summary>'
+              + (f'<div class="tblwrap"><table class="data"><thead><tr><th scope="col">Week</th><th scope="col">Game</th><th scope="col">Spread: side · rating · type · Fav/Dog</th><th scope="col">Spread result</th><th scope="col">Moneyline: side · rating · type · Fav/Dog</th><th scope="col">Moneyline result</th></tr></thead><tbody>{rows}</tbody></table></div>' if nn else '<p class="ds-legend">No graded games in this bucket yet.</p>')
               +'</details>')
-    n=len({(x['week'],x['game']) for x in xs})+len(_FLAGS)
+    n=len(ks)+len(_FLAGS)
     return ('<section id="hub" aria-labelledby="hubh"><h2 id="hubh" class="ds-h2">Season records</h2>'
-            f'<p class="ds-legend">All {n} graded games, each in exactly one bucket. Flat $100 per play. PASS records count only games with a trackable side (2 PASS games had a 50–50 money split). Open a bucket to see every game with its type, Favorite/Underdog and result.</p>'
+            f'<p class="ds-legend">All {n} graded games, each in exactly one bucket. Spread and moneyline are rated separately (STRONG 65%+, LEAN 55–64%, PASS under 55% or DraftKings disagrees or bets under 50%). Moneyline is rated on its own wherever a moneyline money split is on file (late Week 7 on); earlier games keep their as-posted moneyline call. Flat $100 per play.</p>'
             '<div class="tblwrap"><table class="data"><thead><tr><th scope="col">Bucket</th><th scope="col">Games</th><th scope="col">Spread record</th><th scope="col">Moneyline record</th><th scope="col">Meaning</th></tr></thead>'
             f'<tbody>{summ}</tbody></table></div>{det}</section>')
 _tf=R+'tygif-tracker.html'; _x=open(_tf,encoding='utf-8').read()

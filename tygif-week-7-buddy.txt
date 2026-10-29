@@ -12,5 +12,6 @@ LEAN Las Vegas +3.5 · Final LV 21–35 · loss −$100
 STRONG Chicago ML · Final 30–24 · win +$65
 STRONG Baltimore ML · Final 13–35 · loss −$100
 STRONG Arizona ML · Final 16–30 · loss −$100
+STRONG Las Vegas ML · Final 21–35 · loss −$100
 STRONG Seattle ML · Final 20–3 · win +$62
 STRONG Philadelphia ML · Final 21–38 · loss −$100
