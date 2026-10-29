@@ -78,7 +78,7 @@ def _fdl(g,ab):
     return 'Favorite' if ln.startswith('-') else ('Underdog' if ln.startswith('+') else 'Pick')
 def _res(g):
     f=g.get('final')
-    if not f: return 'Pending'
+    if not f: return 'No play — not graded' if g['rating']=='PASS' and _gwk(g)<GW else 'Pending'
     return _E(re.sub(r'^Final:\s*','',f.get('tag') or f.get('word','Final')))
 def game_card(g):
     r=g['rating']; t=g['type']; play,why=_best(g); m=AB[g['ab_side']]
