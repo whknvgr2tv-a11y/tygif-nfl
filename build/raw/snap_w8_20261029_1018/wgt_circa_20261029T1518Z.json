@@ -1,0 +1,301 @@
+{
+ "source": "wiseguyteam.com/circa-betting-splits (Circa ML only)",
+ "read": "Oct 29, 2026, 11:18 AM ET",
+ "html": "wgt_circa_20261029T1518Z.html",
+ "games": [
+  {
+   "matchup": "Carolina Panthers @ Green Bay Packers",
+   "away_nick": "Panthers",
+   "home_nick": "Packers",
+   "source": "wgt_circa_ml",
+   "thin": false,
+   "moneyline": [
+    {
+     "side": "Circa Panthers",
+     "odds": "+170",
+     "handle_pct": 4,
+     "bets_pct": 47
+    },
+    {
+     "side": "Circa Packers",
+     "odds": "-195",
+     "handle_pct": 96,
+     "bets_pct": 53
+    }
+   ]
+  },
+  {
+   "matchup": "Arizona Cardinals @ Dallas Cowboys",
+   "away_nick": "Cardinals",
+   "home_nick": "Cowboys",
+   "source": "wgt_circa_ml",
+   "thin": false,
+   "moneyline": [
+    {
+     "side": "Circa Cardinals",
+     "odds": "+275",
+     "handle_pct": 94,
+     "bets_pct": 80
+    },
+    {
+     "side": "Circa Cowboys",
+     "odds": "-330",
+     "handle_pct": 6,
+     "bets_pct": 20
+    }
+   ]
+  },
+  {
+   "matchup": "Atlanta Falcons @ Tampa Bay Buccaneers",
+   "away_nick": "Falcons",
+   "home_nick": "Buccaneers",
+   "source": "wgt_circa_ml",
+   "thin": false,
+   "moneyline": [
+    {
+     "side": "Circa Falcons",
+     "odds": "+120",
+     "handle_pct": 3,
+     "bets_pct": 71
+    },
+    {
+     "side": "Circa Buccaneers",
+     "odds": "-140",
+     "handle_pct": 97,
+     "bets_pct": 29
+    }
+   ]
+  },
+  {
+   "matchup": "Baltimore Ravens @ Buffalo Bills",
+   "away_nick": "Ravens",
+   "home_nick": "Bills",
+   "source": "wgt_circa_ml",
+   "thin": false,
+   "moneyline": [
+    {
+     "side": "Circa Ravens",
+     "odds": "+150",
+     "handle_pct": 5,
+     "bets_pct": 17
+    },
+    {
+     "side": "Circa Bills",
+     "odds": "-170",
+     "handle_pct": 95,
+     "bets_pct": 83
+    }
+   ]
+  },
+  {
+   "matchup": "Tennessee Titans @ Cincinnati Bengals",
+   "away_nick": "Titans",
+   "home_nick": "Bengals",
+   "source": "wgt_circa_ml",
+   "thin": true,
+   "moneyline": [
+    {
+     "side": "Circa Titans",
+     "odds": "+455",
+     "handle_pct": 100,
+     "bets_pct": 100
+    },
+    {
+     "side": "Circa Bengals",
+     "odds": "-600",
+     "handle_pct": 0,
+     "bets_pct": 0
+    }
+   ]
+  },
+  {
+   "matchup": "Cleveland Browns @ Pittsburgh Steelers",
+   "away_nick": "Browns",
+   "home_nick": "Steelers",
+   "source": "wgt_circa_ml",
+   "thin": false,
+   "moneyline": [
+    {
+     "side": "Circa Browns",
+     "odds": "+170",
+     "handle_pct": 2,
+     "bets_pct": 75
+    },
+    {
+     "side": "Circa Steelers",
+     "odds": "-195",
+     "handle_pct": 98,
+     "bets_pct": 25
+    }
+   ]
+  },
+  {
+   "matchup": "Minnesota Vikings @ Detroit Lions",
+   "away_nick": "Vikings",
+   "home_nick": "Lions",
+   "source": "wgt_circa_ml",
+   "thin": false,
+   "moneyline": [
+    {
+     "side": "Circa Vikings",
+     "odds": "+155",
+     "handle_pct": 36,
+     "bets_pct": 50
+    },
+    {
+     "side": "Circa Lions",
+     "odds": "-180",
+     "handle_pct": 64,
+     "bets_pct": 50
+    }
+   ]
+  },
+  {
+   "matchup": "Indianapolis Colts @ Jacksonville Jaguars",
+   "away_nick": "Colts",
+   "home_nick": "Jaguars",
+   "source": "wgt_circa_ml",
+   "thin": true,
+   "moneyline": [
+    {
+     "side": "Circa Colts",
+     "odds": "+385",
+     "handle_pct": 100,
+     "bets_pct": 100
+    },
+    {
+     "side": "Circa Jaguars",
+     "odds": "-485",
+     "handle_pct": 0,
+     "bets_pct": 0
+    }
+   ]
+  },
+  {
+   "matchup": "Las Vegas Raiders @ New York Jets",
+   "away_nick": "Raiders",
+   "home_nick": "Jets",
+   "source": "wgt_circa_ml",
+   "thin": true,
+   "moneyline": [
+    {
+     "side": "Circa Raiders",
+     "odds": "+100",
+     "handle_pct": 0,
+     "bets_pct": 0
+    },
+    {
+     "side": "Circa Jets",
+     "odds": "-120",
+     "handle_pct": 100,
+     "bets_pct": 100
+    }
+   ]
+  },
+  {
+   "matchup": "Los Angeles Chargers @ Los Angeles Rams",
+   "away_nick": "Chargers",
+   "home_nick": "Rams",
+   "source": "wgt_circa_ml",
+   "thin": false,
+   "moneyline": [
+    {
+     "side": "Circa Chargers",
+     "odds": "+230",
+     "handle_pct": 97,
+     "bets_pct": 50
+    },
+    {
+     "side": "Circa Rams",
+     "odds": "-270",
+     "handle_pct": 3,
+     "bets_pct": 50
+    }
+   ]
+  },
+  {
+   "matchup": "Kansas City Chiefs @ Denver Broncos",
+   "away_nick": "Chiefs",
+   "home_nick": "Broncos",
+   "source": "wgt_circa_ml",
+   "thin": false,
+   "moneyline": [
+    {
+     "side": "Circa Chiefs",
+     "odds": "-115",
+     "handle_pct": 94,
+     "bets_pct": 67
+    },
+    {
+     "side": "Circa Broncos",
+     "odds": "-105",
+     "handle_pct": 6,
+     "bets_pct": 33
+    }
+   ]
+  },
+  {
+   "matchup": "New England Patriots @ Miami Dolphins",
+   "away_nick": "Patriots",
+   "home_nick": "Dolphins",
+   "source": "wgt_circa_ml",
+   "thin": true,
+   "moneyline": [
+    {
+     "side": "Circa Patriots",
+     "odds": "-330",
+     "handle_pct": 0,
+     "bets_pct": 0
+    },
+    {
+     "side": "Circa Dolphins",
+     "odds": "+275",
+     "handle_pct": 100,
+     "bets_pct": 100
+    }
+   ]
+  },
+  {
+   "matchup": "Philadelphia Eagles @ Washington Commanders",
+   "away_nick": "Eagles",
+   "home_nick": "Commanders",
+   "source": "wgt_circa_ml",
+   "thin": false,
+   "moneyline": [
+    {
+     "side": "Circa Eagles",
+     "odds": "+220",
+     "handle_pct": 95,
+     "bets_pct": 50
+    },
+    {
+     "side": "Circa Commanders",
+     "odds": "-260",
+     "handle_pct": 5,
+     "bets_pct": 50
+    }
+   ]
+  },
+  {
+   "matchup": "Chicago Bears @ Seattle Seahawks",
+   "away_nick": "Bears",
+   "home_nick": "Seahawks",
+   "source": "wgt_circa_ml",
+   "thin": false,
+   "moneyline": [
+    {
+     "side": "Circa Bears",
+     "odds": "+150",
+     "handle_pct": 2,
+     "bets_pct": 50
+    },
+    {
+     "side": "Circa Seahawks",
+     "odds": "-170",
+     "handle_pct": 98,
+     "bets_pct": 50
+    }
+   ]
+  }
+ ]
+}

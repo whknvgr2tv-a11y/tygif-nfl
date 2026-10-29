@@ -78,3 +78,7 @@ Sources checked Oct 24 and not usable: WagerTalk (removed Oct 24, not useful), C
 
 ## Book math (dk_*.json)
 Per game `hold_pct` (DK spread vig). Per side `breakeven_money_pct` (= implied prob; book loses if that side covers and its handle share is above this), `lock_lo_money_pct` (book profits on both outcomes while handle share is between this and break-even), `book_exposed`. Computed from prices already pulled; no new source.
+
+## Circa ML via Wise Guy (Oct 29, 2026)
+Free fill when free VSiN Circa shows ~1 game: `python3 scripts/wgt_circa.py <wiseguyteam.com/circa-betting-splits html> <snap_dir> <stampZ>` -> `wgt_circa_<stamp>.json`.
+Chain: DraftKings -> VSiN-DK -> Circa (VSiN) -> Circa ML (Wise Guy). MONEYLINE money only (line = DK prices; no spread/total Circa invented); 0/100 money rows skipped (thin); Wise Guy's DraftKings board NOT used (failed same-minute check, 11-18 pt gaps). Verified vs VSiN Circa on CAR@GB: 0 pts (10:09 CT), 3 pts (10:52 CT; raw in build/raw/wgt_circa_check_20261029_1052).

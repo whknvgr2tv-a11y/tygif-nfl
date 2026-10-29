@@ -1,0 +1,5 @@
+Same-window check, Oct 29 2026 ~10:52-10:53 AM CT (15:52:58Z-15:53:31Z pulls).
+VSiN Circa (data.vsin.com ...source=CIRCA): only CAR@GB. ML money CAR 1 / GB 99, bets 40/60.
+WGT Circa ML (page stamp 11:18 AM ET = 10:18 CT): money CAR 4 / GB 96, bets 47/53.
+Money gap 3 pts (= limit) -> PASS. WGT stamp lags ~35 min (earlier 10:09 CT check: 0-pt gap). No other VSiN Circa games to compare.
+Adopt WGT Circa ML only; skip 0/100 rows; WGT DK still rejected.
