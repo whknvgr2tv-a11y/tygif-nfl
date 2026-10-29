@@ -47,6 +47,14 @@ footer:not(.ds-foot){color:var(--mut)}
 html{scroll-behavior:smooth}#slate{scroll-margin-top:72px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media (max-width:560px){.gc-ko{margin-left:0;width:100%}.gc-play{font-size:18px}.ds-main h1{font-size:22px}}
+.gc{padding:16px 18px;border:none;border-left:4px solid var(--pa)}.gc-hero{display:flex;align-items:center;gap:10px;margin:12px 0 4px}.gc-hero .gc-play{margin:0;font:800 24px/1.2 Inter,sans-serif}
+.gc-pass{background:none;padding:0;color:var(--mut)}
+.bets{gap:10px;margin:12px 0}.bt{border:none;border-top:none;border-left:4px solid var(--pa);background:var(--bg2);padding:10px 14px}.bt-sp{border-left-color:#58a6ff}.bt-ml{border-left-color:#d2a8ff}.bt.t-PASS{opacity:.55}.bt-v{font:800 20px/1.25 Inter,sans-serif;margin-top:2px}.bt-s{font-size:13px;color:var(--mut)!important;display:flex;gap:8px;align-items:center;margin-top:4px}
+.chip{font:800 10px/1 Inter,sans-serif;letter-spacing:.08em;padding:4px 6px;border-radius:4px}.chip.STRONG{background:var(--st);color:var(--txt-st)}.chip.LEAN{background:var(--le);color:var(--txt-le)}
+.bk{display:block;border:none;border-left:4px solid var(--pa);padding:10px 14px;margin:0 0 8px}.bk-lead{font-size:16px;margin:2px 0 8px}.bk-bar{margin-top:0}.bk-sub{display:flex;justify-content:space-between;margin-top:4px}
+.mo{display:block;font-size:13px;color:var(--mut);padding:0 2px 4px;margin:0}.mo b{color:var(--txt)}
+.gx{border:none;border-left:3px solid var(--line);margin-top:6px}.gx>summary{min-height:36px;padding:6px 12px}.gx-k{min-width:0}
+@media (max-width:560px){.gc{padding:14px}.gc-hero .gc-play{font-size:21px}.bt-v{font-size:18px}}
 </style>'''
 _NAVI=[('index','index.html#slate','This week'),('history','tygif-history.html','Past weeks'),('results','tygif-tracker.html#hub','Records'),('how','tygif-how.html','How it works')]
 def ds_head(cur):
@@ -104,8 +112,8 @@ def _sdr(g,kind):
 def _bk(g):
     try: v=book_view(g)
     except Exception: v=None
-    if not v: return ('<div class="bk bk-na" data-state="none"><span class="bk-k">What the books need</span><span class="bk-big">Not recorded</span>'
-                      '<span class="bk-sub">No DraftKings price on file for this game</span></div>')
+    if not v: return ('<div class="bk bk-na" data-state="none"><span class="bk-k">Book needs</span>'
+                      '<p class="bk-lead">Not recorded — no DraftKings price on file.</p></div>')
     st=v['state']; m=v['money']; be=v['be']; lo=v['lock_lo']; d=round(m-be,1); P=v['pub']; F=v['fade']
     big={'exposed':f"Books need {F}",'locked':'Books are about even','against':f"Books want {P}"}[st]
     lead={'exposed':f"Books are overloaded on {P} — they need {F} to cover.",
@@ -119,11 +127,11 @@ def _bk(g):
           'against':f"So {P} is {dd} under break-even — the book is rooting for {P}, not us."}[st]
     nums=f"Public money on {P}: {m}%. Book break-even: ~{be:.0f}%. {tail}"
     pos=lambda x:max(0,min(100,(x-40)*100/40))   # bar shows 40%..80%
-    return (f'<div class="bk bk-{st}" data-state="{st}"><div class="bk-l"><span class="bk-k">What the books need</span><span class="bk-big">{_E(big)}</span></div>'
-            f'<div class="bk-r"><p class="bk-lead">{_E(lead)}</p><p class="bk-plain">{_E(nums)}</p>'
+    g['_bknums']=nums
+    return (f'<div class="bk bk-{st}" data-state="{st}"><span class="bk-k">Book needs</span><p class="bk-lead">{_E(lead)}</p>'
             f'<div class="bk-bar" role="img" aria-label="{_E(P)} money {m}% versus book break-even {be:.0f}%"><span class="bk-fill" style="width:{pos(m):.0f}%"></span>'
             f'<span class="bk-tick" style="left:{pos(be):.0f}%"></span></div>'
-            f'<span class="bk-sub">Bar = {_E(P)} money · white line = book break-even</span></div></div>')
+            f'<span class="bk-sub"><span>{_E(P)} money {m}%</span><span>book even ~{be:.0f}%</span></span></div>')
 def _mlwhy(g):
     c=ml_call(g)
     if c['indep']: return c['why'] or ''
@@ -150,24 +158,33 @@ def game_card(g):
     except Exception: bn=''
     dk=('—' if g.get('c') is None or g.get('agree')=='none' else ('✓ Same side' if g['c'] else '✕ Opposite side'))
     dkd=_agree(g)
-    passbox=(f'<p class="gc-pass"><b>Why PASS:</b> {_E(why.split(" · ",1)[1] if " · " in why else why)} · fade side would be <b>{_E(f)} {_E(ln)}</b></p>' if r=='PASS' else f'<p class="gc-why">{_E(why)}</p>')
+    sp_on=sr!='PASS'; parts=([f'{f} {ln}'] if sp_on else [])+([f'{mt} ML'] if mlok else [])
+    head=(' + '.join(parts)) if parts else 'PASS — no edge'
+    passbox=(f'<p class="gc-pass">{_E(why.split(" · ",1)[1] if " · " in why else why)}</p>' if r=='PASS' else '')
+    bkh=_bk(g); bkn=g.pop('_bknums','')
+    def tile(cls,k,on,v,tag,sub):
+        return (f'<div class="bt {cls} t-{tag if on else "PASS"}"><span class="bt-k">{k}</span><span class="bt-v">{_E(v)}</span>'
+                f'<span class="bt-s">{(f"<b class=\"chip {tag}\">{tag}</b>" if on else "")}{_E(sub)}</span></div>')
+    sp_t=tile('bt-sp','Spread',sp_on,(f'{f} {ln}' if sp_on else 'No play'),sp_tag,(spres if sp_on else f'fade would be {f} {ln}'))
+    ml_t=tile('bt-ml','Moneyline',mlok,(f'{mt} ML' if mlok else 'No play'),ml_tag,(f'{mfd} · {mlres}' if mlok else _mlwhy(g)))
+    dkc="ok" if g.get("c") else ("no" if g.get("c") is False else "")
     return (f'<li class="gc r-{r}" id="{g["gid"]}"><article aria-labelledby="h-{g["gid"]}"><div class="gc-top">'
-            f'<span class="bdg {r}" aria-label="Rating: {r}">{r}</span>'
             f'<h3 class="gc-m" id="h-{g["gid"]}">{_logo(g["A"],g["away"])}{_E(g["away"])} <span class="gc-at">at</span> {_logo(g["H"],g["home"])}{_E(g["home"])}</h3>'
             f'<span class="gc-ko"><span class="sr-only">Kickoff </span>{_E(_ct(g))}</span></div>'
-            f'<p class="gc-play"><span class="sr-only">Best play: </span>{_E(play)}</p>{passbox}'
-            f'<div class="bets"><div class="bt bt-sp t-{sp_tag}"><span class="bt-k">Spread</span><span class="bt-v">{_E(sp_call)}</span><span class="bt-s">{(_E(sp_tag)+" · "+spres) if sr!="PASS" else _E("PASS · fade would be "+f+" "+ln)}</span></div>'
-            f'<div class="bt bt-ml t-{ml_tag}"><span class="bt-k">Moneyline</span><span class="bt-v">{_E(mlct)}</span><span class="bt-s">{_E(ml_tag+" · "+mlres) if mlok else _E("Not posted · "+_mlwhy(g))}</span></div></div>'
-            f'{_bk(g)}'
-            f'<div class="mo"><span><i>Money</i><b>{m} {g["ab_m"]}%</b></span><span><i>Bets</i><b>{m} {g["ab_b"]}%</b></span>'
-            f'<span><i>DraftKings</i><b class="{"ok" if g.get("c") else ("no" if g.get("c") is False else "")}">{_E(dk)}</b></span><span><i>Type</i><b>{t} · {_E(TY[t]["name"])}</b></span></div>'
-            f'<details class="gx gx-sp" data-kind="spread"><summary><span class="gx-k">Spread details</span><span class="gx-v">{_E(sp_call)}</span><span class="gx-r">{spres}</span></summary><dl>'
+            f'<div class="gc-hero"><span class="bdg {r}" aria-label="Rating: {r}">{r}</span><p class="gc-play"><span class="sr-only">Play: </span>{_E(head)}</p></div>{passbox}'
+            f'<div class="bets">{sp_t}{ml_t}</div>'
+            f'{bkh}'
+            f'<p class="mo">Crowd: <b>{m}</b> {g["ab_m"]}% of money · {g["ab_b"]}% of bets · DK <b class="{dkc}">{_E(dk.replace("✓ ","").replace("✕ ","").lower() if dk!="—" else "n/a")}</b></p>'
+            f'<details class="gx gx-sp" data-kind="spread"><summary><span class="gx-k">Spread details</span></summary><dl>'
             f'<div><dt>Line</dt><dd><span class="n">{g["A"]} {_E(str(g["sp"].get(g["A"],"")))} · {g["H"]} {_E(str(g["sp"].get(g["H"],"")))}</span></dd></div>'
-            f'<div><dt>Fade side</dt><dd>{f} ({_fdl(g,f)})</dd></div>'
+            f'<div><dt>Call</dt><dd>{_E(sp_call)} · {_E(sp_tag)}</dd></div>'
+            f'<div><dt>Why</dt><dd>{_E(why)}</dd></div>'
+            f'<div><dt>Type</dt><dd>{t} · {_E(TY[t]["name"])}</dd></div>'
             f'<div><dt>Type {t} {r} group</dt><dd>{_E(sgrp)}</dd></div>'
             f'<div><dt>DraftKings check</dt><dd>{_E(dkd)}</dd></div>'
+            +(f'<div><dt>Book numbers</dt><dd>{_E(bkn)}</dd></div>' if bkn else '')+
             f'<div><dt>Result</dt><dd>{spres}</dd></div></dl>{bn}</details>'
-            f'<details class="gx gx-ml" data-kind="moneyline" data-posted="{"yes" if mlok else "no"}"><summary><span class="gx-k">Moneyline details</span><span class="gx-v">{_E(mlct)}</span><span class="gx-r">{_E(mlres)}</span></summary><dl>'
+            f'<details class="gx gx-ml" data-kind="moneyline" data-posted="{"yes" if mlok else "no"}"><summary><span class="gx-k">Moneyline details</span></summary><dl>'
             f'<div><dt>Side</dt><dd>{mt} ({mfd})</dd></div>'
             f'<div><dt>Moneyline rating</dt><dd>{_E(mc["raw"])}{(" · Type "+str(mc["type"])) if mc["indep"] else ""} · {_E(mc["m"]["why"] if mc["indep"] else "not graded: spread money split exactly 50–50, so no sides are tracked for this game")}</dd></div>'
             f'<div><dt>Posted</dt><dd>{("Yes — moneyline "+mc["rating"]) if mlok else "No — "+_E(_mlwhy(g))}</dd></div>'
@@ -182,7 +199,7 @@ HOME2=(f'<main id="main" class="ds-main" tabindex="-1"><h1>Week {GW} board</h1>'
   f'<div><span class="ds-k">Data</span><span class="ds-v sm">As of {_E(_etlbl(max(g['split_utc'] for g in ALL6)))}</span></div>'
   f'<div><span class="ds-k">Agreement source</span><span class="ds-v sm txt">DraftKings {"bets % (handle unavailable)" if _dkbets else "money %"}</span></div></section>'
   f'<section aria-labelledby="slate"><h2 id="slate" class="ds-h2">Full slate</h2>'
-  f'<p class="ds-legend">Each card: the play, then the Spread and Moneyline calls side by side (blue = spread, purple = moneyline), then what the book needs, then the money. Tap Spread details or Moneyline details for lines, groups and per-book prices. PASS cards name the fade side and why it does not qualify.</p>'
+  f'<p class="ds-legend">Each card: the play, Spread (blue) and Moneyline (purple), then what the book needs. Tap details for lines, groups and per-book prices.</p>'
   f'<ol class="slate">{"".join(game_card(g) for g in ALL6)}</ol></section>'
   f'<details class="ds-notes"><summary>Notes</summary><ul><li>Calls before kickoff are previews and can change as the money moves. Graded at the DraftKings line, price and moneyline recorded at least 5 minutes before kickoff.</li><li>Crowd money = mean of all-books spread and moneyline money % on the money side (ScoresAndOdds).</li>'
   f'<li>STRONG and LEAN records are kept separate and never combined. Flat $100 per play.</li><li>Book needs compares all-books money to the DraftKings break-even; information only, never changes a rating.</li></ul></details>'
