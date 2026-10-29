@@ -48,7 +48,7 @@ html{scroll-behavior:smooth}#slate{scroll-margin-top:72px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media (max-width:560px){.gc-ko{margin-left:0;width:100%}.gc-play{font-size:18px}.ds-main h1{font-size:22px}}
 </style>'''
-_NAVI=[('index','index.html#slate','This week'),('history','tygif-history.html','Past weeks'),('results','tygif-tracker.html#results','Records'),('how','tygif-how.html','How it works')]
+_NAVI=[('index','index.html#slate','This week'),('history','tygif-history.html','Past weeks'),('results','tygif-tracker.html#hub','Records'),('how','tygif-how.html','How it works')]
 def ds_head(cur):
     a=''.join(f'<a href="{h}"'+(' aria-current="page"' if k==cur else '')+f'>{t}</a>' for k,h,t in _NAVI)
     return (f'<a class="skip" href="#main">Skip to content</a><header class="ds-head" role="banner"><div class="in">'
@@ -231,3 +231,38 @@ for _f in _gg.glob(R+'*.html'):
     _x=_x.replace('</body>',DS_FOOT+'</body>',1) if 'ds-foot' not in _x else _x
     wr(_b,_x)
 print('premium skin ok:',len(ALL6),'games',_cnt)
+# Records hub (Oct 29): every graded game's best-play side, by Type 1-5 x rating x Favorite/Underdog; spread, ML posted, and no-ML-play buckets
+def _bucket(x):
+    if x['rating']=='PASS': return 'PASS'
+    m=ml_post(x); sp=bool(x['sp_res'])
+    return 'Both' if (m and sp) else ('Moneyline only' if m else 'Spread only')
+_BK=('Spread only','Moneyline only','Both','PASS')
+_BKD={'Spread only':'Spread is the play; moneyline not posted.','Moneyline only':'Moneyline is the play; no spread play.','Both':'Spread and moneyline both played.','PASS':'No play; best side tracked on spread and moneyline.'}
+def _rec(rs,k):
+    rs=[r for r in rs if r[k+'_res']]
+    if not rs: return '—'
+    w=sum(r[k+'_res']=='W' for r in rs);l=sum(r[k+'_res']=='L' for r in rs);p=sum(r[k+'_res']=='P' for r in rs);u=sum(r[k+'_usd'] or 0 for r in rs)
+    return f'{w}-{l}-{p} <small class="{"pos" if u>0 else ("neg" if u<0 else "")}">{usd(u)}</small>'
+def _hub():
+    xs=[x for x in SIDES if x['role']=='fade' and (x['sp_res'] or x['ml_res'])]
+    rr=lambda r,u: '—' if not r else f'<span class="{dict(W="pos",L="neg",P="")[r]}">{dict(W="Win",L="Loss",P="Push")[r]} {usd(u or 0)}</span>'
+    summ='';det=''
+    for bk in _BK:
+        g=sorted([x for x in xs if _bucket(x)==bk],key=lambda x:(x['week'],x['game']))
+        spc='Spread' if bk!='PASS' else 'Spread (tracked)'; mlc='Moneyline' if bk!='PASS' else 'Moneyline (tracked)'
+        summ+=f'<tr><th scope="row">{bk}</th><td>{len(g)}</td><td>{_rec(g,"sp") if bk!="Moneyline only" else "—"}</td><td>{_rec(g,"ml") if bk in ("Moneyline only","Both","PASS") else "—"}</td><td>{_BKD[bk]}</td></tr>'
+        rows=''.join(f'<tr><td>{x["week"]}</td><td>{x["game"].replace("@"," at ")}</td><td>{x["team"]}</td><td>{x["rating"]}</td><td>Type {x["type"]}</td><td>{"Favorite" if x["fd"]=="Fav" else "Underdog"}</td>'
+                     f'<td>{rr(x["sp_res"],x["sp_usd"]) if bk!="Moneyline only" else "—"}</td><td>{rr(x["ml_res"],x["ml_usd"]) if bk!="Spread only" else "—"}</td></tr>' for x in g)
+        det+=(f'<details class="gx" id="hub-{bk.split()[0].lower()}"><summary>{bk} · {len(g)} games</summary>'
+              + (f'<div class="tblwrap"><table class="data"><thead><tr><th scope="col">Week</th><th scope="col">Game</th><th scope="col">Side</th><th scope="col">Rating</th><th scope="col">Type</th><th scope="col">Fav/Dog</th><th scope="col">{spc}</th><th scope="col">{mlc}</th></tr></thead><tbody>{rows}</tbody></table></div>' if g else '<p class="ds-legend">No games in this bucket yet.</p>')
+              +'</details>')
+    n=len({(x['week'],x['game']) for x in xs})
+    return ('<section id="hub" aria-labelledby="hubh"><h2 id="hubh" class="ds-h2">Season records</h2>'
+            f'<p class="ds-legend">All {n} graded games, each in exactly one bucket. Flat $100 per play. Open a bucket to see every game with its type, Favorite/Underdog and result.</p>'
+            '<div class="tblwrap"><table class="data"><thead><tr><th scope="col">Bucket</th><th scope="col">Games</th><th scope="col">Spread record</th><th scope="col">Moneyline record</th><th scope="col">Meaning</th></tr></thead>'
+            f'<tbody>{summ}</tbody></table></div>{det}</section>')
+_tf=R+'tygif-tracker.html'; _x=open(_tf,encoding='utf-8').read()
+_x=re.sub(r'<section id="hub".*?</section>','',_x,flags=re.S)
+_x=re.sub(r'(<h1 class="ds-pt">Records</h1>)',lambda m:m.group(1)+_hub(),_x,count=1)
+_x=_x.replace('<div class="gt-row"><b class="none">PASS: see Side groups</b></div>','<div class="gt-row"><b class="none">PASS type — records in Season records (top of page)</b></div>')
+wr('tygif-tracker.html',_x)
