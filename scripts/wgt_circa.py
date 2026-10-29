@@ -1,4 +1,5 @@
 """Wise Guy Team Circa MONEYLINE board (wiseguyteam.com/circa-betting-splits) -> wgt_circa_<stamp>.json.
+# UNUSED: reverted Oct 29 2026 (lag + borderline 3-pt gap vs VSiN Circa). See notes/splits_deep_research_20261029.md
 TG, Oct 29: free fill for Circa money when free VSiN Circa only shows ~1 game. Adopted after same-minute checks vs VSiN Circa
 (CAR@GB money 0 pts @10:09 CT, 3 pts @10:52 CT). Rules: ML ONLY (no spread/total Circa invented from it); rows with 0/100 money
 (thin/no handle) are skipped; WGT's DraftKings board is NOT used (failed same-minute check vs VSiN-DK, 11-18 pt gaps).

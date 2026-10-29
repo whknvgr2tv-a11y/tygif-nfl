@@ -1,0 +1,7 @@
+2nd same-minute check, Oct 29 2026 11:03 AM CT (both pulls 16:03:44Z).
+VSiN Circa: only CAR@GB. ML money CAR 1 / GB 99, bets 40/60 (unchanged from 10:52).
+WGT Circa NFL ML (section stamp 11:18 AM ET = 10:18 CT, unchanged): CAR 4 / GB 96, bets 47/53 (identical to 10:52 pull).
+Money gap 3 pts (= limit) -> PASS. No in-page game contradictions (each NFL game listed once).
+Caveat: WGT NFL section not refreshed in ~45 min; page header says 11:50 ET (CFB section), NFL/NBA sections 11:18 ET.
+DK Network splits page: still "temporarily unavailable".
+No other overlapping games (VSiN free Circa shows 1 game; "13 more" Pro-only).

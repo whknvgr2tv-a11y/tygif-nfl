@@ -29,3 +29,10 @@ Before CAR lock 7:10 PM CT: sign up SharpAPI (check for trial/monthly cancel) an
 - Public search only surfaces VSiN DK page and WGT DK page as stand-ins; Reddit r/sportsbook has nothing current (old threads). DK Network URL with ?tb_edate params shows stale cached May NBA data in search index, not live. No other public workaround found. X search not run.
 ## Updated recommendation
 Free win first: add WGT Circa ML page as a full-board Circa source (passed 0-gap same-minute vs VSiN Circa). Re-verify once more before CAR lock; ignore rows with 0/100 or both sides tiny samples. Paid next: SharpAPI Pro 3-day free trial for DK spread/total + Circa all markets — check DK rows not empty.
+
+## REVERTED (Oct 29, ~11:10 AM CT): Wise Guy Circa ML removed from agreement chain
+- Second same-minute check vs VSiN Circa (CAR@GB) only borderline: 3-pt gap again.
+- WGT NFL board timestamp frozen ~45 min (11:18 ET) -> lag; cannot trust as live.
+- User requires no inconsistencies. Chain back to DK -> VSiN-DK -> VSiN Circa.
+- W8 BAL +3, MIN +3, CLE +3.5 back to Type 4 PASS (no independent book money). CAR +3.5 LEAN unchanged.
+- scripts/wgt_circa.py kept as UNUSED tooling (not called by clean_build.py).
