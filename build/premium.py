@@ -125,13 +125,12 @@ def _bk(g):
     tail={'exposed':(f"So {P} is +{dd} over what the book needs — the book is rooting for {F}." if d>=2 else f"So {P} is just +{dd} over what the book needs — barely tilted toward {F}."),
           'locked':f"So {P} money ({m}%) sits in the book's safe range ({lo:.0f}–{be:.0f}%) — the book is happy with either side.",
           'against':f"So {P} is {dd} under break-even — the book is rooting for {P}, not us."}[st]
+    # TG Oct 29: drop remapped bar + "book even ~53%" — looked like random numbers next to real money %.
+    # Keep plain lead; Crowd line below already shows money %.
     nums=f"Public money on {P}: {m}%. Book break-even: ~{be:.0f}%. {tail}"
-    pos=lambda x:max(0,min(100,(x-40)*100/40))   # bar shows 40%..80%
     g['_bknums']=nums
-    return (f'<div class="bk bk-{st}" data-state="{st}"><span class="bk-k">Book needs</span><p class="bk-lead">{_E(lead)}</p>'
-            f'<div class="bk-bar" role="img" aria-label="{_E(P)} money {m}% versus book break-even {be:.0f}%"><span class="bk-fill" style="width:{pos(m):.0f}%"></span>'
-            f'<span class="bk-tick" style="left:{pos(be):.0f}%"></span></div>'
-            f'<span class="bk-sub"><span>{_E(P)} money {m}%</span><span>book even ~{be:.0f}%</span></span></div>')
+    return (f'<div class="bk bk-{st}" data-state="{st}"><span class="bk-k">Book needs</span>'
+            f'<p class="bk-lead">{_E(lead)}</p></div>')
 def _mlwhy(g):
     c=ml_call(g)
     if c['indep']: return c['why'] or ''
