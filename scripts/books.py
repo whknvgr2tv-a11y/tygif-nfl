@@ -66,6 +66,48 @@ def _ab(side):   # 'VSiN Panthers +3.5' / 'DK ...' -> abbr from nickname, else f
         if t in NK.values(): return t
     return None
 
+AN_MULTI = ('https://api.actionnetwork.com/web/v2/scoreboard/publicbetting/nfl'
+            '?bookIds=68,69,71,75,79,123,2988&date={}')
+AN_BOOKS = {68: 'draftkings', 69: 'fanduel', 71: 'betrivers', 75: 'betmgm', 79: 'bet365', 123: 'caesars', 2988: 'fanatics'}
+AN_ALIAS = {'JAX': 'JAC', 'LAR': 'LA', 'WSH': 'WAS'}  # AN -> SAO abbrs
+
+def write_an_books(d, stamp):
+    """Action Network per-book PRICES (spread + ML) for each NFL game -> an_books_<stamp>.json. Fail-open.
+    Discovery 2026-10-29: AN's money/ticket % is the same AN consensus number copied onto every book (+-1),
+    so it is NOT book-specific money; only the prices are per-book. Stored as prices_only."""
+    import datetime, urllib.request
+    out = []
+    try:
+        dates = {datetime.date.today() + datetime.timedelta(days=i) for i in range(0, 5)}
+        seen = set()
+        for dt in sorted(dates):
+            r = urllib.request.Request(AN_MULTI.format(dt.strftime('%Y%m%d')), headers={'User-Agent': 'Mozilla/5.0'})
+            j = json.load(urllib.request.urlopen(r, timeout=20))
+            for g in j.get('games', []):
+                if g['id'] in seen: continue
+                seen.add(g['id']); t = {x['id']: AN_ALIAS.get(x['abbr'], x['abbr']) for x in g.get('teams', [])}
+                a, h = g['away_team_id'], g['home_team_id']; books = {}
+                for bid, m in (g.get('markets') or {}).items():
+                    name = AN_BOOKS.get(int(bid)); ev = (m or {}).get('event', {})
+                    if not name: continue
+                    def side(k, tid):
+                        return next((o for o in ev.get(k, []) or [] if o.get('team_id') == tid), None)
+                    sa, sh, ma, mh = side('spread', a), side('spread', h), side('moneyline', a), side('moneyline', h)
+                    v = {'prices_only': True}
+                    if sa and sh:
+                        v['spread_line'] = [sa['value'], sh['value']]; v['spread_odds'] = [sa['odds'], sh['odds']]
+                        if (bm := book_math(sa['odds'], sh['odds'])): v['hold_pct'] = bm['hold_pct']; v['breakeven_pct'] = bm['breakeven_pct']
+                    if ma and mh:
+                        v['ml_odds'] = [ma['odds'], mh['odds']]
+                        if (bm := book_math(ma['odds'], mh['odds'])): v['ml_hold_pct'] = bm['hold_pct']; v['ml_breakeven_pct'] = bm['breakeven_pct']
+                    books[name] = v
+                out.append({'away': t.get(a), 'home': t.get(h), 'an_id': g['id'], 'start_time': g.get('start_time'), 'books': books})
+    except Exception as e:
+        print(f'AN books: fail-open ({e})')
+        if not out: return None
+    json.dump({'stamp': stamp, 'source': 'actionnetwork per-book prices', 'games': out}, open(f'{d}/an_books_{stamp}.json', 'w'), indent=1)
+    return out
+
 def books_panel(d, stamp):
     """Per SAO game: books present with spread/ML/all-money % (away, home) + hold. Missing books listed explicitly."""
     sao, saoml = _load(d, 'sao', stamp), _load(d, 'saoml', stamp)
@@ -101,7 +143,9 @@ def books_panel(d, stamp):
         if sp: v['hold_pct'] = sp['hold_pct']; v['breakeven_pct'] = sp['breakeven_pct']
         if ml: v['ml_hold_pct'] = ml['hold_pct']; v['ml_breakeven_pct'] = ml['breakeven_pct']
         put((g['away'], g['home']), 'espn_dk_prices', v)
-    allb = ('sao_all_books', 'draftkings', 'circa', 'espn_dk_prices')
+    for g in (_load(d, 'an_books', stamp) or {}).get('games', []):
+        for b, v in g['books'].items(): put((g['away'], g['home']), f'an_{b}_prices', v)
+    allb = ('sao_all_books', 'draftkings', 'circa', 'espn_dk_prices') + tuple(f'an_{b}_prices' for b in AN_BOOKS.values())
     for g in games.values(): g['missing'] = [b for b in allb if b not in g['books']]
     out = {'stamp': stamp, 'note': 'evidence only; ratings still SAO all-money + DK agreement. Pairs are [away, home].',
            'coverage': {b: sum(b in g['books'] for g in games.values()) for b in allb}, 'games': list(games.values())}
@@ -110,6 +154,8 @@ def books_panel(d, stamp):
 
 def run(d, stamp):
     c = write_circa(d, stamp)
+    try: write_an_books(d, stamp)
+    except Exception as e: print(f'AN books: fail-open ({e})')
     p = books_panel(d, stamp)
     print(f'Circa: {len(c) if c is not None else "no html"} games parsed; books panel coverage {p["coverage"]} of {len(p["games"])}')
     return p
