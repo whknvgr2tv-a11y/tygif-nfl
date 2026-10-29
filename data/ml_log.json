@@ -920,7 +920,7 @@
    "spread_line": 3.5,
    "status": "preview",
    "espn_event": "401873023",
-   "price": 154,
+   "price": 150,
    "fd": "Dog"
   },
   {
@@ -948,7 +948,7 @@
   {
    "week": 8,
    "game": "MIN@DET",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "MIN",
    "spread_line": 3.0,
    "status": "preview",
@@ -975,7 +975,7 @@
    "spread_line": 3.5,
    "status": "preview",
    "espn_event": "401873027",
-   "price": 160,
+   "price": 154,
    "fd": "Dog"
   },
   {
@@ -997,7 +997,7 @@
    "spread_line": 10.0,
    "status": "preview",
    "espn_event": "401873028",
-   "price": 380,
+   "price": 370,
    "fd": "Dog"
   },
   {
@@ -1008,7 +1008,7 @@
    "spread_line": 6.5,
    "status": "preview",
    "espn_event": "401873032",
-   "price": 220,
+   "price": 225,
    "fd": "Dog"
   },
   {

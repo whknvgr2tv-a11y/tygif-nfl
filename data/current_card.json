@@ -1,6 +1,6 @@
 {
  "week": 8,
- "posted_at_et": "Thu Oct 29, 4:00 PM ET",
+ "posted_at_et": "Thu Oct 29, 5:10 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -35,7 +35,7 @@
    "team": "MIN",
    "name": "Minnesota",
    "nick": "Vikings",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "line": "+3",
    "kickoff_utc": "2026-11-01T18:00:00Z"
   },

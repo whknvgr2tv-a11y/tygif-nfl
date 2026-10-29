@@ -1,7 +1,8 @@
-Week 8 · Lines as of Thu Oct 29, 3:00 PM CT
+Week 8 · Lines as of Thu Oct 29, 4:10 PM CT
 
 STRONG Baltimore +3
 STRONG Tennessee +11.5
+STRONG Minnesota +3
 STRONG NY Jets −1.5
 STRONG Tampa Bay −2.5
 STRONG Indianapolis +10
@@ -9,10 +10,10 @@ STRONG LA Chargers +6.5
 STRONG Miami +7
 STRONG Philadelphia +6
 LEAN Carolina +3.5
-LEAN Minnesota +3
 LEAN Cleveland +3.5
 STRONG Baltimore ML
 STRONG Tennessee ML
+STRONG Minnesota ML
 STRONG NY Jets ML
 STRONG Tampa Bay ML
 STRONG Indianapolis ML
@@ -20,5 +21,4 @@ STRONG LA Chargers ML
 STRONG Miami ML
 STRONG Philadelphia ML
 LEAN Carolina ML
-LEAN Minnesota ML
 LEAN Cleveland ML
