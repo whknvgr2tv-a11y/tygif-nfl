@@ -865,6 +865,13 @@ CARD_CSS=r"""
 .cd-3 span{display:flex;flex-direction:column;align-items:center;font-size:12px;color:var(--mut);line-height:1.25;text-align:center}
 .cd-3 b{font-size:13px;font-weight:800;white-space:nowrap}
 .cd-3 .ok{color:#3fae6c}.cd-3 .md{color:#d9a520}.cd-3 .no{color:#e07a7a}
+.bn{grid-column:1/-1;display:block;margin:10px 0 0;font-size:12px}
+.bn-h{display:block;font-size:11px;letter-spacing:.08em;font-weight:800;color:var(--mut);text-transform:uppercase}.bn-h small{text-transform:none;letter-spacing:0;font-weight:500;margin-left:6px}
+.bn-t{display:block;margin:6px 0 2px;font-weight:700;color:var(--txt)}
+.bn-r{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1.2fr) 56px 56px;gap:6px;padding:3px 0;border-top:1px solid var(--line);color:var(--mut);font-variant-numeric:tabular-nums}
+.bn-r b{color:var(--txt);font-weight:700;white-space:nowrap}.bn-r>span:nth-child(n+3){text-align:right}
+.bn-r i{font-style:normal;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-left:6px}
+.bn-best b,.bn-best i{color:#3fae6c}.bn-worst i{color:#e07a7a}
 .cd-4{margin:9px 0 0;font-size:13px;color:var(--mut)}
 .cd-4 .fin{color:#3fae6c;font-weight:700}.cd-4 .fin.L{color:#e07a7a}.cd-4 .fin.P{color:var(--txt)}
 .cd-ml{display:block;margin:6px 0 0;font-size:13px;font-weight:700;color:var(--txt)}
@@ -908,6 +915,56 @@ _FF=json.load(open(R+'data/card_full.json'))['full']
 class _All:
     def __contains__(self,x): return True
 FULL=_All() if _FF=='all' else set(_FF)
+# ---------- books need / line shop (AN per-book PRICES only; never money, never agreement) ----------
+_BKN={'draftkings':'DraftKings','fanduel':'FanDuel','betmgm':'BetMGM','caesars':'Caesars','betrivers':'BetRivers','bet365':'bet365','fanatics':'Fanatics'}
+def _anb(g):
+    """Latest an_books pull at or before kickoff-5min for this game -> {book: v}."""
+    if not g.get('ko_utc') or g.get('final'): return {}
+    cut=_dt.datetime.fromisoformat(g['ko_utc'].replace('Z','+00:00'))-_dt.timedelta(minutes=5); best=None
+    for f in _g0.glob(_W+f"/snap_w{g['week']}_*/an_books_*.json"):
+        st=re.search(r'an_books_(\d{8}T\d{4})Z',f)
+        if not st: continue
+        t_=_dt.datetime.strptime(st.group(1),'%Y%m%dT%H%M').replace(tzinfo=_dt.timezone.utc)
+        if t_>cut or (best and t_<=best[0]): continue
+        _al={'JAC':'JAX','LA':'LAR','WAS':'WSH'}; x=next((x for x in json.load(open(f))['games'] if (_al.get(x['away'],x['away']),_al.get(x['home'],x['home']))==(g['A'],g['H'])),None)
+        if x: best=(t_,x['books'])
+    return best[1] if best else {}
+def books_need(g):
+    """[(team, rows best->worst, best_names, worst_names)]; row=(book,line,odds,hold,be). Play side only; PASS = both sides."""
+    bk=_anb(g); out=[]
+    if not bk: return out
+    teams=[AB[g['fade']]] if g['rating']!='PASS' else [g['A'],g['H']]
+    for tm in teams:
+        i=0 if tm==g['A'] else 1; rows=[]
+        for b,v in bk.items():
+            if b not in _BKN or 'spread_odds' not in v or 'hold_pct' not in v: continue
+            rows.append((_BKN[b],float(v['spread_line'][i]),int(v['spread_odds'][i]),v['hold_pct'],v['breakeven_pct'][i]))
+        if not rows: continue
+        rows.sort(key=lambda r:(-r[1],r[4],r[3]))   # more points, then lower break-even (more juice our way), then lower hold
+        k=lambda r:(r[1],r[4]); top,bot=k(rows[0]),k(rows[-1])
+        out.append((tm,rows,{r[0] for r in rows if k(r)==top},{r[0] for r in rows if k(r)==bot} if bot!=top else set()))
+    return out
+def _ln(x): return ('+' if x>0 else ('' if x==0 else M))+f'{abs(x):g}' if x else 'PK'
+def _od(o): return ('+' if o>0 else M)+str(abs(o))
+def bn_html(g):
+    bn=books_need(g)
+    if not bn: return ''
+    h='<span class="bn"><span class="bn-h">Books need <small>spread price · hold · break-even</small></span>'
+    for tm,rows,bs,ws in bn:
+        h+=f'<span class="bn-t">{NAME[tm]}</span>'
+        for b,l,o,hd,be in rows:
+            c=' bn-best' if b in bs else (' bn-worst' if b in ws else '')
+            tag='<i>best</i>' if b in bs else ('<i>worst</i>' if b in ws else '')
+            h+=f'<span class="bn-r{c}"><span>{b}{tag}</span><b>{tm} {_ln(l)} {_od(o)}</b><span>{hd:.2f}%</span><span>{be:.2f}%</span></span>'
+    return h+'</span>'
+def bn_txt(g):
+    out=[]
+    for tm,rows,bs,ws in books_need(g):
+        b0=rows[0]; w0=rows[-1]
+        out.append(f"    books need {tm}: best {'/'.join(r[0] for r in rows if r[0] in bs)} {tm} {_ln(b0[1])} {_od(b0[2])} (hold {b0[3]:.2f}%, break-even {b0[4]:.2f}%)"
+                   +(f" · worst {'/'.join(r[0] for r in rows if r[0] in ws)} {_ln(w0[1])} {_od(w0[2])} (hold {w0[3]:.2f}%, break-even {w0[4]:.2f}%)" if ws else ' · all books same'))
+        out.append('      '+' · '.join(f"{r[0]} {_ln(r[1])} {_od(r[2])} {r[3]:.2f}%/{r[4]:.2f}%" for r in rows))
+    return out
 def card_inner(g):
     t=g['type']; r=g['rating']
     if r!='PASS':
@@ -931,7 +988,7 @@ def card_inner(g):
     lgs=LOGO(g['A'])+LOGO(g['H'])
     return (f'<span class="cd-1"><span class="cd-b {r}">{r}</span><span class="cd-lg">{lgs}</span><span class="cd-c">{f'{g["away"]} at {g["home"]}' if (g['gid'] in FULL or r=='PASS') else title}</span>'
             f'<span class="cd-ar">+</span></span>'
-            f'{side_rows(g,sc1,trec,mlh)}<span class="cd-3">{grid}</span><span class="cd-4">{st}</span>')
+            f'{side_rows(g,sc1,trec,mlh)}<span class="cd-3">{grid}</span>{bn_html(g) if not g.get("final") else ""}<span class="cd-4">{st}</span>')
 def _grec(a,lab):
     return f'{lab}: {wlp(*a[:3])}, {usd(a[3])}' if a[4] else f'{lab}: no games yet'
 def side_rows(g,sc1,trec,mlh):
@@ -1679,7 +1736,7 @@ def txt_clean(GG,wk,asof):
         for g in gs:
             side=g['fade']; call=f"{side} {g['sp'][AB[side]]}"; when=' · '.join(g['when'].split(' · ')[:2])
             P+=[f"  {call}  ·  {g['away']} at {g['home']}, {when}{res(g)}",f"    {rec_line(g)}",
-                "    "+' · '.join(f"{l}: {'Yes' if v else 'No'}" for l,_,v,_,_ in qa(g))]
+                "    "+' · '.join(f"{l}: {'Yes' if v else 'No'}" for l,_,v,_,_ in qa(g))]+([] if fin else bn_txt(g))
             L.append(f"  {call}  ·  {when}{res(g)}")
             B.append(f"{rt} {call}{res(g)}")
         P.append(''); L.append('')
@@ -1707,7 +1764,8 @@ def txt_clean(GG,wk,asof):
             P+=[f"  {t_}  ·  {g['away']} at {g['home']}, {when}",f"    group: {wlp(*a_[:3])}, {usd(a_[3])}"]
             L.append(f"  {t_}  ·  {when}"); B.append(t_)
         P.append(''); L.append('')
-    P+=['PASS']+[f"  {g['away']} at {g['home']}"+(' (no independent book money)' if g.get('agree')=='none' else '') for g in ps]
+    P+=['PASS']
+    for g in ps: P+=[f"  {g['away']} at {g['home']}"+(' (no independent book money)' if g.get('agree')=='none' else '')]+([] if fin else bn_txt(g))
     if not fin and NODK.get(wk): P+=['',f"PARTIAL SLATE: only {len(GG)} of {len(GG)+len(NODK[wk])} Week {wk} games rated so far; the other {len(NODK[wk])} are unrated until DraftKings (or VSiN DK backup) splits exist."]
     if not fin and any(g.get('dk_vsin') for g in GG): P+=['','DK splits via VSiN (DK page empty).']
     if not fin and any(g.get('agree')=='none' for g in GG): P+=['','Agreement chain: DraftKings -> VSiN-DK -> Circa. Games with none of these are PASS (no independent book money; never invented).']
