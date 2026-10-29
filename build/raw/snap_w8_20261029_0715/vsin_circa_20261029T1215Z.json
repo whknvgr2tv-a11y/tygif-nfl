@@ -1,0 +1,50 @@
+{
+ "source": "vsin_circa",
+ "html": "vsin_circa_20261029T1215Z.html",
+ "games": [
+  {
+   "matchup": "Panthers @ Packers",
+   "away": "CAR",
+   "home": "GB",
+   "kickoff_local": null,
+   "source": "vsin_circa",
+   "spread": [
+    {
+     "side": "Circa Panthers +3.5",
+     "odds": null,
+     "handle_pct": 61,
+     "bets_pct": 53
+    },
+    {
+     "side": "Circa Packers -3.5",
+     "odds": null,
+     "handle_pct": 39,
+     "bets_pct": 47
+    }
+   ],
+   "moneyline": [
+    {
+     "side": "Circa Panthers",
+     "odds": "+170",
+     "handle_pct": 3,
+     "bets_pct": 47
+    },
+    {
+     "side": "Circa Packers",
+     "odds": "-195",
+     "handle_pct": 97,
+     "bets_pct": 53
+    }
+   ],
+   "money_all": [
+    32.0,
+    68.0
+   ],
+   "ml_hold_pct": 3.04,
+   "ml_breakeven_pct": [
+    37.04,
+    66.1
+   ]
+  }
+ ]
+}

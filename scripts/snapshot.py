@@ -205,17 +205,18 @@ def main():
             if dk: meta['source'] = VSIN.format('DK') + ' (backup: DK page empty)'
             print(f'DK page empty -> VSiN DK backup: {len(dk)} games')
         except Exception as ex: print('VSiN DK backup failed:', ex)
-    for g in dk:  # book math from prices already pulled (no new scrape); fail-open
-        try:
-            sp = g['spread']; ip = [_implied(x['odds']) for x in sp]
-            g['hold_pct'] = round(100 * (sum(ip) - 1) / sum(ip), 2)
+    def dk_hold():  # book math from prices already pulled (no new scrape); fail-open. Formula: books.book_math
+        from books import book_math
+        for g in dk:
+            sp = g['spread']; bm = book_math(*[x.get('odds') for x in sp])
+            if not bm: g['hold_error'] = 'price missing'; continue
+            g.pop('hold_error', None); g['hold_pct'] = bm['hold_pct']
             for i, x in enumerate(sp):
                 # book wins on both outcomes while this side's money share sits in [lock_lo, breakeven]
-                x['breakeven_money_pct'] = round(100 * ip[i], 1)
-                x['lock_lo_money_pct'] = round(100 * (1 - ip[1 - i]), 1)
-                x['book_exposed'] = x['handle_pct'] > 100 * ip[i]
-        except Exception as e:
-            g['hold_error'] = str(e)
+                x['breakeven_money_pct'] = round(bm['breakeven_pct'][i], 1)
+                x['lock_lo_money_pct'] = round(100 - bm['breakeven_pct'][1 - i], 1)
+                x['book_exposed'] = x['handle_pct'] > bm['breakeven_pct'][i]
+    dk_hold()
     json.dump(dict(meta, games=dk), open(f'{OUT}/dk_{stamp}.json', 'w'), indent=1)
     print(f'DraftKings: {len(dk)} games with spread splits')
     if not dk: ok = False
@@ -260,8 +261,8 @@ def main():
         print('VSiN capture:', {k: v.get('bytes', v.get('error')) for k, v in src['vsin'].items()})
     except Exception as ex:
         src['vsin'] = {'error': str(ex)[:200]}
-    src['note'] = ('independent money sources: DraftKings (own book), VSiN Circa (raw capture, '
-                   'unparsed, not rated). SAO and AN share data.')
+    src['note'] = ('independent money sources: DraftKings (own book), VSiN Circa (parsed to vsin_circa_*.json + books_panel_*.json, '
+                   'evidence only, not rated). SAO and AN share data.')
     try:
         json.dump(src, open(f'{OUT}/sources_{stamp}.json', 'w'), indent=1)
     except Exception as ex:
@@ -280,12 +281,18 @@ def main():
                 for e in ed:
                     for s_, k in zip(g['spread'], ('away', 'home')):
                         if NK.get(s_['side'].split()[1]) == e[k]: s_['odds'] = e['spread'][k]['odds']
+            dk_hold()   # prices just arrived -> hold now computable
             json.dump(dict(meta, games=dk), open(f'{OUT}/dk_{stamp}.json', 'w'), indent=1)
         es = espn_status(wkm, ed, datetime.now(timezone.utc))
         if es == 'done': print('Every game of the week has kicked off (latest kickoff < 36h ago); ESPN not failed.')
         elif es != 'ok': print('ESPN DraftKings:', es); ok = False
     except Exception as ex:
         print('ESPN DraftKings capture failed:', ex); ok = False
+    # Phase 1 multi-book evidence: Circa parse + books panel (fail open, not rated)
+    try:
+        import books; books.run(OUT, stamp)
+    except Exception as ex:
+        print('Circa/books panel failed (fail open):', ex)
     # prune (disabled when KEEP_DAYS is None)
     cut = now - timedelta(days=KEEP_DAYS) if KEEP_DAYS else None
     for fn in (os.listdir(OUT) if cut else []):
