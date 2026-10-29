@@ -66,26 +66,26 @@ LEAN
       bet365 +3.5 −116 4.47%/53.70% · BetMGM +3.5 −118 4.42%/54.13% · FanDuel +3.5 −118 4.86%/54.13% · Caesars +3.5 −120 4.35%/54.55% · Fanatics +3.5 −120 4.35%/54.55% · DraftKings +3 +100 4.35%/50.00% · BetRivers +3 −105 4.89%/51.22%
 
 MONEYLINE
-  STRONG Carolina ML  ·  Carolina at Green Bay, Thu Oct 29 · 7:15 PM CT
-    Moneyline rated on its own · Type 2 · STRONG · Underdog · GB has 74% of moneyline dollars, 83% of bets · DraftKings on the same side
   STRONG Baltimore ML  ·  Baltimore at Buffalo, Sun Nov 1 · 12:00 PM CT
-    Moneyline rated on its own · Type 2 · STRONG · Underdog · BUF has 90% of moneyline dollars, 89% of bets · DraftKings on the same side
+    Moneyline · same total-money read · Type 2 · STRONG · Underdog · Same grade as the game (STRONG) — total money 65% on BUF, book exposed +12.2
   STRONG Tennessee ML  ·  Tennessee at Cincinnati, Sun Nov 1 · 12:00 PM CT
-    Moneyline rated on its own · Type 1 · STRONG · Underdog · CIN has 94% of moneyline dollars, 95% of bets · DraftKings on the same side
-  STRONG Minnesota ML  ·  Minnesota at Detroit, Sun Nov 1 · 12:00 PM CT
-    Moneyline rated on its own · Type 2 · STRONG · Underdog · DET has 67% of moneyline dollars, 68% of bets · DraftKings on the same side
+    Moneyline · same total-money read · Type 1 · STRONG · Underdog · Same grade as the game (STRONG) — total money 84% on CIN, book exposed +32.1
   STRONG NY Jets ML  ·  Las Vegas at NY Jets, Sun Nov 1 · 12:00 PM CT
-    Moneyline rated on its own · Type 2 · STRONG · Favorite · LV has 80% of moneyline dollars, 72% of bets · DraftKings on the same side
-  STRONG Cleveland ML  ·  Cleveland at Pittsburgh, Sun Nov 1 · 12:00 PM CT
-    Moneyline rated on its own · Type 2 · STRONG · Underdog · PIT has 86% of moneyline dollars, 82% of bets · DraftKings on the same side
+    Moneyline · same total-money read · Type 2 · STRONG · Favorite · Same grade as the game (STRONG) — total money 80% on LV, book exposed +27.6
+  STRONG Tampa Bay ML  ·  Atlanta at Tampa Bay, Sun Nov 1 · 12:00 PM CT
+    Moneyline · same total-money read · Type 2 · STRONG · Favorite · Same grade as the game (STRONG) — total money 70% on ATL, book exposed +17.6
   STRONG Indianapolis ML  ·  Indianapolis at Jacksonville, Sun Nov 1 · 12:00 PM CT
-    Moneyline rated on its own · Type 1 · STRONG · Underdog · JAX has 90% of moneyline dollars, 94% of bets · DraftKings on the same side
+    Moneyline · same total-money read · Type 1 · STRONG · Underdog · Same grade as the game (STRONG) — total money 75% on JAX, book exposed +23.1
   STRONG LA Chargers ML  ·  LA Chargers at LA Rams, Sun Nov 1 · 3:05 PM CT
-    Moneyline rated on its own · Type 1 · STRONG · Underdog · LAR has 94% of moneyline dollars, 95% of bets · DraftKings on the same side
+    Moneyline · same total-money read · Type 1 · STRONG · Underdog · Same grade as the game (STRONG) — total money 83% on LAR, book exposed +28.9
   STRONG Miami ML  ·  New England at Miami, Sun Nov 1 · 3:25 PM CT
-    Moneyline rated on its own · Type 1 · STRONG · Underdog · NE has 96% of moneyline dollars, 96% of bets · DraftKings on the same side
+    Moneyline · same total-money read · Type 1 · STRONG · Underdog · Same grade as the game (STRONG) — total money 84% on NE, book exposed +32.8
   STRONG Philadelphia ML  ·  Philadelphia at Washington, Sun Nov 1 · 7:20 PM CT
-    Moneyline rated on its own · Type 1 · STRONG · Underdog · WSH has 69% of moneyline dollars, 82% of bets · DraftKings on the same side
+    Moneyline · same total-money read · Type 1 · STRONG · Underdog · Same grade as the game (STRONG) — total money 65% on WSH, book exposed +13.1
+  LEAN Carolina ML  ·  Carolina at Green Bay, Thu Oct 29 · 7:15 PM CT
+    Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 59% on GB, book exposed +6.2
+  LEAN Minnesota ML  ·  Minnesota at Detroit, Sun Nov 1 · 12:00 PM CT
+    Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 60% on DET, book exposed +5.5
 
 PASS
   Arizona at Dallas

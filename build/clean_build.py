@@ -363,6 +363,30 @@ def _sao_rows(d):
             {_SAOAB.get(g['away'],g['away']):(g['money_away'],g['bets_away']),_SAOAB.get(g['home'],g['home']):(g['money_home'],g['bets_home'])} for g in d['games']}
 def _side(two):  # {abbr:(money,bets)} -> (money side abbr, money, bets on that side)
     s=max(two,key=lambda k:two[k][0]); return s,two[s][0],two[s][1]
+def _dk_be(WK,A,H,ko_s):
+    """DK spread break-even {abbr:pct} from the latest AN per-book pull <= kickoff-5min (prices only)."""
+    cut=_dt.datetime.fromisoformat(ko_s.replace('Z','+00:00'))-_dt.timedelta(minutes=5); best=None
+    _al={'JAC':'JAX','LA':'LAR','WAS':'WSH'}
+    for f in _g0.glob(_W+f"/snap_w{WK}_*/an_books_*.json"):
+        st=re.search(r'an_books_(\d{8}T\d{4})Z',f)
+        if not st: continue
+        t_=_dt.datetime.strptime(st.group(1),'%Y%m%dT%H%M').replace(tzinfo=_dt.timezone.utc)
+        if t_>cut or (best and t_<=best[0]): continue
+        x=next((x for x in json.load(open(f))['games'] if (_al.get(x['away'],x['away']),_al.get(x['home'],x['home']))==(A,H)),None)
+        b=(x or {}).get('books',{}).get('draftkings',{})
+        if b.get('breakeven_pct'): best=(t_,{A:b['breakeven_pct'][0],H:b['breakeven_pct'][1]})
+    return best[1] if best else None
+UNIFIED_FROM=8
+def rate_unified(rt,ty,abm,abb,pub,be):
+    """TG, Oct 29 (t688u): ONE game grade from TOTAL money (spread+ML all-money) + what the book needs.
+    Type 4 (DK disagree) / Type 5 (<55%) / bets<50 stay PASS. gap = all-money on public side - DK break-even on that side.
+    STRONG: 65%+ , or 63-64% with the book exposed by 10+ pts. LEAN: 55%+ with the book exposed (gap>0).
+    Book locked/against (gap<=0) -> PASS: no book tailwind, we only sit with the house."""
+    if ty in (4,5) or abb<50 or be is None: return rt,None
+    gap=round(abm-be[pub],1)
+    if abm>=65 or (abm>=63 and gap>=10): return 'STRONG',gap
+    if abm>=55 and gap>0: return 'LEAN',gap
+    return 'PASS',gap
 def rate_v1(A,H,ab,dk_side,mon,close_sp,qb_drop):
     """Rules v1. ab=(side abbr,money,bets) all books; mon=start-of-week dict; close_sp={abbr:'+7.5'}. Returns rating,type,e,d."""
     s,m,b=ab
@@ -609,6 +633,8 @@ def build_wk(WK):
         drop=False; qbnote=''
         dk_tie=agree!='none' and len({v['money'] for v in dk.values()})==1   # TG, Oct 22: DK exactly 50/50 = no side -> Type 4 PASS
         rt,ty,ee,dd=rate_v1(A,H,(abs_,abm,abb),(None if dk_tie else dks),mon,sp,drop)
+        bgap=None
+        if WK>=UNIFIED_FROM: rt,bgap=rate_unified(rt,ty,abm,abb,abs_,_dk_be(WK,A,H,ko_s))
         ko=_ET(e['date'].replace('Z',':00Z'))
         city=c.get('venue',{}).get('address',{}).get('city','')
         when=f"{ko.strftime('%a %b')} {ko.day} · {int(ko.strftime('%I'))}:{ko.strftime('%M %p')} CT · "+', '.join(n for b in c.get('broadcasts',[]) for n in b['names'])+(' · London' if city=='London' else '')
@@ -619,6 +645,7 @@ def build_wk(WK):
         else:
             drops=[]   # TG, Oct 25: no line-move drop
             why=f"Starts at {'STRONG' if abm>=65 else 'LEAN'}"+(''.join(f' · −1 for {x}' for x in drops) if drops else ' · no drops')
+            if bgap is not None: why=f"{rt} · total money {abm}% on {abs_}, book exposed {bgap:+g} vs DK break-even" if rt!='PASS' else f"PASS · {abm}% total money but book not exposed ({bgap:+g} vs DK break-even)"
         g=dict(gid=f'w{WK}-{A.lower()}-{H.lower()}',A=A,H=H,away=NAME[A],home=NAME[H],sp=sp,ab_side=NAME[abs_],ab_m=abm,ab_b=abb,
                dk_side=(NAME[dks] if dks else '—'),dk_m=(dk[dks]['money'] if dks else None),dk_b=(dk[dks]['bets'] if dks else None),a=abb>=50,b=abm>=65,c=(dks==abs_ and not dk_tie),agree=agree,d=dd,e=ee,f=drop,
                fade=NAME[fade_ab],fade_line=float(sp[fade_ab].replace(M,'-')),rating=rt,type=ty,why=why,when=when,mon=mon,qbnote=qbnote,
@@ -626,6 +653,13 @@ def build_wk(WK):
         g['call']=f"{g['fade']} {sp[fade_ab]}"
         g['wy']=f"{abm}% of the money is on {NAME[abs_]} (all books)."+''
         g['mlr']=_rate_ml(A,H,sa_ml,allm['dk_ml'],sp,agree,allm['dk_spread'])
+        if WK>=UNIFIED_FROM and g['mlr']:
+            g['bgap']=bgap; m0=g['mlr']
+            # TG: same total-money + book-needs judgment. Default: ML on the fade side at the game grade.
+            # Opposite-team ML only if the ML market alone is piled 65%+ the other way with DK ML agreeing (data-justified).
+            opp=m0['rating']!='PASS' and m0['m']>=65 and m0['money_side']!=abs_ and rt!='PASS'
+            if opp: g['mlr']=dict(m0,rating='LEAN',unified=True,why=f"ML market alone: {m0['money_side']} {m0['m']}% of ML dollars, DK agrees — opposite-team ML, capped at LEAN")
+            else: g['mlr']=dict(m0,team=AB.get(g['fade'],fade_ab),rating=rt,type=ty,unified=True,why=(why if rt=='PASS' else f"Same grade as the game ({rt}) — total money {abm}% on {abs_}, book exposed {bgap:+g}" if bgap is not None else why))
         out.append(g)
     if not out: raise _NotReady(f'week {WK}: no game has a DraftKings/ScoresAndOdds pull before kickoff yet')
     return out
@@ -731,7 +765,7 @@ def ml_ck(k,g=None):
         x=next((v for v in o.values() if v['team']==m['team']),None); fd=x and x['fd']
         if m['rating']=='PASS': why=m['why']
         elif not fd: why='No DraftKings moneyline price on file'
-        elif m['type']==3 and fd=='Dog': why='Type 3 underdog — moneyline is a pass'
+        elif m['type']==3 and fd=='Dog' and not m.get('unified'): why='Type 3 underdog — moneyline is a pass'
         else: why=None
         return dict(team=m['team'],raw=m['rating'],rating=m['rating'] if why is None else 'PASS',type=m['type'],fd=fd,play=why is None,why=why,indep=True,row=x,m=m)
     x=o.get('fade'); f=AB.get(g['fade'],g['fade']); play=g['rating']!='PASS' and _ml_ok_legacy(g)
@@ -1147,7 +1181,7 @@ def side_rows(g,sc1,trec,mlh):
             mlc=f'<span class="{cls}"><span class="mc c1 neu">{m1}</span><span class="c2">Type {t}{" · "+FDN[x["fd"]] if x["fd"] else ""}</span><small class="c3">{_grec(b,_nl+(' '+FDN[x['fd']].lower() if x['fd'] else '')+' ML')}</small></span>'
             if mp_:   # moneyline rated on its own is the play (spread is PASS): orange = the actual bet
                 c_=ml_call(g); mlc=(f'<span class="{cls.replace(' sdc','')} bet bet-{c_["rating"]} sdc"><span class="mc c1">{m1}</span><span class="c2">Moneyline {c_["rating"]} · Type {c_["type"]} · {FDN[x["fd"]]}</span>'
-                                    f'<small class="c3">Moneyline rated on its own: {c_["m"]["why"]}{res(x,"ml")}</small></span>')
+                                    f'<small class="c3">{"Moneyline (same total-money read)" if c_["m"].get("unified") else "Moneyline rated on its own"}: {c_["m"]["why"]}{res(x,"ml")}</small></span>')
         else:
             first=team==g['A']
             spc=f'<span class="{"cd-2 " if first else "sd-sp "}sdc"><span class="c1 neu">{f'{nm} {g["sp"].get(team,"")}'.strip()}</span><span class="c2">{tyl}</span><small class="c3">Tracking · not a play: even split, no group</small></span>'
@@ -1878,7 +1912,7 @@ def txt_clean(GG,wk,asof):
         for g in mg:
             c_=ml_call(g); x_=c_['row'] or {}; side=NAME[c_['team']]; when=' · '.join(g['when'].split(' · ')[:2]); mrt=c_['rating']; mty=c_['type']
             rr=f" · Final {g['final']['tag'].split(' · ')[0].replace('Final: ','').split(' ',1)[1]} · {dict(W='win',L='loss',P='push')[x_['ml_res']]} {usd(x_['ml_usd'])}" if (x_.get('ml_res') and g.get('final')) else ''
-            if c_['indep']: mrec=f"Moneyline rated on its own · Type {mty} · {mrt} · {FDN[c_['fd']]} · {c_['m']['why']}"
+            if c_['indep']: mrec=f"{'Moneyline · same total-money read' if c_['m'].get('unified') else 'Moneyline rated on its own'} · Type {mty} · {mrt} · {FDN[c_['fd']]} · {c_['m']['why']}"
             else:
                 a=ml_at(g['rating'],g['type'],c_['fd'],before=_cb(g)); mrec=f"Type {g['type']} · {TY[g['type']]['name']} · {g['rating']} · All ML calls · {FDN[c_['fd']]}: "+(f"{wlp(*a[:3])}, {usd(a[3])}" if a[4] else 'no plays yet')
             P+=[f"  {mrt} {side} ML  ·  {g['away']} at {g['home']}, {when}{rr}",f"    {mrec}"]+(["    "+' · '.join(f"{l}: {'Yes' if v else 'No'}" for l,_,v,_,_ in qa(g))] if not c_['indep'] else [])
@@ -2160,7 +2194,7 @@ def _deepcheck():
         t=BeautifulSoup(open(R+f).read(),'html.parser')
         for h in t.select('div.cdh'):
             c=h.select_one('.cd'); gid=(c.get('href') or '').split('#')[-1] if c.name=='a' else c.find_parent('details')['id']; g_=_GD[gid]
-            if ml_call(g_)['type']==3 and ml_call(g_)['fd']=='Dog' and ml_call(g_)['play']: errs.append((f,'T3 underdog ML play on card',gid))
+            if ml_call(g_)['type']==3 and ml_call(g_)['fd']=='Dog' and ml_call(g_)['play'] and not (ml_call(g_).get('m') or {}).get('unified'): errs.append((f,'T3 underdog ML play on card',gid))
             _fw=foot_pick(g_); got_={L['data-m']:L for L in h.select(':scope > details.cd-ft')}
             if set(got_)!=set(_fw) or len(h.select(':scope > details.cd-rl'))!=len(_fw): errs.append((f,'footer set',gid,sorted(got_),sorted(_fw))); continue
             for k,(x,a,ours) in _fw.items():
@@ -2435,7 +2469,7 @@ def _deepcheck():
         if got.get(k_)!=v_: errs.append(('spread records changed',k_,got.get(k_),v_))
     got=gota
     for r_ in SIDES:
-        if ml_ty(r_)==3 and r_['fd']=='Dog' and ml_post(r_): errs.append(('T3 underdog ML posted',r_['week'],r_['game']))
+        if ml_ty(r_)==3 and r_['fd']=='Dog' and ml_post(r_) and r_['week']<UNIFIED_FROM: errs.append(('T3 underdog ML posted',r_['week'],r_['game']))
     for g_ in GALL:
         if g_['type']==3 and g_['rating']!='PASS' and g_['fade_line']>0 and re.search(r'ml-post|ML play',str(g_.get('mlhtml',''))): errs.append(('T3 underdog ML on W6 card',g_['gid']))
     if 'Type 3 underdog: pass on the moneyline; spread unaffected.' not in re.sub(r'<[^>]+>','',open(R+'tygif-how.html').read()): errs.append(('How missing T3 underdog rule',))

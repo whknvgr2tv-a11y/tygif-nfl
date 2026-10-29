@@ -10,13 +10,13 @@ STRONG Miami +7
 STRONG Philadelphia +6
 LEAN Carolina +3.5
 LEAN Minnesota +3
-STRONG Carolina ML
 STRONG Baltimore ML
 STRONG Tennessee ML
-STRONG Minnesota ML
 STRONG NY Jets ML
-STRONG Cleveland ML
+STRONG Tampa Bay ML
 STRONG Indianapolis ML
 STRONG LA Chargers ML
 STRONG Miami ML
 STRONG Philadelphia ML
+LEAN Carolina ML
+LEAN Minnesota ML
