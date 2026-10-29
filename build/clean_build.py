@@ -1954,8 +1954,8 @@ def _deepcheck():
         g=_GD[c['id']]; _pl=c.select_one('.gc-play').get_text(' ',strip=True)
         if f"r-{g['rating']}" not in c['class'] or c.select_one('.bdg').get_text()!=g['rating']: errs.append(('index.html',c['id'],'rating badge'))
         if (g['rating']=='PASS')!=('PASS' in _pl) or (g['rating']!='PASS' and AB[g['fade']] not in _pl): errs.append(('index.html',c['id'],'best play',_pl))
-        if [d.get_text() for d in c.select('dt')]!=['Crowd money (all books)','DraftKings agreement','Book needs','Moneyline','Type']: errs.append(('index.html',c['id'],'uniform fields'))
-        if (g['rating']!='PASS' and ml_ok(g))!=c.select('dd')[3].get_text().endswith('· posted'): errs.append(('index.html',c['id'],'ML posted rule'))
+        if [d.get_text() for d in c.select('dt')]!=['Favorite / Underdog','Crowd money (all books)','DraftKings agreement','Book needs','Moneyline','Type','Result']: errs.append(('index.html',c['id'],'uniform fields'))
+        if (g['rating']!='PASS' and ml_ok(g))!=c.select('dd')[4].get_text().endswith('· posted'): errs.append(('index.html',c['id'],'ML posted rule'))
     for f,games in (('tygif-tracker.html',G6),):
         t=BeautifulSoup(open(R+f).read(),'html.parser')
         ids=[((c.get('href') or '').split('#')[-1] if c.name=='a' else c.find_parent('details')['id']) for c in t.select('.cdh > .cd, .cdh > details > summary > .cd')]

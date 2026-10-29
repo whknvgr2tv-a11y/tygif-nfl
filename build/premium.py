@@ -49,7 +49,10 @@ def ds_head(cur):
             f'<a class="ds-brand" href="index.html">tygif&#8217;s model<span>Week {GW} · as of {_E(PULL6.replace(" ET",""))} CT</span></a>'
             f'<nav class="ds-nav" aria-label="Primary">{a}</nav></div></header>')
 DS_FOOT=f'<footer class="ds-foot" role="contentinfo">{_E(FOOT)}</footer>'
-def _ct(g): return _etlbl(g['ko_utc']) if g.get('ko_utc') else g.get('when','')
+def _ct(g):
+    if g.get('ko_utc'): return _etlbl(g['ko_utc'])
+    m=re.match(r'\w+ (\w+) (\d+) · (\d+:\d+) (AM|PM) ET',g.get('when',''))
+    return _fmt(_to_ct(*m.groups()),', ')+' CT' if m else ''
 def _logo(ab,name): 
     ab={'LA':'LAR','WAS':'WSH','JAC':'JAX'}.get(ab,ab); return f'<img src="assets/logos/{ab}.png" alt="{_E(name)} logo" width="24" height="24" loading="lazy">'
 def _agree(g):
@@ -68,8 +71,15 @@ def _best(g):
     return 'PASS — no edge', f"Fade candidate {f} {ln} · "+pass_reason(g)
 def _mlc(g):
     if g['rating']=='PASS': return '—'
-    if not ml_ok(g): return f"{AB[g['fade']]} ML · not posted (group not profitable)" if ml_for(g,_gwk(g)) else '— (no DK moneyline)'
+    if not ml_ok(g): return '—'
     return f"<span class=\"n\">{AB[g['fade']]} ML</span> · posted"
+def _fdl(g,ab):
+    ln=str(g['sp'].get(ab,'')).replace('−','-')
+    return 'Favorite' if ln.startswith('-') else ('Underdog' if ln.startswith('+') else 'Pick')
+def _res(g):
+    f=g.get('final')
+    if not f: return 'Pending'
+    return _E(re.sub(r'^Final:\s*','',f.get('tag') or f.get('word','Final')))
 def game_card(g):
     r=g['rating']; t=g['type']; play,why=_best(g); m=AB[g['ab_side']]
     return (f'<li class="gc r-{r}" id="{g["gid"]}"><article aria-labelledby="h-{g["gid"]}"><div class="gc-top">'
@@ -77,11 +87,13 @@ def game_card(g):
             f'<h3 class="gc-m" id="h-{g["gid"]}">{_logo(g["A"],g["away"])}{_E(g["away"])} <span class="gc-at">at</span> {_logo(g["H"],g["home"])}{_E(g["home"])}</h3>'
             f'<span class="gc-ko"><span class="sr-only" style="position:absolute;left:-999px">Kickoff </span>{_E(_ct(g))}</span></div>'
             f'<p class="gc-play"><span style="position:absolute;left:-999px">Best play: </span>{_E(play)}</p><p class="gc-why">{_E(why)}</p><dl>'
+            f'<div><dt>Favorite / Underdog</dt><dd>{g["A"]} {_fdl(g,g["A"])} · {g["H"]} {_fdl(g,g["H"])}</dd></div>'
             f'<div><dt>Crowd money (all books)</dt><dd><span class="n">{m} {g["ab_m"]}%</span> money · {g["ab_b"]}% bets</dd></div>'
             f'<div><dt>DraftKings agreement</dt><dd>{_E(_agree(g))}</dd></div>'
             f'<div><dt>Book needs</dt><dd>{_E(_bneed(g))}</dd></div>'
             f'<div><dt>Moneyline</dt><dd>{_mlc(g)}</dd></div>'
-            f'<div><dt>Type</dt><dd><span class="n">{t}</span> · {_E(TY[t]["name"])}</dd></div></dl></article></li>')
+            f'<div><dt>Type</dt><dd><span class="n">{t}</span> · {_E(TY[t]["name"])}</dd></div>'
+            f'<div><dt>Result</dt><dd>{_res(g)}</dd></div></dl></article></li>')
 def _rt(rt):
     w,l,p,u,n=at(rt); return f'<div><span class="ds-k">{rt} record</span><span class="ds-v">{w}-{l}-{p}<small class="{"pos" if u>0 else "neg"}">{usd(u)} · {n} plays</small></span></div>'
 _cnt={k:sum(g['rating']==k for g in ALL6) for k in ('STRONG','LEAN','PASS')}
@@ -100,11 +112,27 @@ HOME2=(f'<main id="main" class="ds-main" tabindex="-1"><h1>Week {GW} board</h1>'
 wr('index.html','<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
    f'<meta name="description" content="tygif\'s model — Week {GW} NFL board: every game rated STRONG, LEAN or PASS."><meta name="color-scheme" content="dark">'
    f'<title>tygif\'s model · Week {GW}</title>{DS_CSS}</head><body>{ds_head("index")}{HOME2}{DS_FOOT}</body></html>\n')
+# history: every earlier week in the same uniform card layout
+_HW=[(w,sorted(GBY[w],key=_kick)) for w in reversed(LIVEW) if w!=GW]+[(5,sorted(G,key=_kick))]
+_hb=''
+for _w,_gs in _HW:
+    _cards=[]
+    for _g in _gs:
+        try: _cards.append(game_card(_g))
+        except Exception as _e: print('history card skipped',_w,_g.get('gid'),_e)
+    _c={k:sum(g['rating']==k for g in _gs) for k in ('STRONG','LEAN','PASS')}
+    _hb+=(f'<section aria-labelledby="hw{_w}" id="w{_w}"><h2 id="hw{_w}" style="font-size:18px;margin:26px 0 6px">Week {_w}</h2>'
+          f'<p class="ds-legend">{len(_gs)} games · {_c["STRONG"]} STRONG · {_c["LEAN"]} LEAN · {_c["PASS"]} PASS</p><ol class="slate">{"".join(_cards)}</ol></section>')
+_NAVI.insert(3,('history','tygif-history.html','Past weeks'))
+wr('tygif-history.html','<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">'
+   f"<title>tygif's model · Past weeks</title>{DS_CSS}</head><body>{ds_head('history')}<main id=\"main\" class=\"ds-main\" tabindex=\"-1\"><h1>Past weeks</h1>"
+   f'<p class="ds-sub">Every graded game in the same card layout as the current board. Earlier weeks without DraftKings data are in Records.</p>{_hb}</main>{DS_FOOT}</body></html>\n')
+_x=open(R+'index.html',encoding='utf-8').read(); _x=re.sub(r'<header class="ds-head".*?</header>',ds_head('index').split('</a>',1)[1],_x,count=1,flags=re.S); wr('index.html',_x)
 # re-skin every other generated page: shared header, skip link, design-system CSS (appended last so it wins)
 _CUR={'tygif-tracker.html':'results','tygif-how.html':'how'}
 for _f in _gg.glob(R+'*.html'):
     _b=os.path.basename(_f)
-    if _b=='index.html': continue
+    if _b in ('index.html','tygif-history.html'): continue
     _x=open(_f,encoding='utf-8').read()
     if 'id="ds"' in _x: _x=re.sub(r'<style id="ds">.*?</style>','',_x,flags=re.S); _x=re.sub(r'<a class="skip".*?</header>','',_x,flags=re.S); _x=re.sub(r'<footer class="ds-foot".*?</footer>','',_x,flags=re.S)
     _x=_x.replace('</head>',DS_CSS+'</head>',1)
