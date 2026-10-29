@@ -1954,8 +1954,13 @@ def _deepcheck():
         g=_GD[c['id']]; _pl=c.select_one('.gc-play').get_text(' ',strip=True)
         if f"r-{g['rating']}" not in c['class'] or c.select_one('.bdg').get_text()!=g['rating']: errs.append(('index.html',c['id'],'rating badge'))
         if (g['rating']=='PASS')!=('PASS' in _pl) or (g['rating']!='PASS' and AB[g['fade']] not in _pl): errs.append(('index.html',c['id'],'best play',_pl))
-        if [d.get_text() for d in c.select('dt')]!=['Favorite / Underdog','Type','Crowd money (all books)','DraftKings agreement','Line','Our side','Book needs','Result','Our side','Moneyline posted','Result']: errs.append(('index.html',c['id'],'uniform fields'))
-        if (g['rating']!='PASS' and ml_ok(g))!=c.select('dd')[9].get_text().startswith('Yes'): errs.append(('index.html',c['id'],'ML posted rule'))
+        if len(c.select('details.gx-sp'))!=1 or len(c.select('details.gx-ml'))!=1 or len(c.select('.bets .bt-sp'))!=1 or len(c.select('.bets .bt-ml'))!=1 or len(c.select('.bk'))!=1: errs.append(('index.html',c['id'],'uniform card parts'))
+        if (g['rating']!='PASS' and ml_ok(g))!=(c.select_one('details.gx-ml')['data-posted']=='yes') or (g['rating']!='PASS' and ml_ok(g))!=(AB[g['fade']]+' ML' in c.select_one('.bt-ml .bt-v').get_text()): errs.append(('index.html',c['id'],'ML posted rule'))
+        if g['rating']=='PASS' and not c.select_one('.gc-pass'): errs.append(('index.html',c['id'],'PASS reason'))
+        _bv=None
+        try: _bv=book_view(g)
+        except Exception: pass
+        if (_bv['state'] if _bv else 'none')!=c.select_one('.bk')['data-state']: errs.append(('index.html',c['id'],'book needs state'))
     for f,games in (('tygif-tracker.html',G6),):
         t=BeautifulSoup(open(R+f).read(),'html.parser')
         ids=[((c.get('href') or '').split('#')[-1] if c.name=='a' else c.find_parent('details')['id']) for c in t.select('.cdh > .cd, .cdh > details > summary > .cd')]
