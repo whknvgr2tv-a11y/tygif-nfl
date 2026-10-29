@@ -7,6 +7,7 @@ STRONG Tampa Bay −2.5
 STRONG Indianapolis +10
 STRONG LA Chargers +6.5
 STRONG Miami +7
+STRONG Philadelphia +6
 LEAN Carolina +3.5
 LEAN Minnesota +3
 STRONG Tennessee ML
@@ -15,3 +16,4 @@ STRONG Tampa Bay ML
 STRONG Indianapolis ML
 STRONG LA Chargers ML
 STRONG Miami ML
+STRONG Philadelphia ML

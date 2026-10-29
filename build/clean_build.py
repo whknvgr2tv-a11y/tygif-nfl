@@ -503,10 +503,11 @@ def _dksb_rows(WK):
     BETS % ONLY (no handle) -> money=bets so the agreement side is DK bettors' side; labelled 'DraftKings bets %'.
     -> [(utc, src, {key:{sp:{ab:{line,money,bets}}, ml:{ab:(money,bets)}}})]"""
     out=[]; fm=lambda v:('PK' if v==0 else (f'+{v:g}' if v>0 else f'{v:g}'))
+    abx=_SAOAB   # WAS->WSH, JAC->JAX, LA->LAR so keys match ESPN/SAO
     for f in sorted(_g0.glob(_W+f'/snap_w{WK}_*/dk_sb_bets_*.json')):
         d=json.load(open(f)); rows={}
         for g in d.get('games',[]):
-            A,H=g['away'],g['home']; la=g.get('spread_line_away')
+            A,H=abx.get(g['away'],g['away']),abx.get(g['home'],g['home']); la=g.get('spread_line_away')
             if la is None or g.get('spread_bets_away') is None: continue
             sp={A:dict(line=fm(la),money=g['spread_bets_away'],bets=g['spread_bets_away']),H:dict(line=fm(-la),money=g['spread_bets_home'],bets=g['spread_bets_home'])}
             ml={A:(g['ml_bets_away'],g['ml_bets_away']),H:(g['ml_bets_home'],g['ml_bets_home'])} if g.get('ml_bets_away') is not None else {}
@@ -521,7 +522,7 @@ def _dk_line(WK,key,at_utc):
         if _P(utc)>_P(at_utc)+_dt.timedelta(minutes=5): continue
         d=json.load(open(f))
         for g in d.get('games',d.get('events',[])):
-            if frozenset((g['away'],g['home']))!=key: continue
+            if frozenset((_SAOAB.get(g['away'],g['away']),_SAOAB.get(g['home'],g['home'])))!=key: continue
             if 'books' in g:
                 b=g['books'].get('draftkings',{}); l=b.get('spread_line')
                 if not l: continue

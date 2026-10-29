@@ -1010,6 +1010,17 @@
    "espn_event": "401873034",
    "price": 250,
    "fd": "Dog"
+  },
+  {
+   "week": 8,
+   "game": "PHI@WSH",
+   "rating": "STRONG",
+   "side": "PHI",
+   "spread_line": 6.0,
+   "status": "preview",
+   "espn_event": "401873035",
+   "price": 190,
+   "fd": "Dog"
   }
  ]
 }

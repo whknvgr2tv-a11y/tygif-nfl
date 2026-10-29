@@ -83,6 +83,15 @@
    "rating": "STRONG",
    "line": "+7",
    "kickoff_utc": "2026-11-01T21:25:00Z"
+  },
+  {
+   "game": "PHI@WSH",
+   "team": "PHI",
+   "name": "Philadelphia",
+   "nick": "Eagles",
+   "rating": "STRONG",
+   "line": "+6",
+   "kickoff_utc": "2026-11-02T01:20:00Z"
   }
  ]
 }
