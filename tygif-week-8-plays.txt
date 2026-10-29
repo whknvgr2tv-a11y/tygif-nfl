@@ -1,5 +1,5 @@
 TYGIF'S MODEL · WEEK 8
-Lines as of Thu Oct 29, 7:15 AM CT
+Lines as of Thu Oct 29, 8:36 AM CT
 
 LEAN
   Carolina +3.5  ·  Carolina at Green Bay, Thu Oct 29 · 7:15 PM CT
@@ -7,7 +7,21 @@ LEAN
     a: Yes · b: No · c: Yes · d: Yes
 
 PASS
-
-PARTIAL SLATE: only 1 of 14 Week 8 games rated so far; the other 13 are unrated until DraftKings (or VSiN DK backup) splits exist.
+  Baltimore at Buffalo (no independent book money)
+  Tennessee at Cincinnati (no independent book money)
+  Arizona at Dallas (no independent book money)
+  Minnesota at Detroit (no independent book money)
+  Las Vegas at NY Jets (no independent book money)
+  Cleveland at Pittsburgh (no independent book money)
+  Atlanta at Tampa Bay (no independent book money)
+  Indianapolis at Jacksonville (no independent book money)
+  LA Chargers at LA Rams (no independent book money)
+  Kansas City at Denver (no independent book money)
+  New England at Miami (no independent book money)
+  Philadelphia at Washington (no independent book money)
+  Chicago at Seattle (no independent book money)
 
 DK splits via VSiN (DK page empty).
+
+Agreement chain: DraftKings -> VSiN-DK -> Circa. Games with none of these are PASS (no independent book money; never invented).
+  agreement book for Carolina at Green Bay: DraftKings via VSiN
