@@ -281,7 +281,7 @@ def _hub():
               +'</details>')
     n=len(ks)+len(_FLAGS)
     return ('<section id="hub" aria-labelledby="hubh"><h2 id="hubh" class="ds-h2">Season records</h2>'
-            f'<p class="ds-legend">All {n} graded games, each in exactly one bucket. Spread and moneyline are rated separately (STRONG 65%+, LEAN 55–64%, PASS under 55% or DraftKings disagrees or bets under 50%). Moneyline is rated on its own wherever a moneyline money split is on file (late Week 7 on); earlier games keep their as-posted moneyline call. Flat $100 per play.</p>'
+            f'<p class="ds-legend">All {n} graded games, each in exactly one bucket. Spread and moneyline are rated separately (STRONG 65%+, LEAN 55–64%, PASS under 55% or DraftKings disagrees or bets under 50%). Every graded game has its own moneyline STRONG/LEAN/PASS. Caveats: Weeks 1–4: all-books splits only; DraftKings split not recorded. Weeks 5–7 use the DK spread split as the DK check; ScoresAndOdds ML % comes from the week pages. Flat $100 per play.</p>'
             '<div class="tblwrap"><table class="data"><thead><tr><th scope="col">Bucket</th><th scope="col">Games</th><th scope="col">Spread record</th><th scope="col">Moneyline record</th><th scope="col">Meaning</th></tr></thead>'
             f'<tbody>{summ}</tbody></table></div>{det}</section>')
 _tf=R+'tygif-tracker.html'; _x=open(_tf,encoding='utf-8').read()
