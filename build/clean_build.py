@@ -1947,7 +1947,16 @@ def _deepcheck():
         sec=tr.find(id='moneyline'); txt=' '.join(x.get_text(' ',strip=True) for x in sec.find_next_siblings('div',class_='gt-row',limit=2))
         if f'{rt} {w}-{l}-{p} {usd(u)}' not in txt: errs.append(('ML record not shown',rt,st,txt))
     # 2) every game has exactly one card; each card's ML call matches the data and the group rule
-    for f,games in (('index.html',G6),('tygif-tracker.html',G6)):
+    # premium home (Oct 29): one uniform .gc card per game, best play matches the rating data
+    _hx=BeautifulSoup(open(R+'index.html').read(),'html.parser'); _gc=_hx.select('li.gc')
+    if sorted(c['id'] for c in _gc)!=sorted(g['gid'] for g in G6): errs.append(('index.html','one card per game',len(_gc),len(G6)))
+    for c in _gc:
+        g=_GD[c['id']]; _pl=c.select_one('.gc-play').get_text(' ',strip=True)
+        if f"r-{g['rating']}" not in c['class'] or c.select_one('.bdg').get_text()!=g['rating']: errs.append(('index.html',c['id'],'rating badge'))
+        if (g['rating']=='PASS')!=('PASS' in _pl) or (g['rating']!='PASS' and AB[g['fade']] not in _pl): errs.append(('index.html',c['id'],'best play',_pl))
+        if [d.get_text() for d in c.select('dt')]!=['Crowd money (all books)','DraftKings agreement','Book needs','Moneyline','Type']: errs.append(('index.html',c['id'],'uniform fields'))
+        if (g['rating']!='PASS' and ml_ok(g))!=c.select('dd')[3].get_text().endswith('· posted'): errs.append(('index.html',c['id'],'ML posted rule'))
+    for f,games in (('tygif-tracker.html',G6),):
         t=BeautifulSoup(open(R+f).read(),'html.parser')
         ids=[((c.get('href') or '').split('#')[-1] if c.name=='a' else c.find_parent('details')['id']) for c in t.select('.cdh > .cd, .cdh > details > summary > .cd')]
         if sorted(ids)!=sorted(g['gid'] for g in games): errs.append((f,'one card per game',len(ids),len(games)))
@@ -2383,6 +2392,7 @@ import os as _os
 if _os.environ.get('SIGNOFF'):
     json.dump({'note':'Games Site Auditor signed off (2da0581). Per-side rows: week, game, team, role, rating, type, fd, sp_res, sp_usd, ml_res, ml_usd. Frozen: the build fails if any changes.',
                'games':sorted([list(k) for k in _DONE]),'rows':sorted([x['week'],x['game'],x['team'],x['role'],x['rating'],x['type'],x['fd'],x['sp_res'],x['sp_usd'],x['ml_res'],x['ml_usd']] for x in SIDES if (x['week'],x['game']) in set(_DONE))},open(_os.environ['SIGNOFF'],'w'),indent=0)
+exec(open(R+"build/premium.py").read())
 _deepcheck()
 
 import os as _os
