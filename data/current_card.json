@@ -1,6 +1,6 @@
 {
  "week": 8,
- "posted_at_et": "Wed Oct 28, 9:08 PM ET",
+ "posted_at_et": "Thu Oct 29, 8:15 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -8,7 +8,7 @@
    "team": "CAR",
    "name": "Carolina",
    "nick": "Panthers",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "line": "+3.5",
    "kickoff_utc": "2026-10-30T00:15:00Z"
   }
