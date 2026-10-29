@@ -2069,10 +2069,11 @@ def _deepcheck():
     for c in _gc:
         g=_GD[c['id']]; _pl=c.select_one('.gc-play').get_text(' ',strip=True); _mc=ml_call(g)
         _rk=['STRONG','LEAN','PASS']; _br=min([g['rating']]+([_mc['rating']] if _mc['play'] else []),key=_rk.index)
-        if f"r-{_br}" not in c['class'] or c.select_one('.bdg').get_text()!=_br: errs.append(('index.html',c['id'],'rating badge'))
+        if f"r-{_br}" not in c['class'] or (c.select_one('.bdg').get_text()!=_br and not (c.select_one('.bdg2') and _br in c.select_one('.bdg2').get_text())): errs.append(('index.html',c['id'],'rating badge'))
         if (_br=='PASS')!=('PASS' in _pl) or (_br!='PASS' and AB[g['fade']] not in _pl and _mc['team'] not in _pl): errs.append(('index.html',c['id'],'best play',_pl))
         if _mc['play'] and not (_mc['team']+' ML' in c.select_one('.bt-ml .bt-v').get_text() and c.select_one('details.gx-ml')['data-posted']=='yes'): errs.append(('index.html',c['id'],'ML play not on card'))
         if not _mc['play'] and c.select_one('details.gx-ml')['data-posted']!='no': errs.append(('index.html',c['id'],'invented ML play'))
+        if c.select('.bn') or 'break-even' in c.get_text().lower() and c.select('.bn-r'): errs.append(('index.html',c['id'],'per-book table back'))
         if len(c.select('details.gx-sp'))!=1 or len(c.select('details.gx-ml'))!=1 or len(c.select('.bets .bt-sp'))!=1 or len(c.select('.bets .bt-ml'))!=1 or len(c.select('.bk'))!=1: errs.append(('index.html',c['id'],'uniform card parts'))
         if _br=='PASS' and not c.select_one('.gc-pass'): errs.append(('index.html',c['id'],'PASS reason'))
         _bv=None

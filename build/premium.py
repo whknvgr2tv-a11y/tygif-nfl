@@ -26,7 +26,7 @@ nav.tabs,header.apphead{display:none!important}
 .gc.r-STRONG{border-left-color:var(--st)}.gc.r-LEAN{border-left-color:var(--le)}
 .gc-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.gc-m{font-weight:700;font-size:16px;margin:0;display:flex;align-items:center;gap:8px}
 .gc-m img{width:24px;height:24px;object-fit:contain;background:#e9eef4;border-radius:50%;padding:3px;box-sizing:content-box}.gc-at{color:var(--mut);font-weight:500}.gc-ko{color:var(--mut);font-size:13px;margin-left:auto;font-family:var(--mono)}
-.bdg{display:inline-block;font:800 11px/1 Inter,sans-serif;letter-spacing:.08em;padding:5px 8px;border-radius:5px;text-transform:uppercase}
+.bdg2{display:inline-flex;gap:6px;flex-wrap:wrap}.bdg{display:inline-block;font:800 11px/1 Inter,sans-serif;letter-spacing:.08em;padding:5px 8px;border-radius:5px;text-transform:uppercase}
 .bdg.STRONG{background:var(--st);color:var(--txt-st)}.bdg.LEAN{background:var(--le);color:var(--txt-le)}.bdg.PASS{background:transparent;color:var(--txt);border:1px solid var(--pa)}
 .gc-play{font:700 20px/1.3 var(--mono);margin:10px 0 2px;letter-spacing:-.3px}.gc.r-PASS .gc-play{color:var(--txt)}
 .gc-why{color:var(--mut);font-size:13px;margin:0 0 10px}
@@ -160,6 +160,10 @@ def game_card(g):
     dkd=_agree(g)
     sp_on=sr!='PASS'; parts=([f'{f} {ln}'] if sp_on else [])+([f'{mt} ML'] if mlok else [])
     head=(' + '.join(parts)) if parts else 'PASS — no edge'
+    if sp_on and mlok and sr!=mc['rating']:
+        badge=(f'<span class="bdg2" aria-label="Spread {sr}, Moneyline {mc["rating"]}"><span class="bdg {sr}">{sr} spread</span>'
+               f'<span class="bdg {mc["rating"]}">{mc["rating"]} ML</span></span>')
+    else: badge=f'<span class="bdg {r}" aria-label="Rating: {r}">{r}</span>'
     passbox=(f'<p class="gc-pass">{_E(why.split(" · ",1)[1] if " · " in why else why)}</p>' if r=='PASS' else '')
     bkh=_bk(g); bkn=g.pop('_bknums','')
     def tile(cls,k,on,v,tag,sub):
@@ -171,7 +175,7 @@ def game_card(g):
     return (f'<li class="gc r-{r}" id="{g["gid"]}"><article aria-labelledby="h-{g["gid"]}"><div class="gc-top">'
             f'<h3 class="gc-m" id="h-{g["gid"]}">{_logo(g["A"],g["away"])}{_E(g["away"])} <span class="gc-at">at</span> {_logo(g["H"],g["home"])}{_E(g["home"])}</h3>'
             f'<span class="gc-ko"><span class="sr-only">Kickoff </span>{_E(_ct(g))}</span></div>'
-            f'<div class="gc-hero"><span class="bdg {r}" aria-label="Rating: {r}">{r}</span><p class="gc-play"><span class="sr-only">Play: </span>{_E(head)}</p></div>{passbox}'
+            f'<div class="gc-hero">{badge}<p class="gc-play"><span class="sr-only">Play: </span>{_E(head)}</p></div>{passbox}'
             f'<div class="bets">{sp_t}{ml_t}</div>'
             f'{bkh}'
             f'<p class="mo">Crowd: <b>{m}</b> {g["ab_m"]}% of money · {g["ab_b"]}% of bets · DK <b class="{dkc}">{_E(dk.replace("✓ ","").replace("✕ ","").lower() if dk!="—" else "n/a")}</b></p>'
@@ -180,10 +184,9 @@ def game_card(g):
             f'<div><dt>Call</dt><dd>{_E(sp_call)} · {_E(sp_tag)}</dd></div>'
             f'<div><dt>Why</dt><dd>{_E(why)}</dd></div>'
             f'<div><dt>Type</dt><dd>{t} · {_E(TY[t]["name"])}</dd></div>'
-            f'<div><dt>Type {t} {r} group</dt><dd>{_E(sgrp)}</dd></div>'
+            f'<div><dt>Type {t} {sr} group</dt><dd>{_E(sgrp)}</dd></div>'
             f'<div><dt>DraftKings check</dt><dd>{_E(dkd)}</dd></div>'
-            +(f'<div><dt>Book numbers</dt><dd>{_E(bkn)}</dd></div>' if bkn else '')+
-            f'<div><dt>Result</dt><dd>{spres}</dd></div></dl>{bn}</details>'
+            f'<div><dt>Result</dt><dd>{spres}</dd></div></dl></details>'
             f'<details class="gx gx-ml" data-kind="moneyline" data-posted="{"yes" if mlok else "no"}"><summary><span class="gx-k">Moneyline details</span></summary><dl>'
             f'<div><dt>Side</dt><dd>{mt} ({mfd})</dd></div>'
             f'<div><dt>Moneyline rating</dt><dd>{_E(mc["raw"])}{(" · Type "+str(mc["type"])) if mc["indep"] else ""} · {_E(mc["m"]["why"] if mc["indep"] else "not graded: spread money split exactly 50–50, so no sides are tracked for this game")}</dd></div>'
@@ -199,7 +202,7 @@ HOME2=(f'<main id="main" class="ds-main" tabindex="-1"><h1>Week {GW} board</h1>'
   f'<div><span class="ds-k">Data</span><span class="ds-v sm">As of {_E(_etlbl(max(g['split_utc'] for g in ALL6)))}</span></div>'
   f'<div><span class="ds-k">Agreement source</span><span class="ds-v sm txt">DraftKings {"bets % (handle unavailable)" if _dkbets else "money %"}</span></div></section>'
   f'<section aria-labelledby="slate"><h2 id="slate" class="ds-h2">Full slate</h2>'
-  f'<p class="ds-legend">Each card: the play, Spread (blue) and Moneyline (purple), then what the book needs. Tap details for lines, groups and per-book prices.</p>'
+  f'<p class="ds-legend">Each card: the play, Spread (blue) and Moneyline (purple), then what the book needs. Tap details for lines and groups.</p>'
   f'<ol class="slate">{"".join(game_card(g) for g in ALL6)}</ol></section>'
   f'<details class="ds-notes"><summary>Notes</summary><ul><li>Calls before kickoff are previews and can change as the money moves. Graded at the DraftKings line, price and moneyline recorded at least 5 minutes before kickoff.</li><li>Crowd money = mean of all-books spread and moneyline money % on the money side (ScoresAndOdds).</li>'
   f'<li>STRONG and LEAN records are kept separate and never combined. Flat $100 per play.</li><li>Book needs compares all-books money to the DraftKings break-even; information only, never changes a rating.</li></ul></details>'
