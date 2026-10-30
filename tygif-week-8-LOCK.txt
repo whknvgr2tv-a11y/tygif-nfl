@@ -14,7 +14,7 @@ STRONG
   Philadelphia +6  ·  Sun Nov 1 · 7:20 PM CT
 
 LEAN
-  Carolina +3.5  ·  Thu Oct 29 · 7:15 PM CT
+  Carolina +3.5  ·  Thu Oct 29 · 7:15 PM CT · Final CAR 19–27 · loss −$100
 
 MONEYLINE
   STRONG Baltimore ML  ·  Sun Nov 1 · 12:00 PM CT
@@ -27,7 +27,7 @@ MONEYLINE
   STRONG LA Chargers ML  ·  Sun Nov 1 · 3:05 PM CT
   STRONG Miami ML  ·  Sun Nov 1 · 3:25 PM CT
   STRONG Philadelphia ML  ·  Sun Nov 1 · 7:20 PM CT
-  LEAN Carolina ML  ·  Thu Oct 29 · 7:15 PM CT
+  LEAN Carolina ML  ·  Thu Oct 29 · 7:15 PM CT · Final 19–27 · loss −$100
 
 PASS
   Arizona at Dallas

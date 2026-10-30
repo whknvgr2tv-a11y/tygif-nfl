@@ -20,16 +20,16 @@ STRONG
 
 LEAN
   Tennessee +1.5  ·  Cleveland at Tennessee, Sun Oct 25 · 12:00 PM CT · Final TEN 24–27 · loss −$100
-    Type 3 · Crowd leaning · LEAN: 13-13-1, −$82
+    Type 3 · Crowd leaning · LEAN: 13-14-1, −$182
     a: Yes · b: No · c: Yes · d: Yes
   Tampa Bay +3  ·  Tampa Bay at Carolina, Sun Oct 25 · 12:00 PM CT · Final TB 43–13 · win +$91
-    Type 3 · Crowd leaning · LEAN: 13-13-1, −$82
+    Type 3 · Crowd leaning · LEAN: 13-14-1, −$182
     a: Yes · b: No · c: Yes · d: Yes
   Green Bay +3.5  ·  Green Bay at Detroit, Sun Oct 25 · 3:25 PM CT · Final GB 17–20 · win +$93
-    Type 3 · Crowd leaning · LEAN: 13-13-1, −$82
+    Type 3 · Crowd leaning · LEAN: 13-14-1, −$182
     a: Yes · b: No · c: Yes · d: Yes
   Las Vegas +3.5  ·  LA Rams at Las Vegas, Sun Oct 25 · 3:25 PM CT · Final LV 21–35 · loss −$100
-    Type 3 · Crowd leaning · LEAN: 13-13-1, −$82
+    Type 3 · Crowd leaning · LEAN: 13-14-1, −$182
     a: Yes · b: No · c: Yes · d: Yes
 
 MONEYLINE
@@ -49,16 +49,16 @@ MONEYLINE
     Type 2 · Fade the crowd · STRONG · All ML calls · Underdog: 3-5-0, −$82
     a: Yes · b: Yes · c: Yes · d: Yes
   LEAN Tennessee ML  ·  Cleveland at Tennessee, Sun Oct 25 · 12:00 PM CT · Final 24–27 · loss −$100
-    Type 3 · Crowd leaning · LEAN · All ML calls · Underdog: 4-15-0, −$927
+    Type 3 · Crowd leaning · LEAN · All ML calls · Underdog: 4-16-0, −$1,027
     a: Yes · b: No · c: Yes · d: Yes
   LEAN Tampa Bay ML  ·  Tampa Bay at Carolina, Sun Oct 25 · 12:00 PM CT · Final 43–13 · win +$140
-    Type 3 · Crowd leaning · LEAN · All ML calls · Underdog: 4-15-0, −$927
+    Type 3 · Crowd leaning · LEAN · All ML calls · Underdog: 4-16-0, −$1,027
     a: Yes · b: No · c: Yes · d: Yes
   LEAN Green Bay ML  ·  Green Bay at Detroit, Sun Oct 25 · 3:25 PM CT · Final 17–20 · loss −$100
-    Type 3 · Crowd leaning · LEAN · All ML calls · Underdog: 4-15-0, −$927
+    Type 3 · Crowd leaning · LEAN · All ML calls · Underdog: 4-16-0, −$1,027
     a: Yes · b: No · c: Yes · d: Yes
   LEAN Las Vegas ML  ·  LA Rams at Las Vegas, Sun Oct 25 · 3:25 PM CT · Final 21–35 · loss −$100
-    Type 3 · Crowd leaning · LEAN · All ML calls · Underdog: 4-15-0, −$927
+    Type 3 · Crowd leaning · LEAN · All ML calls · Underdog: 4-16-0, −$1,027
     a: Yes · b: No · c: Yes · d: Yes
 
 PASS
