@@ -1,9 +1,9 @@
 TYGIF'S MODEL · WEEK 8
-Lines as of Thu Oct 29, 9:05 PM CT
+Lines as of Fri Oct 30, 8:01 AM CT
 
 STRONG
   Baltimore +3  ·  Sun Nov 1 · 12:00 PM CT
-  Tennessee +11.5  ·  Sun Nov 1 · 12:00 PM CT
+  Tennessee +12.5  ·  Sun Nov 1 · 12:00 PM CT
   Minnesota +3  ·  Sun Nov 1 · 12:00 PM CT
   NY Jets −1.5  ·  Sun Nov 1 · 12:00 PM CT
   Cleveland +3.5  ·  Sun Nov 1 · 12:00 PM CT
@@ -11,7 +11,6 @@ STRONG
   Indianapolis +10  ·  Sun Nov 1 · 12:00 PM CT
   LA Chargers +6.5  ·  Sun Nov 1 · 3:05 PM CT
   Miami +7  ·  Sun Nov 1 · 3:25 PM CT
-  Philadelphia +6  ·  Sun Nov 1 · 7:20 PM CT
 
 LEAN
   Carolina +3.5  ·  Thu Oct 29 · 7:15 PM CT · Final CAR 19–27 · loss −$100
@@ -26,10 +25,10 @@ MONEYLINE
   STRONG Indianapolis ML  ·  Sun Nov 1 · 12:00 PM CT
   STRONG LA Chargers ML  ·  Sun Nov 1 · 3:05 PM CT
   STRONG Miami ML  ·  Sun Nov 1 · 3:25 PM CT
-  STRONG Philadelphia ML  ·  Sun Nov 1 · 7:20 PM CT
   LEAN Carolina ML  ·  Thu Oct 29 · 7:15 PM CT · Final 19–27 · loss −$100
 
 PASS
   Arizona at Dallas
   Kansas City at Denver
+  Philadelphia at Washington
   Chicago at Seattle

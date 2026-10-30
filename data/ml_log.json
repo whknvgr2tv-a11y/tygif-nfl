@@ -942,7 +942,7 @@
    "game": "TEN@CIN",
    "rating": "STRONG",
    "side": "TEN",
-   "spread_line": 11.5,
+   "spread_line": 12.5,
    "status": "preview",
    "espn_event": "401873031",
    "price": 490,
@@ -1011,7 +1011,7 @@
    "spread_line": 6.5,
    "status": "preview",
    "espn_event": "401873032",
-   "price": 220,
+   "price": 225,
    "fd": "Dog"
   },
   {
@@ -1023,17 +1023,6 @@
    "status": "preview",
    "espn_event": "401873034",
    "price": 260,
-   "fd": "Dog"
-  },
-  {
-   "week": 8,
-   "game": "PHI@WSH",
-   "rating": "STRONG",
-   "side": "PHI",
-   "spread_line": 6.0,
-   "status": "preview",
-   "espn_event": "401873035",
-   "price": 210,
    "fd": "Dog"
   }
  ]

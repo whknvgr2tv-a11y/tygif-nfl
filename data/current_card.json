@@ -1,6 +1,6 @@
 {
  "week": 8,
- "posted_at_et": "Thu Oct 29, 10:05 PM ET",
+ "posted_at_et": "Fri Oct 30, 9:01 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -27,7 +27,7 @@
    "name": "Tennessee",
    "nick": "Titans",
    "rating": "STRONG",
-   "line": "+11.5",
+   "line": "+12.5",
    "kickoff_utc": "2026-11-01T18:00:00Z"
   },
   {
@@ -92,15 +92,6 @@
    "rating": "STRONG",
    "line": "+7",
    "kickoff_utc": "2026-11-01T21:25:00Z"
-  },
-  {
-   "game": "PHI@WSH",
-   "team": "PHI",
-   "name": "Philadelphia",
-   "nick": "Eagles",
-   "rating": "STRONG",
-   "line": "+6",
-   "kickoff_utc": "2026-11-02T01:20:00Z"
   }
  ]
 }
