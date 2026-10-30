@@ -1,6 +1,6 @@
 {
  "week": 8,
- "posted_at_et": "Thu Oct 29, 5:10 PM ET",
+ "posted_at_et": "Thu Oct 29, 10:05 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -53,7 +53,7 @@
    "team": "CLE",
    "name": "Cleveland",
    "nick": "Browns",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "line": "+3.5",
    "kickoff_utc": "2026-11-01T18:00:00Z"
   },

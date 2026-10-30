@@ -920,7 +920,7 @@
    "spread_line": 3.5,
    "status": "preview",
    "espn_event": "401873023",
-   "price": 150,
+   "price": 154,
    "fd": "Dog"
   },
   {
@@ -931,7 +931,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873026",
-   "price": 142,
+   "price": 145,
    "fd": "Dog"
   },
   {
@@ -942,7 +942,7 @@
    "spread_line": 11.5,
    "status": "preview",
    "espn_event": "401873031",
-   "price": 455,
+   "price": 440,
    "fd": "Dog"
   },
   {
@@ -970,12 +970,12 @@
   {
    "week": 8,
    "game": "CLE@PIT",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "side": "CLE",
    "spread_line": 3.5,
    "status": "preview",
    "espn_event": "401873027",
-   "price": 154,
+   "price": 160,
    "fd": "Dog"
   },
   {
@@ -997,7 +997,7 @@
    "spread_line": 10.0,
    "status": "preview",
    "espn_event": "401873028",
-   "price": 370,
+   "price": 380,
    "fd": "Dog"
   },
   {
@@ -1008,7 +1008,7 @@
    "spread_line": 6.5,
    "status": "preview",
    "espn_event": "401873032",
-   "price": 225,
+   "price": 220,
    "fd": "Dog"
   },
   {
@@ -1030,7 +1030,7 @@
    "spread_line": 6.0,
    "status": "preview",
    "espn_event": "401873035",
-   "price": 195,
+   "price": 205,
    "fd": "Dog"
   }
  ]
