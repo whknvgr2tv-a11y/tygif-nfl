@@ -1,0 +1,131 @@
+{
+ "fetched_utc": "2026-10-25T18:30:08+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Spread&tb_page=N",
+ "games": [
+  {
+   "matchup": "DEN Broncos @ ARI Cardinals",
+   "kickoff_local": "10/25, 04:05PM",
+   "spread": [
+    {
+     "side": "DEN Broncos -4.5",
+     "odds": "\u2212115",
+     "handle_pct": 64,
+     "bets_pct": 61,
+     "breakeven_money_pct": 53.5,
+     "lock_lo_money_pct": 48.8,
+     "book_exposed": true
+    },
+    {
+     "side": "ARI Cardinals +4.5",
+     "odds": "\u2212105",
+     "handle_pct": 36,
+     "bets_pct": 39,
+     "breakeven_money_pct": 51.2,
+     "lock_lo_money_pct": 46.5,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.5
+  },
+  {
+   "matchup": "GB Packers @ DET Lions",
+   "kickoff_local": "10/25, 04:25PM",
+   "spread": [
+    {
+     "side": "DET Lions -3.5",
+     "odds": "\u2212110",
+     "handle_pct": 80,
+     "bets_pct": 44,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": true
+    },
+    {
+     "side": "GB Packers +3.5",
+     "odds": "\u2212110",
+     "handle_pct": 20,
+     "bets_pct": 56,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.55
+  },
+  {
+   "matchup": "LA Rams @ LV Raiders",
+   "kickoff_local": "10/25, 04:25PM",
+   "spread": [
+    {
+     "side": "LA Rams -3.5",
+     "odds": "+100",
+     "handle_pct": 38,
+     "bets_pct": 55,
+     "breakeven_money_pct": 50.0,
+     "lock_lo_money_pct": 45.5,
+     "book_exposed": false
+    },
+    {
+     "side": "LV Raiders +3.5",
+     "odds": "\u2212120",
+     "handle_pct": 62,
+     "bets_pct": 45,
+     "breakeven_money_pct": 54.5,
+     "lock_lo_money_pct": 50.0,
+     "book_exposed": true
+    }
+   ],
+   "hold_pct": 4.35
+  },
+  {
+   "matchup": "KC Chiefs @ SEA Seahawks",
+   "kickoff_local": "10/25, 08:20PM",
+   "spread": [
+    {
+     "side": "SEA Seahawks -3",
+     "odds": "+100",
+     "handle_pct": 57,
+     "bets_pct": 26,
+     "breakeven_money_pct": 50.0,
+     "lock_lo_money_pct": 45.5,
+     "book_exposed": true
+    },
+    {
+     "side": "KC Chiefs +3",
+     "odds": "\u2212120",
+     "handle_pct": 43,
+     "bets_pct": 74,
+     "breakeven_money_pct": 54.5,
+     "lock_lo_money_pct": 50.0,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.35
+  },
+  {
+   "matchup": "DAL Cowboys @ PHI Eagles",
+   "kickoff_local": "10/26, 08:15PM",
+   "spread": [
+    {
+     "side": "DAL Cowboys -4.5",
+     "odds": "\u2212108",
+     "handle_pct": 75,
+     "bets_pct": 68,
+     "breakeven_money_pct": 51.9,
+     "lock_lo_money_pct": 47.2,
+     "book_exposed": true
+    },
+    {
+     "side": "PHI Eagles +4.5",
+     "odds": "\u2212112",
+     "handle_pct": 25,
+     "bets_pct": 32,
+     "breakeven_money_pct": 52.8,
+     "lock_lo_money_pct": 48.1,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.54
+  }
+ ]
+}

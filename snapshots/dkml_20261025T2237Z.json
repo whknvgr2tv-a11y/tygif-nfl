@@ -1,0 +1,43 @@
+{
+ "fetched_utc": "2026-10-25T22:37:23+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Moneyline&tb_page=N",
+ "market": "moneyline",
+ "games": [
+  {
+   "matchup": "KC Chiefs @ SEA Seahawks",
+   "kickoff_local": "10/25, 08:20PM",
+   "spread": [
+    {
+     "side": "SEA Seahawks",
+     "odds": "\u2212155",
+     "handle_pct": 28,
+     "bets_pct": 30
+    },
+    {
+     "side": "KC Chiefs",
+     "odds": "+130",
+     "handle_pct": 72,
+     "bets_pct": 70
+    }
+   ]
+  },
+  {
+   "matchup": "DAL Cowboys @ PHI Eagles",
+   "kickoff_local": "10/26, 08:15PM",
+   "spread": [
+    {
+     "side": "PHI Eagles",
+     "odds": "+180",
+     "handle_pct": 23,
+     "bets_pct": 13
+    },
+    {
+     "side": "DAL Cowboys",
+     "odds": "\u2212218",
+     "handle_pct": 77,
+     "bets_pct": 87
+    }
+   ]
+  }
+ ]
+}

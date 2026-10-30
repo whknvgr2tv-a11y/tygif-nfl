@@ -1,0 +1,91 @@
+{
+ "fetched_utc": "2026-10-25T20:17:56+00:00",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=7&seasontype=2",
+ "season": 2026,
+ "week": 7,
+ "events": 14,
+ "pre": 4,
+ "last": "2026-10-27T00:15Z",
+ "games": [
+  {
+   "id": "401873020",
+   "away": "GB",
+   "home": "DET",
+   "kickoff_utc": "2026-10-25T20:25Z",
+   "ml": {
+    "away": "+160",
+    "home": "-192"
+   },
+   "spread": {
+    "away": {
+     "line": "+3.5",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "-3.5",
+     "odds": "-112"
+    }
+   }
+  },
+  {
+   "id": "401873021",
+   "away": "LAR",
+   "home": "LV",
+   "kickoff_utc": "2026-10-25T20:25Z",
+   "ml": {
+    "away": "-180",
+    "home": "+150"
+   },
+   "spread": {
+    "away": {
+     "line": "-3.5",
+     "odds": "+100"
+    },
+    "home": {
+     "line": "+3.5",
+     "odds": "-120"
+    }
+   }
+  },
+  {
+   "id": "401873022",
+   "away": "KC",
+   "home": "SEA",
+   "kickoff_utc": "2026-10-26T00:20Z",
+   "ml": {
+    "away": "+124",
+    "home": "-148"
+   },
+   "spread": {
+    "away": {
+     "line": "+3",
+     "odds": "-120"
+    },
+    "home": {
+     "line": "-3",
+     "odds": "+100"
+    }
+   }
+  },
+  {
+   "id": "401873009",
+   "away": "DAL",
+   "home": "PHI",
+   "kickoff_utc": "2026-10-27T00:15Z",
+   "ml": {
+    "away": "-218",
+    "home": "+180"
+   },
+   "spread": {
+    "away": {
+     "line": "-4.5",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "+4.5",
+     "odds": "-112"
+    }
+   }
+  }
+ ]
+}

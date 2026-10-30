@@ -1,0 +1,26 @@
+{
+ "fetched_utc": "2026-10-28T00:33:10+00:00",
+ "source": "https://data.vsin.com/betting-splits/?source=DK&sport=NFL&view=today (backup: DK page empty)",
+ "games": [
+  {
+   "matchup": "Panthers @ Packers",
+   "kickoff_local": null,
+   "source": "vsin_dk_backup",
+   "spread": [
+    {
+     "side": "VSiN Panthers +3.5",
+     "odds": null,
+     "handle_pct": 62,
+     "bets_pct": 41
+    },
+    {
+     "side": "VSiN Packers -3.5",
+     "odds": null,
+     "handle_pct": 38,
+     "bets_pct": 59
+    }
+   ],
+   "hold_error": "could not convert string to float: 'None'"
+  }
+ ]
+}

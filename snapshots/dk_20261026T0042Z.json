@@ -1,0 +1,56 @@
+{
+ "fetched_utc": "2026-10-26T00:42:47+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Spread&tb_page=N",
+ "games": [
+  {
+   "matchup": "DAL Cowboys @ PHI Eagles",
+   "kickoff_local": "10/26, 08:15PM",
+   "spread": [
+    {
+     "side": "DAL Cowboys -4.5",
+     "odds": "\u2212108",
+     "handle_pct": 78,
+     "bets_pct": 70,
+     "breakeven_money_pct": 51.9,
+     "lock_lo_money_pct": 47.2,
+     "book_exposed": true
+    },
+    {
+     "side": "PHI Eagles +4.5",
+     "odds": "\u2212112",
+     "handle_pct": 22,
+     "bets_pct": 30,
+     "breakeven_money_pct": 52.8,
+     "lock_lo_money_pct": 48.1,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.54
+  },
+  {
+   "matchup": "CAR Panthers @ GB Packers",
+   "kickoff_local": "10/29, 08:15PM",
+   "spread": [
+    {
+     "side": "GB Packers -3.5",
+     "odds": "\u2212110",
+     "handle_pct": 68,
+     "bets_pct": 82,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": true
+    },
+    {
+     "side": "CAR Panthers +3.5",
+     "odds": "\u2212110",
+     "handle_pct": 32,
+     "bets_pct": 18,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.55
+  }
+ ]
+}

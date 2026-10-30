@@ -1,0 +1,106 @@
+{
+ "fetched_utc": "2026-10-28T00:33:13+00:00",
+ "source": "https://api.actionnetwork.com/web/v2/scoreboard/publicbetting/nfl?bookIds=15,30,68&date=YYYYMMDD",
+ "rule": "warn if AN book 15 money differs from SAO by >5 pts or picks the other side; never blocks or re-rates",
+ "warnings": [],
+ "games": [
+  {
+   "game": "CAR@GB",
+   "sao_money_away": 40,
+   "sao_money_home": 60,
+   "an_money_away": 39,
+   "an_money_home": 61
+  },
+  {
+   "game": "MIN@DET",
+   "sao_money_away": 54,
+   "sao_money_home": 46,
+   "an_money_away": 51,
+   "an_money_home": 49
+  },
+  {
+   "game": "LV@NYJ",
+   "sao_money_away": 73,
+   "sao_money_home": 27,
+   "an_money_away": 73,
+   "an_money_home": 27
+  },
+  {
+   "game": "ARI@DAL",
+   "sao_money_away": 56,
+   "sao_money_home": 44,
+   "an_money_away": 55,
+   "an_money_home": 45
+  },
+  {
+   "game": "ATL@TB",
+   "sao_money_away": 81,
+   "sao_money_home": 19,
+   "an_money_away": 83,
+   "an_money_home": 17
+  },
+  {
+   "game": "BAL@BUF",
+   "sao_money_away": 58,
+   "sao_money_home": 42,
+   "an_money_away": 57,
+   "an_money_home": 43
+  },
+  {
+   "game": "IND@JAX",
+   "sao_money_away": 49,
+   "sao_money_home": 51,
+   "an_money_away": 48,
+   "an_money_home": 52
+  },
+  {
+   "game": "TEN@CIN",
+   "sao_money_away": 26,
+   "sao_money_home": 74,
+   "an_money_away": 25,
+   "an_money_home": 75
+  },
+  {
+   "game": "CLE@PIT",
+   "sao_money_away": 73,
+   "sao_money_home": 27,
+   "an_money_away": 74,
+   "an_money_home": 26
+  },
+  {
+   "game": "LAC@LAR",
+   "sao_money_away": 41,
+   "sao_money_home": 59,
+   "an_money_away": 40,
+   "an_money_home": 60
+  },
+  {
+   "game": "KC@DEN",
+   "sao_money_away": 42,
+   "sao_money_home": 58,
+   "an_money_away": 41,
+   "an_money_home": 59
+  },
+  {
+   "game": "NE@MIA",
+   "sao_money_away": 64,
+   "sao_money_home": 36,
+   "an_money_away": 64,
+   "an_money_home": 36
+  },
+  {
+   "game": "PHI@WSH",
+   "sao_money_away": 26,
+   "sao_money_home": 74,
+   "an_money_away": 26,
+   "an_money_home": 74
+  },
+  {
+   "game": "CHI@SEA",
+   "sao_money_away": 73,
+   "sao_money_home": 27,
+   "an_money_away": 73,
+   "an_money_home": 27
+  }
+ ]
+}
