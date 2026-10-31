@@ -934,7 +934,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873026",
-   "price": 145,
+   "price": 142,
    "fd": "Dog"
   },
   {
@@ -951,7 +951,7 @@
   {
    "week": 8,
    "game": "MIN@DET",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "MIN",
    "spread_line": 3.0,
    "status": "preview",
@@ -989,7 +989,7 @@
    "spread_line": -2.5,
    "status": "preview",
    "espn_event": "401873025",
-   "price": -142,
+   "price": -135,
    "fd": "Fav"
   },
   {
