@@ -1,6 +1,6 @@
 {
  "week": 8,
- "posted_at_et": "Sun Nov 1, 11:07 AM ET",
+ "posted_at_et": "Sun Nov 1, 12:09 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -11,15 +11,6 @@
    "rating": "LEAN",
    "line": "+3.5",
    "kickoff_utc": "2026-10-30T00:15:00Z"
-  },
-  {
-   "game": "BAL@BUF",
-   "team": "BAL",
-   "name": "Baltimore",
-   "nick": "Ravens",
-   "rating": "LEAN",
-   "line": "+3",
-   "kickoff_utc": "2026-11-01T18:00:00Z"
   },
   {
    "game": "TEN@CIN",

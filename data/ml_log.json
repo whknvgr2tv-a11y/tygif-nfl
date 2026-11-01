@@ -928,24 +928,13 @@
   },
   {
    "week": 8,
-   "game": "BAL@BUF",
-   "rating": "LEAN",
-   "side": "BAL",
-   "spread_line": 3.0,
-   "status": "preview",
-   "espn_event": "401873026",
-   "price": 136,
-   "fd": "Dog"
-  },
-  {
-   "week": 8,
    "game": "TEN@CIN",
    "rating": "STRONG",
    "side": "TEN",
    "spread_line": 13.5,
    "status": "preview",
    "espn_event": "401873031",
-   "price": 625,
+   "price": 600,
    "fd": "Dog"
   },
   {
@@ -967,7 +956,7 @@
    "spread_line": 3.5,
    "status": "preview",
    "espn_event": "401873027",
-   "price": 154,
+   "price": 164,
    "fd": "Dog"
   },
   {
@@ -978,7 +967,7 @@
    "spread_line": 10.0,
    "status": "preview",
    "espn_event": "401873028",
-   "price": 380,
+   "price": 370,
    "fd": "Dog"
   },
   {
@@ -1000,7 +989,7 @@
    "spread_line": 1.5,
    "status": "preview",
    "espn_event": "401873033",
-   "price": -105,
+   "price": -108,
    "fd": "Dog"
   },
   {
@@ -1011,7 +1000,7 @@
    "spread_line": 7.0,
    "status": "preview",
    "espn_event": "401873034",
-   "price": 275,
+   "price": 270,
    "fd": "Dog"
   },
   {
