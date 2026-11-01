@@ -73,7 +73,7 @@ def _agree(g):
     ag=g.get('agree')
     if g.get('c') is None or ag=='none': return '— (no secondary money book on file)'
     if ag=='SBD money': return f"SportsBettingDime money: {'same side' if g['c'] else 'opposite side'} ({AB[g['dk_side']]} {g['dk_m']}%)"
-    if ag=='SAO only': return 'All-books money only (no SportsBettingDime read) — capped at LEAN'
+    if ag=='SAO only': return 'All-books money only (no DraftKings handle read) — capped at LEAN'
     if ag=='DraftKings bets %': return f"DK bets %: {'same side' if g['c'] else 'opposite side'} ({AB[g['dk_side']]} {g['dk_m']}%)"
     return f"DK money %: {'same side' if g['c'] else 'opposite side'} ({AB[g['dk_side']]} {g['dk_m']}%)"
 def _bneed(g):
@@ -201,7 +201,7 @@ _ags=sorted({g.get('agree') for g in ALL6 if g.get('agree')})
 _asrc=('SportsBettingDime money % (all-books SAO primary)' if 'SBD money' in _ags else
        'All-books money only (SAO; capped at LEAN)' if set(_ags)<={'SAO only'} else
        'DraftKings bets % (handle unavailable)' if 'DraftKings bets %' in _ags else
-       'DraftKings money %' if 'DraftKings' in _ags else 'Money-only agreement')
+       'DraftKings Network handle % (all-books SAO primary)' if 'DraftKings' in _ags else 'Money-only agreement')
 HOME2=(f'<main id="main" class="ds-main" tabindex="-1"><h1>Week {GW} board</h1>'
   f'<p class="ds-sub">{len(ALL6)} games tracked · {_cnt["STRONG"]} STRONG · {_cnt["LEAN"]} LEAN · {_cnt["PASS"]} PASS · sorted by kickoff (CT)</p>'
   f'<section aria-label="Season records and data source" class="ds-strip">{_rt("STRONG")}{_rt("LEAN")}'

@@ -226,15 +226,15 @@ def qa(g):
     if g.get('agree')=='SBD money': dkn+=' of the money per SportsBettingDime (secondary money check)'
     if g.get('agree') in ('SBD money','SAO only'):
         sm=g.get('agree')=='SBD money'
-        dc=(f"SportsBettingDime money has {D} {g['dk_m']}%" if sm else "No SportsBettingDime money read; all-books money only, capped at LEAN")+('' if not sm or g['c'] else f", all books have {A} {m}%")
+        dc=(f"SportsBettingDime money has {D} {g['dk_m']}%" if sm else "No DraftKings handle read; all-books money only, capped at LEAN")+('' if not sm or g['c'] else f", all books have {A} {m}%")
         rows.append(('c','Does the second money source (SportsBettingDime) have the money on the same team?',bool(g['c']) and not even,dc,'ok' if (g['c'] and not even and sm) else ('md' if not sm else 'no')))
         dc=None
     elif g.get('agree')=='none': dc="No book money to check (DraftKings handle down, no money backup), so no agreement; PASS"
     elif g['c'] is None: dc="Not recorded for Weeks 1–4"
     elif even: dc=f"All books are split 50–50, so there is no money side to match; DraftKings has {D} {g['dk_m']}%"
-    elif g['c']: dc=f"DraftKings has {D} {g['dk_m']}%{dkn}"
+    elif g['c']: dc=f"DraftKings has {D} {g['dk_m']}% of the handle{dkn}"
     else: dc=f"DraftKings has {D} {g['dk_m']}%, all books have {A} {m}%"
-    if dc is not None: rows.append(('c','Does DraftKings have the money on the same team?',bool(g['c']) and not even,dc,'na' if g['c'] is None else ('ok' if (g['c'] and not even) else 'no')))
+    if dc is not None: rows.append(('c','Does DraftKings (handle %) have the money on the same team?',bool(g['c']) and not even,dc,'na' if g['c'] is None else ('ok' if (g['c'] and not even) else 'no')))
     # d: 6+ favorite holds the money
     big = fa is not None and abs(float(fl.replace(M,'-')))>=6
     yes_d = big and fa==A and not even
@@ -631,10 +631,16 @@ def build_wk(WK):
         sdp=[x for x in _sbd_rows(WK) if _P(lo_s)<_P(x[0])<=_P(cut_s) and key in x[2]] if SBD_BACKUP else []
         # TG, Oct 29 (supersedes): DraftKings is OUT of agreement (no handle, no bets %). Primary = SAO all-books money
         # (drives the fade); secondary = SportsBettingDime money %. If SBD is missing: rate on SAO alone, capped at LEAN ('SAO only').
-        if WK>=UNIFIED_FROM: dkp=[]   # Weeks 5-7 keep their recorded DraftKings agreement (TG, Oct 29: don't change old ones)
+        # TG, Oct 31 11:24 PM CT (supersedes Oct 29): DK Network page is back. Primary = SAO all-books money (drives the fade);
+        # secondary agreement = DraftKings Network HANDLE % (money, never bets %) on the same side. SBD is OUT of agreement
+        # (SAO echo; evidence-only). No DK handle -> SAO alone, capped at LEAN. Weeks 5-7 untouched.
+        if WK>=UNIFIED_FROM: sdp=[]
         if dkp:
             dk_t,dk_src,dk=dkp[-1]
             agree='DraftKings'; dk_ml=_ml_for(DKML6,dk_src,key,_dkml_rows)
+            if WK>=UNIFIED_FROM:   # keep the posted line source (DK line from the ESPN/AN pull at the SAO time); DK Network supplies handle % only
+                ln=_dk_line(WK,key,sa_t)
+                if ln: dk={k:dict(v,line=ln.get(k,v['line'])) for k,v in dk.items()}
         else:
             ln=_dk_line(WK,key,sa_t)
             if sdp and ln is not None:
@@ -643,7 +649,7 @@ def build_wk(WK):
                 dk_ml={k:dict(money=v[0],bets=v[1]) for k,v in r['ml'].items()} or None; agree='SBD money'
             else:   # no SBD money: SAO alone (self-agreeing), capped at LEAN below; never blank the card
                 if ln is None: NODK.setdefault(WK,[]).append(gm); continue
-                dk_t,dk_src=sa_t,'SAO only (no SportsBettingDime money read)'
+                dk_t,dk_src=sa_t,'SAO only (no DraftKings handle read)'
                 dk={k:dict(line=ln[k],money=sa_row[k][0],bets=sa_row[k][1]) for k in ln}; agree='SAO only'
         sa_ml=_ml_for(SAOML6,sa_src,key,_sao_rows)
         sa_all,sa_has=_allmoney(sa_row,sa_ml,'ScoresAndOdds',gm)
@@ -1973,6 +1979,7 @@ def txt_clean(GG,wk,asof):
     P+=['PASS']
     for g in ps: P+=[f"  {g['away']} at {g['home']}"+(' (no independent book money)' if g.get('agree')=='none' else '')]+([] if fin else bn_txt(g))
     if not fin and NODK.get(wk): P+=['',f"PARTIAL SLATE: only {len(GG)} of {len(GG)+len(NODK[wk])} Week {wk} games rated so far; the other {len(NODK[wk])} are unrated until a DraftKings split exists."]
+    if not fin and any(g.get('agree')=='DraftKings' and g.get('week',0)>=UNIFIED_FROM for g in GG): P+=['','Agreement: all-books money (ScoresAndOdds) primary, DraftKings Network handle % secondary (same side). Bets % and SportsBettingDime are not used.']
     if not fin and any(g.get('agree')=='SBD money' for g in GG): P+=['','Agreement: all-books money (ScoresAndOdds) primary, SportsBettingDime money % secondary. DraftKings and bets % are not used.']
     if not fin and any(g.get('agree')=='none' for g in GG): P+=['','Agreement = money only: DraftKings handle -> SportsBettingDime money. Games with neither are PASS (never invented).']
     for g in pl: P+=[f"  agreement book for {g['away']} at {g['home']}: {g.get('agree','DraftKings')}"] if not fin else []

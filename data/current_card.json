@@ -85,15 +85,6 @@
    "kickoff_utc": "2026-11-01T21:05:00Z"
   },
   {
-   "game": "KC@DEN",
-   "team": "DEN",
-   "name": "Denver",
-   "nick": "Broncos",
-   "rating": "LEAN",
-   "line": "+1.5",
-   "kickoff_utc": "2026-11-01T21:25:00Z"
-  },
-  {
    "game": "NE@MIA",
    "team": "MIA",
    "name": "Miami",
