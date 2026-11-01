@@ -1,0 +1,259 @@
+{
+ "fetched_utc": "2026-11-01T13:12:08+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Moneyline&tb_page=N",
+ "market": "moneyline",
+ "games": [
+  {
+   "matchup": "BAL Ravens @ BUF Bills",
+   "kickoff_local": "11/1, 01:00PM",
+   "spread": [
+    {
+     "side": "BUF Bills",
+     "odds": "\u2212170",
+     "handle_pct": 75,
+     "bets_pct": 81
+    },
+    {
+     "side": "BAL Ravens",
+     "odds": "+142",
+     "handle_pct": 25,
+     "bets_pct": 19
+    }
+   ]
+  },
+  {
+   "matchup": "IND Colts @ JAX Jaguars",
+   "kickoff_local": "11/1, 01:00PM",
+   "spread": [
+    {
+     "side": "JAX Jaguars",
+     "odds": "\u2212485",
+     "handle_pct": 89,
+     "bets_pct": 93
+    },
+    {
+     "side": "IND Colts",
+     "odds": "+370",
+     "handle_pct": 11,
+     "bets_pct": 7
+    }
+   ]
+  },
+  {
+   "matchup": "TEN Titans @ CIN Bengals",
+   "kickoff_local": "11/1, 01:00PM",
+   "spread": [
+    {
+     "side": "CIN Bengals",
+     "odds": "\u2212800",
+     "handle_pct": 87,
+     "bets_pct": 94
+    },
+    {
+     "side": "TEN Titans",
+     "odds": "+550",
+     "handle_pct": 13,
+     "bets_pct": 6
+    }
+   ]
+  },
+  {
+   "matchup": "MIN Vikings @ DET Lions",
+   "kickoff_local": "11/1, 01:00PM",
+   "spread": [
+    {
+     "side": "DET Lions",
+     "odds": "\u2212170",
+     "handle_pct": 83,
+     "bets_pct": 64
+    },
+    {
+     "side": "MIN Vikings",
+     "odds": "+142",
+     "handle_pct": 17,
+     "bets_pct": 36
+    }
+   ]
+  },
+  {
+   "matchup": "ARI Cardinals @ DAL Cowboys",
+   "kickoff_local": "11/1, 01:00PM",
+   "spread": [
+    {
+     "side": "DAL Cowboys",
+     "odds": "\u2212325",
+     "handle_pct": 70,
+     "bets_pct": 87
+    },
+    {
+     "side": "ARI Cardinals",
+     "odds": "+260",
+     "handle_pct": 30,
+     "bets_pct": 13
+    }
+   ]
+  },
+  {
+   "matchup": "CLE Browns @ PIT Steelers",
+   "kickoff_local": "11/1, 01:00PM",
+   "spread": [
+    {
+     "side": "PIT Steelers",
+     "odds": "\u2212192",
+     "handle_pct": 69,
+     "bets_pct": 68
+    },
+    {
+     "side": "CLE Browns",
+     "odds": "+160",
+     "handle_pct": 31,
+     "bets_pct": 32
+    }
+   ]
+  },
+  {
+   "matchup": "LV Raiders @ NY Jets",
+   "kickoff_local": "11/1, 01:00PM",
+   "spread": [
+    {
+     "side": "NY Jets",
+     "odds": "\u2212130",
+     "handle_pct": 51,
+     "bets_pct": 21
+    },
+    {
+     "side": "LV Raiders",
+     "odds": "+110",
+     "handle_pct": 49,
+     "bets_pct": 79
+    }
+   ]
+  },
+  {
+   "matchup": "ATL Falcons @ TB Buccaneers",
+   "kickoff_local": "11/1, 01:00PM",
+   "spread": [
+    {
+     "side": "TB Buccaneers",
+     "odds": "\u2212130",
+     "handle_pct": 57,
+     "bets_pct": 42
+    },
+    {
+     "side": "ATL Falcons",
+     "odds": "+110",
+     "handle_pct": 43,
+     "bets_pct": 58
+    }
+   ]
+  },
+  {
+   "matchup": "LA Chargers @ LA Rams",
+   "kickoff_local": "11/1, 04:05PM",
+   "spread": [
+    {
+     "side": "LA Rams",
+     "odds": "\u2212265",
+     "handle_pct": 69,
+     "bets_pct": 92
+    },
+    {
+     "side": "LA Chargers",
+     "odds": "+215",
+     "handle_pct": 31,
+     "bets_pct": 8
+    }
+   ]
+  },
+  {
+   "matchup": "NE Patriots @ MIA Dolphins",
+   "kickoff_local": "11/1, 04:25PM",
+   "spread": [
+    {
+     "side": "MIA Dolphins",
+     "odds": "+270",
+     "handle_pct": 11,
+     "bets_pct": 5
+    },
+    {
+     "side": "NE Patriots",
+     "odds": "\u2212340",
+     "handle_pct": 89,
+     "bets_pct": 95
+    }
+   ]
+  },
+  {
+   "matchup": "KC Chiefs @ DEN Broncos",
+   "kickoff_local": "11/1, 04:25PM",
+   "spread": [
+    {
+     "side": "DEN Broncos",
+     "odds": "\u2212105",
+     "handle_pct": 28,
+     "bets_pct": 35
+    },
+    {
+     "side": "KC Chiefs",
+     "odds": "\u2212115",
+     "handle_pct": 72,
+     "bets_pct": 65
+    }
+   ]
+  },
+  {
+   "matchup": "PHI Eagles @ WAS Commanders",
+   "kickoff_local": "11/1, 08:20PM",
+   "spread": [
+    {
+     "side": "WAS Commanders",
+     "odds": "\u2212278",
+     "handle_pct": 62,
+     "bets_pct": 79
+    },
+    {
+     "side": "PHI Eagles",
+     "odds": "+225",
+     "handle_pct": 38,
+     "bets_pct": 21
+    }
+   ]
+  },
+  {
+   "matchup": "CHI Bears @ SEA Seahawks",
+   "kickoff_local": "11/2, 08:20PM",
+   "spread": [
+    {
+     "side": "SEA Seahawks",
+     "odds": "\u2212170",
+     "handle_pct": 44,
+     "bets_pct": 56
+    },
+    {
+     "side": "CHI Bears",
+     "odds": "+142",
+     "handle_pct": 56,
+     "bets_pct": 44
+    }
+   ]
+  },
+  {
+   "matchup": "JAX Jaguars @ BAL Ravens",
+   "kickoff_local": "11/5, 08:15PM",
+   "spread": [
+    {
+     "side": "BAL Ravens",
+     "odds": "\u2212155",
+     "handle_pct": 2,
+     "bets_pct": 44
+    },
+    {
+     "side": "JAX Jaguars",
+     "odds": "+130",
+     "handle_pct": 98,
+     "bets_pct": 56
+    }
+   ]
+  }
+ ]
+}

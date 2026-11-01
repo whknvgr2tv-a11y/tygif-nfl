@@ -1,6 +1,6 @@
 {
  "week": 8,
- "posted_at_et": "Sun Nov 1, 12:09 AM ET",
+ "posted_at_et": "Sun Nov 1, 8:12 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -18,7 +18,7 @@
    "name": "Baltimore",
    "nick": "Ravens",
    "rating": "STRONG",
-   "line": "+3",
+   "line": "+3.5",
    "kickoff_utc": "2026-11-01T18:00:00Z"
   },
   {
@@ -31,39 +31,12 @@
    "kickoff_utc": "2026-11-01T18:00:00Z"
   },
   {
-   "game": "MIN@DET",
-   "team": "MIN",
-   "name": "Minnesota",
-   "nick": "Vikings",
-   "rating": "LEAN",
-   "line": "+3",
-   "kickoff_utc": "2026-11-01T18:00:00Z"
-  },
-  {
-   "game": "LV@NYJ",
-   "team": "NYJ",
-   "name": "NY Jets",
-   "nick": "Jets",
-   "rating": "STRONG",
-   "line": "-1.5",
-   "kickoff_utc": "2026-11-01T18:00:00Z"
-  },
-  {
    "game": "CLE@PIT",
    "team": "CLE",
    "name": "Cleveland",
    "nick": "Browns",
    "rating": "STRONG",
    "line": "+3.5",
-   "kickoff_utc": "2026-11-01T18:00:00Z"
-  },
-  {
-   "game": "ATL@TB",
-   "team": "TB",
-   "name": "Tampa Bay",
-   "nick": "Buccaneers",
-   "rating": "STRONG",
-   "line": "-1.5",
    "kickoff_utc": "2026-11-01T18:00:00Z"
   },
   {
@@ -85,6 +58,15 @@
    "kickoff_utc": "2026-11-01T21:05:00Z"
   },
   {
+   "game": "KC@DEN",
+   "team": "DEN",
+   "name": "Denver",
+   "nick": "Broncos",
+   "rating": "LEAN",
+   "line": "+1.5",
+   "kickoff_utc": "2026-11-01T21:25:00Z"
+  },
+  {
    "game": "NE@MIA",
    "team": "MIA",
    "name": "Miami",
@@ -99,7 +81,7 @@
    "name": "Philadelphia",
    "nick": "Eagles",
    "rating": "LEAN",
-   "line": "+6",
+   "line": "+6.5",
    "kickoff_utc": "2026-11-02T01:20:00Z"
   }
  ]
