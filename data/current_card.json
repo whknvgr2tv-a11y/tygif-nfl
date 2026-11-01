@@ -1,6 +1,6 @@
 {
  "week": 8,
- "posted_at_et": "Sun Nov 1, 8:12 AM ET",
+ "posted_at_et": "Sun Nov 1, 11:07 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -17,8 +17,8 @@
    "team": "BAL",
    "name": "Baltimore",
    "nick": "Ravens",
-   "rating": "STRONG",
-   "line": "+3.5",
+   "rating": "LEAN",
+   "line": "+3",
    "kickoff_utc": "2026-11-01T18:00:00Z"
   },
   {
@@ -27,7 +27,16 @@
    "name": "Tennessee",
    "nick": "Titans",
    "rating": "STRONG",
-   "line": "+12.5",
+   "line": "+13.5",
+   "kickoff_utc": "2026-11-01T18:00:00Z"
+  },
+  {
+   "game": "MIN@DET",
+   "team": "MIN",
+   "name": "Minnesota",
+   "nick": "Vikings",
+   "rating": "LEAN",
+   "line": "+3",
    "kickoff_utc": "2026-11-01T18:00:00Z"
   },
   {
@@ -81,7 +90,7 @@
    "name": "Philadelphia",
    "nick": "Eagles",
    "rating": "LEAN",
-   "line": "+6.5",
+   "line": "+6",
    "kickoff_utc": "2026-11-02T01:20:00Z"
   }
  ]

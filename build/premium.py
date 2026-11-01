@@ -284,7 +284,7 @@ def _rec(rs,k):
 HUBN={}
 def _hub():
     ks=sorted({(x['week'],x['game']) for x in SIDES if x['role']=='fade' and (x['sp_res'] or x['ml_res'])})
-    _FLAGS=[f for f in json.load(open(R+'data/sides_log.json'))['flags']]
+    _FLAGS=[f for f in json.load(open(R+'data/sides_log.json'))['flags'] if (f[0],f[1]) in set(_DONE)]   # even-money flags count only once the game is final (Nov 1: pending ARI@DAL)
     rr=lambda r,u: '—' if not r else f'<span class="{dict(W="pos",L="neg",P="")[r]}">{dict(W="Win",L="Loss",P="Push")[r]} {usd(u or 0)}</span>'
     FD=lambda v:{'Fav':'Favorite','Dog':'Underdog'}.get(v,'—')
     summ='';det=''
