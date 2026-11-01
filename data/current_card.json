@@ -1,6 +1,6 @@
 {
  "week": 8,
- "posted_at_et": "Sat Oct 31, 7:59 PM ET",
+ "posted_at_et": "Sun Nov 1, 12:09 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -31,6 +31,15 @@
    "kickoff_utc": "2026-11-01T18:00:00Z"
   },
   {
+   "game": "MIN@DET",
+   "team": "MIN",
+   "name": "Minnesota",
+   "nick": "Vikings",
+   "rating": "LEAN",
+   "line": "+3",
+   "kickoff_utc": "2026-11-01T18:00:00Z"
+  },
+  {
    "game": "LV@NYJ",
    "team": "NYJ",
    "name": "NY Jets",
@@ -54,7 +63,7 @@
    "name": "Tampa Bay",
    "nick": "Buccaneers",
    "rating": "STRONG",
-   "line": "-2.5",
+   "line": "-1.5",
    "kickoff_utc": "2026-11-01T18:00:00Z"
   },
   {
@@ -92,6 +101,15 @@
    "rating": "STRONG",
    "line": "+7",
    "kickoff_utc": "2026-11-01T21:25:00Z"
+  },
+  {
+   "game": "PHI@WSH",
+   "team": "PHI",
+   "name": "Philadelphia",
+   "nick": "Eagles",
+   "rating": "LEAN",
+   "line": "+6",
+   "kickoff_utc": "2026-11-02T01:20:00Z"
   }
  ]
 }
