@@ -7,8 +7,8 @@ from gamecards import AB, fmt
 ROWS=json.load(open(_I+'/types_w14.json'))
 CARD={(c['week'],c['game']):c['rating'] for c in json.load(open(_I+'/card_w14.json'))}
 T={1:dict(name='Crowd piled on a big favorite',rule='65%+ of the money on a 6+ point favorite · take the underdog',bet=True),
-   2:dict(name='Crowd piled on, no big favorite',rule='65%+ of the money and most bets on one side · take the other side',bet=True),
-   3:dict(name='Crowd leaning',rule='55–64% of the money, or money and bets on different sides · LEAN at most',bet=True),
+   2:dict(name='Crowd piled on, no big favorite',rule='65%+ of the money on one side, no big favorite · take the other side',bet=True),
+   3:dict(name='Crowd leaning',rule='55–64% of the money · LEAN at most',bet=True),
    4:dict(name='Books disagree',rule='All books and DraftKings have the money on different sides · no bet',bet=False),
    5:dict(name='No clear crowd',rule='Under 55% of the money on either side · no bet',bet=False)}
 def wk5_type(G):

@@ -39,7 +39,7 @@ GRADE="Every week is rated on the money splits (all books and DraftKings) from t
 LOCK2="Calls posted before kickoff are previews and can change as the money moves. "+GRADE
 OLDNAMES={1:TY[1]['name'],2:TY[2]['name']}
 for _t,_n in ((1,'Fade the big favorite'),(2,'Fade the crowd')): TY[_t]=dict(TY[_t]); TY[_t]['name']=_n
-TY[3]=dict(TY[3]); TY[3]['rule']=TY[3]['rule']+'; a money-vs-bets split is a pass'
+TY[3]=dict(TY[3])
 import csv as _csv
 def live_rows():
     p=R+'data/live_log.csv'
@@ -214,7 +214,8 @@ def qa(g):
     elif bb==50: da=f"{A} has {m}% of the money; the bets are split exactly 50–50{cl}"
     elif g['a']: da=f"{A} has {m}% of the money and {bb}% of the bets{cl}"
     else: da=f"{A} has {m}% of the money but only {bb}% of the bets; {_other(g,A)} has {100-bb}%{cl}"
-    rows.append(('a','Are the money and the bets on the same team?',g['a'],da,'ok' if g['a'] else 'no'))
+    if g.get('week',0)>=NO_BETS_FROM: rows.append(('a','Crowd bets % (info only, never changes the grade)',True,da,'nu'))   # TG Oct 31
+    else: rows.append(('a','Are the money and the bets on the same team?',g['a'],da,'ok' if g['a'] else 'no'))
     # b: 65%+
     if g['b']: db=f"{A} has {m}%"
     elif even: db=f"50–50 split; under 55% is a pass"
@@ -386,17 +387,18 @@ def _dk_be(WK,A,H,ko_s):
         if b.get('breakeven_pct'): best=(t_,{A:b['breakeven_pct'][0],H:b['breakeven_pct'][1]})
     return best[1] if best else None
 UNIFIED_FROM=8
+NO_BETS_FROM=8   # TG, Oct 31 (t792u): bets % is NEVER used in any grade (agreement, STRONG/LEAN, PASS). Money/handle only. Settled W1-7 left as graded.
 def rate_unified(rt,ty,abm,abb,pub,be):
     """TG, Oct 29 (t688u): ONE game grade from TOTAL money (spread+ML all-money) + what the book needs.
     Type 4 (DK disagree) / Type 5 (<55%) / bets<50 stay PASS. gap = all-money on public side - DK break-even on that side.
     STRONG: 65%+ , or 63-64% with the book exposed by 10+ pts. LEAN: 55%+ with the book exposed (gap>0).
     Book locked/against (gap<=0) -> PASS: no book tailwind, we only sit with the house."""
-    if ty in (4,5) or abb<50 or be is None: return rt,None
+    if ty in (4,5) or be is None: return rt,None   # TG Oct 31: no bets% gate
     gap=round(abm-be[pub],1)
     if abm>=65 or (abm>=63 and gap>=10): return 'STRONG',gap
     if abm>=55 and gap>0: return 'LEAN',gap
     return 'PASS',gap
-def rate_v1(A,H,ab,dk_side,mon,close_sp,qb_drop):
+def rate_v1(A,H,ab,dk_side,mon,close_sp,qb_drop,no_bets=False):
     """Rules v1. ab=(side abbr,money,bets) all books; mon=start-of-week dict; close_sp={abbr:'+7.5'}. Returns rating,type,e,d."""
     s,m,b=ab
     lnum=lambda v:float(v.replace(M,'-').replace('PK','0'))
@@ -404,12 +406,12 @@ def rate_v1(A,H,ab,dk_side,mon,close_sp,qb_drop):
     e=(ms_open-ms_now)>1; d=ms_now<=-6 and m>50
     if dk_side!=s and m>50: return 'PASS',4,e,d
     if m<55: return 'PASS',5,e,d
-    a=b>=50; bb=m>=65
+    a=True if no_bets else b>=50; bb=m>=65   # no_bets: bets% cannot gate (TG Oct 31)
     ty=1 if (bb and d) else 2 if (bb and a) else 3
     if not a: return 'PASS',ty,e,d
     lvl=(2 if bb else 1)-qb_drop   # TG, Oct 25: line move no longer drops a level (info only)
     return ['PASS','LEAN','STRONG'][max(lvl,0)],ty,e,d
-def _rate_ml(A,H,sa_ml,dk_ml,sp,agree,dk_sp=None):
+def _rate_ml(A,H,sa_ml,dk_ml,sp,agree,dk_sp=None,no_bets=False):
     """TG, Oct 29 (t251u): the moneyline is rated on its own. Same rules as the spread, applied to the MONEYLINE money split only:
     all-books (ScoresAndOdds) ML money side; DraftKings ML split must agree (else Type 4 PASS); under 55% = Type 5 PASS;
     bets on the money side under 50% = PASS; 65%+ = STRONG (Type 1 if a 6+ point favorite, else Type 2), 55-64% = LEAN (Type 3).
@@ -426,9 +428,10 @@ def _rate_ml(A,H,sa_ml,dk_ml,sp,agree,dk_sp=None):
     if len(set(dv.values()))==1: return dict(r,rating='PASS',type=4,why=f'DraftKings moneyline split exactly 50/50 (no side)')
     if dks!=s: return dict(r,rating='PASS',type=4,why=f'DraftKings moneyline dollars on the other side ({dks} {dv[dks]}%)')
     if m<55: return dict(r,rating='PASS',type=5,why=f'Under 55% of moneyline dollars on either side ({s} {m}%)')
-    a=b>=50; bb=m>=65; ln=float(str(sp[s]).replace(M,'-').replace('PK','0'))
+    a=True if no_bets else b>=50; bb=m>=65; ln=float(str(sp[s]).replace(M,'-').replace('PK','0'))
     ty=1 if (bb and ln<=-6) else 2 if (bb and a) else 3
     if not a: return dict(r,rating='PASS',type=ty,why=f'Moneyline dollars and bets on different sides ({s} {m}% dollars, {b}% bets)')
+    if no_bets: return dict(r,rating='STRONG' if bb else 'LEAN',type=ty,why=f"{s} has {m}% of moneyline dollars · DraftKings handle on the same side")
     return dict(r,rating='STRONG' if bb else 'LEAN',type=ty,why=f"{s} has {m}% of moneyline dollars, {b}% of bets · DraftKings on the same side")
 def settle_w5():
     sb=json.load(open(_W+'/espn_sum/sb_w5.json'))
@@ -668,7 +671,8 @@ def build_wk(WK):
         fade_ab=H if abs_==A else A
         drop=False; qbnote=''
         dk_tie=agree!='none' and len({v['money'] for v in dk.values()})==1   # TG, Oct 22: DK exactly 50/50 = no side -> Type 4 PASS
-        rt,ty,ee,dd=rate_v1(A,H,(abs_,abm,abb),(None if dk_tie else dks),mon,sp,drop)
+        nb=WK>=NO_BETS_FROM
+        rt,ty,ee,dd=rate_v1(A,H,(abs_,abm,abb),(None if dk_tie else dks),mon,sp,drop,no_bets=nb)
         bgap=None
         if WK>=UNIFIED_FROM: rt,bgap=rate_unified(rt,ty,abm,abb,abs_,_dk_be(WK,A,H,ko_s))
         if agree=='SAO only' and rt=='STRONG': rt='LEAN'   # no independent money check -> cap
@@ -678,19 +682,19 @@ def build_wk(WK):
         if agree=='none' and abm>50: why='No book money to check (DraftKings handle down, no money backup) — PASS'
         elif ty==4: why=(f'{agree} money split exactly 50/50 (no side)' if dk_tie else f'{agree} has the money on the other side')
         elif ty==5: why='Under 55% of the money on either side'
-        elif abb<50: why='Money and bets on different sides'
+        elif abb<50 and not nb: why='Money and bets on different sides'
         else:
             drops=[]   # TG, Oct 25: no line-move drop
             why=f"Starts at {'STRONG' if abm>=65 else 'LEAN'}"+(''.join(f' · −1 for {x}' for x in drops) if drops else ' · no drops')
             if bgap is not None: why=f"{rt} · total money {abm}% on {abs_}, book exposed {bgap:+g} vs DK break-even" if rt!='PASS' else f"PASS · {abm}% total money but book not exposed ({bgap:+g} vs DK break-even)"
         g=dict(gid=f'w{WK}-{A.lower()}-{H.lower()}',A=A,H=H,away=NAME[A],home=NAME[H],sp=sp,ab_side=NAME[abs_],ab_m=abm,ab_b=abb,
-               dk_side=(NAME[dks] if dks else '—'),dk_m=(dk[dks]['money'] if dks else None),dk_b=(dk[dks]['bets'] if dks else None),a=abb>=50,b=abm>=65,c=(dks==abs_ and not dk_tie),agree=agree,d=dd,e=ee,f=drop,
+               dk_side=(NAME[dks] if dks else '—'),dk_m=(dk[dks]['money'] if dks else None),dk_b=(dk[dks]['bets'] if dks else None),a=(True if nb else abb>=50),b=abm>=65,c=(dks==abs_ and not dk_tie),agree=agree,d=dd,e=ee,f=drop,
                fade=NAME[fade_ab],fade_line=float(sp[fade_ab].replace(M,'-')),rating=rt,type=ty,why=why,when=when,mon=mon,qbnote=qbnote,
                split_at=_etlbl(sa_t),split_utc=sa_t,dk_utc=dk_t,split_src=sa_src,dk_src=dk_src,dk_vsin=dk_vsin,final=None,held=False,week=WK,ko_utc=ko_s,eid=e['id'],status=c['status']['type']['name'],allmoney=allm)
         g['ubgap']=bgap
         g['call']=f"{g['fade']} {sp[fade_ab]}"
         g['wy']=f"{abm}% of the money is on {NAME[abs_]} (all books)."+''
-        g['mlr']=_rate_ml(A,H,sa_ml,allm['dk_ml'],sp,agree,allm['dk_spread'])
+        g['mlr']=_rate_ml(A,H,sa_ml,allm['dk_ml'],sp,agree,allm['dk_spread'],no_bets=nb)
         if WK>=UNIFIED_FROM and g['mlr']:
             g['bgap']=bgap; m0=g['mlr']
             # TG: same total-money + book-needs judgment. Default: ML on the fade side at the game grade.
@@ -712,6 +716,7 @@ for _x in ALLMONEY_WARN: print('ALL-MONEY WARN', _x)
 for _w,_l in NODK.items(): print(f'week {_w}: not on card yet (no DraftKings pull): '+', '.join(_l))
 GW=LIVEW[-1]   # GW = current card week
 GALL=[g for w in LIVEW for g in GBY[w]]   # every game, weeks 6 on
+if os.environ.get('DUMP_W'): json.dump([dict(g=g['gid'],sp=g['rating'],t=g['type'],ml=(g['mlr'] or {}).get('rating'),why=g['why']) for g in GBY.get(int(os.environ['DUMP_W']),[])],open(os.environ['DUMP_OUT'],'w'),indent=1)
 G6=GBY[GW]                                # the current card week (name kept: G6 = current week)
 PULL6=_etdata(max(g['split_utc'] for g in G6))   # newest pre-kickoff all-books pull used on the current card (stored ET; shown in CT)
 # ---------- both sides of every game ----------
@@ -1666,14 +1671,14 @@ HOW=f'''<div class="hw">
 <li>Money side: the team holding most of the money (tracking only).</li>
 <li>The money side is tracked for trends only. It is never a play.</li>
 <li>Spreads and moneylines, favorite or underdog.</li>
-<li>Money and bets: all books (ScoresAndOdds). DraftKings must have the money on the same team.</li>
+<li>Money: all books (ScoresAndOdds). DraftKings handle must have the money on the same team. Bets % does not affect any grade.</li>
 </ul>
 <h2>Game types</h2>
 <p class="sm">Checked in this order: 4, 5, 1, 2, 3.</p>
 <ol>
 <li><b>{TY[1]['name']}:</b> 65%+ of the money on a favorite giving 6+ points. Take the underdog.</li>
-<li><b>{TY[2]['name']}:</b> 65%+ of the money and most bets on one team. Take the other team.</li>
-<li><b>Crowd leaning:</b> 55–64% of the money on one team. LEAN at most; money and bets on different teams is a pass.</li>
+<li><b>{TY[2]['name']}:</b> 65%+ of the money on one team (no big favorite). Take the other team.</li>
+<li><b>Crowd leaning:</b> 55–64% of the money on one team. LEAN at most.</li>
 <li><b>Moneyline:</b> same team and same STRONG/LEAN/PASS grade as the spread, every week (Type 3 underdogs included).</li>
 <li><b>Grading:</b> Every game is graded at the DraftKings line, price and moneyline we recorded last at least 5 minutes before kickoff; where nothing was recorded, at the DraftKings closing numbers.</li>
 <li><b>Books disagree:</b> all books and DraftKings have the money on different teams. PASS.</li>
@@ -1681,8 +1686,8 @@ HOW=f'''<div class="hw">
 </ol>
 <h2>Ratings</h2>
 <ul>
-<li><b>STRONG:</b> 65%+ of the money, most bets on the same team, DraftKings money on the same team (its bets need not agree).</li>
-<li><b>LEAN:</b> 55–64% of the money, most bets on the same team, DraftKings money on the same team.</li>
+<li><b>STRONG:</b> 65%+ of the money (all books), DraftKings handle on the same team. Bets % is never used.</li>
+<li><b>LEAN:</b> 55–64% of the money (all books), DraftKings handle on the same team. Bets % is never used.</li>
 <li><b>PASS:</b> types 4 and 5, or money and bets on different teams.</li>
 <li><b>Line movement</b> is shown for information only. Since Oct 25 it never changes the rating, for every week.</li>
 <li><b>Monday line:</b> average of TeamRankings books 2 and 3, each book’s last quote before Monday 12:00 AM ET (quotes older than 7 days skipped).</li>

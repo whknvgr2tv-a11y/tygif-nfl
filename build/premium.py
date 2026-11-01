@@ -258,7 +258,7 @@ for _f in _gg.glob(R+'*.html'):
     for _a,_c in (('Tracking · not a play · ','Tracking · '),('tracking · not a play','tracking only'),(' · not a play',''),('not a play','tracking only')): _x=_x.replace(_a,_c)
     if '<h1' not in _x and _b in _TTL: _x=re.sub(r'(<main[^>]*>|<div id="main" tabindex="-1"></div>)',lambda m:m.group(1)+f'<h1 class="ds-pt">{_TTL[_b]}</h1>',_x,count=1)
     if _b=='tygif-how.html':
-        _ol='<ol>'+''.join(f'<li value="{k}"><b>Type {k} · {TY[k]["name"]}:</b> '+_d+'</li>' for k,_d in ((1,'65%+ of the money on a favorite giving 6+ points. Take the underdog.'),(2,'65%+ of the money and most bets on one team. Take the other team.'),(3,'55–64% of the money on one team. LEAN at most; money and bets on different teams is a pass. Moneyline shares the same STRONG/LEAN/PASS grade as the spread.'),(4,'all books and DraftKings have the money on different teams. PASS.'),(5,'under 55% of the money on either team. PASS.')))+'</ol>'
+        _ol='<ol>'+''.join(f'<li value="{k}"><b>Type {k} · {TY[k]["name"]}:</b> '+_d+'</li>' for k,_d in ((1,'65%+ of the money on a favorite giving 6+ points. Take the underdog.'),(2,'65%+ of the money on one team (no big favorite). Take the other team.'),(3,'55–64% of the money on one team. LEAN at most; money and bets on different teams is a pass. Moneyline shares the same STRONG/LEAN/PASS grade as the spread.'),(4,'all books and DraftKings have the money on different teams. PASS.'),(5,'under 55% of the money on either team. PASS.')))+'</ol>'
         _x=re.sub(r'(<h2>Game types</h2>\s*<p[^>]*>[^<]*</p>\s*)<ol>.*?</ol>',lambda m:m.group(1)+_ol,_x,count=1,flags=re.S)
         _x=_x.replace('<li>Weeks 1–4: all-books splits only','<li>Every game is graded at the DraftKings line, price and moneyline we recorded last at least 5 minutes before kickoff; where nothing was recorded, at the DraftKings closing numbers.</li><li>Weeks 1–4: all-books splits only',1)
     _x=re.sub(r'<img((?![^>]*alt=)[^>]*)>',r'<img alt=""\1>',_x)
@@ -307,7 +307,7 @@ def _hub():
               +'</details>')
     n=len(ks)+len(_FLAGS)
     return ('<section id="hub" aria-labelledby="hubh"><h2 id="hubh" class="ds-h2">Season records</h2>'
-            f'<p class="ds-legend">All {n} graded games, each in exactly one bucket. Spread and moneyline are rated separately (STRONG 65%+, LEAN 55–64%, PASS under 55% or DraftKings disagrees or bets under 50%). Every graded game has its own moneyline STRONG/LEAN/PASS. Caveats: Weeks 1–4: all-books splits only; DraftKings split not recorded. Weeks 5–7 use the DK spread split as the DK check; ScoresAndOdds ML % comes from the week pages. Flat $100 per play.</p>'
+            f'<p class="ds-legend">All {n} graded games, each in exactly one bucket. Spread and moneyline are rated separately (STRONG 65%+, LEAN 55–64%, PASS under 55% or DraftKings handle disagrees; bets % never used). Every graded game has its own moneyline STRONG/LEAN/PASS. Caveats: Weeks 1–4: all-books splits only; DraftKings split not recorded. Weeks 5–7 use the DK spread split as the DK check; ScoresAndOdds ML % comes from the week pages. Flat $100 per play.</p>'
             '<div class="tblwrap"><table class="data"><thead><tr><th scope="col">Bucket</th><th scope="col">Games</th><th scope="col">Spread record</th><th scope="col">Moneyline record</th><th scope="col">Meaning</th></tr></thead>'
             f'<tbody>{summ}</tbody></table></div>{det}</section>')
 _tf=R+'tygif-tracker.html'; _x=open(_tf,encoding='utf-8').read()
