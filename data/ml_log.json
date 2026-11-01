@@ -934,7 +934,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873026",
-   "price": 142,
+   "price": 136,
    "fd": "Dog"
   },
   {
@@ -946,17 +946,6 @@
    "status": "preview",
    "espn_event": "401873031",
    "price": 490,
-   "fd": "Dog"
-  },
-  {
-   "week": 8,
-   "game": "MIN@DET",
-   "rating": "LEAN",
-   "side": "MIN",
-   "spread_line": 3.0,
-   "status": "preview",
-   "espn_event": "401873030",
-   "price": 142,
    "fd": "Dog"
   },
   {
@@ -1011,7 +1000,18 @@
    "spread_line": 6.5,
    "status": "preview",
    "espn_event": "401873032",
-   "price": 225,
+   "price": 215,
+   "fd": "Dog"
+  },
+  {
+   "week": 8,
+   "game": "KC@DEN",
+   "rating": "LEAN",
+   "side": "DEN",
+   "spread_line": 1.5,
+   "status": "preview",
+   "espn_event": "401873033",
+   "price": -102,
    "fd": "Dog"
   },
   {
@@ -1022,7 +1022,7 @@
    "spread_line": 7.0,
    "status": "preview",
    "espn_event": "401873034",
-   "price": 260,
+   "price": 250,
    "fd": "Dog"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "week": 8,
- "posted_at_et": "Fri Oct 30, 9:08 PM ET",
+ "posted_at_et": "Sat Oct 31, 7:59 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -28,15 +28,6 @@
    "nick": "Titans",
    "rating": "STRONG",
    "line": "+12.5",
-   "kickoff_utc": "2026-11-01T18:00:00Z"
-  },
-  {
-   "game": "MIN@DET",
-   "team": "MIN",
-   "name": "Minnesota",
-   "nick": "Vikings",
-   "rating": "LEAN",
-   "line": "+3",
    "kickoff_utc": "2026-11-01T18:00:00Z"
   },
   {
@@ -83,6 +74,15 @@
    "rating": "STRONG",
    "line": "+6.5",
    "kickoff_utc": "2026-11-01T21:05:00Z"
+  },
+  {
+   "game": "KC@DEN",
+   "team": "DEN",
+   "name": "Denver",
+   "nick": "Broncos",
+   "rating": "LEAN",
+   "line": "+1.5",
+   "kickoff_utc": "2026-11-01T21:25:00Z"
   },
   {
    "game": "NE@MIA",

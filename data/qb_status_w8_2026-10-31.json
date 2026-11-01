@@ -1,0 +1,16 @@
+{
+ "checked": "2026-10-31 7:05 PM CT (Saturday refresh; ESPN injuries API, final injury reports Fri Oct 30)",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/injuries",
+ "rule": "Rules v2 (Oct 15): the QB rule was removed, so QB status never drops a rating; recorded for the record only",
+ "teams": {
+  "BAL": {"drop": false, "note": "Lamar Jackson (ankle) cleared; coach confirmed Fri Oct 30 he plays at Buffalo"},
+  "TEN": {"drop": false, "note": "Cam Ward has no game status and plays"},
+  "NYJ": {"drop": false, "note": "Geno Smith has no game status and plays"},
+  "CLE": {"drop": false, "note": "Deshaun Watson has no game status and plays"},
+  "TB": {"drop": false, "note": "Baker Mayfield full practice, no game status"},
+  "IND": {"drop": false, "note": "Daniel Jones stays the starter, no game status"},
+  "LAC": {"drop": false, "note": "Justin Herbert has no game status and plays"},
+  "MIA": {"drop": false, "note": "Malik Willis has no game status and plays"},
+  "DEN": {"drop": false, "note": "Bo Nix has no game status and plays"}
+ }
+}
