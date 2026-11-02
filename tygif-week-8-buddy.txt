@@ -1,4 +1,4 @@
-Week 8 · Final
+Week 8 · Lines as of Mon Nov 2, 5:07 PM CT
 
 STRONG Tennessee +13.5 · Final TEN 36–43 · win +$95
 STRONG Cleveland +3.5 · Final CLE 6–27 · loss −$100
@@ -7,6 +7,7 @@ STRONG LA Chargers +6.5 · Final LAC 9–24 · loss −$100
 STRONG Miami +7 · Final MIA 19–24 · win +$91
 LEAN Carolina +3.5 · Final CAR 19–27 · loss −$100
 LEAN Minnesota +3 · Final MIN 15–19 · loss −$100
+LEAN Chicago +3
 STRONG Tennessee ML · Final 36–43 · loss −$100
 STRONG Cleveland ML · Final 6–27 · loss −$100
 STRONG Indianapolis ML · Final 7–42 · loss −$100
@@ -14,3 +15,4 @@ STRONG LA Chargers ML · Final 9–24 · loss −$100
 STRONG Miami ML · Final 19–24 · loss −$100
 LEAN Carolina ML · Final 19–27 · loss −$100
 LEAN Minnesota ML · Final 15–19 · loss −$100
+LEAN Chicago ML
