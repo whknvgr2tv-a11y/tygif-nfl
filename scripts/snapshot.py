@@ -47,14 +47,15 @@ def dk_parse(h, mkt='Spread'):
         t = re.search(r'<h5[^>]*>(.*?)</h5>\s*<span[^>]*>(.*?)</span>', b, re.S)
         if not t: continue
         g = {'matchup': txt(t.group(1)), 'kickoff_local': txt(t.group(2)), 'spread': []}
-        mk = b.find('>' + mkt + '<')
-        if mk < 0: continue
+        mm = re.search(r'>\s*' + re.escape(mkt) + r'\s*<', b)
+        if not mm: continue
+        mk = mm.start()
         seg = b[mk:]; nxt = re.search(r'tb-se-head', seg[20:])
         if nxt: seg = seg[:nxt.start() + 20]
         for row in seg.split('tb-sodd')[1:]:
             side = re.search(r'tb-slipline[^>]*>([^<]+)<', row)
             odds = re.search(r'tb-odd-s[^>]*>\s*([^<\s]+)', row)
-            pct = re.findall(r'<div class="flex-1">\s*(\d+)%', row)
+            pct = re.findall(r'<div(?: class="flex-1")?>\s*(\d+)%', row)
             if side and len(pct) >= 2:
                 g['spread'].append({'side': side.group(1).strip(), 'odds': odds.group(1) if odds else None,
                                     'handle_pct': int(pct[0]), 'bets_pct': int(pct[1])})

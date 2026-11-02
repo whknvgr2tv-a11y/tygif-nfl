@@ -1,5 +1,5 @@
 TYGIF'S MODEL · WEEK 8
-Lines as of Mon Nov 2, 10:44 AM CT
+Lines as of Mon Nov 2, 11:06 AM CT
 
 STRONG
   Tennessee +13.5  ·  Tennessee at Cincinnati, Sun Nov 1 · 12:00 PM CT · Final TEN 36–43 · win +$95
@@ -29,8 +29,8 @@ LEAN
     Type 3 · Crowd leaning · LEAN: 13-15-1, −$282
     a: Yes · b: No · c: Yes · d: Yes
     Book needs CHI: SEA has 60% of the money vs 54.5% DK break-even (+5.5) — fade sits with the book
-    books need CHI: best bet365/Fanatics CHI +3.5 −120 (hold 4.35%, break-even 54.55%) · worst BetRivers +3 −105 (hold 4.89%, break-even 51.22%)
-      bet365 +3.5 −120 4.35%/54.55% · Fanatics +3.5 −120 4.35%/54.55% · DraftKings +3 +100 4.35%/50.00% · BetMGM +3 −102 4.42%/50.50% · FanDuel +3 −102 4.80%/50.50% · Caesars +3 −104 4.67%/50.98% · BetRivers +3 −105 4.89%/51.22%
+    books need CHI: best bet365/Fanatics CHI +3.5 −120 (hold 4.35%, break-even 54.55%) · worst BetMGM/BetRivers +3 −105 (hold 4.89%, break-even 51.22%)
+      bet365 +3.5 −120 4.35%/54.55% · Fanatics +3.5 −120 4.35%/54.55% · DraftKings +3 +100 4.35%/50.00% · FanDuel +3 −102 4.80%/50.50% · Caesars +3 −104 4.67%/50.98% · BetMGM +3 −105 4.50%/51.22% · BetRivers +3 −105 4.89%/51.22%
 
 MONEYLINE
   STRONG Tennessee ML  ·  Tennessee at Cincinnati, Sun Nov 1 · 12:00 PM CT · Final 36–43 · loss −$100
