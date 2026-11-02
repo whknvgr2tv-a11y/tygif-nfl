@@ -6,16 +6,16 @@ import uniform as u
 from gamecards import AB, fmt
 ROWS=json.load(open(_I+'/types_w14.json'))
 CARD={(c['week'],c['game']):c['rating'] for c in json.load(open(_I+'/card_w14.json'))}
-T={1:dict(name='Crowd piled on a big favorite',rule='65%+ of the money on a 6+ point favorite · take the underdog',bet=True),
-   2:dict(name='Crowd piled on, no big favorite',rule='65%+ of the money on one side, no big favorite · take the other side',bet=True),
-   3:dict(name='Crowd leaning',rule='55–64% of the money · LEAN at most',bet=True),
+T={1:dict(name='Crowd piled on a big favorite',rule='63%+ of the money on a 6+ point favorite · take the underdog',bet=True),
+   2:dict(name='Crowd piled on, no big favorite',rule='63%+ of the money on one side, no big favorite · take the other side',bet=True),
+   3:dict(name='Crowd leaning',rule='55–62% of the money · LEAN at most',bet=True),
    4:dict(name='Books disagree',rule='All books and DraftKings have the money on different sides · no bet',bet=False),
    5:dict(name='No clear crowd',rule='Under 55% of the money on either side · no bet',bet=False)}
 def wk5_type(G):
     if not G['c']: return 4
     if G['ab_m']<55: return 5
-    if G['ab_m']>=65 and G['d']: return 1
-    if G['ab_m']>=65 and G['a_ab']: return 2
+    if G['ab_m']>=63 and G['d']: return 1
+    if G['ab_m']>=63 and G['a_ab']: return 2
     return 3
 def trec(t):
     g=[r for r in ROWS if r['type']==t]; rr=[r['res'] for r in g if r['res']]

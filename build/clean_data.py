@@ -52,7 +52,7 @@ def grade(k):
     steps=[]
     if not ms or mp<55: return 'PASS',steps
     if r['bets_side']!=ms: return 'PASS',steps
-    lvl=2 if mp>=65 else 1
+    lvl=2 if mp>=63 else 1
     mv=rc.mv_toward_money(k)
     # TG, Oct 25: line move no longer drops a level
     return LV[max(lvl,0)],steps

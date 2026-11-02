@@ -272,7 +272,7 @@
  {
   "week": 2,
   "game": "MIN@CHI",
-  "type": 3,
+  "type": 2,
   "money_side": "CHI",
   "money_pct": 63.0,
   "bets_side": "CHI",
@@ -557,7 +557,7 @@
  {
   "week": 3,
   "game": "KC@MIA",
-  "type": 3,
+  "type": 1,
   "money_side": "KC",
   "money_pct": 64.0,
   "bets_side": "KC",
@@ -617,7 +617,7 @@
  {
   "week": 3,
   "game": "NE@JAX",
-  "type": 3,
+  "type": 2,
   "money_side": "NE",
   "money_pct": 63.0,
   "bets_side": "NE",
@@ -677,7 +677,7 @@
  {
   "week": 3,
   "game": "LV@NO",
-  "type": 3,
+  "type": 2,
   "money_side": "LV",
   "money_pct": 64.0,
   "bets_side": "LV",

@@ -17,7 +17,7 @@ for tr in t.select('tbody tr'):
 def rec(x): return dict(w=sum(r['res']=='W' for r in x),l=sum(r['res']=='L' for r in x),p=sum(r['res']=='P' for r in x),n=len(x),games=x)
 def ladder_rows(hi,big,mv):
     x=P; L=[rec(x)]
-    x=[r for r in x if (r['m']>=65)==hi]; L.append(rec(x))
+    x=[r for r in x if (r['m']>=63)==hi]; L.append(rec(x))
     x=[r for r in x if r['big']==big]; L.append(rec(x))
     x=[r for r in x if r['mv']==mv]; L.append(rec(x))
     return L
@@ -45,7 +45,7 @@ def game(gname, rating_pub):
     fade = other if ab_side==team else team
     a_ab = ab_bets_on_side>50; a_dk = dk_bets_on_side>50
     a = a_ab   # Fade the Crowd is read on the all-books split; DraftKings only has to have the money on the same side
-    b = ab_m>=65
+    b = ab_m>=63
     cc = dk_side==ab_side
     # line from the money side's view: positive = money side became more favored
     line_ms = line if ab_side==team else -line
@@ -88,14 +88,14 @@ def body(g):
     now=g['sp'][AB[g['team']]]
     qbt=QB.get(AB[g['fade']],'no injury tag')
     rows=[('a','Money and bets on the same side',yn(g['a'],True),f"All books: {ms} {g['ab_m']}% money, {g['ab_b']}% bets"),
-          ('b','65%+ of the money (all sportsbooks)',yn(g['b'],True),f"{g['ab_m']}% on {ms}"),
+          ('b','63%+ of the money (all sportsbooks)',yn(g['b'],True),f"{g['ab_m']}% on {ms}"),
           ('c','DraftKings has the money on the same side',yn(g['c'],True),f"DraftKings: {AB[g['dk_side']]} {g['dk_m']}% of the money"),
           ('d','6+ point favorite holds the money',yn(g['d'],True,True),f"{ms} {g['sp'][ms]}"),
           ('e','Line moved over 1 pt toward the money',yn(g['e'],False),f"{'Reopened' if g['re_'] else 'Opened'} {AB[g['team']]} {opn}, now {now}"),
           ('f','Our QB1 isn’t playing (out, doubtful, questionable or IR)',yn(g['f'],False),f"{AB[g['fade']]}: {qbt}")]
     cl="<div class='tbdc-h'>Rating checklist</div><div class='uc'>"+''.join(f"<div class='uc-r'><span class='uc-l'>{k}</span><div class='uc-t'>{lab}<span class='uc-n'>{num}</span></div>{y}</div>" for k,lab,y,num in rows)+f"</div><div class='uc-res'><span>{g['why']}</span><b class='rb {g['rating']}'>{g['rating']}</b></div>"
     L=g['lad']
-    lbl=['All plays','65%+ money' if g['b'] else 'Under 65% money','vs 6+ fav' if g['d'] else 'Not vs 6+ fav','Line moved' if g['e'] else 'Line steady']
+    lbl=['All plays','63%+ money' if g['b'] else 'Under 63% money','vs 6+ fav' if g['d'] else 'Not vs 6+ fav','Line moved' if g['e'] else 'Line steady']
     if g['rating']=='PASS':
         side=f"{AB[g['fade']]} {fmt(g['fade_line']).replace('-','−')}"
         hd=f"If we had played it <span>{side}{' · fading the all-books money side' if g['disagree'] else ''}</span>"
