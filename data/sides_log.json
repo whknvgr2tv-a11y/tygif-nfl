@@ -3202,11 +3202,11 @@
    "type": 5,
    "money_pct": 49,
    "spread_line": 3.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 8,
@@ -3217,11 +3217,11 @@
    "type": 5,
    "money_pct": 51,
    "spread_line": -3.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 87.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 62.0
   },
   {
    "week": 8,
@@ -3232,11 +3232,11 @@
    "type": 1,
    "money_pct": 13,
    "spread_line": 13.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 95.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 8,
@@ -3247,11 +3247,11 @@
    "type": 1,
    "money_pct": 87,
    "spread_line": -13.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 11.0
   },
   {
    "week": 8,
@@ -3262,11 +3262,11 @@
    "type": 5,
    "money_pct": 48,
    "spread_line": 7.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 98.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 270.0
   },
   {
    "week": 8,
@@ -3277,11 +3277,11 @@
    "type": 5,
    "money_pct": 52,
    "spread_line": -7.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 8,
@@ -3292,11 +3292,11 @@
    "type": 3,
    "money_pct": 45,
    "spread_line": 3.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 8,
@@ -3307,11 +3307,11 @@
    "type": 3,
    "money_pct": 55,
    "spread_line": -3.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 83.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 59.0
   },
   {
    "week": 8,
@@ -3322,11 +3322,11 @@
    "type": 4,
    "money_pct": 32,
    "spread_line": -1.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 8,
@@ -3337,11 +3337,11 @@
    "type": 4,
    "money_pct": 68,
    "spread_line": 1.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 93.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 110.0
   },
   {
    "week": 8,
@@ -3352,11 +3352,11 @@
    "type": 2,
    "money_pct": 31,
    "spread_line": 3.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 8,
@@ -3367,11 +3367,11 @@
    "type": 2,
    "money_pct": 69,
    "spread_line": -3.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 87.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 51.0
   },
   {
    "week": 8,
@@ -3382,11 +3382,11 @@
    "type": 4,
    "money_pct": 48,
    "spread_line": -2.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 98.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 77.0
   },
   {
    "week": 8,
@@ -3397,11 +3397,11 @@
    "type": 4,
    "money_pct": 52,
    "spread_line": 2.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 8,
@@ -3412,11 +3412,11 @@
    "type": 1,
    "money_pct": 24,
    "spread_line": 10.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 8,
@@ -3427,11 +3427,11 @@
    "type": 1,
    "money_pct": 76,
    "spread_line": -10.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 89.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 21.0
   },
   {
    "week": 8,
@@ -3442,11 +3442,11 @@
    "type": 1,
    "money_pct": 19,
    "spread_line": 6.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 8,
@@ -3457,11 +3457,11 @@
    "type": 1,
    "money_pct": 81,
    "spread_line": -6.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 87.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 34.0
   },
   {
    "week": 8,
@@ -3471,12 +3471,12 @@
    "rating": "PASS",
    "type": 4,
    "money_pct": 39,
-   "spread_line": 1.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "spread_line": -1.5,
+   "sp_res": "W",
+   "sp_usd": 100.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 93.0
   },
   {
    "week": 8,
@@ -3486,12 +3486,12 @@
    "rating": "PASS",
    "type": 4,
    "money_pct": 61,
-   "spread_line": -1.5,
-   "sp_res": null,
-   "sp_usd": null,
+   "spread_line": 1.5,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 8,
@@ -3500,13 +3500,13 @@
    "role": "fade",
    "rating": "STRONG",
    "type": 1,
-   "money_pct": 13,
+   "money_pct": 12,
    "spread_line": 7.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 91.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 8,
@@ -3515,43 +3515,43 @@
    "role": "money",
    "rating": "STRONG",
    "type": 1,
-   "money_pct": 87,
+   "money_pct": 88,
    "spread_line": -7.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
-  },
-  {
-   "week": 8,
-   "game": "PHI@WSH",
-   "team": "PHI",
-   "role": "fade",
-   "rating": "LEAN",
-   "type": 3,
-   "money_pct": 39,
-   "spread_line": 6.0,
-   "sp_res": null,
-   "sp_usd": null,
-   "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 29.0
   },
   {
    "week": 8,
    "game": "PHI@WSH",
    "team": "WSH",
-   "role": "money",
-   "rating": "LEAN",
-   "type": 3,
-   "money_pct": 61,
+   "role": "fade",
+   "rating": "PASS",
+   "type": 4,
+   "money_pct": 41,
    "spread_line": -6.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 89.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 36.0
+  },
+  {
+   "week": 8,
+   "game": "PHI@WSH",
+   "team": "PHI",
+   "role": "money",
+   "rating": "PASS",
+   "type": 4,
+   "money_pct": 59,
+   "spread_line": 6.0,
+   "sp_res": "L",
+   "sp_usd": -100.0,
+   "fd": "Dog",
+   "ml_res": "L",
+   "ml_usd": -100.0
   },
   {
    "week": 8,

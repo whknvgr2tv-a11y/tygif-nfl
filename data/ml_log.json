@@ -932,10 +932,13 @@
    "rating": "STRONG",
    "side": "TEN",
    "spread_line": 13.5,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401873031",
    "price": 600,
-   "fd": "Dog"
+   "fd": "Dog",
+   "score": "36-43",
+   "result": "L",
+   "profit": -100.0
   },
   {
    "week": 8,
@@ -943,10 +946,13 @@
    "rating": "LEAN",
    "side": "MIN",
    "spread_line": 3.0,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401873030",
    "price": 142,
-   "fd": "Dog"
+   "fd": "Dog",
+   "score": "15-19",
+   "result": "L",
+   "profit": -100.0
   },
   {
    "week": 8,
@@ -954,10 +960,13 @@
    "rating": "STRONG",
    "side": "CLE",
    "spread_line": 3.5,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401873027",
    "price": 164,
-   "fd": "Dog"
+   "fd": "Dog",
+   "score": "6-27",
+   "result": "L",
+   "profit": -100.0
   },
   {
    "week": 8,
@@ -965,10 +974,13 @@
    "rating": "STRONG",
    "side": "IND",
    "spread_line": 10.0,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401873028",
    "price": 370,
-   "fd": "Dog"
+   "fd": "Dog",
+   "score": "7-42",
+   "result": "L",
+   "profit": -100.0
   },
   {
    "week": 8,
@@ -976,10 +988,13 @@
    "rating": "STRONG",
    "side": "LAC",
    "spread_line": 6.5,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401873032",
    "price": 235,
-   "fd": "Dog"
+   "fd": "Dog",
+   "score": "9-24",
+   "result": "L",
+   "profit": -100.0
   },
   {
    "week": 8,
@@ -987,21 +1002,13 @@
    "rating": "STRONG",
    "side": "MIA",
    "spread_line": 7.0,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401873034",
    "price": 275,
-   "fd": "Dog"
-  },
-  {
-   "week": 8,
-   "game": "PHI@WSH",
-   "rating": "LEAN",
-   "side": "PHI",
-   "spread_line": 6.0,
-   "status": "preview",
-   "espn_event": "401873035",
-   "price": 220,
-   "fd": "Dog"
+   "fd": "Dog",
+   "score": "24-19",
+   "result": "L",
+   "profit": -100.0
   },
   {
    "week": 8,
@@ -1011,7 +1018,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873036",
-   "price": 145,
+   "price": 150,
    "fd": "Dog"
   }
  ]

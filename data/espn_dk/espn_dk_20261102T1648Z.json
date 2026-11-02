@@ -1,0 +1,26 @@
+{
+ "fetched_utc": "2026-11-02T16:49:17+00:00",
+ "source": "build/settle.py (ESPN game summaries, games not yet started)",
+ "games": [
+  {
+   "id": "401873036",
+   "away": "CHI",
+   "home": "SEA",
+   "kickoff_utc": "2026-11-03T01:15Z",
+   "ml": {
+    "away": "+150",
+    "home": "-180"
+   },
+   "spread": {
+    "away": {
+     "line": "+3",
+     "odds": "+100"
+    },
+    "home": {
+     "line": "-3",
+     "odds": "-120"
+    }
+   }
+  }
+ ]
+}
