@@ -1,0 +1,2534 @@
+{
+ "stamp": "20261101T2001Z",
+ "source": "actionnetwork per-book prices",
+ "games": [
+  {
+   "away": "CAR",
+   "home": "GB",
+   "an_id": 290943,
+   "start_time": "2026-10-30T00:15:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -110,
+      -110
+     ],
+     "hold_pct": 4.55,
+     "breakeven_pct": [
+      52.38,
+      52.38
+     ],
+     "ml_odds": [
+      154,
+      -185
+     ],
+     "ml_hold_pct": 4.11,
+     "ml_breakeven_pct": [
+      39.37,
+      64.91
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -110,
+      -110
+     ],
+     "hold_pct": 4.55,
+     "breakeven_pct": [
+      52.38,
+      52.38
+     ],
+     "ml_odds": [
+      164,
+      -196
+     ],
+     "ml_hold_pct": 3.93,
+     "ml_breakeven_pct": [
+      37.88,
+      66.22
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -108,
+      -112
+     ],
+     "hold_pct": 4.54,
+     "breakeven_pct": [
+      51.92,
+      52.83
+     ],
+     "ml_odds": [
+      160,
+      -195
+     ],
+     "ml_hold_pct": 4.36,
+     "ml_breakeven_pct": [
+      38.46,
+      66.1
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -105,
+      -105
+     ],
+     "hold_pct": 2.38,
+     "breakeven_pct": [
+      51.22,
+      51.22
+     ],
+     "ml_odds": [
+      160,
+      -200
+     ],
+     "ml_hold_pct": 4.88,
+     "ml_breakeven_pct": [
+      38.46,
+      66.67
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -109,
+      -111
+     ],
+     "hold_pct": 4.54,
+     "breakeven_pct": [
+      52.15,
+      52.61
+     ],
+     "ml_odds": [
+      164,
+      -198
+     ],
+     "ml_hold_pct": 4.14,
+     "ml_breakeven_pct": [
+      37.88,
+      66.44
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -110,
+      -110
+     ],
+     "hold_pct": 4.55,
+     "breakeven_pct": [
+      52.38,
+      52.38
+     ],
+     "ml_odds": [
+      160,
+      -195
+     ],
+     "ml_hold_pct": 4.36,
+     "ml_breakeven_pct": [
+      38.46,
+      66.1
+     ]
+    }
+   }
+  },
+  {
+   "away": "LV",
+   "home": "NYJ",
+   "an_id": 290944,
+   "start_time": "2026-11-01T18:00:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      1.5,
+      -5.5
+     ],
+     "spread_odds": [
+      -108,
+      103
+     ],
+     "hold_pct": 1.17,
+     "breakeven_pct": [
+      51.92,
+      49.26
+     ],
+     "ml_odds": [
+      110,
+      -315
+     ],
+     "ml_hold_pct": 19.04,
+     "ml_breakeven_pct": [
+      47.62,
+      75.9
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      5.5,
+      -1.5
+     ],
+     "spread_odds": [
+      -118,
+      -115
+     ],
+     "hold_pct": 7.08,
+     "breakeven_pct": [
+      54.13,
+      53.49
+     ],
+     "ml_odds": [
+      265,
+      -130
+     ],
+     "ml_hold_pct": -19.16,
+     "ml_breakeven_pct": [
+      27.4,
+      56.52
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      2,
+      -4.5
+     ],
+     "spread_odds": [
+      -113,
+      -112
+     ],
+     "hold_pct": 5.56,
+     "breakeven_pct": [
+      53.05,
+      52.83
+     ],
+     "ml_odds": [
+      104,
+      -245
+     ],
+     "ml_hold_pct": 16.69,
+     "ml_breakeven_pct": [
+      49.02,
+      71.01
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      5.5,
+      -5.5
+     ],
+     "spread_odds": [
+      -108,
+      -110
+     ],
+     "hold_pct": 4.13,
+     "breakeven_pct": [
+      51.92,
+      52.38
+     ],
+     "ml_odds": [
+      260,
+      -325
+     ],
+     "ml_hold_pct": 4.08,
+     "ml_breakeven_pct": [
+      27.78,
+      76.47
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      1.5,
+      -1.5
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      111,
+      -131
+     ],
+     "ml_hold_pct": 3.94,
+     "ml_breakeven_pct": [
+      47.39,
+      56.71
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      5.5,
+      -5.5
+     ],
+     "spread_odds": [
+      106,
+      -137
+     ],
+     "hold_pct": 5.97,
+     "breakeven_pct": [
+      48.54,
+      57.81
+     ],
+     "ml_odds": [
+      390,
+      -625
+     ],
+     "ml_hold_pct": 6.2,
+     "ml_breakeven_pct": [
+      20.41,
+      86.21
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      2.5,
+      -2.5
+     ],
+     "spread_odds": [
+      -115,
+      -105
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      53.49,
+      51.22
+     ],
+     "ml_odds": [
+      110,
+      -130
+     ],
+     "ml_hold_pct": 3.98,
+     "ml_breakeven_pct": [
+      47.62,
+      56.52
+     ]
+    }
+   }
+  },
+  {
+   "away": "ARI",
+   "home": "DAL",
+   "an_id": 290945,
+   "start_time": "2026-11-01T18:00:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      7,
+      -14.5
+     ],
+     "spread_odds": [
+      -102,
+      104
+     ],
+     "hold_pct": -0.49,
+     "breakeven_pct": [
+      50.5,
+      49.02
+     ],
+     "ml_odds": [
+      270,
+      -340
+     ],
+     "ml_hold_pct": 4.12,
+     "ml_breakeven_pct": [
+      27.03,
+      77.27
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      7.5,
+      -7.5
+     ],
+     "spread_odds": [
+      -115,
+      -105
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      53.49,
+      51.22
+     ],
+     "ml_odds": [
+      1200,
+      -375
+     ],
+     "ml_hold_pct": -15.42,
+     "ml_breakeven_pct": [
+      7.69,
+      78.95
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      7,
+      -7
+     ],
+     "spread_odds": [
+      -107,
+      -115
+     ],
+     "hold_pct": 4.92,
+     "breakeven_pct": [
+      51.69,
+      53.49
+     ],
+     "ml_odds": [
+      310,
+      -420
+     ],
+     "ml_hold_pct": 4.91,
+     "ml_breakeven_pct": [
+      24.39,
+      80.77
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      14.5,
+      -14.5
+     ],
+     "spread_odds": [
+      -120,
+      100
+     ],
+     "hold_pct": 4.35,
+     "breakeven_pct": [
+      54.55,
+      50.0
+     ],
+     "ml_odds": [
+      1300,
+      -375
+     ],
+     "ml_hold_pct": -16.16,
+     "ml_breakeven_pct": [
+      7.14,
+      78.95
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      7.5,
+      -7.5
+     ],
+     "spread_odds": [
+      -111,
+      -109
+     ],
+     "hold_pct": 4.54,
+     "breakeven_pct": [
+      52.61,
+      52.15
+     ],
+     "ml_odds": [
+      290,
+      -370
+     ],
+     "ml_hold_pct": 4.18,
+     "ml_breakeven_pct": [
+      25.64,
+      78.72
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      14.5,
+      -14.5
+     ],
+     "spread_odds": [
+      -136,
+      105
+     ],
+     "hold_pct": 6.02,
+     "breakeven_pct": [
+      57.63,
+      48.78
+     ],
+     "ml_odds": [
+      1100,
+      -5000
+     ],
+     "ml_hold_pct": 5.99,
+     "ml_breakeven_pct": [
+      8.33,
+      98.04
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      7.5,
+      -7.5
+     ],
+     "spread_odds": [
+      -110,
+      -110
+     ],
+     "hold_pct": 4.55,
+     "breakeven_pct": [
+      52.38,
+      52.38
+     ],
+     "ml_odds": [
+      275,
+      -350
+     ],
+     "ml_hold_pct": 4.26,
+     "ml_breakeven_pct": [
+      26.67,
+      77.78
+     ]
+    }
+   }
+  },
+  {
+   "away": "ATL",
+   "home": "TB",
+   "an_id": 290946,
+   "start_time": "2026-11-01T18:00:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      2.5,
+      -2.5
+     ],
+     "spread_odds": [
+      -115,
+      -105
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      53.49,
+      51.22
+     ],
+     "ml_odds": [
+      509,
+      -860
+     ],
+     "ml_hold_pct": 5.66,
+     "ml_breakeven_pct": [
+      16.42,
+      89.58
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      1.5,
+      -8.5
+     ],
+     "spread_odds": [
+      -105,
+      -106
+     ],
+     "hold_pct": 2.61,
+     "breakeven_pct": [
+      51.22,
+      51.46
+     ],
+     "ml_odds": [
+      110,
+      -130
+     ],
+     "ml_hold_pct": 3.98,
+     "ml_breakeven_pct": [
+      47.62,
+      56.52
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      10.5,
+      -2
+     ],
+     "spread_odds": [
+      -115,
+      -110
+     ],
+     "hold_pct": 5.54,
+     "breakeven_pct": [
+      53.49,
+      52.38
+     ],
+     "ml_odds": [
+      800,
+      -2000
+     ],
+     "ml_hold_pct": 5.97,
+     "ml_breakeven_pct": [
+      11.11,
+      95.24
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      8.5,
+      -8.5
+     ],
+     "spread_odds": [
+      -112,
+      -105
+     ],
+     "hold_pct": 3.89,
+     "breakeven_pct": [
+      52.83,
+      51.22
+     ],
+     "ml_odds": [
+      110,
+      -800
+     ],
+     "ml_hold_pct": 26.74,
+     "ml_breakeven_pct": [
+      47.62,
+      88.89
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      2.5,
+      -2.5
+     ],
+     "spread_odds": [
+      -115,
+      -105
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      53.49,
+      51.22
+     ],
+     "ml_odds": [
+      113,
+      -133
+     ],
+     "ml_hold_pct": 3.87,
+     "ml_breakeven_pct": [
+      46.95,
+      57.08
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      8.5,
+      -8.5
+     ],
+     "spread_odds": [
+      -118,
+      -109
+     ],
+     "hold_pct": 5.91,
+     "breakeven_pct": [
+      54.13,
+      52.15
+     ],
+     "ml_odds": [
+      475,
+      -850
+     ],
+     "ml_hold_pct": 6.42,
+     "ml_breakeven_pct": [
+      17.39,
+      89.47
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      2,
+      -2
+     ],
+     "spread_odds": [
+      -110,
+      -110
+     ],
+     "hold_pct": 4.55,
+     "breakeven_pct": [
+      52.38,
+      52.38
+     ],
+     "ml_odds": [
+      110,
+      -130
+     ],
+     "ml_hold_pct": 3.98,
+     "ml_breakeven_pct": [
+      47.62,
+      56.52
+     ]
+    }
+   }
+  },
+  {
+   "away": "CLE",
+   "home": "PIT",
+   "an_id": 290947,
+   "start_time": "2026-11-01T18:00:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      164,
+      -8000
+     ],
+     "ml_hold_pct": 26.82,
+     "ml_breakeven_pct": [
+      37.88,
+      98.77
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      1400,
+      -6000
+     ],
+     "ml_hold_pct": 4.79,
+     "ml_breakeven_pct": [
+      6.67,
+      98.36
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      17.5,
+      -17.5
+     ],
+     "spread_odds": [
+      -117,
+      -110
+     ],
+     "hold_pct": 5.92,
+     "breakeven_pct": [
+      53.92,
+      52.38
+     ],
+     "ml_odds": [
+      1300,
+      -10000
+     ],
+     "ml_hold_pct": 5.8,
+     "ml_breakeven_pct": [
+      7.14,
+      99.01
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      4,
+      -4
+     ],
+     "spread_odds": [
+      -112,
+      -105
+     ],
+     "hold_pct": 3.89,
+     "breakeven_pct": [
+      52.83,
+      51.22
+     ],
+     "ml_odds": [
+      175,
+      -10000
+     ],
+     "ml_hold_pct": 26.13,
+     "ml_breakeven_pct": [
+      36.36,
+      99.01
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -106,
+      -114
+     ],
+     "hold_pct": 4.51,
+     "breakeven_pct": [
+      51.46,
+      53.27
+     ],
+     "ml_odds": [
+      175,
+      -210
+     ],
+     "ml_hold_pct": 3.94,
+     "ml_breakeven_pct": [
+      36.36,
+      67.74
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      14.5,
+      -14.5
+     ],
+     "spread_odds": [
+      -110,
+      -118
+     ],
+     "hold_pct": 6.11,
+     "breakeven_pct": [
+      52.38,
+      54.13
+     ],
+     "ml_odds": [
+      1100,
+      -5000
+     ],
+     "ml_hold_pct": 5.99,
+     "ml_breakeven_pct": [
+      8.33,
+      98.04
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -110,
+      -110
+     ],
+     "hold_pct": 4.55,
+     "breakeven_pct": [
+      52.38,
+      52.38
+     ],
+     "ml_odds": [
+      175,
+      -215
+     ],
+     "ml_hold_pct": 4.41,
+     "ml_breakeven_pct": [
+      36.36,
+      68.25
+     ]
+    }
+   }
+  },
+  {
+   "away": "IND",
+   "home": "JAC",
+   "an_id": 290948,
+   "start_time": "2026-11-01T18:00:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      35.5,
+      -35.5
+     ],
+     "spread_odds": [
+      -109,
+      -121
+     ],
+     "hold_pct": 6.46,
+     "breakeven_pct": [
+      52.15,
+      54.75
+     ],
+     "ml_odds": [
+      380,
+      -10000
+     ],
+     "ml_hold_pct": 16.56,
+     "ml_breakeven_pct": [
+      20.83,
+      99.01
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      10.5,
+      -33.5
+     ],
+     "spread_odds": [
+      -122,
+      -130
+     ],
+     "hold_pct": 10.3,
+     "breakeven_pct": [
+      54.95,
+      56.52
+     ],
+     "ml_odds": [
+      400,
+      -520
+     ],
+     "ml_hold_pct": 3.73,
+     "ml_breakeven_pct": [
+      20.0,
+      83.87
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      10,
+      -10
+     ],
+     "spread_odds": [
+      -107,
+      -113
+     ],
+     "hold_pct": 4.53,
+     "breakeven_pct": [
+      51.69,
+      53.05
+     ],
+     "ml_odds": [
+      375,
+      -500
+     ],
+     "ml_hold_pct": 4.2,
+     "ml_breakeven_pct": [
+      21.05,
+      83.33
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      34.5,
+      -10
+     ],
+     "spread_odds": [
+      -102,
+      -108
+     ],
+     "hold_pct": 2.36,
+     "breakeven_pct": [
+      50.5,
+      51.92
+     ],
+     "ml_odds": [
+      380,
+      -500
+     ],
+     "ml_hold_pct": 4.0,
+     "ml_breakeven_pct": [
+      20.83,
+      83.33
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      10.5,
+      -10.5
+     ],
+     "spread_odds": [
+      -121,
+      101
+     ],
+     "hold_pct": 4.31,
+     "breakeven_pct": [
+      54.75,
+      49.75
+     ],
+     "ml_odds": [
+      390,
+      -525
+     ],
+     "ml_hold_pct": 4.22,
+     "ml_breakeven_pct": [
+      20.41,
+      84.0
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      33.5,
+      -33.5
+     ],
+     "spread_odds": [
+      -115,
+      -112
+     ],
+     "hold_pct": 5.94,
+     "breakeven_pct": [
+      53.49,
+      52.83
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      10,
+      -10
+     ],
+     "spread_odds": [
+      -110,
+      -110
+     ],
+     "hold_pct": 4.55,
+     "breakeven_pct": [
+      52.38,
+      52.38
+     ],
+     "ml_odds": [
+      420,
+      -575
+     ],
+     "ml_hold_pct": 4.23,
+     "ml_breakeven_pct": [
+      19.23,
+      85.19
+     ]
+    }
+   }
+  },
+  {
+   "away": "BAL",
+   "home": "BUF",
+   "an_id": 290949,
+   "start_time": "2026-11-01T18:00:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      3,
+      -14.5
+     ],
+     "spread_odds": [
+      -105,
+      -111
+     ],
+     "hold_pct": 3.69,
+     "breakeven_pct": [
+      51.22,
+      52.61
+     ],
+     "ml_odds": [
+      890,
+      -2100
+     ],
+     "ml_hold_pct": 5.26,
+     "ml_breakeven_pct": [
+      10.1,
+      95.45
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      3,
+      -12.5
+     ],
+     "spread_odds": [
+      -104,
+      -128
+     ],
+     "hold_pct": 6.65,
+     "breakeven_pct": [
+      50.98,
+      56.14
+     ],
+     "ml_odds": [
+      900,
+      -178
+     ],
+     "ml_hold_pct": -35.08,
+     "ml_breakeven_pct": [
+      10.0,
+      64.03
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      3,
+      -12
+     ],
+     "spread_odds": [
+      -105,
+      -110
+     ],
+     "hold_pct": 3.48,
+     "breakeven_pct": [
+      51.22,
+      52.38
+     ],
+     "ml_odds": [
+      850,
+      -2000
+     ],
+     "ml_hold_pct": 5.45,
+     "ml_breakeven_pct": [
+      10.53,
+      95.24
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      12.5,
+      -3
+     ],
+     "spread_odds": [
+      -105,
+      -112
+     ],
+     "hold_pct": 3.89,
+     "breakeven_pct": [
+      51.22,
+      52.83
+     ],
+     "ml_odds": [
+      140,
+      -175
+     ],
+     "ml_hold_pct": 5.04,
+     "ml_breakeven_pct": [
+      41.67,
+      63.64
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -125,
+      105
+     ],
+     "hold_pct": 4.16,
+     "breakeven_pct": [
+      55.56,
+      48.78
+     ],
+     "ml_odds": [
+      147,
+      -174
+     ],
+     "ml_hold_pct": 3.84,
+     "ml_breakeven_pct": [
+      40.49,
+      63.5
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      13.5,
+      -13.5
+     ],
+     "spread_odds": [
+      -127,
+      -103
+     ],
+     "hold_pct": 6.27,
+     "breakeven_pct": [
+      55.95,
+      50.74
+     ],
+     "ml_odds": [
+      700,
+      -1700
+     ],
+     "ml_hold_pct": 6.49,
+     "ml_breakeven_pct": [
+      12.5,
+      94.44
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      3,
+      -3
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      140,
+      -165
+     ],
+     "ml_hold_pct": 3.78,
+     "ml_breakeven_pct": [
+      41.67,
+      62.26
+     ]
+    }
+   }
+  },
+  {
+   "away": "MIN",
+   "home": "DET",
+   "an_id": 290950,
+   "start_time": "2026-11-01T18:00:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -118,
+      -102
+     ],
+     "hold_pct": 4.42,
+     "breakeven_pct": [
+      54.13,
+      50.5
+     ],
+     "ml_odds": [
+      145,
+      -175
+     ],
+     "ml_hold_pct": 4.26,
+     "ml_breakeven_pct": [
+      40.82,
+      63.64
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      1.5
+     ],
+     "spread_odds": [
+      -120,
+      -118
+     ],
+     "hold_pct": 7.98,
+     "breakeven_pct": [
+      54.55,
+      54.13
+     ],
+     "ml_odds": [
+      150,
+      -178
+     ],
+     "ml_hold_pct": 3.87,
+     "ml_breakeven_pct": [
+      40.0,
+      64.03
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      3,
+      -1.5
+     ],
+     "spread_odds": [
+      -104,
+      -113
+     ],
+     "hold_pct": 3.88,
+     "breakeven_pct": [
+      50.98,
+      53.05
+     ],
+     "ml_odds": [
+      140,
+      -125
+     ],
+     "ml_hold_pct": -2.86,
+     "ml_breakeven_pct": [
+      41.67,
+      55.56
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      1.5,
+      -1.5
+     ],
+     "spread_odds": [
+      -140,
+      105
+     ],
+     "hold_pct": 6.64,
+     "breakeven_pct": [
+      58.33,
+      48.78
+     ],
+     "ml_odds": [
+      155,
+      -190
+     ],
+     "ml_hold_pct": 4.52,
+     "ml_breakeven_pct": [
+      39.22,
+      65.52
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -119,
+      -101
+     ],
+     "hold_pct": 4.39,
+     "breakeven_pct": [
+      54.34,
+      50.25
+     ],
+     "ml_odds": [
+      151,
+      -181
+     ],
+     "ml_hold_pct": 4.08,
+     "ml_breakeven_pct": [
+      39.84,
+      64.41
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      2.5,
+      -2.5
+     ],
+     "spread_odds": [
+      -132,
+      102
+     ],
+     "hold_pct": 6.02,
+     "breakeven_pct": [
+      56.9,
+      49.5
+     ],
+     "ml_odds": [
+      121,
+      -157
+     ],
+     "ml_hold_pct": 5.96,
+     "ml_breakeven_pct": [
+      45.25,
+      61.09
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -120,
+      100
+     ],
+     "hold_pct": 4.35,
+     "breakeven_pct": [
+      54.55,
+      50.0
+     ],
+     "ml_odds": [
+      150,
+      -180
+     ],
+     "ml_hold_pct": 4.11,
+     "ml_breakeven_pct": [
+      40.0,
+      64.29
+     ]
+    }
+   }
+  },
+  {
+   "away": "TEN",
+   "home": "CIN",
+   "an_id": 290951,
+   "start_time": "2026-11-01T18:00:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      13.5,
+      -13.5
+     ],
+     "spread_odds": [
+      -105,
+      -110
+     ],
+     "hold_pct": 3.48,
+     "breakeven_pct": [
+      51.22,
+      52.38
+     ],
+     "ml_odds": [
+      600,
+      -2600
+     ],
+     "ml_hold_pct": 9.57,
+     "ml_breakeven_pct": [
+      14.29,
+      96.3
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      13.5,
+      -12.5
+     ],
+     "spread_odds": [
+      -102,
+      -104
+     ],
+     "hold_pct": 1.45,
+     "breakeven_pct": [
+      50.5,
+      50.98
+     ],
+     "ml_odds": [
+      700,
+      -2200
+     ],
+     "ml_hold_pct": 7.54,
+     "ml_breakeven_pct": [
+      12.5,
+      95.65
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      13.5,
+      -11
+     ],
+     "spread_odds": [
+      -108,
+      -118
+     ],
+     "hold_pct": 5.71,
+     "breakeven_pct": [
+      51.92,
+      54.13
+     ],
+     "ml_odds": [
+      575,
+      -835
+     ],
+     "ml_hold_pct": 3.96,
+     "ml_breakeven_pct": [
+      14.81,
+      89.3
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      12.5,
+      -13.5
+     ],
+     "spread_odds": [
+      -115,
+      -108
+     ],
+     "hold_pct": 5.13,
+     "breakeven_pct": [
+      53.49,
+      51.92
+     ],
+     "ml_odds": [
+      900,
+      -2000
+     ],
+     "ml_hold_pct": 4.98,
+     "ml_breakeven_pct": [
+      10.0,
+      95.24
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      13.5,
+      -13.5
+     ],
+     "spread_odds": [
+      -103,
+      -117
+     ],
+     "hold_pct": 4.45,
+     "breakeven_pct": [
+      50.74,
+      53.92
+     ],
+     "ml_odds": [
+      700,
+      -1100
+     ],
+     "ml_hold_pct": 4.0,
+     "ml_breakeven_pct": [
+      12.5,
+      91.67
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      12.5,
+      -12.5
+     ],
+     "spread_odds": [
+      -112,
+      -117
+     ],
+     "hold_pct": 6.32,
+     "breakeven_pct": [
+      52.83,
+      53.92
+     ],
+     "ml_odds": [
+      1000,
+      -2500
+     ],
+     "ml_hold_pct": 4.98,
+     "ml_breakeven_pct": [
+      9.09,
+      96.15
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      13.5,
+      -13.5
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      650,
+      -1000
+     ],
+     "ml_hold_pct": 4.07,
+     "ml_breakeven_pct": [
+      13.33,
+      90.91
+     ]
+    }
+   }
+  },
+  {
+   "away": "LAC",
+   "home": "LA",
+   "an_id": 290952,
+   "start_time": "2026-11-01T21:05:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      6.5,
+      -6.5
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      235,
+      -290
+     ],
+     "ml_hold_pct": 4.04,
+     "ml_breakeven_pct": [
+      29.85,
+      74.36
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      6.5,
+      -6.5
+     ],
+     "spread_odds": [
+      -108,
+      -112
+     ],
+     "hold_pct": 4.54,
+     "breakeven_pct": [
+      51.92,
+      52.83
+     ],
+     "ml_odds": [
+      235,
+      -290
+     ],
+     "ml_hold_pct": 4.04,
+     "ml_breakeven_pct": [
+      29.85,
+      74.36
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      7,
+      -7
+     ],
+     "spread_odds": [
+      -114,
+      -107
+     ],
+     "hold_pct": 4.73,
+     "breakeven_pct": [
+      53.27,
+      51.69
+     ],
+     "ml_odds": [
+      235,
+      -305
+     ],
+     "ml_hold_pct": 4.91,
+     "ml_breakeven_pct": [
+      29.85,
+      75.31
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      6.5,
+      -6.5
+     ],
+     "spread_odds": [
+      -102,
+      -108
+     ],
+     "hold_pct": 2.36,
+     "breakeven_pct": [
+      50.5,
+      51.92
+     ],
+     "ml_odds": [
+      240,
+      -300
+     ],
+     "ml_hold_pct": 4.23,
+     "ml_breakeven_pct": [
+      29.41,
+      75.0
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      6.5,
+      -6.5
+     ],
+     "spread_odds": [
+      -107,
+      -113
+     ],
+     "hold_pct": 4.53,
+     "breakeven_pct": [
+      51.69,
+      53.05
+     ],
+     "ml_odds": [
+      250,
+      -310
+     ],
+     "ml_hold_pct": 4.01,
+     "ml_breakeven_pct": [
+      28.57,
+      75.61
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      6.5,
+      -6.5
+     ],
+     "spread_odds": [
+      -110,
+      -109
+     ],
+     "hold_pct": 4.34,
+     "breakeven_pct": [
+      52.38,
+      52.15
+     ],
+     "ml_odds": [
+      235,
+      -295
+     ],
+     "ml_hold_pct": 4.34,
+     "ml_breakeven_pct": [
+      29.85,
+      74.68
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      6.5,
+      -6.5
+     ],
+     "spread_odds": [
+      -110,
+      -110
+     ],
+     "hold_pct": 4.55,
+     "breakeven_pct": [
+      52.38,
+      52.38
+     ],
+     "ml_odds": [
+      240,
+      -300
+     ],
+     "ml_hold_pct": 4.23,
+     "ml_breakeven_pct": [
+      29.41,
+      75.0
+     ]
+    }
+   }
+  },
+  {
+   "away": "NE",
+   "home": "MIA",
+   "an_id": 290953,
+   "start_time": "2026-11-01T21:25:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      -7,
+      7
+     ],
+     "spread_odds": [
+      -110,
+      -110
+     ],
+     "hold_pct": 4.55,
+     "breakeven_pct": [
+      52.38,
+      52.38
+     ],
+     "ml_odds": [
+      -345,
+      275
+     ],
+     "ml_hold_pct": 4.03,
+     "ml_breakeven_pct": [
+      77.53,
+      26.67
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      -7.5,
+      7.5
+     ],
+     "spread_odds": [
+      104,
+      -128
+     ],
+     "hold_pct": 4.91,
+     "breakeven_pct": [
+      49.02,
+      56.14
+     ],
+     "ml_odds": [
+      -370,
+      295
+     ],
+     "ml_hold_pct": 3.88,
+     "ml_breakeven_pct": [
+      78.72,
+      25.32
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      -7,
+      7
+     ],
+     "spread_odds": [
+      -110,
+      -112
+     ],
+     "hold_pct": 4.95,
+     "breakeven_pct": [
+      52.38,
+      52.83
+     ],
+     "ml_odds": [
+      -375,
+      275
+     ],
+     "ml_hold_pct": 5.32,
+     "ml_breakeven_pct": [
+      78.95,
+      26.67
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      -7,
+      7
+     ],
+     "spread_odds": [
+      -102,
+      -108
+     ],
+     "hold_pct": 2.36,
+     "breakeven_pct": [
+      50.5,
+      51.92
+     ],
+     "ml_odds": [
+      -350,
+      290
+     ],
+     "ml_hold_pct": 3.31,
+     "ml_breakeven_pct": [
+      77.78,
+      25.64
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      -6.5,
+      6.5
+     ],
+     "spread_odds": [
+      -118,
+      -102
+     ],
+     "hold_pct": 4.42,
+     "breakeven_pct": [
+      54.13,
+      50.5
+     ],
+     "ml_odds": [
+      -370,
+      290
+     ],
+     "ml_hold_pct": 4.18,
+     "ml_breakeven_pct": [
+      78.72,
+      25.64
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      -7,
+      7
+     ],
+     "spread_odds": [
+      -108,
+      -112
+     ],
+     "hold_pct": 4.54,
+     "breakeven_pct": [
+      51.92,
+      52.83
+     ],
+     "ml_odds": [
+      -345,
+      280
+     ],
+     "ml_hold_pct": 3.7,
+     "ml_breakeven_pct": [
+      77.53,
+      26.32
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      -7,
+      7
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      -350,
+      275
+     ],
+     "ml_hold_pct": 4.26,
+     "ml_breakeven_pct": [
+      77.78,
+      26.67
+     ]
+    }
+   }
+  },
+  {
+   "away": "KC",
+   "home": "DEN",
+   "an_id": 290954,
+   "start_time": "2026-11-01T21:25:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      -1.5,
+      1.5
+     ],
+     "spread_odds": [
+      100,
+      -120
+     ],
+     "hold_pct": 4.35,
+     "breakeven_pct": [
+      50.0,
+      54.55
+     ],
+     "ml_odds": [
+      -112,
+      -108
+     ],
+     "ml_hold_pct": 4.54,
+     "ml_breakeven_pct": [
+      52.83,
+      51.92
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      -1.5,
+      1.5
+     ],
+     "spread_odds": [
+      -102,
+      -120
+     ],
+     "hold_pct": 4.8,
+     "breakeven_pct": [
+      50.5,
+      54.55
+     ],
+     "ml_odds": [
+      -112,
+      -104
+     ],
+     "ml_hold_pct": 3.67,
+     "ml_breakeven_pct": [
+      52.83,
+      50.98
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      -1,
+      1
+     ],
+     "spread_odds": [
+      -112,
+      -108
+     ],
+     "hold_pct": 4.54,
+     "breakeven_pct": [
+      52.83,
+      51.92
+     ],
+     "ml_odds": [
+      -118,
+      -103
+     ],
+     "ml_hold_pct": 4.64,
+     "ml_breakeven_pct": [
+      54.13,
+      50.74
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      -1,
+      1
+     ],
+     "spread_odds": [
+      -105,
+      -112
+     ],
+     "hold_pct": 3.89,
+     "breakeven_pct": [
+      51.22,
+      52.83
+     ],
+     "ml_odds": [
+      -112,
+      -105
+     ],
+     "ml_hold_pct": 3.89,
+     "ml_breakeven_pct": [
+      52.83,
+      51.22
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      -1.5,
+      1.5
+     ],
+     "spread_odds": [
+      100,
+      -120
+     ],
+     "hold_pct": 4.35,
+     "breakeven_pct": [
+      50.0,
+      54.55
+     ],
+     "ml_odds": [
+      -113,
+      -107
+     ],
+     "ml_hold_pct": 4.53,
+     "ml_breakeven_pct": [
+      53.05,
+      51.69
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      -1.5,
+      1.5
+     ],
+     "spread_odds": [
+      -104,
+      -115
+     ],
+     "hold_pct": 4.28,
+     "breakeven_pct": [
+      50.98,
+      53.49
+     ],
+     "ml_odds": [
+      -115,
+      -103
+     ],
+     "ml_hold_pct": 4.06,
+     "ml_breakeven_pct": [
+      53.49,
+      50.74
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      -1,
+      1
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      -110,
+      -110
+     ],
+     "ml_hold_pct": 4.55,
+     "ml_breakeven_pct": [
+      52.38,
+      52.38
+     ]
+    }
+   }
+  },
+  {
+   "away": "PHI",
+   "home": "WAS",
+   "an_id": 290955,
+   "start_time": "2026-11-02T01:20:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      6,
+      -6
+     ],
+     "spread_odds": [
+      -108,
+      -112
+     ],
+     "hold_pct": 4.54,
+     "breakeven_pct": [
+      51.92,
+      52.83
+     ],
+     "ml_odds": [
+      220,
+      -270
+     ],
+     "ml_hold_pct": 4.05,
+     "ml_breakeven_pct": [
+      31.25,
+      72.97
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      5.5,
+      -5.5
+     ],
+     "spread_odds": [
+      -100,
+      -122
+     ],
+     "hold_pct": 4.72,
+     "breakeven_pct": [
+      50.0,
+      54.95
+     ],
+     "ml_odds": [
+      220,
+      -270
+     ],
+     "ml_hold_pct": 4.05,
+     "ml_breakeven_pct": [
+      31.25,
+      72.97
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      6,
+      -6
+     ],
+     "spread_odds": [
+      -112,
+      -109
+     ],
+     "hold_pct": 4.75,
+     "breakeven_pct": [
+      52.83,
+      52.15
+     ],
+     "ml_odds": [
+      200,
+      -250
+     ],
+     "ml_hold_pct": 4.55,
+     "ml_breakeven_pct": [
+      33.33,
+      71.43
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      6,
+      -6
+     ],
+     "spread_odds": [
+      -110,
+      -108
+     ],
+     "hold_pct": 4.13,
+     "breakeven_pct": [
+      52.38,
+      51.92
+     ],
+     "ml_odds": [
+      210,
+      -275
+     ],
+     "ml_hold_pct": 5.3,
+     "ml_breakeven_pct": [
+      32.26,
+      73.33
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      5.5,
+      -5.5
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      220,
+      -270
+     ],
+     "ml_hold_pct": 4.05,
+     "ml_breakeven_pct": [
+      31.25,
+      72.97
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      6,
+      -6
+     ],
+     "spread_odds": [
+      -109,
+      -110
+     ],
+     "hold_pct": 4.34,
+     "breakeven_pct": [
+      52.15,
+      52.38
+     ],
+     "ml_odds": [
+      210,
+      -265
+     ],
+     "ml_hold_pct": 4.64,
+     "ml_breakeven_pct": [
+      32.26,
+      72.6
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      5.5,
+      -5.5
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      210,
+      -260
+     ],
+     "ml_hold_pct": 4.29,
+     "ml_breakeven_pct": [
+      32.26,
+      72.22
+     ]
+    }
+   }
+  },
+  {
+   "away": "CHI",
+   "home": "SEA",
+   "an_id": 290956,
+   "start_time": "2026-11-03T01:15:00.000Z",
+   "books": {
+    "draftkings": {
+     "prices_only": true,
+     "spread_line": [
+      3,
+      -3
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      140,
+      -166
+     ],
+     "ml_hold_pct": 3.91,
+     "ml_breakeven_pct": [
+      41.67,
+      62.41
+     ]
+    },
+    "fanduel": {
+     "prices_only": true,
+     "spread_line": [
+      3,
+      -3
+     ],
+     "spread_odds": [
+      -102,
+      -120
+     ],
+     "hold_pct": 4.8,
+     "breakeven_pct": [
+      50.5,
+      54.55
+     ],
+     "ml_odds": [
+      146,
+      -174
+     ],
+     "ml_hold_pct": 3.99,
+     "ml_breakeven_pct": [
+      40.65,
+      63.5
+     ]
+    },
+    "betrivers": {
+     "prices_only": true,
+     "spread_line": [
+      3,
+      -3
+     ],
+     "spread_odds": [
+      -110,
+      -110
+     ],
+     "hold_pct": 4.55,
+     "breakeven_pct": [
+      52.38,
+      52.38
+     ],
+     "ml_odds": [
+      143,
+      -175
+     ],
+     "ml_hold_pct": 4.57,
+     "ml_breakeven_pct": [
+      41.15,
+      63.64
+     ]
+    },
+    "betmgm": {
+     "prices_only": true,
+     "spread_line": [
+      3,
+      -3
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      150,
+      -175
+     ],
+     "ml_hold_pct": 3.51,
+     "ml_breakeven_pct": [
+      40.0,
+      63.64
+     ]
+    },
+    "bet365": {
+     "prices_only": true,
+     "spread_line": [
+      3.5,
+      -3.5
+     ],
+     "spread_odds": [
+      -122,
+      102
+     ],
+     "hold_pct": 4.27,
+     "breakeven_pct": [
+      54.95,
+      49.5
+     ],
+     "ml_odds": [
+      147,
+      -174
+     ],
+     "ml_hold_pct": 3.84,
+     "ml_breakeven_pct": [
+      40.49,
+      63.5
+     ]
+    },
+    "caesars": {
+     "prices_only": true,
+     "spread_line": [
+      3,
+      -3
+     ],
+     "spread_odds": [
+      -104,
+      -117
+     ],
+     "hold_pct": 4.67,
+     "breakeven_pct": [
+      50.98,
+      53.92
+     ],
+     "ml_odds": [
+      144,
+      -170
+     ],
+     "ml_hold_pct": 3.8,
+     "ml_breakeven_pct": [
+      40.98,
+      62.96
+     ]
+    },
+    "fanatics": {
+     "prices_only": true,
+     "spread_line": [
+      3,
+      -3
+     ],
+     "spread_odds": [
+      -105,
+      -115
+     ],
+     "hold_pct": 4.5,
+     "breakeven_pct": [
+      51.22,
+      53.49
+     ],
+     "ml_odds": [
+      145,
+      -175
+     ],
+     "ml_hold_pct": 4.26,
+     "ml_breakeven_pct": [
+      40.82,
+      63.64
+     ]
+    }
+   }
+  }
+ ]
+}

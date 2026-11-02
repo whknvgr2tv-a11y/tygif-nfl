@@ -1,0 +1,111 @@
+{
+ "fetched_utc": "2026-11-01T20:01:46+00:00",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=8&seasontype=2",
+ "season": 2026,
+ "week": 8,
+ "events": 14,
+ "pre": 5,
+ "last": "2026-11-03T01:15Z",
+ "games": [
+  {
+   "id": "401873032",
+   "away": "LAC",
+   "home": "LAR",
+   "kickoff_utc": "2026-11-01T21:05Z",
+   "ml": {
+    "away": "+235",
+    "home": "-290"
+   },
+   "spread": {
+    "away": {
+     "line": "+6.5",
+     "odds": "-105"
+    },
+    "home": {
+     "line": "-6.5",
+     "odds": "-115"
+    }
+   }
+  },
+  {
+   "id": "401873033",
+   "away": "KC",
+   "home": "DEN",
+   "kickoff_utc": "2026-11-01T21:25Z",
+   "ml": {
+    "away": "-112",
+    "home": "-108"
+   },
+   "spread": {
+    "away": {
+     "line": "-1.5",
+     "odds": "+100"
+    },
+    "home": {
+     "line": "+1.5",
+     "odds": "-120"
+    }
+   }
+  },
+  {
+   "id": "401873034",
+   "away": "NE",
+   "home": "MIA",
+   "kickoff_utc": "2026-11-01T21:25Z",
+   "ml": {
+    "away": "-345",
+    "home": "+275"
+   },
+   "spread": {
+    "away": {
+     "line": "-7",
+     "odds": "-110"
+    },
+    "home": {
+     "line": "+7",
+     "odds": "-110"
+    }
+   }
+  },
+  {
+   "id": "401873035",
+   "away": "PHI",
+   "home": "WSH",
+   "kickoff_utc": "2026-11-02T01:20Z",
+   "ml": {
+    "away": "+220",
+    "home": "-270"
+   },
+   "spread": {
+    "away": {
+     "line": "+6",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "-6",
+     "odds": "-112"
+    }
+   }
+  },
+  {
+   "id": "401873036",
+   "away": "CHI",
+   "home": "SEA",
+   "kickoff_utc": "2026-11-03T01:15Z",
+   "ml": {
+    "away": "+140",
+    "home": "-166"
+   },
+   "spread": {
+    "away": {
+     "line": "+3",
+     "odds": "-105"
+    },
+    "home": {
+     "line": "-3",
+     "odds": "-115"
+    }
+   }
+  }
+ ]
+}

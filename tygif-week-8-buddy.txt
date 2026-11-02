@@ -1,4 +1,4 @@
-Week 8 · Lines as of Sun Nov 1, 11:09 AM CT
+Week 8 · Lines as of Mon Nov 2, 8:03 AM CT
 
 STRONG Tennessee +13.5
 STRONG Cleveland +3.5
@@ -7,8 +7,8 @@ STRONG LA Chargers +6.5
 STRONG Miami +7
 LEAN Carolina +3.5 · Final CAR 19–27 · loss −$100
 LEAN Minnesota +3
-LEAN Denver +1.5
 LEAN Philadelphia +6
+LEAN Chicago +3
 STRONG Tennessee ML
 STRONG Cleveland ML
 STRONG Indianapolis ML
@@ -16,5 +16,5 @@ STRONG LA Chargers ML
 STRONG Miami ML
 LEAN Carolina ML · Final 19–27 · loss −$100
 LEAN Minnesota ML
-LEAN Denver ML
 LEAN Philadelphia ML
+LEAN Chicago ML

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Public Betting Percentages & Betting Splits — Live</title>
+    <script src="/static/common/safe-json.js?v=5f865c32"></script>
+
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL3B9DJSF8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QL3B9DJSF8');
+    </script>
+    
+
+    <meta name="description" content="NFL public betting percentages for every game this week — share of bets vs. share of money on the spread, total and moneyline, biggest splits ranked. Free.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://fadethepublicanalytics.com/nfl">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Fade the Public Analytics">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NFL Public Betting Percentages & Betting Splits — Live">
+    <meta property="og:description" content="NFL public betting percentages for every game this week — share of bets vs. share of money on the spread, total and moneyline, biggest splits ranked. Free.">
+    <meta property="og:url" content="https://fadethepublicanalytics.com/nfl">
+    <meta property="og:image" content="https://fadethepublicanalytics.com/static/common/og-default.png?v=5f865c32">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NFL Public Betting Percentages & Betting Splits — Live">
+    <meta name="twitter:description" content="NFL public betting percentages for every game this week — share of bets vs. share of money on the spread, total and moneyline, biggest splits ranked. Free.">
+    <meta name="twitter:image" content="https://fadethepublicanalytics.com/static/common/og-default.png?v=5f865c32">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous">
+
+    <link rel="icon" type="image/svg+xml" href="/static/common/favicon.svg?v=5f865c32">
+    <link rel="stylesheet" href="/static/common/style.css?v=5f865c32">
+
+    <style>
+      .global-nav-content { flex-wrap: wrap; position: relative; }
+      /* min-width: 0 is load-bearing: without it the flex item's automatic
+         min-size is the wordmark's min-content width, which `white-space: nowrap`
+         makes the full string. The section then refused to shrink and overflowed
+         a 320px viewport, dragging the sport-links row (width: 100% of it) past
+         the right edge where body's overflow-x: hidden clipped it. */
+      .brand-section { width: auto !important; flex: 1 1 auto; min-width: 0; padding-right: 56px; }
+      .auth-section {
+        position: absolute; top: 10px; right: 20px;
+        display: flex; align-items: center; gap: 10px;
+        font-size: 0.9rem;
+      }
+      .auth-section a { color: rgba(255,255,255,0.85); text-decoration: none; transition: opacity 0.2s; }
+      .auth-section .auth-signin { font-weight: 500; }
+      .auth-section .auth-signin:hover { color: #fff; }
+      .auth-section .auth-signup {
+        background: var(--accent-orange, #ff6b35); color: #fff !important;
+        padding: 6px 14px; border-radius: 999px; font-weight: 600; font-size: 0.85rem;
+      }
+      .auth-section .auth-signup:hover { opacity: 0.9; }
+
+      .user-menu-wrap { position: relative; }
+      .user-avatar {
+        width: 36px; height: 36px; border-radius: 999px;
+        background: var(--accent-orange, #ff6b35); color: #fff;
+        display: flex; align-items: center; justify-content: center;
+        cursor: pointer; border: none; font-size: 18px;
+        transition: transform 0.15s;
+      }
+      .user-avatar:hover { transform: scale(1.05); }
+      .user-dropdown {
+        position: absolute; top: calc(100% + 8px); right: 0;
+        background: #fff; border-radius: 10px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        min-width: 220px; padding: 8px; z-index: 300;
+        display: none;
+      }
+      .user-dropdown.open { display: block; }
+      .user-dropdown .dropdown-email {
+        padding: 8px 12px; font-size: 12px; color: #666;
+        border-bottom: 1px solid #eef0f3; margin-bottom: 6px;
+        word-break: break-all;
+      }
+      .user-dropdown a {
+        display: block; padding: 10px 12px; border-radius: 6px;
+        color: #1f2328 !important; font-size: 14px; font-weight: 500;
+      }
+      .user-dropdown a:hover { background: #f3f4f6; }
+      .user-dropdown a i { width: 20px; color: #666; }
+      /* The one action in an otherwise neutral menu, so it carries the accent
+         and its own icon colour rather than the muted grey the others use. */
+      .user-dropdown a.dropdown-upgrade {
+        color: var(--accent-orange, #ff6b35) !important; font-weight: 700;
+      }
+      .user-dropdown a.dropdown-upgrade i { color: var(--accent-orange, #ff6b35); }
+      .user-dropdown a.dropdown-upgrade:hover { background: #fff1ec; }
+
+      /* The wordmark must be able to give way to the auth control rather than
+         collide with it, at any width. Capping .main-brand and letting the span
+         ellipsis is what makes the gutters below safe on a 320px screen. */
+      .main-brand { max-width: 100%; min-width: 0; }
+      .main-brand .brand-logo { flex: none; }
+      .main-brand span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+
+      @media (max-width: 768px) {
+        /* The auth control overlaps the brand row only. Reserving the gutter on
+           .brand-section also narrowed the sport-links row below it, which is
+           what pushed the sixth sport off screen — so scope it to the brand. */
+        .brand-section { padding-right: 0 !important; }
+        /* Signed in the control is a 36px avatar; signed out it is two controls
+           side by side, so .is-anon reserves the wider gutter. */
+        .main-brand { padding-right: 56px; }
+        .is-anon .main-brand { padding-right: 155px; }
+      }
+
+      @media (max-width: 640px) {
+        .auth-section { top: 8px; right: 12px; }
+        .main-brand { padding-right: 52px; }
+        /* Sign in used to be display:none here. Hiding the only way back into an
+           existing account on every phone-sized viewport is too high a price for
+           the gutter, so buy the room instead: tighter auth controls plus a
+           slightly smaller wordmark fit both links down to ~375px, and the
+           ellipsis above absorbs anything narrower. */
+        .is-anon .auth-section { font-size: 0.85rem; gap: 8px; }
+        .is-anon .auth-section .auth-signup { padding: 6px 12px; font-size: 0.8rem; }
+        .is-anon .main-brand { padding-right: 145px; font-size: 0.82rem; }
+      }
+    </style>
+
+    <style>
+    .hub-footer-seo {
+        max-width: 920px;
+        margin: 60px auto 40px;
+        padding: 24px 28px;
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        color: #1f2328;
+        line-height: 1.6;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .hub-footer-seo h2 {
+        background: none;
+        -webkit-text-fill-color: initial;
+        color: #1f2328;
+        text-transform: none;
+        letter-spacing: normal;
+        font-size: 1.3em;
+        margin: 0 0 10px;
+    }
+    .hub-footer-seo h2 + h2,
+    .hub-footer-seo ul + h2,
+    .hub-footer-seo p + h2 { margin-top: 24px; }
+    .hub-footer-seo h3 {
+        color: #1f2328;
+        font-size: 1.05em;
+        margin: 16px 0 4px;
+    }
+    .hub-footer-seo p {
+        margin: 0 0 16px;
+        color: #374151;
+    }
+    .hub-footer-seo .footer-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .hub-footer-seo .footer-links li { margin: 0; }
+    .hub-footer-seo .footer-links a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 14px;
+        background: #fff;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        color: #1d4ed8;
+        text-decoration: none;
+        font-weight: 600;
+        transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+    }
+    .hub-footer-seo .footer-links a::after {
+        content: "→";
+        margin-left: 12px;
+        color: #9ca3af;
+        transition: transform 0.15s ease, color 0.15s ease;
+    }
+    .hub-footer-seo .footer-links a:hover {
+        border-color: #1d4ed8;
+        background: #eff6ff;
+        transform: translateY(-1px);
+    }
+    .hub-footer-seo .footer-links a:hover::after {
+        transform: translateX(3px);
+        color: #1d4ed8;
+    }
+</style>
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        
+        {
+            "@type": "Question",
+            "name": "What are NFL public betting percentages?",
+            "acceptedAnswer": {"@type": "Answer", "text": "The percentage of bets (tickets) and the percentage of money (handle) on each side of an NFL market \u2014 spread, total and moneyline. Bet percentage tells you what the crowd is doing; money percentage tells you where the dollars are. When the two disagree, the larger, sharper bets are usually on the money side."}
+        },
+        
+        {
+            "@type": "Question",
+            "name": "Where does this NFL betting data come from?",
+            "acceptedAnswer": {"@type": "Answer", "text": "From publicly reported sportsbook handle, captured on a sub-hourly cadence from the moment a game is listed through kickoff. Every game on this page shows its latest published split; the paid NFL analytics page also stores the full history so line and money movement can be tracked."}
+        },
+        
+        {
+            "@type": "Question",
+            "name": "How do you use NFL betting splits to fade the public?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Look for games where one side has a large majority of the bets but a much smaller share of the money. That gap means the average bet on the other side is bigger, which is the footprint of sharper action. The games at the top of this page are ranked by the size of that gap on the spread, the market NFL bettors trade most."}
+        },
+        
+        {
+            "@type": "Question",
+            "name": "Is this NFL public betting data free?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. The splits on this page are free and refresh continuously through the game week. The subscriber page adds expected-value plays, reverse line movement and a graded season record on top of the same data."}
+        }
+        
+    ]
+}
+</script>
+
+</head>
+<body>
+    <!-- Global Navigation -->
+    
+    <nav class="global-sport-nav">
+        <div class="global-nav-content is-anon">
+            <div class="brand-section">
+                <a href="/" class="main-brand">
+                    <img src="/static/common/favicon.svg?v=5f865c32" alt="Logo" class="brand-logo">
+                    <span>Fade the Public Analytics</span>
+                </a>
+                <div class="sport-links">
+                    <a href="/nfl" class="sport-link active">
+                        <i class="fas fa-football-ball"></i>
+                        <span>NFL</span>
+                    </a>
+                    <a href="/ncaaf" class="sport-link ">
+                        <i class="fas fa-football-ball"></i>
+                        <span>NCAAF</span>
+                    </a>
+                    <a href="/nba" class="sport-link ">
+                        <i class="fas fa-basketball-ball"></i>
+                        <span>NBA</span>
+                    </a>
+                    <a href="/mlb" class="sport-link ">
+                        <i class="fas fa-baseball-ball"></i>
+                        <span>MLB</span>
+                    </a>
+                    <a href="/nhl" class="sport-link ">
+                        <i class="fas fa-hockey-puck"></i>
+                        <span>NHL</span>
+                    </a>
+                    <a href="/ncaab" class="sport-link ">
+                        <i class="fas fa-basketball-ball"></i>
+                        <span>NCAAB</span>
+                    </a>
+                    <a href="/golf" class="sport-link ">
+                        <i class="fas fa-golf-ball"></i>
+                        <span>Golf</span>
+                    </a>
+                </div>
+            </div>
+            <div class="auth-section">
+                
+                    
+                    <a href="/login?next=/nfl" class="auth-signin" rel="nofollow">Sign in</a>
+                    <a href="/signup" class="auth-signup">Sign up</a>
+                
+            </div>
+        </div>
+    </nav>
+    
+
+    
+<header>
+    <nav class="nav-brand">
+        <i class="fas fa-football-ball"></i>
+        <h1>NFL Public Betting Percentages</h1>
+        <div class="live-indicator">
+            <div class="live-dot"></div>
+            <span>LIVE</span>
+        </div>
+    </nav>
+    <div class="controls">
+        <a href="/nfl-analytics" class="btn btn-primary btn-advanced-cta">
+            <i class="fas fa-brain"></i>
+            SEE TOP EV PLAYS
+            <i class="fas fa-arrow-right cta-arrow"></i>
+        </a>
+        <button id="refreshBtn" class="btn btn-secondary">
+            <i class="fas fa-sync-alt"></i>
+            REFRESH DATA
+        </button>
+        <span id="lastUpdate" class="last-update">
+            <i class="fas fa-clock"></i>
+            <span id="updateTime"></span>
+        </span>
+    </div>
+</header>
+
+<!-- Mobile Game Index Navigation -->
+<nav id="mobileGameIndex" class="mobile-game-index">
+    <div class="game-index-container">
+        <button id="gamesDropdownButton" class="games-dropdown-button">
+            <span>Select Game</span>
+            <i class="fas fa-chevron-down dropdown-icon"></i>
+        </button>
+        <div id="gameIndexList" class="game-index-list">
+            <!-- Game chips will be dynamically inserted here -->
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div id="loading" class="loading">
+        <div class="loading-content">
+            <i class="fas fa-football-ball fa-spin"></i>
+            <h3>Loading NFL Games...</h3>
+            <p>Fetching the latest betting data</p>
+        </div>
+    </div>
+    <div id="error" class="error" style="display: none;"></div>
+
+    <!-- Top 5 Highest Bet Concentrations Section -->
+    <section id="topConcentrations" class="top-concentrations" style="display: none;">
+        <h2>Top 5 Highest Bet Concentrations</h2>
+        <div id="topConcentrationsList" class="top-list">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+    </section>
+
+    <!-- All Games Section -->
+    <section id="allGames" class="all-games" style="display: none;">
+        <h2>All Games (Sorted by Highest Concentration)</h2>
+        <div id="allGamesList" class="all-games-list">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+    </section>
+
+    <!-- Combined View: Top Opportunities Section -->
+    <section id="topOpportunities" class="top-opportunities" style="display: none;">
+        <h2>🎯 Biggest Betting Opportunities</h2>
+        <div id="topOpportunitiesList" class="opportunities-list">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+    </section>
+
+    
+<div class="newsletter-capture">
+    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="db30aa10-465d-42c1-addc-ec2757c209ed"></script>
+</div>
+
+    <!-- Combined View: All Games Section -->
+    <section id="combinedGames" class="combined-games" style="display: none;">
+        <h2>📊 All Games by Opportunity Score</h2>
+        <div id="combinedGamesList" class="combined-games-list">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+    </section>
+
+    <div id="noGames" class="no-games" style="display: none;">
+        <p>No games found. The scraper may need adjustments for the current page structure.</p>
+        <button id="retryBtn" class="btn btn-secondary">Try Again</button>
+    </div>
+</main>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" class="scroll-to-top-btn" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<section class="hub-footer-seo">
+    <h2>About NFL public betting percentages</h2>
+    <p>
+        We track the percentage of bets and the percentage of dollars on each side of every NFL game &mdash; spread, total and moneyline &mdash; updated continuously from the moment a line is posted through kickoff. When those two numbers diverge &mdash; one side has most of the tickets but the other side has most of the money &mdash; the dollars usually carry the sharper signal. The games at the top of this page are ranked by the strength of that split.
+    </p>
+    <p>
+        The NFL board is the most heavily bet in American sports, so a lopsided ticket count on a name-brand team is normal here; the number that matters is where the money lands against it. We don't issue picks on this page. Use the splits to inform your own read of the game, and bet responsibly.
+    </p>
+
+    
+    <h2>Frequently asked questions</h2>
+    
+    <h3>What are NFL public betting percentages?</h3>
+    <p>The percentage of bets (tickets) and the percentage of money (handle) on each side of an NFL market — spread, total and moneyline. Bet percentage tells you what the crowd is doing; money percentage tells you where the dollars are. When the two disagree, the larger, sharper bets are usually on the money side.</p>
+    
+    <h3>Where does this NFL betting data come from?</h3>
+    <p>From publicly reported sportsbook handle, captured on a sub-hourly cadence from the moment a game is listed through kickoff. Every game on this page shows its latest published split; the paid NFL analytics page also stores the full history so line and money movement can be tracked.</p>
+    
+    <h3>How do you use NFL betting splits to fade the public?</h3>
+    <p>Look for games where one side has a large majority of the bets but a much smaller share of the money. That gap means the average bet on the other side is bigger, which is the footprint of sharper action. The games at the top of this page are ranked by the size of that gap on the spread, the market NFL bettors trade most.</p>
+    
+    <h3>Is this NFL public betting data free?</h3>
+    <p>Yes. The splits on this page are free and refresh continuously through the game week. The subscriber page adds expected-value plays, reverse line movement and a graded season record on top of the same data.</p>
+    
+
+
+    <h2>Go deeper</h2>
+    <ul class="footer-links">
+        <li><a href="/nfl-analytics">NFL expected-value plays &amp; line movement</a></li>
+        <li><a href="/closing-lines">Our graded record at closing lines</a></li>
+        <li><a href="/learn/betting-splits-nfl">How NFL betting splits work</a></li>
+        <li><a href="/learn/key-numbers-nfl">NFL key numbers</a></li>
+        <li><a href="/learn/point-spread-betting">Point spread betting</a></li>
+        <li><a href="/learn/public-betting-percentages">What public betting percentages mean</a></li>
+        <li><a href="/learn/sharp-vs-public-money">Sharp vs. public money</a></li>
+        <li><a href="/learn/reverse-line-movement">Reverse line movement</a></li>
+        <li><a href="/ncaaf">College football public betting percentages</a></li>
+        <li><a href="/methodology">Our methodology</a></li>
+    </ul>
+</section>
+
+
+    <footer>
+        
+<div class="newsletter-capture newsletter-capture--footer">
+    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="db30aa10-465d-42c1-addc-ec2757c209ed"></script>
+</div>
+        <div class="disclaimer">
+            <p class="disclaimer-warning">
+                <strong>THIS IS NOT A GAMBLING SITE</strong> – If you or someone you know has a gambling problem, help is available. Call or text the National Problem Gambling Helpline at <strong style="white-space: nowrap;">1-800-522-4700</strong>, or visit our <a href="/responsible-gambling">Responsible Gambling resources</a>.
+            </p>
+            <p class="disclaimer-text">
+                Disclaimer: This site is for informational and entertainment purposes only. Individual users are
+                responsible for the laws regarding accessing gambling information from their jurisdictions. Many
+                countries around the world prohibit gambling, please check the laws in your location. Any use of
+                this information that may violate any federal, state, local or international law is strictly prohibited.
+            </p>
+        </div>
+        <p class="site-credit">
+            <img src="/static/common/favicon.svg?v=5f865c32" alt="Logo" class="footer-logo">
+            Fade the Public Analytics
+        </p>
+        <p class="footer-legal-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <span>·</span>
+            <a href="/terms-of-service">Terms of Service</a>
+            <span>·</span>
+            <a href="/responsible-gambling">Responsible Gambling</a>
+            <span>·</span>
+            <a href="/contact">Contact</a>
+        </p>
+    </footer>
+
+    
+<script src="/static/nfl/nfl-script.js?v=5f865c32"></script>
+
+
+    <script>
+      (function() {
+        const btn = document.getElementById('user-avatar-btn');
+        const dd = document.getElementById('user-dropdown');
+        if (!btn || !dd) return;
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          dd.classList.toggle('open');
+        });
+        document.addEventListener('click', (e) => {
+          if (!dd.contains(e.target) && e.target !== btn) dd.classList.remove('open');
+        });
+      })();
+    </script>
+
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

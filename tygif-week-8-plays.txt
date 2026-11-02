@@ -1,37 +1,37 @@
 TYGIF'S MODEL · WEEK 8
-Lines as of Sun Nov 1, 11:09 AM CT
+Lines as of Mon Nov 2, 8:03 AM CT
 
 STRONG
   Tennessee +13.5  ·  Tennessee at Cincinnati, Sun Nov 1 · 12:00 PM CT
     Type 1 · Fade the big favorite · STRONG: 14-3-2, +$980
     a: Yes · b: Yes · c: Yes · d: No
     Book needs TEN: CIN has 87% of the money vs 51.9% DK break-even (+35.1) — fade sits with the book
-    books need TEN: best BetMGM/FanDuel/Fanatics TEN +13.5 −105 (hold 2.38%, break-even 51.22%) · worst DraftKings +13.5 −112 (hold 4.54%, break-even 52.83%)
-      BetMGM +13.5 −105 2.38%/51.22% · FanDuel +13.5 −105 4.50%/51.22% · Fanatics +13.5 −105 4.50%/51.22% · BetRivers +13.5 −108 4.74%/51.92% · Caesars +13.5 −110 4.34%/52.38% · bet365 +13.5 −110 4.55%/52.38% · DraftKings +13.5 −112 4.54%/52.83%
+    books need TEN: best FanDuel TEN +13.5 −104 (hold 4.86%, break-even 50.98%) · worst DraftKings +13.5 −112 (hold 4.54%, break-even 52.83%)
+      FanDuel +13.5 −104 4.86%/50.98% · BetMGM +13.5 −105 2.38%/51.22% · Fanatics +13.5 −105 4.50%/51.22% · bet365 +13.5 −106 4.51%/51.46% · BetRivers +13.5 −108 4.74%/51.92% · Caesars +13.5 −110 4.34%/52.38% · DraftKings +13.5 −112 4.54%/52.83%
   Cleveland +3.5  ·  Cleveland at Pittsburgh, Sun Nov 1 · 12:00 PM CT
     Type 2 · Fade the crowd · STRONG: 10-7-2, +$222
     a: Yes · b: Yes · c: Yes · d: Yes
     Book needs CLE: PIT has 69% of the money vs 53.5% DK break-even (+15.5) — fade sits with the book
-    books need CLE: best DraftKings CLE +3.5 −105 (hold 4.50%, break-even 51.22%) · worst Caesars +3.5 −114 (hold 4.51%, break-even 53.27%)
-      DraftKings +3.5 −105 4.50%/51.22% · BetMGM +3.5 −108 4.13%/51.92% · BetRivers +3.5 −109 4.75%/52.15% · FanDuel +3.5 −110 4.55%/52.38% · Fanatics +3.5 −110 4.55%/52.38% · bet365 +3.5 −111 4.54%/52.61% · Caesars +3.5 −114 4.51%/53.27%
+    books need CLE: best DraftKings CLE +3.5 −105 (hold 4.50%, break-even 51.22%) · worst FanDuel/Fanatics +3.5 −110 (hold 4.55%, break-even 52.38%)
+      DraftKings +3.5 −105 4.50%/51.22% · BetMGM +3.5 −108 4.13%/51.92% · bet365 +3.5 −108 4.54%/51.92% · Caesars +3.5 −109 4.34%/52.15% · BetRivers +3.5 −109 4.75%/52.15% · FanDuel +3.5 −110 4.55%/52.38% · Fanatics +3.5 −110 4.55%/52.38%
   Indianapolis +10  ·  Indianapolis at Jacksonville, Sun Nov 1 · 12:00 PM CT
     Type 1 · Fade the big favorite · STRONG: 14-3-2, +$980
     a: Yes · b: Yes · c: Yes · d: No
     Book needs IND: JAX has 76% of the money vs 52.8% DK break-even (+23.2) — fade sits with the book
-    books need IND: best bet365 IND +10.5 −121 (hold 4.31%, break-even 54.75%) · worst BetMGM +10 −112 (hold 6.51%, break-even 52.83%)
-      bet365 +10.5 −121 4.31%/54.75% · FanDuel +10.5 −122 4.72%/54.95% · DraftKings +10 −108 4.54%/51.92% · BetRivers +10 −108 4.74%/51.92% · Caesars +10 −110 4.34%/52.38% · Fanatics +10 −110 4.55%/52.38% · BetMGM +10 −112 6.51%/52.83%
+    books need IND: best BetMGM IND +10.5 −108 (hold 2.36%, break-even 51.92%) · worst Caesars/Fanatics +10 −110 (hold 4.55%, break-even 52.38%)
+      BetMGM +10.5 −108 2.36%/51.92% · bet365 +10.5 −121 4.31%/54.75% · FanDuel +10.5 −122 4.72%/54.95% · DraftKings +10 −108 4.54%/51.92% · BetRivers +10 −108 4.74%/51.92% · Caesars +10 −110 4.34%/52.38% · Fanatics +10 −110 4.55%/52.38%
   LA Chargers +6.5  ·  LA Chargers at LA Rams, Sun Nov 1 · 3:05 PM CT
     Type 1 · Fade the big favorite · STRONG: 14-3-2, +$980
     a: Yes · b: Yes · c: Yes · d: Yes
-    Book needs LAC: LAR has 82% of the money vs 54.1% DK break-even (+27.9) — fade sits with the book
-    books need LAC: best BetRivers LAC +7 −114 (hold 4.73%, break-even 53.27%) · worst Caesars +6.5 −110 (hold 4.34%, break-even 52.38%)
-      BetRivers +7 −114 4.73%/53.27% · DraftKings +6.5 −102 4.42%/50.50% · Fanatics +6.5 −105 4.50%/51.22% · bet365 +6.5 −107 4.53%/51.69% · BetMGM +6.5 −108 4.13%/51.92% · FanDuel +6.5 −108 4.54%/51.92% · Caesars +6.5 −110 4.34%/52.38%
+    Book needs LAC: LAR has 81% of the money vs 53.5% DK break-even (+27.5) — fade sits with the book
+    books need LAC: best BetRivers LAC +7 −114 (hold 4.73%, break-even 53.27%) · worst Caesars/Fanatics +6.5 −110 (hold 4.55%, break-even 52.38%)
+      BetRivers +7 −114 4.73%/53.27% · BetMGM +6.5 −102 2.36%/50.50% · DraftKings +6.5 −105 4.50%/51.22% · bet365 +6.5 −107 4.53%/51.69% · FanDuel +6.5 −108 4.54%/51.92% · Caesars +6.5 −110 4.34%/52.38% · Fanatics +6.5 −110 4.55%/52.38%
   Miami +7  ·  New England at Miami, Sun Nov 1 · 3:25 PM CT
     Type 1 · Fade the big favorite · STRONG: 14-3-2, +$980
     a: Yes · b: Yes · c: Yes · d: Yes
-    Book needs MIA: NE has 89% of the money vs 52.4% DK break-even (+36.6) — fade sits with the book
-    books need MIA: best FanDuel MIA +7.5 −128 (hold 4.91%, break-even 56.14%) · worst bet365 +6.5 +102 (hold 4.27%, break-even 49.50%)
-      FanDuel +7.5 −128 4.91%/56.14% · DraftKings +7 −110 4.55%/52.38% · BetMGM +7 −110 4.55%/52.38% · Caesars +7 −112 4.54%/52.83% · BetRivers +7 −112 5.36%/52.83% · Fanatics +7 −115 4.50%/53.49% · bet365 +6.5 +102 4.27%/49.50%
+    Book needs MIA: NE has 87% of the money vs 52.4% DK break-even (+34.6) — fade sits with the book
+    books need MIA: best FanDuel MIA +7.5 −128 (hold 4.91%, break-even 56.14%) · worst bet365 +6.5 −102 (hold 4.42%, break-even 50.50%)
+      FanDuel +7.5 −128 4.91%/56.14% · BetMGM +7 −108 2.36%/51.92% · DraftKings +7 −110 4.55%/52.38% · Caesars +7 −112 4.54%/52.83% · BetRivers +7 −112 4.95%/52.83% · Fanatics +7 −115 4.50%/53.49% · bet365 +6.5 −102 4.42%/50.50%
 
 LEAN
   Carolina +3.5  ·  Carolina at Green Bay, Thu Oct 29 · 7:15 PM CT · Final CAR 19–27 · loss −$100
@@ -41,20 +41,20 @@ LEAN
     Type 3 · Crowd leaning · LEAN: 13-14-1, −$182
     a: Yes · b: No · c: Yes · d: Yes
     Book needs MIN: DET has 55% of the money vs 54.5% DK break-even (+0.5) — fade sits with the book
-    books need MIN: best BetMGM MIN +3.5 −115 (hold 3.83%, break-even 53.49%) · worst BetRivers +3 −104 (hold 4.28%, break-even 50.98%)
-      BetMGM +3.5 −115 3.83%/53.49% · bet365 +3.5 −119 4.39%/54.34% · Caesars +3.5 −120 4.35%/54.55% · Fanatics +3.5 −120 4.35%/54.55% · FanDuel +3.5 −120 4.80%/54.55% · DraftKings +3 +100 4.35%/50.00% · BetRivers +3 −104 4.28%/50.98%
-  Denver +1.5  ·  Kansas City at Denver, Sun Nov 1 · 3:25 PM CT
-    Type 3 · Crowd leaning · LEAN: 13-14-1, −$182
-    a: Yes · b: No · c: Yes · d: Yes
-    Book needs DEN: KC has 61% of the money vs 50.0% DK break-even (+11) — fade sits with the book
-    books need DEN: best Caesars DEN +1.5 −115 (hold 4.28%, break-even 53.49%) · worst Fanatics +1 −120 (hold 4.35%, break-even 54.55%)
-      Caesars +1.5 −115 4.28%/53.49% · DraftKings +1.5 −120 4.35%/54.55% · bet365 +1.5 −120 4.35%/54.55% · FanDuel +1.5 −120 4.80%/54.55% · BetRivers +1 −108 4.74%/51.92% · BetMGM +1 −115 4.50%/53.49% · Fanatics +1 −120 4.35%/54.55%
+    books need MIN: best bet365 MIN +3.5 −119 (hold 4.39%, break-even 54.34%) · worst BetRivers +3 −104 (hold 4.28%, break-even 50.98%)
+      bet365 +3.5 −119 4.39%/54.34% · Caesars +3.5 −120 4.35%/54.55% · Fanatics +3.5 −120 4.35%/54.55% · FanDuel +3.5 −120 4.80%/54.55% · DraftKings +3 +100 4.35%/50.00% · BetMGM +3 −102 4.42%/50.50% · BetRivers +3 −104 4.28%/50.98%
   Philadelphia +6  ·  Philadelphia at Washington, Sun Nov 1 · 7:20 PM CT
     Type 3 · Crowd leaning · LEAN: 13-14-1, −$182
     a: Yes · b: No · c: Yes · d: No
     Book needs PHI: WSH has 61% of the money vs 52.8% DK break-even (+8.2) — fade sits with the book
-    books need PHI: best BetRivers PHI +6.5 −109 (hold 4.75%, break-even 52.15%) · worst bet365/Fanatics +5.5 −105 (hold 4.50%, break-even 51.22%)
-      BetRivers +6.5 −109 4.75%/52.15% · BetMGM +6 −108 4.13%/51.92% · DraftKings +6 −108 4.54%/51.92% · Caesars +6 −109 4.34%/52.15% · FanDuel +5.5 −100 4.72%/50.00% · bet365 +5.5 −105 4.50%/51.22% · Fanatics +5.5 −105 4.50%/51.22%
+    books need PHI: best DraftKings PHI +6 −108 (hold 4.54%, break-even 51.92%) · worst bet365/Fanatics +5.5 −105 (hold 4.50%, break-even 51.22%)
+      DraftKings +6 −108 4.54%/51.92% · Caesars +6 −109 4.34%/52.15% · BetMGM +6 −110 4.13%/52.38% · BetRivers +6 −112 4.75%/52.83% · FanDuel +5.5 −100 4.72%/50.00% · bet365 +5.5 −105 4.50%/51.22% · Fanatics +5.5 −105 4.50%/51.22%
+  Chicago +3  ·  Chicago at Seattle, Mon Nov 2 · 7:15 PM CT
+    Type 3 · Crowd leaning · LEAN: 13-14-1, −$182
+    a: Yes · b: No · c: Yes · d: Yes
+    Book needs CHI: SEA has 60% of the money vs 54.1% DK break-even (+5.9) — fade sits with the book
+    books need CHI: best Fanatics CHI +3.5 −120 (hold 4.35%, break-even 54.55%) · worst Caesars/BetRivers +3 −104 (hold 4.86%, break-even 50.98%)
+      Fanatics +3.5 −120 4.35%/54.55% · bet365 +3.5 −122 4.27%/54.95% · DraftKings +3 −102 4.42%/50.50% · BetMGM +3 −102 4.42%/50.50% · FanDuel +3 −102 4.80%/50.50% · Caesars +3 −104 4.67%/50.98% · BetRivers +3 −104 4.86%/50.98%
 
 MONEYLINE
   STRONG Tennessee ML  ·  Tennessee at Cincinnati, Sun Nov 1 · 12:00 PM CT
@@ -64,25 +64,25 @@ MONEYLINE
   STRONG Indianapolis ML  ·  Indianapolis at Jacksonville, Sun Nov 1 · 12:00 PM CT
     Moneyline · same total-money read · Type 1 · STRONG · Underdog · Same grade as the game (STRONG) — total money 76% on JAX, book exposed +23.2
   STRONG LA Chargers ML  ·  LA Chargers at LA Rams, Sun Nov 1 · 3:05 PM CT
-    Moneyline · same total-money read · Type 1 · STRONG · Underdog · Same grade as the game (STRONG) — total money 82% on LAR, book exposed +27.9
+    Moneyline · same total-money read · Type 1 · STRONG · Underdog · Same grade as the game (STRONG) — total money 81% on LAR, book exposed +27.5
   STRONG Miami ML  ·  New England at Miami, Sun Nov 1 · 3:25 PM CT
-    Moneyline · same total-money read · Type 1 · STRONG · Underdog · Same grade as the game (STRONG) — total money 89% on NE, book exposed +36.6
+    Moneyline · same total-money read · Type 1 · STRONG · Underdog · Same grade as the game (STRONG) — total money 87% on NE, book exposed +34.6
   LEAN Carolina ML  ·  Carolina at Green Bay, Thu Oct 29 · 7:15 PM CT · Final 19–27 · loss −$100
     Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 56% on GB, book exposed +3.6
   LEAN Minnesota ML  ·  Minnesota at Detroit, Sun Nov 1 · 12:00 PM CT
     Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 55% on DET, book exposed +0.5
-  LEAN Denver ML  ·  Kansas City at Denver, Sun Nov 1 · 3:25 PM CT
-    Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 61% on KC, book exposed +11
   LEAN Philadelphia ML  ·  Philadelphia at Washington, Sun Nov 1 · 7:20 PM CT
     Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 61% on WSH, book exposed +8.2
+  LEAN Chicago ML  ·  Chicago at Seattle, Mon Nov 2 · 7:15 PM CT
+    Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 60% on SEA, book exposed +5.9
 
 PASS
   Baltimore at Buffalo
     Book is safe: BUF 51% is inside DK's win-both range 48.8–53.5% — no book tailwind
-    books need BAL: best bet365 BAL +3.5 −125 (hold 4.16%, break-even 55.56%) · worst BetMGM/DraftKings/Caesars/Fanatics/BetRivers +3 −105 (hold 4.89%, break-even 51.22%)
-      bet365 +3.5 −125 4.16%/55.56% · FanDuel +3 −104 4.86%/50.98% · BetMGM +3 −105 3.89%/51.22% · DraftKings +3 −105 4.50%/51.22% · Caesars +3 −105 4.50%/51.22% · Fanatics +3 −105 4.50%/51.22% · BetRivers +3 −105 4.89%/51.22%
-    books need BUF: best BetMGM BUF −3 −112 (hold 3.89%, break-even 52.83%) · worst bet365 −3.5 +105 (hold 4.16%, break-even 48.78%)
-      BetMGM −3 −112 3.89%/52.83% · DraftKings −3 −115 4.50%/53.49% · Caesars −3 −115 4.50%/53.49% · Fanatics −3 −115 4.50%/53.49% · BetRivers −3 −117 4.89%/53.92% · FanDuel −3 −118 4.86%/54.13% · bet365 −3.5 +105 4.16%/48.78%
+    books need BAL: best bet365 BAL +3.5 −125 (hold 4.16%, break-even 55.56%) · worst DraftKings/BetMGM/Caesars/Fanatics/BetRivers +3 −105 (hold 4.89%, break-even 51.22%)
+      bet365 +3.5 −125 4.16%/55.56% · FanDuel +3 −104 4.86%/50.98% · DraftKings +3 −105 4.50%/51.22% · BetMGM +3 −105 4.50%/51.22% · Caesars +3 −105 4.50%/51.22% · Fanatics +3 −105 4.50%/51.22% · BetRivers +3 −105 4.89%/51.22%
+    books need BUF: best DraftKings/BetMGM/Caesars/Fanatics BUF −3 −115 (hold 4.50%, break-even 53.49%) · worst bet365 −3.5 +105 (hold 4.16%, break-even 48.78%)
+      DraftKings −3 −115 4.50%/53.49% · BetMGM −3 −115 4.50%/53.49% · Caesars −3 −115 4.50%/53.49% · Fanatics −3 −115 4.50%/53.49% · BetRivers −3 −117 4.89%/53.92% · FanDuel −3 −118 4.86%/54.13% · bet365 −3.5 +105 4.16%/48.78%
   Arizona at Dallas
     Book is safe: DAL 52% is inside DK's win-both range 49.5–54.1% — no book tailwind
     books need ARI: best bet365 ARI +7.5 −114 (hold 4.51%, break-even 53.27%) · worst BetRivers +7 −106 (hold 5.10%, break-even 51.46%)
@@ -101,12 +101,12 @@ PASS
       bet365 +2.5 −117 4.45%/53.92% · BetMGM +2 −110 4.13%/52.38% · Fanatics +2 −110 4.55%/52.38% · Caesars +1.5 −104 4.28%/50.98% · DraftKings +1.5 −105 4.50%/51.22% · FanDuel +1.5 −105 4.50%/51.22% · BetRivers +1 −109 5.15%/52.15%
     books need TB: best BetRivers TB −1 −114 (hold 5.15%, break-even 53.27%) · worst bet365 −2.5 −103 (hold 4.45%, break-even 50.74%)
       BetRivers −1 −114 5.15%/53.27% · Caesars −1.5 −115 4.28%/53.49% · DraftKings −1.5 −115 4.50%/53.49% · FanDuel −1.5 −115 4.50%/53.49% · BetMGM −2 −108 4.13%/51.92% · Fanatics −2 −110 4.55%/52.38% · bet365 −2.5 −103 4.45%/50.74%
-  Chicago at Seattle
-    Book is safe: CHI 51% is inside DK's win-both range 46.5–51.2% — no book tailwind
-    books need CHI: best bet365 CHI +3.5 −122 (hold 4.27%, break-even 54.95%) · worst BetRivers +3 −110 (hold 4.55%, break-even 52.38%)
-      bet365 +3.5 −122 4.27%/54.95% · FanDuel +3 −102 4.80%/50.50% · Caesars +3 −104 4.67%/50.98% · DraftKings +3 −105 4.50%/51.22% · BetMGM +3 −105 4.50%/51.22% · Fanatics +3 −105 4.50%/51.22% · BetRivers +3 −110 4.55%/52.38%
-    books need SEA: best BetRivers SEA −3 −110 (hold 4.55%, break-even 52.38%) · worst bet365 −3.5 +102 (hold 4.27%, break-even 49.50%)
-      BetRivers −3 −110 4.55%/52.38% · DraftKings −3 −115 4.50%/53.49% · BetMGM −3 −115 4.50%/53.49% · Fanatics −3 −115 4.50%/53.49% · Caesars −3 −117 4.67%/53.92% · FanDuel −3 −120 4.80%/54.55% · bet365 −3.5 +102 4.27%/49.50%
+  Kansas City at Denver
+    Book needs DEN: KC has 61% of the money vs 50.0% DK break-even (+11) — fade sits with the book
+    books need KC: best BetMGM/Fanatics KC −1 −105 (hold 3.89%, break-even 51.22%) · worst Caesars −1.5 −104 (hold 4.28%, break-even 50.98%)
+      BetMGM −1 −105 3.89%/51.22% · Fanatics −1 −105 4.50%/51.22% · BetRivers −1 −112 4.54%/52.83% · DraftKings −1.5 +100 4.35%/50.00% · bet365 −1.5 +100 4.35%/50.00% · FanDuel −1.5 −102 4.80%/50.50% · Caesars −1.5 −104 4.28%/50.98%
+    books need DEN: best Caesars DEN +1.5 −115 (hold 4.28%, break-even 53.49%) · worst Fanatics +1 −115 (hold 4.50%, break-even 53.49%)
+      Caesars +1.5 −115 4.28%/53.49% · DraftKings +1.5 −120 4.35%/54.55% · bet365 +1.5 −120 4.35%/54.55% · FanDuel +1.5 −120 4.80%/54.55% · BetRivers +1 −108 4.54%/51.92% · BetMGM +1 −112 3.89%/52.83% · Fanatics +1 −115 4.50%/53.49%
 
 Agreement: all-books money (ScoresAndOdds) primary, DraftKings Network handle % secondary (same side). Bets % and SportsBettingDime are not used.
   agreement book for Carolina at Green Bay: DraftKings
@@ -115,6 +115,6 @@ Agreement: all-books money (ScoresAndOdds) primary, DraftKings Network handle % 
   agreement book for Cleveland at Pittsburgh: DraftKings
   agreement book for Indianapolis at Jacksonville: DraftKings
   agreement book for LA Chargers at LA Rams: DraftKings
-  agreement book for Kansas City at Denver: DraftKings
   agreement book for New England at Miami: DraftKings
   agreement book for Philadelphia at Washington: DraftKings
+  agreement book for Chicago at Seattle: DraftKings
