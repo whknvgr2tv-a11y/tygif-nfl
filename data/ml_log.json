@@ -187,7 +187,7 @@
   {
    "week": 2,
    "game": "MIN@CHI",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "MIN",
    "spread_line": 4.5,
    "status": "look back",
@@ -313,7 +313,7 @@
   {
    "week": 3,
    "game": "KC@MIA",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "MIA",
    "spread_line": 10.0,
    "status": "look back",
@@ -341,7 +341,7 @@
   {
    "week": 3,
    "game": "LV@NO",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "NO",
    "spread_line": -3.5,
    "status": "look back",
@@ -355,7 +355,7 @@
   {
    "week": 3,
    "game": "NE@JAX",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "JAX",
    "spread_line": -3.0,
    "status": "look back",
@@ -621,7 +621,7 @@
   {
    "week": 5,
    "game": "HOU@TEN",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "TEN",
    "spread_line": 7.0,
    "status": "live",
@@ -775,7 +775,7 @@
   {
    "week": 6,
    "game": "BUF@LV",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "LV",
    "spread_line": 5.5,
    "status": "live",
@@ -859,7 +859,7 @@
   {
    "week": 7,
    "game": "GB@DET",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "GB",
    "spread_line": 3.5,
    "status": "live",
@@ -873,7 +873,7 @@
   {
    "week": 7,
    "game": "LAR@LV",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "LV",
    "spread_line": 3.5,
    "status": "live",

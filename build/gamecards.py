@@ -48,8 +48,8 @@ def ladder(key, rows_lbl, qb_now):
     out.append(f"<details class='tbdc-games'><summary>See the {last['n']} matching plays</summary><ul>{items}</ul></details>")
     out.append(f"<p class='tbdc-qb'>QB status is not one of the 4 checks: Weeks 1–4 plays weren't scored for it. This week: {qb_now}</p>")
     return ''.join(out)
-LADDER_LBL={True:['All STRONG and LEAN plays','…with 63%+ of the money on the other side','…against a 6+ point favorite holding the money','…line not moved more than 1 pt toward the money'],
-            False:['All STRONG and LEAN plays','…with 63%+ of the money on the other side','…not against a 6+ point favorite holding the money','…line not moved more than 1 pt toward the money']}
+LADDER_LBL={True:['All STRONG and LEAN plays','…with 65%+ of the money on the other side','…against a 6+ point favorite holding the money','…line not moved more than 1 pt toward the money'],
+            False:['All STRONG and LEAN plays','…with 65%+ of the money on the other side','…not against a 6+ point favorite holding the money','…line not moved more than 1 pt toward the money']}
 FOOT="<div class='tbdc-foot'>Covered % leaves out pushes · small samples · not financial advice</div>"
 
 def parse_line(chip):
@@ -75,7 +75,7 @@ def play_card(c, rating, team_call, why_extra, qb_now, qb_box, key, stamp_dk=SNA
     call=f"<div class='tbdc-call'><div><div class='tbdc-k'>The call</div><div class='tbdc-pick'>{team} {sp[our]}</div><div class='tbdc-small'>{cover_text(team,line)}</div></div><div class='tbdc-badge {rating}'>{rating}</div></div>"
     why=[f"Most of the money and most of the bets are on {opp_name}. We bet the other side."]
     if big: why.append(f"{opp_name} is a big favorite ({abs(line):g} points) holding the money, and big favorites the crowd loves have struggled to cover.")
-    why.append(f"DraftKings has {dk[0]}% of the money on {opp_name} (all books {ab[0]}%), above the 63% needed for STRONG.")
+    why.append(f"DraftKings has {dk[0]}% of the money on {opp_name} (all books {ab[0]}%), above the 65% needed for STRONG.")
     why+=why_extra
     whyh="<div class='tbdc-h'>Why</div><ul class='tbdc-why'>"+''.join(f'<li>{w}</li>' for w in why)+"</ul>"
     money=(f"<div class='tbdc-h'>Where the money is <span>{opp} = the crowd side</span></div><div class='tbdc-2'>"

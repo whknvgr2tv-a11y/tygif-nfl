@@ -420,12 +420,12 @@
    "status": "final"
   },
   "closing_rating": {
-   "rating": "STRONG",
-   "type": 1,
+   "rating": "LEAN",
+   "type": 3,
    "line_moved_over_1_toward_money": false,
    "on": "last all-books and DraftKings pulls before kickoff + DraftKings closing line"
   },
-  "matches_locked": false,
+  "matches_locked": true,
   "draftkings_note": "DraftKings closing split not captured: no snapshot in the pre-kickoff slot. Last DraftKings pull before kickoff: Sat Oct 10, 9:56 PM ET (scripts/snapshot.py pull dk_20261011T0156Z.json), Houston 56% of the money.",
   "dk_note_short": "last DraftKings pull Sat Oct 10, 9:56 PM ET; no closer split was saved",
   "all_books": {
