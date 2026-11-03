@@ -1,5 +1,5 @@
 TYGIF'S MODEL · WEEK 8
-Lines as of Mon Nov 2, 5:07 PM CT
+Final
 
 STRONG
   Tennessee +13.5  ·  Tennessee at Cincinnati, Sun Nov 1 · 12:00 PM CT · Final TEN 36–43 · win +$95
@@ -20,17 +20,14 @@ STRONG
 
 LEAN
   Carolina +3.5  ·  Carolina at Green Bay, Thu Oct 29 · 7:15 PM CT · Final CAR 19–27 · loss −$100
-    Type 3 · Crowd leaning · LEAN: 13-15-1, −$282
+    Type 3 · Crowd leaning · LEAN: 14-15-1, −$182
     a: Yes · b: No · c: Yes · d: Yes
   Minnesota +3  ·  Minnesota at Detroit, Sun Nov 1 · 12:00 PM CT · Final MIN 15–19 · loss −$100
-    Type 3 · Crowd leaning · LEAN: 13-15-1, −$282
+    Type 3 · Crowd leaning · LEAN: 14-15-1, −$182
     a: Yes · b: No · c: Yes · d: Yes
-  Chicago +3  ·  Chicago at Seattle, Mon Nov 2 · 7:15 PM CT
-    Type 3 · Crowd leaning · LEAN: 13-15-1, −$282
+  Chicago +3  ·  Chicago at Seattle, Mon Nov 2 · 7:15 PM CT · Final CHI 34–17 · win +$100
+    Type 3 · Crowd leaning · LEAN: 14-15-1, −$182
     a: Yes · b: No · c: Yes · d: Yes
-    Book needs CHI: SEA has 57% of the money vs 54.5% DK break-even (+2.5) — fade sits with the book
-    books need CHI: best BetMGM CHI +3.5 −118 (hold 4.42%, break-even 54.13%) · worst BetRivers +3 −104 (hold 4.67%, break-even 50.98%)
-      BetMGM +3.5 −118 4.42%/54.13% · bet365 +3.5 −120 4.35%/54.55% · Fanatics +3.5 −120 4.35%/54.55% · FanDuel +3.5 −120 4.80%/54.55% · Caesars +3 +101 4.31%/49.75% · DraftKings +3 +100 4.35%/50.00% · BetRivers +3 −104 4.67%/50.98%
 
 MONEYLINE
   STRONG Tennessee ML  ·  Tennessee at Cincinnati, Sun Nov 1 · 12:00 PM CT · Final 36–43 · loss −$100
@@ -47,53 +44,13 @@ MONEYLINE
     Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 56% on GB, book exposed +3.6
   LEAN Minnesota ML  ·  Minnesota at Detroit, Sun Nov 1 · 12:00 PM CT · Final 15–19 · loss −$100
     Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 55% on DET, book exposed +0.5
-  LEAN Chicago ML  ·  Chicago at Seattle, Mon Nov 2 · 7:15 PM CT
-    Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 57% on SEA, book exposed +2.5
+  LEAN Chicago ML  ·  Chicago at Seattle, Mon Nov 2 · 7:15 PM CT · Final 34–17 · win +$140
+    Moneyline · same total-money read · Type 3 · LEAN · Underdog · Same grade as the game (LEAN) — total money 56% on SEA, book exposed +1.5
 
 PASS
   Baltimore at Buffalo
-    Book is safe: BUF 51% is inside DK's win-both range 48.8–53.5% — no book tailwind
-    books need BAL: best bet365 BAL +3.5 −125 (hold 4.16%, break-even 55.56%) · worst DraftKings/BetMGM/Caesars/Fanatics/BetRivers +3 −105 (hold 4.89%, break-even 51.22%)
-      bet365 +3.5 −125 4.16%/55.56% · FanDuel +3 −104 4.86%/50.98% · DraftKings +3 −105 4.50%/51.22% · BetMGM +3 −105 4.50%/51.22% · Caesars +3 −105 4.50%/51.22% · Fanatics +3 −105 4.50%/51.22% · BetRivers +3 −105 4.89%/51.22%
-    books need BUF: best DraftKings/BetMGM/Caesars/Fanatics BUF −3 −115 (hold 4.50%, break-even 53.49%) · worst bet365 −3.5 +105 (hold 4.16%, break-even 48.78%)
-      DraftKings −3 −115 4.50%/53.49% · BetMGM −3 −115 4.50%/53.49% · Caesars −3 −115 4.50%/53.49% · Fanatics −3 −115 4.50%/53.49% · BetRivers −3 −117 4.89%/53.92% · FanDuel −3 −118 4.86%/54.13% · bet365 −3.5 +105 4.16%/48.78%
   Arizona at Dallas
-    Book is safe: DAL 52% is inside DK's win-both range 49.5–54.1% — no book tailwind
-    books need ARI: best bet365 ARI +7.5 −114 (hold 4.51%, break-even 53.27%) · worst BetRivers +7 −106 (hold 5.10%, break-even 51.46%)
-      bet365 +7.5 −114 4.51%/53.27% · BetMGM +7.5 −115 4.50%/53.49% · Fanatics +7.5 −115 4.50%/53.49% · Caesars +7.5 −117 4.67%/53.92% · FanDuel +7.5 −118 4.86%/54.13% · DraftKings +7 −102 4.42%/50.50% · BetRivers +7 −106 5.10%/51.46%
-    books need DAL: best BetRivers DAL −7 −117 (hold 5.10%, break-even 53.92%) · worst bet365 −7.5 −106 (hold 4.51%, break-even 51.46%)
-      BetRivers −7 −117 5.10%/53.92% · DraftKings −7 −118 4.42%/54.13% · Caesars −7.5 −104 4.67%/50.98% · FanDuel −7.5 −104 4.86%/50.98% · BetMGM −7.5 −105 4.50%/51.22% · Fanatics −7.5 −105 4.50%/51.22% · bet365 −7.5 −106 4.51%/51.46%
   Las Vegas at NY Jets
-    Book needs NYJ: LV has 68% of the money vs 51.9% DK break-even (+16.1) — fade sits with the book
-    books need LV: best BetMGM LV +2 −105 (hold 2.38%, break-even 51.22%) · worst DraftKings +1.5 −108 (hold 4.54%, break-even 51.92%)
-      BetMGM +2 −105 2.38%/51.22% · Fanatics +2 −110 4.55%/52.38% · BetRivers +2 −113 4.74%/53.05% · FanDuel +1.5 −105 4.50%/51.22% · bet365 +1.5 −105 4.50%/51.22% · Caesars +1.5 −107 4.53%/51.69% · DraftKings +1.5 −108 4.54%/51.92%
-    books need NYJ: best DraftKings NYJ −1.5 −112 (hold 4.54%, break-even 52.83%) · worst Fanatics −2 −110 (hold 4.55%, break-even 52.38%)
-      DraftKings −1.5 −112 4.54%/52.83% · Caesars −1.5 −113 4.53%/53.05% · FanDuel −1.5 −115 4.50%/53.49% · bet365 −1.5 −115 4.50%/53.49% · BetMGM −2 −105 2.38%/51.22% · BetRivers −2 −108 4.74%/51.92% · Fanatics −2 −110 4.55%/52.38%
   Atlanta at Tampa Bay
-    Book needs TB: ATL has 52% of the money vs 51.2% DK break-even (+0.8) — fade sits with the book
-    books need ATL: best bet365 ATL +2.5 −117 (hold 4.45%, break-even 53.92%) · worst BetRivers +1 −109 (hold 5.15%, break-even 52.15%)
-      bet365 +2.5 −117 4.45%/53.92% · BetMGM +2 −110 4.13%/52.38% · Fanatics +2 −110 4.55%/52.38% · Caesars +1.5 −104 4.28%/50.98% · DraftKings +1.5 −105 4.50%/51.22% · FanDuel +1.5 −105 4.50%/51.22% · BetRivers +1 −109 5.15%/52.15%
-    books need TB: best BetRivers TB −1 −114 (hold 5.15%, break-even 53.27%) · worst bet365 −2.5 −103 (hold 4.45%, break-even 50.74%)
-      BetRivers −1 −114 5.15%/53.27% · Caesars −1.5 −115 4.28%/53.49% · DraftKings −1.5 −115 4.50%/53.49% · FanDuel −1.5 −115 4.50%/53.49% · BetMGM −2 −108 4.13%/51.92% · Fanatics −2 −110 4.55%/52.38% · bet365 −2.5 −103 4.45%/50.74%
   Kansas City at Denver
-    Book needs DEN: KC has 61% of the money vs 50.0% DK break-even (+11) — fade sits with the book
-    books need KC: best BetMGM/Fanatics KC −1 −105 (hold 3.89%, break-even 51.22%) · worst Caesars −1.5 −104 (hold 4.28%, break-even 50.98%)
-      BetMGM −1 −105 3.89%/51.22% · Fanatics −1 −105 4.50%/51.22% · BetRivers −1 −112 4.54%/52.83% · DraftKings −1.5 +100 4.35%/50.00% · bet365 −1.5 +100 4.35%/50.00% · FanDuel −1.5 −102 4.80%/50.50% · Caesars −1.5 −104 4.28%/50.98%
-    books need DEN: best Caesars DEN +1.5 −115 (hold 4.28%, break-even 53.49%) · worst Fanatics +1 −115 (hold 4.50%, break-even 53.49%)
-      Caesars +1.5 −115 4.28%/53.49% · DraftKings +1.5 −120 4.35%/54.55% · bet365 +1.5 −120 4.35%/54.55% · FanDuel +1.5 −120 4.80%/54.55% · BetRivers +1 −108 4.54%/51.92% · BetMGM +1 −112 3.89%/52.83% · Fanatics +1 −115 4.50%/53.49%
   Philadelphia at Washington
-    Book needs WSH: PHI has 59% of the money vs 51.9% DK break-even (+7.1) — fade sits with the book
-    books need PHI: best DraftKings PHI +6 −108 (hold 4.54%, break-even 51.92%) · worst bet365/Fanatics +5.5 −105 (hold 4.50%, break-even 51.22%)
-      DraftKings +6 −108 4.54%/51.92% · Caesars +6 −109 4.34%/52.15% · BetMGM +6 −110 4.13%/52.38% · BetRivers +6 −112 4.75%/52.83% · FanDuel +5.5 −100 4.72%/50.00% · bet365 +5.5 −105 4.50%/51.22% · Fanatics +5.5 −105 4.50%/51.22%
-    books need WSH: best bet365/Fanatics WSH −5.5 −115 (hold 4.50%, break-even 53.49%) · worst DraftKings −6 −112 (hold 4.54%, break-even 52.83%)
-      bet365 −5.5 −115 4.50%/53.49% · Fanatics −5.5 −115 4.50%/53.49% · FanDuel −5.5 −122 4.72%/54.95% · BetMGM −6 −108 4.13%/51.92% · BetRivers −6 −109 4.75%/52.15% · Caesars −6 −110 4.34%/52.38% · DraftKings −6 −112 4.54%/52.83%
-
-Agreement: all-books money (ScoresAndOdds) primary, DraftKings Network handle % secondary (same side). Bets % and SportsBettingDime are not used.
-  agreement book for Carolina at Green Bay: DraftKings
-  agreement book for Tennessee at Cincinnati: DraftKings
-  agreement book for Minnesota at Detroit: DraftKings
-  agreement book for Cleveland at Pittsburgh: DraftKings
-  agreement book for Indianapolis at Jacksonville: DraftKings
-  agreement book for LA Chargers at LA Rams: DraftKings
-  agreement book for New England at Miami: DraftKings
-  agreement book for Chicago at Seattle: DraftKings

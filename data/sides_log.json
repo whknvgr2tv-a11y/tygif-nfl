@@ -3560,13 +3560,13 @@
    "role": "fade",
    "rating": "LEAN",
    "type": 3,
-   "money_pct": 43,
+   "money_pct": 44,
    "spread_line": 3.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "W",
+   "sp_usd": 100.0,
    "fd": "Dog",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "W",
+   "ml_usd": 140.0
   },
   {
    "week": 8,
@@ -3575,13 +3575,13 @@
    "role": "money",
    "rating": "LEAN",
    "type": 3,
-   "money_pct": 57,
+   "money_pct": 56,
    "spread_line": -3.0,
-   "sp_res": null,
-   "sp_usd": null,
+   "sp_res": "L",
+   "sp_usd": -100.0,
    "fd": "Fav",
-   "ml_res": null,
-   "ml_usd": null
+   "ml_res": "L",
+   "ml_usd": -100.0
   }
  ]
 }

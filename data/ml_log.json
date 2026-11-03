@@ -1016,10 +1016,13 @@
    "rating": "LEAN",
    "side": "CHI",
    "spread_line": 3.0,
-   "status": "preview",
+   "status": "live",
    "espn_event": "401873036",
-   "price": 142,
-   "fd": "Dog"
+   "price": 140,
+   "fd": "Dog",
+   "score": "34-17",
+   "result": "W",
+   "profit": 140.0
   }
  ]
 }
