@@ -1054,7 +1054,7 @@
    "spread_line": 6.0,
    "status": "preview",
    "espn_event": "401873040",
-   "price": 225,
+   "price": 205,
    "fd": "Dog"
   },
   {
@@ -1087,7 +1087,7 @@
    "spread_line": 3.5,
    "status": "preview",
    "espn_event": "401873044",
-   "price": 142,
+   "price": 140,
    "fd": "Dog"
   },
   {
@@ -1125,13 +1125,13 @@
   },
   {
    "week": 9,
-   "game": "ARI@SEA",
-   "rating": "LEAN",
-   "side": "ARI",
-   "spread_line": 12.5,
+   "game": "TB@CHI",
+   "rating": "STRONG",
+   "side": "TB",
+   "spread_line": 6.0,
    "status": "preview",
-   "espn_event": "401873048",
-   "price": 550,
+   "espn_event": "401873050",
+   "price": 235,
    "fd": "Dog"
   },
   {

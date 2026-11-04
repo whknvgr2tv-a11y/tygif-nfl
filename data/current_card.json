@@ -1,6 +1,6 @@
 {
  "week": 9,
- "posted_at_et": "Wed Nov 4, 9:06 AM ET",
+ "posted_at_et": "Wed Nov 4, 12:00 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -85,13 +85,13 @@
    "kickoff_utc": "2026-11-08T21:05:00Z"
   },
   {
-   "game": "ARI@SEA",
-   "team": "ARI",
-   "name": "Arizona",
-   "nick": "Cardinals",
-   "rating": "LEAN",
-   "line": "+12.5",
-   "kickoff_utc": "2026-11-08T21:25:00Z"
+   "game": "TB@CHI",
+   "team": "TB",
+   "name": "Tampa Bay",
+   "nick": "Buccaneers",
+   "rating": "STRONG",
+   "line": "+6",
+   "kickoff_utc": "2026-11-09T01:20:00Z"
   },
   {
    "game": "BUF@MIN",
