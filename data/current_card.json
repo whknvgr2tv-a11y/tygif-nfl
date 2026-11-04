@@ -1,6 +1,6 @@
 {
  "week": 9,
- "posted_at_et": "Tue Nov 3, 9:07 PM ET",
+ "posted_at_et": "Wed Nov 4, 9:06 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -83,6 +83,15 @@
    "rating": "STRONG",
    "line": "+4.5",
    "kickoff_utc": "2026-11-08T21:05:00Z"
+  },
+  {
+   "game": "ARI@SEA",
+   "team": "ARI",
+   "name": "Arizona",
+   "nick": "Cardinals",
+   "rating": "LEAN",
+   "line": "+12.5",
+   "kickoff_utc": "2026-11-08T21:25:00Z"
   },
   {
    "game": "BUF@MIN",

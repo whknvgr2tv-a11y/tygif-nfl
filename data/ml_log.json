@@ -1043,7 +1043,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873038",
-   "price": 136,
+   "price": 130,
    "fd": "Dog"
   },
   {
@@ -1065,7 +1065,7 @@
    "spread_line": 9.5,
    "status": "preview",
    "espn_event": "401873045",
-   "price": 380,
+   "price": 425,
    "fd": "Dog"
   },
   {
@@ -1076,7 +1076,7 @@
    "spread_line": 7.0,
    "status": "preview",
    "espn_event": "401873042",
-   "price": 295,
+   "price": 280,
    "fd": "Dog"
   },
   {
@@ -1098,7 +1098,7 @@
    "spread_line": 5.5,
    "status": "preview",
    "espn_event": "401873043",
-   "price": 195,
+   "price": 190,
    "fd": "Dog"
   },
   {
@@ -1109,7 +1109,7 @@
    "spread_line": 2.5,
    "status": "preview",
    "espn_event": "401873041",
-   "price": 120,
+   "price": 124,
    "fd": "Dog"
   },
   {
@@ -1121,6 +1121,17 @@
    "status": "preview",
    "espn_event": "401873046",
    "price": 180,
+   "fd": "Dog"
+  },
+  {
+   "week": 9,
+   "game": "ARI@SEA",
+   "rating": "LEAN",
+   "side": "ARI",
+   "spread_line": 12.5,
+   "status": "preview",
+   "espn_event": "401873048",
+   "price": 550,
    "fd": "Dog"
   },
   {
