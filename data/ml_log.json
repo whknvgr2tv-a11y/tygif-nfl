@@ -1023,6 +1023,116 @@
    "score": "34-17",
    "result": "W",
    "profit": 140.0
+  },
+  {
+   "week": 9,
+   "game": "JAX@BAL",
+   "rating": "STRONG",
+   "side": "BAL",
+   "spread_line": 10.0,
+   "status": "preview",
+   "espn_event": "401873037",
+   "price": 400,
+   "fd": "Dog"
+  },
+  {
+   "week": 9,
+   "game": "CIN@ATL",
+   "rating": "LEAN",
+   "side": "ATL",
+   "spread_line": 3.0,
+   "status": "preview",
+   "espn_event": "401873038",
+   "price": 136,
+   "fd": "Dog"
+  },
+  {
+   "week": 9,
+   "game": "DAL@IND",
+   "rating": "STRONG",
+   "side": "IND",
+   "spread_line": 6.0,
+   "status": "preview",
+   "espn_event": "401873040",
+   "price": 225,
+   "fd": "Dog"
+  },
+  {
+   "week": 9,
+   "game": "NYJ@KC",
+   "rating": "STRONG",
+   "side": "NYJ",
+   "spread_line": 9.5,
+   "status": "preview",
+   "espn_event": "401873045",
+   "price": 380,
+   "fd": "Dog"
+  },
+  {
+   "week": 9,
+   "game": "DET@MIA",
+   "rating": "STRONG",
+   "side": "MIA",
+   "spread_line": 7.0,
+   "status": "preview",
+   "espn_event": "401873042",
+   "price": 295,
+   "fd": "Dog"
+  },
+  {
+   "week": 9,
+   "game": "NYG@PHI",
+   "rating": "STRONG",
+   "side": "PHI",
+   "spread_line": 3.5,
+   "status": "preview",
+   "espn_event": "401873044",
+   "price": 142,
+   "fd": "Dog"
+  },
+  {
+   "week": 9,
+   "game": "LAR@WSH",
+   "rating": "STRONG",
+   "side": "WSH",
+   "spread_line": 5.5,
+   "status": "preview",
+   "espn_event": "401873043",
+   "price": 195,
+   "fd": "Dog"
+  },
+  {
+   "week": 9,
+   "game": "DEN@CAR",
+   "rating": "STRONG",
+   "side": "CAR",
+   "spread_line": 2.5,
+   "status": "preview",
+   "espn_event": "401873041",
+   "price": 120,
+   "fd": "Dog"
+  },
+  {
+   "week": 9,
+   "game": "HOU@LAC",
+   "rating": "STRONG",
+   "side": "LAC",
+   "spread_line": 4.5,
+   "status": "preview",
+   "espn_event": "401873046",
+   "price": 180,
+   "fd": "Dog"
+  },
+  {
+   "week": 9,
+   "game": "BUF@MIN",
+   "rating": "STRONG",
+   "side": "MIN",
+   "spread_line": 3.5,
+   "status": "preview",
+   "espn_event": "401873051",
+   "price": 150,
+   "fd": "Dog"
   }
  ]
 }

@@ -1,0 +1,227 @@
+{
+ "bengals-falcons-week-9-2026": {
+  "team": "CIN",
+  "other": "ATL",
+  "books": {
+   "2": {
+    "line": -3.5,
+    "at": "11/01 11:41 PM"
+   },
+   "3": {
+    "line": -3.5,
+    "at": "11/01 09:40 PM"
+   }
+  },
+  "avg": -3.5
+ },
+ "bills-vikings-week-9-2026": {
+  "team": "BUF",
+  "other": "MIN",
+  "books": {
+   "2": {
+    "line": -3.0,
+    "at": "11/01 09:41 PM"
+   },
+   "3": {
+    "line": -2.5,
+    "at": "11/01 09:41 PM"
+   }
+  },
+  "avg": -2.75
+ },
+ "broncos-panthers-week-9-2026": {
+  "team": "DEN",
+  "other": "CAR",
+  "books": {
+   "2": {
+    "line": -3.0,
+    "at": "11/01 10:11 PM"
+   },
+   "3": {
+    "line": -2.5,
+    "at": "11/01 10:11 PM"
+   }
+  },
+  "avg": -2.75
+ },
+ "browns-saints-week-9-2026": {
+  "team": "NO",
+  "other": "CLE",
+  "books": {
+   "2": {
+    "line": -3.0,
+    "at": "11/01 11:41 PM"
+   },
+   "3": {
+    "line": -2.5,
+    "at": "11/01 10:11 PM"
+   }
+  },
+  "avg": -2.75
+ },
+ "buccaneers-bears-week-9-2026": {
+  "team": "CHI",
+  "other": "TB",
+  "books": {
+   "2": {
+    "line": -6.0,
+    "at": "11/01 10:41 PM"
+   },
+   "3": {
+    "line": -6.5,
+    "at": "11/01 09:41 PM"
+   }
+  },
+  "avg": -6.25
+ },
+ "cardinals-seahawks-week-9-2026": {
+  "team": "SEA",
+  "other": "ARI",
+  "books": {
+   "2": {
+    "line": -11.0,
+    "at": "11/01 10:10 PM"
+   },
+   "3": {
+    "line": -11.5,
+    "at": "11/01 09:40 PM"
+   }
+  },
+  "avg": -11.25
+ },
+ "cowboys-colts-week-9-2026": {
+  "team": "DAL",
+  "other": "IND",
+  "books": {
+   "2": {
+    "line": -6.0,
+    "at": "11/01 09:40 PM"
+   },
+   "3": {
+    "line": -5.5,
+    "at": "11/01 09:40 PM"
+   }
+  },
+  "avg": -5.75
+ },
+ "giants-eagles-week-9-2026": {
+  "team": "NYG",
+  "other": "PHI",
+  "books": {
+   "2": {
+    "line": -2.5,
+    "at": "11/01 07:10 PM"
+   },
+   "3": {
+    "line": -2.5,
+    "at": "11/01 08:10 PM"
+   }
+  },
+  "avg": -2.5
+ },
+ "jaguars-ravens-week-9-2026": {
+  "team": "JAX",
+  "other": "BAL",
+  "books": {
+   "2": {
+    "line": -9.0,
+    "at": "11/01 11:41 PM"
+   },
+   "3": {
+    "line": -8.5,
+    "at": "11/01 09:40 PM"
+   }
+  },
+  "avg": -8.75
+ },
+ "jets-chiefs-week-9-2026": {
+  "team": "KC",
+  "other": "NYJ",
+  "books": {
+   "2": {
+    "line": -9.5,
+    "at": "11/01 11:41 PM"
+   },
+   "3": {
+    "line": -9.5,
+    "at": "11/01 10:41 PM"
+   }
+  },
+  "avg": -9.5
+ },
+ "lions-dolphins-week-9-2026": {
+  "team": "DET",
+  "other": "MIA",
+  "books": {
+   "2": {
+    "line": -7.0,
+    "at": "11/01 11:41 PM"
+   },
+   "3": {
+    "line": -6.5,
+    "at": "11/01 08:40 PM"
+   }
+  },
+  "avg": -6.75
+ },
+ "packers-patriots-week-9-2026": {
+  "team": "NE",
+  "other": "GB",
+  "books": {
+   "2": {
+    "line": -2.5,
+    "at": "11/01 11:41 PM"
+   },
+   "3": {
+    "line": -2.5,
+    "at": "11/01 09:40 PM"
+   }
+  },
+  "avg": -2.5
+ },
+ "raiders-49ers-week-9-2026": {
+  "team": "SF",
+  "other": "LV",
+  "books": {
+   "2": {
+    "line": -9.5,
+    "at": "11/01 08:41 PM"
+   },
+   "3": {
+    "line": -9.5,
+    "at": "11/01 09:10 PM"
+   }
+  },
+  "avg": -9.5
+ },
+ "rams-commanders-week-9-2026": {
+  "team": "LAR",
+  "other": "WSH",
+  "books": {
+   "2": {
+    "line": -6.0,
+    "at": "11/01 07:10 PM"
+   },
+   "3": {
+    "line": -5.5,
+    "at": "11/01 07:10 PM"
+   }
+  },
+  "avg": -5.75
+ },
+ "texans-chargers-week-9-2026": {
+  "team": "HOU",
+  "other": "LAC",
+  "books": {
+   "2": {
+    "line": -5.0,
+    "at": "11/01 10:11 PM"
+   },
+   "3": {
+    "line": -4.5,
+    "at": "11/01 09:10 PM"
+   }
+  },
+  "avg": -4.75
+ }
+}
