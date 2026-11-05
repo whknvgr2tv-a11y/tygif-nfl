@@ -1032,7 +1032,7 @@
    "spread_line": 10.0,
    "status": "preview",
    "espn_event": "401873037",
-   "price": 400,
+   "price": 380,
    "fd": "Dog"
   },
   {
@@ -1043,7 +1043,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873038",
-   "price": 130,
+   "price": 140,
    "fd": "Dog"
   },
   {
@@ -1051,10 +1051,10 @@
    "game": "DAL@IND",
    "rating": "STRONG",
    "side": "IND",
-   "spread_line": 6.0,
+   "spread_line": 5.5,
    "status": "preview",
    "espn_event": "401873040",
-   "price": 205,
+   "price": 190,
    "fd": "Dog"
   },
   {
@@ -1062,7 +1062,7 @@
    "game": "NYJ@KC",
    "rating": "STRONG",
    "side": "NYJ",
-   "spread_line": 9.5,
+   "spread_line": 10.0,
    "status": "preview",
    "espn_event": "401873045",
    "price": 425,
@@ -1095,10 +1095,10 @@
    "game": "LAR@WSH",
    "rating": "STRONG",
    "side": "WSH",
-   "spread_line": 5.5,
+   "spread_line": 4.5,
    "status": "preview",
    "espn_event": "401873043",
-   "price": 190,
+   "price": 185,
    "fd": "Dog"
   },
   {
@@ -1109,7 +1109,7 @@
    "spread_line": 2.5,
    "status": "preview",
    "espn_event": "401873041",
-   "price": 124,
+   "price": 130,
    "fd": "Dog"
   },
   {
@@ -1131,7 +1131,7 @@
    "spread_line": 6.0,
    "status": "preview",
    "espn_event": "401873050",
-   "price": 235,
+   "price": 240,
    "fd": "Dog"
   },
   {
@@ -1139,10 +1139,10 @@
    "game": "BUF@MIN",
    "rating": "STRONG",
    "side": "MIN",
-   "spread_line": 3.5,
+   "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873051",
-   "price": 150,
+   "price": 142,
    "fd": "Dog"
   }
  ]

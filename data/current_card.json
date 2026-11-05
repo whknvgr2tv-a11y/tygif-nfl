@@ -1,6 +1,6 @@
 {
  "week": 9,
- "posted_at_et": "Wed Nov 4, 12:00 PM ET",
+ "posted_at_et": "Thu Nov 5, 3:03 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -27,7 +27,7 @@
    "name": "Indianapolis",
    "nick": "Colts",
    "rating": "STRONG",
-   "line": "+6",
+   "line": "+5.5",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {
@@ -36,7 +36,7 @@
    "name": "NY Jets",
    "nick": "Jets",
    "rating": "STRONG",
-   "line": "+9.5",
+   "line": "+10",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {
@@ -63,7 +63,7 @@
    "name": "Washington",
    "nick": "Commanders",
    "rating": "STRONG",
-   "line": "+5.5",
+   "line": "+4.5",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {
@@ -99,7 +99,7 @@
    "name": "Minnesota",
    "nick": "Vikings",
    "rating": "STRONG",
-   "line": "+3.5",
+   "line": "+3",
    "kickoff_utc": "2026-11-10T01:15:00Z"
   }
  ]
