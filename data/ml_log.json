@@ -1032,7 +1032,7 @@
    "spread_line": 10.0,
    "status": "preview",
    "espn_event": "401873037",
-   "price": 380,
+   "price": 400,
    "fd": "Dog"
   },
   {
@@ -1087,7 +1087,7 @@
    "spread_line": 3.5,
    "status": "preview",
    "espn_event": "401873044",
-   "price": 140,
+   "price": 136,
    "fd": "Dog"
   },
   {
@@ -1117,10 +1117,10 @@
    "game": "HOU@LAC",
    "rating": "STRONG",
    "side": "LAC",
-   "spread_line": 4.5,
+   "spread_line": 6.0,
    "status": "preview",
    "espn_event": "401873046",
-   "price": 180,
+   "price": 195,
    "fd": "Dog"
   },
   {

@@ -1,6 +1,6 @@
 {
  "week": 9,
- "posted_at_et": "Thu Nov 5, 3:03 PM ET",
+ "posted_at_et": "Thu Nov 5, 6:08 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -81,7 +81,7 @@
    "name": "LA Chargers",
    "nick": "Chargers",
    "rating": "STRONG",
-   "line": "+4.5",
+   "line": "+6",
    "kickoff_utc": "2026-11-08T21:05:00Z"
   },
   {
