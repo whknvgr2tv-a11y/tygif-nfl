@@ -1,6 +1,6 @@
 {
  "week": 9,
- "posted_at_et": "Thu Nov 5, 11:05 PM ET",
+ "posted_at_et": "Fri Nov 6, 9:14 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -36,7 +36,7 @@
    "name": "NY Jets",
    "nick": "Jets",
    "rating": "STRONG",
-   "line": "+10",
+   "line": "+9.5",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {
@@ -45,7 +45,7 @@
    "name": "Miami",
    "nick": "Dolphins",
    "rating": "STRONG",
-   "line": "+7",
+   "line": "+6.5",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {
@@ -53,7 +53,7 @@
    "team": "PHI",
    "name": "Philadelphia",
    "nick": "Eagles",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "line": "+3.5",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
@@ -83,6 +83,15 @@
    "rating": "STRONG",
    "line": "+6",
    "kickoff_utc": "2026-11-08T21:05:00Z"
+  },
+  {
+   "game": "ARI@SEA",
+   "team": "ARI",
+   "name": "Arizona",
+   "nick": "Cardinals",
+   "rating": "LEAN",
+   "line": "+8.5",
+   "kickoff_utc": "2026-11-08T21:25:00Z"
   },
   {
    "game": "TB@CHI",

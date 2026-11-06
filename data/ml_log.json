@@ -1065,7 +1065,7 @@
    "game": "NYJ@KC",
    "rating": "STRONG",
    "side": "NYJ",
-   "spread_line": 10.0,
+   "spread_line": 9.5,
    "status": "preview",
    "espn_event": "401873045",
    "price": 425,
@@ -1076,16 +1076,16 @@
    "game": "DET@MIA",
    "rating": "STRONG",
    "side": "MIA",
-   "spread_line": 7.0,
+   "spread_line": 6.5,
    "status": "preview",
    "espn_event": "401873042",
-   "price": 270,
+   "price": 260,
    "fd": "Dog"
   },
   {
    "week": 9,
    "game": "NYG@PHI",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "PHI",
    "spread_line": 3.5,
    "status": "preview",
@@ -1128,6 +1128,17 @@
   },
   {
    "week": 9,
+   "game": "ARI@SEA",
+   "rating": "LEAN",
+   "side": "ARI",
+   "spread_line": 8.5,
+   "status": "preview",
+   "espn_event": "401873048",
+   "price": 350,
+   "fd": "Dog"
+  },
+  {
+   "week": 9,
    "game": "TB@CHI",
    "rating": "STRONG",
    "side": "TB",
@@ -1145,7 +1156,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873051",
-   "price": 145,
+   "price": 150,
    "fd": "Dog"
   }
  ]
