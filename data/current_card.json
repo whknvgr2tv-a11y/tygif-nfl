@@ -1,6 +1,6 @@
 {
  "week": 9,
- "posted_at_et": "Fri Nov 6, 9:14 AM ET",
+ "posted_at_et": "Fri Nov 6, 12:03 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -45,7 +45,7 @@
    "name": "Miami",
    "nick": "Dolphins",
    "rating": "STRONG",
-   "line": "+6.5",
+   "line": "+7",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {

@@ -1068,7 +1068,7 @@
    "spread_line": 9.5,
    "status": "preview",
    "espn_event": "401873045",
-   "price": 425,
+   "price": 410,
    "fd": "Dog"
   },
   {
@@ -1076,7 +1076,7 @@
    "game": "DET@MIA",
    "rating": "STRONG",
    "side": "MIA",
-   "spread_line": 6.5,
+   "spread_line": 7.0,
    "status": "preview",
    "espn_event": "401873042",
    "price": 260,
@@ -1101,7 +1101,7 @@
    "spread_line": 4.5,
    "status": "preview",
    "espn_event": "401873043",
-   "price": 185,
+   "price": 180,
    "fd": "Dog"
   },
   {
@@ -1134,7 +1134,7 @@
    "spread_line": 8.5,
    "status": "preview",
    "espn_event": "401873048",
-   "price": 350,
+   "price": 360,
    "fd": "Dog"
   },
   {
@@ -1145,7 +1145,7 @@
    "spread_line": 6.0,
    "status": "preview",
    "espn_event": "401873050",
-   "price": 240,
+   "price": 235,
    "fd": "Dog"
   },
   {
@@ -1156,7 +1156,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873051",
-   "price": 150,
+   "price": 145,
    "fd": "Dog"
   }
  ]
