@@ -1029,10 +1029,10 @@
    "game": "JAX@BAL",
    "rating": "STRONG",
    "side": "BAL",
-   "spread_line": 10.0,
+   "spread_line": 9.5,
    "status": "preview",
    "espn_event": "401873037",
-   "price": 400,
+   "price": 350,
    "fd": "Dog"
   },
   {
@@ -1043,7 +1043,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873038",
-   "price": 140,
+   "price": 142,
    "fd": "Dog"
   },
   {
