@@ -1076,7 +1076,7 @@
    "game": "DET@MIA",
    "rating": "STRONG",
    "side": "MIA",
-   "spread_line": 7.0,
+   "spread_line": 6.5,
    "status": "preview",
    "espn_event": "401873042",
    "price": 260,
@@ -1087,10 +1087,10 @@
    "game": "NYG@PHI",
    "rating": "LEAN",
    "side": "PHI",
-   "spread_line": 3.5,
+   "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873044",
-   "price": 136,
+   "price": 130,
    "fd": "Dog"
   },
   {
