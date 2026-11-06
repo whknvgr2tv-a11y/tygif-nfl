@@ -1027,9 +1027,9 @@
   {
    "week": 9,
    "game": "JAX@BAL",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "side": "BAL",
-   "spread_line": 9.5,
+   "spread_line": 8.5,
    "status": "preview",
    "espn_event": "401873037",
    "price": 350,
@@ -1076,7 +1076,7 @@
    "spread_line": 7.0,
    "status": "preview",
    "espn_event": "401873042",
-   "price": 280,
+   "price": 270,
    "fd": "Dog"
   },
   {
