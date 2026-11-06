@@ -1,0 +1,97 @@
+{
+ "fetched_utc": "2026-11-01T20:58:03+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Moneyline&tb_page=N",
+ "market": "moneyline",
+ "games": [
+  {
+   "matchup": "LA Chargers @ LA Rams",
+   "kickoff_local": "11/1, 04:05PM",
+   "spread": [
+    {
+     "side": "LA Rams",
+     "odds": "\u2212290",
+     "handle_pct": 78,
+     "bets_pct": 92
+    },
+    {
+     "side": "LA Chargers",
+     "odds": "+235",
+     "handle_pct": 22,
+     "bets_pct": 8
+    }
+   ]
+  },
+  {
+   "matchup": "NE Patriots @ MIA Dolphins",
+   "kickoff_local": "11/1, 04:25PM",
+   "spread": [
+    {
+     "side": "MIA Dolphins",
+     "odds": "+275",
+     "handle_pct": 11,
+     "bets_pct": 6
+    },
+    {
+     "side": "NE Patriots",
+     "odds": "\u2212345",
+     "handle_pct": 89,
+     "bets_pct": 94
+    }
+   ]
+  },
+  {
+   "matchup": "KC Chiefs @ DEN Broncos",
+   "kickoff_local": "11/1, 04:25PM",
+   "spread": [
+    {
+     "side": "DEN Broncos",
+     "odds": "\u2212112",
+     "handle_pct": 53,
+     "bets_pct": 36
+    },
+    {
+     "side": "KC Chiefs",
+     "odds": "\u2212108",
+     "handle_pct": 47,
+     "bets_pct": 64
+    }
+   ]
+  },
+  {
+   "matchup": "PHI Eagles @ WAS Commanders",
+   "kickoff_local": "11/1, 08:20PM",
+   "spread": [
+    {
+     "side": "WAS Commanders",
+     "odds": "\u2212270",
+     "handle_pct": 55,
+     "bets_pct": 80
+    },
+    {
+     "side": "PHI Eagles",
+     "odds": "+220",
+     "handle_pct": 45,
+     "bets_pct": 20
+    }
+   ]
+  },
+  {
+   "matchup": "CHI Bears @ SEA Seahawks",
+   "kickoff_local": "11/2, 08:20PM",
+   "spread": [
+    {
+     "side": "SEA Seahawks",
+     "odds": "\u2212166",
+     "handle_pct": 31,
+     "bets_pct": 56
+    },
+    {
+     "side": "CHI Bears",
+     "odds": "+140",
+     "handle_pct": 69,
+     "bets_pct": 44
+    }
+   ]
+  }
+ ]
+}

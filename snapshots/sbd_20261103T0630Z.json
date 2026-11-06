@@ -1,0 +1,737 @@
+{
+ "stamp": "20261103T0630Z",
+ "source": "sportsbettingdime (SAO echo; evidence only)",
+ "games": [
+  {
+   "away": "JAC",
+   "home": "BAL",
+   "scheduled": "2026-11-06T01:15:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:46.115Z",
+   "spread_money": [
+    70.61,
+    29.39
+   ],
+   "spread_bets": [
+    68.26,
+    31.74
+   ],
+   "ml_money": [
+    85.66,
+    14.34
+   ],
+   "ml_bets": [
+    73.4,
+    26.6
+   ],
+   "all_money": [
+    78.1,
+    21.9
+   ]
+  },
+  {
+   "away": "CIN",
+   "home": "ATL",
+   "scheduled": "2026-11-08T14:30:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:48.313Z",
+   "spread_money": [
+    25.16,
+    74.84
+   ],
+   "spread_bets": [
+    27.81,
+    72.19
+   ],
+   "ml_money": [
+    84.02,
+    15.98
+   ],
+   "ml_bets": [
+    88.35,
+    11.65
+   ],
+   "all_money": [
+    54.6,
+    45.4
+   ]
+  },
+  {
+   "away": "DEN",
+   "home": "CAR",
+   "scheduled": "2026-11-08T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:46.861Z",
+   "spread_money": [
+    76.49,
+    23.51
+   ],
+   "spread_bets": [
+    73.09,
+    26.91
+   ],
+   "ml_money": [
+    94.47,
+    5.53
+   ],
+   "ml_bets": [
+    87.4,
+    12.6
+   ],
+   "all_money": [
+    85.5,
+    14.5
+   ]
+  },
+  {
+   "away": "DAL",
+   "home": "IND",
+   "scheduled": "2026-11-08T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:49.184Z",
+   "spread_money": [
+    84.94,
+    15.06
+   ],
+   "spread_bets": [
+    71.81,
+    28.19
+   ],
+   "ml_money": [
+    86.08,
+    13.92
+   ],
+   "ml_bets": [
+    88.72,
+    11.28
+   ],
+   "all_money": [
+    85.5,
+    14.5
+   ]
+  },
+  {
+   "away": "NYJ",
+   "home": "KC",
+   "scheduled": "2026-11-08T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:46.630Z",
+   "spread_money": [
+    54.62,
+    45.38
+   ],
+   "spread_bets": [
+    36.42,
+    63.58
+   ],
+   "ml_money": [
+    2.05,
+    97.95
+   ],
+   "ml_bets": [
+    3.51,
+    96.49
+   ],
+   "all_money": [
+    28.3,
+    71.7
+   ]
+  },
+  {
+   "away": "DET",
+   "home": "MIA",
+   "scheduled": "2026-11-08T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:44.661Z",
+   "spread_money": [
+    81.03,
+    18.97
+   ],
+   "spread_bets": [
+    80.51,
+    19.49
+   ],
+   "ml_money": [
+    99.11,
+    0.89
+   ],
+   "ml_bets": [
+    95.6,
+    4.4
+   ],
+   "all_money": [
+    90.1,
+    9.9
+   ]
+  },
+  {
+   "away": "CLE",
+   "home": "NO",
+   "scheduled": "2026-11-08T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:45.355Z",
+   "spread_money": [
+    60.89,
+    39.11
+   ],
+   "spread_bets": [
+    66.98,
+    33.02
+   ],
+   "ml_money": [
+    57.88,
+    42.12
+   ],
+   "ml_bets": [
+    32.14,
+    67.86
+   ],
+   "all_money": [
+    59.4,
+    40.6
+   ]
+  },
+  {
+   "away": "NYG",
+   "home": "PHI",
+   "scheduled": "2026-11-08T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:43.744Z",
+   "spread_money": [
+    80.93,
+    19.07
+   ],
+   "spread_bets": [
+    58.08,
+    41.92
+   ],
+   "ml_money": [
+    67.73,
+    32.27
+   ],
+   "ml_bets": [
+    74.31,
+    25.69
+   ],
+   "all_money": [
+    74.3,
+    25.7
+   ]
+  },
+  {
+   "away": "LA",
+   "home": "WAS",
+   "scheduled": "2026-11-08T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:45.072Z",
+   "spread_money": [
+    77.41,
+    22.59
+   ],
+   "spread_bets": [
+    60.91,
+    39.09
+   ],
+   "ml_money": [
+    93.39,
+    6.61
+   ],
+   "ml_bets": [
+    90.66,
+    9.34
+   ],
+   "all_money": [
+    85.4,
+    14.6
+   ]
+  },
+  {
+   "away": "HOU",
+   "home": "LAC",
+   "scheduled": "2026-11-08T21:05:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:46.685Z",
+   "spread_money": [
+    90.52,
+    9.48
+   ],
+   "spread_bets": [
+    71.36,
+    28.64
+   ],
+   "ml_money": [
+    86.64,
+    13.36
+   ],
+   "ml_bets": [
+    87.36,
+    12.64
+   ],
+   "all_money": [
+    88.6,
+    11.4
+   ]
+  },
+  {
+   "away": "LV",
+   "home": "SF",
+   "scheduled": "2026-11-08T21:25:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:48.673Z",
+   "spread_money": [
+    60.27,
+    39.73
+   ],
+   "spread_bets": [
+    54.75,
+    45.25
+   ],
+   "ml_money": [
+    4.59,
+    95.41
+   ],
+   "ml_bets": [
+    3.96,
+    96.04
+   ],
+   "all_money": [
+    32.4,
+    67.6
+   ]
+  },
+  {
+   "away": "GB",
+   "home": "NE",
+   "scheduled": "2026-11-08T21:25:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:47.344Z",
+   "spread_money": [
+    57.29,
+    42.71
+   ],
+   "spread_bets": [
+    67.97,
+    32.03
+   ],
+   "ml_money": [
+    49.42,
+    50.58
+   ],
+   "ml_bets": [
+    28.69,
+    71.31
+   ],
+   "all_money": [
+    53.4,
+    46.6
+   ]
+  },
+  {
+   "away": "ARI",
+   "home": "SEA",
+   "scheduled": "2026-11-08T21:25:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:45.719Z",
+   "spread_money": [
+    72.39,
+    27.61
+   ],
+   "spread_bets": [
+    50.32,
+    49.68
+   ],
+   "ml_money": [
+    5.7,
+    94.3
+   ],
+   "ml_bets": [
+    3.64,
+    96.36
+   ],
+   "all_money": [
+    39.0,
+    61.0
+   ]
+  },
+  {
+   "away": "TB",
+   "home": "CHI",
+   "scheduled": "2026-11-09T01:20:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:45.633Z",
+   "spread_money": [
+    39.47,
+    60.53
+   ],
+   "spread_bets": [
+    46.9,
+    53.1
+   ],
+   "ml_money": [
+    7.92,
+    92.08
+   ],
+   "ml_bets": [
+    8.0,
+    92.0
+   ],
+   "all_money": [
+    23.7,
+    76.3
+   ]
+  },
+  {
+   "away": "BUF",
+   "home": "MIN",
+   "scheduled": "2026-11-10T01:15:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:47.765Z",
+   "spread_money": [
+    79.69,
+    20.31
+   ],
+   "spread_bets": [
+    59.22,
+    40.78
+   ],
+   "ml_money": [
+    90.19,
+    9.81
+   ],
+   "ml_bets": [
+    87.53,
+    12.47
+   ],
+   "all_money": [
+    84.9,
+    15.1
+   ]
+  },
+  {
+   "away": "WAS",
+   "home": "NYG",
+   "scheduled": "2026-11-13T01:15:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  },
+  {
+   "away": "NE",
+   "home": "DET",
+   "scheduled": "2026-11-15T14:30:00+00:00",
+   "source": "sbd",
+   "updated": "2026-11-03T05:05:44.616Z",
+   "spread_money": [
+    66.89,
+    33.11
+   ],
+   "spread_bets": [
+    94.22,
+    5.78
+   ],
+   "ml_money": [
+    53.53,
+    46.47
+   ],
+   "ml_bets": [
+    45.24,
+    54.76
+   ],
+   "all_money": [
+    60.2,
+    39.8
+   ]
+  },
+  {
+   "away": "KC",
+   "home": "ATL",
+   "scheduled": "2026-11-15T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  },
+  {
+   "away": "HOU",
+   "home": "CLE",
+   "scheduled": "2026-11-15T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  },
+  {
+   "away": "MIN",
+   "home": "GB",
+   "scheduled": "2026-11-15T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  },
+  {
+   "away": "MIA",
+   "home": "IND",
+   "scheduled": "2026-11-15T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  },
+  {
+   "away": "CAR",
+   "home": "NO",
+   "scheduled": "2026-11-15T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  },
+  {
+   "away": "BUF",
+   "home": "NYJ",
+   "scheduled": "2026-11-15T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  },
+  {
+   "away": "JAC",
+   "home": "TEN",
+   "scheduled": "2026-11-15T18:00:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  },
+  {
+   "away": "LA",
+   "home": "ARI",
+   "scheduled": "2026-11-15T21:05:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  },
+  {
+   "away": "SEA",
+   "home": "LV",
+   "scheduled": "2026-11-15T21:05:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  },
+  {
+   "away": "SF",
+   "home": "DAL",
+   "scheduled": "2026-11-15T21:25:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  },
+  {
+   "away": "PIT",
+   "home": "CIN",
+   "scheduled": "2026-11-16T01:20:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  },
+  {
+   "away": "LAC",
+   "home": "BAL",
+   "scheduled": "2026-11-17T01:15:00+00:00",
+   "source": "sbd",
+   "updated": "",
+   "spread_money": [
+    null,
+    null
+   ],
+   "spread_bets": [
+    null,
+    null
+   ],
+   "ml_money": [
+    null,
+    null
+   ],
+   "ml_bets": [
+    null,
+    null
+   ]
+  }
+ ]
+}

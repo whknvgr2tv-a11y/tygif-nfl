@@ -1,0 +1,51 @@
+{
+ "fetched_utc": "2026-11-02T00:10:31+00:00",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=8&seasontype=2",
+ "season": 2026,
+ "week": 8,
+ "events": 14,
+ "pre": 2,
+ "last": "2026-11-03T01:15Z",
+ "games": [
+  {
+   "id": "401873035",
+   "away": "PHI",
+   "home": "WSH",
+   "kickoff_utc": "2026-11-02T01:20Z",
+   "ml": {
+    "away": "+225",
+    "home": "-278"
+   },
+   "spread": {
+    "away": {
+     "line": "+6",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "-6",
+     "odds": "-112"
+    }
+   }
+  },
+  {
+   "id": "401873036",
+   "away": "CHI",
+   "home": "SEA",
+   "kickoff_utc": "2026-11-03T01:15Z",
+   "ml": {
+    "away": "+140",
+    "home": "-166"
+   },
+   "spread": {
+    "away": {
+     "line": "+3",
+     "odds": "-105"
+    },
+    "home": {
+     "line": "-3",
+     "odds": "-115"
+    }
+   }
+  }
+ ]
+}

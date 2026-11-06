@@ -1,0 +1,291 @@
+{
+ "fetched_utc": "2026-11-06T06:23:11+00:00",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=9&seasontype=2",
+ "season": 2026,
+ "week": 9,
+ "events": 15,
+ "pre": 14,
+ "last": "2026-11-10T01:15Z",
+ "games": [
+  {
+   "id": "401873038",
+   "away": "CIN",
+   "home": "ATL",
+   "kickoff_utc": "2026-11-08T14:30Z",
+   "ml": {
+    "away": "-170",
+    "home": "+142"
+   },
+   "spread": {
+    "away": {
+     "line": "-3",
+     "odds": "-118"
+    },
+    "home": {
+     "line": "+3",
+     "odds": "-102"
+    }
+   }
+  },
+  {
+   "id": "401873040",
+   "away": "DAL",
+   "home": "IND",
+   "kickoff_utc": "2026-11-08T18:00Z",
+   "ml": {
+    "away": "-230",
+    "home": "+190"
+   },
+   "spread": {
+    "away": {
+     "line": "-5.5",
+     "odds": "-105"
+    },
+    "home": {
+     "line": "+5.5",
+     "odds": "-115"
+    }
+   }
+  },
+  {
+   "id": "401873045",
+   "away": "NYJ",
+   "home": "KC",
+   "kickoff_utc": "2026-11-08T18:00Z",
+   "ml": {
+    "away": "+425",
+    "home": "-575"
+   },
+   "spread": {
+    "away": {
+     "line": "+10",
+     "odds": "-112"
+    },
+    "home": {
+     "line": "-10",
+     "odds": "-108"
+    }
+   }
+  },
+  {
+   "id": "401873042",
+   "away": "DET",
+   "home": "MIA",
+   "kickoff_utc": "2026-11-08T18:00Z",
+   "ml": {
+    "away": "-340",
+    "home": "+270"
+   },
+   "spread": {
+    "away": {
+     "line": "-7",
+     "odds": "-105"
+    },
+    "home": {
+     "line": "+7",
+     "odds": "-115"
+    }
+   }
+  },
+  {
+   "id": "401873039",
+   "away": "CLE",
+   "home": "NO",
+   "kickoff_utc": "2026-11-08T18:00Z",
+   "ml": {
+    "away": "+136",
+    "home": "-162"
+   },
+   "spread": {
+    "away": {
+     "line": "+3",
+     "odds": "-105"
+    },
+    "home": {
+     "line": "-3",
+     "odds": "-115"
+    }
+   }
+  },
+  {
+   "id": "401873044",
+   "away": "NYG",
+   "home": "PHI",
+   "kickoff_utc": "2026-11-08T18:00Z",
+   "ml": {
+    "away": "-162",
+    "home": "+136"
+   },
+   "spread": {
+    "away": {
+     "line": "-3.5",
+     "odds": "-102"
+    },
+    "home": {
+     "line": "+3.5",
+     "odds": "-118"
+    }
+   }
+  },
+  {
+   "id": "401873043",
+   "away": "LAR",
+   "home": "WSH",
+   "kickoff_utc": "2026-11-08T18:00Z",
+   "ml": {
+    "away": "-225",
+    "home": "+185"
+   },
+   "spread": {
+    "away": {
+     "line": "-4.5",
+     "odds": "-112"
+    },
+    "home": {
+     "line": "+4.5",
+     "odds": "-108"
+    }
+   }
+  },
+  {
+   "id": "401873041",
+   "away": "DEN",
+   "home": "CAR",
+   "kickoff_utc": "2026-11-08T18:00Z",
+   "ml": {
+    "away": "-155",
+    "home": "+130"
+   },
+   "spread": {
+    "away": {
+     "line": "-2.5",
+     "odds": "-120"
+    },
+    "home": {
+     "line": "+2.5",
+     "odds": "+100"
+    }
+   }
+  },
+  {
+   "id": "401873046",
+   "away": "HOU",
+   "home": "LAC",
+   "kickoff_utc": "2026-11-08T21:05Z",
+   "ml": {
+    "away": "-238",
+    "home": "+195"
+   },
+   "spread": {
+    "away": {
+     "line": "-6",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "+6",
+     "odds": "-112"
+    }
+   }
+  },
+  {
+   "id": "401873049",
+   "away": "GB",
+   "home": "NE",
+   "kickoff_utc": "2026-11-08T21:25Z",
+   "ml": {
+    "away": "+140",
+    "home": "-166"
+   },
+   "spread": {
+    "away": {
+     "line": "+3",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "-3",
+     "odds": "-112"
+    }
+   }
+  },
+  {
+   "id": "401873047",
+   "away": "LV",
+   "home": "SF",
+   "kickoff_utc": "2026-11-08T21:25Z",
+   "ml": {
+    "away": "+370",
+    "home": "-485"
+   },
+   "spread": {
+    "away": {
+     "line": "+10",
+     "odds": "-112"
+    },
+    "home": {
+     "line": "-10",
+     "odds": "-108"
+    }
+   }
+  },
+  {
+   "id": "401873048",
+   "away": "ARI",
+   "home": "SEA",
+   "kickoff_utc": "2026-11-08T21:25Z",
+   "ml": {
+    "away": "+350",
+    "home": "-455"
+   },
+   "spread": {
+    "away": {
+     "line": "+8.5",
+     "odds": "-112"
+    },
+    "home": {
+     "line": "-8.5",
+     "odds": "-108"
+    }
+   }
+  },
+  {
+   "id": "401873050",
+   "away": "TB",
+   "home": "CHI",
+   "kickoff_utc": "2026-11-09T01:20Z",
+   "ml": {
+    "away": "+240",
+    "home": "-298"
+   },
+   "spread": {
+    "away": {
+     "line": "+6",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "-6",
+     "odds": "-112"
+    }
+   }
+  },
+  {
+   "id": "401873051",
+   "away": "BUF",
+   "home": "MIN",
+   "kickoff_utc": "2026-11-10T01:15Z",
+   "ml": {
+    "away": "-175",
+    "home": "+145"
+   },
+   "spread": {
+    "away": {
+     "line": "-3",
+     "odds": "-118"
+    },
+    "home": {
+     "line": "+3",
+     "odds": "-102"
+    }
+   }
+  }
+ ]
+}

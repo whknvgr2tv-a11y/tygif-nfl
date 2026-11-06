@@ -1,0 +1,81 @@
+{
+ "fetched_utc": "2026-11-02T00:10:23+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Spread&tb_page=N",
+ "games": [
+  {
+   "matchup": "PHI Eagles @ WAS Commanders",
+   "kickoff_local": "11/1, 08:20PM",
+   "spread": [
+    {
+     "side": "WAS Commanders -6",
+     "odds": "\u2212112",
+     "handle_pct": 59,
+     "bets_pct": 53,
+     "breakeven_money_pct": 52.8,
+     "lock_lo_money_pct": 48.1,
+     "book_exposed": true
+    },
+    {
+     "side": "PHI Eagles +6",
+     "odds": "\u2212108",
+     "handle_pct": 41,
+     "bets_pct": 47,
+     "breakeven_money_pct": 51.9,
+     "lock_lo_money_pct": 47.2,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.54
+  },
+  {
+   "matchup": "CHI Bears @ SEA Seahawks",
+   "kickoff_local": "11/2, 08:20PM",
+   "spread": [
+    {
+     "side": "SEA Seahawks -3",
+     "odds": "\u2212115",
+     "handle_pct": 55,
+     "bets_pct": 52,
+     "breakeven_money_pct": 53.5,
+     "lock_lo_money_pct": 48.8,
+     "book_exposed": true
+    },
+    {
+     "side": "CHI Bears +3",
+     "odds": "\u2212105",
+     "handle_pct": 45,
+     "bets_pct": 48,
+     "breakeven_money_pct": 51.2,
+     "lock_lo_money_pct": 46.5,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.5
+  },
+  {
+   "matchup": "JAX Jaguars @ BAL Ravens",
+   "kickoff_local": "11/5, 08:15PM",
+   "spread": [
+    {
+     "side": "JAX Jaguars -7.5",
+     "odds": "\u2212110",
+     "handle_pct": 91,
+     "bets_pct": 72,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": true
+    },
+    {
+     "side": "BAL Ravens +7.5",
+     "odds": "\u2212110",
+     "handle_pct": 9,
+     "bets_pct": 28,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.55
+  }
+ ]
+}

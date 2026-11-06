@@ -1,0 +1,43 @@
+{
+ "fetched_utc": "2026-11-02T04:53:01+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Moneyline&tb_page=N",
+ "market": "moneyline",
+ "games": [
+  {
+   "matchup": "CHI Bears @ SEA Seahawks",
+   "kickoff_local": "11/2, 08:20PM",
+   "spread": [
+    {
+     "side": "SEA Seahawks",
+     "odds": "\u2212170",
+     "handle_pct": 43,
+     "bets_pct": 56
+    },
+    {
+     "side": "CHI Bears",
+     "odds": "+142",
+     "handle_pct": 57,
+     "bets_pct": 44
+    }
+   ]
+  },
+  {
+   "matchup": "JAX Jaguars @ BAL Ravens",
+   "kickoff_local": "11/5, 08:15PM",
+   "spread": [
+    {
+     "side": "BAL Ravens",
+     "odds": "+320",
+     "handle_pct": 2,
+     "bets_pct": 12
+    },
+    {
+     "side": "JAX Jaguars",
+     "odds": "\u2212410",
+     "handle_pct": 98,
+     "bets_pct": 88
+    }
+   ]
+  }
+ ]
+}
