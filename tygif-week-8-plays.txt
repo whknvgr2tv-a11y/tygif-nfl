@@ -20,13 +20,13 @@ STRONG
 
 LEAN
   Carolina +3.5  ·  Carolina at Green Bay, Thu Oct 29 · 7:15 PM CT · Final CAR 19–27 · loss −$100
-    Type 3 · Crowd leaning · LEAN: 14-15-1, −$182
+    Type 3 · Crowd leaning · LEAN: 14-16-1, −$282
     a: Yes · b: No · c: Yes · d: Yes
   Minnesota +3  ·  Minnesota at Detroit, Sun Nov 1 · 12:00 PM CT · Final MIN 15–19 · loss −$100
-    Type 3 · Crowd leaning · LEAN: 14-15-1, −$182
+    Type 3 · Crowd leaning · LEAN: 14-16-1, −$282
     a: Yes · b: No · c: Yes · d: Yes
   Chicago +3  ·  Chicago at Seattle, Mon Nov 2 · 7:15 PM CT · Final CHI 34–17 · win +$100
-    Type 3 · Crowd leaning · LEAN: 14-15-1, −$182
+    Type 3 · Crowd leaning · LEAN: 14-16-1, −$282
     a: Yes · b: No · c: Yes · d: Yes
 
 MONEYLINE
