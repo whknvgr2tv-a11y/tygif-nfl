@@ -1046,7 +1046,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873038",
-   "price": 142,
+   "price": 150,
    "fd": "Dog"
   },
   {
@@ -1054,10 +1054,10 @@
    "game": "DAL@IND",
    "rating": "STRONG",
    "side": "IND",
-   "spread_line": 5.5,
+   "spread_line": 4.5,
    "status": "preview",
    "espn_event": "401873040",
-   "price": 190,
+   "price": 185,
    "fd": "Dog"
   },
   {
@@ -1068,7 +1068,7 @@
    "spread_line": 9.5,
    "status": "preview",
    "espn_event": "401873045",
-   "price": 410,
+   "price": 380,
    "fd": "Dog"
   },
   {
@@ -1079,7 +1079,18 @@
    "spread_line": 6.5,
    "status": "preview",
    "espn_event": "401873042",
-   "price": 260,
+   "price": 235,
+   "fd": "Dog"
+  },
+  {
+   "week": 9,
+   "game": "CLE@NO",
+   "rating": "LEAN",
+   "side": "CLE",
+   "spread_line": 3.5,
+   "status": "preview",
+   "espn_event": "401873039",
+   "price": 142,
    "fd": "Dog"
   },
   {
@@ -1109,7 +1120,7 @@
    "game": "DEN@CAR",
    "rating": "STRONG",
    "side": "CAR",
-   "spread_line": 2.5,
+   "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873041",
    "price": 130,
@@ -1145,7 +1156,7 @@
    "spread_line": 6.0,
    "status": "preview",
    "espn_event": "401873050",
-   "price": 235,
+   "price": 225,
    "fd": "Dog"
   },
   {
@@ -1156,7 +1167,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873051",
-   "price": 145,
+   "price": 142,
    "fd": "Dog"
   }
  ]

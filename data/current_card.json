@@ -1,6 +1,6 @@
 {
  "week": 9,
- "posted_at_et": "Fri Nov 6, 3:06 PM ET",
+ "posted_at_et": "Fri Nov 6, 9:09 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -27,7 +27,7 @@
    "name": "Indianapolis",
    "nick": "Colts",
    "rating": "STRONG",
-   "line": "+5.5",
+   "line": "+4.5",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {
@@ -46,6 +46,15 @@
    "nick": "Dolphins",
    "rating": "STRONG",
    "line": "+6.5",
+   "kickoff_utc": "2026-11-08T18:00:00Z"
+  },
+  {
+   "game": "CLE@NO",
+   "team": "CLE",
+   "name": "Cleveland",
+   "nick": "Browns",
+   "rating": "LEAN",
+   "line": "+3.5",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {
@@ -72,7 +81,7 @@
    "name": "Carolina",
    "nick": "Panthers",
    "rating": "STRONG",
-   "line": "+2.5",
+   "line": "+3",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {

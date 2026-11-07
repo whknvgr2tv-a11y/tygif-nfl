@@ -1,15 +1,16 @@
-Week 9 · Lines as of Fri Nov 6, 2:06 PM CT
+Week 9 · Lines as of Fri Nov 6, 8:09 PM CT
 
-STRONG Indianapolis +5.5
+STRONG Indianapolis +4.5
 STRONG NY Jets +9.5
 STRONG Miami +6.5
 STRONG Washington +4.5
-STRONG Carolina +2.5
+STRONG Carolina +3
 STRONG LA Chargers +6
 STRONG Tampa Bay +6
 STRONG Minnesota +3
 LEAN Baltimore +8.5 · Final BAL 10–33 · loss −$100
 LEAN Atlanta +3
+LEAN Cleveland +3.5
 LEAN Philadelphia +3
 LEAN Arizona +8.5
 STRONG Indianapolis ML
@@ -22,5 +23,6 @@ STRONG Tampa Bay ML
 STRONG Minnesota ML
 LEAN Baltimore ML · Final 10–33 · loss −$100
 LEAN Atlanta ML
+LEAN Cleveland ML
 LEAN Philadelphia ML
 LEAN Arizona ML
