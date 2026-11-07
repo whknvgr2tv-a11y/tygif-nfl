@@ -1,6 +1,6 @@
 {
  "week": 9,
- "posted_at_et": "Fri Nov 6, 9:09 PM ET",
+ "posted_at_et": "Sat Nov 7, 6:04 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -17,7 +17,7 @@
    "team": "ATL",
    "name": "Atlanta",
    "nick": "Falcons",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "line": "+3",
    "kickoff_utc": "2026-11-08T14:30:00Z"
   },
@@ -27,7 +27,7 @@
    "name": "Indianapolis",
    "nick": "Colts",
    "rating": "STRONG",
-   "line": "+4.5",
+   "line": "+5.5",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {
@@ -54,7 +54,7 @@
    "name": "Cleveland",
    "nick": "Browns",
    "rating": "LEAN",
-   "line": "+3.5",
+   "line": "+3",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {
@@ -62,7 +62,7 @@
    "team": "PHI",
    "name": "Philadelphia",
    "nick": "Eagles",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "line": "+3",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
@@ -81,7 +81,7 @@
    "name": "Carolina",
    "nick": "Panthers",
    "rating": "STRONG",
-   "line": "+3",
+   "line": "+2.5",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {
@@ -92,6 +92,15 @@
    "rating": "STRONG",
    "line": "+6",
    "kickoff_utc": "2026-11-08T21:05:00Z"
+  },
+  {
+   "game": "LV@SF",
+   "team": "LV",
+   "name": "Las Vegas",
+   "nick": "Raiders",
+   "rating": "STRONG",
+   "line": "+9.5",
+   "kickoff_utc": "2026-11-08T21:25:00Z"
   },
   {
    "game": "ARI@SEA",
