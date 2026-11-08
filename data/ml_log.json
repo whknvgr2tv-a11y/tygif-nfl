@@ -1046,7 +1046,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873038",
-   "price": 145,
+   "price": 150,
    "fd": "Dog"
   },
   {
@@ -1054,7 +1054,7 @@
    "game": "DAL@IND",
    "rating": "STRONG",
    "side": "IND",
-   "spread_line": 5.5,
+   "spread_line": 4.5,
    "status": "preview",
    "espn_event": "401873040",
    "price": 190,
@@ -1068,7 +1068,7 @@
    "spread_line": 9.5,
    "status": "preview",
    "espn_event": "401873045",
-   "price": 400,
+   "price": 390,
    "fd": "Dog"
   },
   {
@@ -1079,7 +1079,7 @@
    "spread_line": 6.5,
    "status": "preview",
    "espn_event": "401873042",
-   "price": 240,
+   "price": 245,
    "fd": "Dog"
   },
   {
@@ -1087,10 +1087,10 @@
    "game": "CLE@NO",
    "rating": "LEAN",
    "side": "CLE",
-   "spread_line": 3.0,
+   "spread_line": 3.5,
    "status": "preview",
    "espn_event": "401873039",
-   "price": 142,
+   "price": 154,
    "fd": "Dog"
   },
   {
@@ -1101,7 +1101,7 @@
    "spread_line": 3.0,
    "status": "preview",
    "espn_event": "401873044",
-   "price": 136,
+   "price": 130,
    "fd": "Dog"
   },
   {
@@ -1131,10 +1131,10 @@
    "game": "HOU@LAC",
    "rating": "STRONG",
    "side": "LAC",
-   "spread_line": 6.0,
+   "spread_line": 5.5,
    "status": "preview",
    "espn_event": "401873046",
-   "price": 200,
+   "price": 190,
    "fd": "Dog"
   },
   {
@@ -1145,7 +1145,7 @@
    "spread_line": 9.5,
    "status": "preview",
    "espn_event": "401873047",
-   "price": 360,
+   "price": 350,
    "fd": "Dog"
   },
   {
@@ -1167,7 +1167,7 @@
    "spread_line": 6.0,
    "status": "preview",
    "espn_event": "401873050",
-   "price": 215,
+   "price": 220,
    "fd": "Dog"
   },
   {

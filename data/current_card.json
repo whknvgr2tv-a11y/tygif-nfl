@@ -1,6 +1,6 @@
 {
  "week": 9,
- "posted_at_et": "Sun Nov 8, 7:36 AM ET",
+ "posted_at_et": "Sun Nov 8, 11:07 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -27,7 +27,7 @@
    "name": "Indianapolis",
    "nick": "Colts",
    "rating": "STRONG",
-   "line": "+5.5",
+   "line": "+4.5",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {
@@ -54,7 +54,7 @@
    "name": "Cleveland",
    "nick": "Browns",
    "rating": "LEAN",
-   "line": "+3",
+   "line": "+3.5",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
   {
@@ -90,7 +90,7 @@
    "name": "LA Chargers",
    "nick": "Chargers",
    "rating": "STRONG",
-   "line": "+6",
+   "line": "+5.5",
    "kickoff_utc": "2026-11-08T21:05:00Z"
   },
   {
