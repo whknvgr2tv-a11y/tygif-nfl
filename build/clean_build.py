@@ -609,6 +609,8 @@ def _dk_line(WK,key,at_utc):
     return best[1] if best else None
 def build_wk(WK):
     # same as settle_w5: every pull (snapshots branch + our dated pulls), per game the latest one before kickoff
+    import settled_close as _sc
+    HELD=_sc.missing_closes(R.rstrip('/'), _W)
     DKS6=_snaps('dk',_W+f'/snap_w{WK}_*/'); SAOS6=_snaps('sao',_W+f'/snap_w{WK}_*/')
     DKML6=_snaps('dkml',_W+f'/snap_w{WK}_*/'); SAOML6=_snaps('saoml',_W+f'/snap_w{WK}_*/')
     TRM=json.load(open(_I+f'/tr_monday_w{WK}.json'))
@@ -623,6 +625,46 @@ def build_wk(WK):
         lo_s=(_dt.datetime.fromisoformat(ko_s.replace('Z','+00:00'))-_dt.timedelta(days=8)).isoformat()
         dkp=[(t_,src,_dk_rows(d)[key]) for t_,src,d in DKS6 if _P(lo_s)<_P(t_)<=_P(cut_s) and key in _dk_rows(d)]
         sap=[(t_,src,_sao_rows(d)[key]) for t_,src,d in SAOS6 if _P(lo_s)<_P(t_)<=_P(cut_s) and key in _sao_rows(d)]
+        doc=HELD.get((WK,f'{A}@{H}'))
+        _earlier=lambda pulls, utc: (not pulls) or _P(pulls[-1][0])<_P(utc)
+        if doc and _earlier(sap, doc['at_utc']) and _earlier(dkp, doc['at_utc']) and _P(doc['at_utc'])<=_P(cut_s):
+            # The cited close snapshot is gone. Grade from the documented combined numbers.
+            # Spread-vs-ML pieces are not in the logs (components stay unknown). Do not use an earlier pull.
+            if _P(doc['ml_at_utc'])>_P(cut_s): raise SystemExit(f'{A}@{H}: documented moneyline is after the 5-min cutoff')
+            abs_,abm,abb=doc['ab_side'],doc['ab_m'],doc['ab_b']; dks=doc['dk_side']; dk_tie=doc['dk_m']==50
+            sp={k:('PK' if doc['line'][k]==0 else f"{doc['line'][k]:+g}".replace('-',M)) for k in (A,H)}
+            mon=[v for v in TRM.values() if {v['team'],v['other']}=={A,H}][0]
+            b2=mon['books'].get('2',{}).get('line'); b3=mon['books'].get('3',{}).get('line')
+            mon=dict(team=mon['team'],b2=b2 if b2 is not None else b3,b3=b3 if b3 is not None else b2,avg=mon['avg'],source='TeamRankings books 2-3, last quote before Monday 12:00 AM ET')
+            fade_ab=H if abs_==A else A
+            nb=WK>=NO_BETS_FROM
+            rt,ty,ee,dd=rate_v1(A,H,(abs_,abm,abb),(None if dk_tie else dks),mon,sp,False,no_bets=nb)
+            be=_sc.breakeven(A,H,doc['price'][A],doc['price'][H])
+            bgap=None
+            if WK>=UNIFIED_FROM: rt,bgap=rate_unified(rt,ty,abm,abb,abs_,be)
+            if (rt,ty)!=(doc['rating'],doc['type']):
+                raise SystemExit(f"W{WK} {A}@{H}: documented close would be regraded {rt} T{ty}; record is {doc['rating']} T{doc['type']}")
+            ko=_ET(e['date'].replace('Z',':00Z'))
+            city=c.get('venue',{}).get('address',{}).get('city','')
+            when=f"{ko.strftime('%a %b')} {ko.day} · {int(ko.strftime('%I'))}:{ko.strftime('%M %p')} CT · "+', '.join(n for b in c.get('broadcasts',[]) for n in b['names'])+(' · London' if city=='London' else '')
+            why=(f"{rt} · total money {abm}% on {abs_}, book exposed {bgap:+g} vs DK break-even" if bgap is not None and rt!='PASS'
+                 else f"PASS · {abm}% total money but book not exposed ({bgap:+g} vs DK break-even)" if bgap is not None
+                 else f"Starts at {'STRONG' if abm>=65 else 'LEAN'} · no drops")
+            agree='DraftKings'
+            g=dict(gid=f'w{WK}-{A.lower()}-{H.lower()}',A=A,H=H,away=NAME[A],home=NAME[H],sp=sp,ab_side=NAME[abs_],ab_m=abm,ab_b=abb,
+                   dk_side=NAME[dks],dk_m=doc['dk_m'],dk_b=None,a=(True if nb else abb>=50),b=abm>=65,c=(dks==abs_ and not dk_tie),agree=agree,d=dd,e=ee,f=False,
+                   fade=NAME[fade_ab],fade_line=float(sp[fade_ab].replace(M,'-')),rating=rt,type=ty,why=why,when=when,mon=mon,qbnote='',
+                   split_at=_etlbl(doc['at_utc']),split_utc=doc['at_utc'],dk_utc=doc['at_utc'],split_src=doc['split_src'],dk_src=doc['dk_src'],
+                   dk_vsin=False,final=None,held=False,week=WK,ko_utc=ko_s,eid=e['id'],status=c['status']['type']['name'],
+                   allmoney=dict(preserved_close=True,components=None,sao_all_money={abs_:abm},sao_all_bets={abs_:abb},dk_combined={dks:doc['dk_m']}))
+            g['ubgap']=bgap
+            g['call']=f"{g['fade']} {sp[fade_ab]}"
+            g['wy']=f"{abm}% of the money is on {NAME[abs_]} (all books)."
+            g['mlr']=dict(team=fade_ab,rating=rt,type=ty,unified=True,money_side=abs_,m=abm,
+                          why=(why if rt=='PASS' else f"Same grade as the game ({rt}) — total money {abm}% on {abs_}, book exposed {bgap:+g}" if bgap is not None else why))
+            if WK>=UNIFIED_FROM: g['bgap']=bgap
+            print(f"preserved settled close (raw {', '.join(doc['absent'])} missing; components unknown): W{WK} {A}@{H} {rt} T{ty} {fade_ab} {sp[fade_ab]}")
+            out.append(g); continue
         if not sap:   # no all-books (SAO) pull yet -> nothing to fade; off the card (never an invented split)
             NODK.setdefault(WK,[]).append(f'{A}@{H}'); continue
         sa_t,sa_src,sa_row=sap[-1]; gm=f'{A}@{H}'
@@ -2602,7 +2644,10 @@ import os as _os
 if _os.environ.get('SIGNOFF'):
     json.dump({'note':'Games Site Auditor signed off (2da0581). Per-side rows: week, game, team, role, rating, type, fd, sp_res, sp_usd, ml_res, ml_usd. Frozen: the build fails if any changes.',
                'games':sorted([list(k) for k in _DONE]),'rows':sorted([x['week'],x['game'],x['team'],x['role'],x['rating'],x['type'],x['fd'],x['sp_res'],x['sp_usd'],x['ml_res'],x['ml_usd']] for x in SIDES if (x['week'],x['game']) in set(_DONE))},open(_os.environ['SIGNOFF'],'w'),indent=0)
-exec(open(R+"build/premium.py").read())
+# This frame's locals are separate from its globals, so a generator in premium.py
+# cannot see game_card unless both dicts passed to exec are the same object.
+_ns=dict(globals())
+exec(open(R+"build/premium.py").read(), _ns, _ns)
 _deepcheck()
 
 import os as _os

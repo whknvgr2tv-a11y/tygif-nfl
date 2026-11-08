@@ -1,6 +1,6 @@
 {
  "week": 9,
- "posted_at_et": "Sat Nov 7, 9:09 PM ET",
+ "posted_at_et": "Sun Nov 8, 7:36 AM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -62,7 +62,7 @@
    "team": "PHI",
    "name": "Philadelphia",
    "nick": "Eagles",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "line": "+3",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },

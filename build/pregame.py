@@ -24,6 +24,8 @@ def _num(s): return float(str(s).replace('\u2212','-').replace('PK','0'))
 CUTOFF=dt.timedelta(minutes=5)   # TG, Oct 22: grade at the last saved pull at least 5 minutes before kickoff
 def _iso(ts): return dt.datetime.fromisoformat(ts.replace('Z','+00:00'))
 def build(R):
+    import settled_close as _sc
+    held=_sc.missing_closes(R.rstrip('/'), _W)   # documented closes whose raw snapshot is absent; earlier pulls are not a substitute
     git=lambda *a: subprocess.run(['git','-C',R]+list(a),capture_output=True,text=True).stdout
     br={'dk':[],'espn_dk':[]}
     for f in git('ls-tree','--name-only','-r','origin/snapshots','snapshots/').split():
@@ -62,6 +64,13 @@ def build(R):
                         if {g['away'],g['home']}=={A,H} and g['ml']['away'] and g['ml']['home'] and 'OFF' not in (g['ml']['away'],g['ml']['home']):
                             v=lambda o:100 if o=='EVEN' else int(o.replace('+',''))
                             ml=(ts,{g['away']:v(g['ml']['away']),g['home']:v(g['ml']['home'])},'ESPN DraftKings capture '+src)
+            # Cited raw close missing, and every saved pull is earlier than that close:
+            # keep the documented line/price/moneyline. Do not fall back to the earlier pull.
+            doc=held.get((w, f'{A}@{H}'))
+            raw_earlier=(last is None or _iso(last[0])<_iso(doc['at_utc'])) and (ml is None or _iso(ml[0])<_iso(doc['ml_at_utc'])) if doc else False
+            if doc and raw_earlier:
+                for side in (A,H): out.append(dict(doc['rows'][side]))
+                continue
             for side in (A,H):
                 p=dict(week=w,game=f'{A}@{H}',side=side)
                 if last: p.update(line=last[2][side][0],price=last[2][side][1],at_utc=last[0],source=last[1])
