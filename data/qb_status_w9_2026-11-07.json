@@ -1,0 +1,119 @@
+{
+  "checked": "2026-11-07 ~7:00 PM CT (Saturday refresh; ESPN injuries API, final injury reports plus Saturday news)",
+  "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/injuries",
+  "rule": "Rules v2 (Oct 15): the QB rule was removed, so QB status never drops a rating; recorded for the record only",
+  "teams": {
+    "CIN": {
+      "drop": false,
+      "note": "Joe Burrow has no game status and plays"
+    },
+    "ATL": {
+      "drop": false,
+      "note": "Michael Penix Jr. has no game status and plays"
+    },
+    "DAL": {
+      "drop": false,
+      "note": "Dak Prescott has no game status and plays"
+    },
+    "IND": {
+      "drop": false,
+      "note": "Daniel Jones has no game status and plays"
+    },
+    "NYJ": {
+      "drop": false,
+      "note": "Geno Smith has no game status and plays"
+    },
+    "KC": {
+      "drop": false,
+      "note": "Patrick Mahomes has no game status and plays"
+    },
+    "DET": {
+      "drop": false,
+      "note": "Jared Goff has no game status and plays"
+    },
+    "MIA": {
+      "drop": false,
+      "note": "Malik Willis has no game status and plays"
+    },
+    "CLE": {
+      "drop": false,
+      "note": "Shedeur Sanders starts Sunday at New Orleans; Deshaun Watson cleared the concussion protocol Saturday but remains questionable"
+    },
+    "NO": {
+      "drop": false,
+      "note": "Tyler Shough has no game status and plays"
+    },
+    "NYG": {
+      "drop": false,
+      "note": "Jameis Winston has no game status and plays"
+    },
+    "PHI": {
+      "drop": false,
+      "note": "Joe Milton is set to start Sunday against the Giants; Tanner McKee (ribs) is questionable"
+    },
+    "LAR": {
+      "drop": false,
+      "note": "Matthew Stafford has no game status and plays"
+    },
+    "WSH": {
+      "drop": false,
+      "note": "Jayden Daniels has no game status and plays"
+    },
+    "DEN": {
+      "drop": false,
+      "note": "Bo Nix has no game status and plays"
+    },
+    "CAR": {
+      "drop": false,
+      "note": "Bryce Young (ankle) \u2014 coach said Friday he is ready and plays Sunday against Denver"
+    },
+    "HOU": {
+      "drop": false,
+      "note": "C.J. Stroud has no game status and plays"
+    },
+    "LAC": {
+      "drop": false,
+      "note": "Justin Herbert has no game status and plays"
+    },
+    "LV": {
+      "drop": false,
+      "note": "Kirk Cousins has no game status and plays"
+    },
+    "SF": {
+      "drop": false,
+      "note": "Brock Purdy has no game status and plays"
+    },
+    "ARI": {
+      "drop": false,
+      "note": "Gardner Minshew II was named the new starter beginning Sunday at Seattle and plays"
+    },
+    "SEA": {
+      "drop": false,
+      "note": "Drew Lock has no designation and starts; Sam Darnold (quadriceps) is out, week-to-week"
+    },
+    "TB": {
+      "drop": false,
+      "note": "Baker Mayfield has no game status and plays"
+    },
+    "CHI": {
+      "drop": false,
+      "note": "Caleb Williams has no game status and plays"
+    },
+    "BUF": {
+      "drop": false,
+      "note": "Josh Allen has no game status and plays"
+    },
+    "MIN": {
+      "drop": false,
+      "note": "Carson Wentz starts Monday against the Bills; Kyler Murray (hamstring) is out"
+    },
+    "GB": {
+      "drop": false,
+      "note": "Jordan Love has no game status and plays"
+    },
+    "NE": {
+      "drop": false,
+      "note": "Drake Maye has no game status and plays"
+    }
+  }
+}

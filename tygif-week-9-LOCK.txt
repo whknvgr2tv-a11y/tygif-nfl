@@ -1,39 +1,39 @@
 TYGIF'S MODEL · WEEK 9
-Lines as of Sat Nov 7, 5:04 PM CT
+Lines as of Sat Nov 7, 6:57 PM CT
 
 STRONG
   Atlanta +3  ·  Sun Nov 8 · 8:30 AM CT
   Indianapolis +5.5  ·  Sun Nov 8 · 12:00 PM CT
   NY Jets +9.5  ·  Sun Nov 8 · 12:00 PM CT
   Miami +6.5  ·  Sun Nov 8 · 12:00 PM CT
-  Philadelphia +3  ·  Sun Nov 8 · 12:00 PM CT
   Washington +4.5  ·  Sun Nov 8 · 12:00 PM CT
   Carolina +2.5  ·  Sun Nov 8 · 12:00 PM CT
   LA Chargers +6  ·  Sun Nov 8 · 3:05 PM CT
   Las Vegas +9.5  ·  Sun Nov 8 · 3:25 PM CT
+  Arizona +8.5  ·  Sun Nov 8 · 3:25 PM CT
   Tampa Bay +6  ·  Sun Nov 8 · 7:20 PM CT
   Minnesota +3  ·  Mon Nov 9 · 7:15 PM CT
 
 LEAN
   Baltimore +8.5  ·  Thu Nov 5 · 7:15 PM CT · Final BAL 10–33 · loss −$100
   Cleveland +3  ·  Sun Nov 8 · 12:00 PM CT
-  Arizona +8.5  ·  Sun Nov 8 · 3:25 PM CT
+  Philadelphia +3  ·  Sun Nov 8 · 12:00 PM CT
 
 MONEYLINE
   STRONG Atlanta ML  ·  Sun Nov 8 · 8:30 AM CT
   STRONG Indianapolis ML  ·  Sun Nov 8 · 12:00 PM CT
   STRONG NY Jets ML  ·  Sun Nov 8 · 12:00 PM CT
   STRONG Miami ML  ·  Sun Nov 8 · 12:00 PM CT
-  STRONG Philadelphia ML  ·  Sun Nov 8 · 12:00 PM CT
   STRONG Washington ML  ·  Sun Nov 8 · 12:00 PM CT
   STRONG Carolina ML  ·  Sun Nov 8 · 12:00 PM CT
   STRONG LA Chargers ML  ·  Sun Nov 8 · 3:05 PM CT
   STRONG Las Vegas ML  ·  Sun Nov 8 · 3:25 PM CT
+  STRONG Arizona ML  ·  Sun Nov 8 · 3:25 PM CT
   STRONG Tampa Bay ML  ·  Sun Nov 8 · 7:20 PM CT
   STRONG Minnesota ML  ·  Mon Nov 9 · 7:15 PM CT
   LEAN Baltimore ML  ·  Thu Nov 5 · 7:15 PM CT · Final 10–33 · loss −$100
   LEAN Cleveland ML  ·  Sun Nov 8 · 12:00 PM CT
-  LEAN Arizona ML  ·  Sun Nov 8 · 3:25 PM CT
+  LEAN Philadelphia ML  ·  Sun Nov 8 · 12:00 PM CT
 
 PASS
   Green Bay at New England

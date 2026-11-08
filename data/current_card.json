@@ -1,6 +1,6 @@
 {
  "week": 9,
- "posted_at_et": "Sat Nov 7, 6:04 PM ET",
+ "posted_at_et": "Sat Nov 7, 7:57 PM ET",
  "source": "clean_build.py G6 (DraftKings line at the posted pull)",
  "plays": [
   {
@@ -62,7 +62,7 @@
    "team": "PHI",
    "name": "Philadelphia",
    "nick": "Eagles",
-   "rating": "STRONG",
+   "rating": "LEAN",
    "line": "+3",
    "kickoff_utc": "2026-11-08T18:00:00Z"
   },
@@ -107,7 +107,7 @@
    "team": "ARI",
    "name": "Arizona",
    "nick": "Cardinals",
-   "rating": "LEAN",
+   "rating": "STRONG",
    "line": "+8.5",
    "kickoff_utc": "2026-11-08T21:25:00Z"
   },
