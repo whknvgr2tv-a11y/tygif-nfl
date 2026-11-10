@@ -1,0 +1,31 @@
+{
+ "fetched_utc": "2026-11-09T05:03:45+00:00",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=9&seasontype=2",
+ "season": 2026,
+ "week": 9,
+ "events": 15,
+ "pre": 1,
+ "last": "2026-11-10T01:15Z",
+ "games": [
+  {
+   "id": "401873051",
+   "away": "BUF",
+   "home": "MIN",
+   "kickoff_utc": "2026-11-10T01:15Z",
+   "ml": {
+    "away": "-170",
+    "home": "+142"
+   },
+   "spread": {
+    "away": {
+     "line": "-3",
+     "odds": "-120"
+    },
+    "home": {
+     "line": "+3",
+     "odds": "+100"
+    }
+   }
+  }
+ ]
+}

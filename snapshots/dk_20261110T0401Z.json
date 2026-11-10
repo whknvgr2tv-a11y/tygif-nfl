@@ -1,0 +1,281 @@
+{
+ "fetched_utc": "2026-11-10T04:01:11+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Spread&tb_page=N",
+ "games": [
+  {
+   "matchup": "WAS Commanders @ NY Giants",
+   "kickoff_local": "Thu 11/12 \u00b7 8:15 PM ET",
+   "spread": [
+    {
+     "side": "NY Giants -2.5",
+     "odds": "\u2212110",
+     "handle_pct": 91,
+     "bets_pct": 74,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": true
+    },
+    {
+     "side": "WAS Commanders +2.5",
+     "odds": "\u2212110",
+     "handle_pct": 9,
+     "bets_pct": 26,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.55
+  },
+  {
+   "matchup": "NE Patriots @ DET Lions",
+   "kickoff_local": "Sun 11/15 \u00b7 9:30 AM ET",
+   "spread": [
+    {
+     "side": "DET Lions -2.5",
+     "odds": "\u2212120",
+     "handle_pct": 50,
+     "bets_pct": 73,
+     "breakeven_money_pct": 54.5,
+     "lock_lo_money_pct": 50.0,
+     "book_exposed": false
+    },
+    {
+     "side": "NE Patriots +2.5",
+     "odds": "+100",
+     "handle_pct": 50,
+     "bets_pct": 27,
+     "breakeven_money_pct": 50.0,
+     "lock_lo_money_pct": 45.5,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.35
+  },
+  {
+   "matchup": "JAX Jaguars @ TEN Titans",
+   "kickoff_local": "Sun 11/15 \u00b7 1:00 PM ET",
+   "spread": [
+    {
+     "side": "JAX Jaguars -10",
+     "odds": "\u2212110",
+     "handle_pct": 94,
+     "bets_pct": 85,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": true
+    },
+    {
+     "side": "TEN Titans +10",
+     "odds": "\u2212110",
+     "handle_pct": 6,
+     "bets_pct": 15,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.55
+  },
+  {
+   "matchup": "KC Chiefs @ ATL Falcons",
+   "kickoff_local": "Sun 11/15 \u00b7 1:00 PM ET",
+   "spread": [
+    {
+     "side": "KC Chiefs -3.5",
+     "odds": "\u2212102",
+     "handle_pct": 67,
+     "bets_pct": 74,
+     "breakeven_money_pct": 50.5,
+     "lock_lo_money_pct": 45.9,
+     "book_exposed": true
+    },
+    {
+     "side": "ATL Falcons +3.5",
+     "odds": "\u2212118",
+     "handle_pct": 33,
+     "bets_pct": 26,
+     "breakeven_money_pct": 54.1,
+     "lock_lo_money_pct": 49.5,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.42
+  },
+  {
+   "matchup": "HOU Texans @ CLE Browns",
+   "kickoff_local": "Sun 11/15 \u00b7 1:00 PM ET",
+   "spread": [
+    {
+     "side": "HOU Texans -4.5",
+     "odds": "\u2212115",
+     "handle_pct": 87,
+     "bets_pct": 80,
+     "breakeven_money_pct": 53.5,
+     "lock_lo_money_pct": 48.8,
+     "book_exposed": true
+    },
+    {
+     "side": "CLE Browns +4.5",
+     "odds": "\u2212105",
+     "handle_pct": 13,
+     "bets_pct": 20,
+     "breakeven_money_pct": 51.2,
+     "lock_lo_money_pct": 46.5,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.5
+  },
+  {
+   "matchup": "CAR Panthers @ NO Saints",
+   "kickoff_local": "Sun 11/15 \u00b7 1:00 PM ET",
+   "spread": [
+    {
+     "side": "NO Saints -1.5",
+     "odds": "\u2212105",
+     "handle_pct": 39,
+     "bets_pct": 53,
+     "breakeven_money_pct": 51.2,
+     "lock_lo_money_pct": 46.5,
+     "book_exposed": false
+    },
+    {
+     "side": "CAR Panthers +1.5",
+     "odds": "\u2212115",
+     "handle_pct": 61,
+     "bets_pct": 47,
+     "breakeven_money_pct": 53.5,
+     "lock_lo_money_pct": 48.8,
+     "book_exposed": true
+    }
+   ],
+   "hold_pct": 4.5
+  },
+  {
+   "matchup": "MIA Dolphins @ IND Colts",
+   "kickoff_local": "Sun 11/15 \u00b7 1:00 PM ET",
+   "spread": [
+    {
+     "side": "IND Colts -2.5",
+     "odds": "\u2212110",
+     "handle_pct": 7,
+     "bets_pct": 71,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": false
+    },
+    {
+     "side": "MIA Dolphins +2.5",
+     "odds": "\u2212110",
+     "handle_pct": 93,
+     "bets_pct": 29,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": true
+    }
+   ],
+   "hold_pct": 4.55
+  },
+  {
+   "matchup": "LA Rams @ ARI Cardinals",
+   "kickoff_local": "Sun 11/15 \u00b7 4:05 PM ET",
+   "spread": [
+    {
+     "side": "LA Rams -9.5",
+     "odds": "\u2212112",
+     "handle_pct": 20,
+     "bets_pct": 72,
+     "breakeven_money_pct": 52.8,
+     "lock_lo_money_pct": 48.1,
+     "book_exposed": false
+    },
+    {
+     "side": "ARI Cardinals +9.5",
+     "odds": "\u2212108",
+     "handle_pct": 80,
+     "bets_pct": 28,
+     "breakeven_money_pct": 51.9,
+     "lock_lo_money_pct": 47.2,
+     "book_exposed": true
+    }
+   ],
+   "hold_pct": 4.54
+  },
+  {
+   "matchup": "SEA Seahawks @ LV Raiders",
+   "kickoff_local": "Sun 11/15 \u00b7 4:05 PM ET",
+   "spread": [
+    {
+     "side": "SEA Seahawks -3.5",
+     "odds": "\u2212102",
+     "handle_pct": 91,
+     "bets_pct": 88,
+     "breakeven_money_pct": 50.5,
+     "lock_lo_money_pct": 45.9,
+     "book_exposed": true
+    },
+    {
+     "side": "LV Raiders +3.5",
+     "odds": "\u2212118",
+     "handle_pct": 9,
+     "bets_pct": 12,
+     "breakeven_money_pct": 54.1,
+     "lock_lo_money_pct": 49.5,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.42
+  },
+  {
+   "matchup": "SF 49ers @ DAL Cowboys",
+   "kickoff_local": "Sun 11/15 \u00b7 4:25 PM ET",
+   "spread": [
+    {
+     "side": "SF 49ers -3.5",
+     "odds": "\u2212112",
+     "handle_pct": 100,
+     "bets_pct": 97,
+     "breakeven_money_pct": 52.8,
+     "lock_lo_money_pct": 48.1,
+     "book_exposed": true
+    },
+    {
+     "side": "DAL Cowboys +3.5",
+     "odds": "\u2212108",
+     "handle_pct": 0,
+     "bets_pct": 3,
+     "breakeven_money_pct": 51.9,
+     "lock_lo_money_pct": 47.2,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.54
+  },
+  {
+   "matchup": "PIT Steelers @ CIN Bengals",
+   "kickoff_local": "Sun 11/15 \u00b7 8:20 PM ET",
+   "spread": [
+    {
+     "side": "CIN Bengals -3.5",
+     "odds": "\u2212110",
+     "handle_pct": 14,
+     "bets_pct": 61,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": false
+    },
+    {
+     "side": "PIT Steelers +3.5",
+     "odds": "\u2212110",
+     "handle_pct": 86,
+     "bets_pct": 39,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": true
+    }
+   ],
+   "hold_pct": 4.55
+  }
+ ]
+}

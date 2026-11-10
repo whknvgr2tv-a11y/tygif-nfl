@@ -1,0 +1,131 @@
+{
+ "fetched_utc": "2026-11-08T19:50:55+00:00",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=9&seasontype=2",
+ "season": 2026,
+ "week": 9,
+ "events": 15,
+ "pre": 6,
+ "last": "2026-11-10T01:15Z",
+ "games": [
+  {
+   "id": "401873046",
+   "away": "HOU",
+   "home": "LAC",
+   "kickoff_utc": "2026-11-08T21:05Z",
+   "ml": {
+    "away": "-230",
+    "home": "+190"
+   },
+   "spread": {
+    "away": {
+     "line": "-5.5",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "+5.5",
+     "odds": "-112"
+    }
+   }
+  },
+  {
+   "id": "401873049",
+   "away": "GB",
+   "home": "NE",
+   "kickoff_utc": "2026-11-08T21:25Z",
+   "ml": {
+    "away": "+142",
+    "home": "-170"
+   },
+   "spread": {
+    "away": {
+     "line": "+3",
+     "odds": "-105"
+    },
+    "home": {
+     "line": "-3",
+     "odds": "-115"
+    }
+   }
+  },
+  {
+   "id": "401873047",
+   "away": "LV",
+   "home": "SF",
+   "kickoff_utc": "2026-11-08T21:25Z",
+   "ml": {
+    "away": "+340",
+    "home": "-440"
+   },
+   "spread": {
+    "away": {
+     "line": "+8.5",
+     "odds": "OFF"
+    },
+    "home": {
+     "line": "-8.5",
+     "odds": "-112"
+    }
+   }
+  },
+  {
+   "id": "401873048",
+   "away": "ARI",
+   "home": "SEA",
+   "kickoff_utc": "2026-11-08T21:25Z",
+   "ml": {
+    "away": "+350",
+    "home": "-455"
+   },
+   "spread": {
+    "away": {
+     "line": "+8.5",
+     "odds": "-110"
+    },
+    "home": {
+     "line": "-8.5",
+     "odds": "-110"
+    }
+   }
+  },
+  {
+   "id": "401873050",
+   "away": "TB",
+   "home": "CHI",
+   "kickoff_utc": "2026-11-09T01:20Z",
+   "ml": {
+    "away": "+220",
+    "home": "-270"
+   },
+   "spread": {
+    "away": {
+     "line": "+6",
+     "odds": "-108"
+    },
+    "home": {
+     "line": "-6",
+     "odds": "-112"
+    }
+   }
+  },
+  {
+   "id": "401873051",
+   "away": "BUF",
+   "home": "MIN",
+   "kickoff_utc": "2026-11-10T01:15Z",
+   "ml": {
+    "away": "-175",
+    "home": "+145"
+   },
+   "spread": {
+    "away": {
+     "line": "-3",
+     "odds": "-118"
+    },
+    "home": {
+     "line": "+3",
+     "odds": "-102"
+    }
+   }
+  }
+ ]
+}

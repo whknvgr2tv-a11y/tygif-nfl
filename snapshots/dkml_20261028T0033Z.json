@@ -1,0 +1,26 @@
+{
+ "fetched_utc": "2026-10-28T00:33:10+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Moneyline&tb_page=N",
+ "market": "moneyline",
+ "games": [
+  {
+   "matchup": "Panthers @ Packers",
+   "kickoff_local": null,
+   "source": "vsin_dk_backup",
+   "spread": [
+    {
+     "side": "VSiN Panthers",
+     "odds": "+160",
+     "handle_pct": 9,
+     "bets_pct": 22
+    },
+    {
+     "side": "VSiN Packers",
+     "odds": "-192",
+     "handle_pct": 91,
+     "bets_pct": 78
+    }
+   ]
+  }
+ ]
+}

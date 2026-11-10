@@ -1,0 +1,132 @@
+{
+ "fetched_utc": "2026-11-09T00:28:28+00:00",
+ "source": "https://api.actionnetwork.com/web/v2/scoreboard/publicbetting/nfl?bookIds=15,30,68&date=YYYYMMDD",
+ "rule": "warn if AN book 15 money differs from SAO by >5 pts or picks the other side; never blocks or re-rates",
+ "warnings": [
+  {
+   "game": "HOU@LAC",
+   "sao_money_away": 66,
+   "sao_money_home": 34,
+   "an_money_away": 0,
+   "an_money_home": 34,
+   "warning": "AN book 15 money side disagrees with SAO (66 pts)"
+  },
+  {
+   "game": "GB@NE",
+   "sao_money_away": 74,
+   "sao_money_home": 26,
+   "an_money_away": 0,
+   "an_money_home": 0,
+   "warning": "AN book 15 money side disagrees with SAO (74 pts)"
+  }
+ ],
+ "games": [
+  {
+   "game": "HOU@LAC",
+   "sao_money_away": 66,
+   "sao_money_home": 34,
+   "an_money_away": 0,
+   "an_money_home": 34,
+   "warning": "AN book 15 money side disagrees with SAO (66 pts)"
+  },
+  {
+   "game": "ARI@SEA",
+   "sao_money_away": 37,
+   "sao_money_home": 63,
+   "an_money_away": 37,
+   "an_money_home": 63
+  },
+  {
+   "game": "GB@NE",
+   "sao_money_away": 74,
+   "sao_money_home": 26,
+   "an_money_away": 0,
+   "an_money_home": 0,
+   "warning": "AN book 15 money side disagrees with SAO (74 pts)"
+  },
+  {
+   "game": "LV@SF",
+   "sao_money_away": 61,
+   "sao_money_home": 39,
+   "an_money_away": 61,
+   "an_money_home": 39
+  },
+  {
+   "game": "TB@CHI",
+   "sao_money_away": 27,
+   "sao_money_home": 73,
+   "an_money_away": 32,
+   "an_money_home": 68
+  },
+  {
+   "game": "BUF@MIN",
+   "sao_money_away": 69,
+   "sao_money_home": 31,
+   "an_money_away": 71,
+   "an_money_home": 29
+  },
+  {
+   "game": "JAX@BAL",
+   "sao_money_away": 55,
+   "sao_money_home": 45,
+   "an_money_away": 55,
+   "an_money_home": 45
+  },
+  {
+   "game": "CIN@ATL",
+   "sao_money_away": 49,
+   "sao_money_home": 51,
+   "an_money_away": 49,
+   "an_money_home": 51
+  },
+  {
+   "game": "DAL@IND",
+   "sao_money_away": 45,
+   "sao_money_home": 55,
+   "an_money_away": 45,
+   "an_money_home": 55
+  },
+  {
+   "game": "NYG@PHI",
+   "sao_money_away": 48,
+   "sao_money_home": 52,
+   "an_money_away": 48,
+   "an_money_home": 52
+  },
+  {
+   "game": "DET@MIA",
+   "sao_money_away": 82,
+   "sao_money_home": 18,
+   "an_money_away": 82,
+   "an_money_home": 18
+  },
+  {
+   "game": "CLE@NO",
+   "sao_money_away": 33,
+   "sao_money_home": 67,
+   "an_money_away": 33,
+   "an_money_home": 67
+  },
+  {
+   "game": "LAR@WSH",
+   "sao_money_away": 65,
+   "sao_money_home": 35,
+   "an_money_away": 65,
+   "an_money_home": 35
+  },
+  {
+   "game": "DEN@CAR",
+   "sao_money_away": 56,
+   "sao_money_home": 44,
+   "an_money_away": 56,
+   "an_money_home": 44
+  },
+  {
+   "game": "NYJ@KC",
+   "sao_money_away": 29,
+   "sao_money_home": 71,
+   "an_money_away": 29,
+   "an_money_home": 71
+  }
+ ]
+}

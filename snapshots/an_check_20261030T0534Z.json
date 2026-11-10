@@ -1,0 +1,116 @@
+{
+ "fetched_utc": "2026-10-30T05:34:33+00:00",
+ "source": "https://api.actionnetwork.com/web/v2/scoreboard/publicbetting/nfl?bookIds=15,30,68&date=YYYYMMDD",
+ "rule": "warn if AN book 15 money differs from SAO by >5 pts or picks the other side; never blocks or re-rates",
+ "warnings": [
+  {
+   "game": "CHI@SEA",
+   "sao_money_away": 49,
+   "sao_money_home": 51,
+   "an_money_away": 50,
+   "an_money_home": 50,
+   "warning": "AN book 15 money side disagrees with SAO (1 pts)"
+  }
+ ],
+ "games": [
+  {
+   "game": "MIN@DET",
+   "sao_money_away": 45,
+   "sao_money_home": 55,
+   "an_money_away": 45,
+   "an_money_home": 55
+  },
+  {
+   "game": "LV@NYJ",
+   "sao_money_away": 79,
+   "sao_money_home": 21,
+   "an_money_away": 79,
+   "an_money_home": 21
+  },
+  {
+   "game": "ARI@DAL",
+   "sao_money_away": 59,
+   "sao_money_home": 41,
+   "an_money_away": 59,
+   "an_money_home": 41
+  },
+  {
+   "game": "ATL@TB",
+   "sao_money_away": 63,
+   "sao_money_home": 37,
+   "an_money_away": 63,
+   "an_money_home": 37
+  },
+  {
+   "game": "BAL@BUF",
+   "sao_money_away": 61,
+   "sao_money_home": 39,
+   "an_money_away": 62,
+   "an_money_home": 38
+  },
+  {
+   "game": "IND@JAX",
+   "sao_money_away": 34,
+   "sao_money_home": 66,
+   "an_money_away": 35,
+   "an_money_home": 65
+  },
+  {
+   "game": "TEN@CIN",
+   "sao_money_away": 26,
+   "sao_money_home": 74,
+   "an_money_away": 26,
+   "an_money_home": 74
+  },
+  {
+   "game": "CLE@PIT",
+   "sao_money_away": 58,
+   "sao_money_home": 42,
+   "an_money_away": 58,
+   "an_money_home": 42
+  },
+  {
+   "game": "LAC@LAR",
+   "sao_money_away": 41,
+   "sao_money_home": 59,
+   "an_money_away": 40,
+   "an_money_home": 60
+  },
+  {
+   "game": "KC@DEN",
+   "sao_money_away": 38,
+   "sao_money_home": 62,
+   "an_money_away": 38,
+   "an_money_home": 62
+  },
+  {
+   "game": "NE@MIA",
+   "sao_money_away": 75,
+   "sao_money_home": 25,
+   "an_money_away": 75,
+   "an_money_home": 25
+  },
+  {
+   "game": "PHI@WSH",
+   "sao_money_away": 35,
+   "sao_money_home": 65,
+   "an_money_away": 36,
+   "an_money_home": 64
+  },
+  {
+   "game": "CHI@SEA",
+   "sao_money_away": 49,
+   "sao_money_home": 51,
+   "an_money_away": 50,
+   "an_money_home": 50,
+   "warning": "AN book 15 money side disagrees with SAO (1 pts)"
+  },
+  {
+   "game": "CAR@GB",
+   "sao_money_away": 60,
+   "sao_money_home": 40,
+   "an_money_away": 60,
+   "an_money_home": 40
+  }
+ ]
+}

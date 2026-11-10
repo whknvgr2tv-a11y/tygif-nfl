@@ -1,0 +1,61 @@
+{
+ "fetched_utc": "2026-11-02T00:10:23+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Moneyline&tb_page=N",
+ "market": "moneyline",
+ "games": [
+  {
+   "matchup": "PHI Eagles @ WAS Commanders",
+   "kickoff_local": "11/1, 08:20PM",
+   "spread": [
+    {
+     "side": "WAS Commanders",
+     "odds": "\u2212278",
+     "handle_pct": 57,
+     "bets_pct": 78
+    },
+    {
+     "side": "PHI Eagles",
+     "odds": "+225",
+     "handle_pct": 43,
+     "bets_pct": 22
+    }
+   ]
+  },
+  {
+   "matchup": "CHI Bears @ SEA Seahawks",
+   "kickoff_local": "11/2, 08:20PM",
+   "spread": [
+    {
+     "side": "SEA Seahawks",
+     "odds": "\u2212166",
+     "handle_pct": 35,
+     "bets_pct": 56
+    },
+    {
+     "side": "CHI Bears",
+     "odds": "+140",
+     "handle_pct": 65,
+     "bets_pct": 44
+    }
+   ]
+  },
+  {
+   "matchup": "JAX Jaguars @ BAL Ravens",
+   "kickoff_local": "11/5, 08:15PM",
+   "spread": [
+    {
+     "side": "BAL Ravens",
+     "odds": "+295",
+     "handle_pct": 6,
+     "bets_pct": 27
+    },
+    {
+     "side": "JAX Jaguars",
+     "odds": "\u2212375",
+     "handle_pct": 94,
+     "bets_pct": 73
+    }
+   ]
+  }
+ ]
+}

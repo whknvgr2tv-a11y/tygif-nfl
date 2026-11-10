@@ -1,0 +1,81 @@
+{
+ "fetched_utc": "2026-11-09T00:28:21+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Spread&tb_page=N",
+ "games": [
+  {
+   "matchup": "TB Buccaneers @ CHI Bears",
+   "kickoff_local": "Sun 11/8 \u00b7 8:20 PM ET",
+   "spread": [
+    {
+     "side": "CHI Bears -6",
+     "odds": "\u2212118",
+     "handle_pct": 84,
+     "bets_pct": 78,
+     "breakeven_money_pct": 54.1,
+     "lock_lo_money_pct": 49.5,
+     "book_exposed": true
+    },
+    {
+     "side": "TB Buccaneers +6",
+     "odds": "\u2212102",
+     "handle_pct": 16,
+     "bets_pct": 22,
+     "breakeven_money_pct": 50.5,
+     "lock_lo_money_pct": 45.9,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.42
+  },
+  {
+   "matchup": "BUF Bills @ MIN Vikings",
+   "kickoff_local": "Mon 11/9 \u00b7 8:15 PM ET",
+   "spread": [
+    {
+     "side": "BUF Bills -3",
+     "odds": "\u2212118",
+     "handle_pct": 84,
+     "bets_pct": 78,
+     "breakeven_money_pct": 54.1,
+     "lock_lo_money_pct": 49.5,
+     "book_exposed": true
+    },
+    {
+     "side": "MIN Vikings +3",
+     "odds": "\u2212102",
+     "handle_pct": 16,
+     "bets_pct": 22,
+     "breakeven_money_pct": 50.5,
+     "lock_lo_money_pct": 45.9,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.42
+  },
+  {
+   "matchup": "WAS Commanders @ NY Giants",
+   "kickoff_local": "Thu 11/12 \u00b7 8:15 PM ET",
+   "spread": [
+    {
+     "side": "NY Giants -1.5",
+     "odds": "\u2212110",
+     "handle_pct": 83,
+     "bets_pct": 71,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": true
+    },
+    {
+     "side": "WAS Commanders +1.5",
+     "odds": "\u2212110",
+     "handle_pct": 17,
+     "bets_pct": 29,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.55
+  }
+ ]
+}

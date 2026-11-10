@@ -1,0 +1,142 @@
+{
+ "fetched_utc": "2026-11-04T01:26:33+00:00",
+ "source": "https://www.scoresandodds.com/nfl/consensus-picks",
+ "week": "2026-reg-9",
+ "games": [
+  {
+   "away": "JAC",
+   "home": "BAL",
+   "kickoff_utc": "2026-11-06T01:15:00Z",
+   "bets_away": 73,
+   "bets_home": 27,
+   "money_away": 75,
+   "money_home": 25
+  },
+  {
+   "away": "CIN",
+   "home": "ATL",
+   "kickoff_utc": "2026-11-08T14:30:00Z",
+   "bets_away": 31,
+   "bets_home": 69,
+   "money_away": 28,
+   "money_home": 72
+  },
+  {
+   "away": "CLE",
+   "home": "NO",
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "bets_away": 63,
+   "bets_home": 37,
+   "money_away": 73,
+   "money_home": 27
+  },
+  {
+   "away": "DET",
+   "home": "MIA",
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "bets_away": 82,
+   "bets_home": 18,
+   "money_away": 85,
+   "money_home": 15
+  },
+  {
+   "away": "LA",
+   "home": "WAS",
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "bets_away": 59,
+   "bets_home": 41,
+   "money_away": 72,
+   "money_home": 28
+  },
+  {
+   "away": "DAL",
+   "home": "IND",
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "bets_away": 68,
+   "bets_home": 32,
+   "money_away": 84,
+   "money_home": 16
+  },
+  {
+   "away": "NYG",
+   "home": "PHI",
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "bets_away": 61,
+   "bets_home": 39,
+   "money_away": 77,
+   "money_home": 23
+  },
+  {
+   "away": "NYJ",
+   "home": "KC",
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "bets_away": 35,
+   "bets_home": 65,
+   "money_away": 47,
+   "money_home": 53
+  },
+  {
+   "away": "DEN",
+   "home": "CAR",
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "bets_away": 76,
+   "bets_home": 24,
+   "money_away": 80,
+   "money_home": 20
+  },
+  {
+   "away": "HOU",
+   "home": "LAC",
+   "kickoff_utc": "2026-11-08T21:05:00Z",
+   "bets_away": 68,
+   "bets_home": 32,
+   "money_away": 89,
+   "money_home": 11
+  },
+  {
+   "away": "LV",
+   "home": "SF",
+   "kickoff_utc": "2026-11-08T21:25:00Z",
+   "bets_away": 56,
+   "bets_home": 44,
+   "money_away": 63,
+   "money_home": 37
+  },
+  {
+   "away": "GB",
+   "home": "NE",
+   "kickoff_utc": "2026-11-08T21:25:00Z",
+   "bets_away": 68,
+   "bets_home": 32,
+   "money_away": 63,
+   "money_home": 37
+  },
+  {
+   "away": "ARI",
+   "home": "SEA",
+   "kickoff_utc": "2026-11-08T21:25:00Z",
+   "bets_away": 54,
+   "bets_home": 46,
+   "money_away": 70,
+   "money_home": 30
+  },
+  {
+   "away": "TB",
+   "home": "CHI",
+   "kickoff_utc": "2026-11-09T01:20:00Z",
+   "bets_away": 38,
+   "bets_home": 62,
+   "money_away": 20,
+   "money_home": 80
+  },
+  {
+   "away": "BUF",
+   "home": "MIN",
+   "kickoff_utc": "2026-11-10T01:15:00Z",
+   "bets_away": 61,
+   "bets_home": 39,
+   "money_away": 73,
+   "money_home": 27
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "fetched_utc": "2026-10-28T00:33:22+00:00",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=8&seasontype=2",
+ "season": 2026,
+ "week": 8,
+ "events": 14,
+ "pre": 14,
+ "last": "2026-11-03T01:15Z",
+ "games": []
+}

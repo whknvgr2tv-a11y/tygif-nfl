@@ -1,0 +1,115 @@
+{
+ "fetched_utc": "2026-11-08T20:57:56+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Moneyline&tb_page=N",
+ "market": "moneyline",
+ "games": [
+  {
+   "matchup": "HOU Texans @ LA Chargers",
+   "kickoff_local": "Sun 11/8 \u00b7 4:05 PM ET",
+   "spread": [
+    {
+     "side": "LA Chargers",
+     "odds": "+190",
+     "handle_pct": 51,
+     "bets_pct": 20
+    },
+    {
+     "side": "HOU Texans",
+     "odds": "\u2212230",
+     "handle_pct": 49,
+     "bets_pct": 80
+    }
+   ]
+  },
+  {
+   "matchup": "GB Packers @ NE Patriots",
+   "kickoff_local": "Sun 11/8 \u00b7 4:25 PM ET",
+   "spread": [
+    {
+     "side": "NE Patriots",
+     "odds": "\u2212185",
+     "handle_pct": 44,
+     "bets_pct": 72
+    },
+    {
+     "side": "GB Packers",
+     "odds": "+154",
+     "handle_pct": 56,
+     "bets_pct": 28
+    }
+   ]
+  },
+  {
+   "matchup": "LV Raiders @ SF 49ers",
+   "kickoff_local": "Sun 11/8 \u00b7 4:25 PM ET",
+   "spread": [
+    {
+     "side": "SF 49ers",
+     "odds": "\u2212410",
+     "handle_pct": 78,
+     "bets_pct": 94
+    },
+    {
+     "side": "LV Raiders",
+     "odds": "+320",
+     "handle_pct": 22,
+     "bets_pct": 6
+    }
+   ]
+  },
+  {
+   "matchup": "ARI Cardinals @ SEA Seahawks",
+   "kickoff_local": "Sun 11/8 \u00b7 4:25 PM ET",
+   "spread": [
+    {
+     "side": "SEA Seahawks",
+     "odds": "\u2212455",
+     "handle_pct": 80,
+     "bets_pct": 91
+    },
+    {
+     "side": "ARI Cardinals",
+     "odds": "+350",
+     "handle_pct": 20,
+     "bets_pct": 9
+    }
+   ]
+  },
+  {
+   "matchup": "TB Buccaneers @ CHI Bears",
+   "kickoff_local": "Sun 11/8 \u00b7 8:20 PM ET",
+   "spread": [
+    {
+     "side": "CHI Bears",
+     "odds": "\u2212270",
+     "handle_pct": 75,
+     "bets_pct": 88
+    },
+    {
+     "side": "TB Buccaneers",
+     "odds": "+220",
+     "handle_pct": 25,
+     "bets_pct": 12
+    }
+   ]
+  },
+  {
+   "matchup": "BUF Bills @ MIN Vikings",
+   "kickoff_local": "Mon 11/9 \u00b7 8:15 PM ET",
+   "spread": [
+    {
+     "side": "MIN Vikings",
+     "odds": "+145",
+     "handle_pct": 26,
+     "bets_pct": 19
+    },
+    {
+     "side": "BUF Bills",
+     "odds": "\u2212175",
+     "handle_pct": 74,
+     "bets_pct": 81
+    }
+   ]
+  }
+ ]
+}

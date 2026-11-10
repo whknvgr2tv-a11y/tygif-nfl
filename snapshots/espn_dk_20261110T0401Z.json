@@ -1,0 +1,10 @@
+{
+ "fetched_utc": "2026-11-10T04:01:24+00:00",
+ "source": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?week=9&seasontype=2",
+ "season": 2026,
+ "week": 9,
+ "events": 15,
+ "pre": 0,
+ "last": "2026-11-10T01:15Z",
+ "games": []
+}

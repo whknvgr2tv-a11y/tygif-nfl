@@ -1,0 +1,60 @@
+{
+ "fetched_utc": "2026-10-12T03:32:25+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Spread&tb_page=N",
+ "games": [
+  {
+   "matchup": "BAL Ravens @ ATL Falcons",
+   "kickoff_local": "10/11, 08:20PM",
+   "spread": [
+    {
+     "side": "ATL Falcons -3",
+     "odds": "\u2212120",
+     "handle_pct": 45,
+     "bets_pct": 55
+    },
+    {
+     "side": "BAL Ravens +3",
+     "odds": "+100",
+     "handle_pct": 55,
+     "bets_pct": 45
+    }
+   ]
+  },
+  {
+   "matchup": "BUF Bills @ LA Rams",
+   "kickoff_local": "10/12, 08:15PM",
+   "spread": [
+    {
+     "side": "LA Rams -3.5",
+     "odds": "\u2212105",
+     "handle_pct": 71,
+     "bets_pct": 35
+    },
+    {
+     "side": "BUF Bills +3.5",
+     "odds": "\u2212115",
+     "handle_pct": 29,
+     "bets_pct": 65
+    }
+   ]
+  },
+  {
+   "matchup": "SEA Seahawks @ DEN Broncos",
+   "kickoff_local": "10/15, 08:15PM",
+   "spread": [
+    {
+     "side": "SEA Seahawks -2.5",
+     "odds": "\u2212110",
+     "handle_pct": 89,
+     "bets_pct": 81
+    },
+    {
+     "side": "DEN Broncos +2.5",
+     "odds": "\u2212110",
+     "handle_pct": 11,
+     "bets_pct": 19
+    }
+   ]
+  }
+ ]
+}

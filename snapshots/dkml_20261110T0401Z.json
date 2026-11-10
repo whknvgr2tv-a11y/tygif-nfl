@@ -1,0 +1,205 @@
+{
+ "fetched_utc": "2026-11-10T04:01:11+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Moneyline&tb_page=N",
+ "market": "moneyline",
+ "games": [
+  {
+   "matchup": "WAS Commanders @ NY Giants",
+   "kickoff_local": "Thu 11/12 \u00b7 8:15 PM ET",
+   "spread": [
+    {
+     "side": "NY Giants",
+     "odds": "\u2212130",
+     "handle_pct": 76,
+     "bets_pct": 53
+    },
+    {
+     "side": "WAS Commanders",
+     "odds": "+110",
+     "handle_pct": 24,
+     "bets_pct": 47
+    }
+   ]
+  },
+  {
+   "matchup": "NE Patriots @ DET Lions",
+   "kickoff_local": "Sun 11/15 \u00b7 9:30 AM ET",
+   "spread": [
+    {
+     "side": "DET Lions",
+     "odds": "\u2212155",
+     "handle_pct": 55,
+     "bets_pct": 58
+    },
+    {
+     "side": "NE Patriots",
+     "odds": "+130",
+     "handle_pct": 45,
+     "bets_pct": 42
+    }
+   ]
+  },
+  {
+   "matchup": "JAX Jaguars @ TEN Titans",
+   "kickoff_local": "Sun 11/15 \u00b7 1:00 PM ET",
+   "spread": [
+    {
+     "side": "TEN Titans",
+     "odds": "+400",
+     "handle_pct": 17,
+     "bets_pct": 4
+    },
+    {
+     "side": "JAX Jaguars",
+     "odds": "\u2212535",
+     "handle_pct": 83,
+     "bets_pct": 96
+    }
+   ]
+  },
+  {
+   "matchup": "KC Chiefs @ ATL Falcons",
+   "kickoff_local": "Sun 11/15 \u00b7 1:00 PM ET",
+   "spread": [
+    {
+     "side": "ATL Falcons",
+     "odds": "+150",
+     "handle_pct": 9,
+     "bets_pct": 7
+    },
+    {
+     "side": "KC Chiefs",
+     "odds": "\u2212180",
+     "handle_pct": 91,
+     "bets_pct": 93
+    }
+   ]
+  },
+  {
+   "matchup": "HOU Texans @ CLE Browns",
+   "kickoff_local": "Sun 11/15 \u00b7 1:00 PM ET",
+   "spread": [
+    {
+     "side": "CLE Browns",
+     "odds": "+190",
+     "handle_pct": 7,
+     "bets_pct": 12
+    },
+    {
+     "side": "HOU Texans",
+     "odds": "\u2212230",
+     "handle_pct": 93,
+     "bets_pct": 88
+    }
+   ]
+  },
+  {
+   "matchup": "CAR Panthers @ NO Saints",
+   "kickoff_local": "Sun 11/15 \u00b7 1:00 PM ET",
+   "spread": [
+    {
+     "side": "NO Saints",
+     "odds": "\u2212120",
+     "handle_pct": 19,
+     "bets_pct": 40
+    },
+    {
+     "side": "CAR Panthers",
+     "odds": "+100",
+     "handle_pct": 81,
+     "bets_pct": 60
+    }
+   ]
+  },
+  {
+   "matchup": "MIA Dolphins @ IND Colts",
+   "kickoff_local": "Sun 11/15 \u00b7 1:00 PM ET",
+   "spread": [
+    {
+     "side": "IND Colts",
+     "odds": "\u2212135",
+     "handle_pct": 35,
+     "bets_pct": 71
+    },
+    {
+     "side": "MIA Dolphins",
+     "odds": "+114",
+     "handle_pct": 65,
+     "bets_pct": 29
+    }
+   ]
+  },
+  {
+   "matchup": "LA Rams @ ARI Cardinals",
+   "kickoff_local": "Sun 11/15 \u00b7 4:05 PM ET",
+   "spread": [
+    {
+     "side": "ARI Cardinals",
+     "odds": "+350",
+     "handle_pct": 22,
+     "bets_pct": 7
+    },
+    {
+     "side": "LA Rams",
+     "odds": "\u2212455",
+     "handle_pct": 78,
+     "bets_pct": 93
+    }
+   ]
+  },
+  {
+   "matchup": "SEA Seahawks @ LV Raiders",
+   "kickoff_local": "Sun 11/15 \u00b7 4:05 PM ET",
+   "spread": [
+    {
+     "side": "LV Raiders",
+     "odds": "+150",
+     "handle_pct": 35,
+     "bets_pct": 18
+    },
+    {
+     "side": "SEA Seahawks",
+     "odds": "\u2212180",
+     "handle_pct": 65,
+     "bets_pct": 82
+    }
+   ]
+  },
+  {
+   "matchup": "SF 49ers @ DAL Cowboys",
+   "kickoff_local": "Sun 11/15 \u00b7 4:25 PM ET",
+   "spread": [
+    {
+     "side": "DAL Cowboys",
+     "odds": "+180",
+     "handle_pct": 7,
+     "bets_pct": 6
+    },
+    {
+     "side": "SF 49ers",
+     "odds": "\u2212218",
+     "handle_pct": 93,
+     "bets_pct": 94
+    }
+   ]
+  },
+  {
+   "matchup": "PIT Steelers @ CIN Bengals",
+   "kickoff_local": "Sun 11/15 \u00b7 8:20 PM ET",
+   "spread": [
+    {
+     "side": "CIN Bengals",
+     "odds": "\u2212180",
+     "handle_pct": 90,
+     "bets_pct": 80
+    },
+    {
+     "side": "PIT Steelers",
+     "odds": "+150",
+     "handle_pct": 10,
+     "bets_pct": 20
+    }
+   ]
+  }
+ ]
+}

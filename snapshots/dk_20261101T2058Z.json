@@ -1,0 +1,131 @@
+{
+ "fetched_utc": "2026-11-01T20:58:03+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Spread&tb_page=N",
+ "games": [
+  {
+   "matchup": "LA Chargers @ LA Rams",
+   "kickoff_local": "11/1, 04:05PM",
+   "spread": [
+    {
+     "side": "LA Rams -6.5",
+     "odds": "\u2212115",
+     "handle_pct": 68,
+     "bets_pct": 83,
+     "breakeven_money_pct": 53.5,
+     "lock_lo_money_pct": 48.8,
+     "book_exposed": true
+    },
+    {
+     "side": "LA Chargers +6.5",
+     "odds": "\u2212105",
+     "handle_pct": 32,
+     "bets_pct": 17,
+     "breakeven_money_pct": 51.2,
+     "lock_lo_money_pct": 46.5,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.5
+  },
+  {
+   "matchup": "NE Patriots @ MIA Dolphins",
+   "kickoff_local": "11/1, 04:25PM",
+   "spread": [
+    {
+     "side": "NE Patriots -7",
+     "odds": "\u2212110",
+     "handle_pct": 89,
+     "bets_pct": 88,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": true
+    },
+    {
+     "side": "MIA Dolphins +7",
+     "odds": "\u2212110",
+     "handle_pct": 11,
+     "bets_pct": 12,
+     "breakeven_money_pct": 52.4,
+     "lock_lo_money_pct": 47.6,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.55
+  },
+  {
+   "matchup": "KC Chiefs @ DEN Broncos",
+   "kickoff_local": "11/1, 04:25PM",
+   "spread": [
+    {
+     "side": "DEN Broncos -1.5",
+     "odds": "+100",
+     "handle_pct": 52,
+     "bets_pct": 63,
+     "breakeven_money_pct": 50.0,
+     "lock_lo_money_pct": 45.5,
+     "book_exposed": true
+    },
+    {
+     "side": "KC Chiefs +1.5",
+     "odds": "\u2212120",
+     "handle_pct": 48,
+     "bets_pct": 37,
+     "breakeven_money_pct": 54.5,
+     "lock_lo_money_pct": 50.0,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.35
+  },
+  {
+   "matchup": "PHI Eagles @ WAS Commanders",
+   "kickoff_local": "11/1, 08:20PM",
+   "spread": [
+    {
+     "side": "WAS Commanders -6",
+     "odds": "\u2212112",
+     "handle_pct": 65,
+     "bets_pct": 52,
+     "breakeven_money_pct": 52.8,
+     "lock_lo_money_pct": 48.1,
+     "book_exposed": true
+    },
+    {
+     "side": "PHI Eagles +6",
+     "odds": "\u2212108",
+     "handle_pct": 35,
+     "bets_pct": 48,
+     "breakeven_money_pct": 51.9,
+     "lock_lo_money_pct": 47.2,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.54
+  },
+  {
+   "matchup": "CHI Bears @ SEA Seahawks",
+   "kickoff_local": "11/2, 08:20PM",
+   "spread": [
+    {
+     "side": "SEA Seahawks -3",
+     "odds": "\u2212115",
+     "handle_pct": 56,
+     "bets_pct": 52,
+     "breakeven_money_pct": 53.5,
+     "lock_lo_money_pct": 48.8,
+     "book_exposed": true
+    },
+    {
+     "side": "CHI Bears +3",
+     "odds": "\u2212105",
+     "handle_pct": 44,
+     "bets_pct": 48,
+     "breakeven_money_pct": 51.2,
+     "lock_lo_money_pct": 46.5,
+     "book_exposed": false
+    }
+   ],
+   "hold_pct": 4.5
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "fetched_utc": "2026-11-09T00:28:21+00:00",
+ "source": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/?tb_eg=88808&tb_edate=n7days&tb_emt=Moneyline&tb_page=N",
+ "market": "moneyline",
+ "games": [
+  {
+   "matchup": "TB Buccaneers @ CHI Bears",
+   "kickoff_local": "Sun 11/8 \u00b7 8:20 PM ET",
+   "spread": [
+    {
+     "side": "CHI Bears",
+     "odds": "\u2212270",
+     "handle_pct": 77,
+     "bets_pct": 88
+    },
+    {
+     "side": "TB Buccaneers",
+     "odds": "+220",
+     "handle_pct": 23,
+     "bets_pct": 12
+    }
+   ]
+  },
+  {
+   "matchup": "BUF Bills @ MIN Vikings",
+   "kickoff_local": "Mon 11/9 \u00b7 8:15 PM ET",
+   "spread": [
+    {
+     "side": "MIN Vikings",
+     "odds": "+145",
+     "handle_pct": 30,
+     "bets_pct": 20
+    },
+    {
+     "side": "BUF Bills",
+     "odds": "\u2212175",
+     "handle_pct": 70,
+     "bets_pct": 80
+    }
+   ]
+  },
+  {
+   "matchup": "WAS Commanders @ NY Giants",
+   "kickoff_local": "Thu 11/12 \u00b7 8:15 PM ET",
+   "spread": [
+    {
+     "side": "NY Giants",
+     "odds": "\u2212125",
+     "handle_pct": 55,
+     "bets_pct": 74
+    },
+    {
+     "side": "WAS Commanders",
+     "odds": "+105",
+     "handle_pct": 45,
+     "bets_pct": 26
+    }
+   ]
+  }
+ ]
+}
